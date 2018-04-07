@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 1998, 2015 Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 1998, 2018 Oracle and/or its affiliates. All rights reserved.
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Public License v1.0 and Eclipse Distribution License v. 1.0
  * which accompanies this distribution.
@@ -12,6 +12,7 @@
  ******************************************************************************/
 package org.eclipse.persistence.testing.tests.jpa.xml.merge.advanced;
 
+import java.util.List;
 import java.util.Map;
 import java.util.Vector;
 
@@ -100,14 +101,14 @@ public class EntityMappingsMergeAdvancedJUnitTestCase extends JUnitTestCase {
             Class clsToCompare = Class.forName(classToCompareName);
             ClassDescriptor desc = (ClassDescriptor)descriptors.get(cls);
             ClassDescriptor descToCompare = (ClassDescriptor)descriptors.get(clsToCompare);
-            Vector mappings = desc.getMappings();
-            Vector mappingsToCompare = descToCompare.getMappings();
+            List<DatabaseMapping> mappings = desc.getMappings();
+            List<DatabaseMapping> mappingsToCompare = descToCompare.getMappings();
             if(mappings.size() != mappingsToCompare.size()) {
                 classErrorMsg = classErrorMsg +  "Number of mappings is different; ";
                 continue;
             }
             for(int j=0; j<mappings.size(); j++) {
-                DatabaseMapping mapping = (DatabaseMapping)mappings.elementAt(j);
+                DatabaseMapping mapping = (DatabaseMapping)mappings.get(j);
                 String attributeName = mapping.getAttributeName();
                 DatabaseMapping mappingToCompare = descToCompare.getMappingForAttributeName(attributeName);
                 if(!mapping.getClass().equals(mappingToCompare.getClass())) {

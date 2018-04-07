@@ -13,9 +13,9 @@
  ******************************************************************************/
 package org.eclipse.persistence.descriptors;
 
-import java.util.*;
+import java.util.List;
 
-import org.eclipse.persistence.exceptions.*;
+import org.eclipse.persistence.exceptions.DescriptorException;
 
 /**
  * <p><b>Purpose</b>: EclipseLink has been designed to take advantage of the similarities between
@@ -92,7 +92,7 @@ public class RelationalDescriptor extends ClassDescriptor {
      * Return the table names.
      */
     @Override
-    public Vector getTableNames() {
+    public List<String> getTableNames() {
         return super.getTableNames();
     }
 
@@ -123,7 +123,7 @@ public class RelationalDescriptor extends ClassDescriptor {
      * (i.e. "userid.employee"). This method is used for multiple tables
      */
     @Override
-    public void setTableNames(Vector tableNames) {
+    public void setTableNames(List<String> tableNames) {
         super.setTableNames(tableNames);
     }
 

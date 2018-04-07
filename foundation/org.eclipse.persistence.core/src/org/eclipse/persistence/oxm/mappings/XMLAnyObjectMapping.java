@@ -15,6 +15,7 @@ package org.eclipse.persistence.oxm.mappings;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Iterator;
+import java.util.List;
 import java.util.Map;
 import java.util.Vector;
 import javax.xml.namespace.QName;
@@ -510,7 +511,7 @@ public class XMLAnyObjectMapping extends XMLAbstractAnyMapping implements XMLMap
     }
 
     @Override
-    public Vector getFields() {
+    public List<DatabaseField> getFields() {
         return this.collectFields();
     }
 

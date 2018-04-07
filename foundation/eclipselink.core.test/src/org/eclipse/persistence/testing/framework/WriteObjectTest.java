@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 1998, 2015 Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 1998, 2018 Oracle and/or its affiliates. All rights reserved.
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Public License v1.0 and Eclipse Distribution License v. 1.0
  * which accompanies this distribution.
@@ -12,11 +12,15 @@
  ******************************************************************************/
 package org.eclipse.persistence.testing.framework;
 
-import org.eclipse.persistence.queries.*;
+import java.util.Enumeration;
+import java.util.List;
+
+import org.eclipse.persistence.descriptors.ClassDescriptor;
+import org.eclipse.persistence.internal.helper.Helper;
+import org.eclipse.persistence.mappings.DatabaseMapping;
+import org.eclipse.persistence.mappings.foundation.AbstractDirectMapping;
+import org.eclipse.persistence.queries.ReadObjectQuery;
 import org.eclipse.persistence.sessions.server.ClientSession;
-import org.eclipse.persistence.descriptors.*;
-import org.eclipse.persistence.mappings.*;
-import org.eclipse.persistence.mappings.foundation.*;
 
 /**
  * <p>
@@ -103,13 +107,13 @@ public class WriteObjectTest extends TransactionalTestCase {
          */
         Class objectClass = objectToBeMutated.getClass();
         ClassDescriptor descriptor = getSession().getProject().getClassDescriptor(objectClass);
-        java.util.Vector mappings = descriptor.getMappings();
+        List<DatabaseMapping> mappings = descriptor.getMappings();
 
         if (isInUOW) {
             mutationString += "U";
         }
 
-        java.util.Enumeration en = mappings.elements();
+        Enumeration<DatabaseMapping> en = Helper.elements(mappings);
 
         /**
          * Parse the mappings for the object's descriptor to find a suitable
@@ -122,8 +126,7 @@ public class WriteObjectTest extends TransactionalTestCase {
          * mappings has been fully parsed (whichever occurs first)
          */
         while (en.hasMoreElements ()) {
-            dbMapping = (DatabaseMapping) en.nextElement();
-
+            dbMapping = en.nextElement();
             if (!dbMapping.isPrimaryKeyMapping()
                     && dbMapping.isDirectToFieldMapping()
                     &&!((AbstractDirectMapping) dbMapping).hasConverter()

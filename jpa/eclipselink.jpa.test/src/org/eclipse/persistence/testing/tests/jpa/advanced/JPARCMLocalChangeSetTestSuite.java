@@ -379,7 +379,7 @@ public class JPARCMLocalChangeSetTestSuite extends JUnitTestCase {
             Map<ObjectChangeSet, ObjectChangeSet> csMap = uowcs.getAllChangeSets();
             for (ObjectChangeSet ocs : csMap.keySet()) {
                 AbstractRecord protectedForeignKeys = ocs.getProtectedForeignKeys();
-                Vector<DatabaseField> fkFields = cacheableDescriptor.getMappingForAttributeName("cacheableFalse").getFields();
+                List<DatabaseField> fkFields = cacheableDescriptor.getMappingForAttributeName("cacheableFalse").getFields();
                 
                 assertNotNull("ObjectChangeSet should have a non-null protected foreign key", protectedForeignKeys);
                 assertEquals("ObjectChangeSet's protectedForeignKeys should be non-empty", fkFields.size(), protectedForeignKeys.size());
@@ -474,7 +474,7 @@ public class JPARCMLocalChangeSetTestSuite extends JUnitTestCase {
             Map<ObjectChangeSet, ObjectChangeSet> csMap = uowcs.getAllChangeSets();
             for (ObjectChangeSet ocs : csMap.keySet()) {
                 AbstractRecord protectedForeignKeys = ocs.getProtectedForeignKeys();
-                Vector<DatabaseField> fkFields = cacheableDescriptor.getMappingForAttributeName("cacheableFalse").getFields();
+                List<DatabaseField> fkFields = cacheableDescriptor.getMappingForAttributeName("cacheableFalse").getFields();
                 
                 assertNotNull("ObjectChangeSet should have a non-null protected foreign key", protectedForeignKeys);
                 assertEquals("ObjectChangeSet's protectedForeignKeys should be non-empty", fkFields.size(), protectedForeignKeys.size());

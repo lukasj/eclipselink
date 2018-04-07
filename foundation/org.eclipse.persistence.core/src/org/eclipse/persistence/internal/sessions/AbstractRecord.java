@@ -12,14 +12,24 @@
  ******************************************************************************/
 package org.eclipse.persistence.internal.sessions;
 
-import java.io.*;
-import java.util.*;
+import java.io.Serializable;
+import java.io.StringWriter;
+import java.util.AbstractSet;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.Enumeration;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+import java.util.NoSuchElementException;
+import java.util.Set;
 
+import org.eclipse.persistence.exceptions.ValidationException;
 import org.eclipse.persistence.internal.core.sessions.CoreAbstractRecord;
-import org.eclipse.persistence.internal.helper.*;
-import org.eclipse.persistence.exceptions.*;
-import org.eclipse.persistence.sessions.Record;
 import org.eclipse.persistence.internal.helper.DatabaseField;
+import org.eclipse.persistence.internal.helper.Helper;
+import org.eclipse.persistence.sessions.Record;
 
 /**
  * <p>
@@ -35,10 +45,10 @@ import org.eclipse.persistence.internal.helper.DatabaseField;
 public abstract class AbstractRecord extends CoreAbstractRecord implements Record, Cloneable, Serializable, Map {
 
     /** Use vector to store the fields/values for optimal performance.*/
-    protected Vector<DatabaseField> fields;
+    protected List<DatabaseField> fields;
 
     /** Use vector to store the fields/values for optimal performance.*/
-    protected Vector values;
+    protected List<Object> values;
 
     /** Optimize field creation for field name lookup. */
     protected DatabaseField lookupField;
@@ -71,8 +81,8 @@ public abstract class AbstractRecord extends CoreAbstractRecord implements Recor
      *  converts JDBC results to collections of rows.
      */
     public AbstractRecord() {
-        this.fields = new NonSynchronizedVector();
-        this.values = new NonSynchronizedVector();
+        this.fields = new ArrayList<>();
+        this.values = new ArrayList<>();
         this.size = 0;
         this.nullValueInFields = false;
     }
@@ -82,8 +92,8 @@ public abstract class AbstractRecord extends CoreAbstractRecord implements Recor
      *  converts JDBC results to collections of rows.
      */
     public AbstractRecord(int initialCapacity) {
-        this.fields = new NonSynchronizedVector(initialCapacity);
-        this.values = new NonSynchronizedVector(initialCapacity);
+        this.fields = new ArrayList<>(initialCapacity);
+        this.values = new ArrayList<>(initialCapacity);
         this.size = 0;
         this.nullValueInFields = false;
     }
@@ -92,7 +102,7 @@ public abstract class AbstractRecord extends CoreAbstractRecord implements Recor
      * INTERNAL:
      *  converts JDBC results to collections of rows.
      */
-    public AbstractRecord(Vector fields, Vector values) {
+    public AbstractRecord(List<DatabaseField> fields, List<Object> values) {
         this.fields = fields;
         this.values = values;
         this.nullValueInFields = false;
@@ -103,7 +113,7 @@ public abstract class AbstractRecord extends CoreAbstractRecord implements Recor
      * INTERNAL:
      *  converts JDBC results to collections of rows.
      */
-    public AbstractRecord(Vector fields, Vector values, int size) {
+    public AbstractRecord(List<DatabaseField> fields, List<Object> values, int size) {
         this.fields = fields;
         this.values = values;
         this.nullValueInFields = false;
@@ -139,8 +149,8 @@ public abstract class AbstractRecord extends CoreAbstractRecord implements Recor
      */
     @Override
     public void clear() {
-        this.fields = new Vector();
-        this.values = new Vector();
+        this.fields = new ArrayList<>();
+        this.values = new ArrayList<>();
         resetSize();
     }
 
@@ -152,8 +162,8 @@ public abstract class AbstractRecord extends CoreAbstractRecord implements Recor
     public AbstractRecord clone() {
         try {
             AbstractRecord clone = (AbstractRecord)super.clone();
-            clone.fields = (Vector)this.fields.clone();
-            clone.values = (Vector)this.values.clone();
+            clone.fields = new ArrayList<>(this.fields);
+            clone.values = new ArrayList<>(this.values);
             return clone;
         } catch (CloneNotSupportedException exception) {
             throw new InternalError();
@@ -222,8 +232,8 @@ public abstract class AbstractRecord extends CoreAbstractRecord implements Recor
      * PUBLIC:
      * Returns an Enumeration of the values.
      */
-    public Enumeration elements() {
-        return getValues().elements();
+    public Enumeration<Object> elements() {
+        return Helper.elements(getValues());
     }
 
     /**
@@ -360,13 +370,13 @@ public abstract class AbstractRecord extends CoreAbstractRecord implements Recor
         // Optimize check.
         int index = key.index;
         if ((index >= 0) && (index < getFields().size())) {
-            DatabaseField field = getFields().elementAt(index);
+            DatabaseField field = getFields().get(index);
             if ((field == key) || field.equals(key)) {
                 return field;
             }
         }
         for (index = 0; index < getFields().size(); index++) {
-            DatabaseField field = getFields().elementAt(index);
+            DatabaseField field = getFields().get(index);
             if ((field == key) || field.equals(key)) {
                 return field;
             }
@@ -377,14 +387,14 @@ public abstract class AbstractRecord extends CoreAbstractRecord implements Recor
     /**
      * INTERNAL:
      */
-    public Vector<DatabaseField> getFields() {
+    public List<DatabaseField> getFields() {
         return fields;
     }
 
     /**
      * INTERNAL:
      */
-    public Vector getValues() {
+    public List<Object> getValues() {
         return values;
     }
 
@@ -410,8 +420,8 @@ public abstract class AbstractRecord extends CoreAbstractRecord implements Recor
      * PUBLIC:
      * Returns an Enumeration of the DatabaseField objects.
      */
-    public Enumeration keys() {
-        return getFields().elements();
+    public Enumeration<DatabaseField> keys() {
+        return Helper.elements(getFields());
     }
 
     /**
@@ -704,9 +714,9 @@ public abstract class AbstractRecord extends CoreAbstractRecord implements Recor
     public Object remove(DatabaseField key) {
         int index = getFields().indexOf(key);
         if (index >= 0) {
-            getFields().removeElementAt(index);
-            Object value = getValues().elementAt(index);
-            getValues().removeElementAt(index);
+            getFields().remove(index);
+            Object value = getValues().get(index);
+            getValues().remove(index);
             resetSize();
             return value;
         }
@@ -743,7 +753,7 @@ public abstract class AbstractRecord extends CoreAbstractRecord implements Recor
         }
     }
 
-    protected void setFields(Vector fields) {
+    protected void setFields(List<DatabaseField> fields) {
         this.fields = fields;
         resetSize();
     }
@@ -757,7 +767,7 @@ public abstract class AbstractRecord extends CoreAbstractRecord implements Recor
         this.nullValueInFields = nullValueInFields;
     }
 
-    protected void setValues(Vector values) {
+    protected void setValues(List<Object> values) {
         this.values = values;
     }
 
@@ -782,9 +792,9 @@ public abstract class AbstractRecord extends CoreAbstractRecord implements Recor
         for (int index = 0; index < getFields().size(); index++) {
             writer.write(Helper.cr());
             writer.write("\t");
-            writer.write(String.valueOf((getFields().elementAt(index))));
+            writer.write(String.valueOf((getFields().get(index))));
             writer.write(" => ");
-            writer.write(String.valueOf((getValues().elementAt(index))));
+            writer.write(String.valueOf((getValues().get(index))));
         }
         if (this.sopObject != null) {
             writer.write(Helper.cr());

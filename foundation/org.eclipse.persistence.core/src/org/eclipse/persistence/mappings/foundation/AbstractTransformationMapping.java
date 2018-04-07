@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 1998, 2015 Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 1998, 2018 Oracle and/or its affiliates. All rights reserved.
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Public License v1.0 and Eclipse Distribution License v. 1.0
  * which accompanies this distribution.
@@ -1039,8 +1039,8 @@ public abstract class AbstractTransformationMapping extends DatabaseMapping {
         setRealAttributeValueInObject(target, attributeValue);
         //set the change after the set on the object as this mapping uses the object to build the change record.
         if (this.descriptor.getObjectChangePolicy().isObjectChangeTrackingPolicy()) {
-            for (Enumeration keys = targetRow.keys(); keys.hasMoreElements(); ){
-                Object field = keys.nextElement();
+            for (Enumeration<DatabaseField> keys = targetRow.keys(); keys.hasMoreElements(); ){
+                DatabaseField field = keys.nextElement();
                 if ((mergeManager.shouldMergeCloneIntoWorkingCopy() || mergeManager.shouldMergeCloneWithReferencesIntoWorkingCopy())
                         && (!row.get(field).equals(targetRow.get(field)))) {
                     this.descriptor.getObjectChangePolicy().raiseInternalPropertyChangeEvent(target, getAttributeName(), invokeAttributeTransformer(targetRow, source, mergeManager.getSession()), attributeValue);
@@ -1176,10 +1176,10 @@ public abstract class AbstractTransformationMapping extends DatabaseMapping {
      * INTERNAL:
      * needed for backwards compatibility
      */
-    public void setFieldNameToMethodNameAssociations(Vector associations) {
-        setFieldTransformations(org.eclipse.persistence.internal.helper.NonSynchronizedVector.newInstance(associations.size()));
-        for (Iterator source = associations.iterator(); source.hasNext();) {
-            Association ass = (Association)source.next();
+    public void setFieldNameToMethodNameAssociations(List<Association> associations) {
+        setFieldTransformations(new ArrayList<>(associations.size()));
+        for (Iterator<Association> source = associations.iterator(); source.hasNext();) {
+            Association ass = source.next();
             MethodBasedFieldTransformation tf = new MethodBasedFieldTransformation();
             tf.setField(new DatabaseField((String)ass.getKey()));
             tf.setMethodName((String)ass.getValue());

@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 2012, 2015 Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 2012, 2018 Oracle and/or its affiliates. All rights reserved.
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Public License v1.0 and Eclipse Distribution License v. 1.0
  * which accompanies this distribution.
@@ -34,7 +34,7 @@ public abstract class CoreDescriptor<
     FIELD extends CoreField,
     INHERITANCE_POLICY extends CoreInheritancePolicy,
     INSTANTIATION_POLICY extends CoreInstantiationPolicy,
-    LIST extends List,
+    LIST extends List<?>,
     OBJECT_BUILDER extends CoreObjectBuilder> implements Serializable {
 
     protected DESCRIPTOR_EVENT_MANAGER eventManager;
@@ -182,7 +182,7 @@ public abstract class CoreDescriptor<
 
     /**
      * PUBLIC:
-     * User can specify a vector of all the primary key field names if primary key is composite.
+     * User can specify a list of all the primary key field names if primary key is composite.
      *
      * @see org.eclipse.persistence.descriptors.ClassDescriptor#addPrimaryKeyFieldName(String)
      */

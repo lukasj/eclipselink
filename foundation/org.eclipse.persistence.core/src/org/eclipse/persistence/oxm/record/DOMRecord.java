@@ -667,7 +667,7 @@ public class DOMRecord extends XMLRecord implements TransformationRecord {
      * Setting fields vector will not update the document so this is not supported
      */
     @Override
-    protected void setFields(Vector fields) throws XMLMarshalException {
+    protected void setFields(List<DatabaseField> fields) throws XMLMarshalException {
         throw XMLMarshalException.operationNotSupported("setField(Vector fields)");
     }
 
@@ -718,7 +718,7 @@ public class DOMRecord extends XMLRecord implements TransformationRecord {
      * Setting values vector will not update the document so this is not supported
      */
     @Override
-    protected void setValues(Vector values) throws XMLMarshalException {
+    protected void setValues(List<Object> values) throws XMLMarshalException {
         throw XMLMarshalException.operationNotSupported("setValues(Vector values)");
     }
 

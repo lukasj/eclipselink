@@ -184,7 +184,7 @@ public class EntityResult extends SQLResult {
             FieldResult fieldResult = (FieldResult)this.getFieldResults().get(mapping.getAttributeName());
             if (fieldResult != null){
                 if (mapping.getFields().size() == 1 ) {
-                    entityRecord.put(mapping.getFields().firstElement(), record.get(fieldResult.getColumn()));
+                    entityRecord.put(mapping.getFields().get(0), record.get(fieldResult.getColumn()));
                 } else if (mapping.getFields().size() >1){
                     getValueFromRecordForMapping(entityRecord,mapping,fieldResult,record);
                 }
@@ -251,7 +251,7 @@ public class EntityResult extends SQLResult {
             return df;
         }else{
             //this is it.. return this mapping's field
-            return mapping.getFields().firstElement();
+            return mapping.getFields().get(0);
         }
     }
 

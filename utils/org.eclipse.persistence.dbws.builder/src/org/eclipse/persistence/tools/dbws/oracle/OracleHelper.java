@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 1998, 2015 Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 1998, 2018 Oracle and/or its affiliates. All rights reserved.
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Public License v1.0 and Eclipse Distribution License v. 1.0
  * which accompanies this distribution.
@@ -868,7 +868,7 @@ public class OracleHelper extends BaseDBWSBuilderHelper implements DBWSBuilderHe
             String lFieldName = fieldName.toLowerCase();
             // handle field ordering
             boolean found = false;
-            Vector orderedFields = ordtDesc.getOrderedFields();
+            List<DatabaseField> orderedFields = ordtDesc.getOrderedFields();
             for (Iterator i = orderedFields.iterator(); i.hasNext();) {
                 Object o = i.next();
                 if (o instanceof DatabaseField) {
@@ -1137,7 +1137,7 @@ public class OracleHelper extends BaseDBWSBuilderHelper implements DBWSBuilderHe
 
             // handle field ordering
             boolean found = false;
-            Vector orderedFields = ordt.getOrderedFields();
+            List<DatabaseField> orderedFields = ordt.getOrderedFields();
             for (Iterator i = orderedFields.iterator(); i.hasNext();) {
                 Object o = i.next();
                 if (o instanceof DatabaseField) {

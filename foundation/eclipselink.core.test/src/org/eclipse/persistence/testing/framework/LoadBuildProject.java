@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 1998, 2015 Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 1998, 2018 Oracle and/or its affiliates. All rights reserved.
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Public License v1.0 and Eclipse Distribution License v. 1.0
  * which accompanies this distribution.
@@ -12,7 +12,7 @@
  ******************************************************************************/
 package org.eclipse.persistence.testing.framework;
 
-import java.util.*;
+import java.util.Vector;
 
 import org.eclipse.persistence.mappings.DirectToFieldMapping;
 import org.eclipse.persistence.sequencing.NativeSequence;
@@ -68,7 +68,7 @@ public class LoadBuildProject extends org.eclipse.persistence.sessions.Project {
 
         // SECTION: DESCRIPTOR
         descriptor.setJavaClass(org.eclipse.persistence.testing.framework.LoadBuildSummary.class);
-        Vector vector = new Vector();
+        Vector<String> vector = new Vector<>();
         vector.addElement("LOADBUILD");
         descriptor.setTableNames(vector);
         descriptor.addPrimaryKeyFieldName("LOADBUILD.id");
@@ -161,7 +161,7 @@ public class LoadBuildProject extends org.eclipse.persistence.sessions.Project {
 
         // SECTION: DESCRIPTOR
         descriptor.setJavaClass(org.eclipse.persistence.testing.framework.TestResult.class);
-        Vector vector = new Vector();
+        Vector<String> vector = new Vector<>();
         vector.addElement("RESULT");
         descriptor.setTableNames(vector);
         descriptor.addPrimaryKeyFieldName("RESULT.id");
@@ -246,7 +246,7 @@ public class LoadBuildProject extends org.eclipse.persistence.sessions.Project {
 
         // SECTION: DESCRIPTOR
         descriptor.setJavaClass(org.eclipse.persistence.testing.framework.TestResultsSummary.class);
-        Vector vector = new Vector();
+        Vector<String> vector = new Vector<>();
         vector.addElement("SUMMARY");
         descriptor.setTableNames(vector);
         descriptor.addPrimaryKeyFieldName("SUMMARY.id");

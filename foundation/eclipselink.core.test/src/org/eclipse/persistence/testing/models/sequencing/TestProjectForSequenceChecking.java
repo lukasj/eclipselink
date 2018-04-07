@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 1998, 2015 Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 1998, 2018 Oracle and/or its affiliates. All rights reserved.
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Public License v1.0 and Eclipse Distribution License v. 1.0
  * which accompanies this distribution.
@@ -12,7 +12,7 @@
  ******************************************************************************/
 package org.eclipse.persistence.testing.models.sequencing;
 
-import java.util.*;
+import java.util.Vector;
 
 /**
  * TOPLink generated Project class.
@@ -60,7 +60,7 @@ public class TestProjectForSequenceChecking extends org.eclipse.persistence.sess
 
         // SECTION: DESCRIPTOR
         descriptor.setJavaClass(org.eclipse.persistence.testing.models.sequencing.SeqTestClass1.class);
-        Vector vector = new Vector();
+        Vector<String> vector = new Vector<>();
         vector.addElement("SEQTESTTABLE1");
         descriptor.setTableNames(vector);
         descriptor.addPrimaryKeyFieldName("SEQTESTTABLE1.PKEY");
@@ -117,7 +117,7 @@ public class TestProjectForSequenceChecking extends org.eclipse.persistence.sess
 
         // SECTION: DESCRIPTOR
         descriptor.setJavaClass(org.eclipse.persistence.testing.models.sequencing.SeqTestClass2.class);
-        Vector vector = new Vector();
+        Vector<String> vector = new Vector<>();
         vector.addElement("SEQTESTTABLE2");
         descriptor.setTableNames(vector);
         descriptor.addPrimaryKeyFieldName("SEQTESTTABLE2.PKEY");

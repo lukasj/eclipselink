@@ -17,11 +17,17 @@
  ******************************************************************************/
 package org.eclipse.persistence.platform.database;
 
+import java.io.IOException;
 import java.io.StringWriter;
 import java.io.Writer;
-import java.io.IOException;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Hashtable;
+import java.util.Iterator;
+import java.util.List;
 
+import org.eclipse.persistence.exceptions.ValidationException;
+import org.eclipse.persistence.expressions.ExpressionOperator;
 import org.eclipse.persistence.internal.databaseaccess.DatabaseCall;
 import org.eclipse.persistence.internal.databaseaccess.FieldTypeDefinition;
 import org.eclipse.persistence.internal.expressions.ExpressionSQLPrinter;
@@ -29,8 +35,6 @@ import org.eclipse.persistence.internal.expressions.SQLSelectStatement;
 import org.eclipse.persistence.internal.helper.ClassConstants;
 import org.eclipse.persistence.internal.helper.DatabaseField;
 import org.eclipse.persistence.internal.helper.DatabaseTable;
-import org.eclipse.persistence.exceptions.ValidationException;
-import org.eclipse.persistence.expressions.ExpressionOperator;
 import org.eclipse.persistence.queries.ValueReadQuery;
 
 /**
@@ -109,9 +113,9 @@ public class HSQLPlatform extends DatabasePlatform {
         ExpressionOperator exOperator = new ExpressionOperator();
         exOperator.setType(ExpressionOperator.FunctionOperator);
         exOperator.setSelector(ExpressionOperator.ToNumber);
-        Vector v = org.eclipse.persistence.internal.helper.NonSynchronizedVector.newInstance(2);
-        v.addElement("CONVERT(");
-        v.addElement(",DECIMAL)");
+        List<String> v = new ArrayList<>(2);
+        v.add("CONVERT(");
+        v.add(",DECIMAL)");
         exOperator.printsAs(v);
         exOperator.bePrefix();
         exOperator.setNodeClass(ClassConstants.FunctionExpression_Class);
@@ -126,9 +130,9 @@ public class HSQLPlatform extends DatabasePlatform {
         ExpressionOperator exOperator = new ExpressionOperator();
         exOperator.setType(ExpressionOperator.FunctionOperator);
         exOperator.setSelector(ExpressionOperator.Trim);
-        Vector v = org.eclipse.persistence.internal.helper.NonSynchronizedVector.newInstance(2);
-        v.addElement("TRIM(FROM ");
-        v.addElement(")");
+        List<String> v = new ArrayList<>(2);
+        v.add("TRIM(FROM ");
+        v.add(")");
         exOperator.printsAs(v);
         exOperator.bePrefix();
         exOperator.setNodeClass(ClassConstants.FunctionExpression_Class);
@@ -144,10 +148,10 @@ public class HSQLPlatform extends DatabasePlatform {
         ExpressionOperator exOperator = new ExpressionOperator();
         exOperator.setType(ExpressionOperator.FunctionOperator);
         exOperator.setSelector(ExpressionOperator.RightTrim2);
-        Vector v = org.eclipse.persistence.internal.helper.NonSynchronizedVector.newInstance(5);
-        v.addElement("TRIM(TRAILING ");
-        v.addElement(" FROM ");
-        v.addElement(")");
+        List<String> v = new ArrayList<>(5);
+        v.add("TRIM(TRAILING ");
+        v.add(" FROM ");
+        v.add(")");
         exOperator.printsAs(v);
         exOperator.bePrefix();
         int[] indices = {1, 0};
@@ -165,12 +169,12 @@ public class HSQLPlatform extends DatabasePlatform {
         ExpressionOperator exOperator = new ExpressionOperator();
         exOperator.setType(ExpressionOperator.FunctionOperator);
         exOperator.setSelector(ExpressionOperator.Greatest);
-        Vector v = org.eclipse.persistence.internal.helper.NonSynchronizedVector.newInstance(5);
-        v.addElement("CASEWHEN(");
-        v.addElement(" >= ");
-        v.addElement(", ");
-        v.addElement(", ");
-        v.addElement(")");
+        List<String> v = new ArrayList<>(5);
+        v.add("CASEWHEN(");
+        v.add(" >= ");
+        v.add(", ");
+        v.add(", ");
+        v.add(")");
         exOperator.printsAs(v);
         exOperator.bePrefix();
         int[] indices = {0, 1, 0, 1};

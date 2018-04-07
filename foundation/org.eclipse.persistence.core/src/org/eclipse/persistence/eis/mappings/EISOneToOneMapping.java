@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 1998, 2015 Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 1998, 2018 Oracle and/or its affiliates. All rights reserved.
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Public License v1.0 and Eclipse Distribution License v. 1.0
  * which accompanies this distribution.
@@ -12,6 +12,7 @@
  ******************************************************************************/
 package org.eclipse.persistence.eis.mappings;
 
+import java.util.ArrayList;
 import java.util.Enumeration;
 import java.util.HashMap;
 import java.util.Iterator;
@@ -25,6 +26,7 @@ import org.eclipse.persistence.expressions.Expression;
 import org.eclipse.persistence.expressions.ExpressionBuilder;
 import org.eclipse.persistence.indirection.ValueHolder;
 import org.eclipse.persistence.internal.helper.DatabaseField;
+import org.eclipse.persistence.internal.helper.Helper;
 import org.eclipse.persistence.internal.identitymaps.CacheId;
 import org.eclipse.persistence.internal.identitymaps.CacheKey;
 import org.eclipse.persistence.internal.queries.JoinedAttributeManager;
@@ -32,7 +34,11 @@ import org.eclipse.persistence.internal.sessions.AbstractRecord;
 import org.eclipse.persistence.internal.sessions.AbstractSession;
 import org.eclipse.persistence.mappings.DatabaseMapping;
 import org.eclipse.persistence.mappings.ObjectReferenceMapping;
-import org.eclipse.persistence.queries.*;
+import org.eclipse.persistence.queries.ObjectBuildingQuery;
+import org.eclipse.persistence.queries.ObjectLevelModifyQuery;
+import org.eclipse.persistence.queries.ObjectLevelReadQuery;
+import org.eclipse.persistence.queries.ReadObjectQuery;
+import org.eclipse.persistence.queries.ReadQuery;
 
 /**
  * <p>An EIS one-to-one mapping is a reference mapping that represents the relationship between
@@ -84,7 +90,7 @@ public class EISOneToOneMapping extends ObjectReferenceMapping implements EISMap
     public EISOneToOneMapping() {
         this.selectionQuery = new ReadObjectQuery();
 
-        this.foreignKeyFields = org.eclipse.persistence.internal.helper.NonSynchronizedVector.newInstance(1);
+        this.foreignKeyFields = new ArrayList<>(1);
 
         this.sourceToTargetKeyFields = new HashMap(2);
         this.targetToSourceKeyFields = new HashMap(2);
@@ -141,17 +147,17 @@ public class EISOneToOneMapping extends ObjectReferenceMapping implements EISMap
     @Override
     public Object clone() {
         EISOneToOneMapping clone = (EISOneToOneMapping)super.clone();
-        clone.setForeignKeyFields(org.eclipse.persistence.internal.helper.NonSynchronizedVector.newInstance(getForeignKeyFields().size()));
+        clone.setForeignKeyFields(new ArrayList<>(getForeignKeyFields().size()));
         clone.setSourceToTargetKeyFields(new HashMap(getSourceToTargetKeyFields().size()));
         clone.setTargetToSourceKeyFields(new HashMap(getTargetToSourceKeyFields().size()));
         Map setOfFields = new HashMap(getTargetToSourceKeyFields().size());
 
-        for (Enumeration enumtr = getForeignKeyFields().elements(); enumtr.hasMoreElements();) {
-            DatabaseField field = (DatabaseField)enumtr.nextElement();
+        for (Enumeration<DatabaseField> enumtr = Helper.elements(getForeignKeyFields()); enumtr.hasMoreElements();) {
+            DatabaseField field = enumtr.nextElement();
 
             DatabaseField fieldClone = field.clone();
             setOfFields.put(field, fieldClone);
-            clone.getForeignKeyFields().addElement(fieldClone);
+            clone.getForeignKeyFields().add(fieldClone);
         }
 
         //get clones from set for source hashtable.  If they do not exist, create a new one.
@@ -369,8 +375,8 @@ public class EISOneToOneMapping extends ObjectReferenceMapping implements EISMap
         // If any field in the foreign key is null then it means there are no referenced objects
         // Skip for partial objects as fk may not be present.
         if (!query.hasPartialAttributeExpressions()) {
-            for (Enumeration enumeration = getFields().elements(); enumeration.hasMoreElements();) {
-                DatabaseField field = (DatabaseField)enumeration.nextElement();
+            for (Enumeration<DatabaseField> enumeration = Helper.elements(getFields()); enumeration.hasMoreElements();) {
+                DatabaseField field = enumeration.nextElement();
                 if (row.get(field) == null) {
                     return getIndirectionPolicy().nullValueFromRow();
                 }

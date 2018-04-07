@@ -12,9 +12,11 @@
  ******************************************************************************/
 package org.eclipse.persistence.internal.expressions;
 
+import java.util.ArrayList;
 import java.util.Collection;
 
 import java.util.Iterator;
+import java.util.List;
 import java.util.Map;
 import java.util.Vector;
 
@@ -86,7 +88,7 @@ public class CollectionExpression extends ConstantExpression {
         super.postCopyIn(alreadyDone);
         if (value instanceof Collection) {
             Collection values = (Collection)value;
-            Vector newValues = org.eclipse.persistence.internal.helper.NonSynchronizedVector.newInstance(values.size());
+            List<Object> newValues = new ArrayList<>(values.size());
             for (Iterator iterator = values.iterator(); iterator.hasNext();) {
                 Object val = iterator.next();
                 if (val instanceof Expression){

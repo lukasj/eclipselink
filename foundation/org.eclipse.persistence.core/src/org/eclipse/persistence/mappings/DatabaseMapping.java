@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 1998, 2015 Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 1998, 2018 Oracle and/or its affiliates. All rights reserved.
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Public License v1.0 and Eclipse Distribution License v. 1.0
  * which accompanies this distribution.
@@ -27,13 +27,13 @@ import java.sql.ResultSet;
 import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Enumeration;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
-import java.util.Vector;
 
 import org.eclipse.persistence.core.mappings.CoreMapping;
 import org.eclipse.persistence.descriptors.ClassDescriptor;
@@ -55,8 +55,8 @@ import org.eclipse.persistence.internal.expressions.QueryKeyExpression;
 import org.eclipse.persistence.internal.helper.ConversionManager;
 import org.eclipse.persistence.internal.helper.DatabaseField;
 import org.eclipse.persistence.internal.helper.DatabaseTable;
+import org.eclipse.persistence.internal.helper.Helper;
 import org.eclipse.persistence.internal.helper.IdentityHashSet;
-import org.eclipse.persistence.internal.helper.NonSynchronizedVector;
 import org.eclipse.persistence.internal.identitymaps.CacheKey;
 import org.eclipse.persistence.internal.indirection.DatabaseValueHolder;
 import org.eclipse.persistence.internal.queries.AttributeItem;
@@ -106,7 +106,7 @@ public abstract class DatabaseMapping extends CoreMapping<AttributeAccessor, Abs
     public enum WriteType { INSERT, UPDATE, UNDEFINED }
 
     /** Used to reduce memory for mappings with no fields. */
-    protected static final Vector NO_FIELDS = org.eclipse.persistence.internal.helper.NonSynchronizedVector.newInstance(0);
+    protected static final List<DatabaseField> NO_FIELDS = Collections.EMPTY_LIST;
 
     /** Used to share integer instance to reduce memory. */
     protected static final Integer NO_WEIGHT = Integer.valueOf(Integer.MAX_VALUE);
@@ -131,7 +131,7 @@ public abstract class DatabaseMapping extends CoreMapping<AttributeAccessor, Abs
     protected Boolean isLazy;
 
     /** Fields associated with the mappings are cached */
-    protected Vector<DatabaseField> fields;
+    protected List<DatabaseField> fields;
 
     /** It is needed only in remote initialization and mapping is in parent descriptor */
     protected boolean isRemotelyInitialized;
@@ -380,10 +380,10 @@ public abstract class DatabaseMapping extends CoreMapping<AttributeAccessor, Abs
      * INTERNAL:
      * Helper method to clone vector of fields (used in aggregate initialization cloning).
      */
-    protected Vector cloneFields(Vector fields) {
-        Vector clonedFields = org.eclipse.persistence.internal.helper.NonSynchronizedVector.newInstance();
-        for (Enumeration fieldsEnum = fields.elements(); fieldsEnum.hasMoreElements();) {
-            clonedFields.addElement(((DatabaseField)fieldsEnum.nextElement()).clone());
+    protected List<DatabaseField> cloneFields(List<DatabaseField> fields) {
+        List<DatabaseField> clonedFields = new ArrayList<>(fields.size());
+        for (Enumeration<DatabaseField> fieldsEnum = Helper.elements(fields); fieldsEnum.hasMoreElements();) {
+            clonedFields.add(fieldsEnum.nextElement().clone());
         }
 
         return clonedFields;
@@ -393,7 +393,7 @@ public abstract class DatabaseMapping extends CoreMapping<AttributeAccessor, Abs
      * This method must be overwritten in the subclasses to return a vector of all the
      * fields this mapping represents.
      */
-    protected Vector<DatabaseField> collectFields() {
+    protected List<DatabaseField> collectFields() {
         return NO_FIELDS;
     }
 
@@ -746,7 +746,7 @@ public abstract class DatabaseMapping extends CoreMapping<AttributeAccessor, Abs
      * Returns the set of fields that should be selected to build this mapping's value(s).
      * This is used by expressions to determine which fields to include in the select clause for non-object expressions.
      */
-    public Vector getSelectFields() {
+    public List<DatabaseField> getSelectFields() {
         return getFields();
     }
 
@@ -755,8 +755,8 @@ public abstract class DatabaseMapping extends CoreMapping<AttributeAccessor, Abs
      * Returns the table(s) that should be selected to build this mapping's value(s).
      * This is used by expressions to determine which tables to include in the from clause for non-object expressions.
      */
-    public Vector getSelectTables() {
-        return new NonSynchronizedVector(0);
+    public List<DatabaseTable> getSelectTables() {
+        return new ArrayList<>(0);
     }
 
     /**
@@ -764,7 +764,7 @@ public abstract class DatabaseMapping extends CoreMapping<AttributeAccessor, Abs
      * Returns a vector of all the fields this mapping represents.
      */
     @Override
-    public Vector<DatabaseField> getFields() {
+    public List<DatabaseField> getFields() {
         return this.fields;
     }
 
@@ -1719,7 +1719,7 @@ public abstract class DatabaseMapping extends CoreMapping<AttributeAccessor, Abs
      * Set the mapping's field collection.
      */
     @Override
-    protected void setFields(Vector<DatabaseField> fields) {
+    protected void setFields(List<DatabaseField> fields) {
         this.fields = fields;
     }
 

@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 2012, 2015 Pervasive Software Inc, Oracle and/or its affiliates. All Rights Reserved
+ * Copyright (c) 2012, 2018 Pervasive Software Inc, Oracle and/or its affiliates. All Rights Reserved
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Public License v1.0 and Eclipse Distribution License v. 1.0
  * which accompanies this distribution.
@@ -24,9 +24,10 @@ package org.eclipse.persistence.platform.database;
 
 import java.io.IOException;
 import java.io.Writer;
+import java.util.ArrayList;
 import java.util.Hashtable;
+import java.util.List;
 import java.util.Map;
-import java.util.Vector;
 
 import org.eclipse.persistence.exceptions.ValidationException;
 import org.eclipse.persistence.expressions.ExpressionOperator;
@@ -233,9 +234,9 @@ public class PervasivePlatform extends org.eclipse.persistence.platform.database
         ExpressionOperator exOperator = new ExpressionOperator();
         exOperator.setType(ExpressionOperator.FunctionOperator);
         exOperator.setSelector(ExpressionOperator.ToNumber);
-        Vector v = org.eclipse.persistence.internal.helper.NonSynchronizedVector.newInstance(2);
-        v.addElement("CONVERT(");
-        v.addElement(", SQL_NUMERIC)");
+        List<String> v = new ArrayList<>(2);
+        v.add("CONVERT(");
+        v.add(", SQL_NUMERIC)");
         exOperator.printsAs(v);
         exOperator.bePrefix();
         exOperator.setNodeClass(ClassConstants.FunctionExpression_Class);
@@ -249,9 +250,9 @@ public class PervasivePlatform extends org.eclipse.persistence.platform.database
         ExpressionOperator exOperator = new ExpressionOperator();
         exOperator.setType(ExpressionOperator.FunctionOperator);
         exOperator.setSelector(ExpressionOperator.ToDate);
-        Vector v = org.eclipse.persistence.internal.helper.NonSynchronizedVector.newInstance(2);
-        v.addElement("CONVERT(");
-        v.addElement(", DATETIME)");
+        List<String> v = new ArrayList<>(2);
+        v.add("CONVERT(");
+        v.add(", DATETIME)");
         exOperator.printsAs(v);
         exOperator.bePrefix();
         exOperator.setNodeClass(ClassConstants.FunctionExpression_Class);
@@ -265,9 +266,9 @@ public class PervasivePlatform extends org.eclipse.persistence.platform.database
         ExpressionOperator exOperator = new ExpressionOperator();
         exOperator.setType(ExpressionOperator.FunctionOperator);
         exOperator.setSelector(ExpressionOperator.ToChar);
-        Vector v = org.eclipse.persistence.internal.helper.NonSynchronizedVector.newInstance(2);
-        v.addElement("CONVERT(");
-        v.addElement(", SQL_CHAR)");
+        List<String> v = new ArrayList<>(2);
+        v.add("CONVERT(");
+        v.add(", SQL_CHAR)");
         exOperator.printsAs(v);
         exOperator.bePrefix();
         exOperator.setNodeClass(ClassConstants.FunctionExpression_Class);
@@ -282,9 +283,9 @@ public class PervasivePlatform extends org.eclipse.persistence.platform.database
         ExpressionOperator exOperator = new ExpressionOperator();
         exOperator.setType(ExpressionOperator.FunctionOperator);
         exOperator.setSelector(ExpressionOperator.DateToString);
-        Vector v = org.eclipse.persistence.internal.helper.NonSynchronizedVector.newInstance(2);
-        v.addElement("CONVERT(");
-        v.addElement(", SQL_CHAR)");
+        List<String> v = new ArrayList<>(2);
+        v.add("CONVERT(");
+        v.add(", SQL_CHAR)");
         exOperator.printsAs(v);
         exOperator.bePrefix();
         exOperator.setNodeClass(ClassConstants.FunctionExpression_Class);
@@ -333,11 +334,11 @@ public class PervasivePlatform extends org.eclipse.persistence.platform.database
         ExpressionOperator result = new ExpressionOperator();
         result.setSelector(ExpressionOperator.SubstringSingleArg);
         result.setType(ExpressionOperator.FunctionOperator);
-        Vector v = org.eclipse.persistence.internal.helper.NonSynchronizedVector.newInstance();
-        v.addElement("SUBSTRING(");
-        v.addElement(",");
-        v.addElement(", CHAR_LENGTH(");
-        v.addElement("))");
+        List<String> v = new ArrayList<>();
+        v.add("SUBSTRING(");
+        v.add(",");
+        v.add(", CHAR_LENGTH(");
+        v.add("))");
         result.printsAs(v);
         int[] indices = new int[3];
         indices[0] = 0;

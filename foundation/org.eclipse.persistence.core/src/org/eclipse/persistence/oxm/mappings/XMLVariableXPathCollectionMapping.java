@@ -12,7 +12,7 @@
  ******************************************************************************/
 package org.eclipse.persistence.oxm.mappings;
 
-import java.util.Vector;
+import java.util.List;
 
 import javax.xml.namespace.QName;
 
@@ -86,7 +86,7 @@ public class XMLVariableXPathCollectionMapping extends XMLCompositeCollectionMap
        }
 
     @Override
-    protected Vector collectFields() {
+    protected List<DatabaseField> collectFields() {
         if(field != null){
             return super.collectFields();
         }
@@ -96,10 +96,10 @@ public class XMLVariableXPathCollectionMapping extends XMLCompositeCollectionMap
         return NO_FIELDS;
     }
 
-@Override
-public Vector getFields() {
-    return collectFields();
-}
+    @Override
+    public List<DatabaseField> getFields() {
+        return collectFields();
+    }
 
 //    public Vector getFields() {
   //      return fields;

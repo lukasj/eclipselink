@@ -12,10 +12,10 @@
  ******************************************************************************/
 package org.eclipse.persistence.internal.eis.cobol;
 
-import org.eclipse.persistence.internal.helper.*;
-import org.eclipse.persistence.sessions.DatabaseRecord;
+import java.util.List;
 
-import java.util.Vector;
+import org.eclipse.persistence.internal.helper.DatabaseField;
+import org.eclipse.persistence.sessions.DatabaseRecord;
 
 /**
 * <b>Purpose</b>: This class extends database row to allow for <code>CobolRedefinedFieldValue</code>
@@ -30,7 +30,7 @@ public class CobolRow extends DatabaseRecord {
         super(initialCapacity);
     }
 
-    public CobolRow(Vector fields, Vector values) {
+    public CobolRow(List<DatabaseField> fields, List<Object> values) {
         super(fields, values);
     }
 

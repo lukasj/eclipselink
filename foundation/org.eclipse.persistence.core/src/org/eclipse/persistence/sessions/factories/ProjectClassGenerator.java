@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 1998, 2015 Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 1998, 2018 Oracle and/or its affiliates. All rights reserved.
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Public License v1.0 and Eclipse Distribution License v. 1.0
  * which accompanies this distribution.
@@ -169,11 +169,11 @@ public class ProjectClassGenerator {
     }
 
     protected void addAggregateCollectionMappingLines(NonreflectiveMethodDefinition method, String mappingName, AggregateCollectionMapping mapping) {
-        Enumeration targetKeysEnum = mapping.getTargetForeignKeyFields().elements();
-        Enumeration sourceKeysEnum = mapping.getSourceKeyFields().elements();
+        Enumeration<DatabaseField> targetKeysEnum = Helper.elements(mapping.getTargetForeignKeyFields());
+        Enumeration<DatabaseField> sourceKeysEnum = Helper.elements(mapping.getSourceKeyFields());
         while (sourceKeysEnum.hasMoreElements()) {
-            DatabaseField sourceField = (DatabaseField)sourceKeysEnum.nextElement();
-            DatabaseField targetField = (DatabaseField)targetKeysEnum.nextElement();
+            DatabaseField sourceField = sourceKeysEnum.nextElement();
+            DatabaseField targetField = targetKeysEnum.nextElement();
             method.addLine(mappingName + ".addTargetForeignKeyFieldName(\"" + targetField.getQualifiedName() + "\", \"" + sourceField.getQualifiedName() + "\");");
         }
     }
@@ -394,11 +394,11 @@ public class ProjectClassGenerator {
 
         method.addLine(mappingName + ".setDirectFieldName(\"" + mapping.getDirectFieldName() + "\");");
 
-        Enumeration sourceKeysEnum = mapping.getSourceKeyFields().elements();
-        Enumeration referenceKeysEnum = mapping.getReferenceKeyFields().elements();
+        Enumeration<DatabaseField> sourceKeysEnum = Helper.elements(mapping.getSourceKeyFields());
+        Enumeration<DatabaseField> referenceKeysEnum = Helper.elements(mapping.getReferenceKeyFields());
         while (referenceKeysEnum.hasMoreElements()) {
-            DatabaseField sourceField = (DatabaseField)sourceKeysEnum.nextElement();
-            DatabaseField referenceField = (DatabaseField)referenceKeysEnum.nextElement();
+            DatabaseField sourceField = sourceKeysEnum.nextElement();
+            DatabaseField referenceField = referenceKeysEnum.nextElement();
             method.addLine(mappingName + ".addReferenceKeyFieldName(\"" + referenceField.getQualifiedName() + "\", \"" + sourceField.getQualifiedName() + "\");");
         }
 
@@ -709,19 +709,19 @@ public class ProjectClassGenerator {
             method.addLine(mappingName + ".setRelationTableName(\"" + mapping.getRelationTable().getQualifiedName() + "\");");
         }
 
-        Enumeration sourceRelationKeysEnum = mapping.getSourceRelationKeyFields().elements();
-        Enumeration sourceKeysEnum = mapping.getSourceKeyFields().elements();
+        Enumeration<DatabaseField> sourceRelationKeysEnum = Helper.elements(mapping.getSourceRelationKeyFields());
+        Enumeration<DatabaseField> sourceKeysEnum = Helper.elements(mapping.getSourceKeyFields());
         while (sourceRelationKeysEnum.hasMoreElements()) {
-            DatabaseField sourceField = (DatabaseField)sourceKeysEnum.nextElement();
-            DatabaseField relationField = (DatabaseField)sourceRelationKeysEnum.nextElement();
+            DatabaseField sourceField = sourceKeysEnum.nextElement();
+            DatabaseField relationField = sourceRelationKeysEnum.nextElement();
             method.addLine(mappingName + ".addSourceRelationKeyFieldName(\"" + relationField.getQualifiedName() + "\", \"" + sourceField.getQualifiedName() + "\");");
         }
 
-        Enumeration targetRelationKeysEnum = mapping.getTargetRelationKeyFields().elements();
-        Enumeration targetKeysEnum = mapping.getTargetKeyFields().elements();
+        Enumeration<DatabaseField> targetRelationKeysEnum = Helper.elements(mapping.getTargetRelationKeyFields());
+        Enumeration<DatabaseField> targetKeysEnum = Helper.elements(mapping.getTargetKeyFields());
         while (targetRelationKeysEnum.hasMoreElements()) {
-            DatabaseField targetField = (DatabaseField)targetKeysEnum.nextElement();
-            DatabaseField relationField = (DatabaseField)targetRelationKeysEnum.nextElement();
+            DatabaseField targetField = targetKeysEnum.nextElement();
+            DatabaseField relationField = targetRelationKeysEnum.nextElement();
             method.addLine(mappingName + ".addTargetRelationKeyFieldName(\"" + relationField.getQualifiedName() + "\", \"" + targetField.getQualifiedName() + "\");");
         }
 
@@ -818,11 +818,11 @@ public class ProjectClassGenerator {
     }
 
     protected void addOneToManyMappingLines(NonreflectiveMethodDefinition method, String mappingName, OneToManyMapping mapping) {
-        Enumeration targetKeysEnum = mapping.getTargetForeignKeyFields().elements();
-        Enumeration sourceKeysEnum = mapping.getSourceKeyFields().elements();
+        Enumeration<DatabaseField> targetKeysEnum = Helper.elements(mapping.getTargetForeignKeyFields());
+        Enumeration<DatabaseField> sourceKeysEnum = Helper.elements(mapping.getSourceKeyFields());
         while (sourceKeysEnum.hasMoreElements()) {
-            DatabaseField sourceField = (DatabaseField)sourceKeysEnum.nextElement();
-            DatabaseField targetField = (DatabaseField)targetKeysEnum.nextElement();
+            DatabaseField sourceField = sourceKeysEnum.nextElement();
+            DatabaseField targetField = targetKeysEnum.nextElement();
             method.addLine(mappingName + ".addTargetForeignKeyFieldName(\"" + targetField.getQualifiedName() + "\", \"" + sourceField.getQualifiedName() + "\");");
         }
     }
@@ -951,10 +951,10 @@ public class ProjectClassGenerator {
         // Named queries.
         if (descriptor.getQueryManager().getAllQueries().size() > 0) {
             method.addLine("// Named Queries.");
-            Enumeration namedQueries = descriptor.getQueryManager().getAllQueries().elements();
+            Enumeration<DatabaseQuery> namedQueries = Helper.elements(descriptor.getQueryManager().getAllQueries());
             int iteration = 0;
             while (namedQueries.hasMoreElements()) {
-                addNamedQueryLines(method, (DatabaseQuery)namedQueries.nextElement(), descriptor.getQueryManager(), iteration);
+                addNamedQueryLines(method, namedQueries.nextElement(), descriptor.getQueryManager(), iteration);
                 ++iteration;
             }
         }
@@ -1520,15 +1520,15 @@ public class ProjectClassGenerator {
 
         if ((!descriptor.isAggregateDescriptor()) && (!descriptor.isDescriptorForInterface())) {
             // Tables
-            for (Enumeration tablesEnum = descriptor.getTables().elements();
-                     tablesEnum.hasMoreElements();) {
-                String tableName = ((DatabaseTable)tablesEnum.nextElement()).getQualifiedName();
+            for (Enumeration<DatabaseTable> tablesEnum = Helper.elements(descriptor.getTables());
+                    tablesEnum.hasMoreElements();) {
+                String tableName = (tablesEnum.nextElement()).getQualifiedName();
                 method.addLine("descriptor.addTableName(\"" + tableName + "\");");
             }
 
             // Primary key
             if (!descriptor.isChildDescriptor()) {
-                for (Enumeration keysEnum = descriptor.getPrimaryKeyFieldNames().elements();
+                for (Enumeration<String> keysEnum = Helper.elements(descriptor.getPrimaryKeyFieldNames());
                          keysEnum.hasMoreElements();) {
                     method.addLine("descriptor.addPrimaryKeyFieldName(\"" + keysEnum.nextElement() + "\");");
                 }
@@ -2021,55 +2021,55 @@ public class ProjectClassGenerator {
     /**
      * Short the mappings by type.
      */
-    protected Vector sortMappings(Vector mappings) {
+    protected Vector sortMappings(List<DatabaseMapping> mappings) {
         Vector sortedMappings = new Vector(mappings.size());
 
-        for (Enumeration mappingsEnum = mappings.elements(); mappingsEnum.hasMoreElements();) {
-            DatabaseMapping mapping = (DatabaseMapping)mappingsEnum.nextElement();
+        for (Enumeration<DatabaseMapping> mappingsEnum = Helper.elements(mappings); mappingsEnum.hasMoreElements();) {
+            DatabaseMapping mapping = mappingsEnum.nextElement();
             if (mapping.getClass().equals(DirectToFieldMapping.class)) {
                 sortedMappings.addElement(mapping);
             }
         }
-        for (Enumeration mappingsEnum = mappings.elements(); mappingsEnum.hasMoreElements();) {
-            DatabaseMapping mapping = (DatabaseMapping)mappingsEnum.nextElement();
+        for (Enumeration<DatabaseMapping> mappingsEnum = Helper.elements(mappings); mappingsEnum.hasMoreElements();) {
+            DatabaseMapping mapping = mappingsEnum.nextElement();
             if (mapping.isTransformationMapping()) {
                 sortedMappings.addElement(mapping);
             }
         }
-        for (Enumeration mappingsEnum = mappings.elements(); mappingsEnum.hasMoreElements();) {
-            DatabaseMapping mapping = (DatabaseMapping)mappingsEnum.nextElement();
+        for (Enumeration<DatabaseMapping> mappingsEnum = Helper.elements(mappings); mappingsEnum.hasMoreElements();) {
+            DatabaseMapping mapping = mappingsEnum.nextElement();
             if (mapping.isAggregateMapping()) {
                 sortedMappings.addElement(mapping);
             }
         }
-        for (Enumeration mappingsEnum = mappings.elements(); mappingsEnum.hasMoreElements();) {
-            DatabaseMapping mapping = (DatabaseMapping)mappingsEnum.nextElement();
+        for (Enumeration<DatabaseMapping> mappingsEnum = Helper.elements(mappings); mappingsEnum.hasMoreElements();) {
+            DatabaseMapping mapping = mappingsEnum.nextElement();
             if (mapping.isDirectCollectionMapping()) {
                 sortedMappings.addElement(mapping);
             }
         }
-        for (Enumeration mappingsEnum = mappings.elements(); mappingsEnum.hasMoreElements();) {
-            DatabaseMapping mapping = (DatabaseMapping)mappingsEnum.nextElement();
+        for (Enumeration<DatabaseMapping> mappingsEnum = Helper.elements(mappings); mappingsEnum.hasMoreElements();) {
+            DatabaseMapping mapping = mappingsEnum.nextElement();
             if (mapping.isObjectReferenceMapping()) {
                 sortedMappings.addElement(mapping);
             }
         }
-        for (Enumeration mappingsEnum = mappings.elements(); mappingsEnum.hasMoreElements();) {
-            DatabaseMapping mapping = (DatabaseMapping)mappingsEnum.nextElement();
+        for (Enumeration<DatabaseMapping> mappingsEnum = Helper.elements(mappings); mappingsEnum.hasMoreElements();) {
+            DatabaseMapping mapping = mappingsEnum.nextElement();
             if (mapping.isOneToManyMapping()) {
                 sortedMappings.addElement(mapping);
             }
         }
-        for (Enumeration mappingsEnum = mappings.elements(); mappingsEnum.hasMoreElements();) {
-            DatabaseMapping mapping = (DatabaseMapping)mappingsEnum.nextElement();
+        for (Enumeration<DatabaseMapping> mappingsEnum = Helper.elements(mappings); mappingsEnum.hasMoreElements();) {
+            DatabaseMapping mapping = mappingsEnum.nextElement();
             if (mapping.isManyToManyMapping()) {
                 sortedMappings.addElement(mapping);
             }
         }
 
         // Others
-        for (Enumeration mappingsEnum = mappings.elements(); mappingsEnum.hasMoreElements();) {
-            DatabaseMapping mapping = (DatabaseMapping)mappingsEnum.nextElement();
+        for (Enumeration<DatabaseMapping> mappingsEnum = Helper.elements(mappings); mappingsEnum.hasMoreElements();) {
+            DatabaseMapping mapping = mappingsEnum.nextElement();
             if (!sortedMappings.contains(mapping)) {
                 sortedMappings.addElement(mapping);
             }

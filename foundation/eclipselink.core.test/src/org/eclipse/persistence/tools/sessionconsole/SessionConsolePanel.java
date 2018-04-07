@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 1998, 2015 Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 1998, 2018 Oracle and/or its affiliates. All rights reserved.
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Public License v1.0 and Eclipse Distribution License v. 1.0
  * which accompanies this distribution.
@@ -12,26 +12,78 @@
  ******************************************************************************/
 package org.eclipse.persistence.tools.sessionconsole;
 
+import java.awt.Color;
+import java.awt.Container;
+import java.awt.Dimension;
+import java.awt.GridBagConstraints;
+import java.awt.GridBagLayout;
+import java.awt.Insets;
+import java.awt.SystemColor;
+import java.awt.event.ActionListener;
+import java.awt.event.ItemEvent;
+import java.awt.event.ItemListener;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.FileWriter;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.io.OutputStreamWriter;
+import java.io.Writer;
 import java.lang.reflect.Method;
-import java.awt.*;
-import java.awt.event.*;
-import java.io.*;
-import java.util.*;
-import javax.swing.*;
-import javax.swing.event.*;
-import javax.swing.table.*;
+import java.util.Arrays;
+import java.util.Enumeration;
+import java.util.Iterator;
+import java.util.Vector;
 
-import org.eclipse.persistence.internal.helper.*;
-import org.eclipse.persistence.internal.identitymaps.*;
+import javax.swing.DefaultListModel;
+import javax.swing.JButton;
+import javax.swing.JCheckBox;
+import javax.swing.JCheckBoxMenuItem;
+import javax.swing.JComboBox;
+import javax.swing.JFileChooser;
+import javax.swing.JLabel;
+import javax.swing.JList;
+import javax.swing.JMenu;
+import javax.swing.JMenuItem;
+import javax.swing.JPanel;
+import javax.swing.JPopupMenu;
+import javax.swing.JScrollPane;
+import javax.swing.JSeparator;
+import javax.swing.JSplitPane;
+import javax.swing.JTabbedPane;
+import javax.swing.JTable;
+import javax.swing.JTextArea;
+import javax.swing.JTextPane;
+import javax.swing.event.ListSelectionEvent;
+import javax.swing.event.ListSelectionListener;
+import javax.swing.table.DefaultTableModel;
+
+import org.eclipse.persistence.descriptors.ClassDescriptor;
+import org.eclipse.persistence.internal.helper.DatabaseField;
+import org.eclipse.persistence.internal.helper.Helper;
+import org.eclipse.persistence.internal.identitymaps.CacheKey;
+import org.eclipse.persistence.internal.identitymaps.IdentityMap;
 import org.eclipse.persistence.internal.sessions.AbstractSession;
 import org.eclipse.persistence.logging.SessionLog;
-import org.eclipse.persistence.mappings.*;
-import org.eclipse.persistence.descriptors.ClassDescriptor;
-import org.eclipse.persistence.queries.*;
-import org.eclipse.persistence.sessions.*;
-import org.eclipse.persistence.tools.beans.*;
-import org.eclipse.persistence.tools.profiler.*;
-import org.eclipse.persistence.sessions.factories.*;
+import org.eclipse.persistence.mappings.DatabaseMapping;
+import org.eclipse.persistence.queries.DatabaseQuery;
+import org.eclipse.persistence.queries.ReadAllQuery;
+import org.eclipse.persistence.queries.ReportQueryResult;
+import org.eclipse.persistence.queries.SQLCall;
+import org.eclipse.persistence.sessions.DatabaseLogin;
+import org.eclipse.persistence.sessions.DatabaseRecord;
+import org.eclipse.persistence.sessions.DatabaseSession;
+import org.eclipse.persistence.sessions.Project;
+import org.eclipse.persistence.sessions.Session;
+import org.eclipse.persistence.sessions.factories.SessionManager;
+import org.eclipse.persistence.sessions.factories.XMLProjectReader;
+import org.eclipse.persistence.tools.beans.ExpressionPanel;
+import org.eclipse.persistence.tools.beans.MessageDialog;
+import org.eclipse.persistence.tools.beans.TextAreaOutputStream;
+import org.eclipse.persistence.tools.profiler.PerformanceProfiler;
 
 /**
  * Main panel for the session console. The session console is used by the
@@ -3500,7 +3552,7 @@ public class SessionConsolePanel extends JPanel implements ActionListener,
 
         String[] columns = new String[descriptor.getMappings().size()];
         for (int index = 0; index < descriptor.getMappings().size(); index++) {
-            columns[index] = (descriptor.getMappings().elementAt(index))
+            columns[index] = (descriptor.getMappings().get(index))
                     .getAttributeName();
         }
 
@@ -3510,7 +3562,7 @@ public class SessionConsolePanel extends JPanel implements ActionListener,
             Object object = objectsEnumeration.nextElement();
             String[] values = new String[descriptor.getMappings().size()];
             for (int index = 0; index < descriptor.getMappings().size(); index++) {
-                DatabaseMapping mapping = descriptor.getMappings().elementAt(
+                DatabaseMapping mapping = descriptor.getMappings().get(
                         index);
                 values[index] = String.valueOf(mapping
                         .getAttributeValueFromObject(object));
@@ -3533,7 +3585,7 @@ public class SessionConsolePanel extends JPanel implements ActionListener,
         DatabaseRecord firstRow = (DatabaseRecord) resultRows.firstElement();
         String[] columns = new String[firstRow.getFields().size()];
         for (int index = 0; index < firstRow.getFields().size(); index++) {
-            columns[index] = ((DatabaseField) firstRow.getFields().elementAt(
+            columns[index] = ((DatabaseField) firstRow.getFields().get(
                     index)).getName();
         }
         model.setColumnIdentifiers(columns);
@@ -3543,7 +3595,7 @@ public class SessionConsolePanel extends JPanel implements ActionListener,
             String[] values = new String[row.getValues().size()];
             for (int index = 0; index < row.getValues().size(); index++) {
                 values[index] = String
-                        .valueOf(row.getValues().elementAt(index));
+                        .valueOf(row.getValues().get(index));
             }
             model.addRow(values);
         }

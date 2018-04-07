@@ -20,28 +20,47 @@
  ******************************************************************************/
 package org.eclipse.persistence.descriptors;
 
-import java.io.*;
-import java.lang.reflect.*;
+import java.io.Serializable;
+import java.lang.reflect.Method;
 import java.security.AccessController;
 import java.security.PrivilegedActionException;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.IdentityHashMap;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+import java.util.Vector;
 
 import org.eclipse.persistence.core.descriptors.CoreInheritancePolicy;
 import org.eclipse.persistence.descriptors.invalidation.CacheInvalidationPolicy;
-import org.eclipse.persistence.exceptions.*;
-import org.eclipse.persistence.expressions.*;
+import org.eclipse.persistence.exceptions.DatabaseException;
+import org.eclipse.persistence.exceptions.DescriptorException;
+import org.eclipse.persistence.exceptions.QueryException;
+import org.eclipse.persistence.exceptions.ValidationException;
+import org.eclipse.persistence.expressions.Expression;
+import org.eclipse.persistence.expressions.ExpressionBuilder;
 import org.eclipse.persistence.internal.descriptors.OptimisticLockingPolicy;
-import org.eclipse.persistence.internal.expressions.*;
-import org.eclipse.persistence.internal.helper.*;
-import org.eclipse.persistence.internal.queries.*;
+import org.eclipse.persistence.internal.expressions.SQLSelectStatement;
+import org.eclipse.persistence.internal.helper.ClassConstants;
+import org.eclipse.persistence.internal.helper.ConversionManager;
+import org.eclipse.persistence.internal.helper.DatabaseField;
+import org.eclipse.persistence.internal.helper.DatabaseTable;
+import org.eclipse.persistence.internal.helper.Helper;
+import org.eclipse.persistence.internal.queries.ExpressionQueryMechanism;
 import org.eclipse.persistence.internal.security.PrivilegedAccessHelper;
 import org.eclipse.persistence.internal.security.PrivilegedClassForName;
 import org.eclipse.persistence.internal.security.PrivilegedNewInstanceFromClass;
-import org.eclipse.persistence.internal.sessions.AbstractSession;
 import org.eclipse.persistence.internal.sessions.AbstractRecord;
-import org.eclipse.persistence.mappings.*;
-import org.eclipse.persistence.queries.*;
-import org.eclipse.persistence.sessions.remote.*;
+import org.eclipse.persistence.internal.sessions.AbstractSession;
+import org.eclipse.persistence.mappings.Association;
+import org.eclipse.persistence.mappings.TypedAssociation;
+import org.eclipse.persistence.queries.ObjectLevelReadQuery;
+import org.eclipse.persistence.queries.ReadAllQuery;
+import org.eclipse.persistence.queries.ReadObjectQuery;
+import org.eclipse.persistence.sessions.remote.DistributedSession;
 
 /**
  * <p><b>Purpose</b>: Allows customization of an object's inheritance.
@@ -247,14 +266,14 @@ public class InheritancePolicy extends CoreInheritancePolicy<AbstractRecord, Abs
      * INTERNAL:
      * Recursively adds fields to all the parents
      */
-    protected void addFieldsToParent(Vector fields) {
+    protected void addFieldsToParent(List<DatabaseField> fields) {
         if (isChildDescriptor()) {
             if (getParentDescriptor().isInvalid()) {
                 return;
             }
             ClassDescriptor parentDescriptor = getParentDescriptor();
             if (parentDescriptor.getInheritancePolicy().shouldReadSubclasses()) {
-                Helper.addAllUniqueToVector(parentDescriptor.getAllFields(), fields);
+                Helper.addAllUniqueToList(parentDescriptor.getAllFields(), fields);
             }
             parentDescriptor.getInheritancePolicy().addFieldsToParent(fields);
         }
@@ -314,7 +333,7 @@ public class InheritancePolicy extends CoreInheritancePolicy<AbstractRecord, Abs
 
         // CR#3166555 - Have the mechanism build the statement to avoid duplicating code and ensure that lock-mode, hints, hierarchical, etc. are set.
         SQLSelectStatement selectStatement = mechanism.buildBaseSelectStatement(false, clonedExpressions);
-        selectStatement.setTables(org.eclipse.persistence.internal.helper.NonSynchronizedVector.newInstance(1));
+        selectStatement.setTables(new ArrayList<>(1));
         selectStatement.addTable(getReadAllSubclassesView());
 
         // Case, normal read for branch inheritance class that reads subclasses all in its own table(s).
@@ -559,7 +578,7 @@ public class InheritancePolicy extends CoreInheritancePolicy<AbstractRecord, Abs
      * INTERNAL:
      * all tables for reference class plus childrenTables
      */
-    public Vector getAllTables() {
+    public List<DatabaseTable> getAllTables() {
         if (allTables == null) {
             return this.getDescriptor().getTables();
         } else {
@@ -964,14 +983,14 @@ public class InheritancePolicy extends CoreInheritancePolicy<AbstractRecord, Abs
         }
 
         if (isChildDescriptor()) {
-            getDescriptor().setMappings(Helper.concatenateVectors(getParentDescriptor().getMappings(), getDescriptor().getMappings()));
+            getDescriptor().setMappings(Helper.concatenateLists(getParentDescriptor().getMappings(), getDescriptor().getMappings()));
             getDescriptor().setQueryKeys(Helper.concatenateMaps(getParentDescriptor().getQueryKeys(), getDescriptor().getQueryKeys()));
             addFieldsToParent(getDescriptor().getFields());
             // Parents fields must be first for indexing to work.
-            Vector parentsFields = (Vector)getParentDescriptor().getFields().clone();
+            List<DatabaseField> parentsFields = new ArrayList<>(getParentDescriptor().getFields());
 
             //bug fix on Oracle duplicate field SQL using "order by"
-            Helper.addAllUniqueToVector(parentsFields, getDescriptor().getFields());
+            Helper.addAllUniqueToList(parentsFields, getDescriptor().getFields());
             getDescriptor().setFields(parentsFields);
 
             if (getClassIndicatorValue() != null) {
@@ -1248,7 +1267,7 @@ public class InheritancePolicy extends CoreInheritancePolicy<AbstractRecord, Abs
                     }
                     getClassIndicatorField().setType(type);
                 }
-                getDescriptor().getFields().addElement(getClassIndicatorField());
+                getDescriptor().getFields().add(getClassIndicatorField());
             }
         }
     }
@@ -1875,9 +1894,9 @@ public class InheritancePolicy extends CoreInheritancePolicy<AbstractRecord, Abs
      */
     protected void updateTables(){
         // Unique is required because the builder can add the same table many times.
-        Vector<DatabaseTable> childTables = getDescriptor().getTables();
-        Vector<DatabaseTable> parentTables = getParentDescriptor().getTables();
-        Vector<DatabaseTable> uniqueTables = Helper.concatenateUniqueVectors(parentTables, childTables);
+        List<DatabaseTable> childTables = getDescriptor().getTables();
+        List<DatabaseTable> parentTables = getParentDescriptor().getTables();
+        List<DatabaseTable> uniqueTables = Helper.concatenateUniqueLists(parentTables, childTables);
         getDescriptor().setTables(uniqueTables);
 
         // After filtering out any duplicate tables, set the default table

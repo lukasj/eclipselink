@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 1998, 2015 Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 1998, 2018 Oracle and/or its affiliates. All rights reserved.
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Public License v1.0 and Eclipse Distribution License v. 1.0
  * which accompanies this distribution.
@@ -12,7 +12,7 @@
  ******************************************************************************/
 package org.eclipse.persistence.testing.models.aggregate;
 
-import java.util.*;
+import java.util.Vector;
 
 import org.eclipse.persistence.descriptors.ClassDescriptor;
 import org.eclipse.persistence.internal.helper.DatabaseField;
@@ -104,7 +104,7 @@ public class AggregateProject extends org.eclipse.persistence.sessions.Project {
 
         // SECTION: DESCRIPTOR
         descriptor.setJavaClass(org.eclipse.persistence.testing.models.aggregate.AddressDescription.class);
-        Vector vector = new Vector();
+        Vector<String> vector = new Vector<>();
         vector.addElement("AGG_EMP");
         descriptor.setTableNames(vector);
 
@@ -151,7 +151,7 @@ public class AggregateProject extends org.eclipse.persistence.sessions.Project {
 
         // SECTION: DESCRIPTOR
         descriptor.setJavaClass(org.eclipse.persistence.testing.models.aggregate.Address.class);
-        Vector vector = new Vector();
+        Vector<String> vector = new Vector<>();
         vector.addElement("AGG_ADD");
         descriptor.setTableNames(vector);
         descriptor.addPrimaryKeyFieldName("AGG_ADD.ID");
@@ -187,7 +187,7 @@ public class AggregateProject extends org.eclipse.persistence.sessions.Project {
 
         // SECTION: DESCRIPTOR
         descriptor.setJavaClass(org.eclipse.persistence.testing.models.aggregate.Agent.class);
-        Vector vector = new Vector();
+        Vector<String> vector = new Vector<>();
         vector.addElement("AGENT");
         descriptor.setTableNames(vector);
         descriptor.addPrimaryKeyFieldName("AGENT_ID");
@@ -277,7 +277,7 @@ public class AggregateProject extends org.eclipse.persistence.sessions.Project {
         // SECTION: DESCRIPTOR
         descriptor.setJavaClass(org.eclipse.persistence.testing.models.aggregate.Bicycle.class);
         descriptor.getDescriptorInheritancePolicy().setParentClass(org.eclipse.persistence.testing.models.aggregate.Vehicle.class);
-        Vector vector = new Vector();
+        Vector<String> vector = new Vector<>();
         vector.addElement("AGGVEHICLE");
         descriptor.setTableNames(vector);
 
@@ -305,7 +305,7 @@ public class AggregateProject extends org.eclipse.persistence.sessions.Project {
 
         // SECTION: DESCRIPTOR
         descriptor.setJavaClass(org.eclipse.persistence.testing.models.aggregate.Builder.class);
-        Vector vector = new Vector();
+        Vector<String> vector = new Vector<>();
         vector.addElement("BUILDER");
         descriptor.setTableNames(vector);
         descriptor.addPrimaryKeyFieldName("BUILDER_ID");
@@ -419,7 +419,7 @@ public class AggregateProject extends org.eclipse.persistence.sessions.Project {
         // SECTION: DESCRIPTOR
         descriptor.setJavaClass(org.eclipse.persistence.testing.models.aggregate.Car.class);
         descriptor.getDescriptorInheritancePolicy().setParentClass(org.eclipse.persistence.testing.models.aggregate.Vehicle.class);
-        Vector vector = new Vector();
+        Vector<String> vector = new Vector<>();
         vector.addElement("AGGVEHICLE");
         descriptor.setTableNames(vector);
 
@@ -454,7 +454,7 @@ public class AggregateProject extends org.eclipse.persistence.sessions.Project {
 
         // SECTION: DESCRIPTOR
         descriptor.setJavaClass(org.eclipse.persistence.testing.models.aggregate.Client.class);
-        Vector vector = new Vector();
+        Vector<String> vector = new Vector<>();
         vector.addElement("AGG_CLNT");
         descriptor.setTableNames(vector);
         descriptor.addPrimaryKeyFieldName("AGG_CLNT.CL_ID");
@@ -525,7 +525,7 @@ public class AggregateProject extends org.eclipse.persistence.sessions.Project {
 
         // SECTION: DESCRIPTOR
         descriptor.setJavaClass(org.eclipse.persistence.testing.models.aggregate.Company.class);
-        Vector vector = new Vector();
+        Vector<String> vector = new Vector<>();
         vector.addElement("COMPANY_AGG");
         descriptor.setTableNames(vector);
         descriptor.addPrimaryKeyFieldName("COMPANY_ID");
@@ -566,7 +566,7 @@ public class AggregateProject extends org.eclipse.persistence.sessions.Project {
 
         // SECTION: DESCRIPTOR
         descriptor.setJavaClass(org.eclipse.persistence.testing.models.aggregate.Computer.class);
-        Vector vector = new Vector();
+        Vector<String> vector = new Vector<>();
         vector.addElement("AGG_COM");
         descriptor.setTableNames(vector);
         descriptor.addPrimaryKeyFieldName("AGG_COM.ID");
@@ -606,7 +606,7 @@ public class AggregateProject extends org.eclipse.persistence.sessions.Project {
 
         // SECTION: DESCRIPTOR
         descriptor.setJavaClass(org.eclipse.persistence.testing.models.aggregate.Customer.class);
-        Vector vector = new Vector();
+        Vector<String> vector = new Vector<>();
         vector.addElement("CUSTOMER");
         descriptor.setTableNames(vector);
         descriptor.addPrimaryKeyFieldName("CUSTOMER_ID");
@@ -677,7 +677,7 @@ public class AggregateProject extends org.eclipse.persistence.sessions.Project {
 
         // SECTION: DESCRIPTOR
         descriptor.setJavaClass(org.eclipse.persistence.testing.models.aggregate.Dependant.class);
-        Vector vector = new Vector();
+        Vector<String> vector = new Vector<>();
         vector.addElement("DEPENDANT");
         descriptor.setTableNames(vector);
         descriptor.addPrimaryKeyFieldName("CUSTOMER_ID");
@@ -718,7 +718,7 @@ public class AggregateProject extends org.eclipse.persistence.sessions.Project {
 
         // SECTION: DESCRIPTOR
         descriptor.setJavaClass(org.eclipse.persistence.testing.models.aggregate.Employee.class);
-        Vector vector = new Vector();
+        Vector<String> vector = new Vector<>();
         vector.addElement("AGG_EMP");
         descriptor.setTableNames(vector);
         descriptor.addPrimaryKeyFieldName("AGG_EMP.EM_ADD");
@@ -784,7 +784,7 @@ public class AggregateProject extends org.eclipse.persistence.sessions.Project {
         // SECTION: DESCRIPTOR
         descriptor.setJavaClass(org.eclipse.persistence.testing.models.aggregate.EvaluationClient.class);
         descriptor.getDescriptorInheritancePolicy().setParentClass(org.eclipse.persistence.testing.models.aggregate.Client.class);
-        Vector vector = new Vector();
+        Vector<String> vector = new Vector<>();
         vector.addElement("AGG_ECNT");
         descriptor.setTableNames(vector);
         descriptor.addPrimaryKeyFieldName("AGG_ECNT.CL_ID");
@@ -900,7 +900,7 @@ public class AggregateProject extends org.eclipse.persistence.sessions.Project {
 
         // SECTION: DESCRIPTOR
         descriptor.setJavaClass(org.eclipse.persistence.testing.models.aggregate.House.class);
-        Vector vector = new Vector();
+        Vector<String> vector = new Vector<>();
         vector.addElement("HOUSE");
         descriptor.setTableNames(vector);
         descriptor.addPrimaryKeyFieldName("AGENT_ID");
@@ -985,7 +985,7 @@ public class AggregateProject extends org.eclipse.persistence.sessions.Project {
         descriptor.setJavaClass(org.eclipse.persistence.testing.models.aggregate.Job.class);
         descriptor.setAmendmentClass(AggregateProject.class);
         descriptor.setAmendmentMethodName("amendJobDescriptor");
-        Vector vector = new Vector();
+        Vector<String> vector = new Vector<>();
         vector.addElement("WORKER");
         descriptor.setTableNames(vector);
 
@@ -1049,7 +1049,7 @@ public class AggregateProject extends org.eclipse.persistence.sessions.Project {
 
         // SECTION: DESCRIPTOR
         descriptor.setJavaClass(org.eclipse.persistence.testing.models.aggregate.Language.class);
-        Vector vector = new Vector();
+        Vector<String> vector = new Vector<>();
         vector.addElement("AGG_LAN");
         descriptor.setTableNames(vector);
         descriptor.addPrimaryKeyFieldName("AGG_LAN.ID");
@@ -1146,7 +1146,7 @@ public class AggregateProject extends org.eclipse.persistence.sessions.Project {
 
         // SECTION: DESCRIPTOR
         descriptor.setJavaClass(org.eclipse.persistence.testing.models.aggregate.PeriodDescription.class);
-        Vector vector = new Vector();
+        Vector<String> vector = new Vector<>();
         vector.addElement("AGG_EMP");
         descriptor.setTableNames(vector);
 
@@ -1186,7 +1186,7 @@ public class AggregateProject extends org.eclipse.persistence.sessions.Project {
 
         // SECTION: DESCRIPTOR
         descriptor.setJavaClass(org.eclipse.persistence.testing.models.aggregate.Period.class);
-        Vector vector = new Vector();
+        Vector<String> vector = new Vector<>();
         vector.addElement("AGG_EMP");
         descriptor.setTableNames(vector);
 
@@ -1220,7 +1220,7 @@ public class AggregateProject extends org.eclipse.persistence.sessions.Project {
 
         // SECTION: DESCRIPTOR
         descriptor.setJavaClass(org.eclipse.persistence.testing.models.aggregate.ProjectDescription.class);
-        Vector vector = new Vector();
+        Vector<String> vector = new Vector<>();
         vector.addElement("AGG_EMP");
         descriptor.setTableNames(vector);
 
@@ -1293,7 +1293,7 @@ public class AggregateProject extends org.eclipse.persistence.sessions.Project {
 
         // SECTION: DESCRIPTOR
         descriptor.setJavaClass(org.eclipse.persistence.testing.models.aggregate.Responsibility.class);
-        Vector vector = new Vector();
+        Vector<String> vector = new Vector<>();
         vector.addElement("AGG_RES");
         descriptor.setTableNames(vector);
         descriptor.addPrimaryKeyFieldName("AGG_RES.ID");
@@ -1341,7 +1341,7 @@ public class AggregateProject extends org.eclipse.persistence.sessions.Project {
         // SECTION: DESCRIPTOR
         descriptor.setJavaClass(org.eclipse.persistence.testing.models.aggregate.RoomSellingPoint.class);
         descriptor.getDescriptorInheritancePolicy().setParentClass(org.eclipse.persistence.testing.models.aggregate.SellingPoint.class);
-        Vector vector = new Vector();
+        Vector<String> vector = new Vector<>();
         vector.addElement("SELLING_POINT");
         descriptor.setTableNames(vector);
         descriptor.addPrimaryKeyFieldName("SELLING_POINT.AGENT_ID");
@@ -1374,7 +1374,7 @@ public class AggregateProject extends org.eclipse.persistence.sessions.Project {
 
         // SECTION: DESCRIPTOR
         descriptor.setJavaClass(org.eclipse.persistence.testing.models.aggregate.SellingPoint.class);
-        Vector vector = new Vector();
+        Vector<String> vector = new Vector<>();
         vector.addElement("SELLING_POINT");
         descriptor.setTableNames(vector);
         descriptor.addPrimaryKeyFieldName("SELLING_POINT.AGENT_ID");
@@ -1424,7 +1424,7 @@ public class AggregateProject extends org.eclipse.persistence.sessions.Project {
         // SECTION: DESCRIPTOR
         descriptor.setJavaClass(org.eclipse.persistence.testing.models.aggregate.SingleHouse.class);
         descriptor.getDescriptorInheritancePolicy().setParentClass(org.eclipse.persistence.testing.models.aggregate.House.class);
-        Vector vector = new Vector();
+        Vector<String> vector = new Vector<>();
         vector.addElement("SINGLE_HOUSE");
         descriptor.setTableNames(vector);
         descriptor.addPrimaryKeyFieldName("SINGLE_HOUSE.AGENT_ID");
@@ -1457,7 +1457,7 @@ public class AggregateProject extends org.eclipse.persistence.sessions.Project {
         // SECTION: DESCRIPTOR
         descriptor.setJavaClass(org.eclipse.persistence.testing.models.aggregate.TownHouse.class);
         descriptor.getDescriptorInheritancePolicy().setParentClass(org.eclipse.persistence.testing.models.aggregate.House.class);
-        Vector vector = new Vector();
+        Vector<String> vector = new Vector<>();
         vector.addElement("HOUSE");
         descriptor.setTableNames(vector);
         descriptor.addPrimaryKeyFieldName("HOUSE.AGENT_ID");
@@ -1483,7 +1483,7 @@ public class AggregateProject extends org.eclipse.persistence.sessions.Project {
 
         // SECTION: DESCRIPTOR
         descriptor.setJavaClass(org.eclipse.persistence.testing.models.aggregate.Transport.class);
-        Vector vector = new Vector();
+        Vector<String> vector = new Vector<>();
         vector.addElement("AGGVEHICLE");
         descriptor.setTableNames(vector);
         descriptor.addPrimaryKeyFieldName("AGGVEHICLE.ID");
@@ -1521,7 +1521,7 @@ public class AggregateProject extends org.eclipse.persistence.sessions.Project {
 
         // SECTION: DESCRIPTOR
         descriptor.setJavaClass(org.eclipse.persistence.testing.models.aggregate.Vehicle.class);
-        Vector vector = new Vector();
+        Vector<String> vector = new Vector<>();
         vector.addElement("AGGVEHICLE");
         descriptor.setTableNames(vector);
 
@@ -1584,7 +1584,7 @@ public class AggregateProject extends org.eclipse.persistence.sessions.Project {
 
         // SECTION: DESCRIPTOR
         descriptor.setJavaClass(org.eclipse.persistence.testing.models.aggregate.Worker.class);
-        Vector vector = new Vector();
+        Vector<String> vector = new Vector<>();
         vector.addElement("WORKER");
         descriptor.setTableNames(vector);
         descriptor.addPrimaryKeyFieldName("WORKER.ID");

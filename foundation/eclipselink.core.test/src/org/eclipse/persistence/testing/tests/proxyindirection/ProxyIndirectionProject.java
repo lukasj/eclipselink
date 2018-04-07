@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 1998, 2015 Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 1998, 2018 Oracle and/or its affiliates. All rights reserved.
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Public License v1.0 and Eclipse Distribution License v. 1.0
  * which accompanies this distribution.
@@ -12,7 +12,7 @@
  ******************************************************************************/
 package org.eclipse.persistence.testing.tests.proxyindirection;
 
-import java.util.*;
+import java.util.Vector;
 
 /**
  * TopLink generated Project class.
@@ -97,7 +97,7 @@ public class ProxyIndirectionProject extends org.eclipse.persistence.sessions.Pr
 
         // SECTION: DESCRIPTOR
         descriptor.setJavaClass(AddressImpl.class);
-        Vector vector = new Vector();
+        Vector<String> vector = new Vector<>();
         vector.addElement("PROXY_ADDRESS");
         descriptor.setTableNames(vector);
         descriptor.addPrimaryKeyFieldName("PROXY_ADDRESS.ID");
@@ -216,7 +216,7 @@ public class ProxyIndirectionProject extends org.eclipse.persistence.sessions.Pr
 
         // SECTION: DESCRIPTOR
         descriptor.setJavaClass(ComputerImpl.class);
-        Vector vector = new Vector();
+        Vector<String> vector = new Vector<>();
         vector.addElement("PROXY_COMPUTER");
         descriptor.setTableNames(vector);
         descriptor.addPrimaryKeyFieldName("PROXY_COMPUTER.ID");
@@ -297,7 +297,7 @@ public class ProxyIndirectionProject extends org.eclipse.persistence.sessions.Pr
 
         // SECTION: DESCRIPTOR
         descriptor.setJavaClass(CubicleImpl.class);
-        Vector vector = new Vector();
+        Vector<String> vector = new Vector<>();
         vector.addElement("PROXY_CUBICLE");
         descriptor.setTableNames(vector);
         descriptor.addPrimaryKeyFieldName("PROXY_CUBICLE.ID");
@@ -409,7 +409,7 @@ public class ProxyIndirectionProject extends org.eclipse.persistence.sessions.Pr
         // SECTION: DESCRIPTOR
         descriptor.setJavaClass(DesktopComputerImpl.class);
         descriptor.getInheritancePolicy().setParentClass(ComputerImpl.class);
-        Vector vector = new Vector();
+        Vector<String> vector = new Vector<>();
         vector.addElement("PROXY_DESKTOP");
         descriptor.setTableNames(vector);
         descriptor.addPrimaryKeyFieldName("PROXY_DESKTOP.ID");
@@ -449,7 +449,7 @@ public class ProxyIndirectionProject extends org.eclipse.persistence.sessions.Pr
 
         // SECTION: DESCRIPTOR
         descriptor.setJavaClass(EmailImpl.class);
-        Vector vector = new Vector();
+        Vector<String> vector = new Vector<>();
         vector.addElement("PROXY_EMAIL");
         descriptor.setTableNames(vector);
         descriptor.addPrimaryKeyFieldName("PROXY_EMAIL.ID");
@@ -543,7 +543,7 @@ public class ProxyIndirectionProject extends org.eclipse.persistence.sessions.Pr
 
         // SECTION: DESCRIPTOR
         descriptor.setJavaClass(EmployeeImpl.class);
-        Vector vector = new Vector();
+        Vector<String> vector = new Vector<>();
         vector.addElement("PROXY_EMPLOYEE");
         descriptor.setTableNames(vector);
         descriptor.addPrimaryKeyFieldName("PROXY_EMPLOYEE.ID");
@@ -726,7 +726,7 @@ public class ProxyIndirectionProject extends org.eclipse.persistence.sessions.Pr
         // SECTION: DESCRIPTOR
         descriptor.setJavaClass(LargeProjectImpl.class);
         descriptor.getInheritancePolicy().setParentClass(ProjectImpl.class);
-        Vector vector = new Vector();
+        Vector<String> vector = new Vector<>();
         vector.addElement("PROXY_LPROJECT");
         descriptor.setTableNames(vector);
         descriptor.addPrimaryKeyFieldName("PROXY_LPROJECT.ID");
@@ -775,7 +775,7 @@ public class ProxyIndirectionProject extends org.eclipse.persistence.sessions.Pr
 
         // SECTION: DESCRIPTOR
         descriptor.setJavaClass(PhoneImpl.class);
-        Vector vector = new Vector();
+        Vector<String> vector = new Vector<>();
         vector.addElement("PROXY_PHONE");
         descriptor.setTableNames(vector);
         descriptor.addPrimaryKeyFieldName("PROXY_PHONE.ID");
@@ -860,7 +860,7 @@ public class ProxyIndirectionProject extends org.eclipse.persistence.sessions.Pr
 
         // SECTION: DESCRIPTOR
         descriptor.setJavaClass(ProjectImpl.class);
-        Vector vector = new Vector();
+        Vector<String> vector = new Vector<>();
         vector.addElement("PROXY_PROJECT");
         descriptor.setTableNames(vector);
         descriptor.addPrimaryKeyFieldName("PROXY_PROJECT.ID");

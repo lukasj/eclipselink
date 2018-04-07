@@ -373,7 +373,7 @@ public class XMLChoiceCollectionMapping extends DatabaseMapping implements Choic
     }
 
     @Override
-    public Vector<DatabaseField> getFields() {
+    public List<DatabaseField> getFields() {
         if(fields == null || fields.size() == 0) {
             fields = this.collectFields();
         }

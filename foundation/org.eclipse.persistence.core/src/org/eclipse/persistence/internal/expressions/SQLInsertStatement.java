@@ -12,12 +12,17 @@
  ******************************************************************************/
 package org.eclipse.persistence.internal.expressions;
 
-import java.io.*;
-import java.util.*;
-import org.eclipse.persistence.exceptions.*;
-import org.eclipse.persistence.internal.helper.*;
-import org.eclipse.persistence.queries.*;
+import java.io.CharArrayWriter;
+import java.io.IOException;
+import java.io.Writer;
+import java.util.Enumeration;
+import java.util.Vector;
+
+import org.eclipse.persistence.exceptions.QueryException;
+import org.eclipse.persistence.exceptions.ValidationException;
+import org.eclipse.persistence.internal.helper.DatabaseField;
 import org.eclipse.persistence.internal.sessions.AbstractSession;
+import org.eclipse.persistence.queries.SQLCall;
 
 /**
  * <p><b>Purpose</b>: Print INSERT statement.
@@ -49,8 +54,8 @@ public class SQLInsertStatement extends SQLModifyStatement {
             writer.write(" (");
 
             Vector fieldsForTable = new Vector();
-            for (Enumeration fieldsEnum = getModifyRow().keys(); fieldsEnum.hasMoreElements();) {
-                DatabaseField field = (DatabaseField)fieldsEnum.nextElement();
+            for (Enumeration<DatabaseField> fieldsEnum = getModifyRow().keys(); fieldsEnum.hasMoreElements();) {
+                DatabaseField field = fieldsEnum.nextElement();
                 if (field.getTable().equals(getTable()) || (!field.hasTableName())) {
                     fieldsForTable.addElement(field);
                 }

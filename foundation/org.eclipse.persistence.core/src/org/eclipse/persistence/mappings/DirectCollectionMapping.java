@@ -28,37 +28,87 @@ package org.eclipse.persistence.mappings;
 import java.beans.PropertyChangeEvent;
 import java.security.AccessController;
 import java.security.PrivilegedActionException;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Enumeration;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.IdentityHashMap;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+import java.util.Vector;
 
 import org.eclipse.persistence.annotations.BatchFetchType;
 import org.eclipse.persistence.descriptors.ClassDescriptor;
 import org.eclipse.persistence.descriptors.TablePerMultitenantPolicy;
-import org.eclipse.persistence.descriptors.changetracking.*;
-import org.eclipse.persistence.internal.descriptors.changetracking.AttributeChangeListener;
-import org.eclipse.persistence.internal.descriptors.changetracking.ObjectChangeListener;
-import org.eclipse.persistence.exceptions.*;
-import org.eclipse.persistence.expressions.*;
-import org.eclipse.persistence.history.*;
+import org.eclipse.persistence.descriptors.changetracking.ChangeTracker;
+import org.eclipse.persistence.descriptors.changetracking.CollectionChangeEvent;
+import org.eclipse.persistence.exceptions.ConversionException;
+import org.eclipse.persistence.exceptions.DatabaseException;
+import org.eclipse.persistence.exceptions.DescriptorException;
+import org.eclipse.persistence.exceptions.QueryException;
+import org.eclipse.persistence.exceptions.ValidationException;
+import org.eclipse.persistence.expressions.Expression;
+import org.eclipse.persistence.expressions.ExpressionBuilder;
+import org.eclipse.persistence.history.AsOfClause;
+import org.eclipse.persistence.history.HistoryPolicy;
 import org.eclipse.persistence.indirection.IndirectCollection;
 import org.eclipse.persistence.indirection.IndirectList;
 import org.eclipse.persistence.indirection.ValueHolder;
 import org.eclipse.persistence.internal.databaseaccess.DatasourcePlatform;
 import org.eclipse.persistence.internal.databaseaccess.Platform;
-import org.eclipse.persistence.internal.descriptors.*;
-import org.eclipse.persistence.internal.expressions.*;
-import org.eclipse.persistence.internal.helper.*;
-import org.eclipse.persistence.internal.identitymaps.*;
-import org.eclipse.persistence.internal.queries.*;
-import org.eclipse.persistence.internal.sessions.remote.*;
+import org.eclipse.persistence.internal.descriptors.DescriptorIterator;
+import org.eclipse.persistence.internal.descriptors.ObjectBuilder;
+import org.eclipse.persistence.internal.descriptors.changetracking.AttributeChangeListener;
+import org.eclipse.persistence.internal.descriptors.changetracking.ObjectChangeListener;
+import org.eclipse.persistence.internal.expressions.ForUpdateClause;
+import org.eclipse.persistence.internal.expressions.ObjectExpression;
+import org.eclipse.persistence.internal.expressions.SQLDeleteStatement;
+import org.eclipse.persistence.internal.expressions.SQLInsertStatement;
+import org.eclipse.persistence.internal.expressions.SQLSelectStatement;
+import org.eclipse.persistence.internal.expressions.SQLUpdateStatement;
+import org.eclipse.persistence.internal.expressions.TableExpression;
+import org.eclipse.persistence.internal.helper.ConversionManager;
+import org.eclipse.persistence.internal.helper.DatabaseField;
+import org.eclipse.persistence.internal.helper.DatabaseTable;
+import org.eclipse.persistence.internal.helper.Helper;
+import org.eclipse.persistence.internal.identitymaps.CacheId;
+import org.eclipse.persistence.internal.identitymaps.CacheKey;
+import org.eclipse.persistence.internal.queries.ContainerPolicy;
+import org.eclipse.persistence.internal.queries.JoinedAttributeManager;
+import org.eclipse.persistence.internal.queries.OrderedListContainerPolicy;
 import org.eclipse.persistence.internal.security.PrivilegedAccessHelper;
 import org.eclipse.persistence.internal.security.PrivilegedClassForName;
 import org.eclipse.persistence.internal.security.PrivilegedNewInstanceFromClass;
-import org.eclipse.persistence.internal.sessions.*;
-import org.eclipse.persistence.mappings.converters.*;
-import org.eclipse.persistence.queries.*;
-import org.eclipse.persistence.sessions.remote.*;
+import org.eclipse.persistence.internal.sessions.AbstractRecord;
+import org.eclipse.persistence.internal.sessions.AbstractSession;
+import org.eclipse.persistence.internal.sessions.ChangeRecord;
+import org.eclipse.persistence.internal.sessions.DirectCollectionChangeRecord;
+import org.eclipse.persistence.internal.sessions.MergeManager;
+import org.eclipse.persistence.internal.sessions.ObjectChangeSet;
+import org.eclipse.persistence.internal.sessions.UnitOfWorkImpl;
+import org.eclipse.persistence.internal.sessions.remote.RemoteSessionController;
+import org.eclipse.persistence.mappings.converters.Converter;
+import org.eclipse.persistence.mappings.converters.ObjectTypeConverter;
+import org.eclipse.persistence.mappings.converters.SerializedObjectConverter;
+import org.eclipse.persistence.mappings.converters.TypeConversionConverter;
+import org.eclipse.persistence.queries.DataModifyQuery;
+import org.eclipse.persistence.queries.DataReadQuery;
+import org.eclipse.persistence.queries.DatabaseQuery;
+import org.eclipse.persistence.queries.DeleteObjectQuery;
+import org.eclipse.persistence.queries.DirectReadQuery;
+import org.eclipse.persistence.queries.ModifyQuery;
+import org.eclipse.persistence.queries.ObjectBuildingQuery;
+import org.eclipse.persistence.queries.ObjectLevelReadQuery;
+import org.eclipse.persistence.queries.QueryByExamplePolicy;
+import org.eclipse.persistence.queries.ReadAllQuery;
+import org.eclipse.persistence.queries.ReadQuery;
+import org.eclipse.persistence.queries.ReportQuery;
+import org.eclipse.persistence.queries.WriteObjectQuery;
 import org.eclipse.persistence.sessions.CopyGroup;
 import org.eclipse.persistence.sessions.DatabaseRecord;
+import org.eclipse.persistence.sessions.remote.DistributedSession;
 
 /**
  * <p><b>Purpose</b>: This mapping is used to store a collection of simple types (String, Number, Date, etc.)
@@ -97,8 +147,8 @@ public class DirectCollectionMapping extends CollectionMapping implements Relati
 
     /** The direct field name is converted and stored */
     protected DatabaseField directField;
-    protected Vector<DatabaseField> sourceKeyFields;
-    protected Vector<DatabaseField> referenceKeyFields;
+    protected List<DatabaseField> sourceKeyFields;
+    protected List<DatabaseField> referenceKeyFields;
 
     /** Used for insertion for m-m and dc, not used in 1-m. */
     protected DataModifyQuery insertQuery;
@@ -132,8 +182,8 @@ public class DirectCollectionMapping extends CollectionMapping implements Relati
     public DirectCollectionMapping() {
         this.insertQuery = new DataModifyQuery();
         this.orderByExpressions = new ArrayList<Expression>();
-        this.sourceKeyFields = org.eclipse.persistence.internal.helper.NonSynchronizedVector.newInstance(1);
-        this.referenceKeyFields = org.eclipse.persistence.internal.helper.NonSynchronizedVector.newInstance(1);
+        this.sourceKeyFields = new ArrayList<>(1);
+        this.referenceKeyFields = new ArrayList<>(1);
         this.selectionQuery = new DirectReadQuery();
         this.hasCustomInsertQuery = false;
         this.isPrivateOwned = true;
@@ -209,8 +259,8 @@ public class DirectCollectionMapping extends CollectionMapping implements Relati
      * Both the reference field and the source field that it references must be provided.
      */
     public void addReferenceKeyField(DatabaseField referenceForeignKeyField, DatabaseField sourcePrimaryKeyField) {
-        getSourceKeyFields().addElement(sourcePrimaryKeyField);
-        getReferenceKeyFields().addElement(referenceForeignKeyField);
+        getSourceKeyFields().add(sourcePrimaryKeyField);
+        getReferenceKeyFields().add(referenceForeignKeyField);
     }
 
     /**
@@ -1159,8 +1209,8 @@ public class DirectCollectionMapping extends CollectionMapping implements Relati
      * This is used by expressions to determine which fields to include in the select clause for non-object expressions.
      */
     @Override
-    public Vector getSelectFields() {
-        Vector fields = new NonSynchronizedVector(2);
+    public List<DatabaseField> getSelectFields() {
+        List<DatabaseField> fields = new ArrayList<>(2);
         fields.add(getDirectField());
         return fields;
     }
@@ -1171,8 +1221,8 @@ public class DirectCollectionMapping extends CollectionMapping implements Relati
      * This is used by expressions to determine which tables to include in the from clause for non-object expressions.
      */
     @Override
-    public Vector getSelectTables() {
-        Vector tables = new NonSynchronizedVector(0);
+    public List<DatabaseTable> getSelectTables() {
+        List<DatabaseTable> tables = new ArrayList<>(1);
         tables.add(getReferenceTable());
         return tables;
     }
@@ -1296,11 +1346,11 @@ public class DirectCollectionMapping extends CollectionMapping implements Relati
      * Return the reference key field names associated with the mapping.
      * These are in-order with the sourceKeyFieldNames.
      */
-    public Vector getReferenceKeyFieldNames() {
-        Vector fieldNames = new Vector(getReferenceKeyFields().size());
-        for (Enumeration fieldsEnum = getReferenceKeyFields().elements();
+    public List<String> getReferenceKeyFieldNames() {
+        Vector<String> fieldNames = new Vector<>(getReferenceKeyFields().size());
+        for (Enumeration<DatabaseField> fieldsEnum = Helper.elements(getReferenceKeyFields());
                  fieldsEnum.hasMoreElements();) {
-            fieldNames.addElement(((DatabaseField)fieldsEnum.nextElement()).getQualifiedName());
+            fieldNames.add(fieldsEnum.nextElement().getQualifiedName());
         }
 
         return fieldNames;
@@ -1310,7 +1360,7 @@ public class DirectCollectionMapping extends CollectionMapping implements Relati
      * INTERNAL:
      * Return the reference key fields.
      */
-    public Vector<DatabaseField> getReferenceKeyFields() {
+    public List<DatabaseField> getReferenceKeyFields() {
         return referenceKeyFields;
     }
 
@@ -1363,11 +1413,11 @@ public class DirectCollectionMapping extends CollectionMapping implements Relati
      * Return the source key field names associated with the mapping.
      * These are in-order with the referenceKeyFieldNames.
      */
-    public Vector getSourceKeyFieldNames() {
-        Vector fieldNames = new Vector(getSourceKeyFields().size());
-        for (Enumeration fieldsEnum = getSourceKeyFields().elements();
+    public List<String> getSourceKeyFieldNames() {
+        Vector<String> fieldNames = new Vector<>(getSourceKeyFields().size());
+        for (Enumeration<DatabaseField> fieldsEnum = Helper.elements(getSourceKeyFields());
                  fieldsEnum.hasMoreElements();) {
-            fieldNames.addElement(((DatabaseField)fieldsEnum.nextElement()).getQualifiedName());
+            fieldNames.add(fieldsEnum.nextElement().getQualifiedName());
         }
 
         return fieldNames;
@@ -1377,7 +1427,7 @@ public class DirectCollectionMapping extends CollectionMapping implements Relati
      * INTERNAL:
      * Return the source key fields.
      */
-    public Vector<DatabaseField> getSourceKeyFields() {
+    public List<DatabaseField> getSourceKeyFields() {
         return sourceKeyFields;
     }
 
@@ -1520,8 +1570,8 @@ public class DirectCollectionMapping extends CollectionMapping implements Relati
 
         // Construct an expression to delete from the relation table.
         for (int index = 0; index < getReferenceKeyFields().size(); index++) {
-            DatabaseField referenceKey = getReferenceKeyFields().elementAt(index);
-            DatabaseField sourceKey = getSourceKeyFields().elementAt(index);
+            DatabaseField referenceKey = getReferenceKeyFields().get(index);
+            DatabaseField sourceKey = getSourceKeyFields().get(index);
 
             subExp1 = builder.getField(referenceKey);
             subExp2 = builder.getParameter(sourceKey);
@@ -1699,9 +1749,9 @@ public class DirectCollectionMapping extends CollectionMapping implements Relati
         SQLInsertStatement statement = new SQLInsertStatement();
         statement.setTable(getReferenceTable());
         AbstractRecord directRow = new DatabaseRecord();
-        for (Enumeration referenceEnum = getReferenceKeyFields().elements();
-                 referenceEnum.hasMoreElements();) {
-            directRow.put((DatabaseField)referenceEnum.nextElement(), null);
+        for (Enumeration<DatabaseField> referenceEnum = Helper.elements(getReferenceKeyFields());
+                referenceEnum.hasMoreElements();) {
+            directRow.put(referenceEnum.nextElement(), null);
         }
         directRow.put(getDirectField(), null);
         if(listOrderField != null) {
@@ -1728,9 +1778,8 @@ public class DirectCollectionMapping extends CollectionMapping implements Relati
             throw DescriptorException.noReferenceKeyIsSpecified(this);
         }
 
-        for (Enumeration referenceEnum = getReferenceKeyFields().elements(); referenceEnum.hasMoreElements();) {
-            DatabaseField field = (DatabaseField)referenceEnum.nextElement();
-
+        for (Enumeration<DatabaseField> referenceEnum = Helper.elements(getReferenceKeyFields()); referenceEnum.hasMoreElements();) {
+            DatabaseField field = referenceEnum.nextElement();
             // Update the field first if the mapping is on a table per tenant entity.
             if (getDescriptor().hasTablePerMultitenantPolicy()) {
                 field.setTable(((TablePerMultitenantPolicy) getDescriptor().getMultitenantPolicy()).getTable(field.getTable()));
@@ -1822,7 +1871,7 @@ public class DirectCollectionMapping extends CollectionMapping implements Relati
             if (usesIndirection()) {
                 field.setKeepInRow(true);
             }
-            getSourceKeyFields().addElement(field);
+            getSourceKeyFields().add(field);
         }
     }
 
@@ -2278,7 +2327,7 @@ public class DirectCollectionMapping extends CollectionMapping implements Relati
      * Return source key fields for translation by an AggregateObjectMapping
      */
     @Override
-    public Vector getFieldsForTranslationInAggregate() {
+    public List<DatabaseField> getFieldsForTranslationInAggregate() {
         return getSourceKeyFields();
     }
 
@@ -2590,9 +2639,9 @@ public class DirectCollectionMapping extends CollectionMapping implements Relati
     @Override
     protected void prepareTranslationRow(AbstractRecord translationRow, Object object, ClassDescriptor descriptor, AbstractSession session) {
         // Make sure that each source key field is in the translation row.
-        for (Enumeration sourceFieldsEnum = getSourceKeyFields().elements();
-                 sourceFieldsEnum.hasMoreElements();) {
-            DatabaseField sourceKey = (DatabaseField)sourceFieldsEnum.nextElement();
+        for (Enumeration<DatabaseField> sourceFieldsEnum = Helper.elements(getSourceKeyFields());
+                sourceFieldsEnum.hasMoreElements();) {
+            DatabaseField sourceKey = sourceFieldsEnum.nextElement();
             if (!translationRow.containsKey(sourceKey)) {
                 Object value = descriptor.getObjectBuilder().extractValueFromObjectForField(object, sourceKey, session);
                 translationRow.put(sourceKey, value);
@@ -2828,7 +2877,7 @@ public class DirectCollectionMapping extends CollectionMapping implements Relati
      * This method is used if the reference key consists of only a single field.
      */
     public void setReferenceKeyFieldName(String fieldName) {
-        getReferenceKeyFields().addElement(new DatabaseField(fieldName));
+        getReferenceKeyFields().add(new DatabaseField(fieldName));
     }
 
     /**
@@ -2836,10 +2885,10 @@ public class DirectCollectionMapping extends CollectionMapping implements Relati
      * Set the reference key field names associated with the mapping.
      * These must be in-order with the sourceKeyFieldNames.
      */
-    public void setReferenceKeyFieldNames(Vector fieldNames) {
-        Vector fields = org.eclipse.persistence.internal.helper.NonSynchronizedVector.newInstance(fieldNames.size());
-        for (Enumeration fieldNamesEnum = fieldNames.elements(); fieldNamesEnum.hasMoreElements();) {
-            fields.addElement(new DatabaseField((String)fieldNamesEnum.nextElement()));
+    public void setReferenceKeyFieldNames(List<String> fieldNames) {
+        List<DatabaseField> fields = new ArrayList<>(fieldNames.size());
+        for (Enumeration<String> fieldNamesEnum = Helper.elements(fieldNames); fieldNamesEnum.hasMoreElements();) {
+            fields.add(new DatabaseField(fieldNamesEnum.nextElement()));
         }
 
         setReferenceKeyFields(fields);
@@ -2849,7 +2898,7 @@ public class DirectCollectionMapping extends CollectionMapping implements Relati
      * INTERNAL:
      * Set the reference fields.
      */
-    public void setReferenceKeyFields(Vector<DatabaseField> aVector) {
+    public void setReferenceKeyFields(List<DatabaseField> aVector) {
         this.referenceKeyFields = aVector;
     }
 
@@ -2925,10 +2974,10 @@ public class DirectCollectionMapping extends CollectionMapping implements Relati
      * Set the source key field names associated with the mapping.
      * These must be in-order with the referenceKeyFieldNames.
      */
-    public void setSourceKeyFieldNames(Vector fieldNames) {
-        Vector fields = org.eclipse.persistence.internal.helper.NonSynchronizedVector.newInstance(fieldNames.size());
-        for (Enumeration fieldNamesEnum = fieldNames.elements(); fieldNamesEnum.hasMoreElements();) {
-            fields.addElement(new DatabaseField((String)fieldNamesEnum.nextElement()));
+    public void setSourceKeyFieldNames(List<String> fieldNames) {
+        List<DatabaseField> fields = new ArrayList<>(fieldNames.size());
+        for (Enumeration<String> fieldNamesEnum = Helper.elements(fieldNames); fieldNamesEnum.hasMoreElements();) {
+            fields.add(new DatabaseField(fieldNamesEnum.nextElement()));
         }
 
         setSourceKeyFields(fields);
@@ -2938,7 +2987,7 @@ public class DirectCollectionMapping extends CollectionMapping implements Relati
      * INTERNAL:
      * Set the source fields.
      */
-    public void setSourceKeyFields(Vector<DatabaseField> sourceKeyFields) {
+    public void setSourceKeyFields(List<DatabaseField> sourceKeyFields) {
         this.sourceKeyFields = sourceKeyFields;
     }
 

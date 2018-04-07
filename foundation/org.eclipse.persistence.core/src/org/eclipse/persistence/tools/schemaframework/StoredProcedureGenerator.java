@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 1998, 2015 Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 1998, 2018 Oracle and/or its affiliates. All rights reserved.
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Public License v1.0 and Eclipse Distribution License v. 1.0
  * which accompanies this distribution.
@@ -372,12 +372,12 @@ public class StoredProcedureGenerator {
      * currently only 1:1 and 1:M are supported
      */
     protected Hashtable generateMappingStoredProcedures(ClassDescriptor descriptor) {
-        Vector mappings = descriptor.getMappings();
+        List<DatabaseMapping> mappings = descriptor.getMappings();
         Hashtable mappingSP = new Hashtable();
         Hashtable mappingTable;
-        for (Enumeration enumtr = mappings.elements(); enumtr.hasMoreElements();) {
+        for (Enumeration<DatabaseMapping> enumtr = Helper.elements(mappings); enumtr.hasMoreElements();) {
             mappingTable = new Hashtable();
-            DatabaseMapping mapping = (DatabaseMapping)enumtr.nextElement();
+            DatabaseMapping mapping = enumtr.nextElement();
             if (mapping.isOneToManyMapping()) {
                 if (!getSession().getPlatform().isOracle()) {
                     //reads not supported in oracle

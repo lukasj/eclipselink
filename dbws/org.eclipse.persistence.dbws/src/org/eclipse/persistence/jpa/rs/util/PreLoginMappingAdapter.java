@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 2011, 2015 Oracle. All rights reserved.
+ * Copyright (c) 2011, 2018 Oracle. All rights reserved.
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Public License v1.0 and Eclipse Distribution License v. 1.0
  * which accompanies this distribution.
@@ -14,6 +14,7 @@ package org.eclipse.persistence.jpa.rs.util;
 
 import java.lang.reflect.Modifier;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 import java.util.Vector;
 
@@ -128,7 +129,7 @@ public class PreLoginMappingAdapter extends SessionEventListener {
 
             ClassDescriptor jpaDescriptor = jpaSession.getDescriptorForAlias(descriptor.getAlias());
 
-            Vector<DatabaseMapping> descriptorMappings = (Vector<DatabaseMapping>) descriptor.getMappings().clone();
+            List<DatabaseMapping> descriptorMappings = new ArrayList<>(descriptor.getMappings());
             for (DatabaseMapping mapping : descriptorMappings) {
                 if (mapping.isXMLMapping()) {
                     if (mapping.isAbstractCompositeObjectMapping() || mapping.isAbstractCompositeCollectionMapping()) {
@@ -190,7 +191,7 @@ public class PreLoginMappingAdapter extends SessionEventListener {
         for (Object descriptorAlias : project.getAliasDescriptors().keySet()) {
             ClassDescriptor descriptor = (ClassDescriptor) project.getAliasDescriptors().get(descriptorAlias);
             ClassDescriptor jpaDescriptor = jpaSession.getDescriptorForAlias(descriptor.getAlias());
-            Vector<DatabaseMapping> descriptorMappings = (Vector<DatabaseMapping>) descriptor.getMappings().clone();
+            List<DatabaseMapping> descriptorMappings = new ArrayList<>(descriptor.getMappings());
 
             for (DatabaseMapping mapping : descriptorMappings) {
                 if (mapping.isXMLMapping()) {

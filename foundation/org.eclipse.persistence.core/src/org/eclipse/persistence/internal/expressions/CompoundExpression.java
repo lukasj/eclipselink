@@ -320,13 +320,13 @@ public abstract class CompoundExpression extends Expression {
      */
     @Override
     public Expression rebuildOn(Expression newBase) {
-        Vector arguments;
+        List<Object> arguments;
 
         Expression first = this.firstChild.rebuildOn(newBase);
         if (this.secondChild == null) {
-            arguments = NonSynchronizedVector.newInstance(0);
+            arguments = new ArrayList<>(0);
         } else {
-            arguments = NonSynchronizedVector.newInstance(1);
+            arguments = new ArrayList<>(1);
             arguments.add(this.secondChild.rebuildOn(newBase));
         }
         return first.performOperator(this.operator, arguments);
@@ -367,13 +367,13 @@ public abstract class CompoundExpression extends Expression {
      */
     @Override
     public Expression twistedForBaseAndContext(Expression newBase, Expression context, Expression oldBase) {
-        Vector arguments;
+        List<Object> arguments;
 
         if (this.secondChild == null) {
-            arguments = org.eclipse.persistence.internal.helper.NonSynchronizedVector.newInstance(0);
+            arguments = new ArrayList<>(0);
         } else {
-            arguments = org.eclipse.persistence.internal.helper.NonSynchronizedVector.newInstance(1);
-            arguments.addElement(this.secondChild.twistedForBaseAndContext(newBase, context, oldBase));
+            arguments = new ArrayList<>(1);
+            arguments.add(this.secondChild.twistedForBaseAndContext(newBase, context, oldBase));
         }
 
         Expression first = this.firstChild.twistedForBaseAndContext(newBase, context, oldBase);

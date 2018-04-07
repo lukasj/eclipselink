@@ -651,7 +651,7 @@ public class SDOProperty implements Property, Serializable {
                     //iterate over the mappings and find the correct place to insert this mapping relative to the
                     //indecies of the others.
                     SDOType containingType = getContainingType();
-                    Vector<DatabaseMapping> mappings = containingType.getXmlDescriptor().getMappings();
+                    List<DatabaseMapping> mappings = containingType.getXmlDescriptor().getMappings();
                     boolean added = false;
                     for(int i = 0; i < mappings.size(); i++) {
                         DatabaseMapping next = mappings.get(i);

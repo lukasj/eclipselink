@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 1998, 2015 Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 1998, 2018 Oracle and/or its affiliates. All rights reserved.
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Public License v1.0 and Eclipse Distribution License v. 1.0
  * which accompanies this distribution.
@@ -12,9 +12,13 @@
  ******************************************************************************/
 package org.eclipse.persistence.testing.models.collections;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.TreeSet;
+import java.util.Vector;
+
 import org.eclipse.persistence.descriptors.RelationalDescriptor;
-import org.eclipse.persistence.mappings.converters.*;
+import org.eclipse.persistence.mappings.converters.ObjectTypeConverter;
+import org.eclipse.persistence.mappings.converters.TypeConversionConverter;
 
 /**
  * TopLink generated Project class.
@@ -68,7 +72,7 @@ public class CollectionsProject extends org.eclipse.persistence.sessions.Project
 
         // SECTION: DESCRIPTOR
         descriptor.setJavaClass(Diner.class);
-        Vector vector = new Vector();
+        Vector<String> vector = new Vector<>();
         vector.addElement("COL_PERS");
         descriptor.setTableNames(vector);
         descriptor.addPrimaryKeyFieldName("COL_PERS.ID");
@@ -145,7 +149,7 @@ public class CollectionsProject extends org.eclipse.persistence.sessions.Project
 
         // SECTION: DESCRIPTOR
         descriptor.setJavaClass(Menu.class);
-        Vector vector = new Vector();
+        Vector<String> vector = new Vector<>();
         vector.addElement("COL_MENU");
         descriptor.setTableNames(vector);
         descriptor.addPrimaryKeyFieldName("COL_MENU.ID");
@@ -213,7 +217,7 @@ public class CollectionsProject extends org.eclipse.persistence.sessions.Project
 
         // SECTION: DESCRIPTOR
         descriptor.setJavaClass(org.eclipse.persistence.testing.models.collections.MenuItem.class);
-        Vector vector = new Vector();
+        Vector<String> vector = new Vector<>();
         vector.addElement("COL_M_IT");
         descriptor.setTableNames(vector);
         descriptor.addPrimaryKeyFieldName("COL_M_IT.ID");
@@ -323,7 +327,7 @@ public class CollectionsProject extends org.eclipse.persistence.sessions.Project
 
         // SECTION: DESCRIPTOR
         descriptor.setJavaClass(Restaurant.class);
-        Vector vector = new Vector();
+        Vector<String> vector = new Vector<>();
         vector.addElement("COL_REST");
         descriptor.setTableNames(vector);
         descriptor.addPrimaryKeyFieldName("COL_REST.ID");

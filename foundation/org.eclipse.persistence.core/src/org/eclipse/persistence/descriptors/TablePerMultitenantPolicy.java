@@ -13,17 +13,17 @@
  ******************************************************************************/
 package org.eclipse.persistence.descriptors;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Map;
 import java.util.Set;
-import java.util.Vector;
 
 import org.eclipse.persistence.annotations.TenantTableDiscriminatorType;
 import org.eclipse.persistence.config.EntityManagerProperties;
 import org.eclipse.persistence.exceptions.DescriptorException;
 import org.eclipse.persistence.internal.helper.DatabaseTable;
-import org.eclipse.persistence.internal.helper.NonSynchronizedVector;
 import org.eclipse.persistence.internal.sessions.AbstractRecord;
 import org.eclipse.persistence.internal.sessions.AbstractSession;
 import org.eclipse.persistence.mappings.DatabaseMapping;
@@ -250,7 +250,7 @@ public class TablePerMultitenantPolicy implements MultitenantPolicy, Cloneable {
      */
     protected void setTablePerTenant() {
         // Update the descriptor tables.
-        Vector<DatabaseTable> tables = NonSynchronizedVector.newInstance(3);
+        List<DatabaseTable> tables = new ArrayList<>(3);
         for (DatabaseTable table : descriptor.getTables()) {
             tables.add(updateTable(table));
         }

@@ -13,17 +13,30 @@
 package org.eclipse.persistence.descriptors;
 
 import java.io.Serializable;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Enumeration;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Hashtable;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+
+import org.eclipse.persistence.exceptions.DescriptorException;
+import org.eclipse.persistence.internal.databaseaccess.DatabaseCall;
 import org.eclipse.persistence.internal.databaseaccess.DatabasePlatform;
-import org.eclipse.persistence.internal.helper.*;
+import org.eclipse.persistence.internal.descriptors.OptimisticLockingPolicy;
+import org.eclipse.persistence.internal.helper.DatabaseField;
+import org.eclipse.persistence.internal.helper.DatabaseTable;
+import org.eclipse.persistence.internal.helper.Helper;
 import org.eclipse.persistence.internal.sessions.AbstractRecord;
 import org.eclipse.persistence.internal.sessions.AbstractSession;
-import org.eclipse.persistence.exceptions.DescriptorException;
 import org.eclipse.persistence.logging.SessionLog;
-import org.eclipse.persistence.mappings.*;
-import org.eclipse.persistence.internal.descriptors.OptimisticLockingPolicy;
-import org.eclipse.persistence.internal.databaseaccess.DatabaseCall;
-import org.eclipse.persistence.queries.*;
+import org.eclipse.persistence.mappings.AggregateObjectMapping;
+import org.eclipse.persistence.mappings.DatabaseMapping;
+import org.eclipse.persistence.queries.StoredProcedureCall;
+import org.eclipse.persistence.queries.WriteObjectQuery;
 
 /**
  * <p><b>Purpose</b>:
@@ -78,7 +91,7 @@ public class ReturningPolicy implements Serializable, Cloneable {
      * maps ClassDescriptor's tables into Vectors of fields to be used for call generation.
      * Lazily initialized array [NUM_OPERATIONS]
      */
-    protected Map<DatabaseTable, Vector<DatabaseField>>[] tableToFieldsForGenerationMap;
+    protected Map<DatabaseTable, List<DatabaseField>>[] tableToFieldsForGenerationMap;
 
     /** indicates whether ReturningPolicy is used for generation of the PK. */
     protected boolean isUsedToSetPrimaryKey;
@@ -121,14 +134,14 @@ public class ReturningPolicy implements Serializable, Cloneable {
     /**
      * INTERNAL:
      */
-    public Vector getFieldsToGenerateInsert(DatabaseTable table) {
+    public List<DatabaseField> getFieldsToGenerateInsert(DatabaseTable table) {
         return getVectorOfFieldsToGenerate(INSERT, table);
     }
 
     /**
      * INTERNAL:
      */
-    public Vector getFieldsToGenerateUpdate(DatabaseTable table) {
+    public List<DatabaseField> getFieldsToGenerateUpdate(DatabaseTable table) {
         return getVectorOfFieldsToGenerate(UPDATE, table);
     }
 
@@ -187,7 +200,7 @@ public class ReturningPolicy implements Serializable, Cloneable {
     /**
      * INTERNAL:
      */
-    protected Vector<DatabaseField> getVectorOfFieldsToGenerate(int operation, DatabaseTable table) {
+    protected List<DatabaseField> getVectorOfFieldsToGenerate(int operation, DatabaseTable table) {
         if (this.main[operation][ALL] == null) {
             return null;
         }
@@ -197,15 +210,15 @@ public class ReturningPolicy implements Serializable, Cloneable {
         }
         if (this.tableToFieldsForGenerationMap[operation] == null) {
             // the method is called for the first time for this operation
-            this.tableToFieldsForGenerationMap[operation] = new HashMap();
+            this.tableToFieldsForGenerationMap[operation] = new HashMap<>();
         }
-        Vector<DatabaseField> fieldsForGeneration = this.tableToFieldsForGenerationMap[operation].get(table);
+        List<DatabaseField> fieldsForGeneration = this.tableToFieldsForGenerationMap[operation].get(table);
         if (fieldsForGeneration == null) {
             // the method is called for the first time for this operation and this table
-            fieldsForGeneration = new NonSynchronizedVector();
-            Iterator it = this.main[operation][ALL].iterator();
+            fieldsForGeneration = new ArrayList<>();
+            Iterator<DatabaseField> it = this.main[operation][ALL].iterator();
             while (it.hasNext()) {
-                DatabaseField field = (DatabaseField)it.next();
+                DatabaseField field = it.next();
                 if (field.getTable().equals(table)) {
                     fieldsForGeneration.add(field);
                 }
@@ -668,9 +681,9 @@ public class ReturningPolicy implements Serializable, Cloneable {
         if (!infos.isEmpty()) {
             Hashtable infoHashtable = removeDuplicateAndValidateInfos(session);
             Hashtable infoHashtableUnmapped = (Hashtable)infoHashtable.clone();
-            for (Enumeration fields = getDescriptor().getFields().elements();
-                     fields.hasMoreElements();) {
-                DatabaseField field = (DatabaseField)fields.nextElement();
+            for (Enumeration<DatabaseField> fields = Helper.elements(getDescriptor().getFields());
+                    fields.hasMoreElements();) {
+                DatabaseField field = fields.nextElement();
                 Info info = (Info)infoHashtableUnmapped.get(field);
                 if (info != null) {
                     infoHashtableUnmapped.remove(field);
@@ -886,9 +899,9 @@ public class ReturningPolicy implements Serializable, Cloneable {
             }
         }
         if (!mapped.isEmpty()) {
-            for (Enumeration fields = getDescriptor().getFields().elements();
+            for (Enumeration<DatabaseField> fields = Helper.elements(getDescriptor().getFields());
                      fields.hasMoreElements();) {
-                DatabaseField fieldInDescriptor = (DatabaseField)fields.nextElement();
+                DatabaseField fieldInDescriptor = fields.nextElement();
                 DatabaseField fieldInMain = (DatabaseField)mapped.get(fieldInDescriptor);
                 if (fieldInMain != null) {
                     if (fieldInMain.getType() == null) {

@@ -14,19 +14,48 @@
  ******************************************************************************/
 package org.eclipse.persistence.expressions;
 
-import java.util.*;
-import java.io.*;
+import java.io.BufferedWriter;
+import java.io.IOException;
+import java.io.Serializable;
+import java.io.StringWriter;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.IdentityHashMap;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+import java.util.StringTokenizer;
+import java.util.Vector;
 
-import org.eclipse.persistence.mappings.DatabaseMapping;
-import org.eclipse.persistence.queries.*;
 import org.eclipse.persistence.descriptors.ClassDescriptor;
-import org.eclipse.persistence.exceptions.*;
-import org.eclipse.persistence.history.*;
-import org.eclipse.persistence.internal.helper.*;
-import org.eclipse.persistence.internal.expressions.*;
-import org.eclipse.persistence.internal.localization.*;
+import org.eclipse.persistence.exceptions.QueryException;
+import org.eclipse.persistence.history.AsOfClause;
+import org.eclipse.persistence.internal.expressions.ArgumentListFunctionExpression;
+import org.eclipse.persistence.internal.expressions.BaseExpression;
+import org.eclipse.persistence.internal.expressions.CollectionExpression;
+import org.eclipse.persistence.internal.expressions.ConstantExpression;
+import org.eclipse.persistence.internal.expressions.ExpressionIterator;
+import org.eclipse.persistence.internal.expressions.ExpressionJavaPrinter;
+import org.eclipse.persistence.internal.expressions.ExpressionNormalizer;
+import org.eclipse.persistence.internal.expressions.ExpressionSQLPrinter;
+import org.eclipse.persistence.internal.expressions.FunctionExpression;
+import org.eclipse.persistence.internal.expressions.LiteralExpression;
+import org.eclipse.persistence.internal.expressions.MapEntryExpression;
+import org.eclipse.persistence.internal.expressions.ParameterExpression;
+import org.eclipse.persistence.internal.expressions.SQLSelectStatement;
+import org.eclipse.persistence.internal.expressions.SubSelectExpression;
+import org.eclipse.persistence.internal.expressions.TableAliasLookup;
+import org.eclipse.persistence.internal.helper.ClassConstants;
+import org.eclipse.persistence.internal.helper.DatabaseField;
+import org.eclipse.persistence.internal.helper.DatabaseTable;
+import org.eclipse.persistence.internal.localization.ToStringLocalization;
 import org.eclipse.persistence.internal.sessions.AbstractRecord;
 import org.eclipse.persistence.internal.sessions.AbstractSession;
+import org.eclipse.persistence.mappings.DatabaseMapping;
+import org.eclipse.persistence.queries.DatabaseQuery;
+import org.eclipse.persistence.queries.ReadQuery;
+import org.eclipse.persistence.queries.ReportQuery;
 
 /**
  * <p>
@@ -1307,7 +1336,7 @@ public abstract class Expression implements Serializable, Cloneable {
         anOperator.setType(ExpressionOperator.FunctionOperator);
         anOperator.bePrefix();
 
-        Vector v = org.eclipse.persistence.internal.helper.NonSynchronizedVector.newInstance(decodeableItems.size() + 1);
+        List<String> v = new ArrayList<>(decodeableItems.size() + 1);
         v.add("DECODE(");
         for (int i = 0; i < ((decodeableItems.size() * 2) + 1); i++) {
             v.add(", ");
@@ -1761,8 +1790,8 @@ public abstract class Expression implements Serializable, Cloneable {
     /**
      * INTERNAL:
      */
-    public Vector getFields() {
-        return org.eclipse.persistence.internal.helper.NonSynchronizedVector.newInstance(1);
+    public List<DatabaseField> getFields() {
+        return new ArrayList<>(1);
     }
 
     /**
@@ -1931,7 +1960,7 @@ public abstract class Expression implements Serializable, Cloneable {
     public Expression getFunctionWithArguments(String functionName, List arguments) {
         ExpressionOperator anOperator = new ExpressionOperator();
         anOperator.setType(ExpressionOperator.FunctionOperator);
-        Vector v = org.eclipse.persistence.internal.helper.NonSynchronizedVector.newInstance(arguments.size());
+        List<String> v = new ArrayList<>(arguments.size());
         v.add(functionName + "(");
         for (int index = 0; index < arguments.size(); index++) {
             v.add(", ");
@@ -1953,7 +1982,7 @@ public abstract class Expression implements Serializable, Cloneable {
     public Expression sql(String sql, List arguments) {
         ExpressionOperator anOperator = new ExpressionOperator();
         anOperator.setType(ExpressionOperator.FunctionOperator);
-        Vector v = org.eclipse.persistence.internal.helper.NonSynchronizedVector.newInstance(arguments.size());
+        List<String> v = new ArrayList<>(arguments.size());
         int start = 0;
         int index = sql.indexOf('?');
         while (index != -1) {
@@ -3833,7 +3862,7 @@ public abstract class Expression implements Serializable, Cloneable {
     public Expression postfixSQL(String sqlString) {
         ExpressionOperator anOperator = new ExpressionOperator();
         anOperator.setType(ExpressionOperator.FunctionOperator);
-        Vector v = org.eclipse.persistence.internal.helper.NonSynchronizedVector.newInstance(1);
+        List<String> v = new ArrayList<>(1);
         v.add(sqlString);
         anOperator.printsAs(v);
         anOperator.bePostfix();
@@ -3853,7 +3882,7 @@ public abstract class Expression implements Serializable, Cloneable {
     public Expression prefixSQL(String sqlString) {
         ExpressionOperator anOperator = new ExpressionOperator();
         anOperator.setType(ExpressionOperator.FunctionOperator);
-        Vector v = org.eclipse.persistence.internal.helper.NonSynchronizedVector.newInstance(1);
+        List<String> v = new ArrayList<>(1);
         v.add(sqlString);
         anOperator.printsAs(v);
         anOperator.bePrefix();

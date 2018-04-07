@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 1998, 2015 Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 1998, 2018 Oracle and/or its affiliates. All rights reserved.
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Public License v1.0 and Eclipse Distribution License v. 1.0
  * which accompanies this distribution.
@@ -12,7 +12,7 @@
  ******************************************************************************/
 package org.eclipse.persistence.testing.models.mapping;
 
-import java.util.*;
+import java.util.Vector;
 
 /**
  * TopLink generated Project class.
@@ -60,7 +60,7 @@ public class BiDirectionInserOrderTestProject extends org.eclipse.persistence.se
 
         // SECTION: DESCRIPTOR
         descriptor.setJavaClass(org.eclipse.persistence.testing.models.mapping.Baby.class);
-        Vector vector = new Vector();
+        Vector<String> vector = new Vector<>();
         vector.addElement("BABY");
         descriptor.setTableNames(vector);
         descriptor.addPrimaryKeyFieldName("BABY.ID");
@@ -134,7 +134,7 @@ public class BiDirectionInserOrderTestProject extends org.eclipse.persistence.se
 
         // SECTION: DESCRIPTOR
         descriptor.setJavaClass(org.eclipse.persistence.testing.models.mapping.BabyMonitor.class);
-        Vector vector = new Vector();
+        Vector<String> vector = new Vector<>();
         vector.addElement("BABY_MONIOTR");
         descriptor.setTableNames(vector);
         descriptor.addPrimaryKeyFieldName("BABY_MONIOTR.ID");
@@ -206,7 +206,7 @@ public class BiDirectionInserOrderTestProject extends org.eclipse.persistence.se
 
         // SECTION: DESCRIPTOR
         descriptor.setJavaClass(org.eclipse.persistence.testing.models.mapping.Crib.class);
-        Vector vector = new Vector();
+        Vector<String> vector = new Vector<>();
         vector.addElement("CRIB");
         descriptor.setTableNames(vector);
         descriptor.addPrimaryKeyFieldName("CRIB.ID");

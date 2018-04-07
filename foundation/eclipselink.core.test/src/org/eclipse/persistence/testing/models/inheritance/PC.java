@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 1998, 2015 Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 1998, 2018 Oracle and/or its affiliates. All rights reserved.
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Public License v1.0 and Eclipse Distribution License v. 1.0
  * which accompanies this distribution.
@@ -13,9 +13,12 @@
 package org.eclipse.persistence.testing.models.inheritance;
 
 import java.util.Enumeration;
-import org.eclipse.persistence.descriptors.*;
-import org.eclipse.persistence.mappings.*;
-import org.eclipse.persistence.expressions.*;
+
+import org.eclipse.persistence.descriptors.ClassDescriptor;
+import org.eclipse.persistence.expressions.ExpressionBuilder;
+import org.eclipse.persistence.internal.helper.Helper;
+import org.eclipse.persistence.mappings.DatabaseMapping;
+import org.eclipse.persistence.mappings.TransformationMapping;
 
 public class PC extends Computer {
     public static void addToDescriptor(ClassDescriptor descriptor) {
@@ -29,9 +32,9 @@ public class PC extends Computer {
         // As a result, we check for the mapping before adding it.
         // The reason this mapping is not added in the project is that some Mapping Workbench
         // tests rely on the ammendment method.
-        Enumeration mappings = descriptor.getMappings().elements();
+        Enumeration<DatabaseMapping> mappings = Helper.elements(descriptor.getMappings());
         while (mappings.hasMoreElements()) {
-            DatabaseMapping mapping = (DatabaseMapping)mappings.nextElement();
+            DatabaseMapping mapping = mappings.nextElement();
             if (mapping.isTransformationMapping()) {
                 Object pctype = ((TransformationMapping)mapping).getFieldNameToMethodNames().get("PCTYPE");
                 if (pctype != null) {

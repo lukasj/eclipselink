@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 1998, 2015 Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 1998, 2018 Oracle and/or its affiliates. All rights reserved.
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Public License v1.0 and Eclipse Distribution License v. 1.0
  * which accompanies this distribution.
@@ -12,8 +12,9 @@
  ******************************************************************************/
 package org.eclipse.persistence.testing.tests.feature;
 
-import java.util.*;
-import org.eclipse.persistence.descriptors.*;
+import java.util.Vector;
+
+import org.eclipse.persistence.descriptors.RelationalDescriptor;
 
 /**
  * TopLink generated Project class.
@@ -66,7 +67,7 @@ public class EmployeeProjectForIntegrityChecker extends org.eclipse.persistence.
 
         // SECTION: DESCRIPTOR
         descriptor.setJavaClass(org.eclipse.persistence.testing.models.employee.domain.Address.class);
-        Vector vector = new Vector();
+        Vector<String> vector = new Vector<>();
         vector.addElement("ADDRESS");
         descriptor.setTableNames(vector);
         descriptor.addPrimaryKeyFieldName("ADDRESS.ADDRESS_ID");
@@ -138,7 +139,7 @@ public class EmployeeProjectForIntegrityChecker extends org.eclipse.persistence.
 
         // SECTION: DESCRIPTOR
         descriptor.setJavaClass(org.eclipse.persistence.testing.models.employee.domain.Employee.class);
-        Vector vector = new Vector();
+        Vector<String> vector = new Vector<>();
         vector.addElement("EMPLOYEE");
         vector.addElement("SALARY");
         descriptor.setTableNames(vector);
@@ -289,7 +290,7 @@ public class EmployeeProjectForIntegrityChecker extends org.eclipse.persistence.
 
         // SECTION: DESCRIPTOR
         descriptor.setJavaClass(org.eclipse.persistence.testing.models.employee.domain.EmploymentPeriod.class);
-        Vector vector = new Vector();
+        Vector<String> vector = new Vector<>();
         vector.addElement("EMPLOYEE");
         descriptor.setTableNames(vector);
 
@@ -332,7 +333,7 @@ public class EmployeeProjectForIntegrityChecker extends org.eclipse.persistence.
         // SECTION: DESCRIPTOR
         descriptor.setJavaClass(org.eclipse.persistence.testing.models.employee.domain.LargeProject.class);
         descriptor.getInheritancePolicy().setParentClass(org.eclipse.persistence.testing.models.employee.domain.Project.class);
-        Vector vector = new Vector();
+        Vector<String> vector = new Vector<>();
         vector.addElement("LPROJECT");
         descriptor.setTableNames(vector);
         descriptor.addPrimaryKeyFieldName("LPROJECT.PROJ_ID");
@@ -374,7 +375,7 @@ public class EmployeeProjectForIntegrityChecker extends org.eclipse.persistence.
 
         // SECTION: DESCRIPTOR
         descriptor.setJavaClass(org.eclipse.persistence.testing.models.employee.domain.PhoneNumber.class);
-        Vector vector = new Vector();
+        Vector<String> vector = new Vector<>();
         vector.addElement("PHONE");
         descriptor.setTableNames(vector);
         descriptor.addPrimaryKeyFieldName("PHONE.EMP_ID");
@@ -436,7 +437,7 @@ public class EmployeeProjectForIntegrityChecker extends org.eclipse.persistence.
 
         // SECTION: DESCRIPTOR
         descriptor.setJavaClass(org.eclipse.persistence.testing.models.employee.domain.Project.class);
-        Vector vector = new Vector();
+        Vector<String> vector = new Vector<>();
         vector.addElement("PROJECT");
         descriptor.setTableNames(vector);
         descriptor.addPrimaryKeyFieldName("PROJECT.PROJ_ID");

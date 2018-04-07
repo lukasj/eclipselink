@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 1998, 2015 Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 1998, 2018 Oracle and/or its affiliates. All rights reserved.
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Public License v1.0 and Eclipse Distribution License v. 1.0
  * which accompanies this distribution.
@@ -12,13 +12,23 @@
  ******************************************************************************/
 package org.eclipse.persistence.tools.beans;
 
-import java.util.*;
+import java.util.Enumeration;
 
-import javax.swing.*;
+import javax.swing.JButton;
+import javax.swing.JComboBox;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.JTextField;
+import javax.swing.JToolBar;
+import javax.swing.JTree;
 
-import org.eclipse.persistence.expressions.*;
-import org.eclipse.persistence.mappings.*;
 import org.eclipse.persistence.descriptors.ClassDescriptor;
+import org.eclipse.persistence.expressions.Expression;
+import org.eclipse.persistence.expressions.ExpressionBuilder;
+import org.eclipse.persistence.expressions.ExpressionOperator;
+import org.eclipse.persistence.internal.helper.Helper;
+import org.eclipse.persistence.mappings.DatabaseMapping;
 
 /**
  * Reusable visual component for editing expressions.
@@ -699,11 +709,11 @@ public class ExpressionPanel extends JPanel {
             getAttributeCombo().removeAllItems();
         }
         if (getDescriptor() != null) {
-            for (Enumeration mappingsEnum =
-                 getDescriptor().getMappings().elements();
+            for (Enumeration<DatabaseMapping> mappingsEnum =
+                 Helper.elements(getDescriptor().getMappings());
                  mappingsEnum.hasMoreElements(); ) {
                 DatabaseMapping mapping =
-                    (DatabaseMapping)mappingsEnum.nextElement();
+                    mappingsEnum.nextElement();
                 if (mapping.isDirectToFieldMapping()) {
                     getAttributeCombo().addItem(mapping.getAttributeName());
                 }

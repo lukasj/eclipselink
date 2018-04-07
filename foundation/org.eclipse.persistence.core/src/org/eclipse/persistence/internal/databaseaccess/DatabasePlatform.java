@@ -651,7 +651,7 @@ public class DatabasePlatform extends DatasourcePlatform {
      * INTERNAL
      * Returns null unless the platform supports call with returning
      */
-    public DatabaseCall buildCallWithReturning(SQLCall sqlCall, Vector returnFields) {
+    public DatabaseCall buildCallWithReturning(SQLCall sqlCall, List<DatabaseField> returnFields) {
         throw ValidationException.platformDoesNotSupportCallWithReturning(Helper.getShortClassName(this));
     }
 

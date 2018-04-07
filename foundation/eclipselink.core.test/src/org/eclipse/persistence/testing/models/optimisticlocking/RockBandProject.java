@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 1998, 2015 Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 1998, 2018 Oracle and/or its affiliates. All rights reserved.
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Public License v1.0 and Eclipse Distribution License v. 1.0
  * which accompanies this distribution.
@@ -12,7 +12,7 @@
  ******************************************************************************/
 package org.eclipse.persistence.testing.models.optimisticlocking;
 
-import java.util.*;
+import java.util.Vector;
 
 /**
  * TopLink generated Project class.
@@ -91,7 +91,7 @@ public class RockBandProject extends org.eclipse.persistence.sessions.Project {
         // SECTION: DESCRIPTOR
         descriptor.setJavaClass(org.eclipse.persistence.testing.models.optimisticlocking.DrumKit.class);
         descriptor.getInheritancePolicy().setParentClass(org.eclipse.persistence.testing.models.optimisticlocking.MusicalInstrument.class);
-        Vector vector = new Vector();
+        Vector<String> vector = new Vector<>();
         vector.addElement("DRUMKIT");
         descriptor.setTableNames(vector);
         descriptor.addPrimaryKeyFieldName("DRUMKIT.ID");
@@ -133,7 +133,7 @@ public class RockBandProject extends org.eclipse.persistence.sessions.Project {
         // SECTION: DESCRIPTOR
         descriptor.setJavaClass(org.eclipse.persistence.testing.models.optimisticlocking.Guitar.class);
         descriptor.getInheritancePolicy().setParentClass(org.eclipse.persistence.testing.models.optimisticlocking.MusicalInstrument.class);
-        Vector vector = new Vector();
+        Vector<String> vector = new Vector<>();
         vector.addElement("GUITAR");
         descriptor.setTableNames(vector);
         descriptor.addPrimaryKeyFieldName("GUITAR.ID");
@@ -176,7 +176,7 @@ public class RockBandProject extends org.eclipse.persistence.sessions.Project {
 
         // SECTION: DESCRIPTOR
         descriptor.setJavaClass(org.eclipse.persistence.testing.models.optimisticlocking.MusicalInstrument.class);
-        Vector vector = new Vector();
+        Vector<String> vector = new Vector<>();
         vector.addElement("MUSICALINSTRUMENT");
         descriptor.setTableNames(vector);
         descriptor.addPrimaryKeyFieldName("MUSICALINSTRUMENT.ID");
@@ -241,7 +241,7 @@ public class RockBandProject extends org.eclipse.persistence.sessions.Project {
 
         // SECTION: DESCRIPTOR
         descriptor.setJavaClass(org.eclipse.persistence.testing.models.optimisticlocking.Musician.class);
-        Vector vector = new Vector();
+        Vector<String> vector = new Vector<>();
         vector.addElement("MUSICIAN");
         descriptor.setTableNames(vector);
         descriptor.addPrimaryKeyFieldName("MUSICIAN.ID");
@@ -299,7 +299,7 @@ public class RockBandProject extends org.eclipse.persistence.sessions.Project {
 
         // SECTION: DESCRIPTOR
         descriptor.setJavaClass(org.eclipse.persistence.testing.models.optimisticlocking.RockBand.class);
-        Vector vector = new Vector();
+        Vector<String> vector = new Vector<>();
         vector.addElement("ROCKBAND");
         descriptor.setTableNames(vector);
         descriptor.addPrimaryKeyFieldName("ROCKBAND.ID");
@@ -355,7 +355,7 @@ public class RockBandProject extends org.eclipse.persistence.sessions.Project {
         // SECTION: DESCRIPTOR
         descriptor.setJavaClass(org.eclipse.persistence.testing.models.optimisticlocking.RockMusician.class);
         descriptor.getInheritancePolicy().setParentClass(org.eclipse.persistence.testing.models.optimisticlocking.Musician.class);
-        Vector vector = new Vector();
+        Vector<String> vector = new Vector<>();
         vector.addElement("ROCKMUSICIAN");
         descriptor.setTableNames(vector);
         descriptor.addPrimaryKeyFieldName("ROCKMUSICIAN.ID");

@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 1998, 2015 Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 1998, 2018 Oracle and/or its affiliates. All rights reserved.
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Public License v1.0 and Eclipse Distribution License v. 1.0
  * which accompanies this distribution.
@@ -31,7 +31,6 @@ import org.eclipse.persistence.internal.databaseaccess.DatabasePlatform;
 import org.eclipse.persistence.internal.helper.ClassConstants;
 import org.eclipse.persistence.internal.helper.DatabaseField;
 import org.eclipse.persistence.internal.helper.DatabaseTable;
-import org.eclipse.persistence.internal.helper.NonSynchronizedVector;
 import org.eclipse.persistence.internal.queries.ReportItem;
 import org.eclipse.persistence.internal.sessions.AbstractRecord;
 import org.eclipse.persistence.internal.sessions.AbstractSession;
@@ -307,7 +306,7 @@ public class FunctionExpression extends BaseExpression {
      *
      */
     @Override
-    public Vector getFields() {
+    public List<DatabaseField> getFields() {
         return getBaseExpression().getFields();
     }
 
@@ -660,12 +659,12 @@ public class FunctionExpression extends BaseExpression {
     @Override
     public Object valueFromObject(Object object, AbstractSession session, AbstractRecord translationRow, int valueHolderPolicy, boolean isObjectUnregistered) {
         Object baseValue = getBaseExpression().valueFromObject(object, session, translationRow, valueHolderPolicy, isObjectUnregistered);
-        Vector arguments = org.eclipse.persistence.internal.helper.NonSynchronizedVector.newInstance(this.children.size());
+        List<Object> arguments = new ArrayList<>(this.children.size());
         for (int index = 1; index < this.children.size(); index++) {
             if (this.children.elementAt(index) instanceof Expression) {
-                arguments.addElement(((Expression)this.children.elementAt(index)).valueFromObject(object, session, translationRow, valueHolderPolicy, isObjectUnregistered));
+                arguments.add(((Expression)this.children.elementAt(index)).valueFromObject(object, session, translationRow, valueHolderPolicy, isObjectUnregistered));
             } else {
-                arguments.addElement(this.children.elementAt(index));
+                arguments.add(this.children.elementAt(index));
             }
         }
         if (baseValue instanceof Vector) {// baseValue might be a vector, so the individual values must be extracted before applying the function call to them
@@ -845,8 +844,8 @@ public class FunctionExpression extends BaseExpression {
 
                     ExpressionOperator anOperator = new ExpressionOperator();
                     anOperator.setType(ExpressionOperator.FunctionOperator);
-                    Vector v = NonSynchronizedVector.newInstance(args.size());
-                    v.addElement("DISTINCT ");
+                    List<String> v = new ArrayList<>(args.size());
+                    v.add("DISTINCT ");
                     for (int index = 0; index < args.size(); index++) {
                         v.add(", ");
                     }

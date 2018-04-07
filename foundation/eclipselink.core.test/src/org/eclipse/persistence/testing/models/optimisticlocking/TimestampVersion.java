@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 1998, 2015 Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 1998, 2018 Oracle and/or its affiliates. All rights reserved.
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Public License v1.0 and Eclipse Distribution License v. 1.0
  * which accompanies this distribution.
@@ -12,7 +12,8 @@
  ******************************************************************************/
 package org.eclipse.persistence.testing.models.optimisticlocking;
 
-import java.util.*;
+import java.util.Vector;
+
 import org.eclipse.persistence.descriptors.RelationalDescriptor;
 
 public class TimestampVersion {
@@ -28,7 +29,7 @@ public class TimestampVersion {
 
         // SECTION: DESCRIPTOR
         descriptor.setJavaClass(TimestampVersion.class);
-        Vector vector = new Vector();
+        Vector<String> vector = new Vector<>();
         vector.addElement("TSAO_LCK");
         descriptor.setTableNames(vector);
 

@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 1998, 2015 Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 1998, 2018 Oracle and/or its affiliates. All rights reserved.
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Public License v1.0 and Eclipse Distribution License v. 1.0
  * which accompanies this distribution.
@@ -12,13 +12,17 @@
  ******************************************************************************/
 package org.eclipse.persistence.descriptors;
 
-import java.util.*;
-import org.eclipse.persistence.mappings.*;
-import org.eclipse.persistence.mappings.DatabaseMapping.WriteType;
-import org.eclipse.persistence.internal.helper.*;
+import java.util.ArrayList;
+import java.util.Enumeration;
+import java.util.List;
+
+import org.eclipse.persistence.expressions.Expression;
+import org.eclipse.persistence.internal.helper.DatabaseField;
+import org.eclipse.persistence.internal.helper.DatabaseTable;
 import org.eclipse.persistence.internal.sessions.AbstractRecord;
-import org.eclipse.persistence.queries.*;
-import org.eclipse.persistence.expressions.*;
+import org.eclipse.persistence.mappings.DatabaseMapping;
+import org.eclipse.persistence.mappings.DatabaseMapping.WriteType;
+import org.eclipse.persistence.queries.ObjectLevelModifyQuery;
 
 /**
  * <p><b>Purpose</b>: An implementation of the OptimisticLockingPolicy interface.
@@ -66,8 +70,8 @@ public class ChangedFieldsLockingPolicy extends FieldsLockingPolicy {
             query.setShouldValidateUpdateCallCacheUse(true);
         }
 
-        for (Enumeration enumtr = query.getModifyRow().keys(); enumtr.hasMoreElements();) {
-            DatabaseField field = (DatabaseField)enumtr.nextElement();
+        for (Enumeration<DatabaseField> enumtr = query.getModifyRow().keys(); enumtr.hasMoreElements();) {
+            DatabaseField field = enumtr.nextElement();
             DatabaseMapping mapping = descriptor.getObjectBuilder().getMappingForField(field);
             mapping.writeFromObjectIntoRow(object, query.getTranslationRow(), query.getSession(), WriteType.UNDEFINED);
         }

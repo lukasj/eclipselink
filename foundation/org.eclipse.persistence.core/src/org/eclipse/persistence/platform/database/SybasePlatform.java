@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 1998, 2015 Oracle and/or its affiliates, IBM Corporation. All rights reserved.
+ * Copyright (c) 1998, 2018 Oracle and/or its affiliates, IBM Corporation. All rights reserved.
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Public License v1.0 and Eclipse Distribution License v. 1.0
  * which accompanies this distribution.
@@ -30,10 +30,12 @@ import java.sql.Connection;
 import java.sql.DatabaseMetaData;
 import java.sql.SQLException;
 import java.sql.Types;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Hashtable;
+import java.util.List;
 import java.util.Map;
 import java.util.Vector;
 
@@ -44,7 +46,6 @@ import org.eclipse.persistence.internal.expressions.RelationExpression;
 import org.eclipse.persistence.internal.helper.ClassConstants;
 import org.eclipse.persistence.internal.helper.DatabaseTable;
 import org.eclipse.persistence.internal.helper.Helper;
-import org.eclipse.persistence.internal.helper.NonSynchronizedVector;
 import org.eclipse.persistence.internal.sessions.AbstractSession;
 import org.eclipse.persistence.queries.ValueReadQuery;
 
@@ -501,7 +502,7 @@ public class SybasePlatform extends org.eclipse.persistence.platform.database.Da
         exOperator.setType(ExpressionOperator.FunctionOperator);
         exOperator.setSelector(ExpressionOperator.Extract);
         exOperator.setName("EXTRACT");
-        Vector v = NonSynchronizedVector.newInstance(5);
+        List<String> v = new ArrayList<>(5);
         v.add("DATEPART(");
         v.add(",");
         v.add(")");
@@ -523,7 +524,7 @@ public class SybasePlatform extends org.eclipse.persistence.platform.database.Da
         ExpressionOperator exOperator = new ExpressionOperator();
         exOperator.setType(ExpressionOperator.FunctionOperator);
         exOperator.setSelector(ExpressionOperator.Trim);
-        Vector v = org.eclipse.persistence.internal.helper.NonSynchronizedVector.newInstance(2);
+        List<String> v = new ArrayList<>(2);
         v.add("RTRIM(LTRIM(");
         v.add("))");
         exOperator.printsAs(v);
@@ -540,7 +541,7 @@ public class SybasePlatform extends org.eclipse.persistence.platform.database.Da
         ExpressionOperator exOperator = new ExpressionOperator();
         exOperator.setType(ExpressionOperator.FunctionOperator);
         exOperator.setSelector(ExpressionOperator.Trim2);
-        Vector v = org.eclipse.persistence.internal.helper.NonSynchronizedVector.newInstance(5);
+        List<String> v = new ArrayList<>(5);
         v.add("STR_REPLACE(");
         v.add(", ");
         v.add(", NULL)");
@@ -609,8 +610,8 @@ public class SybasePlatform extends org.eclipse.persistence.platform.database.Da
     public ExpressionOperator modOperator() {
         ExpressionOperator result = new ExpressionOperator();
         result.setSelector(ExpressionOperator.Mod);
-        Vector v = org.eclipse.persistence.internal.helper.NonSynchronizedVector.newInstance();
-        v.addElement(" % ");
+        List<String> v = new ArrayList<>();
+        v.add(" % ");
         result.printsAs(v);
         result.bePostfix();
         result.setNodeClass(org.eclipse.persistence.internal.expressions.FunctionExpression.class);
@@ -623,8 +624,8 @@ public class SybasePlatform extends org.eclipse.persistence.platform.database.Da
     protected ExpressionOperator operatorOuterJoin() {
         ExpressionOperator result = new ExpressionOperator();
         result.setSelector(ExpressionOperator.EqualOuterJoin);
-        Vector v = org.eclipse.persistence.internal.helper.NonSynchronizedVector.newInstance();
-        v.addElement(" =* ");
+        List<String> v = new ArrayList<>();
+        v.add(" =* ");
         result.printsAs(v);
         result.bePostfix();
         result.setNodeClass(RelationExpression.class);
@@ -718,11 +719,11 @@ public class SybasePlatform extends org.eclipse.persistence.platform.database.Da
         ExpressionOperator result = new ExpressionOperator();
         result.setSelector(ExpressionOperator.SubstringSingleArg);
         result.setType(ExpressionOperator.FunctionOperator);
-        Vector v = org.eclipse.persistence.internal.helper.NonSynchronizedVector.newInstance();
-        v.addElement("SUBSTRING(");
-        v.addElement(",");
-        v.addElement(", CHAR_LENGTH(");
-        v.addElement("))");
+        List<String> v = new ArrayList<>();
+        v.add("SUBSTRING(");
+        v.add(",");
+        v.add(", CHAR_LENGTH(");
+        v.add("))");
         result.printsAs(v);
         int[] indices = new int[3];
         indices[0] = 0;

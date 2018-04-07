@@ -257,9 +257,9 @@ public abstract class AbstractCompositeCollectionMapping extends AggregateMappin
      * Return the fields handled by the mapping.
      */
     @Override
-    protected Vector collectFields() {
-        Vector fields = new Vector(1);
-        fields.addElement(this.getField());
+    protected List<DatabaseField> collectFields() {
+        List<DatabaseField> fields = new Vector(1);
+        fields.add(this.getField());
         return fields;
     }
 

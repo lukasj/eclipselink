@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 1998, 2015 Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 1998, 2018 Oracle and/or its affiliates. All rights reserved.
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Public License v1.0 and Eclipse Distribution License v. 1.0
  * which accompanies this distribution.
@@ -65,7 +65,7 @@ public class VariableOneToOneMappingIsNotDefinedProperlyTest extends ExceptionTe
         sourceField = new DatabaseField("ACTOR.PROGRAM_ID");
         targetQueryKeyName = (String)mapping.getSourceToTargetQueryKeyNames().get(sourceField);
         mapping.addForeignQueryKeyName("ACTOR.PROGRAM_ID", "name2");
-        mapping.getForeignKeyFields().removeElement(sourceField);
+        mapping.getForeignKeyFields().remove(sourceField);
 
         actor = Actor.example4();
         databaseRow = new DatabaseRecord();
@@ -87,7 +87,7 @@ public class VariableOneToOneMappingIsNotDefinedProperlyTest extends ExceptionTe
 
     public void reset() {
         mapping.addForeignQueryKeyName("ACTOR.PROGRAM_ID", targetQueryKeyName);
-        mapping.getForeignKeyFields().removeElement(sourceField);
+        mapping.getForeignKeyFields().remove(sourceField);
     }
 
     public void test() {

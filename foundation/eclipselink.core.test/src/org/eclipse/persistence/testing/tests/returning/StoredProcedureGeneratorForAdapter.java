@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 1998, 2015 Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 1998, 2018 Oracle and/or its affiliates. All rights reserved.
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Public License v1.0 and Eclipse Distribution License v. 1.0
  * which accompanies this distribution.
@@ -99,7 +99,7 @@ public class StoredProcedureGeneratorForAdapter extends StoredProcedureGenerator
     }
 
     protected StoredProcedureDefinition generateStoredProcedureDefinition(ClassDescriptor desc, DatabaseQuery query, String namePrefix) {
-        Vector fields = desc.getFields();
+        List<DatabaseField> fields = desc.getFields();
         Hashtable namesNewToNames = null;
         if (shouldCapitalizeNames()) {
             namesNewToNames = new Hashtable();
@@ -219,18 +219,18 @@ public class StoredProcedureGeneratorForAdapter extends StoredProcedureGenerator
     // name to be used as a parameter for StoredProcedureCall is extracted from
     // storedProcedureDefinition - and there it is always the same as in database.
 
-    protected Vector capitalize(Vector fields, Hashtable namesCapitalizedToNames) {
+    protected List<DatabaseField> capitalize(List<DatabaseField> fields, Hashtable namesCapitalizedToNames) {
         // Can't change names of descriptor's fields, create a new Vector.
-        Vector newFields = null;
+        List<DatabaseField> newFields = null;
         for (int i = 0; i < fields.size(); i++) {
-            DatabaseField field = (DatabaseField)fields.elementAt(i);
+            DatabaseField field = fields.get(i);
             String fieldNameUpper = field.getName().toUpperCase();
             String tableNameUpper = field.getTableName().toUpperCase();
             if (!fieldNameUpper.equals(field.getName()) || !tableNameUpper.equals(field.getTableName())) {
                 DatabaseField newField = new DatabaseField(fieldNameUpper, tableNameUpper);
                 newField.setType(field.getType());
                 if (newFields == null) {
-                    newFields = (Vector)fields.clone();
+                    newFields = new ArrayList<>(fields);
                 }
                 newFields.set(i, newField);
                 namesCapitalizedToNames.put(fieldNameUpper, field.getName());

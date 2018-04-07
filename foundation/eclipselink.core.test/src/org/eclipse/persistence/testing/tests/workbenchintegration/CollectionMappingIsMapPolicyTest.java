@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 1998, 2015 Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 1998, 2018 Oracle and/or its affiliates. All rights reserved.
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Public License v1.0 and Eclipse Distribution License v. 1.0
  * which accompanies this distribution.
@@ -16,6 +16,7 @@ import java.util.Enumeration;
 import java.util.Vector;
 
 import org.eclipse.persistence.descriptors.ClassDescriptor;
+import org.eclipse.persistence.internal.helper.Helper;
 import org.eclipse.persistence.internal.queries.MapContainerPolicy;
 import org.eclipse.persistence.mappings.CollectionMapping;
 import org.eclipse.persistence.mappings.DatabaseMapping;
@@ -43,10 +44,9 @@ public class CollectionMappingIsMapPolicyTest extends ProjectClassGeneratorResul
 
         descriptorToModify = project.getDescriptors().get(Employee.class);
         policy = new MapContainerPolicy();
-        for (Enumeration mappingsEnum = (descriptorToModify.getMappings()).elements();
-             mappingsEnum.hasMoreElements(); ) {
-            mappingToModify = (DatabaseMapping)mappingsEnum.nextElement();
-
+        for (Enumeration<DatabaseMapping> mappingsEnum = Helper.elements(descriptorToModify.getMappings());
+                mappingsEnum.hasMoreElements(); ) {
+            mappingToModify = mappingsEnum.nextElement();
             if (mappingToModify.isForeignReferenceMapping()) {
                 if (((ForeignReferenceMapping)mappingToModify).isCollectionMapping()) {
                     CollectionMapping collectionMapping =

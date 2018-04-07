@@ -43,7 +43,7 @@ public class EISMappedRecord extends AbstractRecord {
      * getFields() is sued internally in a few places, so try to make that work for mapped records.
      */
     @Override
-    public Vector getFields() {
+    public List<DatabaseField> getFields() {
         return new Vector(getRecord().keySet());
     }
 

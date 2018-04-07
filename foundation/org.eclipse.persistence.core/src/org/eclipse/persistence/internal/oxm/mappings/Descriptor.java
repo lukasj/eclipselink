@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 2012, 2015 Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 2012, 2018 Oracle and/or its affiliates. All rights reserved.
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Public License v1.0 and Eclipse Distribution License v. 1.0
  * which accompanies this distribution.
@@ -14,7 +14,6 @@ package org.eclipse.persistence.internal.oxm.mappings;
 
 import java.util.List;
 import java.util.Map;
-import java.util.Vector;
 
 import javax.xml.namespace.QName;
 
@@ -126,7 +125,7 @@ public interface Descriptor <
      /**
      * Returns mappings
      */
-    public Vector<CORE_MAPPING> getMappings();
+    public List<CORE_MAPPING> getMappings();
 
 
      /**
@@ -147,7 +146,7 @@ public interface Descriptor <
      /**
      * Return the names of all the primary keys.
      */
-    public Vector<String> getPrimaryKeyFieldNames();
+    public List<String> getPrimaryKeyFieldNames();
 
      /**
      * INTERNAL:
@@ -165,13 +164,13 @@ public interface Descriptor <
      /**
       * Return the table names.
       */
-     public Vector getTableNames();
+     public List<String> getTableNames();
 
      /**
       * INTERNAL:
       * Return all the tables.
       */
-     public Vector<TABLE> getTables();
+     public List<TABLE> getTables();
 
      /**
       * INTERNAL:

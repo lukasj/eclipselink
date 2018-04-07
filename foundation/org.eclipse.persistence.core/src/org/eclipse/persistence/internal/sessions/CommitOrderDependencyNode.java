@@ -12,12 +12,19 @@
  ******************************************************************************/
 package org.eclipse.persistence.internal.sessions;
 
-import java.util.*;
-import org.eclipse.persistence.descriptors.InheritancePolicy;
-import org.eclipse.persistence.mappings.*;
-import org.eclipse.persistence.internal.helper.*;
-import org.eclipse.persistence.internal.localization.*;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Enumeration;
+import java.util.List;
+import java.util.Vector;
+
 import org.eclipse.persistence.descriptors.ClassDescriptor;
+import org.eclipse.persistence.descriptors.InheritancePolicy;
+import org.eclipse.persistence.internal.helper.DescriptorCompare;
+import org.eclipse.persistence.internal.helper.Helper;
+import org.eclipse.persistence.internal.localization.ToStringLocalization;
+import org.eclipse.persistence.mappings.DatabaseMapping;
+import org.eclipse.persistence.mappings.ForeignReferenceMapping;
 
 /**
  * This wraps a descriptor with information required to compute an order for
@@ -98,9 +105,9 @@ public class CommitOrderDependencyNode {
      * If my superclass is related to a class, I'm related to it.
      */
     public void recordMappingDependencies() {
-        for (Enumeration mappings = getDescriptor().getMappings().elements();
+        for (Enumeration<DatabaseMapping> mappings = Helper.elements(getDescriptor().getMappings());
                  mappings.hasMoreElements();) {
-            DatabaseMapping mapping = (DatabaseMapping)mappings.nextElement();
+            DatabaseMapping mapping = mappings.nextElement();
             if (mapping.isForeignReferenceMapping()) {
                 if (((ForeignReferenceMapping)mapping).hasConstraintDependency()) {
                     Class ownedClass;
@@ -145,9 +152,9 @@ public class CommitOrderDependencyNode {
      * If my superclass is related to a class, I'm related to it.
      */
     public void recordSpecifiedDependencies() {
-        for (Enumeration constraintsEnum = getDescriptor().getConstraintDependencies().elements();
+        for (Enumeration<Class> constraintsEnum = Helper.elements(getDescriptor().getConstraintDependencies());
                  constraintsEnum.hasMoreElements();) {
-            Class ownedClass = (Class)constraintsEnum.nextElement();
+            Class ownedClass = constraintsEnum.nextElement();
             CommitOrderDependencyNode node = getOwner().nodeFor(ownedClass);
             Vector ownedNodes = withAllSubclasses(node);
 

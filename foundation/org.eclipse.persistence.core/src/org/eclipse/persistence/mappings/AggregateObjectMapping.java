@@ -30,34 +30,63 @@
 package org.eclipse.persistence.mappings;
 
 import java.beans.PropertyChangeListener;
-
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.Enumeration;
+import java.util.HashMap;
+import java.util.Hashtable;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
 import java.util.Map.Entry;
+import java.util.Set;
+import java.util.Vector;
 
 import org.eclipse.persistence.descriptors.ClassDescriptor;
 import org.eclipse.persistence.descriptors.FetchGroupManager;
 import org.eclipse.persistence.descriptors.changetracking.AttributeChangeTrackingPolicy;
 import org.eclipse.persistence.descriptors.changetracking.DeferredChangeDetectionPolicy;
 import org.eclipse.persistence.descriptors.changetracking.ObjectChangeTrackingPolicy;
-import org.eclipse.persistence.exceptions.*;
-import org.eclipse.persistence.expressions.*;
-import org.eclipse.persistence.internal.helper.*;
+import org.eclipse.persistence.exceptions.DatabaseException;
+import org.eclipse.persistence.exceptions.DescriptorException;
+import org.eclipse.persistence.exceptions.QueryException;
+import org.eclipse.persistence.expressions.Expression;
+import org.eclipse.persistence.internal.descriptors.DescriptorIterator;
+import org.eclipse.persistence.internal.descriptors.ObjectBuilder;
+import org.eclipse.persistence.internal.expressions.SQLSelectStatement;
+import org.eclipse.persistence.internal.helper.DatabaseField;
+import org.eclipse.persistence.internal.helper.DatabaseTable;
+import org.eclipse.persistence.internal.helper.Helper;
 import org.eclipse.persistence.internal.identitymaps.CacheKey;
 import org.eclipse.persistence.internal.queries.ContainerPolicy;
 import org.eclipse.persistence.internal.queries.EntityFetchGroup;
 import org.eclipse.persistence.internal.queries.JoinedAttributeManager;
 import org.eclipse.persistence.internal.queries.MappedKeyMapContainerPolicy;
-import org.eclipse.persistence.internal.sessions.*;
-import org.eclipse.persistence.internal.descriptors.DescriptorIterator;
-import org.eclipse.persistence.internal.descriptors.ObjectBuilder;
-import org.eclipse.persistence.internal.expressions.SQLSelectStatement;
+import org.eclipse.persistence.internal.sessions.AbstractRecord;
+import org.eclipse.persistence.internal.sessions.AbstractSession;
+import org.eclipse.persistence.internal.sessions.AggregateChangeRecord;
+import org.eclipse.persistence.internal.sessions.ChangeRecord;
+import org.eclipse.persistence.internal.sessions.MergeManager;
+import org.eclipse.persistence.internal.sessions.ObjectChangeSet;
+import org.eclipse.persistence.internal.sessions.UnitOfWorkChangeSet;
+import org.eclipse.persistence.internal.sessions.UnitOfWorkImpl;
 import org.eclipse.persistence.logging.SessionLog;
 import org.eclipse.persistence.mappings.converters.Converter;
 import org.eclipse.persistence.mappings.foundation.AbstractTransformationMapping;
 import org.eclipse.persistence.mappings.foundation.MapKeyMapping;
 import org.eclipse.persistence.mappings.querykeys.DirectQueryKey;
 import org.eclipse.persistence.mappings.querykeys.QueryKey;
-import org.eclipse.persistence.queries.*;
+import org.eclipse.persistence.queries.DataReadQuery;
+import org.eclipse.persistence.queries.DeleteObjectQuery;
+import org.eclipse.persistence.queries.FetchGroup;
+import org.eclipse.persistence.queries.FetchGroupTracker;
+import org.eclipse.persistence.queries.ObjectBuildingQuery;
+import org.eclipse.persistence.queries.ObjectLevelReadQuery;
+import org.eclipse.persistence.queries.ReadAllQuery;
+import org.eclipse.persistence.queries.ReadObjectQuery;
+import org.eclipse.persistence.queries.ReadQuery;
+import org.eclipse.persistence.queries.WriteObjectQuery;
 import org.eclipse.persistence.sessions.DatabaseRecord;
 import org.eclipse.persistence.sessions.Project;
 
@@ -278,10 +307,10 @@ public class AggregateObjectMapping extends AggregateMapping implements Relation
      * row are NULL.
      */
     protected boolean allAggregateFieldsAreNull(AbstractRecord databaseRow) {
-        Vector fields = getReferenceFields();
+        List<DatabaseField> fields = getReferenceFields();
         int size = fields.size();
         for (int index = 0; index < size; index++) {
-            DatabaseField field = (DatabaseField)fields.get(index);
+            DatabaseField field = fields.get(index);
             Object value = databaseRow.get(field);
             if (value != null) {
                 return false;
@@ -527,9 +556,9 @@ public class AggregateObjectMapping extends AggregateMapping implements Relation
         if ((value != null) && !referenceDescriptor.getJavaClass().isInstance(value)) {
             throw QueryException.incorrectClassForObjectComparison(expression, value, this);
         }
-        Enumeration mappings = referenceDescriptor.getMappings().elements();
-        for (; mappings.hasMoreElements();) {
-            DatabaseMapping mapping = (DatabaseMapping)mappings.nextElement();
+        Enumeration<DatabaseMapping> mappingsEnum = Helper.elements(referenceDescriptor.getMappings());
+        for (; mappingsEnum.hasMoreElements();) {
+            DatabaseMapping mapping = mappingsEnum.nextElement();
             if (value == null) {
                 attributeValue = null;
             } else {
@@ -554,9 +583,9 @@ public class AggregateObjectMapping extends AggregateMapping implements Relation
         Expression attributeByAttributeComparison = null;
 
         //Enumeration mappingsEnum = getSourceToTargetKeyFields().elements();
-        Enumeration mappingsEnum = getReferenceDescriptor().getMappings().elements();
+        Enumeration<DatabaseMapping> mappingsEnum = Helper.elements(getReferenceDescriptor().getMappings());
         for (; mappingsEnum.hasMoreElements();) {
-            DatabaseMapping mapping = (DatabaseMapping)mappingsEnum.nextElement();
+            DatabaseMapping mapping = mappingsEnum.nextElement();
             String attributeName = mapping.getAttributeName();
             Expression join = expression.get(attributeName).equal(argument.get(attributeName));
             if (attributeByAttributeComparison == null) {
@@ -807,7 +836,7 @@ public class AggregateObjectMapping extends AggregateMapping implements Relation
      */
     protected AbstractRecord buildTemplateInsertRow(AbstractSession session) {
         AbstractRecord result = getReferenceDescriptor().getObjectBuilder().buildTemplateInsertRow(session);
-        List processedMappings = (List)getReferenceDescriptor().getMappings().clone();
+        List<DatabaseMapping> processedMappings = new ArrayList<>(getReferenceDescriptor().getMappings());
         if (getReferenceDescriptor().hasInheritance()) {
             for (ClassDescriptor child : getReferenceDescriptor().getInheritancePolicy().getChildDescriptors()) {
                 for (DatabaseMapping mapping : child.getMappings()) {
@@ -942,7 +971,7 @@ public class AggregateObjectMapping extends AggregateMapping implements Relation
      * Return the fields handled by the mapping.
      */
     @Override
-    protected Vector<DatabaseField> collectFields() {
+    protected List<DatabaseField> collectFields() {
         return getReferenceFields();
     }
 
@@ -1294,7 +1323,7 @@ public class AggregateObjectMapping extends AggregateMapping implements Relation
      * INTERNAL:
      * Return the fields used to build the aggregate object.
      */
-    protected Vector<DatabaseField> getReferenceFields() {
+    protected List<DatabaseField> getReferenceFields() {
         return getReferenceDescriptor().getAllFields();
     }
     /**
@@ -1758,7 +1787,7 @@ public class AggregateObjectMapping extends AggregateMapping implements Relation
             boolean allAttributesNull = true;
             int nAggregateFields = this.fields.size();
             for (int i = 0; (i < nAggregateFields) && allAttributesNull; i++) {
-                DatabaseField field = this.fields.elementAt(i);
+                DatabaseField field = this.fields.get(i);
                 if (row.containsKey(field)) {
                     allAttributesNull = row.get(field) == null;
                 } else {
@@ -1995,7 +2024,7 @@ public class AggregateObjectMapping extends AggregateMapping implements Relation
      */
     protected void translateFields(ClassDescriptor clonedDescriptor, AbstractSession session) {
         // EL Bug 326977
-        Vector fieldsToTranslate = (Vector) clonedDescriptor.getFields().clone();
+        List<DatabaseField> fieldsToTranslate = new ArrayList<>(clonedDescriptor.getFields());
         for (Iterator qkIterator = clonedDescriptor.getQueryKeys().values().iterator(); qkIterator.hasNext();) {
             QueryKey queryKey = (QueryKey)qkIterator.next();
             if (queryKey.isDirectQueryKey()) {
@@ -2160,8 +2189,8 @@ public class AggregateObjectMapping extends AggregateMapping implements Relation
         }
 
         AbstractRecord targetRow = buildTemplateInsertRow(session);
-        for (Enumeration keyEnum = targetRow.keys(); keyEnum.hasMoreElements();) {
-            DatabaseField field = (DatabaseField)keyEnum.nextElement();
+        for (Enumeration<DatabaseField> keyEnum = targetRow.keys(); keyEnum.hasMoreElements();) {
+            DatabaseField field = keyEnum.nextElement();
             if (field.isInsertable()) {
                 Object value = targetRow.get(field);
                 //CR-3286097 - Should use add not put, to avoid linear search.
@@ -2177,8 +2206,8 @@ public class AggregateObjectMapping extends AggregateMapping implements Relation
         }
 
         AbstractRecord targetRow = buildTemplateInsertRow(session);
-        for (Enumeration keyEnum = targetRow.keys(); keyEnum.hasMoreElements();) {
-            DatabaseField field = (DatabaseField)keyEnum.nextElement();
+        for (Enumeration<DatabaseField> keyEnum = targetRow.keys(); keyEnum.hasMoreElements();) {
+            DatabaseField field = keyEnum.nextElement();
             if (field.isUpdatable()) {
                 Object value = targetRow.get(field);
                 //CR-3286097 - Should use add not put, to avoid linear search.

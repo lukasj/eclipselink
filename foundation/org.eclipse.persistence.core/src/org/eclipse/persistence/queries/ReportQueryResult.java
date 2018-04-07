@@ -14,22 +14,38 @@
  ******************************************************************************/
 package org.eclipse.persistence.queries;
 
-import java.io.*;
-import java.util.*;
+import java.io.Serializable;
 import java.lang.reflect.Constructor;
 import java.security.AccessController;
 import java.security.PrivilegedActionException;
+import java.util.AbstractSet;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.Enumeration;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+import java.util.NoSuchElementException;
+import java.util.Set;
+import java.util.Vector;
 
 import org.eclipse.persistence.descriptors.ClassDescriptor;
-import org.eclipse.persistence.exceptions.*;
+import org.eclipse.persistence.exceptions.QueryException;
 import org.eclipse.persistence.internal.expressions.MapEntryExpression;
-import org.eclipse.persistence.internal.helper.*;
+import org.eclipse.persistence.internal.helper.ConversionManager;
+import org.eclipse.persistence.internal.helper.DatabaseField;
 import org.eclipse.persistence.internal.identitymaps.CacheId;
-import org.eclipse.persistence.internal.queries.*;
+import org.eclipse.persistence.internal.queries.JoinedAttributeManager;
+import org.eclipse.persistence.internal.queries.MapContainerPolicy;
+import org.eclipse.persistence.internal.queries.ReportItem;
 import org.eclipse.persistence.internal.security.PrivilegedAccessHelper;
 import org.eclipse.persistence.internal.security.PrivilegedInvokeConstructor;
 import org.eclipse.persistence.internal.sessions.AbstractRecord;
-import org.eclipse.persistence.mappings.*;
+import org.eclipse.persistence.mappings.AggregateObjectMapping;
+import org.eclipse.persistence.mappings.Association;
+import org.eclipse.persistence.mappings.DatabaseMapping;
+import org.eclipse.persistence.mappings.DirectCollectionMapping;
 import org.eclipse.persistence.mappings.converters.Converter;
 import org.eclipse.persistence.mappings.foundation.AbstractColumnMapping;
 import org.eclipse.persistence.sessions.DatabaseRecord;
@@ -207,8 +223,8 @@ public class ReportQueryResult implements Serializable, Map {
                 AbstractRecord subRow = row;
                 // Check if at the start of the row, then avoid building a subRow.
                 if (itemIndex > 0) {
-                    Vector trimedFields = new NonSynchronizedSubVector(row.getFields(), itemIndex, rowSize);
-                    Vector trimedValues = new NonSynchronizedSubVector(row.getValues(), itemIndex, rowSize);
+                    List<DatabaseField> trimedFields = row.getFields().subList(itemIndex, rowSize);
+                    List<Object> trimedValues = row.getValues().subList(itemIndex, rowSize);
                     subRow = new DatabaseRecord(trimedFields, trimedValues);
                 }
                 if (mapping != null && mapping.isAggregateObjectMapping()){

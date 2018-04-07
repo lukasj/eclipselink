@@ -151,7 +151,7 @@ public class DatasourceCallQueryMechanism extends DatabaseQueryMechanism {
 
                 // Deletion must occur in reverse order.
                 for (int index = getCalls().size() - 1; index >= 0; index--) {
-                    DatasourceCall databseCall = (DatasourceCall)getCalls().elementAt(index);
+                    DatasourceCall databseCall = (DatasourceCall)getCalls().get(index);
                     returnedRowCount = (Integer)executeCall(databseCall);
                 }
                 // returns the number of rows removed from the first table in insert order
@@ -176,7 +176,7 @@ public class DatasourceCallQueryMechanism extends DatabaseQueryMechanism {
         // first call - crete temp table.
         // may fail in case global temp table already exists.
         try {
-            DatasourceCall databseCall = (DatasourceCall)getCalls().elementAt(getCalls().size() - 1);
+            DatasourceCall databseCall = (DatasourceCall)getCalls().get(getCalls().size() - 1);
             executeCall(databseCall);
         } catch (DatabaseException databaseEx) {
             // ignore
@@ -185,7 +185,7 @@ public class DatasourceCallQueryMechanism extends DatabaseQueryMechanism {
         // second call - populate temp table.
         // if that fails save the exception and untill cleanup
         try {
-            DatasourceCall databseCall = (DatasourceCall)getCalls().elementAt(getCalls().size() - 2);
+            DatasourceCall databseCall = (DatasourceCall)getCalls().get(getCalls().size() - 2);
             executeCall(databseCall);
         } catch (DatabaseException databaseEx) {
             ex = databaseEx;
@@ -194,7 +194,7 @@ public class DatasourceCallQueryMechanism extends DatabaseQueryMechanism {
         // third (a call per table) - delete from original tables calls.
         // if that fails save the exception untill cleanup
         for (int index = getCalls().size() - 3; index >= 1 && ex == null; index--) {
-            DatasourceCall databseCall = (DatasourceCall)getCalls().elementAt(index);
+            DatasourceCall databseCall = (DatasourceCall)getCalls().get(index);
             try {
                 // returns the number of rows removed from the first table in insert order
                 returnedRowCount = (Integer)executeCall(databseCall);
@@ -206,7 +206,7 @@ public class DatasourceCallQueryMechanism extends DatabaseQueryMechanism {
         // last call - cleanup temp table.
         // ignore exceptions here.
         try {
-            DatasourceCall databseCall = (DatasourceCall)getCalls().elementAt(0);
+            DatasourceCall databseCall = (DatasourceCall)getCalls().get(0);
             executeCall(databseCall);
         } catch (DatabaseException databaseEx) {
             // ignore
@@ -231,7 +231,7 @@ public class DatasourceCallQueryMechanism extends DatabaseQueryMechanism {
 
             // Deletion must occur in reverse order.
             for (int index = getCalls().size() - 1; index >= 0; index--) {
-                DatasourceCall databseCall = (DatasourceCall)getCalls().elementAt(index);
+                DatasourceCall databseCall = (DatasourceCall)getCalls().get(index);
                 Integer rowCount = (Integer)executeCall(databseCall);
                 if ((index == (getCalls().size() - 1)) || (rowCount.intValue() <= 0)) {// Row count returned must be from first table or zero if any are zero.
                     returnedRowCount = rowCount;
@@ -294,7 +294,7 @@ public class DatasourceCallQueryMechanism extends DatabaseQueryMechanism {
         if (hasMultipleCalls()) {
             Integer returnedRowCount = null;
             for (int index = 0; index < getCalls().size(); index++) {
-                DatasourceCall databseCall = (DatasourceCall)getCalls().elementAt(index);
+                DatasourceCall databseCall = (DatasourceCall)getCalls().get(index);
                 Integer rowCount = (Integer)executeCall(databseCall);
                 if ((index == 0) || (rowCount.intValue() <= 0)) {// Row count returned must be from first table or zero if any are zero.
                     returnedRowCount = rowCount;
@@ -915,7 +915,7 @@ public class DatasourceCallQueryMechanism extends DatabaseQueryMechanism {
         // may fail in case global temp table already exists.
         for (int index = 0; index < nTables; index++) {
             try {
-                DatasourceCall databseCall = (DatasourceCall)getCalls().elementAt(index);
+                DatasourceCall databseCall = (DatasourceCall)getCalls().get(index);
                 executeCall(databseCall);
             } catch (DatabaseException databaseEx) {
                 // ignore
@@ -926,7 +926,7 @@ public class DatasourceCallQueryMechanism extends DatabaseQueryMechanism {
         // if that fails save the exception and until cleanup
         for (int index = nTables; index < nTables*2 && ex == null; index++) {
             try {
-                DatasourceCall databseCall = (DatasourceCall)getCalls().elementAt(index);
+                DatasourceCall databseCall = (DatasourceCall)getCalls().get(index);
                 executeCall(databseCall);
             } catch (DatabaseException databaseEx) {
                 ex = databaseEx;
@@ -937,7 +937,7 @@ public class DatasourceCallQueryMechanism extends DatabaseQueryMechanism {
         // if that fails save the exception and until cleanup
         for (int index = nTables*2; index < nTables*3 && ex == null; index++) {
             try {
-                DatasourceCall databseCall = (DatasourceCall)getCalls().elementAt(index);
+                DatasourceCall databseCall = (DatasourceCall)getCalls().get(index);
                 Integer rowCount = (Integer)executeCall(databseCall);
                 if ((index == nTables*2) || (rowCount.intValue() <= 0)) {// Row count returned must be from first table or zero if any are zero.
                     returnedRowCount = rowCount;
@@ -951,7 +951,7 @@ public class DatasourceCallQueryMechanism extends DatabaseQueryMechanism {
         // ignore exceptions here.
         for (int index = nTables*3; index < nTables*4; index++) {
             try {
-                DatasourceCall databseCall = (DatasourceCall)getCalls().elementAt(index);
+                DatasourceCall databseCall = (DatasourceCall)getCalls().get(index);
                 executeCall(databseCall);
                 } catch (DatabaseException databaseEx) {
                     // ignore

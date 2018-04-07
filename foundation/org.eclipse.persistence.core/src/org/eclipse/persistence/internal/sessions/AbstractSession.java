@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 1998, 2017 Oracle and/or its affiliates, IBM Corporation. All rights reserved.
+ * Copyright (c) 1998, 2018 Oracle and/or its affiliates, IBM Corporation. All rights reserved.
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Public License v1.0 and Eclipse Distribution License v. 1.0
  * which accompanies this distribution.
@@ -45,6 +45,7 @@ import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
+import java.util.Map.Entry;
 import java.util.Set;
 import java.util.Vector;
 import java.util.concurrent.TimeUnit;
@@ -622,10 +623,10 @@ public abstract class AbstractSession extends CoreAbstractSession<ClassDescripto
      * Add the query to the session queries.
      */
     protected synchronized void addQuery(DatabaseQuery query, boolean nameMustBeUnique) {
-        Vector queriesByName = (Vector)getQueries().get(query.getName());
+        List<DatabaseQuery> queriesByName = getQueries().get(query.getName());
         if (queriesByName == null) {
             // lazily create Vector in Hashtable.
-            queriesByName = org.eclipse.persistence.internal.helper.NonSynchronizedVector.newInstance();
+            queriesByName = new ArrayList<>();
             getQueries().put(query.getName(), queriesByName);
         }
 
@@ -637,8 +638,8 @@ public abstract class AbstractSession extends CoreAbstractSession<ClassDescripto
             }
         }else{
             // Check that we do not already have a query that matched it
-            for (Iterator enumtr = queriesByName.iterator(); enumtr.hasNext();) {
-                DatabaseQuery existingQuery = (DatabaseQuery)enumtr.next();
+            for (Iterator<DatabaseQuery> enumtr = queriesByName.iterator(); enumtr.hasNext();) {
+                DatabaseQuery existingQuery = enumtr.next();
                 if (Helper.areTypesAssignable(query.getArgumentTypes(), existingQuery.getArgumentTypes())) {
                     throw ValidationException.existingQueryTypeConflict(query, existingQuery);
                 }
@@ -3030,9 +3031,9 @@ public abstract class AbstractSession extends CoreAbstractSession<ClassDescripto
      * @see #getQueries()
      */
     public List<DatabaseQuery> getAllQueries() {
-        Vector allQueries = new Vector();
-        for (Iterator vectors = getQueries().values().iterator(); vectors.hasNext();) {
-            allQueries.addAll((Vector)vectors.next());
+        Vector<DatabaseQuery> allQueries = new Vector<>();
+        for (Iterator<List<DatabaseQuery>> vectors = getQueries().values().iterator(); vectors.hasNext();) {
+            allQueries.addAll(vectors.next());
         }
         return allQueries;
     }
@@ -3089,11 +3090,11 @@ public abstract class AbstractSession extends CoreAbstractSession<ClassDescripto
      * @see #getQuery(String, List)
      */
     public DatabaseQuery getQuery(String name, Vector arguments, boolean shouldSearchParent) {
-        Vector queries = (Vector)getQueries().get(name);
+        List<DatabaseQuery> queries = getQueries().get(name);
         if ((queries != null) && !queries.isEmpty()) {
             // Short circuit the simple, most common case of only one query.
             if (queries.size() == 1) {
-                return (DatabaseQuery)queries.firstElement();
+                return queries.get(0);
             }
 
             // CR#3754; Predrag; mar 19/2002;
@@ -3111,8 +3112,8 @@ public abstract class AbstractSession extends CoreAbstractSession<ClassDescripto
             for (int i = 0; i < argumentTypesSize; i++) {
                 argumentTypes.addElement(arguments.elementAt(i).getClass());
             }
-            for (Enumeration queriesEnum = queries.elements(); queriesEnum.hasMoreElements();) {
-                DatabaseQuery query = (DatabaseQuery)queriesEnum.nextElement();
+            for (Enumeration<DatabaseQuery> queriesEnum = Helper.elements(queries); queriesEnum.hasMoreElements();) {
+                DatabaseQuery query = queriesEnum.nextElement();
                 if (Helper.areTypesAssignable(argumentTypes, query.getArgumentTypes())) {
                     return query;
                 }
@@ -3902,13 +3903,13 @@ public abstract class AbstractSession extends CoreAbstractSession<ClassDescripto
      * Remove the specific query with the given queryName and argumentTypes.
      */
     public void removeQuery(String queryName, Vector argumentTypes) {
-        Vector queries = (Vector)getQueries().get(queryName);
+        List<DatabaseQuery> queries = getQueries().get(queryName);
         if (queries == null) {
             return;
         } else {
             DatabaseQuery query = null;
-            for (Enumeration enumtr = queries.elements(); enumtr.hasMoreElements();) {
-                query = (DatabaseQuery)enumtr.nextElement();
+            for (Enumeration<DatabaseQuery> enumtr = Helper.elements(queries); enumtr.hasMoreElements();) {
+                query = enumtr.nextElement();
                 if (Helper.areTypesAssignable(argumentTypes, query.getArgumentTypes())) {
                     break;
                 }
@@ -5116,21 +5117,21 @@ public abstract class AbstractSession extends CoreAbstractSession<ClassDescripto
      */
     public void copyDescriptorNamedQueries(boolean allowSameQueryNameDiffArgsCopyToSession) {
         for (ClassDescriptor descriptor : getProject().getOrderedDescriptors()) {
-            Map queries  = descriptor.getQueryManager().getQueries();
+            Map<String, List<DatabaseQuery>> queries = descriptor.getQueryManager().getQueries();
             if ((queries != null) && (queries.size() > 0)) {
-                for (Iterator keyValueItr = queries.entrySet().iterator(); keyValueItr.hasNext();){
-                    Map.Entry entry = (Map.Entry) keyValueItr.next();
-                    Vector thisQueries = (Vector)entry.getValue();
-                    if ((thisQueries != null) && (thisQueries.size() > 0)){
-                        for( Iterator thisQueriesItr=thisQueries.iterator();thisQueriesItr.hasNext();){
-                            DatabaseQuery queryToBeAdded = (DatabaseQuery)thisQueriesItr.next();
-                            if (allowSameQueryNameDiffArgsCopyToSession){
+                for (Iterator<Entry<String, List<DatabaseQuery>>> keyValueItr = queries.entrySet().iterator(); keyValueItr.hasNext();) {
+                    Map.Entry<String, List<DatabaseQuery>> entry = keyValueItr.next();
+                    List<DatabaseQuery> thisQueries = entry.getValue();
+                    if ((thisQueries != null) && (thisQueries.size() > 0)) {
+                        for (Iterator<DatabaseQuery> thisQueriesItr = thisQueries.iterator(); thisQueriesItr.hasNext();) {
+                            DatabaseQuery queryToBeAdded = thisQueriesItr.next();
+                            if (allowSameQueryNameDiffArgsCopyToSession) {
                                 addQuery(queryToBeAdded, false);
                             } else {
-                                if (getQuery(queryToBeAdded.getName()) == null){
+                                if (getQuery(queryToBeAdded.getName()) == null) {
                                     addQuery(queryToBeAdded, false);
                                 } else {
-                                    log(SessionLog.WARNING, SessionLog.PROPERTIES, "descriptor_named_query_cannot_be_added", new Object[]{queryToBeAdded,queryToBeAdded.getName(),queryToBeAdded.getArgumentTypes()});
+                                    log(SessionLog.WARNING, SessionLog.PROPERTIES, "descriptor_named_query_cannot_be_added", new Object[] { queryToBeAdded, queryToBeAdded.getName(), queryToBeAdded.getArgumentTypes() });
                                 }
                             }
                         }

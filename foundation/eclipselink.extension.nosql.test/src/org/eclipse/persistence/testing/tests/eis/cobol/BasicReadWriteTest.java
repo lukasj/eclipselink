@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 1998, 2015 Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 1998, 2018 Oracle and/or its affiliates. All rights reserved.
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Public License v1.0 and Eclipse Distribution License v. 1.0
  * which accompanies this distribution.
@@ -12,10 +12,15 @@
  ******************************************************************************/
 package org.eclipse.persistence.testing.tests.eis.cobol;
 
-import java.util.*;
-import org.eclipse.persistence.internal.eis.cobol.*;
-import org.eclipse.persistence.internal.helper.*;
-import org.eclipse.persistence.testing.framework.*;
+import java.util.Enumeration;
+
+import org.eclipse.persistence.internal.eis.cobol.CobolRow;
+import org.eclipse.persistence.internal.eis.cobol.FieldMetaData;
+import org.eclipse.persistence.internal.eis.cobol.RecordMetaData;
+import org.eclipse.persistence.internal.helper.DatabaseField;
+import org.eclipse.persistence.internal.helper.Helper;
+import org.eclipse.persistence.testing.framework.TestErrorException;
+import org.eclipse.persistence.testing.framework.TestException;
 
 public class BasicReadWriteTest extends CobolTest {
     CobolRow resultRow;
@@ -29,19 +34,19 @@ public class BasicReadWriteTest extends CobolTest {
     protected void test() {
         RecordMetaData recordMetaData = CobolTestModel.getConversionRecord();
         row = CobolTestModel.getConversionRow();
-        Enumeration fieldEnum = row.getFields().elements();
+        Enumeration<DatabaseField> fieldEnum = Helper.elements(row.getFields());
         resultRow = new CobolRow();
         //write to array
         while (fieldEnum.hasMoreElements()) {
-            DatabaseField databaseField = (DatabaseField)fieldEnum.nextElement();
+            DatabaseField databaseField = fieldEnum.nextElement();
             FieldMetaData field = recordMetaData.getFieldNamed(databaseField.getName());
             field.writeOnArray(row, recordData);
         }
 
         //write to database row
-        fieldEnum = row.getFields().elements();
+        fieldEnum = Helper.elements(row.getFields());
         while (fieldEnum.hasMoreElements()) {
-            DatabaseField databaseField = (DatabaseField)fieldEnum.nextElement();
+            DatabaseField databaseField = fieldEnum.nextElement();
             FieldMetaData field = recordMetaData.getFieldNamed(databaseField.getName());
             field.writeOnRow(resultRow, recordData);
         }

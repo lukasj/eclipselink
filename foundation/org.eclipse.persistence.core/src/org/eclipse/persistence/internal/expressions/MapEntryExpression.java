@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 1998, 2015 Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 1998, 2018 Oracle and/or its affiliates. All rights reserved.
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Public License v1.0 and Eclipse Distribution License v. 1.0
  * which accompanies this distribution.
@@ -183,7 +183,7 @@ public class MapEntryExpression extends QueryKeyExpression {
      * Return all the fields
      */
     @Override
-    public Vector getFields() {
+    public List<DatabaseField> getFields() {
         Vector result = new Vector();
         InterfaceContainerPolicy icp = getInterfaceContainerPolicy();
         // if this is a map entry get all the fields for both the key and the value

@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 1998, 2015 Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 1998, 2018 Oracle and/or its affiliates. All rights reserved.
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Public License v1.0 and Eclipse Distribution License v. 1.0
  * which accompanies this distribution.
@@ -32,7 +32,7 @@ public class ConversionManagerSystem extends TestSystem {
         // If on Access, Oracle or DB2, remove the byte array mapping
         if (platform.isAccess() || platform.isOracle()) {
             ClassDescriptor objDescriptor = (project.getDescriptors().get(ConversionDataObject.class));
-            objDescriptor.getMappings().removeElement(objDescriptor.getMappingForAttributeName("aPByteArray"));
+            objDescriptor.getMappings().remove(objDescriptor.getMappingForAttributeName("aPByteArray"));
         }
 
         if (platform.isDB2()) {

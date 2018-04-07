@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 1998, 2015 Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 1998, 2018 Oracle and/or its affiliates. All rights reserved.
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Public License v1.0 and Eclipse Distribution License v. 1.0
  * which accompanies this distribution.
@@ -19,7 +19,6 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
-import java.util.Vector;
 
 import org.eclipse.persistence.descriptors.ClassDescriptor;
 import org.eclipse.persistence.exceptions.QueryException;
@@ -30,7 +29,7 @@ import org.eclipse.persistence.internal.expressions.BaseExpression;
 import org.eclipse.persistence.internal.expressions.ForUpdateOfClause;
 import org.eclipse.persistence.internal.expressions.ObjectExpression;
 import org.eclipse.persistence.internal.expressions.QueryKeyExpression;
-import org.eclipse.persistence.internal.helper.NonSynchronizedSubVector;
+import org.eclipse.persistence.internal.helper.DatabaseField;
 import org.eclipse.persistence.internal.sessions.AbstractRecord;
 import org.eclipse.persistence.internal.sessions.AbstractSession;
 import org.eclipse.persistence.mappings.CollectionMapping;
@@ -997,16 +996,16 @@ public class JoinedAttributeManager implements Cloneable, Serializable {
         List<AbstractRecord> childRows = null;
         ObjectBuilder builder = getDescriptor().getObjectBuilder();
         int parentIndex = getParentResultIndex();
-        Vector trimedFields = null;
+        List<DatabaseField> trimedFields = null;
         for (int dataResultsIndex = 0; dataResultsIndex < size; dataResultsIndex++) {
             AbstractRecord row = this.dataResults.get(dataResultsIndex);
             AbstractRecord parentRow = row;
             // Must adjust for the parent index to ensure the correct pk is extracted.
             if (parentIndex > 0) {
                 if (trimedFields == null) { // The fields are always the same, so only build once.
-                    trimedFields = new NonSynchronizedSubVector(row.getFields(), parentIndex, row.size());
+                    trimedFields = row.getFields().subList(parentIndex, row.size());
                 }
-                Vector trimedValues = new NonSynchronizedSubVector(row.getValues(), parentIndex, row.size());
+                List<Object> trimedValues = row.getValues().subList(parentIndex, row.size());
                 parentRow = new DatabaseRecord(trimedFields, trimedValues);
             }
             // Extract the primary key of the source object, to filter only the joined rows for that object.
@@ -1071,9 +1070,9 @@ public class JoinedAttributeManager implements Cloneable, Serializable {
         childRows.add(row);
         int parentIndex = getParentResultIndex();
         // Must adjust for the parent index to ensure the correct pk is extracted.
-        Vector trimedFields = new NonSynchronizedSubVector(row.getFields(), parentIndex, row.size());
+        List<DatabaseField> trimedFields = row.getFields().subList(parentIndex, row.size());
         if (parentIndex > 0) {
-            Vector trimedValues = new NonSynchronizedSubVector(row.getValues(), parentIndex, row.size());
+            List<Object> trimedValues = row.getValues().subList(parentIndex, row.size());
             parentRow = new DatabaseRecord(trimedFields, trimedValues);
         }
         ObjectBuilder builder = getDescriptor().getObjectBuilder();
@@ -1093,7 +1092,7 @@ public class JoinedAttributeManager implements Cloneable, Serializable {
             }
             AbstractRecord nextParentRow = nextRow;
             if (parentIndex > 0) {
-                Vector trimedValues = new NonSynchronizedSubVector(nextParentRow.getValues(), parentIndex, nextParentRow.size());
+                List<Object> trimedValues = nextParentRow.getValues().subList(parentIndex, nextParentRow.size());
                 nextParentRow = new DatabaseRecord(trimedFields, trimedValues);
             }
             // Extract the primary key of the source object, to filter only the joined rows for that object.

@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 1998, 2015 Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 1998, 2018 Oracle and/or its affiliates. All rights reserved.
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Public License v1.0 and Eclipse Distribution License v. 1.0
  * which accompanies this distribution.
@@ -16,9 +16,9 @@ package org.eclipse.persistence.mappings;
 
 import java.util.Collection;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Map;
 import java.util.Set;
-import java.util.Vector;
 
 import org.eclipse.persistence.descriptors.ClassDescriptor;
 import org.eclipse.persistence.descriptors.changetracking.ChangeTracker;
@@ -65,7 +65,7 @@ public abstract class ObjectReferenceMapping extends ForeignReferenceMapping {
     protected boolean isForeignKeyRelationship;
 
     /** Keeps track of which fields are foreign keys on a per field basis (can have mixed foreign key relationships). */
-    protected Vector<DatabaseField> foreignKeyFields;
+    protected List<DatabaseField> foreignKeyFields;
 
     protected ObjectReferenceMapping() {
         super();
@@ -560,7 +560,7 @@ public abstract class ObjectReferenceMapping extends ForeignReferenceMapping {
      * Return all the fields populated by this mapping, these are foreign keys only.
      */
     @Override
-    protected Vector<DatabaseField> collectFields() {
+    protected List<DatabaseField> collectFields() {
         return getForeignKeyFields();
     }
 
@@ -569,7 +569,7 @@ public abstract class ObjectReferenceMapping extends ForeignReferenceMapping {
      * Returns the foreign key names associated with the mapping.
      * These are the fields that will be populated by the 1-1 mapping when writing.
      */
-    public Vector<DatabaseField> getForeignKeyFields() {
+    public List<DatabaseField> getForeignKeyFields() {
         return foreignKeyFields;
     }
 
@@ -578,7 +578,7 @@ public abstract class ObjectReferenceMapping extends ForeignReferenceMapping {
     * Set the foreign key fields associated with the mapping.
     * These are the fields that will be populated by the 1-1 mapping when writing.
     */
-    protected void setForeignKeyFields(Vector<DatabaseField> foreignKeyFields) {
+    protected void setForeignKeyFields(List<DatabaseField> foreignKeyFields) {
         this.foreignKeyFields = foreignKeyFields;
         if (!foreignKeyFields.isEmpty()) {
             setIsForeignKeyRelationship(true);

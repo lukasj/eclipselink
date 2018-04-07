@@ -435,7 +435,7 @@ public class VersionLockingPolicy implements OptimisticLockingPolicy, Serializab
         while (enumtr.hasMoreElements()) {
             DatabaseField lockField;
             lockField = (DatabaseField)enumtr.nextElement();
-            descriptor.getFields().addElement(lockField);
+            descriptor.getFields().add(lockField);
         }
     }
 

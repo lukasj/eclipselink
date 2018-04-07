@@ -12,7 +12,7 @@
  ******************************************************************************/
 package org.eclipse.persistence.oxm.mappings;
 
-import java.util.Vector;
+import java.util.List;
 
 import javax.xml.namespace.QName;
 
@@ -92,7 +92,7 @@ public class XMLVariableXPathObjectMapping extends XMLCompositeObjectMapping  im
     }
 
       @Override
-        protected Vector collectFields() {
+        protected List<DatabaseField> collectFields() {
             if(field != null){
                 return super.collectFields();
             }
@@ -103,7 +103,7 @@ public class XMLVariableXPathObjectMapping extends XMLCompositeObjectMapping  im
         }
 
     @Override
-    public Vector getFields() {
+    public List<DatabaseField> getFields() {
         return collectFields();
     }
 

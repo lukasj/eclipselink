@@ -146,7 +146,7 @@ public class ForeignReferenceQueryKey extends QueryKey {
     public DatabaseTable getSourceTable() {
         // TODO: Should extract the target table from joinCriteria (if it's not null),
         // like ManyToManyQueryKey.getRelationTable does.
-        return this.descriptor.getTables().firstElement();
+        return this.descriptor.getTables().get(0);
     }
 
     /**
@@ -157,7 +157,7 @@ public class ForeignReferenceQueryKey extends QueryKey {
         // TODO: This won't work for direct collection.
         // Should extract the target table from joinCriteria (if it's not null),
         // like ManyToManyQueryKey.getRelationTable does.
-        return desc.getTables().firstElement();
+        return desc.getTables().get(0);
     }
 
     /**

@@ -12,16 +12,16 @@
  ******************************************************************************/
 package org.eclipse.persistence.queries;
 
+import java.util.ArrayList;
 import java.util.List;
-import java.util.Vector;
 
+import org.eclipse.persistence.exceptions.DatabaseException;
+import org.eclipse.persistence.exceptions.QueryException;
+import org.eclipse.persistence.internal.databaseaccess.DatabaseCall;
 import org.eclipse.persistence.internal.databaseaccess.DatabasePlatform;
-import org.eclipse.persistence.internal.helper.NonSynchronizedVector;
 import org.eclipse.persistence.internal.sessions.AbstractRecord;
 import org.eclipse.persistence.internal.sessions.AbstractSession;
 import org.eclipse.persistence.sessions.DatabaseRecord;
-import org.eclipse.persistence.exceptions.*;
-import org.eclipse.persistence.internal.databaseaccess.DatabaseCall;
 
 /**
  * <p><b>Purpose</b>:
@@ -452,9 +452,9 @@ public abstract class ReadQuery extends DatabaseQuery {
      * This will only be set if the query caches results.
      */
     protected void setQueryResults(Object resultFromQuery, AbstractRecord row, AbstractSession session) {
-        Vector arguments = null;
+        List<Object> arguments = null;
         if (row == null) {
-            arguments =  new NonSynchronizedVector(1);
+            arguments =  new ArrayList<>(1);
         } else {
             arguments =  row.getValues();
         }

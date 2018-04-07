@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 1998, 2015 Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 1998, 2018 Oracle and/or its affiliates. All rights reserved.
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Public License v1.0 and Eclipse Distribution License v. 1.0
  * which accompanies this distribution.
@@ -37,7 +37,6 @@ import java.util.List;
 import java.util.ListIterator;
 import java.util.Map;
 import java.util.Set;
-import java.util.Vector;
 
 // EclipseLink imports
 import org.eclipse.persistence.exceptions.QueryException;
@@ -1072,10 +1071,10 @@ public class PLSQLStoredProcedureCall extends StoredProcedureCall {
         int len = copyOfTranslationRow.size();
         List<DatabaseField> copyOfTranslationFields = copyOfTranslationRow.getFields();
         translationRow.clear();
-        Vector<DatabaseField> translationRowFields = translationRow.getFields();
-        translationRowFields.setSize(len);
-        Vector translationRowValues = translationRow.getValues();
-        translationRowValues.setSize(len);
+        List<DatabaseField> translationRowFields = translationRow.getFields();
+//        translationRowFields.setSize(len);
+        List<Object> translationRowValues = translationRow.getValues();
+//        translationRowValues.setSize(len);
         for (PLSQLargument arg : arguments) {
             if (arg.direction == IN || arg.direction == INOUT) {
                 arg.databaseType.translate(arg, translationRow,
@@ -1101,8 +1100,8 @@ public class PLSQLStoredProcedureCall extends StoredProcedureCall {
             return outputRow;
         }
         // re-order elements in outputRow to conform to original indices
-        Vector outputRowFields = outputRow.getFields();
-        Vector outputRowValues = outputRow.getValues();
+        List<DatabaseField> outputRowFields = outputRow.getFields();
+        List<Object> outputRowValues = outputRow.getValues();
         DatabaseRecord newOutputRow = new DatabaseRecord();
         List<PLSQLargument> outArguments = getArguments(arguments, OUT);
         outArguments.addAll(getArguments(arguments, INOUT));

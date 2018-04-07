@@ -14,16 +14,19 @@
  ******************************************************************************/
 package org.eclipse.persistence.platform.database;
 
-import java.io.*;
-import java.util.*;
+import java.io.IOException;
+import java.io.Writer;
+import java.util.ArrayList;
+import java.util.Hashtable;
+import java.util.List;
 
+import org.eclipse.persistence.expressions.ExpressionOperator;
 import org.eclipse.persistence.internal.databaseaccess.DatabaseCall;
 import org.eclipse.persistence.internal.databaseaccess.FieldTypeDefinition;
 import org.eclipse.persistence.internal.expressions.ExpressionSQLPrinter;
 import org.eclipse.persistence.internal.expressions.SQLSelectStatement;
 import org.eclipse.persistence.internal.helper.ClassConstants;
 import org.eclipse.persistence.queries.ValueReadQuery;
-import org.eclipse.persistence.expressions.ExpressionOperator;
 
 public class FirebirdPlatform extends DatabasePlatform {
 
@@ -168,10 +171,10 @@ public class FirebirdPlatform extends DatabasePlatform {
         ExpressionOperator exOperator = new ExpressionOperator();
         exOperator.setType(ExpressionOperator.FunctionOperator);
         exOperator.setSelector(ExpressionOperator.SubstringSingleArg);
-        Vector v = org.eclipse.persistence.internal.helper.NonSynchronizedVector.newInstance(5);
-        v.addElement("SUBSTRING(");
-        v.addElement(" FROM ");
-        v.addElement(")");
+        List<String> v = new ArrayList<>(5);
+        v.add("SUBSTRING(");
+        v.add(" FROM ");
+        v.add(")");
         exOperator.printsAs(v);
         exOperator.bePrefix();
         int[] indices = {0, 1};
@@ -189,11 +192,11 @@ public class FirebirdPlatform extends DatabasePlatform {
         ExpressionOperator exOperator = new ExpressionOperator();
         exOperator.setType(ExpressionOperator.FunctionOperator);
         exOperator.setSelector(ExpressionOperator.Substring);
-        Vector v = org.eclipse.persistence.internal.helper.NonSynchronizedVector.newInstance(5);
-        v.addElement("SUBSTRING(");
-        v.addElement(" FROM ");
-        v.addElement(" FOR ");
-        v.addElement(")");
+        List<String> v = new ArrayList<>(5);
+        v.add("SUBSTRING(");
+        v.add(" FROM ");
+        v.add(" FOR ");
+        v.add(")");
         exOperator.printsAs(v);
         exOperator.bePrefix();
         int[] indices = {0, 1, 2};
@@ -211,12 +214,12 @@ public class FirebirdPlatform extends DatabasePlatform {
         ExpressionOperator exOperator = new ExpressionOperator();
         exOperator.setType(ExpressionOperator.FunctionOperator);
         exOperator.setSelector(ExpressionOperator.Greatest);
-        Vector v = org.eclipse.persistence.internal.helper.NonSynchronizedVector.newInstance(5);
-        v.addElement("(CASE WHEN ");
-        v.addElement(" >= ");
-        v.addElement(" THEN ");
-        v.addElement(" ELSE ");
-        v.addElement(" END)");
+        List<String> v = new ArrayList<>(5);
+        v.add("(CASE WHEN ");
+        v.add(" >= ");
+        v.add(" THEN ");
+        v.add(" ELSE ");
+        v.add(" END)");
         exOperator.printsAs(v);
         exOperator.bePrefix();
         int[] indices = {0, 1, 0, 1};
@@ -234,9 +237,9 @@ public class FirebirdPlatform extends DatabasePlatform {
         ExpressionOperator exOperator = new ExpressionOperator();
         exOperator.setType(ExpressionOperator.FunctionOperator);
         exOperator.setSelector(ExpressionOperator.LeftTrim);
-        Vector v = org.eclipse.persistence.internal.helper.NonSynchronizedVector.newInstance(5);
-        v.addElement("TRIM(LEADING FROM ");
-        v.addElement(")");
+        List<String> v = new ArrayList<>(5);
+        v.add("TRIM(LEADING FROM ");
+        v.add(")");
         exOperator.printsAs(v);
         exOperator.bePrefix();
         int[] indices = {0};
@@ -254,9 +257,9 @@ public class FirebirdPlatform extends DatabasePlatform {
         ExpressionOperator exOperator = new ExpressionOperator();
         exOperator.setType(ExpressionOperator.FunctionOperator);
         exOperator.setSelector(ExpressionOperator.RightTrim);
-        Vector v = org.eclipse.persistence.internal.helper.NonSynchronizedVector.newInstance(5);
-        v.addElement("TRIM(TRAILING FROM ");
-        v.addElement(")");
+        List<String> v = new ArrayList<>(5);
+        v.add("TRIM(TRAILING FROM ");
+        v.add(")");
         exOperator.printsAs(v);
         exOperator.bePrefix();
         int[] indices = {0};
@@ -274,10 +277,10 @@ public class FirebirdPlatform extends DatabasePlatform {
         ExpressionOperator exOperator = new ExpressionOperator();
         exOperator.setType(ExpressionOperator.FunctionOperator);
         exOperator.setSelector(ExpressionOperator.RightTrim2);
-        Vector v = org.eclipse.persistence.internal.helper.NonSynchronizedVector.newInstance(5);
-        v.addElement("TRIM(TRAILING ");
-        v.addElement(" FROM ");
-        v.addElement(")");
+        List<String> v = new ArrayList<>(5);
+        v.add("TRIM(TRAILING ");
+        v.add(" FROM ");
+        v.add(")");
         exOperator.printsAs(v);
         exOperator.bePrefix();
         int[] indices = {1, 0};
@@ -294,9 +297,9 @@ public class FirebirdPlatform extends DatabasePlatform {
         ExpressionOperator exOperator = new ExpressionOperator();
         exOperator.setType(ExpressionOperator.FunctionOperator);
         exOperator.setSelector(ExpressionOperator.ToNumber);
-        Vector v = org.eclipse.persistence.internal.helper.NonSynchronizedVector.newInstance(2);
-        v.addElement("CAST(");
-        v.addElement(" AS NUMERIC)");
+        List<String> v = new ArrayList<>(2);
+        v.add("CAST(");
+        v.add(" AS NUMERIC)");
         exOperator.printsAs(v);
         exOperator.bePrefix();
         exOperator.setNodeClass(ClassConstants.FunctionExpression_Class);
@@ -311,10 +314,10 @@ public class FirebirdPlatform extends DatabasePlatform {
         ExpressionOperator exOperator = new ExpressionOperator();
         exOperator.setType(ExpressionOperator.FunctionOperator);
         exOperator.setSelector(ExpressionOperator.MonthsBetween);
-        Vector v = org.eclipse.persistence.internal.helper.NonSynchronizedVector.newInstance(2);
-        v.addElement("(MONTH(");
-        v.addElement(") - MONTH(");
-        v.addElement("))");
+        List<String> v = new ArrayList<>(2);
+        v.add("(MONTH(");
+        v.add(") - MONTH(");
+        v.add("))");
         exOperator.printsAs(v);
         exOperator.bePrefix();
         exOperator.setNodeClass(ClassConstants.FunctionExpression_Class);

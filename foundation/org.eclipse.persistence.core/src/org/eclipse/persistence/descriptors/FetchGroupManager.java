@@ -16,9 +16,9 @@ package org.eclipse.persistence.descriptors;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
+import java.util.List;
 import java.util.Map;
 import java.util.Set;
-import java.util.Vector;
 import java.util.concurrent.ConcurrentHashMap;
 
 import org.eclipse.persistence.descriptors.changetracking.ObjectChangePolicy;
@@ -537,12 +537,12 @@ public class FetchGroupManager implements Cloneable, java.io.Serializable {
      */
     // TODO-244124-dclarke: Needs to be updated to reflect new FetchGroup behaviour
     private void refreshFetchGroupIntoClones(Object cachedObject, Object workingClone, Object backupClone, FetchGroup fetchGroupInObject, FetchGroup fetchGroupInClone, UnitOfWorkImpl uow) {
-        Vector mappings = descriptor.getMappings();
+        List<DatabaseMapping> mappings = descriptor.getMappings();
         boolean isObjectPartial = (fetchGroupInObject != null);
         Set fetchedAttributes = isObjectPartial ? fetchGroupInObject.getAttributeNames() : null;
         int size = mappings.size();
         for (int index = 0; index < size; index++) {
-            DatabaseMapping mapping = (DatabaseMapping)mappings.get(index);
+            DatabaseMapping mapping = mappings.get(index);
             if ((!isObjectPartial) || ((fetchedAttributes != null) && fetchedAttributes.contains(mapping.getAttributeName()))) {
                 // Only refresh the fetched attributes into clones.
                 mapping.buildClone(cachedObject, null, workingClone, null, uow);

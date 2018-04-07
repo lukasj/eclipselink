@@ -13,10 +13,12 @@
 package org.eclipse.persistence.internal.sessions;
 
 import java.io.StringWriter;
-import java.util.*;
-import org.eclipse.persistence.internal.helper.*;
-import org.eclipse.persistence.sessions.DatabaseRecord;
+import java.util.ArrayList;
+import java.util.List;
+
 import org.eclipse.persistence.internal.helper.DatabaseField;
+import org.eclipse.persistence.internal.helper.Helper;
+import org.eclipse.persistence.sessions.DatabaseRecord;
 
 /**
  * PERF: Optimized record implementation using arrays instead of Vector.
@@ -30,7 +32,7 @@ public class ArrayRecord extends DatabaseRecord {
         super();
     }
 
-    public ArrayRecord(Vector fields, DatabaseField[] fieldsArray, Object[] valuesArray) {
+    public ArrayRecord(List<DatabaseField> fields, DatabaseField[] fieldsArray, Object[] valuesArray) {
         super(fields, null, fieldsArray.length);
         this.fieldsArray = fieldsArray;
         this.valuesArray = valuesArray;
@@ -42,7 +44,7 @@ public class ArrayRecord extends DatabaseRecord {
      */
     protected void checkValues() {
         if (this.values == null) {
-            this.values = new NonSynchronizedVector(this.valuesArray.length);
+            this.values = new ArrayList(this.valuesArray.length);
             for (Object value : this.valuesArray) {
                 this.values.add(value);
             }
@@ -220,7 +222,7 @@ public class ArrayRecord extends DatabaseRecord {
      * INTERNAL:
      */
     @Override
-    public Vector getFields() {
+    public List<DatabaseField> getFields() {
         checkValues();
         return super.getFields();
     }
@@ -229,7 +231,7 @@ public class ArrayRecord extends DatabaseRecord {
      * INTERNAL:
      */
     @Override
-    public Vector getValues() {
+    public List<Object> getValues() {
         checkValues();
         return super.getValues();
     }
@@ -304,7 +306,7 @@ public class ArrayRecord extends DatabaseRecord {
     }
 
     @Override
-    protected void setFields(Vector fields) {
+    protected void setFields(List<DatabaseField> fields) {
         checkValues();
         this.fieldsArray = null;
         this.valuesArray = null;
@@ -312,7 +314,7 @@ public class ArrayRecord extends DatabaseRecord {
     }
 
     @Override
-    protected void setValues(Vector values) {
+    protected void setValues(List<Object> values) {
         checkValues();
         this.fieldsArray = null;
         this.valuesArray = null;

@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 1998, 2016 Oracle and/or its affiliates, IBM Corporation. All rights reserved.
+ * Copyright (c) 1998, 2018 Oracle and/or its affiliates, IBM Corporation. All rights reserved.
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Public License v1.0 and Eclipse Distribution License v. 1.0
  * which accompanies this distribution.
@@ -48,6 +48,7 @@ import java.util.Hashtable;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
+import java.util.NoSuchElementException;
 import java.util.Queue;
 import java.util.StringTokenizer;
 import java.util.TimeZone;
@@ -769,6 +770,24 @@ public class Helper extends CoreHelper implements Serializable {
         for (Enumeration stream = second.elements(); stream.hasMoreElements();) {
             concatenation.addElement(stream.nextElement());
         }
+
+        return concatenation;
+
+    }
+
+    public static List concatenateLists(List first, List second) {
+        List concatenation;
+
+        concatenation = new ArrayList<>();
+
+        for (Object o : first) {
+            concatenation.add(o);
+        }
+
+        for (Object o : second) {
+            concatenation.add(o);
+        }
+
 
         return concatenation;
 
@@ -2458,5 +2477,34 @@ public class Helper extends CoreHelper implements Serializable {
 
     public static long timeWithRoundMiliseconds() {
         return new Date().getTime() / 1000 * 1000;
+    }
+
+    public static <T> List<T> cloneList(List<T> list) {
+        List<T> clonedList = new ArrayList<>(list);
+        return clonedList;
+    }
+
+    public static <T> Enumeration<T> elements(Vector<T> vector) {
+        return vector.elements();
+    }
+
+    public static <T> Enumeration<T> elements(List<T> list) {
+        final int listSize = list.size();
+        return new Enumeration() {
+            int count = 0;
+
+            @Override
+            public boolean hasMoreElements() {
+                return count < listSize;
+            }
+
+            @Override
+            public Object nextElement() {
+                if (count < listSize) {
+                    return list.get(count++);
+                }
+                throw new NoSuchElementException("List Enumeration");
+            }
+        };
     }
 }

@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 1998, 2015 Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 1998, 2018 Oracle and/or its affiliates. All rights reserved.
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Public License v1.0 and Eclipse Distribution License v. 1.0
  * which accompanies this distribution.
@@ -12,9 +12,11 @@
  ******************************************************************************/
 package org.eclipse.persistence.testing.models.readonly;
 
-import java.util.*;
-import org.eclipse.persistence.mappings.*;
+import java.util.Vector;
+
 import org.eclipse.persistence.descriptors.RelationalDescriptor;
+import org.eclipse.persistence.mappings.ManyToManyMapping;
+import org.eclipse.persistence.mappings.OneToOneMapping;
 import org.eclipse.persistence.sessions.DatabaseLogin;
 
 /**
@@ -72,7 +74,7 @@ public class ReadOnlyProject extends org.eclipse.persistence.sessions.Project {
 
         // SECTION: DESCRIPTOR
         descriptor.setJavaClass(org.eclipse.persistence.testing.models.readonly.Actor.class);
-        Vector vector = new Vector();
+        Vector<String> vector = new Vector<>();
         vector.addElement("RO_ACTOR");
         descriptor.setTableNames(vector);
         descriptor.addPrimaryKeyFieldName("RO_ACTOR.ACT_ID");
@@ -158,7 +160,7 @@ public class ReadOnlyProject extends org.eclipse.persistence.sessions.Project {
 
         // SECTION: DESCRIPTOR
         descriptor.setJavaClass(org.eclipse.persistence.testing.models.readonly.Address.class);
-        Vector vector = new Vector();
+        Vector<String> vector = new Vector<>();
         vector.addElement("RO_ADDR");
         descriptor.setTableNames(vector);
         descriptor.addPrimaryKeyFieldName("RO_ADDR.ADD_ID");
@@ -242,7 +244,7 @@ public class ReadOnlyProject extends org.eclipse.persistence.sessions.Project {
 
         // SECTION: DESCRIPTOR
         descriptor.setJavaClass(org.eclipse.persistence.testing.models.readonly.Country.class);
-        Vector vector = new Vector();
+        Vector<String> vector = new Vector<>();
         vector.addElement("COUNTRY");
         descriptor.setTableNames(vector);
         descriptor.addPrimaryKeyFieldName("COUNTRY.COUNTRY_ID");
@@ -319,7 +321,7 @@ public class ReadOnlyProject extends org.eclipse.persistence.sessions.Project {
 
         // SECTION: DESCRIPTOR
         descriptor.setJavaClass(org.eclipse.persistence.testing.models.readonly.Movie.class);
-        Vector vector = new Vector();
+        Vector<String> vector = new Vector<>();
         vector.addElement("RO_MOVIE");
         descriptor.setTableNames(vector);
         descriptor.addPrimaryKeyFieldName("RO_MOVIE.MOV_ID");
@@ -393,7 +395,7 @@ public class ReadOnlyProject extends org.eclipse.persistence.sessions.Project {
 
         // SECTION: DESCRIPTOR
         descriptor.setJavaClass(org.eclipse.persistence.testing.models.readonly.Promoter.class);
-        Vector vector = new Vector();
+        Vector<String> vector = new Vector<>();
         vector.addElement("RO_PROMO");
         descriptor.setTableNames(vector);
         descriptor.addPrimaryKeyFieldName("RO_PROMO.PROMO_ID");
@@ -471,7 +473,7 @@ public class ReadOnlyProject extends org.eclipse.persistence.sessions.Project {
 
         // SECTION: DESCRIPTOR
         descriptor.setJavaClass(org.eclipse.persistence.testing.models.readonly.Studio.class);
-        Vector vector = new Vector();
+        Vector<String> vector = new Vector<>();
         vector.addElement("RO_MOVIE");
         descriptor.setTableNames(vector);
 

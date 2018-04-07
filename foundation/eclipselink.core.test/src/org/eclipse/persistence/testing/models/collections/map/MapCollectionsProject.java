@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 1998, 2015 Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 1998, 2018 Oracle and/or its affiliates. All rights reserved.
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Public License v1.0 and Eclipse Distribution License v. 1.0
  * which accompanies this distribution.
@@ -12,7 +12,7 @@
  ******************************************************************************/
 package org.eclipse.persistence.testing.models.collections.map;
 
-import java.util.*;
+import java.util.Vector;
 
 import org.eclipse.persistence.descriptors.RelationalDescriptor;
 import org.eclipse.persistence.indirection.IndirectMap;
@@ -25,12 +25,6 @@ import org.eclipse.persistence.mappings.ManyToManyMapping;
 import org.eclipse.persistence.mappings.OneToManyMapping;
 import org.eclipse.persistence.mappings.OneToOneMapping;
 import org.eclipse.persistence.mappings.UnidirectionalOneToManyMapping;
-import org.eclipse.persistence.testing.models.collections.map.AggregateEntityMapHolder;
-import org.eclipse.persistence.testing.models.collections.map.AggregateMapKey;
-import org.eclipse.persistence.testing.models.collections.map.EntityEntityMapHolder;
-import org.eclipse.persistence.testing.models.collections.map.EntityMapKey;
-import org.eclipse.persistence.testing.models.collections.map.EntityMapValue;
-import org.eclipse.persistence.testing.models.collections.map.DirectEntityMapHolder;
 
 /**
  * TopLink generated Project class.
@@ -99,7 +93,7 @@ public class MapCollectionsProject extends org.eclipse.persistence.sessions.Proj
 
         // SECTION: DESCRIPTOR
         descriptor.setJavaClass(AEOTMMapValue.class);
-        Vector vector = new Vector();
+        Vector<String> vector = new Vector<>();
         vector.addElement("AE_OM_ENT_MAP_VALUE");
         descriptor.setTableNames(vector);
         descriptor.addPrimaryKeyFieldName("AE_OM_ENT_MAP_VALUE.ID");
@@ -135,7 +129,7 @@ public class MapCollectionsProject extends org.eclipse.persistence.sessions.Proj
 
         // SECTION: DESCRIPTOR
         descriptor.setJavaClass(AggregateAggregateMapHolder.class);
-        Vector vector = new Vector();
+        Vector<String> vector = new Vector<>();
         vector.addElement("AGG_AGG_MAP_HOLDER");
         descriptor.setTableNames(vector);
         descriptor.addPrimaryKeyFieldName("AGG_AGG_MAP_HOLDER.ID");
@@ -186,7 +180,7 @@ public class MapCollectionsProject extends org.eclipse.persistence.sessions.Proj
 
         // SECTION: DESCRIPTOR
         descriptor.setJavaClass(AggregateDirectMapHolder.class);
-        Vector vector = new Vector();
+        Vector<String> vector = new Vector<>();
         vector.addElement("AGG_DIR_MAP_HOLDER");
         descriptor.setTableNames(vector);
         descriptor.addPrimaryKeyFieldName("AGG_DIR_MAP_HOLDER.ID");
@@ -237,7 +231,7 @@ public class MapCollectionsProject extends org.eclipse.persistence.sessions.Proj
 
         // SECTION: DESCRIPTOR
         descriptor.setJavaClass(AggregateEntityMapHolder.class);
-        Vector vector = new Vector();
+        Vector<String> vector = new Vector<>();
         vector.addElement("AGG_ENT_MAP_HOLDER");
         descriptor.setTableNames(vector);
         descriptor.addPrimaryKeyFieldName("AGG_ENT_MAP_HOLDER.ID");
@@ -289,7 +283,7 @@ public class MapCollectionsProject extends org.eclipse.persistence.sessions.Proj
 
         // SECTION: DESCRIPTOR
         descriptor.setJavaClass(AggregateEntity1MMapHolder.class);
-        Vector vector = new Vector();
+        Vector<String> vector = new Vector<>();
         vector.addElement("AGG_ENT_1M_MAP_HOLDER");
         descriptor.setTableNames(vector);
         descriptor.addPrimaryKeyFieldName("AGG_ENT_1M_MAP_HOLDER.ID");
@@ -338,7 +332,7 @@ public class MapCollectionsProject extends org.eclipse.persistence.sessions.Proj
 
         // SECTION: DESCRIPTOR
         descriptor.setJavaClass(AggregateEntityU1MMapHolder.class);
-        Vector vector = new Vector();
+        Vector<String> vector = new Vector<>();
         vector.addElement("AGG_ENT_U1M_MAP_HOLDER");
         descriptor.setTableNames(vector);
         descriptor.addPrimaryKeyFieldName("AGG_ENT_U1M_MAP_HOLDER.ID");
@@ -424,7 +418,7 @@ public class MapCollectionsProject extends org.eclipse.persistence.sessions.Proj
 
         // SECTION: DESCRIPTOR
         descriptor.setJavaClass(DEOTMMapValue.class);
-        Vector vector = new Vector();
+        Vector<String> vector = new Vector<>();
         vector.addElement("DE_OM_ENT_MAP_VALUE");
         descriptor.setTableNames(vector);
         descriptor.addPrimaryKeyFieldName("DE_OM_ENT_MAP_VALUE.ID");
@@ -460,7 +454,7 @@ public class MapCollectionsProject extends org.eclipse.persistence.sessions.Proj
 
         // SECTION: DESCRIPTOR
         descriptor.setJavaClass(DirectAggregateMapHolder.class);
-        Vector vector = new Vector();
+        Vector<String> vector = new Vector<>();
         vector.addElement("DIR_AGG_MAP_HOLDER");
         descriptor.setTableNames(vector);
         descriptor.addPrimaryKeyFieldName("DIR_AGG_MAP_HOLDER.ID");
@@ -511,7 +505,7 @@ public class MapCollectionsProject extends org.eclipse.persistence.sessions.Proj
 
         // SECTION: DESCRIPTOR
         descriptor.setJavaClass(DirectDirectMapHolder.class);
-        Vector vector = new Vector();
+        Vector<String> vector = new Vector<>();
         vector.addElement("DIR_DIR_MAP_HOLDER");
         descriptor.setTableNames(vector);
         descriptor.addPrimaryKeyFieldName("DIR_DIR_MAP_HOLDER.ID");
@@ -560,7 +554,7 @@ public class MapCollectionsProject extends org.eclipse.persistence.sessions.Proj
 
         // SECTION: DESCRIPTOR
         descriptor.setJavaClass(DirectEntityMapHolder.class);
-        Vector vector = new Vector();
+        Vector<String> vector = new Vector<>();
         vector.addElement("DIR_ENT_MAP_HOLDER");
         descriptor.setTableNames(vector);
         descriptor.addPrimaryKeyFieldName("DIR_ENT_MAP_HOLDER.ID");
@@ -611,7 +605,7 @@ public class MapCollectionsProject extends org.eclipse.persistence.sessions.Proj
 
         // SECTION: DESCRIPTOR
         descriptor.setJavaClass(DirectEntity1MMapHolder.class);
-        Vector vector = new Vector();
+        Vector<String> vector = new Vector<>();
         vector.addElement("DIR_ENT_1M_MAP_HOLDER");
         descriptor.setTableNames(vector);
         descriptor.addPrimaryKeyFieldName("DIR_ENT_1M_MAP_HOLDER.ID");
@@ -660,7 +654,7 @@ public class MapCollectionsProject extends org.eclipse.persistence.sessions.Proj
 
         // SECTION: DESCRIPTOR
         descriptor.setJavaClass(DirectEntityU1MMapHolder.class);
-        Vector vector = new Vector();
+        Vector<String> vector = new Vector<>();
         vector.addElement("DIR_ENT_U1M_MAP_HOLDER");
         descriptor.setTableNames(vector);
         descriptor.addPrimaryKeyFieldName("DIR_ENT_U1M_MAP_HOLDER.ID");
@@ -709,7 +703,7 @@ public class MapCollectionsProject extends org.eclipse.persistence.sessions.Proj
 
         // SECTION: DESCRIPTOR
         descriptor.setJavaClass(EEOTMMapValue.class);
-        Vector vector = new Vector();
+        Vector<String> vector = new Vector<>();
         vector.addElement("EE_OM_ENT_MAP_VALUE");
         descriptor.setTableNames(vector);
         descriptor.addPrimaryKeyFieldName("EE_OM_ENT_MAP_VALUE.ID");
@@ -745,7 +739,7 @@ public class MapCollectionsProject extends org.eclipse.persistence.sessions.Proj
 
         // SECTION: DESCRIPTOR
         descriptor.setJavaClass(EntityAggregateMapHolder.class);
-        Vector vector = new Vector();
+        Vector<String> vector = new Vector<>();
         vector.addElement("ENT_AGG_MAP_HOLDER");
         descriptor.setTableNames(vector);
         descriptor.addPrimaryKeyFieldName("ENT_AGG_MAP_HOLDER.ID");
@@ -797,7 +791,7 @@ public class MapCollectionsProject extends org.eclipse.persistence.sessions.Proj
 
         // SECTION: DESCRIPTOR
         descriptor.setJavaClass(EntityDirectMapHolder.class);
-        Vector vector = new Vector();
+        Vector<String> vector = new Vector<>();
         vector.addElement("ENT_DIR_MAP_HOLDER");
         descriptor.setTableNames(vector);
         descriptor.addPrimaryKeyFieldName("ENT_DIR_MAP_HOLDER.ID");
@@ -849,7 +843,7 @@ public class MapCollectionsProject extends org.eclipse.persistence.sessions.Proj
 
         // SECTION: DESCRIPTOR
         descriptor.setJavaClass(EntityEntityMapHolder.class);
-        Vector vector = new Vector();
+        Vector<String> vector = new Vector<>();
         vector.addElement("ENT_ENT_MAP_HOLDER");
         descriptor.setTableNames(vector);
         descriptor.addPrimaryKeyFieldName("ENT_ENT_MAP_HOLDER.ID");
@@ -902,7 +896,7 @@ public class MapCollectionsProject extends org.eclipse.persistence.sessions.Proj
 
         // SECTION: DESCRIPTOR
         descriptor.setJavaClass(EntityEntity1MMapHolder.class);
-        Vector vector = new Vector();
+        Vector<String> vector = new Vector<>();
         vector.addElement("ENT_ENT_1M_MAP_HOLDER");
         descriptor.setTableNames(vector);
         descriptor.addPrimaryKeyFieldName("ENT_ENT_1M_MAP_HOLDER.ID");
@@ -953,7 +947,7 @@ public class MapCollectionsProject extends org.eclipse.persistence.sessions.Proj
 
         // SECTION: DESCRIPTOR
         descriptor.setJavaClass(EntityEntityU1MMapHolder.class);
-        Vector vector = new Vector();
+        Vector<String> vector = new Vector<>();
         vector.addElement("ENT_ENT_U1M_MAP_HOLDER");
         descriptor.setTableNames(vector);
         descriptor.addPrimaryKeyFieldName("ENT_ENT_U1M_MAP_HOLDER.ID");
@@ -1001,7 +995,7 @@ public class MapCollectionsProject extends org.eclipse.persistence.sessions.Proj
     protected void buildEntityMapKeyDescriptor() {
         RelationalDescriptor descriptor = new RelationalDescriptor();
         descriptor.setJavaClass(EntityMapKey.class);
-        Vector vector = new Vector();
+        Vector<String> vector = new Vector<>();
         vector.addElement("ENT_MAP_KEY");
         descriptor.setTableNames(vector);
         descriptor.addPrimaryKeyFieldName("ENT_MAP_KEY.ID");
@@ -1039,7 +1033,7 @@ public class MapCollectionsProject extends org.eclipse.persistence.sessions.Proj
 
         // SECTION: DESCRIPTOR
         descriptor.setJavaClass(EntityMapValue.class);
-        Vector vector = new Vector();
+        Vector<String> vector = new Vector<>();
         vector.addElement("ENT_MAP_VALUE");
         descriptor.setTableNames(vector);
         descriptor.addPrimaryKeyFieldName("ENT_MAP_VALUE.ID");

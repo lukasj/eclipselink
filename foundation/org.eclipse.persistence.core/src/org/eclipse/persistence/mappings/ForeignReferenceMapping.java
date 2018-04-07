@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 1998, 2016 Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 1998, 2018 Oracle and/or its affiliates. All rights reserved.
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Public License v1.0 and Eclipse Distribution License v. 1.0
  * which accompanies this distribution.
@@ -55,8 +55,6 @@ import org.eclipse.persistence.internal.expressions.ObjectExpression;
 import org.eclipse.persistence.internal.helper.ClassConstants;
 import org.eclipse.persistence.internal.helper.DatabaseField;
 import org.eclipse.persistence.internal.helper.Helper;
-import org.eclipse.persistence.internal.helper.NonSynchronizedSubVector;
-import org.eclipse.persistence.internal.helper.NonSynchronizedVector;
 import org.eclipse.persistence.internal.identitymaps.CacheId;
 import org.eclipse.persistence.internal.identitymaps.CacheKey;
 import org.eclipse.persistence.internal.indirection.BasicIndirectionPolicy;
@@ -1039,7 +1037,7 @@ public abstract class ForeignReferenceMapping extends DatabaseMapping {
      * By default, return an empty NonSynchronizedVector
      */
     public Collection getFieldsForTranslationInAggregate() {
-        return new NonSynchronizedVector(0);
+        return new ArrayList<>(0);
     }
 
     /**
@@ -2396,9 +2394,10 @@ public abstract class ForeignReferenceMapping extends DatabaseMapping {
             }
             fieldStartIndex = ((Integer)map.get(cls)).intValue();
         }
-        Vector trimedFields = new NonSynchronizedSubVector(row.getFields(), fieldStartIndex, row.size());
-        Vector trimedValues = new NonSynchronizedSubVector(row.getValues(), fieldStartIndex, row.size());
-        return new DatabaseRecord(trimedFields, trimedValues);
+        
+        List<DatabaseField> trimedFields = row.getFields().subList(fieldStartIndex, row.size());
+        List<Object> trimedValues = row.getValues().subList(fieldStartIndex, row.size());
+        return new DatabaseRecord(trimedFields, new Vector(trimedValues));
     }
 
     /**

@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 1998, 2015 Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 1998, 2018 Oracle and/or its affiliates. All rights reserved.
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Public License v1.0 and Eclipse Distribution License v. 1.0
  * which accompanies this distribution.
@@ -12,14 +12,35 @@
  ******************************************************************************/
 package org.eclipse.persistence.testing.models.insurance.objectrelational;
 
-import java.util.*;
+import java.util.Vector;
 
-import org.eclipse.persistence.testing.models.insurance.*;
-import org.eclipse.persistence.mappings.*;
-import org.eclipse.persistence.mappings.converters.*;
-import org.eclipse.persistence.mappings.structures.*;
-import org.eclipse.persistence.descriptors.*;
-import org.eclipse.persistence.tools.schemaframework.*;
+import org.eclipse.persistence.descriptors.ClassDescriptor;
+import org.eclipse.persistence.mappings.DirectToFieldMapping;
+import org.eclipse.persistence.mappings.converters.ObjectTypeConverter;
+import org.eclipse.persistence.mappings.structures.ArrayMapping;
+import org.eclipse.persistence.mappings.structures.NestedTableMapping;
+import org.eclipse.persistence.mappings.structures.ObjectArrayMapping;
+import org.eclipse.persistence.mappings.structures.ObjectRelationalDataTypeDescriptor;
+import org.eclipse.persistence.mappings.structures.ReferenceMapping;
+import org.eclipse.persistence.mappings.structures.StructureMapping;
+import org.eclipse.persistence.testing.models.insurance.Address;
+import org.eclipse.persistence.testing.models.insurance.BicyclePolicy;
+import org.eclipse.persistence.testing.models.insurance.Claim;
+import org.eclipse.persistence.testing.models.insurance.HealthClaim;
+import org.eclipse.persistence.testing.models.insurance.HealthPolicy;
+import org.eclipse.persistence.testing.models.insurance.HouseClaim;
+import org.eclipse.persistence.testing.models.insurance.HousePolicy;
+import org.eclipse.persistence.testing.models.insurance.Phone;
+import org.eclipse.persistence.testing.models.insurance.Policy;
+import org.eclipse.persistence.testing.models.insurance.PolicyHolder;
+import org.eclipse.persistence.testing.models.insurance.VehicleClaim;
+import org.eclipse.persistence.testing.models.insurance.VehiclePolicy;
+import org.eclipse.persistence.tools.schemaframework.NestedTableDefinition;
+import org.eclipse.persistence.tools.schemaframework.ObjectVarrayDefinition;
+import org.eclipse.persistence.tools.schemaframework.TableDefinition;
+import org.eclipse.persistence.tools.schemaframework.TypeDefinition;
+import org.eclipse.persistence.tools.schemaframework.TypeTableDefinition;
+import org.eclipse.persistence.tools.schemaframework.VarrayDefinition;
 
 /**
  * This project is provided to demonstate the usage of TopLink's object-relational features.
@@ -227,7 +248,7 @@ public class InsuranceProject extends org.eclipse.persistence.sessions.Project {
 
         // SECTION: DESCRIPTOR
         descriptor.setJavaClass(Phone.class);
-        Vector vector = new Vector();
+        Vector<String> vector = new Vector<>();
         vector.addElement("PolicyHolders");
         descriptor.setTableNames(vector);
 

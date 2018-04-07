@@ -160,7 +160,7 @@ public class CursoredStream extends Cursor {
                 }
             }
 
-            selectStatement.setTables((Vector)descriptor.getTables().clone());
+            selectStatement.setTables(new ArrayList<>(descriptor.getTables()));
 
             // Count * cannot be used with distinct.
             // Count * cannot be used with distinct.

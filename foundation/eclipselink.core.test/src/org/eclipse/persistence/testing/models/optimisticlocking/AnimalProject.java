@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 1998, 2015 Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 1998, 2018 Oracle and/or its affiliates. All rights reserved.
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Public License v1.0 and Eclipse Distribution License v. 1.0
  * which accompanies this distribution.
@@ -54,7 +54,7 @@ public class AnimalProject extends org.eclipse.persistence.sessions.Project {
 
         // SECTION: DESCRIPTOR
         descriptor.setJavaClass(Animal.class);
-        Vector vector = new Vector();
+        Vector<String> vector = new Vector<>();
         vector.addElement("OL_ANIMAL");
         descriptor.setTableNames(vector);
         descriptor.addPrimaryKeyFieldName("OL_ANIMAL.ID");
@@ -158,7 +158,7 @@ public class AnimalProject extends org.eclipse.persistence.sessions.Project {
 
         // SECTION: DESCRIPTOR
         descriptor.setJavaClass(Toy.class);
-        Vector vector = new Vector();
+        Vector<String> vector = new Vector<>();
         vector.addElement("OL_TOY");
         descriptor.setTableNames(vector);
         descriptor.addPrimaryKeyFieldName("OL_TOY.ID");
@@ -209,7 +209,7 @@ public class AnimalProject extends org.eclipse.persistence.sessions.Project {
 
         // SECTION: DESCRIPTOR
         descriptor.setJavaClass(VetAppointment.class);
-        Vector vector = new Vector();
+        Vector<String> vector = new Vector<>();
         vector.addElement("OL_VET_APPT");
         descriptor.setTableNames(vector);
         descriptor.addPrimaryKeyFieldName("OL_VET_APPT.ID");

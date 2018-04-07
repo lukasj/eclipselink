@@ -17,7 +17,7 @@ package org.eclipse.persistence.internal.sessions;
 import java.sql.ResultSet;
 import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
-import java.util.Vector;
+import java.util.List;
 
 import org.eclipse.persistence.exceptions.DatabaseException;
 import org.eclipse.persistence.internal.databaseaccess.DatabaseAccessor;
@@ -58,7 +58,7 @@ public class SimpleResultSetRecord extends ResultSetRecord {
         super();
     }
 
-    public SimpleResultSetRecord(Vector fields, DatabaseField[] fieldsArray, ResultSet resultSet, ResultSetMetaData metaData, DatabaseAccessor accessor, AbstractSession session, DatabasePlatform platform, boolean optimizeData) {
+    public SimpleResultSetRecord(List<DatabaseField>  fields, DatabaseField[] fieldsArray, ResultSet resultSet, ResultSetMetaData metaData, DatabaseAccessor accessor, AbstractSession session, DatabasePlatform platform, boolean optimizeData) {
         super(fields, fieldsArray, resultSet, metaData, accessor, session, platform, optimizeData);
     }
 

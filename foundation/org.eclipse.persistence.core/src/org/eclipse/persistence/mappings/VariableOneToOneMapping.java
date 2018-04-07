@@ -14,21 +14,42 @@ package org.eclipse.persistence.mappings;
 
 import java.security.AccessController;
 import java.security.PrivilegedActionException;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Enumeration;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+import java.util.Vector;
 
 import org.eclipse.persistence.descriptors.ClassDescriptor;
-import org.eclipse.persistence.exceptions.*;
-import org.eclipse.persistence.expressions.*;
+import org.eclipse.persistence.exceptions.ConversionException;
+import org.eclipse.persistence.exceptions.DatabaseException;
+import org.eclipse.persistence.exceptions.DescriptorException;
+import org.eclipse.persistence.exceptions.QueryException;
+import org.eclipse.persistence.exceptions.ValidationException;
+import org.eclipse.persistence.expressions.Expression;
+import org.eclipse.persistence.expressions.ExpressionBuilder;
 import org.eclipse.persistence.indirection.ValueHolder;
-import org.eclipse.persistence.internal.helper.*;
+import org.eclipse.persistence.internal.helper.DatabaseField;
+import org.eclipse.persistence.internal.helper.DatabaseTable;
+import org.eclipse.persistence.internal.helper.Helper;
 import org.eclipse.persistence.internal.identitymaps.CacheKey;
 import org.eclipse.persistence.internal.queries.JoinedAttributeManager;
 import org.eclipse.persistence.internal.security.PrivilegedAccessHelper;
 import org.eclipse.persistence.internal.security.PrivilegedClassForName;
-import org.eclipse.persistence.internal.sessions.*;
+import org.eclipse.persistence.internal.sessions.AbstractRecord;
+import org.eclipse.persistence.internal.sessions.AbstractSession;
+import org.eclipse.persistence.internal.sessions.ChangeRecord;
+import org.eclipse.persistence.internal.sessions.ObjectChangeSet;
+import org.eclipse.persistence.internal.sessions.ObjectReferenceChangeRecord;
 import org.eclipse.persistence.mappings.foundation.AbstractDirectMapping;
-import org.eclipse.persistence.queries.*;
-import org.eclipse.persistence.mappings.querykeys.*;
+import org.eclipse.persistence.mappings.querykeys.DirectQueryKey;
+import org.eclipse.persistence.mappings.querykeys.QueryKey;
+import org.eclipse.persistence.queries.ObjectBuildingQuery;
+import org.eclipse.persistence.queries.ObjectLevelModifyQuery;
+import org.eclipse.persistence.queries.ObjectLevelReadQuery;
+import org.eclipse.persistence.queries.ReadObjectQuery;
 
 /**
  * <p><b>Purpose</b>: Variable one to one mappings are used to represent a pointer references
@@ -56,7 +77,7 @@ public class VariableOneToOneMapping extends ObjectReferenceMapping implements R
         this.sourceToTargetQueryKeyNames = new HashMap(2);
         this.typeIndicatorTranslation = new HashMap(5);
         this.typeIndicatorNameTranslation = new HashMap(5);
-        this.foreignKeyFields = NonSynchronizedVector.newInstance(1);
+        this.foreignKeyFields = new ArrayList<>(1);
 
         //right now only ForeignKeyRelationships are supported
         this.isForeignKeyRelationship = false;
@@ -101,7 +122,7 @@ public class VariableOneToOneMapping extends ObjectReferenceMapping implements R
      */
     public void addForeignQueryKeyName(DatabaseField sourceForeignKeyField, String targetQueryKeyName) {
         getSourceToTargetQueryKeyNames().put(sourceForeignKeyField, targetQueryKeyName);
-        getForeignKeyFields().addElement(sourceForeignKeyField);
+        getForeignKeyFields().add(sourceForeignKeyField);
         this.setIsForeignKeyRelationship(true);
     }
 
@@ -156,9 +177,9 @@ public class VariableOneToOneMapping extends ObjectReferenceMapping implements R
     @Override
     public Object clone() {
         VariableOneToOneMapping clone = (VariableOneToOneMapping)super.clone();
-        Map setOfKeys = new HashMap(getSourceToTargetQueryKeyNames().size());
+        Map<DatabaseField, DatabaseField> setOfKeys = new HashMap<>(getSourceToTargetQueryKeyNames().size());
         Map sourceToTarget = new HashMap(getSourceToTargetQueryKeyNames().size());
-        Vector foreignKeys = org.eclipse.persistence.internal.helper.NonSynchronizedVector.newInstance(getForeignKeyFields().size());
+        List<DatabaseField> foreignKeys = new ArrayList<>(getForeignKeyFields().size());
 
         if (getTypeField() != null) {
             clone.setTypeField(this.getTypeField().clone());
@@ -173,9 +194,9 @@ public class VariableOneToOneMapping extends ObjectReferenceMapping implements R
             sourceToTarget.put(clonedField, getSourceToTargetQueryKeyNames().get(field));
         }
 
-        for (Enumeration enumtr = getForeignKeyFields().elements(); enumtr.hasMoreElements();) {
-            DatabaseField field = (DatabaseField)enumtr.nextElement();
-            foreignKeys.addElement(setOfKeys.get(field));
+        for (Enumeration<DatabaseField> enumtr = Helper.elements(getForeignKeyFields()); enumtr.hasMoreElements();) {
+            DatabaseField field = enumtr.nextElement();
+            foreignKeys.add(setOfKeys.get(field));
         }
         clone.setSourceToTargetQueryKeyFields(sourceToTarget);
         clone.setForeignKeyFields(foreignKeys);
@@ -188,13 +209,13 @@ public class VariableOneToOneMapping extends ObjectReferenceMapping implements R
      * Return all the fields populated by this mapping.
      */
     @Override
-    protected Vector collectFields() {
+    protected List<DatabaseField> collectFields() {
         DatabaseField type = getTypeField();
 
         //Get a shallow copy of the Vector
         if (type != null) {
-            Vector sourceFields = (Vector)getForeignKeyFields().clone();
-            sourceFields.addElement(type);
+            List<DatabaseField> sourceFields = new ArrayList<>(getForeignKeyFields());
+            sourceFields.add(type);
             return sourceFields;
         } else {
             return getForeignKeyFields();
@@ -322,11 +343,11 @@ public class VariableOneToOneMapping extends ObjectReferenceMapping implements R
      * Return the foreign key field names associated with the mapping.
      * These are only the source fields that are writable.
      */
-    public Vector getForeignKeyFieldNames() {
-        Vector fieldNames = new Vector(getForeignKeyFields().size());
-        for (Enumeration fieldsEnum = getForeignKeyFields().elements();
+    public List<String> getForeignKeyFieldNames() {
+        Vector<String> fieldNames = new Vector<>(getForeignKeyFields().size());
+        for (Enumeration<DatabaseField> fieldsEnum = Helper.elements(getForeignKeyFields());
                  fieldsEnum.hasMoreElements();) {
-            fieldNames.addElement(((DatabaseField)fieldsEnum.nextElement()).getQualifiedName());
+            fieldNames.add(fieldsEnum.nextElement().getQualifiedName());
         }
 
         return fieldNames;
@@ -606,10 +627,10 @@ public class VariableOneToOneMapping extends ObjectReferenceMapping implements R
      * Return the foreign key field names associated with the mapping.
      * These are only the source fields that are writable.
      */
-    public void setForeignKeyFieldNames(Vector fieldNames) {
-        Vector fields = org.eclipse.persistence.internal.helper.NonSynchronizedVector.newInstance(fieldNames.size());
-        for (Enumeration fieldNamesEnum = fieldNames.elements(); fieldNamesEnum.hasMoreElements();) {
-            fields.addElement(new DatabaseField((String)fieldNamesEnum.nextElement()));
+    public void setForeignKeyFieldNames(List<String> fieldNames) {
+        List<DatabaseField> fields = new ArrayList<>(fieldNames.size());
+        for (Enumeration<String> fieldNamesEnum = Helper.elements(fieldNames); fieldNamesEnum.hasMoreElements();) {
+            fields.add(new DatabaseField(fieldNamesEnum.nextElement()));
         }
 
         setForeignKeyFields(fields);
@@ -801,9 +822,9 @@ public class VariableOneToOneMapping extends ObjectReferenceMapping implements R
             return;
         }
         if (isForeignKeyRelationship()) {
-            Enumeration foreignKeys = getForeignKeyFields().elements();
+            Enumeration<DatabaseField> foreignKeys = Helper.elements(getForeignKeyFields());
             while (foreignKeys.hasMoreElements()) {
-                record.put((DatabaseField)foreignKeys.nextElement(), null);
+                record.put(foreignKeys.nextElement(), null);
                 // EL Bug 319759 - if a field is null, then the update call cache should not be used
                 record.setNullValueInFields(true);
             }
@@ -832,10 +853,10 @@ public class VariableOneToOneMapping extends ObjectReferenceMapping implements R
             writeFromNullObjectIntoRow(record);
         } else {
             if (isForeignKeyRelationship()) {
-                Enumeration sourceFields = getForeignKeyFields().elements();
+                Enumeration<DatabaseField> sourceFields = Helper.elements(getForeignKeyFields());
                 ClassDescriptor descriptor = session.getDescriptor(referenceObject.getClass());
                 while (sourceFields.hasMoreElements()) {
-                    DatabaseField sourceKey = (DatabaseField)sourceFields.nextElement();
+                    DatabaseField sourceKey = sourceFields.nextElement();
                     String targetQueryKey = (String)getSourceToTargetQueryKeyNames().get(sourceKey);
                     DatabaseField targetKeyField = descriptor.getObjectBuilder().getFieldForQueryKeyName(targetQueryKey);
                     if (targetKeyField == null) {
@@ -873,10 +894,10 @@ public class VariableOneToOneMapping extends ObjectReferenceMapping implements R
         } else {
             Object referenceObject = changeSet.getUnitOfWorkClone();
             if (isForeignKeyRelationship()) {
-                Enumeration sourceFields = getForeignKeyFields().elements();
+                Enumeration<DatabaseField> sourceFields = Helper.elements(getForeignKeyFields());
                 ClassDescriptor descriptor = session.getDescriptor(referenceObject.getClass());
                 while (sourceFields.hasMoreElements()) {
-                    DatabaseField sourceKey = (DatabaseField)sourceFields.nextElement();
+                    DatabaseField sourceKey = sourceFields.nextElement();
                     String targetQueryKey = (String)getSourceToTargetQueryKeyNames().get(sourceKey);
                     DatabaseField targetKeyField = descriptor.getObjectBuilder().getFieldForQueryKeyName(targetQueryKey);
                     if (targetKeyField == null) {
@@ -951,10 +972,10 @@ public class VariableOneToOneMapping extends ObjectReferenceMapping implements R
             writeFromNullObjectIntoRow(record);
         } else {
             if (isForeignKeyRelationship()) {
-                Enumeration sourceFields = getForeignKeyFields().elements();
+                Enumeration<DatabaseField> sourceFields = Helper.elements(getForeignKeyFields());
                 ClassDescriptor descriptor = query.getSession().getDescriptor(referenceObject.getClass());
                 while (sourceFields.hasMoreElements()) {
-                    DatabaseField sourceKey = (DatabaseField)sourceFields.nextElement();
+                    DatabaseField sourceKey = sourceFields.nextElement();
                     String targetQueryKey = (String)getSourceToTargetQueryKeyNames().get(sourceKey);
                     DatabaseField targetKeyField = descriptor.getObjectBuilder().getFieldForQueryKeyName(targetQueryKey);
                     if (targetKeyField == null) {

@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 1998, 2015 Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 1998, 2018 Oracle and/or its affiliates. All rights reserved.
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Public License v1.0 and Eclipse Distribution License v. 1.0
  * which accompanies this distribution.
@@ -12,10 +12,12 @@
  ******************************************************************************/
 package org.eclipse.persistence.testing.models.legacy;
 
-import java.util.*;
-import org.eclipse.persistence.expressions.*;
-import org.eclipse.persistence.queries.*;
-import org.eclipse.persistence.mappings.*;
+import java.util.Vector;
+
+import org.eclipse.persistence.expressions.Expression;
+import org.eclipse.persistence.expressions.ExpressionBuilder;
+import org.eclipse.persistence.mappings.OneToManyMapping;
+import org.eclipse.persistence.queries.ReadAllQuery;
 
 /**
  * TopLink generated Project class.
@@ -82,7 +84,7 @@ public class LegacyProject extends org.eclipse.persistence.sessions.Project {
 
         // SECTION: DESCRIPTOR
         descriptor.setJavaClass(org.eclipse.persistence.testing.models.legacy.Computer.class);
-        Vector vector = new Vector();
+        Vector<String> vector = new Vector<>();
         vector.addElement("LEG_COM");
         descriptor.setTableNames(vector);
         descriptor.addPrimaryKeyFieldName("LEG_COM.CREATE_TS");
@@ -146,7 +148,7 @@ public class LegacyProject extends org.eclipse.persistence.sessions.Project {
 
         // SECTION: DESCRIPTOR
         descriptor.setJavaClass(org.eclipse.persistence.testing.models.legacy.Employee.class);
-        Vector vector = new Vector();
+        Vector<String> vector = new Vector<>();
         vector.addElement("LEG_EMP");
         vector.addElement("LEG_ADD");
         descriptor.setTableNames(vector);
@@ -217,7 +219,7 @@ public class LegacyProject extends org.eclipse.persistence.sessions.Project {
         // SECTION: DESCRIPTOR
         descriptor.setJavaClass(org.eclipse.persistence.testing.models.legacy.GaurenteedShipment.class);
         descriptor.getDescriptorInheritancePolicy().setParentClass(org.eclipse.persistence.testing.models.legacy.InsuredShipment.class);
-        Vector vector = new Vector();
+        Vector<String> vector = new Vector<>();
         vector.addElement("LEG_ISHP");
         descriptor.setTableNames(vector);
         descriptor.addPrimaryKeyFieldName("LEG_ISHP.F_NAME");
@@ -241,7 +243,7 @@ public class LegacyProject extends org.eclipse.persistence.sessions.Project {
         // SECTION: DESCRIPTOR
         descriptor.setJavaClass(org.eclipse.persistence.testing.models.legacy.InsuredShipment.class);
         descriptor.getDescriptorInheritancePolicy().setParentClass(org.eclipse.persistence.testing.models.legacy.Shipment.class);
-        Vector vector = new Vector();
+        Vector<String> vector = new Vector<>();
         vector.addElement("LEG_ISHP");
         descriptor.setTableNames(vector);
         descriptor.addPrimaryKeyFieldName("LEG_ISHP.F_NAME");
@@ -293,7 +295,7 @@ public class LegacyProject extends org.eclipse.persistence.sessions.Project {
 
         // SECTION: DESCRIPTOR
         descriptor.setJavaClass(org.eclipse.persistence.testing.models.legacy.Order.class);
-        Vector vector = new Vector();
+        Vector<String> vector = new Vector<>();
         vector.addElement("LEG_ORD");
         descriptor.setTableNames(vector);
         descriptor.addPrimaryKeyFieldName("LEG_ORD.FNAME");
@@ -371,7 +373,7 @@ public class LegacyProject extends org.eclipse.persistence.sessions.Project {
 
         // SECTION: DESCRIPTOR
         descriptor.setJavaClass(org.eclipse.persistence.testing.models.legacy.Shipment.class);
-        Vector vector = new Vector();
+        Vector<String> vector = new Vector<>();
         vector.addElement("LEG_SHP");
         descriptor.setTableNames(vector);
         descriptor.addPrimaryKeyFieldName("LEG_SHP.FNAME");

@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 1998, 2015 Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 1998, 2018 Oracle and/or its affiliates. All rights reserved.
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Public License v1.0 and Eclipse Distribution License v. 1.0
  * which accompanies this distribution.
@@ -56,7 +56,7 @@ public class ConstructorProject extends org.eclipse.persistence.sessions.Project
 
         // SECTION: DESCRIPTOR
         descriptor.setJavaClass(org.eclipse.persistence.testing.tests.validation.NoParamConstructor.class);
-        Vector vector = new Vector();
+        Vector<String> vector = new Vector<>();
         vector.addElement("NO_PARAM_CONST_TBL");
         descriptor.setTableNames(vector);
         descriptor.addPrimaryKeyFieldName("NO_PARAM_CONST_TBL.NO_CONST_ID");
@@ -95,7 +95,7 @@ public class ConstructorProject extends org.eclipse.persistence.sessions.Project
 
         // SECTION: DESCRIPTOR
         descriptor.setJavaClass(org.eclipse.persistence.testing.tests.validation.PrivateConstructor.class);
-        Vector vector = new Vector();
+        Vector<String> vector = new Vector<>();
         vector.addElement("PRIVATE_CONST_TBL");
         descriptor.setTableNames(vector);
         descriptor.addPrimaryKeyFieldName("PRIVATE_CONST_TBL.PRIVATE_CONST_ID");

@@ -473,13 +473,13 @@ public abstract class ObjectExpression extends DataExpression {
      * only applies to query keys representing an object or to expression builders.
      */
     @Override
-    public Vector getFields() {
+    public List<DatabaseField> getFields() {
         if (getDescriptor() == null) {
             DatabaseMapping mapping = getMapping();
             if (mapping != null) {
                 return mapping.getSelectFields();
             }
-            return new NonSynchronizedVector(0);
+            return Collections.EMPTY_LIST;
         }
         if (descriptor.hasInheritance() && descriptor.getInheritancePolicy().shouldReadSubclasses()
                 && (!descriptor.getInheritancePolicy().hasMultipleTableChild()) || shouldUseOuterJoinForMultitableInheritance()) {
@@ -525,7 +525,7 @@ public abstract class ObjectExpression extends DataExpression {
      * fine-grained pessimistic locking.
      */
     protected Vector getForUpdateOfFields() {
-        Vector allFields = getFields();
+        List<DatabaseField> allFields = getFields();
         int expected = getTableAliases().size();
         Vector firstFields = new Vector(expected);
         DatabaseTable lastTable = null;
@@ -538,7 +538,7 @@ public abstract class ObjectExpression extends DataExpression {
         // take O(n) time.
         // An even faster way may be to go getDescriptor().getAdditionalPrimaryKeyFields.
         while ((i < allFields.size()) && (firstFields.size() < expected)) {
-            field = (DatabaseField)allFields.elementAt(i++);
+            field = allFields.get(i++);
             if ((lastTable == null) || !field.getTable().equals(lastTable)) {
                 lastTable = field.getTable();
                 int j = 0;

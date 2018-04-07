@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 1998, 2015 Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 1998, 2018 Oracle and/or its affiliates. All rights reserved.
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Public License v1.0 and Eclipse Distribution License v. 1.0
  * which accompanies this distribution.
@@ -16,7 +16,6 @@ import java.util.Vector;
 
 import org.eclipse.persistence.descriptors.RelationalDescriptor;
 import org.eclipse.persistence.internal.identitymaps.FullIdentityMap;
-
 import org.eclipse.persistence.mappings.DirectCollectionMapping;
 import org.eclipse.persistence.mappings.DirectToFieldMapping;
 import org.eclipse.persistence.mappings.ManyToManyMapping;
@@ -26,14 +25,7 @@ import org.eclipse.persistence.mappings.TransformationMapping;
 import org.eclipse.persistence.mappings.converters.ObjectTypeConverter;
 import org.eclipse.persistence.mappings.converters.SerializedObjectConverter;
 import org.eclipse.persistence.mappings.converters.TypeConversionConverter;
-
 import org.eclipse.persistence.sessions.Project;
-
-import org.eclipse.persistence.testing.models.mapping.Address;
-import org.eclipse.persistence.testing.models.mapping.Computer;
-import org.eclipse.persistence.testing.models.mapping.Employee;
-import org.eclipse.persistence.testing.models.mapping.Monitor;
-import org.eclipse.persistence.testing.models.mapping.Shipment;
 
 public class MappingProject extends Project {
     public MappingProject() {
@@ -59,7 +51,7 @@ public class MappingProject extends Project {
 
         // SECTION: DESCRIPTOR
         descriptor.setJavaClass(Address.class);
-        Vector vector = new Vector();
+        Vector<String> vector = new Vector<>();
         vector.addElement("MAP_ADD");
         descriptor.setTableNames(vector);
         descriptor.addPrimaryKeyFieldName("MAP_ADD.A_ID");
@@ -116,7 +108,7 @@ public class MappingProject extends Project {
 
         // SECTION: DESCRIPTOR
         descriptor.setJavaClass(CompanyCard.class);
-        Vector vector = new Vector();
+        Vector<String> vector = new Vector<>();
         vector.addElement("MAP_CARD");
         descriptor.setTableNames(vector);
         descriptor.addPrimaryKeyFieldName("MAP_CARD.COM_ID");
@@ -164,7 +156,7 @@ public class MappingProject extends Project {
         // SECTION: DESCRIPTOR
         descriptor.setJavaClass(Computer.class);
         descriptor.getInheritancePolicy().setParentClass(Hardware.class);
-        Vector vector = new Vector();
+        Vector<String> vector = new Vector<>();
         vector.addElement("MAP_COM");
         descriptor.setTableNames(vector);
         descriptor.addPrimaryKeyFieldName("MAP_COM.ID");
@@ -233,7 +225,7 @@ public class MappingProject extends Project {
 
         // SECTION: DESCRIPTOR
         descriptor.setJavaClass(Cubicle.class);
-        Vector vector = new Vector();
+        Vector<String> vector = new Vector<>();
         vector.addElement("MAP_CUB");
         descriptor.setTableNames(vector);
         descriptor.addPrimaryKeyFieldName("MAP_CUB.C_ID");
@@ -286,7 +278,7 @@ public class MappingProject extends Project {
 
         // SECTION: DESCRIPTOR
         descriptor.setJavaClass(EmergencyExit.class);
-        Vector vector = new Vector();
+        Vector<String> vector = new Vector<>();
         vector.addElement("MAP_EMERGENCYEXIT");
         descriptor.setTableNames(vector);
         descriptor.addPrimaryKeyFieldName("MAP_EMERGENCYEXIT.EXIT_ID");
@@ -323,7 +315,7 @@ public class MappingProject extends Project {
 
         // SECTION: DESCRIPTOR
         descriptor.setJavaClass(Employee.class);
-        Vector vector = new Vector();
+        Vector<String> vector = new Vector<>();
         vector.addElement("MAP_EMP");
         descriptor.setTableNames(vector);
         descriptor.addPrimaryKeyFieldName("MAP_EMP.FNAME");
@@ -503,7 +495,7 @@ public class MappingProject extends Project {
 
         // SECTION: DESCRIPTOR
         descriptor.setJavaClass(Identification.class);
-        Vector vector = new Vector();
+        Vector<String> vector = new Vector<>();
         vector.addElement("MAP_IDENTIFICATION");
         descriptor.setTableNames(vector);
         descriptor.addPrimaryKeyFieldName("MAP_IDENTIFICATION.ID");
@@ -533,7 +525,7 @@ public class MappingProject extends Project {
 
         // SECTION: DESCRIPTOR
         descriptor.setJavaClass(Hardware.class);
-        Vector vector = new Vector();
+        Vector<String> vector = new Vector<>();
         vector.addElement("MAP_HRW");
         descriptor.setTableNames(vector);
         descriptor.addPrimaryKeyFieldName("MAP_HRW.ID");
@@ -587,7 +579,7 @@ public class MappingProject extends Project {
         // SECTION: DESCRIPTOR
         descriptor.setJavaClass(Monitor.class);
         descriptor.getInheritancePolicy().setParentClass(Hardware.class);
-        Vector vector = new Vector();
+        Vector<String> vector = new Vector<>();
         vector.addElement("MAP_MON");
         descriptor.setTableNames(vector);
         descriptor.addPrimaryKeyFieldName("MAP_MON.ID");
@@ -648,7 +640,7 @@ public class MappingProject extends Project {
 
         // SECTION: DESCRIPTOR
         descriptor.setJavaClass(Phone.class);
-        Vector vector = new Vector();
+        Vector<String> vector = new Vector<>();
         vector.addElement("MAP_PHO");
         descriptor.setTableNames(vector);
         descriptor.addPrimaryKeyFieldName("MAP_PHO.P_ID");
@@ -693,7 +685,7 @@ public class MappingProject extends Project {
 
         // SECTION: DESCRIPTOR
         descriptor.setJavaClass(SecureSystem.class);
-        Vector vector = new Vector();
+        Vector<String> vector = new Vector<>();
         vector.addElement("MAP_SECURE");
         descriptor.setTableNames(vector);
         descriptor.addPrimaryKeyFieldName("MAP_SECURE.MANUFACTURER");
@@ -731,7 +723,7 @@ public class MappingProject extends Project {
 
         // SECTION: DESCRIPTOR
         descriptor.setJavaClass(Shipment.class);
-        Vector vector = new Vector();
+        Vector<String> vector = new Vector<>();
         vector.addElement("MAP_SHIP");
         descriptor.setTableNames(vector);
         descriptor.addPrimaryKeyFieldName("MAP_SHIP.SP_TS");

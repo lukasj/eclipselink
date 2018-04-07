@@ -35,7 +35,6 @@ import org.eclipse.persistence.internal.descriptors.ObjectBuilder;
 import org.eclipse.persistence.internal.helper.DatabaseField;
 import org.eclipse.persistence.internal.helper.DatabaseTable;
 import org.eclipse.persistence.internal.helper.Helper;
-import org.eclipse.persistence.internal.helper.NonSynchronizedVector;
 import org.eclipse.persistence.internal.oxm.Root;
 import org.eclipse.persistence.internal.oxm.TreeObjectBuilder;
 import org.eclipse.persistence.internal.oxm.Unmarshaller;
@@ -78,7 +77,7 @@ public class XMLDescriptor extends ClassDescriptor implements Descriptor<Attribu
      */
     private static final char XPATH_FRAGMENT_SEPARATOR = '/';
 
-    private static final Vector EMPTY_VECTOR = NonSynchronizedVector.newInstance(1);
+    private static final List<Class> EMPTY_VECTOR = new ArrayList<>(1);
 
     private NamespaceResolver namespaceResolver;
     private XMLSchemaReference schemaReference;
@@ -97,11 +96,11 @@ public class XMLDescriptor extends ClassDescriptor implements Descriptor<Attribu
      * Return a new XMLDescriptor.
      */
     public XMLDescriptor() {
-        this.tables = NonSynchronizedVector.newInstance(3);
-        this.mappings = NonSynchronizedVector.newInstance();
+        this.tables = new ArrayList<>(3);
+        this.mappings = new ArrayList<>();
         this.primaryKeyFields = null;
-        this.fields = NonSynchronizedVector.newInstance();
-        this.allFields = NonSynchronizedVector.newInstance();
+        this.fields = new ArrayList<>();
+        this.allFields = new ArrayList<>();
         this.constraintDependencies = EMPTY_VECTOR;
         this.multipleTableForeignKeys = Collections.EMPTY_MAP;
         this.queryKeys = Collections.EMPTY_MAP;
@@ -136,7 +135,7 @@ public class XMLDescriptor extends ClassDescriptor implements Descriptor<Attribu
         if (getTables().isEmpty()) {
             return null;
         }
-        return getTables().firstElement().getName();
+        return getTables().get(0).getName();
     }
 
     /**
@@ -300,9 +299,9 @@ public class XMLDescriptor extends ClassDescriptor implements Descriptor<Attribu
     }
 
     @Override
-    public Vector<String> getPrimaryKeyFieldNames() {
+    public List<String> getPrimaryKeyFieldNames() {
         if(null == primaryKeyFields) {
-            return new Vector<String>(0);
+            return new ArrayList<>(0);
         }
         return super.getPrimaryKeyFieldNames();
     }
@@ -552,9 +551,9 @@ public class XMLDescriptor extends ClassDescriptor implements Descriptor<Attribu
     }
 
     @Override
-    public void setTableNames(Vector tableNames) {
+    public void setTableNames(List<String> tableNames) {
         if (null != tableNames && tableNames.size() > 0) {
-            setDefaultRootElementField((String) tableNames.get(0));
+            setDefaultRootElementField(tableNames.get(0));
         }
         super.setTableNames(tableNames);
     }
@@ -564,7 +563,7 @@ public class XMLDescriptor extends ClassDescriptor implements Descriptor<Attribu
      * Sets the tables
      */
     @Override
-    public void setTables(Vector<DatabaseTable> theTables) {
+    public void setTables(List<DatabaseTable> theTables) {
          super.setTables(theTables);
     }
 
@@ -581,9 +580,9 @@ public class XMLDescriptor extends ClassDescriptor implements Descriptor<Attribu
         setInitializationStage(PREINITIALIZED);
 
         // Allow mapping pre init, must be done before validate.
-        for (Enumeration mappingsEnum = getMappings().elements(); mappingsEnum.hasMoreElements();) {
+        for (Enumeration<DatabaseMapping> mappingsEnum = Helper.elements(getMappings()); mappingsEnum.hasMoreElements();) {
             try {
-                DatabaseMapping mapping = (DatabaseMapping) mappingsEnum.nextElement();
+                DatabaseMapping mapping = mappingsEnum.nextElement();
                 mapping.preInitialize(session);
             } catch (DescriptorException exception) {
                 session.getIntegrityChecker().handleError(exception);
@@ -690,7 +689,7 @@ public class XMLDescriptor extends ClassDescriptor implements Descriptor<Attribu
         // this can come through a 1:1 so requires all descriptors to be initialized (mappings).
         // May 02, 2000 - Jon D.
         for (int index = 0; index < getFields().size(); index++) {
-            DatabaseField field = getFields().elementAt(index);
+            DatabaseField field = getFields().get(index);
             if (field.getType() == null) {
                 DatabaseMapping mapping = getObjectBuilder().getMappingForField(field);
                 if (mapping != null) {
@@ -762,8 +761,8 @@ public class XMLDescriptor extends ClassDescriptor implements Descriptor<Attribu
             }
         }
 
-        for (Enumeration mappingsEnum = getMappings().elements(); mappingsEnum.hasMoreElements();) {
-            DatabaseMapping mapping = (DatabaseMapping) mappingsEnum.nextElement();
+        for (Enumeration<DatabaseMapping> mappingsEnum = Helper.elements(getMappings()); mappingsEnum.hasMoreElements();) {
+            DatabaseMapping mapping =  mappingsEnum.nextElement();
             validateMappingType(mapping);
             mapping.initialize(session);
             if(mapping.isObjectReferenceMapping()) {
@@ -786,7 +785,7 @@ public class XMLDescriptor extends ClassDescriptor implements Descriptor<Attribu
                 }
             }
             // Add all the fields in the mapping to myself.
-            Helper.addAllUniqueToVector(getFields(), mapping.getFields());
+            Helper.addAllUniqueToList(getFields(), mapping.getFields());
         }
 
         // If this has inheritance then it needs to be initialized before all fields is set.
@@ -795,7 +794,7 @@ public class XMLDescriptor extends ClassDescriptor implements Descriptor<Attribu
         }
 
         // Initialize the allFields to its fields, this can be done now because the fields have been computed.
-        setAllFields((Vector) getFields().clone());
+        setAllFields(new ArrayList<>(getFields()));
 
         getObjectBuilder().initialize(session);
         if (hasInterfacePolicy()) {

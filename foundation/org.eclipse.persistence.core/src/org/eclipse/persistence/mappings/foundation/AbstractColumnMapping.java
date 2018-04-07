@@ -24,7 +24,8 @@ package org.eclipse.persistence.mappings.foundation;
 
 import java.security.AccessController;
 import java.security.PrivilegedActionException;
-import java.util.*;
+import java.util.Map;
+import java.util.Vector;
 
 import org.eclipse.persistence.exceptions.ValidationException;
 import org.eclipse.persistence.internal.descriptors.DescriptorIterator;

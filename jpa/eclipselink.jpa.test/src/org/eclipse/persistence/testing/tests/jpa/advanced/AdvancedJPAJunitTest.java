@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 1998, 2016 Oracle and/or its affiliates, IBM Corporation. All rights reserved.
+ * Copyright (c) 1998, 2018 Oracle and/or its affiliates, IBM Corporation. All rights reserved.
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Public License v1.0 and Eclipse Distribution License v. 1.0
  * which accompanies this distribution.
@@ -37,7 +37,6 @@ import java.util.EnumSet;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
-import java.util.Random;
 import java.util.Set;
 import java.util.Vector;
 
@@ -56,9 +55,6 @@ import javax.persistence.metamodel.Type.PersistenceType;
 import javax.persistence.spi.LoadState;
 import javax.persistence.spi.ProviderUtil;
 
-import junit.framework.Test;
-import junit.framework.TestSuite;
-
 import org.eclipse.persistence.annotations.BatchFetchType;
 import org.eclipse.persistence.config.CascadePolicy;
 import org.eclipse.persistence.config.HintValues;
@@ -70,6 +66,7 @@ import org.eclipse.persistence.descriptors.invalidation.CacheInvalidationPolicy;
 import org.eclipse.persistence.descriptors.invalidation.TimeToLiveCacheInvalidationPolicy;
 import org.eclipse.persistence.expressions.Expression;
 import org.eclipse.persistence.expressions.ExpressionBuilder;
+import org.eclipse.persistence.history.AsOfClause;
 import org.eclipse.persistence.indirection.IndirectCollection;
 import org.eclipse.persistence.indirection.IndirectContainer;
 import org.eclipse.persistence.indirection.ValueHolderInterface;
@@ -79,7 +76,6 @@ import org.eclipse.persistence.internal.helper.DatabaseTable;
 import org.eclipse.persistence.internal.helper.Helper;
 import org.eclipse.persistence.internal.indirection.DatabaseValueHolder;
 import org.eclipse.persistence.internal.indirection.QueryBasedValueHolder;
-import org.eclipse.persistence.history.AsOfClause;
 import org.eclipse.persistence.internal.jpa.EJBQueryImpl;
 import org.eclipse.persistence.internal.jpa.EntityManagerFactoryDelegate;
 import org.eclipse.persistence.internal.jpa.EntityManagerImpl;
@@ -106,14 +102,14 @@ import org.eclipse.persistence.sessions.server.ServerSession;
 import org.eclipse.persistence.testing.framework.JoinedAttributeTestHelper;
 import org.eclipse.persistence.testing.framework.QuerySQLTracker;
 import org.eclipse.persistence.testing.framework.junit.JUnitTestCase;
-import org.eclipse.persistence.testing.models.jpa.advanced.Bill;
-import org.eclipse.persistence.testing.models.jpa.advanced.BillLine;
-import org.eclipse.persistence.testing.models.jpa.advanced.BillLineItem;
-import org.eclipse.persistence.testing.models.jpa.advanced.BillAction;
 import org.eclipse.persistence.testing.models.jpa.advanced.Address;
 import org.eclipse.persistence.testing.models.jpa.advanced.AdvancedTableCreator;
 import org.eclipse.persistence.testing.models.jpa.advanced.Bag;
 import org.eclipse.persistence.testing.models.jpa.advanced.BarCode;
+import org.eclipse.persistence.testing.models.jpa.advanced.Bill;
+import org.eclipse.persistence.testing.models.jpa.advanced.BillAction;
+import org.eclipse.persistence.testing.models.jpa.advanced.BillLine;
+import org.eclipse.persistence.testing.models.jpa.advanced.BillLineItem;
 import org.eclipse.persistence.testing.models.jpa.advanced.Buyer;
 import org.eclipse.persistence.testing.models.jpa.advanced.Cost;
 import org.eclipse.persistence.testing.models.jpa.advanced.Customer;
@@ -157,6 +153,9 @@ import org.eclipse.persistence.testing.models.jpa.advanced.additionalcriteria.St
 import org.eclipse.persistence.tools.schemaframework.SchemaManager;
 import org.eclipse.persistence.tools.schemaframework.StoredFunctionDefinition;
 import org.junit.Assert;
+
+import junit.framework.Test;
+import junit.framework.TestSuite;
 
 /**
  * This test suite tests EclipseLink JPA annotations extensions.
@@ -1011,8 +1010,8 @@ public class AdvancedJPAJunitTest extends JUnitTestCase {
         assertNotNull("The projects mapping from Employee was not found", mapping);
         assertTrue("The projects mapping is no longer a many to many mapping", mapping.isManyToManyMapping());
 
-        Vector<DatabaseField> sourceKeys = ((ManyToManyMapping) mapping).getSourceKeyFields();
-        Vector<DatabaseField> sourceRelationKeys = ((ManyToManyMapping) mapping).getSourceRelationKeyFields();
+        List<DatabaseField> sourceKeys = ((ManyToManyMapping) mapping).getSourceKeyFields();
+        List<DatabaseField> sourceRelationKeys = ((ManyToManyMapping) mapping).getSourceRelationKeyFields();
 
         for (int i = 0; i < sourceKeys.size(); i++) {
             DatabaseField sourcePrimaryKey = sourceKeys.get(i);
@@ -1021,8 +1020,8 @@ public class AdvancedJPAJunitTest extends JUnitTestCase {
             assertTrue("The projects mapping source relation foreign key field [" + sourceRelationForeignKey.getName() + "(" + sourceRelationForeignKey.getLength() + ")] did not have the same length as the source primary key field [" + sourcePrimaryKey.getName()  + "(" + sourcePrimaryKey.getLength() + ")]", sourcePrimaryKey.getLength() == sourceRelationForeignKey.getLength());
         }
 
-        Vector<DatabaseField> targetKeys = ((ManyToManyMapping) mapping).getSourceKeyFields();
-        Vector<DatabaseField> targetRelationKeys = ((ManyToManyMapping) mapping).getSourceRelationKeyFields();
+        List<DatabaseField> targetKeys = ((ManyToManyMapping) mapping).getSourceKeyFields();
+        List<DatabaseField> targetRelationKeys = ((ManyToManyMapping) mapping).getSourceRelationKeyFields();
 
         for (int i = 0; i < targetKeys.size(); i++) {
             DatabaseField targetPrimaryKey = targetKeys.get(i);
@@ -1036,8 +1035,8 @@ public class AdvancedJPAJunitTest extends JUnitTestCase {
         assertNotNull("The responsibilities mapping from Employee was not found", mapping);
         assertTrue("The responsibilities mapping is no longer a direct collection mapping", mapping.isDirectCollectionMapping());
 
-        Vector<DatabaseField> primaryKeys = ((DirectCollectionMapping) mapping).getSourceKeyFields();
-        Vector<DatabaseField> foreignKeys = ((DirectCollectionMapping) mapping).getReferenceKeyFields();
+        List<DatabaseField> primaryKeys = ((DirectCollectionMapping) mapping).getSourceKeyFields();
+        List<DatabaseField> foreignKeys = ((DirectCollectionMapping) mapping).getReferenceKeyFields();
 
         for (int i = 0; i < primaryKeys.size(); i++) {
             DatabaseField primaryKey = primaryKeys.get(i);

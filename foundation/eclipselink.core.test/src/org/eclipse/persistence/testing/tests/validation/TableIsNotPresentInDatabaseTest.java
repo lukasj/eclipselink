@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 1998, 2015 Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 1998, 2018 Oracle and/or its affiliates. All rights reserved.
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Public License v1.0 and Eclipse Distribution License v. 1.0
  * which accompanies this distribution.
@@ -51,7 +51,7 @@ public class TableIsNotPresentInDatabaseTest extends ExceptionTest {
             getSession().getIntegrityChecker().checkDatabase();
 
             RelationalDescriptor descriptor = descriptor();
-            DatabaseTable table = descriptor.getTables().lastElement(); //retrieving address table
+            DatabaseTable table = descriptor.getTables().get(descriptor.getTables().size() - 1); //retrieving address table
 
             //the following causes the correct error to occure.
             table.setName("Bad_Table"); //change name of table to cause error

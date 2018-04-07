@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 1998, 2015 Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 1998, 2018 Oracle and/or its affiliates. All rights reserved.
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Public License v1.0 and Eclipse Distribution License v. 1.0
  * which accompanies this distribution.
@@ -12,18 +12,23 @@
  ******************************************************************************/
 package org.eclipse.persistence.testing.tests.interfaces;
 
-import java.util.Vector;
 import java.util.Enumeration;
+import java.util.List;
+import java.util.Vector;
 
-import org.eclipse.persistence.testing.framework.*;
-import org.eclipse.persistence.sessions.Session;
-import org.eclipse.persistence.internal.helper.Helper;
 import org.eclipse.persistence.internal.helper.DatabaseField;
+import org.eclipse.persistence.internal.helper.Helper;
 import org.eclipse.persistence.internal.sessions.AbstractSession;
 import org.eclipse.persistence.mappings.Association;
 import org.eclipse.persistence.mappings.TypedAssociation;
 import org.eclipse.persistence.mappings.VariableOneToOneMapping;
-import org.eclipse.persistence.testing.models.interfaces.*;
+import org.eclipse.persistence.sessions.Session;
+import org.eclipse.persistence.testing.framework.TestCase;
+import org.eclipse.persistence.testing.framework.TestErrorException;
+import org.eclipse.persistence.testing.models.interfaces.Actor;
+import org.eclipse.persistence.testing.models.interfaces.Broadcastor;
+import org.eclipse.persistence.testing.models.interfaces.Employee;
+import org.eclipse.persistence.testing.models.interfaces.Secretary;
 
 public class VariableOneToOneCodeCoverageTest extends TestCase {
     VariableOneToOneMapping mapping;
@@ -122,7 +127,7 @@ public class VariableOneToOneCodeCoverageTest extends TestCase {
         foreignKeyNames.add("fkey3");
         mapping.setForeignKeyFieldNames(foreignKeyNames);
 
-        Vector fieldNames = mapping.getForeignKeyFieldNames();
+        List<String> fieldNames = mapping.getForeignKeyFieldNames();
 
         if (!(mapping.getForeignKeyFieldNames().contains("fkey1"))) {
             testFailures += "addForeignQueryKeyName - fkey1";

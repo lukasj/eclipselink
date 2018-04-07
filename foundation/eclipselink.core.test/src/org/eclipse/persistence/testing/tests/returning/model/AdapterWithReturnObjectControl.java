@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 1998, 2015 Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 1998, 2018 Oracle and/or its affiliates. All rights reserved.
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Public License v1.0 and Eclipse Distribution License v. 1.0
  * which accompanies this distribution.
@@ -14,14 +14,18 @@ package org.eclipse.persistence.testing.tests.returning.model;
 
 import java.util.Enumeration;
 
-import org.eclipse.persistence.sessions.*;
-import org.eclipse.persistence.internal.sessions.AbstractSession;
-import org.eclipse.persistence.queries.ReadObjectQuery;
-import org.eclipse.persistence.mappings.*;
-import org.eclipse.persistence.mappings.DatabaseMapping.WriteType;
-import org.eclipse.persistence.internal.helper.DatabaseField;
-import org.eclipse.persistence.sessions.DatabaseRecord;
 import org.eclipse.persistence.descriptors.ClassDescriptor;
+import org.eclipse.persistence.internal.helper.DatabaseField;
+import org.eclipse.persistence.internal.helper.Helper;
+import org.eclipse.persistence.internal.sessions.AbstractSession;
+import org.eclipse.persistence.mappings.AggregateObjectMapping;
+import org.eclipse.persistence.mappings.DatabaseMapping;
+import org.eclipse.persistence.mappings.DatabaseMapping.WriteType;
+import org.eclipse.persistence.queries.ReadObjectQuery;
+import org.eclipse.persistence.sessions.DatabaseRecord;
+import org.eclipse.persistence.sessions.Project;
+import org.eclipse.persistence.sessions.Record;
+import org.eclipse.persistence.sessions.Session;
 import org.eclipse.persistence.testing.tests.returning.ProjectAndDatabaseAdapter;
 
 public abstract class AdapterWithReturnObjectControl implements ProjectAndDatabaseAdapter, ReturnObjectControl {
@@ -66,8 +70,8 @@ public abstract class AdapterWithReturnObjectControl implements ProjectAndDataba
     }
 
     public void getChange(Record row, Session session, Object object1, Object object2, ClassDescriptor desc, boolean useUOW, WriteType writeType) {
-        for (Enumeration mappings = desc.getMappings().elements(); mappings.hasMoreElements(); ) {
-            DatabaseMapping mapping = (DatabaseMapping)mappings.nextElement();
+        for (Enumeration<DatabaseMapping> mappings = Helper.elements(desc.getMappings()); mappings.hasMoreElements(); ) {
+            DatabaseMapping mapping = mappings.nextElement();
             if (!mapping.isReadOnly()) {
                 getChange(row, mapping, session, object1, object2, useUOW, writeType);
             }
@@ -95,8 +99,8 @@ public abstract class AdapterWithReturnObjectControl implements ProjectAndDataba
             mapping.writeFromObjectIntoRow(object2, (DatabaseRecord)row2, (AbstractSession)session, writeType);
 
             for (int i = 0; i < row1.size(); i++) {
-                DatabaseField field = (DatabaseField)((DatabaseRecord)row1).getFields().elementAt(i);
-                Object valueBefore = ((DatabaseRecord)row1).getValues().elementAt(i);
+                DatabaseField field = (DatabaseField)((DatabaseRecord)row1).getFields().get(i);
+                Object valueBefore = ((DatabaseRecord)row1).getValues().get(i);
                 Object valueAfter = row2.get(field);
                 boolean changed;
                 if (valueAfter == null) {
@@ -119,8 +123,8 @@ public abstract class AdapterWithReturnObjectControl implements ProjectAndDataba
         Object object = desc.getObjectBuilder().buildNewInstance();
         ReadObjectQuery query = new ReadObjectQuery();
         query.setSession((AbstractSession)session);
-        for (Enumeration mappings = desc.getMappings().elements(); mappings.hasMoreElements(); ) {
-            DatabaseMapping mapping = (DatabaseMapping)mappings.nextElement();
+        for (Enumeration<DatabaseMapping> mappings = Helper.elements(desc.getMappings()); mappings.hasMoreElements(); ) {
+            DatabaseMapping mapping = mappings.nextElement();
             mapping.readFromRowIntoObject((DatabaseRecord)row, query.getJoinedAttributeManager(), object, null, query, query.getSession(), true);
         }
         return object;

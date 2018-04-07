@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 2013, 2015  Oracle. All rights reserved.
+ * Copyright (c) 2013, 2018  Oracle. All rights reserved.
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Public License v1.0 and Eclipse Distribution License v. 1.0
  * which accompanies this distribution.
@@ -14,11 +14,11 @@ package org.eclipse.persistence.internal.sessions;
 
 import java.sql.ResultSet;
 import java.sql.ResultSetMetaData;
-import java.util.Vector;
+import java.util.List;
 
 import org.eclipse.persistence.internal.databaseaccess.DatabaseAccessor;
-import org.eclipse.persistence.internal.helper.DatabaseField;
 import org.eclipse.persistence.internal.databaseaccess.DatabasePlatform;
+import org.eclipse.persistence.internal.helper.DatabaseField;
 
 /**
  * PERF: Record used by ObjectLevelReadQuery ResultSet optimization.
@@ -43,7 +43,7 @@ public class ResultSetRecord extends ArrayRecord {
         super();
     }
 
-    public ResultSetRecord(Vector fields, DatabaseField[] fieldsArray, ResultSet resultSet, ResultSetMetaData metaData, DatabaseAccessor accessor, AbstractSession session, DatabasePlatform platform, boolean optimizeData) {
+    public ResultSetRecord(List<DatabaseField> fields, DatabaseField[] fieldsArray, ResultSet resultSet, ResultSetMetaData metaData, DatabaseAccessor accessor, AbstractSession session, DatabasePlatform platform, boolean optimizeData) {
         super(fields, fieldsArray, new Object[fieldsArray.length]);
         this.resultSet = resultSet;
         this.metaData = metaData;

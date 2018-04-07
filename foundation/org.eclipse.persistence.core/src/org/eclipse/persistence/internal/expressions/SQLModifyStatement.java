@@ -12,12 +12,14 @@
  ******************************************************************************/
 package org.eclipse.persistence.internal.expressions;
 
-import java.util.*;
-import org.eclipse.persistence.internal.helper.*;
+import java.util.List;
+
 import org.eclipse.persistence.internal.databaseaccess.DatabaseCall;
-import org.eclipse.persistence.queries.SQLCall;
+import org.eclipse.persistence.internal.helper.DatabaseField;
+import org.eclipse.persistence.internal.helper.DatabaseTable;
 import org.eclipse.persistence.internal.sessions.AbstractRecord;
 import org.eclipse.persistence.internal.sessions.AbstractSession;
+import org.eclipse.persistence.queries.SQLCall;
 
 /**
  * <p><b>Purpose</b>: Mirror SQL behavior.
@@ -31,13 +33,13 @@ import org.eclipse.persistence.internal.sessions.AbstractSession;
 public abstract class SQLModifyStatement extends SQLStatement {
     protected DatabaseTable table;
     protected AbstractRecord modifyRow;
-    protected Vector returnFields;
+    protected List<DatabaseField> returnFields;
 
     public AbstractRecord getModifyRow() {
         return modifyRow;
     }
 
-    public Vector getReturnFields() {
+    public List<DatabaseField> getReturnFields() {
         return returnFields;
     }
 
@@ -49,7 +51,7 @@ public abstract class SQLModifyStatement extends SQLStatement {
         modifyRow = row;
     }
 
-    public void setReturnFields(Vector fields) {
+    public void setReturnFields(List<DatabaseField> fields) {
         returnFields = fields;
     }
 

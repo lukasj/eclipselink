@@ -106,7 +106,7 @@ public abstract class AbstractCompositeObjectMapping extends AggregateMapping {
      * Return the fields mapped by the mapping.
      */
     @Override
-    protected Vector collectFields() {
+    protected List<DatabaseField> collectFields() {
         Vector fields = new Vector(1);
         fields.addElement(this.getField());
         return fields;

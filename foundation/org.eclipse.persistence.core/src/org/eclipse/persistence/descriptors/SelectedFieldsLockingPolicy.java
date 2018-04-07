@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 1998, 2015 Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 1998, 2018 Oracle and/or its affiliates. All rights reserved.
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Public License v1.0 and Eclipse Distribution License v. 1.0
  * which accompanies this distribution.
@@ -150,7 +150,7 @@ public class SelectedFieldsLockingPolicy extends FieldsLockingPolicy {
             lockFields.set(index, field);
             List<DatabaseField> fieldsForTable = getLockFieldsByTable().get(field.getTable());
             if (fieldsForTable == null) {
-                fieldsForTable = org.eclipse.persistence.internal.helper.NonSynchronizedVector.newInstance();
+                fieldsForTable = new ArrayList<>();
                 getLockFieldsByTable().put(field.getTable(), fieldsForTable);
             }
             fieldsForTable.add(field);

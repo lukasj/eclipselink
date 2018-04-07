@@ -21,6 +21,7 @@ import org.eclipse.persistence.exceptions.ConversionException;
 import org.eclipse.persistence.exceptions.JAXBException;
 import org.eclipse.persistence.internal.core.helper.CoreClassConstants;
 import org.eclipse.persistence.internal.helper.ConversionManager;
+import org.eclipse.persistence.internal.helper.DatabaseField;
 import org.eclipse.persistence.internal.jaxb.JAXBSchemaOutputResolver;
 import org.eclipse.persistence.internal.jaxb.JaxbClassLoader;
 import org.eclipse.persistence.internal.jaxb.ObjectGraphImpl;
@@ -1365,11 +1366,10 @@ public class JAXBContext extends javax.xml.bind.JAXBContext {
             }
             processed.add(desc);
 
-            Vector mappings = desc.getMappings();
+            List<DatabaseMapping> mappings = desc.getMappings();
 
-            for (Object mapping : mappings) {
-                DatabaseMapping nextMapping = (DatabaseMapping) mapping;
-                Vector fields = nextMapping.getFields();
+            for (DatabaseMapping nextMapping : mappings) {
+                List<DatabaseField> fields = nextMapping.getFields();
                 updateResolverForFields(fields, nr);
                 Descriptor refDesc = (Descriptor) nextMapping.getReferenceDescriptor();
                 if (refDesc != null && !processed.contains(refDesc)) {

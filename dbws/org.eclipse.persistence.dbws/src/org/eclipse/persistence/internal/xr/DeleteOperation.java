@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 1998, 2016 Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 1998, 2018 Oracle and/or its affiliates. All rights reserved.
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Public License v1.0 and Eclipse Distribution License v. 1.0
  * which accompanies this distribution.
@@ -17,6 +17,7 @@ import static org.eclipse.persistence.internal.xr.Util.PK_QUERYNAME;
 import static org.eclipse.persistence.internal.xr.Util.TYPE_STR;
 import static org.eclipse.persistence.internal.xr.Util.UNDERSCORE_STR;
 
+import java.util.ArrayList;
 //javase imports
 import java.util.List;
 import java.util.Vector;
@@ -26,7 +27,6 @@ import java.util.Vector;
 //EclipseLink imports
 import org.eclipse.persistence.descriptors.ClassDescriptor;
 import org.eclipse.persistence.exceptions.DBWSException;
-import org.eclipse.persistence.internal.helper.NonSynchronizedVector;
 import org.eclipse.persistence.internal.jpa.JPAQuery;
 import org.eclipse.persistence.queries.DatabaseQuery;
 import org.eclipse.persistence.sessions.UnitOfWork;
@@ -127,7 +127,7 @@ public class DeleteOperation extends Operation {
             // whereas named queries (SQL strings) do not...
             List queryArguments = query.getArguments();
             int queryArgumentsSize = queryArguments.size();
-            Vector executeArguments = new NonSynchronizedVector();
+            List executeArguments = new ArrayList();
             for (int i = 0; i < queryArgumentsSize; i++) {
                 String argName = (String)queryArguments.get(i);
                 executeArguments.add(invocation.getParameter(argName));

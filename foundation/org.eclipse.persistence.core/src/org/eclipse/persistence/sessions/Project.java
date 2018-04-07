@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 1998, 2015 Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 1998, 2018 Oracle and/or its affiliates. All rights reserved.
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Public License v1.0 and Eclipse Distribution License v. 1.0
  * which accompanies this distribution.
@@ -87,7 +87,7 @@ public class Project extends CoreProject<ClassDescriptor, Login, DatabaseSession
     protected MultitenantPolicy multitenantPolicy;
 
     /** Holds the default set of read-only classes that apply to each UnitOfWork. */
-    protected Vector defaultReadOnlyClasses;
+    protected Vector<Class> defaultReadOnlyClasses;
 
     /** Cache the EJBQL descriptor aliases. */
     protected Map aliasDescriptors;
@@ -651,7 +651,7 @@ public class Project extends CoreProject<ClassDescriptor, Login, DatabaseSession
      * PUBLIC:
      * Returns the default set of read-only classes.
      */
-    public Vector getDefaultReadOnlyClasses() {
+    public Vector<Class> getDefaultReadOnlyClasses() {
         return defaultReadOnlyClasses;
     }
 
@@ -871,8 +871,8 @@ public class Project extends CoreProject<ClassDescriptor, Login, DatabaseSession
      * PUBLIC:
      * Set the read-only classes which apply to each UnitOfWork create by default.
      */
-    public void setDefaultReadOnlyClasses(Collection newValue) {
-        this.defaultReadOnlyClasses = new Vector(newValue);
+    public void setDefaultReadOnlyClasses(Collection<Class> newValue) {
+        this.defaultReadOnlyClasses = new Vector<>(newValue);
     }
 
     /**

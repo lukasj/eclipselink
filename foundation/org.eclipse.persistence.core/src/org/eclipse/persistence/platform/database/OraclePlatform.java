@@ -38,6 +38,7 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Hashtable;
 import java.util.Iterator;
+import java.util.List;
 import java.util.Vector;
 
 import org.eclipse.persistence.exceptions.DatabaseException;
@@ -54,7 +55,6 @@ import org.eclipse.persistence.internal.helper.ClassConstants;
 import org.eclipse.persistence.internal.helper.DatabaseField;
 import org.eclipse.persistence.internal.helper.DatabaseTable;
 import org.eclipse.persistence.internal.helper.Helper;
-import org.eclipse.persistence.internal.helper.NonSynchronizedVector;
 import org.eclipse.persistence.internal.localization.ExceptionLocalization;
 import org.eclipse.persistence.internal.sessions.AbstractSession;
 import org.eclipse.persistence.queries.DataModifyQuery;
@@ -259,7 +259,7 @@ public class OraclePlatform extends org.eclipse.persistence.platform.database.Da
      * Returns null unless the platform supports call with returning
      */
     @Override
-    public DatabaseCall buildCallWithReturning(SQLCall sqlCall, Vector returnFields) {
+    public DatabaseCall buildCallWithReturning(SQLCall sqlCall, List<DatabaseField> returnFields) {
         SQLCall call = new SQLCall();
         call.setParameters(sqlCall.getParameters());
         call.setParameterTypes(sqlCall.getParameterTypes());
@@ -271,7 +271,7 @@ public class OraclePlatform extends org.eclipse.persistence.platform.database.Da
             writer.write(" RETURNING ");
 
             for (int i = 0; i < returnFields.size(); i++) {
-                DatabaseField field = (DatabaseField)returnFields.elementAt(i);
+                DatabaseField field = returnFields.get(i);
                 writer.write(field.getNameDelimited(this));
                 if ((i + 1) < returnFields.size()) {
                     writer.write(", ");
@@ -281,7 +281,7 @@ public class OraclePlatform extends org.eclipse.persistence.platform.database.Da
             writer.write(" INTO ");
 
             for (int i = 0; i < returnFields.size(); i++) {
-                DatabaseField field = (DatabaseField)returnFields.elementAt(i);
+                DatabaseField field = returnFields.get(i);
                 call.appendOut(writer, field);
                 if ((i + 1) < returnFields.size()) {
                     writer.write(", ");
@@ -620,14 +620,14 @@ public class OraclePlatform extends org.eclipse.persistence.platform.database.Da
         ExpressionOperator result = new ExpressionOperator();
         result.setSelector(ExpressionOperator.Regexp);
         result.setType(ExpressionOperator.FunctionOperator);
-        Vector v = NonSynchronizedVector.newInstance(3);
+        List<String> v = new ArrayList<>(3);
         v.add("REGEXP_LIKE(");
         v.add(", ");
         v.add(")");
         result.printsAs(v);
         result.bePrefix();
         result.setNodeClass(ClassConstants.FunctionExpression_Class);
-        v = NonSynchronizedVector.newInstance(2);
+        v = new ArrayList<>(2);
         v.add(".regexp(");
         v.add(")");
         result.printsJavaAs(v);
@@ -655,9 +655,9 @@ public class OraclePlatform extends org.eclipse.persistence.platform.database.Da
     protected ExpressionOperator logOperator() {
         ExpressionOperator result = new ExpressionOperator();
         result.setSelector(ExpressionOperator.Log);
-        Vector v = NonSynchronizedVector.newInstance(2);
-        v.addElement("LOG(10,");
-        v.addElement(")");
+        List<String> v = new ArrayList<>(2);
+        v.add("LOG(10,");
+        v.add(")");
         result.printsAs(v);
         result.bePrefix();
         result.setNodeClass(FunctionExpression.class);
@@ -733,8 +733,8 @@ public class OraclePlatform extends org.eclipse.persistence.platform.database.Da
     protected ExpressionOperator operatorOuterJoin() {
         ExpressionOperator result = new ExpressionOperator();
         result.setSelector(ExpressionOperator.EqualOuterJoin);
-        Vector v = NonSynchronizedVector.newInstance(2);
-        v.addElement(" (+) = ");
+        List<String> v = new ArrayList<>(2);
+        v.add(" (+) = ");
         result.printsAs(v);
         result.bePostfix();
         result.setNodeClass(RelationExpression.class);
@@ -749,10 +749,10 @@ public class OraclePlatform extends org.eclipse.persistence.platform.database.Da
     protected ExpressionOperator operatorLocate() {
         ExpressionOperator result = new ExpressionOperator();
         result.setSelector(ExpressionOperator.Locate);
-        Vector v = NonSynchronizedVector.newInstance(2);
-        v.addElement("INSTR(");
-        v.addElement(", ");
-        v.addElement(")");
+        List<String> v = new ArrayList<>(2);
+        v.add("INSTR(");
+        v.add(", ");
+        v.add(")");
         result.printsAs(v);
         result.bePrefix();
         result.setNodeClass(RelationExpression.class);
@@ -766,11 +766,11 @@ public class OraclePlatform extends org.eclipse.persistence.platform.database.Da
     protected ExpressionOperator operatorLocate2() {
         ExpressionOperator result = new ExpressionOperator();
         result.setSelector(ExpressionOperator.Locate2);
-        Vector v = NonSynchronizedVector.newInstance(2);
-        v.addElement("INSTR(");
-        v.addElement(", ");
-        v.addElement(", ");
-        v.addElement(")");
+        List<String> v = new ArrayList<>(2);
+        v.add("INSTR(");
+        v.add(", ");
+        v.add(", ");
+        v.add(")");
         result.printsAs(v);
         result.bePrefix();
         result.setNodeClass(RelationExpression.class);

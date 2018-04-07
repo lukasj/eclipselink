@@ -27,8 +27,8 @@ public class NestedTable extends DatabaseTable {
     public NestedTable(QueryKeyExpression queryKeyExpression) {
         super();
         this.queryKeyExpression = queryKeyExpression;
-        setName((queryKeyExpression.getMapping().getDescriptor().getTables().firstElement()).getName());
-        tableQualifier = (queryKeyExpression.getMapping().getDescriptor().getTables().firstElement()).getQualifiedName();
+        setName((queryKeyExpression.getMapping().getDescriptor().getTables().get(0)).getName());
+        tableQualifier = (queryKeyExpression.getMapping().getDescriptor().getTables().get(0)).getQualifiedName();
     }
 
     /**
@@ -50,7 +50,7 @@ public class NestedTable extends DatabaseTable {
         if (qualifiedName == null) {
             // Print nested table using the TABLE function.
             DatabaseMapping mapping = queryKeyExpression.getMapping();
-            DatabaseTable nestedTable = mapping.getDescriptor().getTables().firstElement();
+            DatabaseTable nestedTable = mapping.getDescriptor().getTables().get(0);
             DatabaseTable tableAlias = queryKeyExpression.getBaseExpression().aliasForTable(nestedTable);
 
             StringBuilder name = new StringBuilder();

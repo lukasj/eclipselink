@@ -339,7 +339,7 @@ public class XMLAnyAttributeMapping extends DatabaseMapping implements XMLMappin
     }
 
     @Override
-    public Vector getFields() {
+    public List<DatabaseField> getFields() {
         return this.collectFields();
     }
 

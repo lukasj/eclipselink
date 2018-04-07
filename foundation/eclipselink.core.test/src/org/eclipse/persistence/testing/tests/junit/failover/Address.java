@@ -13,6 +13,7 @@
 package org.eclipse.persistence.testing.tests.junit.failover;
 
 import java.math.BigDecimal;
+import java.util.List;
 import java.util.Vector;
 
 import org.eclipse.persistence.descriptors.ClassDescriptor;
@@ -98,7 +99,7 @@ public final class Address {
 
     static Vector<DatabaseRecord> getData(ClassDescriptor desc) {
         Vector<DatabaseRecord> rows = new Vector<>();
-        Vector<DatabaseField> fields = desc.getAllFields();
+        List<DatabaseField> fields = desc.getAllFields();
         DatabaseField[] fieldsArray = fields.toArray(new DatabaseField[0]);
         rows.add(new ArrayRecord(fields, fieldsArray, new Object[] { Integer.valueOf(51), "Calgary", "Canada", "J5J2B5", "ALB", "1111 Moose Rd." }));
         rows.add(new ArrayRecord(fields, fieldsArray, new Object[] { Integer.valueOf(52), "Metcalfe", "Canada", "Y4F7V6", "ONT", "2 Anderson Rd." }));

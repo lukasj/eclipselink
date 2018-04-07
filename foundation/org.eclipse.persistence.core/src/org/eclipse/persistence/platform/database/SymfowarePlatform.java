@@ -20,10 +20,11 @@ import java.io.IOException;
 import java.io.Writer;
 import java.sql.Connection;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Hashtable;
+import java.util.List;
 import java.util.Map;
-import java.util.Vector;
 
 import org.eclipse.persistence.expressions.ExpressionOperator;
 import org.eclipse.persistence.internal.databaseaccess.DatabaseCall;
@@ -33,7 +34,6 @@ import org.eclipse.persistence.internal.expressions.FunctionExpression;
 import org.eclipse.persistence.internal.expressions.SQLSelectStatement;
 import org.eclipse.persistence.internal.helper.ClassConstants;
 import org.eclipse.persistence.internal.helper.Helper;
-import org.eclipse.persistence.internal.helper.NonSynchronizedVector;
 import org.eclipse.persistence.internal.sessions.AbstractSession;
 import org.eclipse.persistence.queries.ReportQuery;
 import org.eclipse.persistence.queries.ValueReadQuery;
@@ -369,9 +369,9 @@ public class SymfowarePlatform extends DatabasePlatform {
     protected static ExpressionOperator length() {
         ExpressionOperator exOperator = new ExpressionOperator();
         exOperator.setSelector(ExpressionOperator.Length);
-        Vector<String> v = NonSynchronizedVector.newInstance(2);
-        v.addElement("CHAR_LENGTH(");
-        v.addElement(")");
+        List<String> v = new ArrayList<>(2);
+        v.add("CHAR_LENGTH(");
+        v.add(")");
         exOperator.printsAs(v);
         exOperator.bePrefix();
         exOperator.setNodeClass(ClassConstants.FunctionExpression_Class);
@@ -389,9 +389,9 @@ public class SymfowarePlatform extends DatabasePlatform {
     protected static ExpressionOperator charLength() {
         ExpressionOperator exOperator = new ExpressionOperator();
         exOperator.setSelector(ExpressionOperator.CharLength);
-        Vector<String> v = NonSynchronizedVector.newInstance(2);
-        v.addElement("CHAR_LENGTH(");
-        v.addElement(")");
+        List<String> v = new ArrayList<>(2);
+        v.add("CHAR_LENGTH(");
+        v.add(")");
         exOperator.printsAs(v);
         exOperator.bePrefix();
         exOperator.setNodeClass(ClassConstants.FunctionExpression_Class);
@@ -409,10 +409,10 @@ public class SymfowarePlatform extends DatabasePlatform {
     protected static ExpressionOperator locate() {
         ExpressionOperator exOperator = new ExpressionOperator();
         exOperator.setSelector(ExpressionOperator.Locate);
-        Vector<String> v = NonSynchronizedVector.newInstance(3);
-        v.addElement("POSITION(");
-        v.addElement(" IN ");
-        v.addElement(")");
+        List<String> v = new ArrayList<>(3);
+        v.add("POSITION(");
+        v.add(" IN ");
+        v.add(")");
         exOperator.printsAs(v);
         exOperator.bePrefix();
         int[] indices = { 1, 0 };
@@ -433,11 +433,11 @@ public class SymfowarePlatform extends DatabasePlatform {
     protected static ExpressionOperator locate2() {
         ExpressionOperator exOperator = new ExpressionOperator();
         exOperator.setSelector(ExpressionOperator.Locate2);
-        Vector<String> v = NonSynchronizedVector.newInstance(4);
-        v.addElement("POSITION(");
-        v.addElement(" IN ");
-        v.addElement(",");
-        v.addElement(")");
+        List<String> v = new ArrayList<>(4);
+        v.add("POSITION(");
+        v.add(" IN ");
+        v.add(",");
+        v.add(")");
         exOperator.printsAs(v);
         exOperator.bePrefix();
         int[] indices = { 1, 0, 2};
@@ -457,9 +457,9 @@ public class SymfowarePlatform extends DatabasePlatform {
     protected static ExpressionOperator logOperator() {
         ExpressionOperator exOperator = new ExpressionOperator();
         exOperator.setSelector(ExpressionOperator.Log);
-        Vector<String> v = NonSynchronizedVector.newInstance(2);
-        v.addElement("(LN(");
-        v.addElement(")/LN(10))");
+        List<String> v = new ArrayList<>(2);
+        v.add("(LN(");
+        v.add(")/LN(10))");
         exOperator.printsAs(v);
         exOperator.bePrefix();
         exOperator.setNodeClass(FunctionExpression.class);
@@ -477,9 +477,9 @@ public class SymfowarePlatform extends DatabasePlatform {
     protected static ExpressionOperator leftTrim() {
         ExpressionOperator exOperator = new ExpressionOperator();
         exOperator.setSelector(ExpressionOperator.LeftTrim);
-        Vector<String> v = NonSynchronizedVector.newInstance(2);
-        v.addElement("TRIM(LEADING FROM ");
-        v.addElement(")");
+        List<String> v = new ArrayList<>(2);
+        v.add("TRIM(LEADING FROM ");
+        v.add(")");
         exOperator.printsAs(v);
         exOperator.bePrefix();
         exOperator.setNodeClass(ClassConstants.FunctionExpression_Class);
@@ -497,10 +497,10 @@ public class SymfowarePlatform extends DatabasePlatform {
     protected static ExpressionOperator leftTrim2() {
         ExpressionOperator exOperator = new ExpressionOperator();
         exOperator.setSelector(ExpressionOperator.LeftTrim2);
-        Vector<String> v = NonSynchronizedVector.newInstance(3);
-        v.addElement("TRIM(LEADING ");
-        v.addElement(" FROM ");
-        v.addElement(")");
+        List<String> v = new ArrayList<>(3);
+        v.add("TRIM(LEADING ");
+        v.add(" FROM ");
+        v.add(")");
         exOperator.printsAs(v);
         exOperator.bePrefix();
         int[] indices = { 1, 0 };
@@ -522,14 +522,14 @@ public class SymfowarePlatform extends DatabasePlatform {
     protected static ExpressionOperator mod() {
         ExpressionOperator exOperator = new ExpressionOperator();
         exOperator.setSelector(ExpressionOperator.Mod);
-        Vector<String> v = NonSynchronizedVector.newInstance(7);
-        v.addElement("(CASE WHEN ");
-        v.addElement(" = 0 THEN ");
-        v.addElement(" ELSE (");
-        v.addElement(" - ");
-        v.addElement(" * TRUNC( ");
-        v.addElement(" / ");
-        v.addElement(")) END)");
+        List<String> v = new ArrayList<>(7);
+        v.add("(CASE WHEN ");
+        v.add(" = 0 THEN ");
+        v.add(" ELSE (");
+        v.add(" - ");
+        v.add(" * TRUNC( ");
+        v.add(" / ");
+        v.add(")) END)");
         exOperator.printsAs(v);
         exOperator.bePrefix();
         int[] indices = { 1, 0, 0, 1, 0, 1};
@@ -549,9 +549,9 @@ public class SymfowarePlatform extends DatabasePlatform {
     protected static ExpressionOperator rightTrim() {
         ExpressionOperator exOperator = new ExpressionOperator();
         exOperator.setSelector(ExpressionOperator.RightTrim);
-        Vector<String> v = NonSynchronizedVector.newInstance(2);
-        v.addElement("TRIM(TRAILING FROM ");
-        v.addElement(")");
+        List<String> v = new ArrayList<>(2);
+        v.add("TRIM(TRAILING FROM ");
+        v.add(")");
         exOperator.printsAs(v);
         exOperator.bePrefix();
         exOperator.setNodeClass(ClassConstants.FunctionExpression_Class);
@@ -569,10 +569,10 @@ public class SymfowarePlatform extends DatabasePlatform {
     protected static ExpressionOperator rightTrim2() {
         ExpressionOperator exOperator = new ExpressionOperator();
         exOperator.setSelector(ExpressionOperator.RightTrim2);
-        Vector<String> v = NonSynchronizedVector.newInstance(3);
-        v.addElement("TRIM(TRAILING ");
-        v.addElement(" FROM ");
-        v.addElement(")");
+        List<String> v = new ArrayList<>(3);
+        v.add("TRIM(TRAILING ");
+        v.add(" FROM ");
+        v.add(")");
         exOperator.printsAs(v);
         exOperator.bePrefix();
         int[] indices = { 1, 0 };
@@ -592,11 +592,11 @@ public class SymfowarePlatform extends DatabasePlatform {
     protected static ExpressionOperator substring() {
         ExpressionOperator exOperator = new ExpressionOperator();
         exOperator.setSelector(ExpressionOperator.Substring);
-        Vector<String> v = NonSynchronizedVector.newInstance(4);
-        v.addElement("SUBSTRING(");
-        v.addElement(" FROM ");
-        v.addElement(" FOR ");
-        v.addElement(")");
+        List<String> v = new ArrayList<>(4);
+        v.add("SUBSTRING(");
+        v.add(" FROM ");
+        v.add(" FOR ");
+        v.add(")");
         exOperator.printsAs(v);
         exOperator.bePrefix();
         exOperator.setNodeClass(ClassConstants.FunctionExpression_Class);
@@ -615,10 +615,10 @@ public class SymfowarePlatform extends DatabasePlatform {
     protected static ExpressionOperator singleArgumentSubstring() {
         ExpressionOperator exOperator = new ExpressionOperator();
         exOperator.setSelector(ExpressionOperator.SubstringSingleArg);
-        Vector<String> v = NonSynchronizedVector.newInstance(3);
-        v.addElement("SUBSTRING(");
-        v.addElement(" FROM ");
-        v.addElement(")");
+        List<String> v = new ArrayList<>(3);
+        v.add("SUBSTRING(");
+        v.add(" FROM ");
+        v.add(")");
         exOperator.printsAs(v);
         exOperator.bePrefix();
         exOperator.setNodeClass(ClassConstants.FunctionExpression_Class);
@@ -636,9 +636,9 @@ public class SymfowarePlatform extends DatabasePlatform {
     protected static ExpressionOperator toNumber() {
         ExpressionOperator exOperator = new ExpressionOperator();
         exOperator.setSelector(ExpressionOperator.ToNumber);
-        Vector<String> v = NonSynchronizedVector.newInstance(2);
-        v.addElement("CAST(");
-        v.addElement(" AS SMALLINT)");
+        List<String> v = new ArrayList<>(2);
+        v.add("CAST(");
+        v.add(" AS SMALLINT)");
         exOperator.printsAs(v);
         exOperator.bePrefix();
         exOperator.setNodeClass(ClassConstants.FunctionExpression_Class);
@@ -656,10 +656,10 @@ public class SymfowarePlatform extends DatabasePlatform {
     protected static ExpressionOperator instring() {
         ExpressionOperator exOperator = new ExpressionOperator();
         exOperator.setSelector(ExpressionOperator.Instring);
-        Vector<String> v = NonSynchronizedVector.newInstance(3);
-        v.addElement("POSITION(");
-        v.addElement(" IN ");
-        v.addElement(")");
+        List<String> v = new ArrayList<>(3);
+        v.add("POSITION(");
+        v.add(" IN ");
+        v.add(")");
         exOperator.printsAs(v);
         exOperator.bePrefix();
         int[] indices = { 1, 0 };
@@ -679,10 +679,10 @@ public class SymfowarePlatform extends DatabasePlatform {
     protected static ExpressionOperator monthsBetween() {
         ExpressionOperator exOperator = new ExpressionOperator();
         exOperator.setSelector(ExpressionOperator.MonthsBetween);
-        Vector<String> v = NonSynchronizedVector.newInstance(3);
-        v.addElement("SPAN_DATE(");
-        v.addElement(" , ");
-        v.addElement(",'MONTH')");
+        List<String> v = new ArrayList<>(3);
+        v.add("SPAN_DATE(");
+        v.add(" , ");
+        v.add(",'MONTH')");
         exOperator.printsAs(v);
         exOperator.bePrefix();
         exOperator.setNodeClass(ClassConstants.FunctionExpression_Class);
@@ -700,10 +700,10 @@ public class SymfowarePlatform extends DatabasePlatform {
     protected static ExpressionOperator roundDate() {
         ExpressionOperator exOperator = new ExpressionOperator();
         exOperator.setSelector(ExpressionOperator.RoundDate);
-        Vector<String> v = NonSynchronizedVector.newInstance(3);
-        v.addElement("ROUND_DATE(");
-        v.addElement(" , ");
-        v.addElement(")");
+        List<String> v = new ArrayList<>(3);
+        v.add("ROUND_DATE(");
+        v.add(" , ");
+        v.add(")");
         exOperator.printsAs(v);
         exOperator.bePrefix();
         exOperator.setNodeClass(ClassConstants.FunctionExpression_Class);
@@ -722,9 +722,9 @@ public class SymfowarePlatform extends DatabasePlatform {
     protected static ExpressionOperator toDate() {
         ExpressionOperator exOperator = new ExpressionOperator();
         exOperator.setSelector(ExpressionOperator.ToDate);
-        Vector<String> v = NonSynchronizedVector.newInstance(2);
-        v.addElement("CNV_DATE(");
-        v.addElement(", 'YYYY-MM-DD')");
+        List<String> v = new ArrayList<>(2);
+        v.add("CNV_DATE(");
+        v.add(", 'YYYY-MM-DD')");
         exOperator.printsAs(v);
         exOperator.bePrefix();
         exOperator.setNodeClass(ClassConstants.FunctionExpression_Class);
@@ -743,11 +743,11 @@ public class SymfowarePlatform extends DatabasePlatform {
     protected static ExpressionOperator addDate() {
         ExpressionOperator exOperator = new ExpressionOperator();
         exOperator.setSelector(ExpressionOperator.AddDate);
-        Vector<String> v = NonSynchronizedVector.newInstance(4);
-        v.addElement("ADD_DATE(");
-        v.addElement(", ");
-        v.addElement(", '");
-        v.addElement("')");
+        List<String> v = new ArrayList<>(4);
+        v.add("ADD_DATE(");
+        v.add(", ");
+        v.add(", '");
+        v.add("')");
         exOperator.printsAs(v);
         exOperator.bePrefix();
 
@@ -770,10 +770,10 @@ public class SymfowarePlatform extends DatabasePlatform {
     protected static ExpressionOperator truncateDate() {
         ExpressionOperator exOperator = new ExpressionOperator();
         exOperator.setSelector(ExpressionOperator.TruncateDate);
-        Vector<String> v = NonSynchronizedVector.newInstance(3);
-        v.addElement("TRUNC_DATE(");
-        v.addElement(",");
-        v.addElement(")");
+        List<String> v = new ArrayList<>(3);
+        v.add("TRUNC_DATE(");
+        v.add(",");
+        v.add(")");
         exOperator.printsAs(v);
         exOperator.bePrefix();
         exOperator.setNodeClass(ClassConstants.FunctionExpression_Class);
@@ -805,12 +805,12 @@ public class SymfowarePlatform extends DatabasePlatform {
         ExpressionOperator exOperator = new ExpressionOperator();
         exOperator.setType(ExpressionOperator.FunctionOperator);
         exOperator.setSelector(ExpressionOperator.Greatest);
-        Vector<String> v = NonSynchronizedVector.newInstance(5);
-        v.addElement("(CASE WHEN ");
-        v.addElement(" >= ");
-        v.addElement(" THEN ");
-        v.addElement(" ELSE ");
-        v.addElement(" END)");
+        List<String> v = new ArrayList<>(5);
+        v.add("(CASE WHEN ");
+        v.add(" >= ");
+        v.add(" THEN ");
+        v.add(" ELSE ");
+        v.add(" END)");
         exOperator.printsAs(v);
         exOperator.bePrefix();
         int[] indices = {0, 1, 0, 1};
@@ -831,12 +831,12 @@ public class SymfowarePlatform extends DatabasePlatform {
         ExpressionOperator exOperator = new ExpressionOperator();
         exOperator.setType(ExpressionOperator.FunctionOperator);
         exOperator.setSelector(ExpressionOperator.Least);
-        Vector<String> v = NonSynchronizedVector.newInstance(5);
-        v.addElement("(CASE WHEN ");
-        v.addElement(" <= ");
-        v.addElement(" THEN ");
-        v.addElement(" ELSE ");
-        v.addElement(" END)");
+        List<String> v = new ArrayList<>(5);
+        v.add("(CASE WHEN ");
+        v.add(" <= ");
+        v.add(" THEN ");
+        v.add(" ELSE ");
+        v.add(" END)");
         exOperator.printsAs(v);
         exOperator.bePrefix();
         int[] indices = {0, 1, 0, 1};

@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 1998, 2015 Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 1998, 2018 Oracle and/or its affiliates. All rights reserved.
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Public License v1.0 and Eclipse Distribution License v. 1.0
  * which accompanies this distribution.
@@ -51,16 +51,16 @@ public class HistoricalQualifiedTableEmployeeSystem extends EmployeeSystem {
         }
         mapping.setRelationTableName(user + "." + oldRelationTableName);
 
-        Vector targetRelationKeyFields = mapping.getTargetKeyFields();
+        List<DatabaseField> targetRelationKeyFields = mapping.getTargetKeyFields();
         for (int i = 0; i < targetRelationKeyFields.size(); i++) {
-            String oldName = ((DatabaseField)targetRelationKeyFields.get(i)).getTable().getName();
-            ((DatabaseField)targetRelationKeyFields.get(i)).setTableName(user + "." + oldName);
+            String oldName = targetRelationKeyFields.get(i).getTable().getName();
+            targetRelationKeyFields.get(i).setTableName(user + "." + oldName);
         }
 
-        Vector sourceRelationKeyFields = mapping.getSourceRelationKeyFields();
+        List<DatabaseField> sourceRelationKeyFields = mapping.getSourceRelationKeyFields();
         for (int i = 0; i < sourceRelationKeyFields.size(); i++) {
-            String oldName = ((DatabaseField)sourceRelationKeyFields.get(i)).getTable().getName();
-            ((DatabaseField)sourceRelationKeyFields.get(i)).setTableName(user + "." + oldName);
+            String oldName = sourceRelationKeyFields.get(i).getTable().getName();
+            sourceRelationKeyFields.get(i).setTableName(user + "." + oldName);
         }
 
         DirectCollectionMapping dcmapping = (DirectCollectionMapping)empDescriptor.getMappingForAttributeName("responsibilitiesList");

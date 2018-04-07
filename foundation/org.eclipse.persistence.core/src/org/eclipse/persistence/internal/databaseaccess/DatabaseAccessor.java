@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 1998, 2017 Oracle and/or its affiliates, IBM Corporation. All rights reserved.
+ * Copyright (c) 1998, 2018 Oracle and/or its affiliates, IBM Corporation. All rights reserved.
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Public License v1.0 and Eclipse Distribution License v. 1.0
  * which accompanies this distribution.
@@ -457,7 +457,7 @@ public class DatabaseAccessor extends DatasourceAccessor {
      * with values from the next valid row in the result set. Intended solely
      * for cursored stream support.
      */
-    public AbstractRecord cursorRetrieveNextRow(Vector fields, ResultSet resultSet, AbstractSession session) throws DatabaseException {
+    public AbstractRecord cursorRetrieveNextRow(List<DatabaseField> fields, ResultSet resultSet, AbstractSession session) throws DatabaseException {
         try {
             if (resultSet.next()) {
                 return fetchRow(fields, resultSet, resultSet.getMetaData(), session);
@@ -476,7 +476,7 @@ public class DatabaseAccessor extends DatasourceAccessor {
      * with values from the next valid row in the result set. Intended solely
      * for scrollable cursor support.
      */
-    public AbstractRecord cursorRetrievePreviousRow(Vector fields, ResultSet resultSet, AbstractSession session) throws DatabaseException {
+    public AbstractRecord cursorRetrievePreviousRow(List<DatabaseField> fields, ResultSet resultSet, AbstractSession session) throws DatabaseException {
         try {
             if (resultSet.previous()) {
                 return fetchRow(fields, resultSet, resultSet.getMetaData(), session);
@@ -1037,14 +1037,14 @@ public class DatabaseAccessor extends DatasourceAccessor {
      * match the number of column names available on the database.
      * PERF: This method must be highly optimized.
      */
-    protected AbstractRecord fetchRow(Vector fields, ResultSet resultSet, ResultSetMetaData metaData, AbstractSession session) throws DatabaseException {
+    protected AbstractRecord fetchRow(List<DatabaseField> fields, ResultSet resultSet, ResultSetMetaData metaData, AbstractSession session) throws DatabaseException {
         int size = fields.size();
         Vector values = NonSynchronizedVector.newInstance(size);
         // PERF: Pass platform and optimize data flag.
         DatabasePlatform platform = getPlatform();
         boolean optimizeData = platform.shouldOptimizeDataConversion();
         for (int index = 0; index < size; index++) {
-            DatabaseField field = (DatabaseField)fields.elementAt(index);
+            DatabaseField field = fields.get(index);
             // Field can be null for fetch groups.
             if (field != null) {
                 values.add(getObject(resultSet, field, metaData, index + 1, platform, optimizeData, session));
@@ -1175,7 +1175,7 @@ public class DatabaseAccessor extends DatasourceAccessor {
         try {
             incrementCallCount(session);
             resultSet = getConnectionMetaData().getColumns(catalog, schema, tableName, columnName);
-            Vector fields = buildSortedFields(null, resultSet, session);
+            List<DatabaseField> fields = buildSortedFields(null, resultSet, session);
             ResultSetMetaData metaData = resultSet.getMetaData();
 
             while (resultSet.next()) {
@@ -1487,7 +1487,7 @@ public class DatabaseAccessor extends DatasourceAccessor {
         try {
             incrementCallCount(session);
             resultSet = getConnectionMetaData().getTables(catalog, schema, tableName, types);
-            Vector fields = buildSortedFields(null, resultSet, session);
+            List<DatabaseField> fields = buildSortedFields(null, resultSet, session);
             ResultSetMetaData metaData = resultSet.getMetaData();
 
             while (resultSet.next()) {

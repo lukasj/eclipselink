@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 1998, 2015 Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 1998, 2018 Oracle and/or its affiliates. All rights reserved.
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Public License v1.0 and Eclipse Distribution License v. 1.0
  * which accompanies this distribution.
@@ -460,8 +460,8 @@ public class ObjectPersistenceRuntimeXMLProject extends NamespaceResolvableProje
             public void setAttributeValueInObject(Object object, Object value) {
                 AggregateCollectionMapping mapping = (AggregateCollectionMapping)object;
                 List associations = (List)value;
-                mapping.setSourceKeyFields(NonSynchronizedVector.newInstance(associations.size()));
-                mapping.setTargetForeignKeyFields(NonSynchronizedVector.newInstance(associations.size()));
+                mapping.setSourceKeyFields(new ArrayList<>(associations.size()));
+                mapping.setTargetForeignKeyFields(new ArrayList<>(associations.size()));
                 Iterator iterator = associations.iterator();
                 while (iterator.hasNext()) {
                     Association association = (Association)iterator.next();
@@ -2600,8 +2600,8 @@ public class ObjectPersistenceRuntimeXMLProject extends NamespaceResolvableProje
         sourceToReferenceKeyFieldAssociationsMapping.setAttributeAccessor(new AttributeAccessor() {
             @Override
             public Object getAttributeValueFromObject(Object object) {
-                List sourceFields = ((DirectCollectionMapping)object).getSourceKeyFields();
-                List referenceFields = ((DirectCollectionMapping)object).getReferenceKeyFields();
+                List<DatabaseField> sourceFields = ((DirectCollectionMapping)object).getSourceKeyFields();
+                List<DatabaseField> referenceFields = ((DirectCollectionMapping)object).getReferenceKeyFields();
                 List associations = new ArrayList(sourceFields.size());
                 for (int index = 0; index < sourceFields.size(); index++) {
                     associations.add(new Association(referenceFields.get(index), sourceFields.get(index)));
@@ -2613,8 +2613,8 @@ public class ObjectPersistenceRuntimeXMLProject extends NamespaceResolvableProje
             public void setAttributeValueInObject(Object object, Object value) {
                 DirectCollectionMapping mapping = (DirectCollectionMapping)object;
                 List associations = (List)value;
-                mapping.setSourceKeyFields(NonSynchronizedVector.newInstance(associations.size()));
-                mapping.setReferenceKeyFields(NonSynchronizedVector.newInstance(associations.size()));
+                mapping.setSourceKeyFields(new ArrayList<>(associations.size()));
+                mapping.setReferenceKeyFields(new ArrayList<>(associations.size()));
                 Iterator iterator = associations.iterator();
                 while (iterator.hasNext()) {
                     Association association = (Association)iterator.next();

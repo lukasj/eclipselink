@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 1998, 2015 Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 1998, 2018 Oracle and/or its affiliates. All rights reserved.
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Public License v1.0 and Eclipse Distribution License v. 1.0
  * which accompanies this distribution.
@@ -12,9 +12,19 @@
  ******************************************************************************/
 package org.eclipse.persistence.testing.tests.eis.cobol;
 
-import java.util.*;
-import org.eclipse.persistence.internal.eis.cobol.*;
-import org.eclipse.persistence.internal.helper.*;
+import java.util.Enumeration;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Vector;
+
+import org.eclipse.persistence.internal.eis.cobol.CobolRow;
+import org.eclipse.persistence.internal.eis.cobol.CompositeFieldMetaData;
+import org.eclipse.persistence.internal.eis.cobol.CompositeObject;
+import org.eclipse.persistence.internal.eis.cobol.ElementaryFieldMetaData;
+import org.eclipse.persistence.internal.eis.cobol.FieldMetaData;
+import org.eclipse.persistence.internal.eis.cobol.RecordMetaData;
+import org.eclipse.persistence.internal.helper.DatabaseField;
+import org.eclipse.persistence.internal.helper.Helper;
 
 public class CobolTestModel extends org.eclipse.persistence.testing.framework.TestModel {
     public CobolTestModel() {
@@ -514,9 +524,9 @@ public class CobolTestModel extends org.eclipse.persistence.testing.framework.Te
             return false;
         }
 
-        Enumeration fieldsEnum = row1.getFields().elements();
+        Enumeration<DatabaseField> fieldsEnum = Helper.elements(row1.getFields());
         while (fieldsEnum.hasMoreElements()) {
-            DatabaseField field = (DatabaseField)fieldsEnum.nextElement();
+            DatabaseField field = fieldsEnum.nextElement();
             DatabaseField fieldMatch = row2.getField(field);
             if (fieldMatch == null) {
                 return false;

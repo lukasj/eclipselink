@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 1998, 2015 Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 1998, 2018 Oracle and/or its affiliates. All rights reserved.
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Public License v1.0 and Eclipse Distribution License v. 1.0
  * which accompanies this distribution.
@@ -14,13 +14,15 @@ package org.eclipse.persistence.testing.tests.workbenchintegration;
 
 import java.util.Vector;
 
-import org.eclipse.persistence.sessions.DatabaseRecord;
-import org.eclipse.persistence.sessions.Project;
-import org.eclipse.persistence.testing.framework.*;
-import org.eclipse.persistence.testing.models.employee.domain.Employee;
-import org.eclipse.persistence.sessions.factories.XMLProjectReader;
 import org.eclipse.persistence.descriptors.ClassDescriptor;
 import org.eclipse.persistence.queries.DatabaseQuery;
+import org.eclipse.persistence.sessions.DatabaseRecord;
+import org.eclipse.persistence.sessions.Project;
+import org.eclipse.persistence.sessions.factories.XMLProjectReader;
+import org.eclipse.persistence.testing.framework.TestCase;
+import org.eclipse.persistence.testing.framework.TestErrorException;
+import org.eclipse.persistence.testing.framework.TestWarningException;
+import org.eclipse.persistence.testing.models.employee.domain.Employee;
 
 @SuppressWarnings("unchecked")
 public class ProjectXMLStoredFunctionCallTest extends TestCase {
@@ -77,7 +79,7 @@ public class ProjectXMLStoredFunctionCallTest extends TestCase {
         throw new TestErrorException(
           "The stored function did not execute correctly. Expected: [P_OUT = 99]");
       }
-      Integer returnValue = (Integer)row.getValues().firstElement();
+      Integer returnValue = (Integer)row.getValues().get(0);
       if (!returnValue.equals(new Integer(99))) {
         throw new TestErrorException(
           "The stored function did not execute correctly. Expected: [return value = 99]");

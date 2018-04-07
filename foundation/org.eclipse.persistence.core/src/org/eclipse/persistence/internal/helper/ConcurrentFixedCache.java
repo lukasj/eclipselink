@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 1998, 2015 Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 1998, 2018 Oracle and/or its affiliates. All rights reserved.
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Public License v1.0 and Eclipse Distribution License v. 1.0
  * which accompanies this distribution.
@@ -13,8 +13,9 @@
 package org.eclipse.persistence.internal.helper;
 
 import java.io.Serializable;
-import java.util.*;
-import java.util.concurrent.*;
+import java.util.Iterator;
+import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 
 /**
  * Provide a concurrent fixed size caching mechanism.
@@ -22,9 +23,9 @@ import java.util.concurrent.*;
  * and other places a fixed size cache is needed.
  * The default fixed size is 100.
  */
-public class ConcurrentFixedCache implements Serializable {
+public class ConcurrentFixedCache<K, V> implements Serializable {
     protected int maxSize;
-    protected Map cache;
+    protected Map<K, V> cache;
 
     /**
      * Create a new concurrent cache, with a fixed size of 100.
@@ -38,7 +39,7 @@ public class ConcurrentFixedCache implements Serializable {
      */
     public ConcurrentFixedCache(int maxSize) {
         // PERF: Use a concurrent map to allow concurrent gets.
-        this.cache = new ConcurrentHashMap(maxSize);
+        this.cache = new ConcurrentHashMap<>(maxSize);
         this.maxSize = maxSize;
     }
 
@@ -62,7 +63,7 @@ public class ConcurrentFixedCache implements Serializable {
      * Return the pre-parsed query that represents the EJBQL string.
      * If the EJBQL has not been cached, null is returned.
      */
-    public Object get(Object key) {
+    public V get(K key) {
         return this.cache.get(key);
     }
 
@@ -74,7 +75,7 @@ public class ConcurrentFixedCache implements Serializable {
      * Add the value to the cache.
      * Remove the
      */
-    public void put(Object key, Object value) {
+    public void put(K key, V value) {
         if (this.maxSize == 0) {
             return;
         }
@@ -100,14 +101,14 @@ public class ConcurrentFixedCache implements Serializable {
     /**
      * Remove from cache.
      */
-    public void remove(Object key) {
+    public void remove(K key) {
         this.cache.remove(key);
     }
 
     /**
      * Return the cache.
      */
-    public Map getCache() {
+    public Map<K, V> getCache() {
         return cache;
     }
 }

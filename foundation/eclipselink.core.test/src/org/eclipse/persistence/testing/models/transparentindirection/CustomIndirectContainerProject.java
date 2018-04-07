@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 1998, 2015 Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 1998, 2018 Oracle and/or its affiliates. All rights reserved.
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Public License v1.0 and Eclipse Distribution License v. 1.0
  * which accompanies this distribution.
@@ -12,7 +12,7 @@
  ******************************************************************************/
 package org.eclipse.persistence.testing.models.transparentindirection;
 
-import java.util.*;
+import java.util.Vector;
 
 import org.eclipse.persistence.descriptors.RelationalDescriptor;
 
@@ -31,7 +31,7 @@ public class CustomIndirectContainerProject extends IndirectListProject {
 
         // SECTION: DESCRIPTOR
         descriptor.setJavaClass(Dog.class);
-        Vector vector = new Vector();
+        Vector<String> vector = new Vector<>();
         vector.addElement("DOG");
         descriptor.setTableNames(vector);
         descriptor.addPrimaryKeyFieldName("DOG.ID");

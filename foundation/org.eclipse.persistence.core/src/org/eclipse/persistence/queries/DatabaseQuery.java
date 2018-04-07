@@ -34,29 +34,50 @@
  ******************************************************************************/
 package org.eclipse.persistence.queries;
 
-import java.util.*;
+import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.Hashtable;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+import java.util.Vector;
 import java.util.concurrent.TimeUnit;
-import java.io.*;
 
-import org.eclipse.persistence.internal.helper.*;
 import org.eclipse.persistence.config.ParameterDelimiterType;
 import org.eclipse.persistence.descriptors.ClassDescriptor;
 import org.eclipse.persistence.descriptors.DescriptorQueryManager;
 import org.eclipse.persistence.descriptors.partitioning.PartitioningPolicy;
-import org.eclipse.persistence.expressions.*;
-import org.eclipse.persistence.internal.expressions.*;
-import org.eclipse.persistence.internal.databaseaccess.*;
-import org.eclipse.persistence.internal.queries.*;
-import org.eclipse.persistence.exceptions.*;
-import org.eclipse.persistence.internal.sessions.remote.*;
+import org.eclipse.persistence.exceptions.DatabaseException;
+import org.eclipse.persistence.exceptions.EclipseLinkException;
+import org.eclipse.persistence.exceptions.OptimisticLockException;
+import org.eclipse.persistence.exceptions.QueryException;
+import org.eclipse.persistence.expressions.Expression;
+import org.eclipse.persistence.internal.databaseaccess.Accessor;
+import org.eclipse.persistence.internal.databaseaccess.DatabaseCall;
+import org.eclipse.persistence.internal.databaseaccess.DatasourcePlatform;
+import org.eclipse.persistence.internal.expressions.SQLStatement;
+import org.eclipse.persistence.internal.helper.ConversionManager;
+import org.eclipse.persistence.internal.helper.DatabaseField;
+import org.eclipse.persistence.internal.helper.Helper;
+import org.eclipse.persistence.internal.helper.InvalidObject;
+import org.eclipse.persistence.internal.queries.CallQueryMechanism;
+import org.eclipse.persistence.internal.queries.DatabaseQueryMechanism;
+import org.eclipse.persistence.internal.queries.DatasourceCallQueryMechanism;
+import org.eclipse.persistence.internal.queries.ExpressionQueryMechanism;
+import org.eclipse.persistence.internal.queries.JPQLCallQueryMechanism;
+import org.eclipse.persistence.internal.queries.StatementQueryMechanism;
 import org.eclipse.persistence.internal.sessions.AbstractRecord;
 import org.eclipse.persistence.internal.sessions.AbstractSession;
 import org.eclipse.persistence.internal.sessions.UnitOfWorkImpl;
+import org.eclipse.persistence.internal.sessions.remote.RemoteSessionController;
+import org.eclipse.persistence.internal.sessions.remote.Transporter;
 import org.eclipse.persistence.mappings.DatabaseMapping;
-import org.eclipse.persistence.sessions.remote.*;
 import org.eclipse.persistence.sessions.DatabaseRecord;
 import org.eclipse.persistence.sessions.Record;
 import org.eclipse.persistence.sessions.SessionProfiler;
+import org.eclipse.persistence.sessions.remote.DistributedSession;
 
 /**
  * <p>
@@ -976,9 +997,9 @@ public abstract class DatabaseQuery implements Cloneable, Serializable {
             // Bug 3256198 - lazily initialize the argument types from their
             // class names
             if (this.argumentTypeNames != null) {
-                Iterator args = this.argumentTypeNames.iterator();
+                Iterator<String> args = this.argumentTypeNames.iterator();
                 while (args.hasNext()) {
-                    String argumentTypeName = (String) args.next();
+                    String argumentTypeName = args.next();
                     this.argumentTypes.add(Helper.getObjectClass(ConversionManager.loadClass(argumentTypeName)));
                 }
             }
@@ -993,7 +1014,7 @@ public abstract class DatabaseQuery implements Cloneable, Serializable {
      */
     public List<String> getArgumentTypeNames() {
         if (argumentTypeNames == null) {
-            argumentTypeNames = org.eclipse.persistence.internal.helper.NonSynchronizedVector.newInstance();
+            argumentTypeNames = new ArrayList<>();
         }
         return argumentTypeNames;
     }

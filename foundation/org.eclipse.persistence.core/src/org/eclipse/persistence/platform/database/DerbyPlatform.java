@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright 2005, 2017 Oracle and/or its affiliates, IBM Corporation. All rights reserved.
+ * Copyright 2005, 2018 Oracle and/or its affiliates, IBM Corporation. All rights reserved.
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Public License v1.0 and Eclipse Distribution License v. 1.0
  * which accompanies this distribution.
@@ -17,29 +17,30 @@
  ******************************************************************************/
 package org.eclipse.persistence.platform.database;
 
+import java.io.IOException;
+import java.io.Writer;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Hashtable;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Vector;
+
+import org.eclipse.persistence.exceptions.ValidationException;
+import org.eclipse.persistence.expressions.ExpressionOperator;
 import org.eclipse.persistence.internal.databaseaccess.DatabaseCall;
 import org.eclipse.persistence.internal.databaseaccess.FieldTypeDefinition;
 import org.eclipse.persistence.internal.expressions.ExpressionSQLPrinter;
 import org.eclipse.persistence.internal.expressions.SQLSelectStatement;
-import org.eclipse.persistence.internal.sessions.AbstractSession;
 import org.eclipse.persistence.internal.helper.ClassConstants;
+import org.eclipse.persistence.internal.helper.DatabaseField;
 import org.eclipse.persistence.internal.helper.DatabaseTable;
 import org.eclipse.persistence.internal.helper.Helper;
-import org.eclipse.persistence.internal.helper.NonSynchronizedVector;
-import org.eclipse.persistence.exceptions.ValidationException;
-import org.eclipse.persistence.expressions.ExpressionOperator;
+import org.eclipse.persistence.internal.sessions.AbstractSession;
 import org.eclipse.persistence.queries.ValueReadQuery;
-
-import java.util.Vector;
-import java.io.Writer;
-import java.io.IOException;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
-import java.util.Hashtable;
-import java.util.Collection;
-import java.util.Iterator;
-import org.eclipse.persistence.internal.helper.DatabaseField;
 
 /**
  * <p><b>Purpose</b>: Provides Derby DBMS specific behavior.
@@ -331,7 +332,7 @@ public class DerbyPlatform extends DB2Platform {
         exOperator.setType(ExpressionOperator.FunctionOperator);
         exOperator.setSelector(ExpressionOperator.Extract);
         exOperator.setName("EXTRACT");
-        Vector v = NonSynchronizedVector.newInstance(5);
+        List<String> v = new ArrayList<>(5);
         v.add("");
         v.add("(");
         v.add(")");

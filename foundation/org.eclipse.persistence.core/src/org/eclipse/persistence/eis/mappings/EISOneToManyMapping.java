@@ -751,7 +751,7 @@ public class EISOneToManyMapping extends CollectionMapping implements EISMapping
      * Return all the fields mapped by the mapping.
      */
     @Override
-    protected Vector collectFields() {
+    protected List<DatabaseField> collectFields() {
         if (isForeignKeyRelationship()) {
             if (this.getForeignKeyGroupingElement() != null) {
                 Vector fields = new Vector(1);

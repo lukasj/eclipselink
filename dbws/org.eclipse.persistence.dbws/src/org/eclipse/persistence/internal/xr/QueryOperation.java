@@ -514,7 +514,7 @@ public class QueryOperation extends Operation {
         return value;
     }
 
-    protected void populateTargetObjectFromRecord(Vector<DatabaseMapping> mappings,
+    protected void populateTargetObjectFromRecord(List<DatabaseMapping> mappings,
         AbstractRecord record, Object targetObject, AbstractSession session) {
         ReadObjectQuery roq = new ReadObjectQuery();
         roq.setSession(session);

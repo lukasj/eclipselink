@@ -15,31 +15,77 @@
  ******************************************************************************/
 package org.eclipse.persistence.internal.queries;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Enumeration;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.IdentityHashMap;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+import java.util.Vector;
+
+import org.eclipse.persistence.descriptors.ClassDescriptor;
+import org.eclipse.persistence.descriptors.DescriptorQueryManager;
+import org.eclipse.persistence.descriptors.InheritancePolicy;
+import org.eclipse.persistence.exceptions.DatabaseException;
+import org.eclipse.persistence.exceptions.QueryException;
+import org.eclipse.persistence.expressions.Expression;
+import org.eclipse.persistence.expressions.ExpressionBuilder;
+import org.eclipse.persistence.internal.databaseaccess.DatabaseCall;
 import org.eclipse.persistence.internal.databaseaccess.DatasourceCall;
 import org.eclipse.persistence.internal.databaseaccess.DatasourcePlatform;
 import org.eclipse.persistence.internal.descriptors.OptimisticLockingPolicy;
-import org.eclipse.persistence.internal.helper.*;
+import org.eclipse.persistence.internal.expressions.ConstantExpression;
+import org.eclipse.persistence.internal.expressions.DataExpression;
+import org.eclipse.persistence.internal.expressions.ExpressionIterator;
+import org.eclipse.persistence.internal.expressions.FieldExpression;
+import org.eclipse.persistence.internal.expressions.ObjectExpression;
+import org.eclipse.persistence.internal.expressions.ParameterExpression;
+import org.eclipse.persistence.internal.expressions.QueryKeyExpression;
+import org.eclipse.persistence.internal.expressions.SQLDeleteAllStatement;
+import org.eclipse.persistence.internal.expressions.SQLDeleteAllStatementForTempTable;
+import org.eclipse.persistence.internal.expressions.SQLDeleteStatement;
+import org.eclipse.persistence.internal.expressions.SQLInsertStatement;
+import org.eclipse.persistence.internal.expressions.SQLModifyAllStatementForTempTable;
+import org.eclipse.persistence.internal.expressions.SQLModifyStatement;
+import org.eclipse.persistence.internal.expressions.SQLSelectStatement;
+import org.eclipse.persistence.internal.expressions.SQLStatement;
+import org.eclipse.persistence.internal.expressions.SQLUpdateAllStatement;
+import org.eclipse.persistence.internal.expressions.SQLUpdateAllStatementForOracleAnonymousBlock;
+import org.eclipse.persistence.internal.expressions.SQLUpdateAllStatementForTempTable;
+import org.eclipse.persistence.internal.expressions.SQLUpdateStatement;
+import org.eclipse.persistence.internal.helper.DatabaseField;
+import org.eclipse.persistence.internal.helper.DatabaseTable;
+import org.eclipse.persistence.internal.helper.Helper;
+import org.eclipse.persistence.internal.helper.InvalidObject;
+import org.eclipse.persistence.internal.helper.NonSynchronizedVector;
 import org.eclipse.persistence.internal.identitymaps.CacheKey;
-import org.eclipse.persistence.internal.expressions.*;
-import org.eclipse.persistence.expressions.*;
+import org.eclipse.persistence.internal.sessions.AbstractRecord;
+import org.eclipse.persistence.internal.sessions.AbstractSession;
+import org.eclipse.persistence.internal.sessions.UnitOfWorkImpl;
 import org.eclipse.persistence.logging.SessionLog;
 import org.eclipse.persistence.mappings.AggregateCollectionMapping;
 import org.eclipse.persistence.mappings.DatabaseMapping;
 import org.eclipse.persistence.mappings.DirectCollectionMapping;
 import org.eclipse.persistence.mappings.ForeignReferenceMapping;
 import org.eclipse.persistence.mappings.ManyToManyMapping;
-import org.eclipse.persistence.mappings.RelationTableMechanism;
-import org.eclipse.persistence.exceptions.*;
 import org.eclipse.persistence.mappings.OneToOneMapping;
-import org.eclipse.persistence.queries.*;
-import org.eclipse.persistence.descriptors.InheritancePolicy;
-import org.eclipse.persistence.descriptors.DescriptorQueryManager;
-import org.eclipse.persistence.internal.sessions.AbstractRecord;
-import org.eclipse.persistence.internal.sessions.UnitOfWorkImpl;
-import org.eclipse.persistence.internal.sessions.AbstractSession;
-import org.eclipse.persistence.descriptors.ClassDescriptor;
-import org.eclipse.persistence.internal.databaseaccess.DatabaseCall;
+import org.eclipse.persistence.mappings.RelationTableMechanism;
+import org.eclipse.persistence.queries.ConstructorReportItem;
+import org.eclipse.persistence.queries.DatabaseQuery;
+import org.eclipse.persistence.queries.DeleteAllQuery;
+import org.eclipse.persistence.queries.DeleteObjectQuery;
+import org.eclipse.persistence.queries.FetchGroup;
+import org.eclipse.persistence.queries.InMemoryQueryIndirectionPolicy;
+import org.eclipse.persistence.queries.ModifyAllQuery;
+import org.eclipse.persistence.queries.ObjectLevelReadQuery;
+import org.eclipse.persistence.queries.ReadAllQuery;
+import org.eclipse.persistence.queries.ReadObjectQuery;
+import org.eclipse.persistence.queries.ReportQuery;
+import org.eclipse.persistence.queries.SQLCall;
+import org.eclipse.persistence.queries.UpdateAllQuery;
 
 /**
  * <p><b>Purpose</b>:
@@ -80,13 +126,13 @@ public class ExpressionQueryMechanism extends StatementQueryMechanism {
     /**
      * Alias the supplied fields with respect to the expression node. Return copies of the fields
      */
-    protected Vector aliasFields(ObjectExpression node, Vector fields) {
-        Vector result = new Vector(fields.size());
+    protected List<DatabaseField> aliasFields(ObjectExpression node, List<DatabaseField> fields) {
+        List<DatabaseField> result = new Vector(fields.size());
 
-        for (Enumeration e = fields.elements(); e.hasMoreElements();) {
-            DatabaseField eachField = ((DatabaseField)e.nextElement()).clone();
+        for (Enumeration<DatabaseField> e = Helper.elements(fields); e.hasMoreElements();) {
+            DatabaseField eachField = e.nextElement().clone();
             eachField.setTable(node.aliasForTable(eachField.getTable()));
-            result.addElement(eachField);
+            result.add(eachField);
         }
 
         return result;
@@ -97,8 +143,8 @@ public class ExpressionQueryMechanism extends StatementQueryMechanism {
      * in a partial attribute read, report query, or just a query for the class indicator,
      * then try to alias those. Right now this just guesses that they're all from the base.
      */
-    public Vector aliasPresetFields(SQLSelectStatement statement) {
-        Vector fields = statement.getFields();
+    public List<DatabaseField> aliasPresetFields(SQLSelectStatement statement) {
+        List<DatabaseField> fields = statement.getFields();
         Expression exp = statement.getWhereClause();
 
         if (exp == null) {
@@ -199,7 +245,7 @@ public class ExpressionQueryMechanism extends StatementQueryMechanism {
         selectStatement.setQuery(query);
         selectStatement.setLockingClause(query.getLockingClause());
         selectStatement.setDistinctState(query.getDistinctState());
-        selectStatement.setTables((Vector)getDescriptor().getTables().clone());
+        selectStatement.setTables(new ArrayList<>(getDescriptor().getTables()));
         selectStatement.setWhereClause(buildBaseSelectionCriteria(isSubSelect, clonedExpressions, shouldUseAdditionalJoinExpression));
         //make sure we use the cloned builder and make sure we get the builder from the query if we have set the type.
         // If we use the expression builder and there are parallel builders and the query builder is on the 'right'
@@ -337,8 +383,8 @@ public class ExpressionQueryMechanism extends StatementQueryMechanism {
      *
      * @return Vector<SQLDeleteAllStatement>
      */
-    protected SQLDeleteStatement buildDeleteAllStatementForMapping(SQLCall selectCallForExist, SQLSelectStatement selectStatementForExist, Vector sourceFields, Vector targetFields) {
-        DatabaseTable targetTable = ((DatabaseField)targetFields.firstElement()).getTable();
+    protected SQLDeleteStatement buildDeleteAllStatementForMapping(SQLCall selectCallForExist, SQLSelectStatement selectStatementForExist, List<DatabaseField> sourceFields, List<DatabaseField> targetFields) {
+        DatabaseTable targetTable = targetFields.get(0).getTable();
         if(selectCallForExist == null) {
             return buildDeleteStatementForDeleteAllQuery(targetTable);
         }
@@ -349,7 +395,7 @@ public class ExpressionQueryMechanism extends StatementQueryMechanism {
         deleteAllStatement.setTranslationRow(getTranslationRow());
 
         deleteAllStatement.setSelectCallForExist(selectCallForExist);
-        DatabaseTable sourceTable = ((DatabaseField)sourceFields.firstElement()).getTable();
+        DatabaseTable sourceTable = sourceFields.get(0).getTable();
         if(selectStatementForExist != null) {
             deleteAllStatement.setTableAliasInSelectCallForExist(getAliasTableName(selectStatementForExist, sourceTable, getExecutionSession().getPlatform()));
         }
@@ -1542,8 +1588,8 @@ public class ExpressionQueryMechanism extends StatementQueryMechanism {
         ClassDescriptor descriptor = getDescriptor();
         for (DatabaseMapping mapping : descriptor.getMappings()) {
             if (mapping.isForeignReferenceMapping()) {
-                Vector sourceFields = null;
-                Vector targetFields = null;
+                List<DatabaseField> sourceFields = null;
+                List<DatabaseField> targetFields = null;
                 if (mapping.isDirectCollectionMapping()) {
                     if (shouldBuildDeleteStatementForMapping((DirectCollectionMapping)mapping, dontCheckDescriptor, descriptor)) {
                         sourceFields = ((DirectCollectionMapping)mapping).getSourceKeyFields();
@@ -1932,14 +1978,14 @@ public class ExpressionQueryMechanism extends StatementQueryMechanism {
             }
 
             Object valueObject = entry.getValue();
-            Vector fields;
-            Vector values;
-            Vector baseExpressions;
+            List<DatabaseField> fields;
+            List values;
+            List<Expression> baseExpressions;
             if(mapping != null && mapping.isOneToOneMapping()) {
                 fields = mapping.getFields();
                 int fieldsSize = fields.size();
-                values = org.eclipse.persistence.internal.helper.NonSynchronizedVector.newInstance(fieldsSize);
-                baseExpressions = org.eclipse.persistence.internal.helper.NonSynchronizedVector.newInstance(fieldsSize);
+                values = new ArrayList<>(fieldsSize);
+                baseExpressions = new ArrayList<>(fieldsSize);
                 for(int i=0; i<fieldsSize; i++) {
                     if(valueObject instanceof ConstantExpression) {
                         valueObject = ((ConstantExpression)valueObject).getValue();
@@ -1958,19 +2004,19 @@ public class ExpressionQueryMechanism extends StatementQueryMechanism {
                             values.add(((OneToOneMapping)mapping).getReferenceDescriptor().getObjectBuilder().extractValueFromObjectForField(valueObject, targetField, getSession()));
                         }
                     }
-                    baseExpressions.add(new FieldExpression((DatabaseField)fields.elementAt(i), ((QueryKeyExpression)baseExpression).getBaseExpression()));
+                    baseExpressions.add(new FieldExpression(fields.get(i), ((QueryKeyExpression)baseExpression).getBaseExpression()));
                 }
             } else {
-                fields = org.eclipse.persistence.internal.helper.NonSynchronizedVector.newInstance(1);
+                fields = new ArrayList<>(1);
                 fields.add(field);
-                values = org.eclipse.persistence.internal.helper.NonSynchronizedVector.newInstance(1);
+                values = new ArrayList<>(1);
                 values.add(valueObject);
-                baseExpressions = org.eclipse.persistence.internal.helper.NonSynchronizedVector.newInstance(1);
+                baseExpressions = new ArrayList<>(1);
                 baseExpressions.add(baseExpression);
             }
             int fieldsSize = fields.size();
             for(int i=0; i<fieldsSize; i++) {
-                field = (DatabaseField)fields.elementAt(i);
+                field = fields.get(i);
                 DatabaseTable table = field.getTable();
                 if(!getDescriptor().getTables().contains(table)) {
                     if(attributeName != null) {
@@ -1988,7 +2034,7 @@ public class ExpressionQueryMechanism extends StatementQueryMechanism {
                     tablesToPrimaryKeyFields.put(table, getPrimaryKeyFieldsForTable(table));
                 }
 
-                Object value = values.elementAt(i);
+                Object value = values.get(i);
                 Expression valueExpression;
                 if(valueObject instanceof Expression) {
                     valueExpression = (Expression)value;
@@ -1999,7 +2045,7 @@ public class ExpressionQueryMechanism extends StatementQueryMechanism {
                 // Set localBase so that the value can be converted properly later.
                 // NOTE: If baseExpression is FieldExpression, conversion is not required.
                 if(valueExpression.isValueExpression()) {
-                    valueExpression.setLocalBase((Expression)baseExpressions.elementAt(i));
+                    valueExpression.setLocalBase(baseExpressions.get(i));
                 }
 
                 databaseFieldsToValues.put(field, valueExpression);
@@ -2372,7 +2418,7 @@ public class ExpressionQueryMechanism extends StatementQueryMechanism {
         updateAllStatement.setTables_databaseFieldsToValues(tables_databaseFieldsToValues);
         updateAllStatement.setTablesToPrimaryKeyFields(tablesToPrimaryKeyFields);
 
-        updateAllStatement.setTable(getDescriptor().getTables().firstElement());
+        updateAllStatement.setTable(getDescriptor().getTables().get(0));
 
         return updateAllStatement;
     }
@@ -2679,7 +2725,7 @@ public class ExpressionQueryMechanism extends StatementQueryMechanism {
 
     protected List<DatabaseField> getPrimaryKeyFieldsForTable(ClassDescriptor descriptor, DatabaseTable table) {
         List<DatabaseField> mainTablePrimaryKeyFields = descriptor.getPrimaryKeyFields();
-        if(table.equals(descriptor.getTables().firstElement())) {
+        if(table.equals(descriptor.getTables().get(0))) {
             return mainTablePrimaryKeyFields;
         } else {
             List<DatabaseField> primaryKeyFields;

@@ -12,13 +12,18 @@
  ******************************************************************************/
 package org.eclipse.persistence.internal.expressions;
 
-import java.io.*;
-import java.util.*;
-import org.eclipse.persistence.exceptions.*;
+import java.io.CharArrayWriter;
+import java.io.IOException;
+import java.io.Writer;
+import java.util.Enumeration;
+import java.util.Vector;
+
+import org.eclipse.persistence.exceptions.ValidationException;
 import org.eclipse.persistence.expressions.Expression;
-import org.eclipse.persistence.internal.helper.*;
-import org.eclipse.persistence.queries.*;
+import org.eclipse.persistence.internal.helper.DatabaseField;
+import org.eclipse.persistence.internal.helper.Helper;
 import org.eclipse.persistence.internal.sessions.AbstractSession;
+import org.eclipse.persistence.queries.SQLCall;
 
 /**
  * <p><b>Purpose</b>: Print UPDATE statement.
@@ -51,10 +56,10 @@ public class SQLUpdateStatement extends SQLModifyStatement {
             ExpressionSQLPrinter printer = null;
 
             Vector fieldsForTable = new Vector();
-            Enumeration valuesEnum = getModifyRow().getValues().elements();
+            Enumeration valuesEnum = Helper.elements(getModifyRow().getValues());
             Vector values = new Vector();
-            for (Enumeration fieldsEnum = getModifyRow().keys(); fieldsEnum.hasMoreElements();) {
-                DatabaseField field = (DatabaseField)fieldsEnum.nextElement();
+            for (Enumeration<DatabaseField> fieldsEnum = getModifyRow().keys(); fieldsEnum.hasMoreElements();) {
+                DatabaseField field = fieldsEnum.nextElement();
                 Object value = valuesEnum.nextElement();
                 if (field.getTable().equals(getTable()) || (!field.hasTableName())) {
                     fieldsForTable.addElement(field);

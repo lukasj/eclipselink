@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 1998, 2016 Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 1998, 2018 Oracle and/or its affiliates. All rights reserved.
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Public License v1.0 and Eclipse Distribution License v. 1.0
  * which accompanies this distribution.
@@ -423,7 +423,11 @@ public class XmlEntityMappingsGenerator {
                 if (odesc.getOrderedFields().size() > 0) {
                     StructMetadata struct = new StructMetadata();
                     struct.setName(odesc.getStructureName());
-                    struct.setFields(odesc.getOrderedFields());
+                    List<String> fieldNames = new ArrayList<>(odesc.getOrderedFields().size());
+                    for (DatabaseField field : odesc.getOrderedFields()) {
+                        fieldNames.add(field.getName());
+                    }
+                    struct.setFields(fieldNames);
                     classAccessor.setStruct(struct);
                 }
             }

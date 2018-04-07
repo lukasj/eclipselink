@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 1998, 2015 Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 1998, 2018 Oracle and/or its affiliates. All rights reserved.
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Public License v1.0 and Eclipse Distribution License v. 1.0
  * which accompanies this distribution.
@@ -12,6 +12,7 @@
  ******************************************************************************/
 package org.eclipse.persistence.testing.tests.identitymaps.cache;
 
+import java.util.List;
 import java.util.Vector;
 import org.eclipse.persistence.descriptors.ClassDescriptor;
 import org.eclipse.persistence.sessions.*;
@@ -53,7 +54,7 @@ public class ConcurrentReadBigBadObjectTest extends TestCase {
         ClassDescriptor d = (server.serverSession).getClassDescriptor(BigBadObject.class);
         DatabaseMapping m;
 
-        Vector v = d.getMappings();
+        List<DatabaseMapping> v = d.getMappings();
         int mappings = v.size();
         int i =0;
         while (i<mappings){

@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 2012, 2015 Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 2012, 2018 Oracle and/or its affiliates. All rights reserved.
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Public License v1.0 and Eclipse Distribution License v. 1.0
  * which accompanies this distribution.
@@ -12,7 +12,7 @@
  ******************************************************************************/
 package org.eclipse.persistence.core.mappings;
 
-import java.util.Vector;
+import java.util.List;
 
 import org.eclipse.persistence.core.descriptors.CoreDescriptor;
 import org.eclipse.persistence.internal.core.helper.CoreField;
@@ -77,7 +77,7 @@ public abstract class CoreMapping<
      * INTERNAL:
      * Returns a vector of all the fields this mapping represents.
      */
-    public abstract Vector<FIELD> getFields();
+    public abstract List<FIELD> getFields();
 
     /**
      * PUBLIC:
@@ -178,7 +178,7 @@ public abstract class CoreMapping<
      * INTERNAL:
      * Set the mapping's field collection.
      */
-    protected abstract void setFields(Vector<FIELD> fields);
+    protected abstract void setFields(List<FIELD> fields);
 
     /**
      * INTERNAL:
