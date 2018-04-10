@@ -1015,9 +1015,9 @@ public class ExpressionOperator implements Serializable {
             }
         }
         // Between
-        else if ((this.selector == Between) && (right instanceof Vector) && (((Vector)right).size() == 2)) {
+        else if ((this.selector == Between) && (right instanceof List) && (((List)right).size() == 2)) {
             return conformBetween(left, right);
-        } else if ((this.selector == NotBetween) && (right instanceof Vector) && (((Vector)right).size() == 2)) {
+        } else if ((this.selector == NotBetween) && (right instanceof List) && (((List)right).size() == 2)) {
             return !conformBetween(left, right);
         }
         // In
@@ -1028,8 +1028,8 @@ public class ExpressionOperator implements Serializable {
         }
         // Like
         //conformLike(left, right);
-        else if (((this.selector == Like) || (this.selector == NotLike)) && (right instanceof Vector) && (((Vector)right).size() == 1)) {
-            Boolean doesLikeConform = JavaPlatform.conformLike(left, ((Vector)right).get(0));
+        else if (((this.selector == Like) || (this.selector == NotLike)) && (right instanceof List) && (((List)right).size() == 1)) {
+            Boolean doesLikeConform = JavaPlatform.conformLike(left, ((List)right).get(0));
             if (doesLikeConform != null) {
                 if (doesLikeConform.booleanValue()) {
                     return this.selector == Like;// Negate for NotLike
@@ -1039,8 +1039,8 @@ public class ExpressionOperator implements Serializable {
             }
         }
         // Regexp
-        else if ((this.selector == Regexp) && (right instanceof Vector) && (((Vector)right).size() == 1)) {
-            Boolean doesConform = JavaPlatform.conformRegexp(left, ((Vector)right).get(0));
+        else if ((this.selector == Regexp) && (right instanceof List) && (((List)right).size() == 1)) {
+            Boolean doesConform = JavaPlatform.conformRegexp(left, ((List)right).get(0));
             if (doesConform != null) {
                 return doesConform.booleanValue();
             }
@@ -2180,7 +2180,7 @@ public class ExpressionOperator implements Serializable {
     /**
      * INTERNAL: Print the collection onto the SQL stream.
      */
-    public void printCollection(Vector items, ExpressionSQLPrinter printer) {
+    public void printCollection(List<Expression> items, ExpressionSQLPrinter printer) {
         // Certain functions don't allow binding on some platforms.
         if (printer.getPlatform().isDynamicSQLRequiredForFunctions() && !isBindingSupported()) {
             printer.getCall().setUsesBinding(false);
@@ -2205,7 +2205,7 @@ public class ExpressionOperator implements Serializable {
         }
 
         for (final int index : argumentIndices) {
-            Expression item = (Expression)items.elementAt(index);
+            Expression item = items.get(index);
             if ((this.selector == Ref) || ((this.selector == Deref) && (item.isObjectExpression()))) {
                 DatabaseTable alias = ((ObjectExpression)item).aliasForTable(((ObjectExpression)item).getDescriptor().getTables().get(0));
                 printer.printString(alias.getNameDelimited(printer.getPlatform()));
@@ -2223,11 +2223,11 @@ public class ExpressionOperator implements Serializable {
     /**
      * INTERNAL: Print the collection onto the SQL stream.
      */
-    public void printJavaCollection(Vector items, ExpressionJavaPrinter printer) {
+    public void printJavaCollection(List<Expression> items, ExpressionJavaPrinter printer) {
         int javaStringIndex = 0;
 
         for (int i = 0; i < items.size(); i++) {
-            Expression item = (Expression)items.elementAt(i);
+            Expression item = items.get(i);
             item.printJava(printer);
             if (javaStringIndex < getJavaStrings().length) {
                 printer.printString(getJavaStrings()[javaStringIndex++]);

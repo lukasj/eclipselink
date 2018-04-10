@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 1998, 2015 Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 1998, 2018 Oracle and/or its affiliates. All rights reserved.
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Public License v1.0 and Eclipse Distribution License v. 1.0
  * which accompanies this distribution.
@@ -18,6 +18,7 @@ import java.io.IOException;
 import java.util.Collection;
 import java.util.Enumeration;
 import java.util.Iterator;
+import java.util.List;
 import java.util.Vector;
 
 import org.eclipse.persistence.descriptors.ClassDescriptor;
@@ -26,6 +27,7 @@ import org.eclipse.persistence.expressions.Expression;
 import org.eclipse.persistence.expressions.ExpressionBuilder;
 import org.eclipse.persistence.internal.helper.DatabaseField;
 import org.eclipse.persistence.internal.helper.DatabaseTable;
+import org.eclipse.persistence.internal.helper.Helper;
 import org.eclipse.persistence.internal.sessions.AbstractRecord;
 import org.eclipse.persistence.internal.sessions.AbstractSession;
 import org.eclipse.persistence.queries.ObjectLevelReadQuery;
@@ -124,24 +126,24 @@ public class ClassTypeExpression extends DataExpression {
 
             // If from an anyof the object will be a collection of values,
             // A new vector must union the object values and the values extracted from it.
-            if (object instanceof Vector) {
-                Vector comparisonVector = new Vector(((Vector)object).size() + 2);
-                for (Enumeration valuesToIterate = ((Vector)object).elements();
+            if (object instanceof List) {
+                List comparisonVector = new Vector(((List)object).size() + 2);
+                for (Enumeration valuesToIterate = Helper.elements(object);
                          valuesToIterate.hasMoreElements();) {
                     Object vectorObject = valuesToIterate.nextElement();
                     if (vectorObject == null) {
-                        comparisonVector.addElement(null);
+                        comparisonVector.add(null);
                     } else {
                         Object valueOrValues = typeValueFromObject(vectorObject, session);
 
                         // If a collection of values were extracted union them.
-                        if (valueOrValues instanceof Vector) {
-                            for (Enumeration nestedValuesToIterate = ((Vector)valueOrValues).elements();
+                        if (valueOrValues instanceof List) {
+                            for (Enumeration nestedValuesToIterate = Helper.elements(valueOrValues);
                                      nestedValuesToIterate.hasMoreElements();) {
-                                comparisonVector.addElement(nestedValuesToIterate.nextElement());
+                                comparisonVector.add(nestedValuesToIterate.nextElement());
                             }
                         } else {
-                            comparisonVector.addElement(valueOrValues);
+                            comparisonVector.add(valueOrValues);
                         }
                     }
                 }

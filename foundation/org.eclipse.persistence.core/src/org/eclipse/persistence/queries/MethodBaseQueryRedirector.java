@@ -12,15 +12,18 @@
  ******************************************************************************/
 package org.eclipse.persistence.queries;
 
-import java.lang.reflect.*;
+import java.lang.reflect.Method;
+import java.lang.reflect.Modifier;
 import java.security.AccessController;
 
-import org.eclipse.persistence.exceptions.*;
-import org.eclipse.persistence.sessions.*;
-import org.eclipse.persistence.internal.helper.*;
+import org.eclipse.persistence.exceptions.QueryException;
+import org.eclipse.persistence.internal.helper.ClassConstants;
+import org.eclipse.persistence.internal.helper.Helper;
 import org.eclipse.persistence.internal.security.PrivilegedAccessHelper;
 import org.eclipse.persistence.internal.security.PrivilegedMethodInvoker;
 import org.eclipse.persistence.internal.sessions.AbstractRecord;
+import org.eclipse.persistence.sessions.Record;
+import org.eclipse.persistence.sessions.Session;
 
 /**
  * <p><b>Purpose</b>:
@@ -159,7 +162,7 @@ public class MethodBaseQueryRedirector implements QueryRedirector {
         // Check Session, Vector.
         Class[] arguments = new Class[2];
         arguments[0] = ClassConstants.SessionsSession_Class;
-        arguments[1] = ClassConstants.Vector_class;
+        arguments[1] = ClassConstants.List_Class;
         try {
             setMethod(Helper.getDeclaredMethod(getMethodClass(), getMethodName(), arguments));
         } catch (Exception ignore) {

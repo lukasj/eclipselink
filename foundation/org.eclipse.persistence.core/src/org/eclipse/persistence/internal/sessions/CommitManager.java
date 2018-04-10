@@ -12,16 +12,33 @@
  ******************************************************************************/
 package org.eclipse.persistence.internal.sessions;
 
-import java.util.*;
-import org.eclipse.persistence.mappings.*;
-import org.eclipse.persistence.internal.databaseaccess.DatasourceCall;
-import org.eclipse.persistence.internal.helper.*;
-import org.eclipse.persistence.queries.*;
-import org.eclipse.persistence.sessions.UnitOfWork.CommitOrderType;
-import org.eclipse.persistence.exceptions.*;
-import org.eclipse.persistence.internal.localization.*;
-import org.eclipse.persistence.internal.queries.DatabaseQueryMechanism;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.IdentityHashMap;
+import java.util.Iterator;
+import java.util.LinkedHashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.TreeMap;
+import java.util.Vector;
+
 import org.eclipse.persistence.descriptors.ClassDescriptor;
+import org.eclipse.persistence.exceptions.DatabaseException;
+import org.eclipse.persistence.exceptions.OptimisticLockException;
+import org.eclipse.persistence.internal.databaseaccess.DatasourceCall;
+import org.eclipse.persistence.internal.helper.DatabaseTable;
+import org.eclipse.persistence.internal.helper.DescriptorCompare;
+import org.eclipse.persistence.internal.helper.Helper;
+import org.eclipse.persistence.internal.localization.ToStringLocalization;
+import org.eclipse.persistence.internal.queries.DatabaseQueryMechanism;
+import org.eclipse.persistence.mappings.DatabaseMapping;
+import org.eclipse.persistence.queries.DeleteObjectQuery;
+import org.eclipse.persistence.queries.InsertObjectQuery;
+import org.eclipse.persistence.queries.UpdateObjectQuery;
+import org.eclipse.persistence.queries.WriteObjectQuery;
+import org.eclipse.persistence.sessions.UnitOfWork.CommitOrderType;
 
 /**
  * This class maintains a commit stack and resolves circular references.
@@ -611,7 +628,7 @@ public class CommitManager {
      * The commit order is a vector of vectors,
      * where the first vector is all root level classes, the second is classes owned by roots and so on.
      */
-    public void setCommitOrder(List commitOrder) {
+    public void setCommitOrder(List<Class> commitOrder) {
         this.commitOrder = commitOrder;
     }
 

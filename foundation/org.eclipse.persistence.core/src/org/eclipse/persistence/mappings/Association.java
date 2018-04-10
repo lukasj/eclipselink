@@ -12,7 +12,7 @@
  ******************************************************************************/
 package org.eclipse.persistence.mappings;
 
-import java.util.*;
+import java.util.Map;
 
 /**
  * <p><b>Purpose</b>: Generic association object.
@@ -21,9 +21,9 @@ import java.util.*;
  * @author James Sutherland
  * @since TOPLink/Java 3.0
  */
-public class Association implements Map.Entry {
-    protected Object key;
-    protected Object value;
+public class Association<K, V> implements Map.Entry<K, V> {
+    protected K key;
+    protected V value;
 
     /**
      * Default constructor.
@@ -36,7 +36,7 @@ public class Association implements Map.Entry {
      * PUBLIC:
      * Create an association.
      */
-    public Association(Object key, Object value) {
+    public Association(K key, V value) {
         this.key = key;
         this.value = value;
     }
@@ -46,7 +46,7 @@ public class Association implements Map.Entry {
      * Return the key.
      */
     @Override
-    public Object getKey() {
+    public K getKey() {
         return key;
     }
 
@@ -55,7 +55,7 @@ public class Association implements Map.Entry {
      * Return the value.
      */
     @Override
-    public Object getValue() {
+    public V getValue() {
         return value;
     }
 
@@ -63,7 +63,7 @@ public class Association implements Map.Entry {
      * PUBLIC:
      * Set the key.
      */
-    public void setKey(Object key) {
+    public void setKey(K key) {
         this.key = key;
     }
 
@@ -72,8 +72,8 @@ public class Association implements Map.Entry {
      * Set the value.
      */
     @Override
-    public Object setValue(Object value) {
-        Object oldValue = this.value;
+    public V setValue(V value) {
+        V oldValue = this.value;
         this.value = value;
         return oldValue;
     }

@@ -53,7 +53,7 @@ public class ArgumentListFunctionExpression extends FunctionExpression {
         } else {
             super.addChild(argument);
         }
-        setBaseExpression((Expression)getChildren().firstElement());
+        setBaseExpression(getChildren().get(0));
         ((ListExpressionOperator)operator).incrementNumberOfItems();
     }
 

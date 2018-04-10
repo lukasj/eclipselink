@@ -14,17 +14,26 @@
  ******************************************************************************/
 package org.eclipse.persistence.internal.expressions;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Enumeration;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
 
-import org.eclipse.persistence.exceptions.*;
-import org.eclipse.persistence.mappings.*;
-import org.eclipse.persistence.mappings.foundation.AbstractColumnMapping;
-import org.eclipse.persistence.queries.*;
-import org.eclipse.persistence.internal.helper.*;
-import org.eclipse.persistence.expressions.*;
+import org.eclipse.persistence.descriptors.ClassDescriptor;
+import org.eclipse.persistence.exceptions.QueryException;
+import org.eclipse.persistence.expressions.Expression;
+import org.eclipse.persistence.expressions.ExpressionBuilder;
+import org.eclipse.persistence.expressions.ExpressionOperator;
+import org.eclipse.persistence.internal.helper.DatabaseField;
+import org.eclipse.persistence.internal.helper.Helper;
 import org.eclipse.persistence.internal.sessions.AbstractRecord;
 import org.eclipse.persistence.internal.sessions.AbstractSession;
-import org.eclipse.persistence.descriptors.ClassDescriptor;
+import org.eclipse.persistence.mappings.DatabaseMapping;
+import org.eclipse.persistence.mappings.OneToOneMapping;
+import org.eclipse.persistence.mappings.foundation.AbstractColumnMapping;
+import org.eclipse.persistence.queries.ReportQuery;
 
 /**
  * <p><b>Purpose</b>:Used for all relation operators except for between.
@@ -102,8 +111,8 @@ public class RelationExpression extends CompoundExpression {
                     throw QueryException.cannotConformExpression();
                 } else {
                     // Left may be single value or anyof vector.
-                    if (leftValue instanceof Vector) {
-                        return doesAnyOfLeftValuesConform((Vector)leftValue, rightValue, session);
+                    if (leftValue instanceof List) {
+                        return doesAnyOfLeftValuesConform((List)leftValue, rightValue, session);
                     } else {
                         return this.operator.doesRelationConform(leftValue, rightValue);
                     }
@@ -111,13 +120,13 @@ public class RelationExpression extends CompoundExpression {
             }
 
             // Otherwise right vector means an anyof on right, so must check each value.
-            for (Enumeration rightEnum = ((Vector)rightValue).elements(); rightEnum.hasMoreElements(); ) {
+            for (Enumeration rightEnum = Helper.elements(rightValue); rightEnum.hasMoreElements(); ) {
                 Object tempRight = rightEnum.nextElement();
 
                 // Left may also be an anyof some must check each left with each right.
-                if (leftValue instanceof Vector) {
+                if (leftValue instanceof List) {
                     // If anyof the left match return true, otherwise keep checking.
-                    if (doesAnyOfLeftValuesConform((Vector)leftValue, tempRight, session)) {
+                    if (doesAnyOfLeftValuesConform((List)leftValue, tempRight, session)) {
                         return true;
                     }
                 }
@@ -131,8 +140,8 @@ public class RelationExpression extends CompoundExpression {
         }
 
         // Otherwise the left may also be a vector of values from an anyof.
-        if (leftValue instanceof Vector) {
-            return doesAnyOfLeftValuesConform((Vector)leftValue, rightValue, session);
+        if (leftValue instanceof List) {
+            return doesAnyOfLeftValuesConform((List)leftValue, rightValue, session);
         }
 
         // Otherwise it is a simple value to value comparison, or simple object to object comparison.
@@ -143,7 +152,7 @@ public class RelationExpression extends CompoundExpression {
      * Conform in-memory the collection of left values with the right value for this expression.
      * This is used for anyOf support when the left side is a collection of values.
      */
-    protected boolean doesAnyOfLeftValuesConform(Vector leftValues, Object rightValue, AbstractSession session) {
+    protected boolean doesAnyOfLeftValuesConform(List leftValues, Object rightValue, AbstractSession session) {
         // Check each left value with the right value.
         for (int index = 0; index < leftValues.size(); index++) {
             Object leftValue = leftValues.get(index);

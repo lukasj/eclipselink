@@ -1848,20 +1848,20 @@ public class ExpressionQueryMechanism extends StatementQueryMechanism {
         boolean useCache = (row == null || !(getQuery().shouldValidateUpdateCallCacheUse() && row.hasNullValueInFields()));
 
         // PERF: Check the descriptor update SQL call cache for a matching update with the same fields.
-        Vector updateCalls = getDescriptor().getQueryManager().getCachedUpdateCalls(getModifyRow().getFields());
+        List<DatasourceCall> updateCalls = getDescriptor().getQueryManager().getCachedUpdateCalls(getModifyRow().getFields());
         // If the calls were cached then don't need to prepare.
         if (updateCalls != null && useCache == true) {
             int updateCallsSize = updateCalls.size();
             if (updateCallsSize == 1) {
                 // clone call, to be able to set query on clone
-                DatasourceCall existingCall = (DatasourceCall)updateCalls.get(0);
+                DatasourceCall existingCall = updateCalls.get(0);
                 DatasourceCall clonedCall = (DatasourceCall)existingCall.clone();
                 setCall(clonedCall);
             } else {
                 // clone calls
                 Vector clonedCalls = new Vector(updateCallsSize);
                 for (int i = 0; i < updateCallsSize; i++) {
-                    DatasourceCall existingCall = (DatasourceCall)updateCalls.get(i);
+                    DatasourceCall existingCall = updateCalls.get(i);
                     clonedCalls.add(existingCall.clone());
                 }
                 setCalls(clonedCalls);

@@ -93,7 +93,6 @@ import org.eclipse.persistence.internal.expressions.RelationExpression;
 import org.eclipse.persistence.internal.helper.ClassConstants;
 import org.eclipse.persistence.internal.helper.DatabaseField;
 import org.eclipse.persistence.internal.helper.DatabaseTable;
-import org.eclipse.persistence.internal.helper.NonSynchronizedVector;
 import org.eclipse.persistence.internal.history.HistoricalDatabaseTable;
 import org.eclipse.persistence.internal.identitymaps.CacheIdentityMap;
 import org.eclipse.persistence.internal.identitymaps.FullIdentityMap;
@@ -1233,13 +1232,13 @@ public class ObjectPersistenceRuntimeXMLProject extends NamespaceResolvableProje
             public void postBuild(DescriptorEvent event) {
                 FunctionExpression expression = (FunctionExpression)event.getObject();
                 for (int index = 0; index < expression.getChildren().size(); index++) {
-                    Expression child = (Expression)expression.getChildren().get(index);
+                    Expression child = expression.getChildren().get(index);
                     if (child.isValueExpression()) {
                         child.setLocalBase(new ExpressionBuilder());
                     }
                 }
                 if (expression.getChildren().size() > 0) {
-                    expression.setBaseExpression((Expression)expression.getChildren().get(0));
+                    expression.setBaseExpression(expression.getChildren().get(0));
                 }
                 else {
                     expression.setBaseExpression(new ExpressionBuilder());
@@ -1258,8 +1257,8 @@ public class ObjectPersistenceRuntimeXMLProject extends NamespaceResolvableProje
         operatorConverter.addConversionValue("ascending", ExpressionOperator.getOperator(Integer.valueOf(ExpressionOperator.Ascending)));
         operatorConverter.addConversionValue("descending", ExpressionOperator.getOperator(Integer.valueOf(ExpressionOperator.Descending)));
         // These are platform specific so not on operator.
-        operatorConverter.addConversionValue("upper", new ExpressionOperator(ExpressionOperator.ToUpperCase, NonSynchronizedVector.newInstance(0)));
-        operatorConverter.addConversionValue("lower", new ExpressionOperator(ExpressionOperator.ToLowerCase, NonSynchronizedVector.newInstance(0)));
+        operatorConverter.addConversionValue("upper", new ExpressionOperator(ExpressionOperator.ToUpperCase, new ArrayList<>(0)));
+        operatorConverter.addConversionValue("lower", new ExpressionOperator(ExpressionOperator.ToLowerCase, new ArrayList<>(0)));
         // Aggregate functions
         operatorConverter.addConversionValue("count", ExpressionOperator.getOperator(Integer.valueOf(ExpressionOperator.Count)));
         operatorConverter.addConversionValue("sum", ExpressionOperator.getOperator(Integer.valueOf(ExpressionOperator.Sum)));
@@ -1267,15 +1266,15 @@ public class ObjectPersistenceRuntimeXMLProject extends NamespaceResolvableProje
         operatorConverter.addConversionValue("maximum", ExpressionOperator.getOperator(Integer.valueOf(ExpressionOperator.Maximum)));
         operatorConverter.addConversionValue("minimum", ExpressionOperator.getOperator(Integer.valueOf(ExpressionOperator.Minimum)));
         // standardDeviation is platform specific.
-        operatorConverter.addConversionValue("standardDeviation", new ExpressionOperator(ExpressionOperator.StandardDeviation, NonSynchronizedVector.newInstance(0)));
-        operatorConverter.addConversionValue("variance", new ExpressionOperator(ExpressionOperator.Variance, NonSynchronizedVector.newInstance(0)));
+        operatorConverter.addConversionValue("standardDeviation", new ExpressionOperator(ExpressionOperator.StandardDeviation, new ArrayList<>(0)));
+        operatorConverter.addConversionValue("variance", new ExpressionOperator(ExpressionOperator.Variance, new ArrayList<>(0)));
         operatorConverter.addConversionValue("distinct", ExpressionOperator.getOperator(Integer.valueOf(ExpressionOperator.Distinct)));
         operatorMapping.setConverter(operatorConverter);
         operatorMapping.setXPath("@function");
         descriptor.addMapping(operatorMapping);
 
         XMLCompositeCollectionMapping childrenMapping = new XMLCompositeCollectionMapping();
-        childrenMapping.useCollectionClass(NonSynchronizedVector.class);
+        childrenMapping.useCollectionClass(ArrayList.class);
         childrenMapping.setAttributeName("children");
         childrenMapping.setReferenceClass(Expression.class);
         childrenMapping.setXPath(getPrimaryNamespaceXPath() + "arguments/" + getPrimaryNamespaceXPath() + "argument");
@@ -1713,7 +1712,7 @@ public class ObjectPersistenceRuntimeXMLProject extends NamespaceResolvableProje
         descriptor.addMapping(useExclusiveConnectionMapping);
 
         XMLCompositeCollectionMapping joinedAttributeMapping = new XMLCompositeCollectionMapping();
-        joinedAttributeMapping.useCollectionClass(NonSynchronizedVector.class);
+        joinedAttributeMapping.useCollectionClass(ArrayList.class);
         joinedAttributeMapping.setAttributeName("joinedAttributeExpressions");
         joinedAttributeMapping.setGetMethodName("getJoinedAttributeExpressions");
         joinedAttributeMapping.setSetMethodName("setJoinedAttributeExpressions");
@@ -1747,7 +1746,7 @@ public class ObjectPersistenceRuntimeXMLProject extends NamespaceResolvableProje
         descriptor.addMapping(containerPolicyMapping);
 
         XMLCompositeCollectionMapping batchReadMapping = new XMLCompositeCollectionMapping();
-        batchReadMapping.useCollectionClass(NonSynchronizedVector.class);
+        batchReadMapping.useCollectionClass(ArrayList.class);
         batchReadMapping.setAttributeName("batchReadAttributeExpressions");
         batchReadMapping.setGetMethodName("getBatchReadAttributeExpressions");
         batchReadMapping.setSetMethodName("setBatchReadAttributeExpressions");
@@ -1756,7 +1755,7 @@ public class ObjectPersistenceRuntimeXMLProject extends NamespaceResolvableProje
         descriptor.addMapping(batchReadMapping);
 
         XMLCompositeCollectionMapping orderByMapping = new XMLCompositeCollectionMapping();
-        orderByMapping.useCollectionClass(NonSynchronizedVector.class);
+        orderByMapping.useCollectionClass(ArrayList.class);
         orderByMapping.setAttributeName("orderByExpressions");
         orderByMapping.setReferenceClass(Expression.class);
         orderByMapping.setXPath(getPrimaryNamespaceXPath() + "order-by-expressions/" + getPrimaryNamespaceXPath() + "expression");
@@ -1887,14 +1886,14 @@ public class ObjectPersistenceRuntimeXMLProject extends NamespaceResolvableProje
         descriptor.addMapping(retrievePrimaryKeysMapping);
 
         XMLCompositeCollectionMapping reportItemsMapping = new XMLCompositeCollectionMapping();
-        reportItemsMapping.useCollectionClass(NonSynchronizedVector.class);
+        reportItemsMapping.useCollectionClass(ArrayList.class);
         reportItemsMapping.setAttributeName("items");
         reportItemsMapping.setReferenceClass(ReportItem.class);
         reportItemsMapping.setXPath(getPrimaryNamespaceXPath() + "report-items/" + getPrimaryNamespaceXPath() + "item");
         descriptor.addMapping(reportItemsMapping);
 
         XMLCompositeCollectionMapping groupByMapping = new XMLCompositeCollectionMapping();
-        groupByMapping.useCollectionClass(NonSynchronizedVector.class);
+        groupByMapping.useCollectionClass(ArrayList.class);
         groupByMapping.setAttributeName("groupByExpressions");
         groupByMapping.setReferenceClass(Expression.class);
         groupByMapping.setXPath(getPrimaryNamespaceXPath() + "group-by-expressions/" + getPrimaryNamespaceXPath() + "expression");
@@ -2042,7 +2041,7 @@ public class ObjectPersistenceRuntimeXMLProject extends NamespaceResolvableProje
             @Override
             public Object getAttributeValueFromObject(Object object) {
                 DatabaseMapping mapping = (DatabaseMapping)object;
-                Vector propertyAssociations = new NonSynchronizedVector();
+                List<PropertyAssociation> propertyAssociations = new ArrayList<>();
                 for (Iterator i = mapping.getProperties().entrySet().iterator(); i.hasNext();) {
                     Map.Entry me = (Map.Entry)i.next();
                     PropertyAssociation propertyAssociation = new PropertyAssociation();
@@ -2056,9 +2055,9 @@ public class ObjectPersistenceRuntimeXMLProject extends NamespaceResolvableProje
             @Override
             public void setAttributeValueInObject(Object object, Object value) {
                 DatabaseMapping mapping = (DatabaseMapping)object;
-                Vector propertyAssociations = (Vector)value;
+                List<PropertyAssociation> propertyAssociations = (List<PropertyAssociation>) value;
                 for (int i = 0; i < propertyAssociations.size(); i++) {
-                    PropertyAssociation propertyAssociation = (PropertyAssociation)propertyAssociations.get(i);
+                    PropertyAssociation propertyAssociation = propertyAssociations.get(i);
                     mapping.getProperties().put(propertyAssociation.getKey(), propertyAssociation.getValue());
                 }
             }
@@ -2141,7 +2140,7 @@ public class ObjectPersistenceRuntimeXMLProject extends NamespaceResolvableProje
         descriptor.addMapping(queryManagerMapping);
 
         XMLCompositeCollectionMapping aggregateCollectionMapping = new XMLCompositeCollectionMapping();
-        aggregateCollectionMapping.useCollectionClass(NonSynchronizedVector.class);
+        aggregateCollectionMapping.useCollectionClass(ArrayList.class);
         aggregateCollectionMapping.setAttributeName("mappings");
         aggregateCollectionMapping.setReferenceClass(DatabaseMapping.class);
         aggregateCollectionMapping.setXPath(getSecondaryNamespaceXPath() + "attribute-mappings/" + getSecondaryNamespaceXPath() + "attribute-mapping");
@@ -2415,7 +2414,7 @@ public class ObjectPersistenceRuntimeXMLProject extends NamespaceResolvableProje
             @Override
             public Object getAttributeValueFromObject(Object object) {
                 ClassDescriptor desc = (ClassDescriptor)object;
-                Vector propertyAssociations = new NonSynchronizedVector();
+                List<PropertyAssociation> propertyAssociations = new ArrayList<>();
                 for (Iterator i = desc.getProperties().entrySet().iterator(); i.hasNext();) {
                     Map.Entry me = (Map.Entry)i.next();
                     PropertyAssociation propertyAssociation = new PropertyAssociation();
@@ -2429,9 +2428,9 @@ public class ObjectPersistenceRuntimeXMLProject extends NamespaceResolvableProje
             @Override
             public void setAttributeValueInObject(Object object, Object value) {
                 ClassDescriptor desc = (ClassDescriptor)object;
-                Vector propertyAssociations = (Vector)value;
+                List<PropertyAssociation> propertyAssociations = (List<PropertyAssociation>) value;
                 for (int i = 0; i < propertyAssociations.size(); i++) {
-                    PropertyAssociation propertyAssociation = (PropertyAssociation)propertyAssociations.get(i);
+                    PropertyAssociation propertyAssociation = propertyAssociations.get(i);
                     desc.getProperties().put(propertyAssociation.getKey(), propertyAssociation.getValue());
                 }
             }
@@ -2448,7 +2447,7 @@ public class ObjectPersistenceRuntimeXMLProject extends NamespaceResolvableProje
         descriptor.getInheritancePolicy().setParentClass(ClassDescriptor.class);
 
         XMLCompositeCollectionMapping tablesMapping = new XMLCompositeCollectionMapping();
-        tablesMapping.useCollectionClass(NonSynchronizedVector.class);
+        tablesMapping.useCollectionClass(ArrayList.class);
         tablesMapping.setAttributeName("tables/table");
         tablesMapping.setGetMethodName("getTables");
         tablesMapping.setSetMethodName("setTables");
@@ -2766,7 +2765,7 @@ public class ObjectPersistenceRuntimeXMLProject extends NamespaceResolvableProje
         eventListenersMapping.setAttributeName("eventListeners");
         eventListenersMapping.setGetMethodName("getEventListeners");
         eventListenersMapping.setSetMethodName("setEventListeners");
-        eventListenersMapping.useCollectionClass(org.eclipse.persistence.internal.helper.NonSynchronizedVector.class);
+        eventListenersMapping.useCollectionClass(ArrayList.class);
         eventListenersMapping.setValueConverter(new ClassInstanceConverter());
         eventListenersMapping.setXPath(getSecondaryNamespaceXPath() + "event-listeners/" + getSecondaryNamespaceXPath() + "event-listener/text()");
         descriptor.addMapping(eventListenersMapping);
@@ -2934,7 +2933,7 @@ public class ObjectPersistenceRuntimeXMLProject extends NamespaceResolvableProje
         descriptor.setDefaultRootElement("history-policy");
 
         XMLCompositeCollectionMapping historyTablesMapping = new XMLCompositeCollectionMapping();
-        historyTablesMapping.useCollectionClass(NonSynchronizedVector.class);
+        historyTablesMapping.useCollectionClass(ArrayList.class);
         historyTablesMapping.setAttributeName("historicalTables");
         historyTablesMapping.setReferenceClass(HistoricalDatabaseTable.class);
         historyTablesMapping.setGetMethodName("getHistoricalTables");
@@ -2943,7 +2942,7 @@ public class ObjectPersistenceRuntimeXMLProject extends NamespaceResolvableProje
         descriptor.addMapping(historyTablesMapping);
 
         XMLCompositeCollectionMapping startFieldNamesMapping = new XMLCompositeCollectionMapping();
-        startFieldNamesMapping.useCollectionClass(NonSynchronizedVector.class);
+        startFieldNamesMapping.useCollectionClass(ArrayList.class);
         startFieldNamesMapping.setAttributeName("startFields");
         startFieldNamesMapping.setReferenceClass(DatabaseField.class);
         startFieldNamesMapping.setGetMethodName("getStartFields");
@@ -2953,7 +2952,7 @@ public class ObjectPersistenceRuntimeXMLProject extends NamespaceResolvableProje
         descriptor.addMapping(startFieldNamesMapping);
 
         XMLCompositeCollectionMapping endFieldNamesMapping = new XMLCompositeCollectionMapping();
-        endFieldNamesMapping.useCollectionClass(NonSynchronizedVector.class);
+        endFieldNamesMapping.useCollectionClass(ArrayList.class);
         endFieldNamesMapping.setAttributeName("endFields");
         endFieldNamesMapping.setReferenceClass(DatabaseField.class);
         endFieldNamesMapping.setGetMethodName("getEndFields");
@@ -3211,9 +3210,9 @@ public class ObjectPersistenceRuntimeXMLProject extends NamespaceResolvableProje
         sourceToRelationKeyFieldAssociationsMapping.setAttributeAccessor(new AttributeAccessor() {
             @Override
             public Object getAttributeValueFromObject(Object object) {
-                List sourceFields = ((ManyToManyMapping)object).getSourceKeyFields();
-                List relationFields = ((ManyToManyMapping)object).getSourceRelationKeyFields();
-                List associations = new ArrayList(sourceFields.size());
+                List<DatabaseField> sourceFields = ((ManyToManyMapping)object).getSourceKeyFields();
+                List<DatabaseField> relationFields = ((ManyToManyMapping)object).getSourceRelationKeyFields();
+                List<Association<DatabaseField, DatabaseField>> associations = new ArrayList(sourceFields.size());
                 for (int index = 0; index < sourceFields.size(); index++) {
                     associations.add(new Association(relationFields.get(index), sourceFields.get(index)));
                 }
@@ -3223,14 +3222,14 @@ public class ObjectPersistenceRuntimeXMLProject extends NamespaceResolvableProje
             @Override
             public void setAttributeValueInObject(Object object, Object value) {
                 ManyToManyMapping mapping = (ManyToManyMapping)object;
-                List associations = (List)value;
-                mapping.setSourceKeyFields(NonSynchronizedVector.newInstance(associations.size()));
-                mapping.setSourceRelationKeyFields(NonSynchronizedVector.newInstance(associations.size()));
-                Iterator iterator = associations.iterator();
+                List<Association<DatabaseField, DatabaseField>> associations = (List<Association<DatabaseField, DatabaseField>>)value;
+                mapping.setSourceKeyFields(new ArrayList<>(associations.size()));
+                mapping.setSourceRelationKeyFields(new ArrayList<>(associations.size()));
+                Iterator<Association<DatabaseField, DatabaseField>> iterator = associations.iterator();
                 while (iterator.hasNext()) {
-                    Association association = (Association)iterator.next();
-                    mapping.getSourceKeyFields().add((DatabaseField)association.getValue());
-                    mapping.getSourceRelationKeyFields().add((DatabaseField)association.getKey());
+                    Association<DatabaseField, DatabaseField> association = iterator.next();
+                    mapping.getSourceKeyFields().add(association.getValue());
+                    mapping.getSourceRelationKeyFields().add(association.getKey());
                 }
             }
         });
@@ -3257,8 +3256,8 @@ public class ObjectPersistenceRuntimeXMLProject extends NamespaceResolvableProje
             public void setAttributeValueInObject(Object object, Object value) {
                 ManyToManyMapping mapping = (ManyToManyMapping)object;
                 List associations = (List)value;
-                mapping.setTargetKeyFields(NonSynchronizedVector.newInstance(associations.size()));
-                mapping.setTargetRelationKeyFields(NonSynchronizedVector.newInstance(associations.size()));
+                mapping.setTargetKeyFields(new ArrayList<>(associations.size()));
+                mapping.setTargetRelationKeyFields(new ArrayList<>(associations.size()));
                 Iterator iterator = associations.iterator();
                 while (iterator.hasNext()) {
                     Association association = (Association)iterator.next();
@@ -3451,7 +3450,7 @@ public class ObjectPersistenceRuntimeXMLProject extends NamespaceResolvableProje
         descriptor.addMapping(structureMapping);
 
         XMLCompositeCollectionMapping orderedFieldsMapping = new XMLCompositeCollectionMapping();
-        orderedFieldsMapping.useCollectionClass(NonSynchronizedVector.class);
+        orderedFieldsMapping.useCollectionClass(ArrayList.class);
         orderedFieldsMapping.setAttributeName("orderedFields");
         orderedFieldsMapping.setXPath(getPrimaryNamespaceXPath() + "field-order/" + getPrimaryNamespaceXPath() + "field");
         orderedFieldsMapping.setReferenceClass(DatabaseField.class);
@@ -3510,8 +3509,8 @@ public class ObjectPersistenceRuntimeXMLProject extends NamespaceResolvableProje
             public void setAttributeValueInObject(Object object, Object value) {
                 OneToManyMapping mapping = (OneToManyMapping)object;
                 List associations = (List)value;
-                mapping.setSourceKeyFields(NonSynchronizedVector.newInstance(associations.size()));
-                mapping.setTargetForeignKeyFields(NonSynchronizedVector.newInstance(associations.size()));
+                mapping.setSourceKeyFields(new ArrayList<>(associations.size()));
+                mapping.setTargetForeignKeyFields(new ArrayList<>(associations.size()));
                 Iterator iterator = associations.iterator();
                 while (iterator.hasNext()) {
                     Association association = (Association)iterator.next();
@@ -3626,7 +3625,7 @@ public class ObjectPersistenceRuntimeXMLProject extends NamespaceResolvableProje
         descriptor.addMapping(sourceToTargetKeyFieldAssociationsMapping);
 
         XMLCompositeCollectionMapping foreignKeyFieldNamesMapping = new XMLCompositeCollectionMapping();
-        foreignKeyFieldNamesMapping.useCollectionClass(NonSynchronizedVector.class);
+        foreignKeyFieldNamesMapping.useCollectionClass(ArrayList.class);
         foreignKeyFieldNamesMapping.setAttributeName("foreignKeyFields");
         foreignKeyFieldNamesMapping.setGetMethodName("getForeignKeyFields");
         foreignKeyFieldNamesMapping.setSetMethodName("setForeignKeyFields");
@@ -3943,7 +3942,7 @@ public class ObjectPersistenceRuntimeXMLProject extends NamespaceResolvableProje
         descriptor.addMapping(nameMapping);
 
         XMLCompositeCollectionMapping descriptorsMapping = new XMLCompositeCollectionMapping();
-        descriptorsMapping.useCollectionClass(NonSynchronizedVector.class);
+        descriptorsMapping.useCollectionClass(ArrayList.class);
         descriptorsMapping.setAttributeName("descriptors");
         descriptorsMapping.setSetMethodName("setOrderedDescriptors");
         descriptorsMapping.setGetMethodName("getOrderedDescriptors");
@@ -4155,7 +4154,7 @@ public class ObjectPersistenceRuntimeXMLProject extends NamespaceResolvableProje
         descriptor.setDefaultRootElement("returning-policy");
 
         XMLCompositeCollectionMapping returningFieldInfoMapping = new XMLCompositeCollectionMapping();
-        returningFieldInfoMapping.useCollectionClass(NonSynchronizedVector.class);
+        returningFieldInfoMapping.useCollectionClass(ArrayList.class);
         returningFieldInfoMapping.setAttributeName("infos");
         returningFieldInfoMapping.setReferenceClass(ReturningPolicy.Info.class);
         returningFieldInfoMapping.setGetMethodName("getFieldInfos");
@@ -4643,7 +4642,7 @@ public class ObjectPersistenceRuntimeXMLProject extends NamespaceResolvableProje
         descriptor.addMapping(typeFieldMapping);
 
         XMLCompositeCollectionMapping foreignKeyFieldsMapping = new XMLCompositeCollectionMapping();
-        foreignKeyFieldsMapping.useCollectionClass(NonSynchronizedVector.class);
+        foreignKeyFieldsMapping.useCollectionClass(ArrayList.class);
         foreignKeyFieldsMapping.setAttributeName("foreignKeyFields");
         foreignKeyFieldsMapping.setGetMethodName("getForeignKeyFields");
         foreignKeyFieldsMapping.setSetMethodName("setForeignKeyFields");
@@ -4771,7 +4770,7 @@ public class ObjectPersistenceRuntimeXMLProject extends NamespaceResolvableProje
         descriptor.getInheritancePolicy().setParentClass(OptimisticLockingPolicy.class);
 
         XMLCompositeCollectionMapping fieldsMapping = new XMLCompositeCollectionMapping();
-        fieldsMapping.useCollectionClass(NonSynchronizedVector.class);
+        fieldsMapping.useCollectionClass(ArrayList.class);
         fieldsMapping.setAttributeName("lockFields");
         fieldsMapping.setXPath(getPrimaryNamespaceXPath() + "fields/" + getPrimaryNamespaceXPath() + "field");
         fieldsMapping.setReferenceClass(DatabaseField.class);

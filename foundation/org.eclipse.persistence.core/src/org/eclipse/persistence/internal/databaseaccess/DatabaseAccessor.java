@@ -43,6 +43,7 @@ import java.sql.SQLException;
 import java.sql.SQLWarning;
 import java.sql.Statement;
 import java.sql.Types;
+import java.util.ArrayList;
 import java.util.Enumeration;
 import java.util.HashMap;
 import java.util.Hashtable;
@@ -56,7 +57,6 @@ import org.eclipse.persistence.internal.helper.ClassConstants;
 import org.eclipse.persistence.internal.helper.DatabaseField;
 import org.eclipse.persistence.internal.helper.Helper;
 import org.eclipse.persistence.internal.helper.LOBValueWriter;
-import org.eclipse.persistence.internal.helper.NonSynchronizedVector;
 import org.eclipse.persistence.internal.helper.ThreadCursoredList;
 import org.eclipse.persistence.internal.localization.ExceptionLocalization;
 import org.eclipse.persistence.internal.localization.ToStringLocalization;
@@ -1039,7 +1039,7 @@ public class DatabaseAccessor extends DatasourceAccessor {
      */
     protected AbstractRecord fetchRow(List<DatabaseField> fields, ResultSet resultSet, ResultSetMetaData metaData, AbstractSession session) throws DatabaseException {
         int size = fields.size();
-        Vector values = NonSynchronizedVector.newInstance(size);
+        List<Object> values = new ArrayList<>(size);
         // PERF: Pass platform and optimize data flag.
         DatabasePlatform platform = getPlatform();
         boolean optimizeData = platform.shouldOptimizeDataConversion();

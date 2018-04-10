@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 1998, 2015 Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 1998, 2018 Oracle and/or its affiliates. All rights reserved.
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Public License v1.0 and Eclipse Distribution License v. 1.0
  * which accompanies this distribution.
@@ -14,6 +14,7 @@ package org.eclipse.persistence.internal.sessions;
 
 import org.eclipse.persistence.descriptors.ClassDescriptor;
 import org.eclipse.persistence.internal.helper.DescriptorCompare;
+import org.eclipse.persistence.internal.helper.Helper;
 
 import java.util.*;
 
@@ -140,11 +141,11 @@ public class CommitOrderCalculator {
     /**
      * Return the constraint ordered classes.
      */
-    public Vector getOrderedClasses() {
-        Vector orderedClasses = org.eclipse.persistence.internal.helper.NonSynchronizedVector.newInstance(getOrderedDescriptors().size());
-        for (Enumeration orderedDescriptorsEnum = getOrderedDescriptors().elements();
+    public List<Class> getOrderedClasses() {
+        List<Class> orderedClasses = new ArrayList<>(getOrderedDescriptors().size());
+        for (Enumeration<ClassDescriptor> orderedDescriptorsEnum = Helper.elements(getOrderedDescriptors());
                  orderedDescriptorsEnum.hasMoreElements();) {
-            orderedClasses.addElement(((ClassDescriptor)orderedDescriptorsEnum.nextElement()).getJavaClass());
+            orderedClasses.add(orderedDescriptorsEnum.nextElement().getJavaClass());
         }
 
         return orderedClasses;

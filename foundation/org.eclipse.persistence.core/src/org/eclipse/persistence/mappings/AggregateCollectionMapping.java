@@ -2003,8 +2003,8 @@ public class AggregateCollectionMapping extends CollectionMapping implements Rel
             initializeParentInheritance(parentToParentDescriptor, parentDescriptor, session, fieldTranslation, tableTranslation);
         }
 
-        Vector children = org.eclipse.persistence.internal.helper.NonSynchronizedVector.newInstance(1);
-        children.addElement(childDescriptor);
+        List<ClassDescriptor> children = new ArrayList<>(1);
+        children.add(childDescriptor);
         clonedParentDescriptor.getInheritancePolicy().setChildDescriptors(children);
         clonedParentDescriptor.preInitialize(session);
         clonedParentDescriptor.initialize(session);

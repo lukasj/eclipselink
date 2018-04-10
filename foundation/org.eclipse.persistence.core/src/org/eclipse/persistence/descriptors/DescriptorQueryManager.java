@@ -51,7 +51,6 @@ import org.eclipse.persistence.internal.helper.ConcurrentFixedCache;
 import org.eclipse.persistence.internal.helper.DatabaseField;
 import org.eclipse.persistence.internal.helper.DatabaseTable;
 import org.eclipse.persistence.internal.helper.Helper;
-import org.eclipse.persistence.internal.helper.NonSynchronizedVector;
 import org.eclipse.persistence.internal.queries.ReportItem;
 import org.eclipse.persistence.internal.sessions.AbstractSession;
 import org.eclipse.persistence.internal.sessions.ChangeRecord;
@@ -1726,7 +1725,7 @@ public class DescriptorQueryManager implements Cloneable, Serializable {
      * INTERNAL:
      * Returns the collection of cached Update calls.
      */
-    private ConcurrentFixedCache<List<DatabaseField>, Vector> getCachedUpdateCalls() {
+    private ConcurrentFixedCache<List<DatabaseField>, List<DatasourceCall>> getCachedUpdateCalls() {
         if (cachedUpdateCalls == null) {
             this.cachedUpdateCalls = new ConcurrentFixedCache<>(10);
         }
@@ -1773,7 +1772,7 @@ public class DescriptorQueryManager implements Cloneable, Serializable {
      * Return the cached update SQL call based on the updated fields.
      * PERF: Allow caching of the update SQL call to avoid regeneration.
      */
-    public Vector getCachedUpdateCalls(List<DatabaseField> updateFields) {
+    public List<DatasourceCall> getCachedUpdateCalls(List<DatabaseField> updateFields) {
         return getCachedUpdateCalls().get(updateFields);
     }
 
@@ -1784,11 +1783,11 @@ public class DescriptorQueryManager implements Cloneable, Serializable {
      * The call's query must be dereferenced in order to allow the GC of a related session.
      * PERF: Allow caching of the update SQL call to avoid regeneration.
      */
-    public void putCachedUpdateCalls(List<DatabaseField> updateFields, Vector<DatasourceCall> updateCalls) {
-        Vector<DatasourceCall> vectorToCache = updateCalls;
+    public void putCachedUpdateCalls(List<DatabaseField> updateFields, List<DatasourceCall> updateCalls) {
+        List<DatasourceCall> vectorToCache = updateCalls;
         if (!updateCalls.isEmpty()) {
             int updateCallsSize = updateCalls.size();
-            vectorToCache = new NonSynchronizedVector(updateCallsSize);
+            vectorToCache = new ArrayList<>(updateCallsSize);
             for (int i = 0; i < updateCallsSize; i++) {
                 DatasourceCall updateCall = updateCalls.get(i);
                 // clone call and dereference query for DatasourceCall and EJBQLCall

@@ -32,6 +32,7 @@ import org.eclipse.persistence.exceptions.QueryException;
 import org.eclipse.persistence.expressions.Expression;
 import org.eclipse.persistence.internal.helper.DatabaseField;
 import org.eclipse.persistence.internal.helper.DatabaseTable;
+import org.eclipse.persistence.internal.helper.Helper;
 import org.eclipse.persistence.internal.identitymaps.CacheId;
 import org.eclipse.persistence.internal.queries.MapContainerPolicy;
 import org.eclipse.persistence.internal.queries.MappedKeyMapContainerPolicy;
@@ -1094,24 +1095,24 @@ public class QueryKeyExpression extends ObjectExpression {
 
             // If from an anyof the object will be a collection of values,
             // A new vector must union the object values and the values extracted from it.
-            if (object instanceof Vector) {
-                Vector comparisonVector = new Vector(((Vector)object).size() + 2);
-                for (Enumeration valuesToIterate = ((Vector)object).elements();
+            if (object instanceof List) {
+                List comparisonVector = new Vector(((List)object).size() + 2);
+                for (Enumeration valuesToIterate = Helper.elements(object);
                          valuesToIterate.hasMoreElements();) {
                     Object vectorObject = valuesToIterate.nextElement();
                     if (vectorObject == null) {
-                        comparisonVector.addElement(null);
+                        comparisonVector.add(null);
                     } else {
                         Object valueOrValues = valuesFromCollection(vectorObject, session, valueHolderPolicy, isObjectUnregistered);
 
                         // If a collection of values were extracted union them.
-                        if (valueOrValues instanceof Vector) {
-                            for (Enumeration nestedValuesToIterate = ((Vector)valueOrValues).elements();
+                        if (valueOrValues instanceof List) {
+                            for (Enumeration nestedValuesToIterate = Helper.elements(valueOrValues);
                                      nestedValuesToIterate.hasMoreElements();) {
-                                comparisonVector.addElement(nestedValuesToIterate.nextElement());
+                                comparisonVector.add(nestedValuesToIterate.nextElement());
                             }
                         } else {
-                            comparisonVector.addElement(valueOrValues);
+                            comparisonVector.add(valueOrValues);
                         }
                     }
                 }

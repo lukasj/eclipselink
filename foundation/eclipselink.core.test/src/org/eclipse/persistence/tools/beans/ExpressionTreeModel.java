@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 1998, 2015 Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 1998, 2018 Oracle and/or its affiliates. All rights reserved.
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Public License v1.0 and Eclipse Distribution License v. 1.0
  * which accompanies this distribution.
@@ -12,11 +12,13 @@
  ******************************************************************************/
 package org.eclipse.persistence.tools.beans;
 
-import javax.swing.event.*;
-import javax.swing.tree.*;
+import javax.swing.event.TreeModelListener;
+import javax.swing.tree.TreeModel;
+import javax.swing.tree.TreePath;
 
-import org.eclipse.persistence.expressions.*;
-import org.eclipse.persistence.internal.expressions.*;
+import org.eclipse.persistence.expressions.Expression;
+import org.eclipse.persistence.internal.expressions.CompoundExpression;
+import org.eclipse.persistence.internal.expressions.FunctionExpression;
 
 /**
  * Used for the tree view within expression editor.
@@ -42,7 +44,7 @@ public class ExpressionTreeModel implements TreeModel {
             }
         } else if (parent instanceof FunctionExpression) {
             FunctionExpression expression = (FunctionExpression)parent;
-            return new ExpressionNode((Expression)expression.getChildren().elementAt(index));
+            return new ExpressionNode((Expression)expression.getChildren().get(index));
         }
 
         return null;

@@ -2484,6 +2484,16 @@ public class Helper extends CoreHelper implements Serializable {
         return clonedList;
     }
 
+    public static <T> Enumeration<T> elements(Object o) {
+        if (o instanceof Vector) {
+            return elements((Vector) o);
+        }
+        if (o instanceof List) {
+            return elements((List) o);
+        }
+        throw new IllegalArgumentException(o.getClass().getName());
+    }
+
     public static <T> Enumeration<T> elements(Vector<T> vector) {
         return vector.elements();
     }

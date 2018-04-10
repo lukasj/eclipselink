@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 1998, 2015 Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 1998, 2018 Oracle and/or its affiliates. All rights reserved.
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Public License v1.0 and Eclipse Distribution License v. 1.0
  * which accompanies this distribution.
@@ -17,7 +17,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.Vector;
 
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
@@ -124,10 +123,10 @@ public class XmlJoinNodeTestCases extends JAXBWithJSONTestCases {
      */
     public void testPrimaryKeysWereSet() {
         XMLDescriptor xdesc = xmlContext.getDescriptor(new QName("business-address"));
-        Vector<String> pkFields = xdesc.getPrimaryKeyFieldNames();
+        List<String> pkFields = xdesc.getPrimaryKeyFieldNames();
         assertTrue("Expected [2] primary key fields for Address, but were [" + pkFields.size() + "]", pkFields.size() == 2);
-        assertTrue("Expected primary key field [@id] for Address, but was [" + pkFields.elementAt(0) + "]", pkFields.elementAt(0).equals("@id"));
-        assertTrue("Expected primary key field [city/text()] for Address, but was [" + pkFields.elementAt(1) + "]", pkFields.elementAt(1).equals("city/text()"));
+        assertTrue("Expected primary key field [@id] for Address, but was [" + pkFields.get(0) + "]", pkFields.get(0).equals("@id"));
+        assertTrue("Expected primary key field [city/text()] for Address, but was [" + pkFields.get(1) + "]", pkFields.get(1).equals("city/text()"));
     }
 
 

@@ -1662,18 +1662,18 @@ public class SQLSelectStatement extends SQLStatement {
             if (orderBy.isFunctionExpression()) {
                 if (base.getOperator().getSelector() == ExpressionOperator.NullsFirst) {
                     nullsFirst = true;
-                    base = (Expression)((FunctionExpression)base).getChildren().get(0);
+                    base = ((FunctionExpression)base).getChildren().get(0);
                 } else if (base.getOperator().getSelector() == ExpressionOperator.NullsLast) {
                     nullsFirst = false;
-                    base = (Expression)((FunctionExpression)base).getChildren().get(0);
+                    base = ((FunctionExpression)base).getChildren().get(0);
                 }
                 if (base.isFunctionExpression()) {
                     if (base.getOperator().getSelector() == ExpressionOperator.Ascending) {
                         asc = true;
-                        base = (Expression)((FunctionExpression)base).getChildren().get(0);
+                        base = ((FunctionExpression)base).getChildren().get(0);
                     } else if (base.getOperator().getSelector() == ExpressionOperator.Descending) {
                         asc = false;
-                        base = (Expression)((FunctionExpression)base).getChildren().get(0);
+                        base = ((FunctionExpression)base).getChildren().get(0);
                     }
                 }
             }

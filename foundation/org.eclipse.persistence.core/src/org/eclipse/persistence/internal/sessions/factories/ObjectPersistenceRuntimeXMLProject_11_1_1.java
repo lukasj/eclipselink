@@ -12,6 +12,15 @@
  ******************************************************************************/
 package org.eclipse.persistence.internal.sessions.factories;
 
+import static java.lang.Integer.MIN_VALUE;
+import static org.eclipse.persistence.internal.databaseaccess.DatasourceCall.IN;
+import static org.eclipse.persistence.internal.databaseaccess.DatasourceCall.INOUT;
+import static org.eclipse.persistence.internal.databaseaccess.DatasourceCall.OUT;
+import static org.eclipse.persistence.internal.databaseaccess.DatasourceCall.OUT_CURSOR;
+import static org.eclipse.persistence.internal.helper.DatabaseField.NULL_SQL_TYPE;
+import static org.eclipse.persistence.sessions.factories.XMLProjectReader.SCHEMA_DIR;
+import static org.eclipse.persistence.sessions.factories.XMLProjectReader.TOPLINK_11_SCHEMA;
+
 // javase imports
 import java.util.ArrayList;
 import java.util.Collection;
@@ -22,8 +31,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.Vector;
 
-import static java.lang.Integer.MIN_VALUE;
-
 // EclipseLink imports
 import org.eclipse.persistence.descriptors.ClassDescriptor;
 import org.eclipse.persistence.descriptors.RelationalDescriptor;
@@ -33,9 +40,12 @@ import org.eclipse.persistence.internal.helper.ComplexDatabaseType;
 import org.eclipse.persistence.internal.helper.DatabaseField;
 import org.eclipse.persistence.internal.helper.DatabaseTable;
 import org.eclipse.persistence.internal.helper.DatabaseType;
-import org.eclipse.persistence.internal.helper.NonSynchronizedVector;
 import org.eclipse.persistence.internal.identitymaps.SoftIdentityMap;
+import org.eclipse.persistence.internal.oxm.XMLChoiceFieldToClassAssociation;
 import org.eclipse.persistence.internal.oxm.XMLConversionManager;
+import org.eclipse.persistence.internal.oxm.documentpreservation.DescriptorLevelDocumentPreservationPolicy;
+import org.eclipse.persistence.internal.oxm.documentpreservation.NoDocumentPreservationPolicy;
+import org.eclipse.persistence.internal.oxm.documentpreservation.XMLBinderPolicy;
 import org.eclipse.persistence.internal.queries.CollectionContainerPolicy;
 import org.eclipse.persistence.internal.queries.ContainerPolicy;
 import org.eclipse.persistence.internal.queries.SortedCollectionContainerPolicy;
@@ -60,6 +70,8 @@ import org.eclipse.persistence.oxm.mappings.UnmarshalKeepAsElementPolicy;
 import org.eclipse.persistence.oxm.mappings.XMLAnyAttributeMapping;
 import org.eclipse.persistence.oxm.mappings.XMLBinaryDataCollectionMapping;
 import org.eclipse.persistence.oxm.mappings.XMLBinaryDataMapping;
+import org.eclipse.persistence.oxm.mappings.XMLChoiceCollectionMapping;
+import org.eclipse.persistence.oxm.mappings.XMLChoiceObjectMapping;
 import org.eclipse.persistence.oxm.mappings.XMLCollectionReferenceMapping;
 import org.eclipse.persistence.oxm.mappings.XMLCompositeCollectionMapping;
 import org.eclipse.persistence.oxm.mappings.XMLCompositeDirectCollectionMapping;
@@ -69,12 +81,6 @@ import org.eclipse.persistence.oxm.mappings.XMLFragmentCollectionMapping;
 import org.eclipse.persistence.oxm.mappings.XMLFragmentMapping;
 import org.eclipse.persistence.oxm.mappings.XMLNillableMapping;
 import org.eclipse.persistence.oxm.mappings.XMLObjectReferenceMapping;
-import org.eclipse.persistence.oxm.mappings.XMLChoiceCollectionMapping;
-import org.eclipse.persistence.oxm.mappings.XMLChoiceObjectMapping;
-import org.eclipse.persistence.internal.oxm.XMLChoiceFieldToClassAssociation;
-import org.eclipse.persistence.internal.oxm.documentpreservation.DescriptorLevelDocumentPreservationPolicy;
-import org.eclipse.persistence.internal.oxm.documentpreservation.NoDocumentPreservationPolicy;
-import org.eclipse.persistence.internal.oxm.documentpreservation.XMLBinderPolicy;
 import org.eclipse.persistence.oxm.mappings.nullpolicy.AbstractNullPolicy;
 import org.eclipse.persistence.oxm.mappings.nullpolicy.IsSetNullPolicy;
 import org.eclipse.persistence.oxm.mappings.nullpolicy.NullPolicy;
@@ -84,24 +90,17 @@ import org.eclipse.persistence.platform.database.jdbc.JDBCTypes;
 import org.eclipse.persistence.platform.database.oracle.jdbc.OracleArrayType;
 import org.eclipse.persistence.platform.database.oracle.jdbc.OracleObjectType;
 import org.eclipse.persistence.platform.database.oracle.plsql.OraclePLSQLTypes;
+import org.eclipse.persistence.platform.database.oracle.plsql.PLSQLCollection;
 import org.eclipse.persistence.platform.database.oracle.plsql.PLSQLCursor;
 import org.eclipse.persistence.platform.database.oracle.plsql.PLSQLStoredFunctionCall;
 import org.eclipse.persistence.platform.database.oracle.plsql.PLSQLStoredProcedureCall;
 import org.eclipse.persistence.platform.database.oracle.plsql.PLSQLargument;
-import org.eclipse.persistence.platform.database.oracle.plsql.PLSQLCollection;
 import org.eclipse.persistence.platform.database.oracle.plsql.PLSQLrecord;
 import org.eclipse.persistence.queries.Call;
 import org.eclipse.persistence.queries.CursoredStreamPolicy;
 import org.eclipse.persistence.queries.ScrollableCursorPolicy;
 import org.eclipse.persistence.queries.StoredFunctionCall;
 import org.eclipse.persistence.queries.StoredProcedureCall;
-import static org.eclipse.persistence.internal.databaseaccess.DatasourceCall.IN;
-import static org.eclipse.persistence.internal.databaseaccess.DatasourceCall.INOUT;
-import static org.eclipse.persistence.internal.databaseaccess.DatasourceCall.OUT;
-import static org.eclipse.persistence.internal.databaseaccess.DatasourceCall.OUT_CURSOR;
-import static org.eclipse.persistence.internal.helper.DatabaseField.NULL_SQL_TYPE;
-import static org.eclipse.persistence.sessions.factories.XMLProjectReader.SCHEMA_DIR;
-import static org.eclipse.persistence.sessions.factories.XMLProjectReader.TOPLINK_11_SCHEMA;
 
 /**
  * INTERNAL:
@@ -337,7 +336,7 @@ public class ObjectPersistenceRuntimeXMLProject_11_1_1 extends ObjectPersistence
         descriptor.getInheritancePolicy().setParentClass(ClassDescriptor.class);
 
         XMLCompositeCollectionMapping tablesMapping = new XMLCompositeCollectionMapping();
-        tablesMapping.useCollectionClass(NonSynchronizedVector.class);
+        tablesMapping.useCollectionClass(ArrayList.class);
         tablesMapping.setAttributeName("tables/table");
         tablesMapping.setGetMethodName("getTables");
         tablesMapping.setSetMethodName("setTables");
@@ -993,10 +992,10 @@ public class ObjectPersistenceRuntimeXMLProject_11_1_1 extends ObjectPersistence
         @Override
         public Object getAttributeValueFromObject(Object anObject) throws DescriptorException {
             StoredProcedureCall spc = (StoredProcedureCall)anObject;
-            List parameterTypes = spc.getParameterTypes();
+            List<Integer> parameterTypes = spc.getParameterTypes();
             List parameters = spc.getParameters();
-            List procedureArgumentNames = spc.getProcedureArgumentNames();
-            List storedProcedureArguments = new Vector();
+            List<String> procedureArgumentNames = spc.getProcedureArgumentNames();
+            List<StoredProcedureArgument> storedProcedureArguments = new Vector<>();
             for (int i = spc.getFirstParameterIndexForCallString(); i < parameterTypes.size(); i++) {
                 StoredProcedureArgument spa = null;
                 Integer direction = (Integer)parameterTypes.get(i);
@@ -1048,9 +1047,9 @@ public class ObjectPersistenceRuntimeXMLProject_11_1_1 extends ObjectPersistence
         public void setAttributeValueInObject(Object domainObject, Object attributeValue) throws DescriptorException {
             StoredProcedureCall spc = (StoredProcedureCall)domainObject;
             // vector of parameters/arguments to be added the call
-            Vector procedureArguments = (Vector)attributeValue;
+            List<StoredProcedureArgument> procedureArguments = (List<StoredProcedureArgument>) attributeValue;
             for (int i = 0; i < procedureArguments.size(); i++) {
-                StoredProcedureArgument spa = (StoredProcedureArgument)procedureArguments.get(i);
+                StoredProcedureArgument spa = procedureArguments.get(i);
                 Integer direction = spa.getDirection();
                 DatabaseField dbField = spa.getDatabaseField();
                 spc.getProcedureArgumentNames().add(spa.argumentName);
@@ -1104,7 +1103,7 @@ public class ObjectPersistenceRuntimeXMLProject_11_1_1 extends ObjectPersistence
         descriptor.addMapping(cursorOutputProcedureMapping);
 
         XMLCompositeCollectionMapping storedProcArgumentsMapping = new XMLCompositeCollectionMapping();
-        storedProcArgumentsMapping.useCollectionClass(NonSynchronizedVector.class);
+        storedProcArgumentsMapping.useCollectionClass(ArrayList.class);
         storedProcArgumentsMapping.setAttributeName("procedureArguments");
         storedProcArgumentsMapping.setAttributeAccessor(new StoredProcedureArgumentsAccessor());
         storedProcArgumentsMapping.setReferenceClass(StoredProcedureArgument.class);
@@ -1409,7 +1408,7 @@ public class ObjectPersistenceRuntimeXMLProject_11_1_1 extends ObjectPersistence
          @Override
          public Object getAttributeValueFromObject(Object object) throws DescriptorException {
              IsSetNullPolicy aPolicy = (IsSetNullPolicy)object;
-                NonSynchronizedVector aCollection = new NonSynchronizedVector();
+                List<Object> aCollection = new ArrayList<>();
                 for(int i = 0, size = aPolicy.getIsSetParameters().length; i<size;i++) {
                     aCollection.add(aPolicy.getIsSetParameters()[i]);
                 }
@@ -1448,7 +1447,7 @@ public class ObjectPersistenceRuntimeXMLProject_11_1_1 extends ObjectPersistence
          @Override
          public Object getAttributeValueFromObject(Object object) throws DescriptorException {
              IsSetNullPolicy aPolicy = (IsSetNullPolicy)object;
-                NonSynchronizedVector aCollection = new NonSynchronizedVector();
+                List<Object> aCollection = new ArrayList<>();
                 for(int i = 0, size = aPolicy.getIsSetParameterTypes().length; i<size;i++) {
                     aCollection.add(aPolicy.getIsSetParameterTypes()[i]);
                 }
