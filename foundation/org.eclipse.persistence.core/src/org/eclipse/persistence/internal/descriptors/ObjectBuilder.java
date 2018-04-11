@@ -1520,7 +1520,7 @@ public class ObjectBuilder extends CoreObjectBuilder<AbstractRecord, AbstractSes
             if (policy.shouldAddAll()) {
                 List domainObjectsIn = new ArrayList();
                 List<AbstractRecord> databaseRowsIn = new ArrayList();
-                for (Enumeration iterator = ((Vector)databaseRows).elements(); iterator.hasMoreElements(); ) {
+                for (Enumeration iterator = Helper.elements(databaseRows); iterator.hasMoreElements(); ) {
                     AbstractRecord databaseRow = (AbstractRecord)iterator.nextElement();
                     // PERF: 1-m joining nulls out duplicate rows.
                     if (databaseRow != null) {
@@ -1532,7 +1532,7 @@ public class ObjectBuilder extends CoreObjectBuilder<AbstractRecord, AbstractSes
                 policy.addAll(domainObjectsIn, domainObjects, session, databaseRowsIn, query, (CacheKey)null, true);
             } else {
                 boolean quickAdd = (domainObjects instanceof Collection) && !this.hasWrapperPolicy;
-                for (Enumeration iterator = ((Vector)databaseRows).elements(); iterator.hasMoreElements(); ) {
+                for (Enumeration iterator = Helper.elements(databaseRows); iterator.hasMoreElements(); ) {
                     AbstractRecord databaseRow = (AbstractRecord)iterator.nextElement();
                     // PERF: 1-m joining nulls out duplicate rows.
                     if (databaseRow != null) {

@@ -998,9 +998,9 @@ public class ObjectPersistenceRuntimeXMLProject_11_1_1 extends ObjectPersistence
             List<StoredProcedureArgument> storedProcedureArguments = new Vector<>();
             for (int i = spc.getFirstParameterIndexForCallString(); i < parameterTypes.size(); i++) {
                 StoredProcedureArgument spa = null;
-                Integer direction = (Integer)parameterTypes.get(i);
+                Integer direction = parameterTypes.get(i);
                 Object argument = parameters.get(i);
-                String argumentName = (String)procedureArgumentNames.get(i);
+                String argumentName = procedureArgumentNames.get(i);
                 if (direction.equals(IN)) {
                     spa = new StoredProcedureArgument();
                 }

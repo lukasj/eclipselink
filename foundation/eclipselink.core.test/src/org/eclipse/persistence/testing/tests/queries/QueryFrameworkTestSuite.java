@@ -713,7 +713,7 @@ public class QueryFrameworkTestSuite extends TestSuite {
         return session.executeQuery(query);
     }
 
-    public static Object findEmployeeByAnEmployee(org.eclipse.persistence.sessions.Session session, Vector arguments) {
-        return arguments.firstElement();
+    public static Object findEmployeeByAnEmployee(org.eclipse.persistence.sessions.Session session, List arguments) {
+        return arguments.get(0);
     }
 }

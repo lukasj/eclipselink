@@ -2207,9 +2207,9 @@ public class SQLSelectStatement extends SQLStatement {
             tables.addAll(mapTableIndexToExpression(ce.getSecondChild(), map, tablesInOrder));
         } else if(expression instanceof FunctionExpression) {
             FunctionExpression fe = (FunctionExpression)expression;
-            Iterator it = fe.getChildren().iterator();
+            Iterator<Expression> it = fe.getChildren().iterator();
             while(it.hasNext()) {
-                tables.addAll(mapTableIndexToExpression((Expression)it.next(), map, tablesInOrder));
+                tables.addAll(mapTableIndexToExpression(it.next(), map, tablesInOrder));
             }
         }
 

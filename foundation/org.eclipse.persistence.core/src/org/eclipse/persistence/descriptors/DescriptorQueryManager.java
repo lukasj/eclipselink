@@ -984,7 +984,7 @@ public class DescriptorQueryManager implements Cloneable, Serializable {
             updatePropertyParameterExpression(((CompoundExpression) exp).getFirstChild());
             updatePropertyParameterExpression(((CompoundExpression) exp).getSecondChild());
         } else if (exp.isFunctionExpression()) {
-            for (Expression e : (Vector<Expression>) ((FunctionExpression) exp).getChildren()) {
+            for (Expression e : ((FunctionExpression) exp).getChildren()) {
                 updatePropertyParameterExpression(e);
             }
         } else if (exp.isSubSelectExpression()) {
