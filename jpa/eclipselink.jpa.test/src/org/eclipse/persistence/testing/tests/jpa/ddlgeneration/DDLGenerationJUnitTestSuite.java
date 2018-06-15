@@ -40,7 +40,6 @@
 //       - 386939: @ManyToMany Map<Entity,Entity> unidirectional reverses Key and Value fields on Update
 //     07/07/2014-2.5.3 Rick Curtis
 //       - 375101: Date and Calendar should not require @Temporal.
-// CPR:: Copyright (c) 1998, 2015 Oracle and/or its affiliates, Frank Schwarz, IBM Corporation. All rights reserved.
 package org.eclipse.persistence.testing.tests.jpa.ddlgeneration;
 
 import java.util.ArrayList;

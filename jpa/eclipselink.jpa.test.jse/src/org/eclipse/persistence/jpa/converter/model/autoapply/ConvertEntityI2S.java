@@ -12,7 +12,6 @@
 // Contributors:
 //     12/05/2016-2.6 Jody Grassel
 //       - 443546: Converter autoApply does not work for primitive types
-// CPR:: Copyright (c) 2016 IBM Corporation. All rights reserved.
 
 package org.eclipse.persistence.jpa.converter.model.autoapply;
 

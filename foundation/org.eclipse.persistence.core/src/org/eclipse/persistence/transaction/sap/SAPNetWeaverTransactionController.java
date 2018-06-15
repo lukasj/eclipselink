@@ -11,7 +11,6 @@
 
 // Contributors:
 //     SAP - initial implementation
-// CPR:: Copyright (c) 1998, 2015 SAP. All rights reserved.
 package org.eclipse.persistence.transaction.sap;
 
 import javax.transaction.TransactionManager;

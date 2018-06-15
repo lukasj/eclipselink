@@ -16,7 +16,6 @@
 //       - 322008: Improve usability of additional criteria applied to queries at the session/EM
 //     05/10/2018-master Joe Grassel
 //       - Github#93: Bug with bulk update processing involving version field update parameter
-// CPR:: Copyright (c) 1998, 2018 Oracle, IBM and/or its affiliates. All rights reserved.
 package org.eclipse.persistence.internal.queries;
 
 import java.util.*;

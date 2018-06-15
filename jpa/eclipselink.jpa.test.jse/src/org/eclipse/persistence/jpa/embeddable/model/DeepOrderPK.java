@@ -12,7 +12,6 @@
 // Contributors:
 //     10/19/2016 - 2.6 Will Dazey
 //       - 506168 : Nested Embeddables AttributeOverride Test
-// CPR:: Copyright (c) 2016 IBM Corporation. All rights reserved.
 package org.eclipse.persistence.jpa.embeddable.model;
 
 import javax.persistence.Embeddable;

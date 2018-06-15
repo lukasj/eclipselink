@@ -36,7 +36,6 @@
 //       - 393867: Named queries do not work when using EM level Table Per Tenant Multitenancy.
 //     02/16/2017-2.6 Jody Grassel
 //       - 512255: Eclipselink JPA/Auditing capablity in EE Environment fails with JNDI name parameter type
-// CPR:: Copyright (c) 1998, 2017 IBM Corporation, Oracle and/or its affiliates. All rights reserved.
 package org.eclipse.persistence.internal.jpa;
 
 import java.util.ArrayList;

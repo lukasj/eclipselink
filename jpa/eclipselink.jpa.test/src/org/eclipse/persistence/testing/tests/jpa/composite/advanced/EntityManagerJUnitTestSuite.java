@@ -26,7 +26,6 @@
 //         are commented out, the quick explanation why the test can't run is provided.
 //     03/22/2016-2.6_WAS Nathan Rauh
 //       - 489787: Add negative test for non-entity supplied to PersistenceUnitUtil.isLoaded
-// CPR:: Copyright (c) 1998, 2016 Oracle and/or its affiliates, IBM Corporation. All rights reserved.
 package org.eclipse.persistence.testing.tests.jpa.composite.advanced;
 
 import java.io.ByteArrayInputStream;

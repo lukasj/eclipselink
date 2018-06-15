@@ -18,7 +18,6 @@
 //       - 376603: Provide for table per tenant support for multitenant applications
 //     03/23/2016-2.6_WAS Will Dazey
 //       - 490114: Add support for PersistenceUnitUtil.getIdentifier with nested embeddables in EmbeddedId class
-// CPR:: Copyright (c) 1998, 2018 Oracle and/or its affiliates, IBM Corporation. All rights reserved.
 package org.eclipse.persistence.descriptors;
 
 import java.io.Serializable;

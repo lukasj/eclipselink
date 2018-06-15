@@ -15,7 +15,6 @@
 //     08/29/2016 Jody Grassel
 //       - 500441: Eclipselink core has System.getProperty() calls that are not potentially executed under doPriv()
 //
-// CPR:: Copyright (c) 1998, 2016 Oracle and/or its affiliates, IBM Corporation. All rights reserved.
 package org.eclipse.persistence.dynamic;
 
 //javase imports

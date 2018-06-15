@@ -12,7 +12,6 @@
 //      Tomas Kraus - Initial implementation
 //      11/07/2017 - Dalia Abo Sheasha
 //        - 526957 : Split the logging and trace messages
-// CPR:: Copyright (c) 2016, 2018 Oracle and/or its affiliates, IBM Corporation. All rights reserved.
 package org.eclipse.persistence.testing.tests.junit.localization;
 
 import java.util.HashSet;

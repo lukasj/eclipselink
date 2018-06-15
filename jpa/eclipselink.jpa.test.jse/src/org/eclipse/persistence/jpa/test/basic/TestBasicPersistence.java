@@ -18,7 +18,6 @@
 //       - 512255 : Eclipselink JPA/Auditing capablity in EE Environment fails with JNDI name parameter type
 //     04/24/2017-2.6 Jody Grassel
 //       - 515712: ServerSession numberOfNonPooledConnectionsUsed can become invalid when Exception is thrown connecting accessor
-// CPR:: Copyright (c) 2014, 2017 IBM Corporation. All rights reserved.
 package org.eclipse.persistence.jpa.test.basic;
 
 import java.io.Serializable;

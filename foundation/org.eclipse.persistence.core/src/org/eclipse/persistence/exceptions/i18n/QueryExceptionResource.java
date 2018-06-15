@@ -25,7 +25,6 @@
 //       - 443762 : Misc message cleanup.
 //     12/18/2014-2.6 Rick Curtis
 //       - 454189 : Misc message cleanup.#2
-// CPR:: Copyright (c) 1998, 2018 Oracle, IBM Corporation and/or its affiliates. All rights reserved.
 package org.eclipse.persistence.exceptions.i18n;
 
 import java.util.ListResourceBundle;

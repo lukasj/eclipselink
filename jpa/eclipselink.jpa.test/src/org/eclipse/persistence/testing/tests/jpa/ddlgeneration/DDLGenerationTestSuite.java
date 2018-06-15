@@ -32,7 +32,6 @@
 //       - 312244: can't map optional one-to-one relationship using @PrimaryKeyJoinColumn
 //     01/11/2011-2.3 Guy Pelletier
 //       - 277079: EmbeddedId's fields are null when using LOB with fetchtype LAZY
-// CPR:: Copyright (c) 1998, 2015 Oracle and/or its affiliates, Frank Schwarz. All rights reserved.
 package org.eclipse.persistence.testing.tests.jpa.ddlgeneration;
 
 import java.util.Collections;

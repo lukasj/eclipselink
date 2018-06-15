@@ -23,7 +23,6 @@
 //     09/21/2010-2.2 Frank Schwarz and ailitchev - Bug 325684 - QueryHints.BATCH combined with QueryHints.FETCH_GROUP_LOAD will cause NPE
 //     3/13/2015 - Will Dazey
 //       - 458301 : Added check so that aggregate results won't attempt force version lock if locking type is set
-// CPR:: Copyright (c) 1998, 2018 Oracle and/or its affiliates, IBM Corporation. All rights reserved.
 package org.eclipse.persistence.queries;
 
 import java.util.ArrayList;

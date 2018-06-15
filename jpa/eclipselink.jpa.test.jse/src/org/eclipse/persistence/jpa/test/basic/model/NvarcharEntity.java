@@ -12,7 +12,6 @@
 // Contributors:
 //     02/19/2015 - Rick Curtis
 //       - 458877 : Add national character support
-// CPR:: Copyright (c) 2015 IBM Corporation. All rights reserved.
 package org.eclipse.persistence.jpa.test.basic.model;
 
 import javax.persistence.Basic;

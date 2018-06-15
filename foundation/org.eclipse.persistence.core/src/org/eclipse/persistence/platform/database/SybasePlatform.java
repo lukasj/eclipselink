@@ -20,7 +20,6 @@
 //       - 460607: Change DatabasePlatform StoredProcedureTerminationToken to be configurable
 //     03/18/2015-2.6.0 Jody Grassel
 //       - 462511 : Update to SybasePlatform to support pessimistic locking
-// CPR:: Copyright (c) 1998, 2015 Oracle and/or its affiliates, IBM Corporation. All rights reserved.
 package org.eclipse.persistence.platform.database;
 
 import java.io.IOException;

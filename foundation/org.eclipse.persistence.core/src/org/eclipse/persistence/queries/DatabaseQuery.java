@@ -32,7 +32,6 @@
 //       - 440594: Tolerate invalid NamedQuery at EntityManager creation.
 //     09/03/2015 - Will Dazey
 //       - 456067 : Added support for defining query timeout units
-// CPR:: Copyright (c) 1998, 2018 Oracle and/or its affiliates, IBM Corporation. All rights reserved.
 package org.eclipse.persistence.queries;
 
 import java.util.*;

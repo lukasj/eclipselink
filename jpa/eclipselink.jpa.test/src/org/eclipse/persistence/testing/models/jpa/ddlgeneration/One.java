@@ -13,7 +13,6 @@
 //       - 282075: DDL generation is unpredictable
 //     04/04/2013-2.4.3 Guy Pelletier
 //       - 388564: Generated DDL does not match annotation
-// CPR:: Copyright (c) 2010, 2015 Oracle and/or its affiliates, Laird Nelson. All rights reserved.
 package org.eclipse.persistence.testing.models.jpa.ddlgeneration;
 
 import java.io.Serializable;

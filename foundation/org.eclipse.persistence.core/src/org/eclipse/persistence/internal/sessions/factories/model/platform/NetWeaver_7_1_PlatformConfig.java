@@ -10,7 +10,6 @@
 
 // Contributors:
 //     SAP - initial API and implementation
-// CPR:: Copyright (c) 2009, 2015 Oracle and/or its affiliates, SAP. All rights reserved.
 package org.eclipse.persistence.internal.sessions.factories.model.platform;
 
 /**

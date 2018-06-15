@@ -12,7 +12,6 @@
 //     Gordon Yorke - Initial development
 //     02/03/2017 - Dalia Abo Sheasha
 //       - 509693 : EclipseLink generates inconsistent SQL statements for SubQuery
-// CPR:: Copyright (c) 2011, 2017 Oracle and/or its affiliates, IBM Corporation. All rights reserved.
 package org.eclipse.persistence.internal.jpa.querydef;
 
 import java.util.ArrayList;

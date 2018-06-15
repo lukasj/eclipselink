@@ -1,6 +1,6 @@
 /*
  * Copyright (c) 2012, 2018 Oracle and/or its affiliates. All rights reserved.
- * Copyright (c) 2012, 2015  Arron Ferguson. All rights reserved.
+ * Copyright (c) 2012, 2015 Arron Ferguson. All rights reserved.
  *
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Public License 2.0 which is available at
@@ -12,7 +12,6 @@
 // Contributors:
 //     05/17/2012-2.3.3 Arron Ferguson
 //       - 379829: NPE Thrown with OneToOne Relationship
-// CPR:: Copyright (c) 2012, 2015 Arron Ferguson. All rights reserved.
 package org.eclipse.persistence.testing.models.jpa.ddlgeneration;
 
 import java.io.Serializable;

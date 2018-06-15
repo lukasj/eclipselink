@@ -21,7 +21,6 @@
 //       - 440278: Support fractional seconds in time values
 //     02/19/2015 - Rick Curtis
 //       - 458877 : Add national character support
-// CPR:: Copyright (c) 1998, 2017 Oracle and/or its affiliates, IBM Corporation. All rights reserved.
 package org.eclipse.persistence.platform.database;
 
 import java.io.IOException;

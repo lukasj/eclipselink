@@ -12,7 +12,6 @@
 // Contributors:
 //     03/04/2015 - William Dazey
 //       - 460862 : Added support for schema generation with persistence units with JTA transaction type.
-// CPR:: Copyright (c) 2015 IBM Corporation. All rights reserved.
 package org.eclipse.persistence.jpa.test.ddl;
 
 import java.util.Properties;

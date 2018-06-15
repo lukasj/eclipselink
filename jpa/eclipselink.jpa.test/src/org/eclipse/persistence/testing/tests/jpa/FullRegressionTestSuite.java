@@ -22,7 +22,6 @@
 //       - 440594: Tolerate invalid NamedQuery at EntityManager creation.
 //     08/18/2014-2.5 Jody Grassel (IBM Corporation)
 //       - 440802: xml-mapping-metadata-complete does not exclude @Entity annotated entities
-// CPR:: Copyright (c) 1998, 2018 Oracle and/or its affiliates, IBM Corporation. All rights reserved.
 package org.eclipse.persistence.testing.tests.jpa;
 
 import junit.framework.Test;

@@ -46,7 +46,6 @@
 //       - 337323: Multi-tenant with shared schema support (part 1)
 //     08/24/2016-2.6 Will Dazey
 //       - 500145: Nested Embeddables with matching attribute names overwrite
-// CPR:: Copyright (c) 1998, 2016 Oracle and/or its affiliates, IBM Corporation. All rights reserved.
 package org.eclipse.persistence.internal.jpa.metadata.accessors.mappings;
 
 import java.util.Collection;

@@ -1,6 +1,6 @@
 /*
  * Copyright (c) 2008, 2018 Oracle and/or its affiliates. All rights reserved.
- * Copyright (c) 2008, 2015  Nathan Beyer (Cerner). All rights reserved.
+ * Copyright (c) 2008, 2015 Nathan Beyer (Cerner). All rights reserved.
  *
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Public License 2.0 which is available at
@@ -13,7 +13,6 @@
 //     08/20/2008-1.0.1 Nathan Beyer (Cerner)
 //       - 241308: Primary key is incorrectly assigned to embeddable class
 //                 field with the same name as the primary key field's name
-// CPR:: Copyright (c) 2008, 2015 Nathan Beyer (Cerner). All rights reserved.
 package org.eclipse.persistence.testing.models.jpa.ddlgeneration;
 
 import javax.persistence.Embeddable;

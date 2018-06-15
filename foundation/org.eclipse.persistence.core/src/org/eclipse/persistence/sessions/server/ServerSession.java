@@ -16,7 +16,6 @@
 //       - 389090: JPA 2.1 DDL Generation Support
 //     04/24/2017-2.6 Jody Grassel
 //       - 515712: ServerSession numberOfNonPooledConnectionsUsed can become invalid when Exception is thrown connecting accessor
-// CPR:: Copyright (c) 1998, 2018 IBM Corporation, Oracle and/or its affiliates. All rights reserved.
 package org.eclipse.persistence.sessions.server;
 
 import java.util.ArrayList;

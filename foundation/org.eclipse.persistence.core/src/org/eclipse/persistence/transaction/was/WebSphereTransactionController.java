@@ -14,7 +14,6 @@
 //     Rick Curtis -- Refactor to facilitate adding WebSphereLibertyTransactionController.
 //     03/15/2016 Jody Grassel
 //       - 489794: Add support for WebSphere EJBEmbeddable platform.
-// CPR:: Copyright (c) 1998, 2018 Oracle, IBM Corporation and/or its affiliates. All rights reserved.
 package org.eclipse.persistence.transaction.was;
 
 import java.lang.reflect.InvocationTargetException;

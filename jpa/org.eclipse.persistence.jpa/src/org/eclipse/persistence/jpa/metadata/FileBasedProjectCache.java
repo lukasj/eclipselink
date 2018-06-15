@@ -12,7 +12,6 @@
 //     08/01/2012-2.5 Chris Delahunt - Bug 371950 - Metadata caching
 //     08/29/2016 Jody Grassel
 //       - 500441: Eclipselink core has System.getProperty() calls that are not potentially executed under doPriv()
-// CPR:: Copyright (c) 2012, 2016 Oracle and/or its affiliates, IBM Corporation. All rights reserved.
 package org.eclipse.persistence.jpa.metadata;
 
 import java.io.File;

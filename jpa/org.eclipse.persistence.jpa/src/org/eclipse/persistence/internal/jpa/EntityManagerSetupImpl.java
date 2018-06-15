@@ -81,7 +81,6 @@
 //       - 526419: Modify EclipseLink to reflect changes in JTA 1.1.
 //     01/16/2018-2.7 Joe Grassel
 //       - 529907: EntityManagerSetupImpl.addBeanValidationListeners() should fall back on old method for finding helperClass
-// CPR:: Copyright (c) 1998, 2018 Oracle and/or its affiliates, IBM Corporation. All rights reserved.
 package org.eclipse.persistence.internal.jpa;
 
 import static org.eclipse.persistence.config.PersistenceUnitProperties.DDL_GENERATION;

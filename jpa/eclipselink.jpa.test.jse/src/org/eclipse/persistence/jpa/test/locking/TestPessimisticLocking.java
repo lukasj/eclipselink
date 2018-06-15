@@ -17,7 +17,6 @@
 //       - 462498: Missing isolation level expression in SQL for Derby platform
 //     08/14/2015-2.7.0 Tomas Kraus
 //       - 453208: Tests disabled for Oracle platform
-// CPR:: Copyright (c) 2015 IBM Corporation, Oracle and/or its affiliates. All rights reserved.
 package org.eclipse.persistence.jpa.test.locking;
 
 import java.util.ArrayList;

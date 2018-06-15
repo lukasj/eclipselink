@@ -24,7 +24,6 @@
 //       - 329008: Support dynamic context creation without persistence.xml
 //     03/22/2016-2.6_WAS Nathan Rauh
 //       - 489787: Fixed NullPointerException when specifying non-entity object to PersistenceUnitUtil.isLoaded
-// CPR:: Copyright (c) 1998, 2017 Oracle and/or its affiliates, IBM Corporation. All rights reserved.
 package org.eclipse.persistence.internal.jpa;
 
 import java.util.Collections;

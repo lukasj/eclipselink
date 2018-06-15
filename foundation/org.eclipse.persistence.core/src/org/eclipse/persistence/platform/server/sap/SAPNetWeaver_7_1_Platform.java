@@ -13,7 +13,6 @@
 //     SAP - initial implementation
 //     08/29/2016 Jody Grassel
 //       - 500441: Eclipselink core has System.getProperty() calls that are not potentially executed under doPriv()
-// CPR:: Copyright (c) 2009, 2016 SAP, IBM Corporation. All rights reserved.
 package org.eclipse.persistence.platform.server.sap;
 
 import javax.persistence.spi.PersistenceUnitInfo;

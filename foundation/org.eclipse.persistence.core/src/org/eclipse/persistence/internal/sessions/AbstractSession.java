@@ -30,7 +30,6 @@
 //       - 456067: Added support for defining query timeout units
 //     05/26/2016-2.7 Tomas Kraus
 //       - 494610: Session Properties map should be Map<String, Object>
-// CPR:: Copyright (c) 1998, 2017 Oracle and/or its affiliates, IBM Corporation. All rights reserved.
 package org.eclipse.persistence.internal.sessions;
 
 import java.io.Serializable;

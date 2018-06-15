@@ -26,7 +26,6 @@
 //       - 500441: Eclipselink core has System.getProperty() calls that are not potentially executed under doPriv()
 //     04/11/2018 - Will Dazey
 //       - 533148 : Add the eclipselink.jpa.sql-call-deferral property
-// CPR:: Copyright (c) 1998, 2018 Oracle, IBM Corporation and/or its affiliates. All rights reserved.
 package org.eclipse.persistence.internal.sessions;
 
 import java.security.AccessController;

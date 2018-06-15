@@ -19,7 +19,6 @@
 //         the actual collection is empty.  DB2 warns of nothing deleted - we convert it to a FINEST log
 //     01/15/2015-2.6 Mythily Parthasarathy
 //       - 457480: NPE in  MethodAttributeAccessor.getAttributeValueFromObject
-// CPR:: Copyright (c) 1998, 2018 Oracle and/or its affiliates, IBM Corporation. All rights reserved.
 package org.eclipse.persistence.testing.tests.jpa.advanced;
 
 import java.io.ByteArrayInputStream;

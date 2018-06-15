@@ -12,7 +12,6 @@
 // Contributors:
 //     04/11/2018 - Will Dazey
 //       - 533148 : Add the eclipselink.jpa.sql-call-deferral property
-// CPR:: Copyright (c) 2018 IBM Corporation. All rights reserved.
 package org.eclipse.persistence.jpa.test.property;
 
 import javax.persistence.EntityManager;

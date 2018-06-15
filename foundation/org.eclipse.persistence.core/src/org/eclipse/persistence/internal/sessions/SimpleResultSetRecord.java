@@ -13,7 +13,6 @@
 //     Oracle - initial API and implementation from Oracle TopLink
 //     02/19/2015 - Rick Curtis
 //       - 458877 : Add national character support
-// CPR:: Copyright (c) 2013, 2018 Oracle, IBM Corporation. All rights reserved.
 package org.eclipse.persistence.internal.sessions;
 
 import java.sql.ResultSet;

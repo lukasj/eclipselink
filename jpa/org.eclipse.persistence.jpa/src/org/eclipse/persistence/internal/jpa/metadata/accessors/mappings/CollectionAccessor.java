@@ -58,7 +58,6 @@
 //       - 412384: Applying Converter for parameterized basic-type for joda-time's DateTime does not work
 //     07/01/2014-2.5.3 Rick Curtis
 //       - 375101: Date and Calendar should not require @Temporal.
-// CPR:: Copyright (c) 1998, 2018 Oracle and/or its affiliates, IBM Corporation. All rights reserved.
 package org.eclipse.persistence.internal.jpa.metadata.accessors.mappings;
 
 import java.util.ArrayList;

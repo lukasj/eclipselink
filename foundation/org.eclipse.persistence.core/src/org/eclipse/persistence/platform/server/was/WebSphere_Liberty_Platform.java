@@ -1,6 +1,6 @@
 /*
  * Copyright (c) 2014, 2018 Oracle and/or its affiliates. All rights reserved.
- * Copyright (c) 2014, 2018  IBM Corporation. All rights reserved.
+ * Copyright (c) 2014, 2018 IBM Corporation. All rights reserved.
  *
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Public License 2.0 which is available at
@@ -11,7 +11,6 @@
 
 // Contributors:
 //     Rick Curtis - Add support for WebSphere Liberty.
-// CPR:: Copyright (c) 2014, 2018 IBM Corporation. All rights reserved.
 package org.eclipse.persistence.platform.server.was;
 
 import java.sql.Connection;

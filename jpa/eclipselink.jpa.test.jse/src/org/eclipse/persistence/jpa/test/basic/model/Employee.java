@@ -12,7 +12,6 @@
 // Contributors:
 //     12/19/2014 - Dalia Abo Sheasha
 //       - 454917 : Added a test to use the IDENTITY strategy to generate values
-// CPR:: Copyright (c) 2015 IBM Corporation. All rights reserved.
 
 package org.eclipse.persistence.jpa.test.basic.model;
 

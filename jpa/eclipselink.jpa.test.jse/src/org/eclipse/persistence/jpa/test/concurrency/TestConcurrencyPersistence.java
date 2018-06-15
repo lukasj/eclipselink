@@ -12,7 +12,6 @@
 // Contributors:
 //     03/14/2018-2.7 Will Dazey
 //       - 500753: Synchronize initialization of InsertQuery
-// CPR:: Copyright (c) 2018 IBM Corporation. All rights reserved.
 package org.eclipse.persistence.jpa.test.concurrency;
 
 import java.util.Queue;

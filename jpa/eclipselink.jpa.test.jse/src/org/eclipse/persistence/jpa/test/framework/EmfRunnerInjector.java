@@ -14,7 +14,6 @@
 //       - 450010 : Add java se test bucket
 //     01/13/2015 - Rick Curtis
 //       - 438871 : Add support for writing statement terminator character(s) when generating ddl to script.
-// CPR:: Copyright (c) 2014, 2015 IBM Corporation. All rights reserved.
 package org.eclipse.persistence.jpa.test.framework;
 
 import java.io.File;

@@ -15,8 +15,6 @@
 //       - 526957: Split the logging and trace messages
 //     12/14/2017-3.0 Tomas Kraus
 //       - 522635: ConcurrentModificationException when triggering lazy load from conforming query
-// CPR:: Copyright (c) 1998, 2017 Oracle and/or its affiliates, IBM Corporation. All rights reserved.
-// CPR:: Some parts Copyright (c) 2010 Mark Wolochuk
 package org.eclipse.persistence.internal.identitymaps;
 
 import java.io.PrintWriter;

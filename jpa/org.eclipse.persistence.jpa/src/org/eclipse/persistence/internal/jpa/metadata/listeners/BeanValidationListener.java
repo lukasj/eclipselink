@@ -16,7 +16,6 @@
 //       - 487889: Fix EclipseLink Bean Validation optimization
 //     03/09/2016-2.6 Dalia Abo Sheasha
 //       - 489298: Wrap EclipseLink's Bean Validation calls in doPrivileged blocks when security is enabled
-// CPR:: Copyright (c) 2009, 2018 Sun Microsystems, Inc, IBM Corporation. All rights reserved.
 
 package org.eclipse.persistence.internal.jpa.metadata.listeners;
 

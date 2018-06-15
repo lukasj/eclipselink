@@ -10,7 +10,6 @@
 
 // Contributors:
 //     Jenzabar - Initial implementation
-// CPR:: Copyright (c) 2011, 2015 Jenzabar, Inc, Oracle and/or its affiliates. All rights reserved.
 
 package org.eclipse.persistence.platform.database;
 

@@ -14,7 +14,6 @@
 //       - 458877 : Add national character support
 //     03/06/2015-2.7.0 Dalia Abo Sheasha
 //       - 461607: PropertiesUtils does not process methods with String parameters correclty.
-// CPR:: Copyright (c) 2015 IBM Corporation. All rights reserved.
 package org.eclipse.persistence.config;
 
 import org.eclipse.persistence.exceptions.ConversionException;

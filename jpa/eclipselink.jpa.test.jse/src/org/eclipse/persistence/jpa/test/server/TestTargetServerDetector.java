@@ -14,7 +14,6 @@
 //       - 455683: Automatically detect target server
 //     04/24/2015 Rick Curtis
 //       - 465452: Test calling ServerPlatformUtils.createServerPlatform with a null platform class name.
-// CPR:: Copyright (c) 2015 IBM Corporation. All rights reserved.
 package org.eclipse.persistence.jpa.test.server;
 
 import javax.persistence.EntityManagerFactory;

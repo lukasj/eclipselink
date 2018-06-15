@@ -12,7 +12,6 @@
 //     Oracle - initial API and implementation from Oracle TopLink
 //     11/23/2010-2.2 Frank Schwarz
 //       - 328774: TABLE_PER_CLASS-mapped key of a java.util.Map does not work for querying
-// CPR:: Copyright (c) 1998, 2018 Oracle and/or its affiliates, Frank Schwarz. All rights reserved.
 package org.eclipse.persistence.internal.queries;
 
 import java.security.AccessController;

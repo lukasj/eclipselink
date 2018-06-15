@@ -13,7 +13,6 @@
 //     Oracle - initial API and implementation from Oracle TopLink
 //     09/30/2014-2.6.0 Dalia Abo Sheasha
 //       - 445546: NullPointerException thrown when an Array of Bytes contains null values
-// CPR:: Copyright (c) 1998, 2018 Oracle, IBM Corporation and/or its affiliates. All rights reserved.
 package org.eclipse.persistence.internal.helper;
 
 import java.math.*;

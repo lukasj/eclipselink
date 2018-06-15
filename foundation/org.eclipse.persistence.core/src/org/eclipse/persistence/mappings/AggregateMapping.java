@@ -18,7 +18,6 @@
 //       - 499335: Multiple embeddable fields can't reference same object
 //     03/19/2018-2.7.2 Lukas Jungmann
 //       - 413120: Nested Embeddable Null pointer
-// CPR:: Copyright (c) 1998, 2018 Oracle and/or its affiliates, IBM Corporation. All rights reserved.
 package org.eclipse.persistence.mappings;
 
 import java.util.*;

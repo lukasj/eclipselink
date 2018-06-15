@@ -25,7 +25,6 @@
 //       - 338610: JPA 2.1 Functionality for Java EE 7 (JSR-338)
 //     09/06/2017-2.7 Jody Grassel
 //       - 521954: Eclipselink is not able to parse ORM XML files using the 2.2 schema
-// CPR:: Copyright (c) 1998, 2018 Oracle, IBM and/or its affiliates. All rights reserved.
 package org.eclipse.persistence.internal.jpa.metadata.xml;
 
 import java.io.IOException;

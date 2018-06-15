@@ -19,7 +19,6 @@
 //       - 463726: Added DatabaseSession null check
 //     11/05/2015 Dalia Abo Sheasha
 //       - 480787: Wrap several privileged method calls with a doPrivileged block
-// CPR:: Copyright (c) 1998, 2018 Oracle and/or its affiliates, IBM Corporation. All rights reserved.
 package org.eclipse.persistence.platform.server.was;
 
 import java.lang.reflect.Constructor;

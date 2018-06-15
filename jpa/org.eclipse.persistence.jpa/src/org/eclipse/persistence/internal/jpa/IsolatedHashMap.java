@@ -11,7 +11,6 @@
 // Contributors:
 //     05/06/2015-2.7 Tomas Kraus
 //       - Initial API and implementation.
-// CPR:: Copyright (c) 2015 Oracle and/or its affiliates, IBM Corporation. All rights reserved.
 package org.eclipse.persistence.internal.jpa;
 
 import java.util.Collection;

@@ -12,7 +12,6 @@
 // Contributors:
 //     09/10/2008-2.4.1 Daryl Davis
 //       - 386939: @ManyToMany Map<Entity,Entity> unidirectional reverses Key and Value fields on Update
-// CPR:: Copyright (c) 2012, 2015 Oracle, Daryl Davis. All rights reserved.
 package org.eclipse.persistence.testing.models.jpa.ddlgeneration;
 
 import java.io.Serializable;

@@ -35,7 +35,6 @@
 //       - 438177: Support M2M map with jointable
 //     08/12/2015-2.6 Mythily Parthasarathy
 //       - 474752: Address NPE for Embeddable with 1-M association
-// CPR:: Copyright (c) 1998, 2018 Oracle and/or its affiliates, IBM Corporation. All rights reserved.
 package org.eclipse.persistence.descriptors;
 
 import java.io.Serializable;

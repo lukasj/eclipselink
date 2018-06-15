@@ -24,7 +24,6 @@
 //       - 499335: Multiple embeddable fields can't reference same object
 //     02/20/2018-2.7 Will Dazey
 //       - 529602: Added support for CLOBs in DELETE statements for Oracle
-// CPR:: Copyright (c) 1998, 2018 Oracle and/or its affiliates, IBM Corporation. All rights reserved.
 package org.eclipse.persistence.internal.descriptors;
 
 import java.io.*;

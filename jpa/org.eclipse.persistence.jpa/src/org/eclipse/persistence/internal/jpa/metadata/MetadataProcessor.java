@@ -36,7 +36,6 @@
 //       - 440802: xml-mapping-metadata-complete does not exclude @Entity annotated entities
 //     11/23/2017: Scott Marlow
 //       - 414974: allow eclipselink.archive.factory to be specified as an integration property of PersistenceProvider.createContainerEntityManagerFactory(PersistenceUnitInfo, Map)
-// CPR:: Copyright (c) 1998, 2017 Oracle and/or its affiliates, IBM Corporation. All rights reserved.
 package org.eclipse.persistence.internal.jpa.metadata;
 
 import java.io.IOException;

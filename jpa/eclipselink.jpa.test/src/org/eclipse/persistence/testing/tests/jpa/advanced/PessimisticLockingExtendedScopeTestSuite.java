@@ -11,7 +11,6 @@
 // Contributors:
 //     Oracle - initial API and implementation from Oracle TopLink
 //     SAP    - tests rewritten
-// CPR:: Copyright (c) 2010, 2015 Oracle and/or its affiliates, SAP. All rights reserved.
 package org.eclipse.persistence.testing.tests.jpa.advanced;
 
 import java.util.ArrayList;

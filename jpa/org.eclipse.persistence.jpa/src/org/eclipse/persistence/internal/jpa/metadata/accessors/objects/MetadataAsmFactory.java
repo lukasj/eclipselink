@@ -23,7 +23,6 @@
 //       - 429992: JavaSE 8/ASM 5.0.1 support (EclipseLink silently ignores Entity classes with lambda expressions)
 //     11/05/2015-2.6 Dalia Abo Sheasha
 //       - 480787 : Wrap several privileged method calls with a doPrivileged block
-// CPR:: Copyright (c) 1998, 2018 Oracle, Hans Harz, Andrew Rustleund, IBM Corporation. All rights reserved.
 package org.eclipse.persistence.internal.jpa.metadata.accessors.objects;
 
 import java.io.IOException;

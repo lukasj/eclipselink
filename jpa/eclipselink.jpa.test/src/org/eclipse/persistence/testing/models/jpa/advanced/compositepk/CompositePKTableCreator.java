@@ -26,7 +26,6 @@
 //       - 454917: Informix tables need to use INT fields when referencing SERIAL types.
 //     09/11/2017-2.1 Will Dazey
 //       - 520387: multiple owning descriptors for an embeddable are not set
-// CPR:: Copyright (c) 1998, 2017 Oracle and/or its affiliates, IBM Corporation. All rights reserved.
 
 package org.eclipse.persistence.testing.models.jpa.advanced.compositepk;
 

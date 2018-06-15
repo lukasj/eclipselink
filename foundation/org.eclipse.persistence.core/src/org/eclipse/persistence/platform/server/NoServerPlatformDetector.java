@@ -12,7 +12,6 @@
 // Contributors:
 //     01/05/2015 Rick Curtis
 //       - 455683: Automatically detect target server
-// CPR:: Copyright (c) 2015, 2018 IBM Corporation. All rights reserved.
 package org.eclipse.persistence.platform.server;
 
 import java.security.AccessController;

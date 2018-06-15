@@ -12,7 +12,6 @@
 // Contributors:
 //     03/15/2016 Jody Grassel
 //       - 489794: Add support for WebSphere EJBEmbeddable platform.
-// CPR:: Copyright (c) 2016 IBM Corporation. All rights reserved.
 
 package org.eclipse.persistence.internal.sessions.factories.model.platform;
 

@@ -12,7 +12,6 @@
 // Contributors:
 //     09/14/2017-2.6.0 Will Dazey
 //       - 522312: Add support for sequence generation to start forward from nextval
-// CPR:: Copyright (c) 2017 IBM Corporation. All rights reserved.
 package org.eclipse.persistence.jpa.test.sequence;
 
 import javax.persistence.EntityManagerFactory;

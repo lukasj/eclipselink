@@ -104,7 +104,6 @@
 //       - 483582: Add the javax.persistence.sharedCache.mode property
 //     12/05/2016-2.6 Jody Grassel
 //       - 443546: Converter autoApply does not work for primitive types
-// CPR:: Copyright (c) 1998, 2016 Oracle and/or its affiliates, IBM Corporation. All rights reserved.
 package org.eclipse.persistence.internal.jpa.metadata;
 
 import static org.eclipse.persistence.internal.jpa.metadata.MetadataConstants.JPA_EMBEDDABLE;

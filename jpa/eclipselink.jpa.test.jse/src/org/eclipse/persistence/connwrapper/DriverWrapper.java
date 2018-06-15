@@ -11,7 +11,6 @@
 // Contributors:
 //     04/24/2017-2.6 Jody Grassel
 //       - 515712: ServerSession numberOfNonPooledConnectionsUsed can become invalid when Exception is thrown connecting accessor
-// CPR:: Copyright (c) 2017 IBM Corporation, Oracle and/or its affiliates. All rights reserved.
 package org.eclipse.persistence.connwrapper;
 
 import java.sql.Connection;

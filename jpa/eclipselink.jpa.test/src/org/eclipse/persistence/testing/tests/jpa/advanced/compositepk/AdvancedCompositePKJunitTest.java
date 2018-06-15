@@ -22,7 +22,6 @@
 //       - 333913: @OrderBy and <order-by/> without arguments should order by primary
 //     09/11/2017-2.1 Will Dazey
 //       - 520387: multiple owning descriptors for an embeddable are not set
-// CPR:: Copyright (c) 1998, 2017 Oracle and/or its affiliates, IBM Corporation. All rights reserved.
 package org.eclipse.persistence.testing.tests.jpa.advanced.compositepk;
 
 import java.util.List;

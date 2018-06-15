@@ -18,7 +18,6 @@
 //       - 500441: Eclipselink core has System.getProperty() calls that are not potentially executed under doPriv()
 //     11/23/2017: Scott Marlow
 //       - 414974: allow eclipselink.archive.factory to be specified as an integration property of PersistenceProvider.createContainerEntityManagerFactory(PersistenceUnitInfo, Map)
-// CPR:: Copyright (c) 1998, 2017 Oracle and/or its affiliates, IBM Corporation.
 package org.eclipse.persistence.internal.jpa.deployment;
 
 import static org.eclipse.persistence.internal.jpa.metadata.MetadataConstants.JPA_CONVERTER;

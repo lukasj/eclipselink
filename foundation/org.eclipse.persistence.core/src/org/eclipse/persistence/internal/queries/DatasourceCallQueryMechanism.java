@@ -18,7 +18,6 @@
 //       - 511426: Adding cloning support
 //     04/11/2018 - Will Dazey
 //       - 533148 : Add the eclipselink.jpa.sql-call-deferral property
-// CPR:: Copyright (c) 1998, 2018 Oracle and/or its affiliates, IBM Corporation. All rights reserved.
 package org.eclipse.persistence.internal.queries;
 
 import java.util.Collection;

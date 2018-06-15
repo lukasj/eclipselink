@@ -12,7 +12,6 @@
 // Contributors:
 //     04/24/2015 Will Dazey
 //       - 464641: Test that 2.1 oracle12 platform is correctly returned
-// CPR:: Copyright (c) 2015 IBM Corporation. All rights reserved.
 package org.eclipse.persistence.jpa.test.ddl;
 
 import javax.persistence.EntityManagerFactory;

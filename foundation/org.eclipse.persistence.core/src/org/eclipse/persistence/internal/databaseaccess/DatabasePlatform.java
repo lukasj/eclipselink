@@ -25,7 +25,6 @@
 //       - 458877 : Add national character support
 //     02/23/2015-2.6 Dalia Abo Sheasha
 //       - 460607: Change DatabasePlatform StoredProcedureTerminationToken to be configurable
-// CPR:: Copyright (c) 1998, 2018 Oracle and/or its affiliates, IBM Corporation. All rights reserved.
 package org.eclipse.persistence.internal.databaseaccess;
 
 // javase imports

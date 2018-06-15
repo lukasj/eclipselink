@@ -23,7 +23,6 @@
 //       - 460607: Change DatabasePlatform StoredProcedureTerminationToken to be configurable
 //     02/14/2018-2.7 Will Dazey
 //       - 529602: Added support for CLOBs in DELETE statements for Oracle
-// CPR:: Copyright (c) 1998, 2018 Oracle and/or its affiliates, IBM Corporation. All rights reserved.
 package org.eclipse.persistence.platform.database;
 
 import java.io.CharArrayWriter;

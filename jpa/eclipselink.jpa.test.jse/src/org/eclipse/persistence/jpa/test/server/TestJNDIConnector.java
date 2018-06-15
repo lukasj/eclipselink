@@ -13,7 +13,6 @@
 //       - 55690: Move JNDIConnector lookup type to ServerPlatform.
 //     03/15/2016 Jody Grassel
 //       - 489794: Add WebSphere EJBEmbeddable platform test
-// CPR:: Copyright (c) 2015, 2017 IBM Corporation, Oracle and/or its affiliates All rights reserved.
 package org.eclipse.persistence.jpa.test.server;
 
 import java.lang.reflect.InvocationHandler;

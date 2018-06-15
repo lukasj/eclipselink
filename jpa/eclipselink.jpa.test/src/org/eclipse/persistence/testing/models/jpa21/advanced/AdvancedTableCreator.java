@@ -27,7 +27,6 @@
 //       - 412384: Applying Converter for parameterized basic-type for joda-time's DateTime does not work
 //     06/20/2014-2.5.2 Rick Curtis
 //       - 437760: AttributeOverride with no column name defined doesn't work.
-// CPR:: Copyright (c) 2012, 2015 Oracle and/or its affiliates, IBM Corporation. All rights reserved.
 package org.eclipse.persistence.testing.models.jpa21.advanced;
 
 import org.eclipse.persistence.sessions.DatabaseSession;

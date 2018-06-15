@@ -11,7 +11,6 @@
 // Contributors:
 //     02/20/2018-2.7 Will Dazey
 //       - 531062: Incorrect expression type created for CollectionExpression
-// CPR:: Copyright (c) 2018 Oracle and/or its affiliates, IBM Corporation. All rights reserved.
 package org.eclipse.persistence.jpa.test.jpql.model;
 
 import javax.persistence.Embeddable;

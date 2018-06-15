@@ -1,6 +1,6 @@
 /*
  * Copyright (c) 2010, 2018 Oracle and/or its affiliates. All rights reserved.
- * Copyright (c) 2010, 2015  SAP All rights reserved.
+ * Copyright (c) 2010, 2015 SAP All rights reserved.
  *
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Public License 2.0 which is available at
@@ -12,7 +12,6 @@
 // Contributors:
 //     Created Oct 1st, 2010 - Adrian G&ouml;rler, patterned after SybaseTransactionIsolationListener
 //        bug 326777:  Some Core LRG tests hang on MaxDB.
-// CPR:: Copyright (c) 2010, 2015 SAP All rights reserved.
 package org.eclipse.persistence.testing.framework;
 
 import java.sql.Connection;

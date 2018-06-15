@@ -17,7 +17,6 @@
 //      tware, David Mulligan - fix performance issue with releasing locks
 //     11/07/2017 - Dalia Abo Sheasha
 //       - 526957 : Split the logging and trace messages
-// CPR:: Copyright (c) 1998, 2018 Oracle and/or its affiliates, IBM Corporation. All rights reserved.
 package org.eclipse.persistence.internal.helper;
 
 import java.util.IdentityHashMap;

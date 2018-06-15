@@ -26,7 +26,6 @@
 //         private run method security block.
 //     07/28/2017-2.7 Dalia Abo Sheasha
 //       - 520316: Multiple MBeanServers discovered by EclipseLink result in warnings
-// CPR:: Copyright (c) 2010, 2018 Oracle and/or its affiliates, IBM Corporation. All rights reserved.
 package org.eclipse.persistence.platform.server;
 
 import java.lang.management.ManagementFactory;

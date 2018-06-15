@@ -27,7 +27,6 @@
 //       - 389090: JPA 2.1 DDL Generation Support
 //     02/02/2015-2.6.0 Dalia Abo Sheasha
 //       - 458462: generateSchema throws a ClassCastException within a container
-// CPR:: Copyright (c) 2012, 2015 Oracle and/or its affiliates, IBM Corporation. All rights reserved.
 package org.eclipse.persistence.testing.tests.jpa21.advanced;
 
 import java.io.File;

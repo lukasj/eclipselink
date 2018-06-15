@@ -11,7 +11,6 @@
 
 // Contributors:
 //     SAP - initial API and implementation
-// CPR:: Copyright (c) 2005, 2015 SAP. All rights reserved.
 
 package org.eclipse.persistence.testing.tests.wdf.jpa1.embedded;
 

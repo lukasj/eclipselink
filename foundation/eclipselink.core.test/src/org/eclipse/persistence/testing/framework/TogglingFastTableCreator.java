@@ -16,7 +16,6 @@
 //        bug 437578: Added few helper methods to simplify table builder methods.
 //     Jan 06, 2015 - Dalia Abo Sheasha (IBM)
 //        bug 454917: Moved a few helper methods from child class to be visible to all table creators.
-// CPR:: Copyright (c) 2010, 2015 Dies Koper (Fujitsu). Oracle and/or its affiliates, IBM Corporation.
 package org.eclipse.persistence.testing.framework;
 
 import java.util.HashSet;

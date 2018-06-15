@@ -14,7 +14,6 @@
 //       - 460740: Fix pessimistic locking with setFirst/Max results on DB2
 //     03/13/2015-2.6.0 Will Dazey
 //       - 458301: Added named queries for associated tests in TestPessimisticLocking
-// CPR:: Copyright (c) 2015 IBM Corporation. All rights reserved.
 package org.eclipse.persistence.jpa.test.locking.model;
 
 import javax.persistence.Entity;

@@ -26,7 +26,6 @@
 //       - 322916: getParameter on Query throws NPE
 //     08/07/2016-2.7 Dalia Abo Sheasha
 //       - 499335: Multiple embeddable fields can't reference same object
-// CPR:: Copyright (c) 1998, 2016 Oracle and/or its affiliates, IBM Corporation. All rights reserved.
 package org.eclipse.persistence.testing.tests.jpa.advanced;
 
 import java.lang.reflect.Array;

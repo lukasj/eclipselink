@@ -25,7 +25,6 @@
 //       - 458462: generateSchema throws a ClassCastException within a container
 //     02/17/2015-2.6 Rick Curtis
 //       - 460138: Change method visibility.
-// CPR:: Copyright (c) 1998, 2015 Oracle and/or its affiliates, IBM Corporation. All rights reserved.
 package org.eclipse.persistence.jpa;
 
 import java.util.HashMap;

@@ -12,7 +12,6 @@
 // Contributors:
 //     02/02/2015-2.6.0 Dalia Abo Sheasha
 //       - 458462: generateSchema throws a ClassCastException within a container.
-// CPR:: Copyright (c) 2015 IBM Corporation. All rights reserved.
 package org.eclipse.persistence.testing.models.jpa21.advanced.xml.ddl;
 
 import java.lang.reflect.InvocationHandler;

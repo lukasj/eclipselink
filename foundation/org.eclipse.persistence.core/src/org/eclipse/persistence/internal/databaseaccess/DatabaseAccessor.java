@@ -23,7 +23,6 @@
 //       - 389090: JPA 2.1 DDL Generation Support
 //     02/19/2015 - Rick Curtis
 //       - 458877 : Add national character support
-// CPR:: Copyright (c) 1998, 2017 Oracle and/or its affiliates, IBM Corporation. All rights reserved.
 package org.eclipse.persistence.internal.databaseaccess;
 
 // javase imports

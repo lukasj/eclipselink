@@ -13,7 +13,6 @@
 //     06/24/2014 - 438105 - 2.6.0 - Rick Curtis - Fix bug in EntityListenerInjectionManagerImpl constructor.
 //     07/01/2014-2.5.2 Rick Curtis
 //       - 438663: Fix injection ordering bug.
-// CPR:: Copyright (c) 2012, 2018 Oracle and/or its affiliates, IBM Corporation. All rights reserved.
 package org.eclipse.persistence.internal.sessions.cdi;
 
 import java.util.HashMap;

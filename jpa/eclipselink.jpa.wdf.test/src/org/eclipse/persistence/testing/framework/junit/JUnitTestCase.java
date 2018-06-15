@@ -12,7 +12,6 @@
 // Contributors:
 //     Oracle - initial API and implementation from Oracle TopLink
 //     SAP - use in eclipselink.jpa.wdf.test package
-// CPR:: Copyright (c) 1998, 2015 Oracle, SAP. All rights reserved.
 package org.eclipse.persistence.testing.framework.junit;
 
 import java.util.Hashtable;

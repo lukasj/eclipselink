@@ -1,6 +1,6 @@
 /*
  * Copyright (c) 2010, 2018 Oracle and/or its affiliates. All rights reserved.
- * Copyright (c) 2010, 2015   Karsten Wutzke. All rights reserved.
+ * Copyright (c) 2010, 2015 Karsten Wutzke. All rights reserved.
  *
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Public License 2.0 which is available at
@@ -12,7 +12,6 @@
 // Contributors:
 //     12/23/2010-2.3 Guy Pelletier submitted for Karsten Wutzke
 //       - 331386: NPE when mapping chain of 2 multi-column relationships using JPA 2.0 and @EmbeddedId composite PK-FK
-// CPR:: Copyright (c) 2010, 2015 Karsten Wutzke. All rights reserved.
 package org.eclipse.persistence.testing.models.jpa.ddlgeneration;
 
 import java.io.Serializable;

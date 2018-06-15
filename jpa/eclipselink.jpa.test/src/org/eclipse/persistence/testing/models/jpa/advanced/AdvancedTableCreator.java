@@ -22,7 +22,6 @@
 //       - 454917: Informix tables need to use INT fields when referencing SERIAL types, moved helper methods to parent class
 //     01/15/2015-2.6 Mythily Parthasarathy
 //       - 457480: NPE in  MethodAttributeAccessor.getAttributeValueFromObject
-// CPR:: Copyright (c) 1998, 2018 Oracle and/or its affiliates, IBM Corporation. All rights reserved.
 package org.eclipse.persistence.testing.models.jpa.advanced;
 
 import org.eclipse.persistence.exceptions.DatabaseException;

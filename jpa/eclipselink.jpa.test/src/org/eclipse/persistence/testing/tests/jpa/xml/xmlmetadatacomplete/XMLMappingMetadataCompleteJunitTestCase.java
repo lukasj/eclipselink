@@ -1,6 +1,6 @@
 /*
  * Copyright (c) 2014, 2018 Oracle and/or its affiliates. All rights reserved.
- * Copyright (c) 2014, 2015  IBM Corporation and/or its affiliates. All rights reserved.
+ * Copyright (c) 2014, 2015 IBM Corporation and/or its affiliates. All rights reserved.
  *
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Public License 2.0 which is available at
@@ -12,7 +12,6 @@
 // Contributors:
 //     08/18/2014-2.5 Jody Grassel (IBM Corporation)
 //       - 440802: xml-mapping-metadata-complete does not exclude @Entity annotated entities
-// CPR:: Copyright (c) 2014, 2015 IBM Corporation and/or its affiliates. All rights reserved.
 
 package org.eclipse.persistence.testing.tests.jpa.xml.xmlmetadatacomplete;
 

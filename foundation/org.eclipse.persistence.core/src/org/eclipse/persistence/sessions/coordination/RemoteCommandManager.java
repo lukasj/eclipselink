@@ -12,7 +12,6 @@
 //     Oracle - initial API and implementation from Oracle TopLink
 //     11/07/2017 - Dalia Abo Sheasha
 //       - 526957 : Split the logging and trace messages
-// CPR:: Copyright (c) 1998, 2018 Oracle and/or its affiliates, IBM Corporation. All rights reserved.
 package org.eclipse.persistence.sessions.coordination;
 
 import java.net.InetAddress;

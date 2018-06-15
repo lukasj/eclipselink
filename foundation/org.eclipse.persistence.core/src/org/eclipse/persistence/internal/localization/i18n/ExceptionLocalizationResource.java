@@ -33,7 +33,6 @@
 //       - 454189 : Misc message cleanup.#2
 //     03/09/2016-2.6 Dalia Abo Sheasha
 //       - 489298: Wrap EclipseLink's Bean Validation calls in doPrivileged blocks when security is enabled
-// CPR:: Copyright (c) 1998, 2018 Oracle, IBM Corporation and/or its affiliates. All rights reserved.
 package org.eclipse.persistence.internal.localization.i18n;
 
 import java.util.ListResourceBundle;

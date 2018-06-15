@@ -1,6 +1,6 @@
 /*
  * Copyright (c) 2011, 2018 Oracle and/or its affiliates. All rights reserved.
- * Copyright (c) 2011, 2015  Adrian Goerler. All rights reserved.
+ * Copyright (c) 2011, 2015 Adrian Goerler. All rights reserved.
  *
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Public License 2.0 which is available at
@@ -12,7 +12,6 @@
 // Contributors:
 //     01/06/2011-2.3 Guy Pelletier for Adrian Goerler
 //       - 312244: can't map optional one-to-one relationship using @PrimaryKeyJoinColumn
-// CPR:: Copyright (c) 2011, 2015 Adrian Goerler. All rights reserved.
 package org.eclipse.persistence.testing.models.jpa.ddlgeneration;
 
 import javax.persistence.Column;

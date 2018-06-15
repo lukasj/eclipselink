@@ -22,7 +22,6 @@
 //       - 491824: Setting lock timeout to 0 issues a NOWAIT causing an error in DB2
 //     08/22/2017 - Will Dazey
 //       - 521037: DB2 default schema is doubled for sequence queries
-// CPR:: Copyright (c) 1998, 2018 Oracle and/or its affiliates, IBM Corporation. All rights reserved.
 package org.eclipse.persistence.platform.database;
 
 import java.io.*;

@@ -16,7 +16,6 @@
 //       - 454189 : Misc message cleanup.#2
 //     11/14/2017 - Dalia Abo Sheasha
 //       - 527273 : Minor message improvements
-// CPR:: Copyright (c) 1998, 2017 Oracle and/or its affiliates, IBM Corporation. All rights reserved.
 package org.eclipse.persistence.internal.localization.i18n;
 
 import java.util.ListResourceBundle;

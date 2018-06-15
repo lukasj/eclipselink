@@ -19,7 +19,6 @@
 //       - 437578: Tests to verify @Cacheable inheritance in JPA 2.1
 //     12/03/2015-2.6 Dalia Abo Sheasha
 //       - 483582: Add the javax.persistence.sharedCache.mode property
-// CPR:: Copyright (c) 1998, 2018 Oracle and/or its affiliates, IBM Corporation. All rights reserved.
 package org.eclipse.persistence.testing.tests.jpa.cacheable;
 
 import java.util.ArrayList;

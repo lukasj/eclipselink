@@ -94,7 +94,6 @@
 //       - 437760: AttributeOverride with no column name defined doesn't work.
 //     07/01/2014-2.5.3 Rick Curtis
 //       - 375101: Date and Calendar should not require @Temporal.
-// CPR:: Copyright (c) 1998, 2018 Oracle and/or its affiliates, IBM Corporation. All rights reserved.
 package org.eclipse.persistence.internal.jpa.metadata.accessors.mappings;
 
 import static org.eclipse.persistence.internal.jpa.metadata.MetadataConstants.EL_ACCESS_VIRTUAL;

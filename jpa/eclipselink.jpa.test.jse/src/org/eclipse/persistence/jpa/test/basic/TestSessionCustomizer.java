@@ -12,7 +12,6 @@
 // Contributors:
 //     03/23/2015 - Rick Curtis
 //       - 462888 : SessionCustomizer instance based configuration
-// CPR:: Copyright (c) 2015 IBM Corporation. All rights reserved.
 package org.eclipse.persistence.jpa.test.basic;
 
 import java.util.HashMap;

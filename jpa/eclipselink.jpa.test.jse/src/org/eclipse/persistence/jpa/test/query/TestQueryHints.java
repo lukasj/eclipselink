@@ -16,7 +16,6 @@
 //       - 456067 : Added tests to check query timeout units
 //     01/31/2017 - Will Dazey
 //       - 511426: Adding test to check QueryHints.SCROLLABLE_CURSOR
-// CPR:: Copyright (c) 2017 IBM Corporation. All rights reserved.
 package org.eclipse.persistence.jpa.test.query;
 
 import java.lang.reflect.InvocationHandler;
