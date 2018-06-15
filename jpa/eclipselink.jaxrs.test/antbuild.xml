@@ -14,7 +14,6 @@
   Contributors:
       Dmitry Kornilov - initial API and implementation
 -->
-<!-- CPR:: Copyright (c) 1998, 2016 Oracle and/or its affiliates. All rights reserved.
 <!-- This ant project includes the following tasks:
         - build (default) : cleans build directories, compiles model and tests, creates war file
         - compile : compiles model and tests

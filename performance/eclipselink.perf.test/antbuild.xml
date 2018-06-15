@@ -15,7 +15,6 @@
   Contributors:
       Martin Vojtek   - initial implementation
 -->
-<!-- CPR:: Copyright (c) 2014, 2018 Oracle and/or its affiliates. All rights reserved. -->
 <project name="eclipselink.perf.test" default="test" basedir=".">
 
     <dirname  property="perftest.build.location_temp" file="${ant.file.eclipselink.perf.test}"/>

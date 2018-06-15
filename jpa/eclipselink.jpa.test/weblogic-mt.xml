@@ -14,7 +14,6 @@
   Contributors:
       tkraus - initial API and implementation
 -->
-<!-- CPR:: - Copyright (c) 2014, 2015 Oracle and/or its affiliates. All rights reserved. -->
 <!-- This ant project includes following common tasks:
         - wls-config-partition  Configure WebLogic partitions for tests
         - wls-create-domain     Create WebLogic domain for tests
