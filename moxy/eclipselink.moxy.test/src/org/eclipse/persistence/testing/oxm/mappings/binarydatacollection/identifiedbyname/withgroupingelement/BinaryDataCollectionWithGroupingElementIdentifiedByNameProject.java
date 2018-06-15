@@ -11,18 +11,7 @@
 // Contributors:
 //     Oracle - initial API and implementation from Oracle TopLink
 
-/* $Header: BinaryDataCollectionWithGroupingElementIdentifiedByNameProject.java 02-nov-2006.10:57:28 gyorke Exp $ */
-/* Copyright (c) 2006, Oracle. All rights reserved.  */
-/*
-   DESCRIPTION
-
-   MODIFIED    (MM/DD/YY)
-    gyorke      11/02/06 -
-    mfobrien    10/19/06 - Creation
- */
-
 /**
- *  @version $Header: BinaryDataCollectionWithGroupingElementIdentifiedByNameProject.java 02-nov-2006.10:57:28 gyorke Exp $
  *  @author  mfobrien
  *  @since   11.1
  */

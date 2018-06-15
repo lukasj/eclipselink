@@ -11,17 +11,7 @@
 // Contributors:
 //     Oracle - initial API and implementation from Oracle TopLink
 
-/* $Header: MyAttachmentUnmarshaller.java 19-oct-2006.17:18:25 mfobrien Exp $ */
-/* Copyright (c) 2006, Oracle. All rights reserved. */
-/*
-   DESCRIPTION
-
-   MODIFIED    (MM/DD/YY)
-    mfobrien    10/19/06 - Creation
- */
-
 /**
- *  @version $Header: MyAttachmentUnmarshaller.java 19-oct-2006.17:18:25 mfobrien Exp $
  *  @author  mfobrien
  *  @since   11.1
  */

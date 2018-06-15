@@ -12,11 +12,7 @@
 //     Oracle - initial API and implementation from Oracle TopLink
 package org.eclipse.persistence.testing.oxm.mappings.anyobject.withoutgroupingelement;
 
-
-/* Copyright (c) 2006, Oracle. All rights reserved.  */
-
 /**
- *  @version $Header: AnyObjectNoDefaultRootWithoutGroupingElementProject.java 02-nov-2006.10:56:44 gyorke Exp $
  *  @author  mfobrien
  *  @since   10.1.3.1.0
  */
