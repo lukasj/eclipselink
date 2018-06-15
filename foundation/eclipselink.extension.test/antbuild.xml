@@ -8,9 +8,12 @@
 * and the Eclipse Distribution License is available                           *
 *     at http://www.eclipse.org/org/documents/edl-v10.php.                    *
 *                                                                             *
-* Contributors:                                                               *
-*     Tomas Kraus - Initial API and implementation                            *
 ****************************************************************************-->
+<!--
+  Contributors:
+      Tomas Kraus - Initial API and implementation
+-->
+<!-- CPR:: Copyright (c) 2016 Oracle and/or its affiliates. All rights reserved.-->
 <!-- This ant project includes the following tasks:
         - build        Compiles and packages all tests
         - clean        Cleans all classes, packages and reports

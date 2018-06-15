@@ -26,10 +26,11 @@
 *   - OS environment variables are in ALLCAPS and have 'env' as a prefix
 *     e.g. ${env.XXX}.
 *   - Ant properties are lower case.
-*
-* Contributors:
-*     pvijayaratnam - cache coordination test implementation
 #******************************************************************************/-->
+<!--
+  Contributors:
+      pvijayaratnam - cache coordination test implementation
+-->
 
 <project name="Eclipse Persistence Services JPA WLS CacheCoordination Testing" basedir=".">
 

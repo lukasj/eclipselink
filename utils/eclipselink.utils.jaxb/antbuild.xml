@@ -27,10 +27,11 @@
 *   - OS environment variables are in ALLCAPS and have 'env' as a prefix
 *     e.g. ${env.XXX}.
 *   - Ant properties are lower case.
-*
-* Contributors:
-*     bdoughan - initial API and implementation
 #******************************************************************************/-->
+<!--
+  Contributors:
+      bdoughan - initial API and implementation
+-->
 <project name="eclipselink.utils.jaxb" default="build" basedir=".">
     <available file="../${ant.project.name}" type="dir" property="jaxbutil.is.local"/>
     <!-- Test to make sure that the calling script doesn't inherit the variable -->

@@ -6,11 +6,12 @@
 - The Eclipse Public License is available at http://www.eclipse.org/legal/epl-v10.html
 - and the Eclipse Distribution License is available at
 - http://www.eclipse.org/org/documents/edl-v10.php.
--
-- Contributors:
--     tkraus - initial API and implementation
 -->
-
+<!--
+  Contributors:
+      tkraus - initial API and implementation
+-->
+<!-- CPR:: - Copyright (c) 2014, 2015 Oracle and/or its affiliates. All rights reserved. -->
 <!-- This ant project includes following common tasks:
         - wls-config-partition  Configure WebLogic partitions for tests
         - wls-create-domain     Create WebLogic domain for tests

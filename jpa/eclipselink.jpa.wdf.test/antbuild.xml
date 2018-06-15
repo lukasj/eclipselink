@@ -27,12 +27,13 @@
 *   - OS environment variables are in ALLCAPS and have 'env' as a prefix
 *     e.g. ${env.XXX}.
 *   - Ant properties are lower case.
-*
-* Contributors:
-*     tware -  initial API and implementation
-*     egwin    Update and add to nightly process.
-*     agoerler prepare for server-tests
 #******************************************************************************/-->
+<!--
+  Contributors:
+      tware -  initial API and implementation
+      egwin    Update and add to nightly process.
+      agoerler prepare for server-tests
+-->
 
 <!-- This ant project includes the following tasks:
         - build (default) : compiles all JPA tests, packages test jars

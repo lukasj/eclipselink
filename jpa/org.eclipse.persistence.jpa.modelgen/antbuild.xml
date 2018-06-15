@@ -27,11 +27,12 @@
 *   - OS environment variables are in ALLCAPS and have 'env' as a prefix
 *     e.g. ${env.XXX}.
 *   - Ant properties are lower case.
-*
-* Contributors:
-*     tware - initial API and implementation
-*     egwin - update to adopt calling standards
 #******************************************************************************/-->
+<!--
+  Contributors:
+      tware - initial API and implementation
+      egwin - update to adopt calling standards
+-->
 <project name="org.eclipse.persistence.jpa.modelgen" default="build" basedir=".">
     <available file="../${ant.project.name}" type="dir" property="modelgen.is.local"/>
     <!-- Test to make sure that the calling script doesn't inherit the variable -->

@@ -27,11 +27,12 @@
 *   - OS environment variables are in ALLCAPS and have 'env' as a prefix
 *     e.g. ${env.XXX}.
 *   - Ant properties are lower case.
-*
-* Contributors:
-*     bdoughan - initial API and implementation
-*     egwin - update to adopt calling standards
 #******************************************************************************/-->
+<!--
+  Contributors:
+      bdoughan - initial API and implementation
+      egwin - update to adopt calling standards
+-->
 <project name="org.eclipse.persistence.moxy.dynamicxjc" default="build" basedir=".">
     <available file="../${ant.project.name}" type="dir" property="dynamic.is.local"/>
     <!-- Test to make sure that the calling script doesn't inherit the variable -->

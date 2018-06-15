@@ -27,11 +27,12 @@
 *   - OS environment variables are in ALLCAPS and have 'env' as a prefix
 *     e.g. ${env.XXX}.
 *   - Ant properties are lower case.
-*
-* Contributors:
-*     tware - initial API and implementation
 #******************************************************************************/-->
-
+<!--
+  Contributors:
+      tware - initial API and implementation
+-->
+<!-- CPR:: Copyright (c) 1998, 2018 Oracle and/or its affiliates. All rights reserved.
 <!-- This ant project includes the following tasks:
         - build (default) : compiles all JPA tests, packages test jars
         - compile : compiles all JPA tests

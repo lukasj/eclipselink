@@ -27,10 +27,11 @@
 *   - OS environment variables are in ALLCAPS and have 'env' as a prefix
 *     e.g. ${env.XXX}.
 *   - Ant properties are lower case.
-*
-* Contributors:
-*     etang - initial API and implementation on May 10, 2010
 #******************************************************************************/-->
+<!--
+  Contributors:
+      etang - initial API and implementation on May 10, 2010
+-->
 <project name="eclipselink.sdo.test.server" default="test" basedir=".">
     <property name="env" environment="env" value="env"/>
 

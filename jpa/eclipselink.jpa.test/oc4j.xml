@@ -26,10 +26,11 @@
 *   - OS environment variables are in ALLCAPS and have 'env' as a prefix
 *     e.g. ${env.XXX}.
 *   - Ant properties are lower case.
-*
-* Contributors:
-*     tware - initial API and implementation
 #******************************************************************************/-->
+<!--
+  Contributors:
+      tware - initial API and implementation
+-->
 
 <!-- This ant project includes the following tasks:
         - oc4j-install : recreates server installation from download zip

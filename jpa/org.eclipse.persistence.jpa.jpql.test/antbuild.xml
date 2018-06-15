@@ -26,10 +26,11 @@
 *   - OS environment variables are in ALLCAPS and have 'env' as a prefix
 *     e.g. ${env.XXX}.
 *   - Ant properties are lower case.
-*
-* Contributors:
-*     pfilion - initial API and implementation
 #******************************************************************************/-->
+<!--
+  Contributors:
+      pfilion - initial API and implementation
+-->
 
 <!-- This ant project includes the following tasks:
         - build (default) : compiles Hermes tests, packages test jars

@@ -19,10 +19,11 @@
 *   - OS environment variables are in ALLCAPS and have 'env' as a prefix
 *     e.g. ${env.XXX}.
 *   - Ant properties are lower case.
-*
-* Contributors:
-*     ??? - initial implementation
 #******************************************************************************/-->
+<!--
+  Contributors:
+      ??? - initial implementation
+-->
 
 <!-- This ant project includes the following tasks:
         - netweaver-setup    : packs an application containing eclipselink.jar and other required libraries and deploys it to the server

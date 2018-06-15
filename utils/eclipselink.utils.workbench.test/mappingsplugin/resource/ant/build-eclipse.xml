@@ -23,10 +23,11 @@
 *   - OS environment variables are in ALLCAPS and have 'env' as a prefix
 *     e.g. ${env.XXX}.
 *   - Ant properties are lower case.
-*
-* Contributors:
-*     Oracle - initial API and implementation
 #******************************************************************************/-->
+<!--
+  Contributors:
+      Oracle - initial API and implementation
+-->
 <project name="Test.Ant.Extension" default="validate.session" basedir="." xmlns:toplink="toplinklib">
     <!-- =================================================================== -->
     <!--  Properties                                                         -->

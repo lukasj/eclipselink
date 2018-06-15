@@ -5,10 +5,11 @@
 * The Eclipse Public License is available at http://www.eclipse.org/legal/epl-v10.html
 * and the Eclipse Distribution License is available at
 * http://www.eclipse.org/org/documents/edl-v10.php.
-*
-* Contributors:
-*     Rick Curtis- initial API and implementation
 #******************************************************************************/-->
+<!--
+  Contributors:
+      Rick Curtis- initial API and implementation
+-->
 <project name="eclipselink.jpa.test.jse" default="test" basedir=".">
 
     <!-- Initialize environment variables first. Do not place lines above these. -->
