@@ -11,6 +11,9 @@
  *     tware - initial implementation for Extensibililty feature
  *
  ******************************************************************************/
+// Contributors:
+//     tware - initial implementation for Extensibililty feature
+//
 package org.eclipse.persistence.internal.descriptors;
 
 import java.io.Serializable;

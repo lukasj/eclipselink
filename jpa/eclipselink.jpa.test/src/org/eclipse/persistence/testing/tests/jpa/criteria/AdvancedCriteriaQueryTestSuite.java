@@ -12,6 +12,11 @@
  *     02/03/2017 - Dalia Abo Sheasha
  *       - 509693 : EclipseLink generates inconsistent SQL statements for SubQuery
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation from Oracle TopLink
+//     02/03/2017 - Dalia Abo Sheasha
+//       - 509693 : EclipseLink generates inconsistent SQL statements for SubQuery
+// CPR:: Copyright (c) 1998, 2018 Oracle and/or its affiliates, IBM Corporation. All rights reserved.
 
 package org.eclipse.persistence.testing.tests.jpa.criteria;
 

@@ -10,6 +10,8 @@
  * Contributors:
  * dmccann - November 29/2010 - 2.3 - Initial implementation
  ******************************************************************************/
+// Contributors:
+// dmccann - November 29/2010 - 2.3 - Initial implementation
 package org.eclipse.persistence.oxm.annotations;
 
 import static java.lang.annotation.ElementType.FIELD;

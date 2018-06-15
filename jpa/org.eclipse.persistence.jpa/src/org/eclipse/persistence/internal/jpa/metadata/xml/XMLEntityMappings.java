@@ -34,6 +34,32 @@
  *     10/25/2012-2.5 Guy Pelletier
  *       - 374688: JPA 2.1 Converter support
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation from Oracle TopLink
+//     05/16/2008-1.0M8 Guy Pelletier
+//       - 218084: Implement metadata merging functionality between mapping file
+//     05/23/2008-1.0M8 Guy Pelletier
+//       - 211330: Add attributes-complete support to the EclipseLink-ORM.XML Schema
+//     09/23/2008-1.1 Guy Pelletier
+//       - 241651: JPA 2.0 Access Type support
+//     10/01/2008-1.1 Guy Pelletier
+//       - 249329: To remain JPA 1.0 compliant, any new JPA 2.0 annotations should be referenced by name
+//     12/12/2008-1.1 Guy Pelletier
+//       - 249860: Implement table per class inheritance support.
+//     03/08/2010-2.1 Guy Pelletier
+//       - 303632: Add attribute-type for mapping attributes to EclipseLink-ORM
+//     04/09/2010-2.1 Guy Pelletier
+//       - 307050: Add defaults for access methods of a VIRTUAL access type
+//     04/27/2010-2.1 Guy Pelletier
+//       - 309856: MappedSuperclasses from XML are not being initialized properly
+//     03/24/2011-2.3 Guy Pelletier
+//       - 337323: Multi-tenant with shared schema support (part 1)
+//     07/06/2011-2.3.1 Guy Pelletier
+//       - 349906: NPE while using eclipselink in the application
+//     10/09/2012-2.5 Guy Pelletier
+//       - 374688: JPA 2.1 Converter support
+//     10/25/2012-2.5 Guy Pelletier
+//       - 374688: JPA 2.1 Converter support
 package org.eclipse.persistence.internal.jpa.metadata.xml;
 
 import java.io.ByteArrayOutputStream;

@@ -10,6 +10,8 @@
  * Contributors:
  *     Denise Smith, February 2013
  ******************************************************************************/
+// Contributors:
+//     Denise Smith, February 2013
 package org.eclipse.persistence.testing.jaxb.xmlinverseref;
 
 import javax.xml.bind.annotation.XmlRootElement;

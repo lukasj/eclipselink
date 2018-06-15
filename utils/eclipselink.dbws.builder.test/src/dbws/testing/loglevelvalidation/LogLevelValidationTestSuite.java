@@ -10,6 +10,8 @@
  * Contributors:
  * David McCann - 2.4 - Initial implementation
  ******************************************************************************/
+// Contributors:
+// David McCann - 2.4 - Initial implementation
 package dbws.testing.loglevelvalidation;
 
 //javase imports

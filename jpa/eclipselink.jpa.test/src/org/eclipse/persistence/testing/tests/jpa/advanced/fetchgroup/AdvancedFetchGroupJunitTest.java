@@ -13,6 +13,11 @@
  *     01/15/2016-2.7 Mythily Parthasarathy
  *       - 485984: Add test for retrieval of cached getReference within a txn
  ******************************************************************************/
+// Contributors:
+//     01/19/2010-2.1 Guy Pelletier
+//       - 211322: Add fetch-group(s) support to the EclipseLink-ORM.XML Schema
+//     01/15/2016-2.7 Mythily Parthasarathy
+//       - 485984: Add test for retrieval of cached getReference within a txn
 package org.eclipse.persistence.testing.tests.jpa.advanced.fetchgroup;
 
 import java.lang.reflect.Field;

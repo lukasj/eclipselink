@@ -10,6 +10,8 @@
  * Contributors:
  *     Martin Vojtek - 2.6 - initial implementation
  ******************************************************************************/
+// Contributors:
+//     Martin Vojtek - 2.6 - initial implementation
 package org.eclipse.persistence.testing.jaxb.annotations.xmlvalue;
 
 import mockit.Deencapsulation;

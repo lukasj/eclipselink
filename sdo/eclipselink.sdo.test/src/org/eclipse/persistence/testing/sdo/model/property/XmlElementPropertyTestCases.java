@@ -10,6 +10,8 @@
  * Contributors:
  *     Blaise Doughan - 2.1.3 - initial implementation
  ******************************************************************************/
+// Contributors:
+//     Blaise Doughan - 2.1.3 - initial implementation
 package org.eclipse.persistence.testing.sdo.model.property;
 
 import org.eclipse.persistence.sdo.SDOConstants;

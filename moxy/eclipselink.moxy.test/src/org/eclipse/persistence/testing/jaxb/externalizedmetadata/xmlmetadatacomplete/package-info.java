@@ -10,6 +10,8 @@
  * Contributors:
  * dmccann - November 09/2010 - 2.2 - Initial implementation
  ******************************************************************************/
+// Contributors:
+// dmccann - November 09/2010 - 2.2 - Initial implementation
 @javax.xml.bind.annotation.XmlSchema(
         namespace="http://www.eclipse.org/eclipselink/xsds/persistence/oxm/junk",
         attributeFormDefault=javax.xml.bind.annotation.XmlNsForm.QUALIFIED,

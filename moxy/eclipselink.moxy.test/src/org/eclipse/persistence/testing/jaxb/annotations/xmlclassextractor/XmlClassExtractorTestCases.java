@@ -10,6 +10,8 @@
  * Contributors:
  *     Oracle = 2.2 - Initial contribution
  ******************************************************************************/
+// Contributors:
+//     Oracle = 2.2 - Initial contribution
 package org.eclipse.persistence.testing.jaxb.annotations.xmlclassextractor;
 
 import java.util.ArrayList;

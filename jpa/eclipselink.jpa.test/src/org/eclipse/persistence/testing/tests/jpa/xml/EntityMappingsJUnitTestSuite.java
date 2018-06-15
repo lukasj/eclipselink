@@ -18,6 +18,16 @@
  *     12/01/2010-2.2 Guy Pelletier
  *       - 331234: xml-mapping-metadata-complete overriden by metadata-complete specification
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation from Oracle TopLink
+//     12/18/2009-2.1 Guy Pelletier
+//       - 211323: Add class extractor support to the EclipseLink-ORM.XML Schema
+//     01/19/2010-2.1 Guy Pelletier
+//       - 211322: Add fetch-group(s) support to the EclipseLink-ORM.XML Schema
+//     07/05/2010-2.1.1 Guy Pelletier
+//       - 317708: Exception thrown when using LAZY fetch on VIRTUAL mapping
+//     12/01/2010-2.2 Guy Pelletier
+//       - 331234: xml-mapping-metadata-complete overriden by metadata-complete specification
 package org.eclipse.persistence.testing.tests.jpa.xml;
 
 import junit.framework.Test;

@@ -10,6 +10,8 @@
  * Contributors:
  *     Doug Clarke - initial API and implementation
  ******************************************************************************/
+// Contributors:
+//     Doug Clarke - initial API and implementation
 package org.eclipse.persistence.internal.jpa.config.classes;
 
 import java.util.ArrayList;

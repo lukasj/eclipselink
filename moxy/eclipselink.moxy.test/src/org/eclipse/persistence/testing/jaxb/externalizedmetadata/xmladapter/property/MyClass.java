@@ -10,6 +10,8 @@
  * Contributors:
  * dmccann - July 21/2009 - 2.0 - Initial implementation
  ******************************************************************************/
+// Contributors:
+// dmccann - July 21/2009 - 2.0 - Initial implementation
 package org.eclipse.persistence.testing.jaxb.externalizedmetadata.xmladapter.property;
 
 import java.util.Calendar;

@@ -11,6 +11,9 @@
  *     09 Jan 2013-2.5 Gordon Yorke
  *       - 397772: JPA 2.1 Entity Graph Support
  ******************************************************************************/
+// Contributors:
+//     09 Jan 2013-2.5 Gordon Yorke
+//       - 397772: JPA 2.1 Entity Graph Support
 package org.eclipse.persistence.internal.jpa;
 
 import java.util.ArrayList;

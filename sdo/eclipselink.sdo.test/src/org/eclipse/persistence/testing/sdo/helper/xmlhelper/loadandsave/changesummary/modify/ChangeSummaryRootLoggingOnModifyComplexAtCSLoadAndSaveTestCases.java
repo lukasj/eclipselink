@@ -10,6 +10,8 @@
  * Contributors:
  *     Oracle - initial API and implementation from Oracle TopLink
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation from Oracle TopLink
 /**
  *  @version $Header: ChangeSummaryRootLoggingOnModifyComplexAtCSLoadAndSaveTestCases.java 23-apr-2007.14:38:52 dmahar Exp $
  *  @author  mfobrien

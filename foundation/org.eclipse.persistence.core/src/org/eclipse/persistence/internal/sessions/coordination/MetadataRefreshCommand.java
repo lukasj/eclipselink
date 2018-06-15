@@ -11,6 +11,9 @@
  *     01/19/2012-2.4 Chris Delahunt
  *       - 368490: Add support for Metadata to be refreshed through RCM
  ******************************************************************************/
+// Contributors:
+//     01/19/2012-2.4 Chris Delahunt
+//       - 368490: Add support for Metadata to be refreshed through RCM
 package org.eclipse.persistence.internal.sessions.coordination;
 
 import java.util.Map;

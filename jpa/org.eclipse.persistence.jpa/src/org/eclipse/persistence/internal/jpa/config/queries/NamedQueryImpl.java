@@ -10,6 +10,8 @@
  * Contributors:
  *     Guy Pelletier, Doug Clarke - initial API and implementation
  ******************************************************************************/
+// Contributors:
+//     Guy Pelletier, Doug Clarke - initial API and implementation
 package org.eclipse.persistence.internal.jpa.config.queries;
 
 import org.eclipse.persistence.jpa.config.NamedQuery;

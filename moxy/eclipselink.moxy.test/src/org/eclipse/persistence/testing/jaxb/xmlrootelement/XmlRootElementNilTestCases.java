@@ -10,6 +10,8 @@
  * Contributors:
  * mmacivor - April 8th/2010 - 2.1 - Initial implementation
  ******************************************************************************/
+// Contributors:
+// mmacivor - April 8th/2010 - 2.1 - Initial implementation
 package org.eclipse.persistence.testing.jaxb.xmlrootelement;
 
 import org.eclipse.persistence.testing.jaxb.JAXBWithJSONTestCases;

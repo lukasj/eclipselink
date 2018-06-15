@@ -10,6 +10,8 @@
  * Contributors:
  *  06/12/2008-1.0M9 James Sutherland
  ******************************************************************************/
+// Contributors:
+//  06/12/2008-1.0M9 James Sutherland
 package org.eclipse.persistence.sessions.factories;
 
 /**

@@ -10,6 +10,8 @@
  * Contributors:
  * dmccann - November 24/2010 - 2.2 - Initial implementation
  ******************************************************************************/
+// Contributors:
+// dmccann - November 24/2010 - 2.2 - Initial implementation
 package org.eclipse.persistence.testing.jaxb.externalizedmetadata.xmlelementrefs.collectiontype;
 
 import javax.xml.bind.JAXBElement;

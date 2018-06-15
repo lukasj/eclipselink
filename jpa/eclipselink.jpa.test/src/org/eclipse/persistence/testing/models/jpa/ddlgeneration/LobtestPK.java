@@ -11,6 +11,10 @@
  *     01/11/2011-2.3 Guy Pelletier submitted for Kristian Rye Vennesland
  *       - 277079: EmbeddedId's fields are null when using LOB with fetchtype LAZY
  ******************************************************************************/
+// Contributors:
+//     01/11/2011-2.3 Guy Pelletier submitted for Kristian Rye Vennesland
+//       - 277079: EmbeddedId's fields are null when using LOB with fetchtype LAZY
+// CPR:: Copyright (c) 2011, 2015 Kristian Rye Vennesland. All rights reserved.
 package org.eclipse.persistence.testing.models.jpa.ddlgeneration;
 
 import java.io.Serializable;

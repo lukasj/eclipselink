@@ -10,6 +10,8 @@
  * Contributors:
  *     Oracle - initial API and implementation from Oracle TopLink
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation from Oracle TopLink
 /*
    DESCRIPTION
     Test equality helper using bidirectional properties

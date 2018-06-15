@@ -20,6 +20,18 @@
  *     07/16/2009-2.0  mobrien - 266912: implement getIdType() minus full composite key support
  *         http://wiki.eclipse.org/EclipseLink/Development/JPA_2.0/metamodel_api#DI_47:_20090715:_Implement_IdentifiableType.getIdType.28.29_for_composite_keys
  ******************************************************************************/
+// Contributors:
+//     03/19/2009-2.0  dclarke  - initial API start
+//     06/30/2009-2.0  mobrien - finish JPA Metadata API modifications in support
+//       of the Metamodel implementation for EclipseLink 2.0 release involving
+//       Map, ElementCollection and Embeddable types on MappedSuperclass descriptors
+//       - 266912: JPA 2.0 Metamodel API (part of the JSR-317 EJB 3.1 Criteria API)
+//     07/06/2009-2.0  mobrien - 266912: Introduce IdentifiableTypeImpl between ManagedTypeImpl
+//       - EntityTypeImpl now inherits from IdentifiableTypeImpl instead of ManagedTypeImpl
+//       - MappedSuperclassTypeImpl now inherits from IdentifiableTypeImpl instead
+//       of implementing IdentifiableType indirectly
+//     07/16/2009-2.0  mobrien - 266912: implement getIdType() minus full composite key support
+//         http://wiki.eclipse.org/EclipseLink/Development/JPA_2.0/metamodel_api#DI_47:_20090715:_Implement_IdentifiableType.getIdType.28.29_for_composite_keys
 package org.eclipse.persistence.internal.jpa.metamodel;
 
 import javax.persistence.metamodel.Bindable;

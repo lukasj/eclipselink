@@ -10,6 +10,8 @@
  * Contributors:
  *     Rick Barkhouse - 2.1 - initial implementation
  ******************************************************************************/
+// Contributors:
+//     Rick Barkhouse - 2.1 - initial implementation
 package org.eclipse.persistence.jaxb.dynamic;
 
 import java.io.InputStream;

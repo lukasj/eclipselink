@@ -10,6 +10,8 @@
  * Contributors:
  *     Denise Smith -  January, 2010 - 2.0.1
  ******************************************************************************/
+// Contributors:
+//     Denise Smith -  January, 2010 - 2.0.1
 package org.eclipse.persistence.jaxb.compiler;
 
 import java.lang.reflect.Field;

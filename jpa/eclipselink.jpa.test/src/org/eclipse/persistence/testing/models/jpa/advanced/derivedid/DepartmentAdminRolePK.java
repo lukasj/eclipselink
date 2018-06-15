@@ -13,6 +13,11 @@
  *     08/04/2010-2.1.1 Guy Pelletier
  *       - 315782: JPA2 derived identity metadata processing validation doesn't account for autoboxing
  ******************************************************************************/
+// Contributors:
+//     02/02/2009-2.0 Chris delahunt
+//       - 241765: JPA 2.0 Derived identities
+//     08/04/2010-2.1.1 Guy Pelletier
+//       - 315782: JPA2 derived identity metadata processing validation doesn't account for autoboxing
 package org.eclipse.persistence.testing.models.jpa.advanced.derivedid;
 
 import org.eclipse.persistence.testing.models.jpa.advanced.compositepk.DepartmentPK;

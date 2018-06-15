@@ -10,6 +10,8 @@
  * Contributors:
  *              Petros Splinakis - initial implementation
  ******************************************************************************/
+// Contributors:
+//              Petros Splinakis - initial implementation
 package org.eclipse.persistence.testing.perf.jpa.tests.basic;
 
 import org.openjdk.jmh.annotations.Benchmark;

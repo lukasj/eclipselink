@@ -22,6 +22,20 @@
  *     07/16/2013-2.5.1 Guy Pelletier
  *       - 412384: Applying Converter for parameterized basic-type for joda-time's DateTime does not work
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation from Oracle TopLink
+//     05/16/2008-1.0M8 Guy Pelletier
+//       - 218084: Implement metadata merging functionality between mapping files
+//     03/08/2010-2.1 Guy Pelletier
+//       - 303632: Add attribute-type for mapping attributes to EclipseLink-ORM
+//     05/04/2010-2.1 Guy Pelletier
+//       - 309373: Add parent class attribute to EclipseLink-ORM
+//     05/14/2010-2.1 Guy Pelletier
+//       - 253083: Add support for dynamic persistence using ORM.xml/eclipselink-orm.xml
+//     01/25/2011-2.3 Guy Pelletier
+//       - 333488: Serializable attribute being defaulted to a variable one to one mapping and causing exception
+//     07/16/2013-2.5.1 Guy Pelletier
+//       - 412384: Applying Converter for parameterized basic-type for joda-time's DateTime does not work
 package org.eclipse.persistence.internal.jpa.metadata.accessors.objects;
 
 import java.io.Serializable;

@@ -11,6 +11,9 @@
  *     06/14/2010-2.2 Karen Moore
  *       - 264417:  Table generation is incorrect for JoinTables in AssociationOverrides
  ******************************************************************************/
+// Contributors:
+//     06/14/2010-2.2 Karen Moore
+//       - 264417:  Table generation is incorrect for JoinTables in AssociationOverrides
 package org.eclipse.persistence.testing.models.jpa.ddlgeneration;
 
 import static javax.persistence.FetchType.EAGER;

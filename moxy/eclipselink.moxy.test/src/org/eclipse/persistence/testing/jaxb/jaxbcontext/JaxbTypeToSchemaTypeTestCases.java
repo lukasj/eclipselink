@@ -10,6 +10,8 @@
  * Contributors:
  *     Denise Smith - 2009-12-09
  ******************************************************************************/
+// Contributors:
+//     Denise Smith - 2009-12-09
 package org.eclipse.persistence.testing.jaxb.jaxbcontext;
 
 import java.lang.annotation.Annotation;

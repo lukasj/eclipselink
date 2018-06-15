@@ -20,6 +20,18 @@
  *     11/10/2014-2.6 Dmitry Kornilov
  *       - 450818: Column names with hash mark => "java.sql.SQLException: Invalid column index"
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation from Oracle TopLink
+//     10/29/2010-2.2 Michael O'Brien
+//       - 325167: Make reserved # bind parameter char generic to enable native SQL pass through
+//     05/24/2011-2.3 Guy Pelletier
+//       - 345962: Join fetch query when using tenant discriminator column fails.
+//     07/13/2012-2.5 Guy Pelletier
+//       - 350487: JPA 2.1 Specification defined support for Stored Procedure Calls
+//     08/24/2012-2.5 Guy Pelletier
+//       - 350487: JPA 2.1 Specification defined support for Stored Procedure Calls
+//     11/10/2014-2.6 Dmitry Kornilov
+//       - 450818: Column names with hash mark => "java.sql.SQLException: Invalid column index"
 package org.eclipse.persistence.internal.databaseaccess;
 
 import java.io.CharArrayWriter;

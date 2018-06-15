@@ -10,6 +10,8 @@
 * Contributors:
 * dmccann - Nov.19/2008 - 1.1 - Initial implementation
 ******************************************************************************/
+// Contributors:
+// dmccann - Nov.19/2008 - 1.1 - Initial implementation
 package org.eclipse.persistence.testing.oxm.mappings.compositeobject.self.defaultnamespace;
 
 public class AddressLines {

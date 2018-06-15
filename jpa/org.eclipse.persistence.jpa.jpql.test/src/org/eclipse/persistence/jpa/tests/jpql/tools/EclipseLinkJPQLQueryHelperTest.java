@@ -11,6 +11,9 @@
  *     Oracle - initial API and implementation
  *
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation
+//
 package org.eclipse.persistence.jpa.tests.jpql.tools;
 
 import org.eclipse.persistence.jpa.jpql.tools.AbstractJPQLQueryHelper;

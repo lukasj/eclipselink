@@ -21,6 +21,19 @@
  *         Throw an IAE for Interfaces and Embeddable classes passed to evict()
  *
  ******************************************************************************/
+// Contributors:
+//     12/04/2008 - 2.0 Darani Yallapragada
+//       - 248780: Initial contribution for JPA 2.0
+//     06/03/2010 - 2.1 Michael O'Brien
+//       - 248780: Refactor Cache Implementation surrounding evict()
+//         Fix evict() to handle non-Entity classes
+//         Refactor to get IdentityMapAccessor state through EMF reference
+//         Refactor dependencies to use Interfaces instead of Impl subclasses
+//         Handle no CMPPolicy case for getId()
+//         Handle no associated descriptor for Class parameter
+//         MappedSuperclasses passed to evict() cause implementing subclasses to be evicted
+//         Throw an IAE for Interfaces and Embeddable classes passed to evict()
+//
 package org.eclipse.persistence.internal.jpa;
 
 import javax.persistence.Cache;

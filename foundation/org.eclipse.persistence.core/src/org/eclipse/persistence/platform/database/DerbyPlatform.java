@@ -15,6 +15,14 @@
  *     03/18/2015-2.6.0 Joe Grassel
  *       - 462498: Missing isolation level expression in SQL for Derby platform
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation from Oracle TopLink
+//     Sun Microsystems
+//     09/14/2011-2.3.1 Guy Pelletier
+//       - 357533: Allow DDL queries to execute even when Multitenant entities are part of the PU
+//     03/18/2015-2.6.0 Joe Grassel
+//       - 462498: Missing isolation level expression in SQL for Derby platform
+// CPR:: Copyright 2005, 2017 Oracle and/or its affiliates, IBM Corporation. All rights reserved.
 package org.eclipse.persistence.platform.database;
 
 import org.eclipse.persistence.internal.databaseaccess.DatabaseCall;

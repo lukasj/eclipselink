@@ -11,6 +11,9 @@
  *     10/27/2010-2.2 Guy Pelletier
  *       - 328114: @AttributeOverride does not work with nested embeddables having attributes of the same name
  ******************************************************************************/
+// Contributors:
+//     10/27/2010-2.2 Guy Pelletier
+//       - 328114: @AttributeOverride does not work with nested embeddables having attributes of the same name
 package org.eclipse.persistence.testing.models.jpa.advanced;
 
 import javax.persistence.Column;

@@ -10,6 +10,8 @@
  * Contributors:
  *     2010-10-27 - James Sutherland (Oracle) initial impl
  ******************************************************************************/
+// Contributors:
+//     2010-10-27 - James Sutherland (Oracle) initial impl
 package org.eclipse.persistence.testing.tests.jpa.partitioned;
 
 import junit.framework.*;

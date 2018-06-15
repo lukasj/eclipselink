@@ -10,6 +10,8 @@
  * Contributors:
  *     rbarkhouse - 2009-10-02 16:25:00 - initial implementation
  ******************************************************************************/
+// Contributors:
+//     rbarkhouse - 2009-10-02 16:25:00 - initial implementation
 package org.eclipse.persistence.testing.oxm.mappings.binarydatacollection.reuse;
 
 import java.net.URL;

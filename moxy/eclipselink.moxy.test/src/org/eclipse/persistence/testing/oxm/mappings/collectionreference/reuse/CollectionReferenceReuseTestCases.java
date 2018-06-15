@@ -10,6 +10,8 @@
  * Contributors:
  *     rbarkhouse - 2009-10-07 13:24:58 - initial implementation
  ******************************************************************************/
+// Contributors:
+//     rbarkhouse - 2009-10-07 13:24:58 - initial implementation
 package org.eclipse.persistence.testing.oxm.mappings.collectionreference.reuse;
 
 import java.net.URL;

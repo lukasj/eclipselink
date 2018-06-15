@@ -10,6 +10,8 @@
  * Contributors:
  *     ailitchev - bug 251732: query on interface fails
  ******************************************************************************/
+// Contributors:
+//     ailitchev - bug 251732: query on interface fails
 
 package org.eclipse.persistence.testing.tests.interfaces;
 

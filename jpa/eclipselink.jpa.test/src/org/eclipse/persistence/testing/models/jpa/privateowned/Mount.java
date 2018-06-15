@@ -10,6 +10,8 @@
  * Contributors:
  *     03/04/09 tware - test for bug 350599 copied from advanced model
  ******************************************************************************/
+// Contributors:
+//     03/04/09 tware - test for bug 350599 copied from advanced model
 package org.eclipse.persistence.testing.models.jpa.privateowned;
 
 import javax.persistence.Column;

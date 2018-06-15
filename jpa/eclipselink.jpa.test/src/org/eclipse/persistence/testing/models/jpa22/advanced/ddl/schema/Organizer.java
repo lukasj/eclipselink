@@ -11,6 +11,9 @@
  *     02/04/2013-2.5 Guy Pelletier
  *       - 389090: JPA 2.1 DDL Generation Support
  ******************************************************************************/
+// Contributors:
+//     02/04/2013-2.5 Guy Pelletier
+//       - 389090: JPA 2.1 DDL Generation Support
 package org.eclipse.persistence.testing.models.jpa22.advanced.ddl.schema;
 
 import static javax.persistence.GenerationType.TABLE;

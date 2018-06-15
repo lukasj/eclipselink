@@ -13,6 +13,12 @@
  *     03/15/2016 Jody Grassel
  *       - 489794: Add support for WebSphere EJBEmbeddable platform.
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation from Oracle TopLink
+//     Rick Curtis - Add support for WebSphere Liberty
+//     03/15/2016 Jody Grassel
+//       - 489794: Add support for WebSphere EJBEmbeddable platform.
+// CPR:: Copyright (c) 1998, 2018 Oracle, IBM Corporation and/or its affiliates. All rights reserved.
 package org.eclipse.persistence.internal.sessions.factories;
 
 import static javax.xml.XMLConstants.W3C_XML_SCHEMA_INSTANCE_NS_URI;

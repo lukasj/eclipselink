@@ -10,6 +10,8 @@
 * Contributors:
 *     mmacivor - July 16/2009 - 2.0 - Initial implementation
 ******************************************************************************/
+// Contributors:
+//     mmacivor - July 16/2009 - 2.0 - Initial implementation
 
 /* $Header: BinaryDataCollectionWithGroupingElementIdentifiedByNameXOPonNSRTestCases.java 19-oct-2006.17:10:30 mfobrien Exp $ */
 

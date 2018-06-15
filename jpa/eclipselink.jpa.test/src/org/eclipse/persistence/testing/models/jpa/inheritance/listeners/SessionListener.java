@@ -11,6 +11,9 @@
  *     07/15/2011-2.2.1 Guy Pelletier
  *       - 349424: persists during an preCalculateUnitOfWorkChangeSet event are lost
  ******************************************************************************/
+// Contributors:
+//     07/15/2011-2.2.1 Guy Pelletier
+//       - 349424: persists during an preCalculateUnitOfWorkChangeSet event are lost
 package org.eclipse.persistence.testing.models.jpa.inheritance.listeners;
 
 import org.eclipse.persistence.internal.sessions.RepeatableWriteUnitOfWork;

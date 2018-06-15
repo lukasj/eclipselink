@@ -10,6 +10,8 @@
  * Contributors:
  * dmccann - December 20/2010 - 2.3 - Initial implementation
  ******************************************************************************/
+// Contributors:
+// dmccann - December 20/2010 - 2.3 - Initial implementation
 package org.eclipse.persistence.testing.jaxb.xmladapter.hexbinary;
 
 import org.eclipse.persistence.testing.jaxb.JAXBTestCases;

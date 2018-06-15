@@ -10,6 +10,8 @@
  * Contributors:
  *      tware -
  ******************************************************************************/
+// Contributors:
+//      tware -
 package org.eclipse.persistence.jpa.rs.logging;
 
 import java.text.MessageFormat;

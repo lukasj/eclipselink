@@ -10,6 +10,8 @@
  * Contributors:
  *     rbarkhouse - 2009-11-26 13:04:58 - 2.0 - initial implementation
  ******************************************************************************/
+// Contributors:
+//     rbarkhouse - 2009-11-26 13:04:58 - 2.0 - initial implementation
 package org.eclipse.persistence.oxm.mappings;
 
 import java.util.Collection;

@@ -10,6 +10,8 @@
  * Contributors:
  *     Martin Vojtek - July 7/2014
  ******************************************************************************/
+// Contributors:
+//     Martin Vojtek - July 7/2014
 package org.eclipse.persistence.oxm.annotations;
 
 import java.lang.annotation.ElementType;

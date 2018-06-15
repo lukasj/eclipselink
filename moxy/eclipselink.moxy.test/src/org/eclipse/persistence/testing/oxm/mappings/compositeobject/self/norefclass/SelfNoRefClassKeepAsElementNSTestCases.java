@@ -10,6 +10,8 @@
  * Contributors:
  *     Denise Smith - May 8/2009
  ******************************************************************************/
+// Contributors:
+//     Denise Smith - May 8/2009
 package org.eclipse.persistence.testing.oxm.mappings.compositeobject.self.norefclass;
 
 import java.util.Calendar;

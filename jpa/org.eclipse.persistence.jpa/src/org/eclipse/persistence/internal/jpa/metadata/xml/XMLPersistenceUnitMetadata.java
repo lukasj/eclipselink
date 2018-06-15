@@ -18,6 +18,16 @@
  *     07/03/2011-2.3.1 Guy Pelletier
  *       - 348756: m_cascadeOnDelete boolean should be changed to Boolean
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation from Oracle TopLink
+//     05/16/2008-1.0M8 Guy Pelletier
+//       - 218084: Implement metadata merging functionality between mapping file
+//     05/23/2008-1.0M8 Guy Pelletier
+//       - 211330: Add attributes-complete support to the EclipseLink-ORM.XML Schema
+//     12/01/2010-2.2 Guy Pelletier
+//       - 331234: xml-mapping-metadata-complete overriden by metadata-complete specification
+//     07/03/2011-2.3.1 Guy Pelletier
+//       - 348756: m_cascadeOnDelete boolean should be changed to Boolean
 package org.eclipse.persistence.internal.jpa.metadata.xml;
 
 import java.util.ArrayList;

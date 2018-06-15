@@ -11,6 +11,8 @@
  * Contributors:
  *  - rbarkhouse - 08 November 2011 - 2.4 - Initial implementation
  ******************************************************************************/
+// Contributors:
+//  - rbarkhouse - 08 November 2011 - 2.4 - Initial implementation
 package org.eclipse.persistence.testing.jaxb.externalizedmetadata.xmltype.factory;
 
 import javax.xml.bind.annotation.XmlTransient;

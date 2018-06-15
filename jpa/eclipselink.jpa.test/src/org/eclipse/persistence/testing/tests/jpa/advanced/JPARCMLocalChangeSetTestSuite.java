@@ -10,6 +10,9 @@
  * Contributors:
  *     dminsky - initial API and implementation
  ******************************************************************************/
+// Contributors:
+//     dminsky - initial API and implementation
+// CPR:: Copyright (c) 1998, 2018 Oracle and/or its affiliates, IBM Corporation. All rights reserved.
 package org.eclipse.persistence.testing.tests.jpa.advanced;
 
 import java.util.ArrayList;

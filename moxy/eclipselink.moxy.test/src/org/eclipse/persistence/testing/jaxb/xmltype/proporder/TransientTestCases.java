@@ -10,6 +10,8 @@
  * Contributors:
  *     Blaise Doughan - 2.3 - initial implementation
  ******************************************************************************/
+// Contributors:
+//     Blaise Doughan - 2.3 - initial implementation
 package org.eclipse.persistence.testing.jaxb.xmltype.proporder;
 
 import org.eclipse.persistence.testing.jaxb.JAXBWithJSONTestCases;

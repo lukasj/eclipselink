@@ -11,6 +11,10 @@
  *     03/19/2015 - Rick Curtis
  *       - 462586 : Add national character support for z/OS.
  *****************************************************************************/
+// Contributors:
+//     03/19/2015 - Rick Curtis
+//       - 462586 : Add national character support for z/OS.
+// CPR:: Copyright (c) 2015 IBM Corporation. All rights reserved.
 package org.eclipse.persistence.platform.database;
 
 import java.util.Hashtable;

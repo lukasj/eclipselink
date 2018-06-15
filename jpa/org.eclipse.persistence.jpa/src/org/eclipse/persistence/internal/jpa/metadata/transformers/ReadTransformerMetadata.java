@@ -17,6 +17,15 @@
  *     03/24/2011-2.3 Guy Pelletier
  *       - 337323: Multi-tenant with shared schema support (part 1)
  ******************************************************************************/
+// Contributors:
+//     Andrei Ilitchev (Oracle), March 7, 2008
+//        - New file introduced for bug 211300.
+//     05/16/2008-1.0M8 Guy Pelletier
+//       - 218084: Implement metadata merging functionality between mapping file
+//     04/27/2010-2.1 Guy Pelletier
+//       - 309856: MappedSuperclasses from XML are not being initialized properly
+//     03/24/2011-2.3 Guy Pelletier
+//       - 337323: Multi-tenant with shared schema support (part 1)
 package org.eclipse.persistence.internal.jpa.metadata.transformers;
 
 import org.eclipse.persistence.exceptions.ValidationException;

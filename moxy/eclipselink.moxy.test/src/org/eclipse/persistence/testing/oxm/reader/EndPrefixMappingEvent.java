@@ -10,6 +10,8 @@
  * Contributors:
  *     Blaise Doughan - 2.2 - initial implementation
  ******************************************************************************/
+// Contributors:
+//     Blaise Doughan - 2.2 - initial implementation
 package org.eclipse.persistence.testing.oxm.reader;
 
 public class EndPrefixMappingEvent extends Event {

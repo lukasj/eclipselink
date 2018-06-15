@@ -14,6 +14,13 @@
  *     02/23/2015-2.6 Dalia Abo Sheasha
  *       - 460607: Change DatabasePlatform StoredProcedureTerminationToken to be configurable
  ******************************************************************************/
+// Contributors:
+//     Markus Karg and Oracle - initial API and implementation from Oracle TopLink and TopLink Essentials
+//     05/16/2008-1.0 Markus Karg
+//       - 237843: CONCAT must be translated into || instead of +
+//     02/23/2015-2.6 Dalia Abo Sheasha
+//       - 460607: Change DatabasePlatform StoredProcedureTerminationToken to be configurable
+// CPR:: Copyright (c) 1998, 2015 Oracle and/or its affiliates, Markus KARG(markus-karg@users.sourceforge.net),
 package org.eclipse.persistence.platform.database;
 
 import java.io.IOException;

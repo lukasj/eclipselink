@@ -10,6 +10,8 @@
  * Contributors:
  *     Oracle - initial API and implementation from Oracle TopLink
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation from Oracle TopLink
 /* $Header: SDOHelperContextTestCases.java 23-apr-2007.15:14:55 mfobrien Exp $ */
 /*
    DESCRIPTION

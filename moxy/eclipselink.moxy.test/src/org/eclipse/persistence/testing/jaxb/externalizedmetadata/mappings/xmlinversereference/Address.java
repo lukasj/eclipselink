@@ -10,6 +10,8 @@
  * Contributors:
  * mmacivor - April 20/2010 - 2.1 - Initial implementation
  ******************************************************************************/
+// Contributors:
+// mmacivor - April 20/2010 - 2.1 - Initial implementation
 package org.eclipse.persistence.testing.jaxb.externalizedmetadata.mappings.xmlinversereference;
 
 import java.util.List;

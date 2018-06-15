@@ -10,6 +10,8 @@
 * Contributors:
 *     bdoughan - April 14/2010 - 2.1 - Initial implementation
 ******************************************************************************/
+// Contributors:
+//     bdoughan - April 14/2010 - 2.1 - Initial implementation
 package org.eclipse.persistence.testing.jaxb.xmlidrefs;
 
 import javax.xml.bind.annotation.XmlID;

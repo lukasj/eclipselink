@@ -17,6 +17,15 @@
  *     02/08/2010-2.1 Michael O'Brien
  *       - 260271:  for the "NUMERIC" ID field - increase from 15 to 18 to match XML_OWNERSHIP_GROUP.ID as it is the default precision size
  ******************************************************************************/
+// Contributors:
+//     04/02/2008-1.0M6 Guy Pelletier
+//       - 224155: embeddable-attributes should be extended in the EclipseLink ORM.XML schema
+//     08/27/2008-1.1 Guy Pelletier
+//       - 211329: Add sequencing on non-id attribute(s) support to the EclipseLink-ORM.XML Schema
+//     08/28/2008-1.1 Guy Pelletier
+//       - 245120: unidir one-to-many within embeddable fails to deploy for missing primary key field
+//     02/08/2010-2.1 Michael O'Brien
+//       - 260271:  for the "NUMERIC" ID field - increase from 15 to 18 to match XML_OWNERSHIP_GROUP.ID as it is the default precision size
 package org.eclipse.persistence.testing.models.jpa.xml.complexaggregate;
 
 import java.util.Iterator;

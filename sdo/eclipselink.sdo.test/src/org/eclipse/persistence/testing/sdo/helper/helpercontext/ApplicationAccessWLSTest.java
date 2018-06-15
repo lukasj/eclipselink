@@ -10,6 +10,8 @@
  * Contributors:
  *     Dmitry Kornilov - Initial implementation
  ******************************************************************************/
+// Contributors:
+//     Dmitry Kornilov - Initial implementation
 package org.eclipse.persistence.testing.sdo.helper.helpercontext;
 
 import junit.framework.TestCase;

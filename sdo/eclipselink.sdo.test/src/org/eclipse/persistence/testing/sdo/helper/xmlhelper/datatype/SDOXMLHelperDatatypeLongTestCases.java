@@ -11,6 +11,8 @@
 * Contributors:
 * rbarkhouse - May 26 2008 - 1.0M8 - Initial implementation
 ******************************************************************************/
+// Contributors:
+// rbarkhouse - May 26 2008 - 1.0M8 - Initial implementation
 
 package org.eclipse.persistence.testing.sdo.helper.xmlhelper.datatype;
 

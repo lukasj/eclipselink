@@ -10,6 +10,8 @@
  * Contributors:
  *     Blaise Doughan - 2.1.4 - initial implementation
  ******************************************************************************/
+// Contributors:
+//     Blaise Doughan - 2.1.4 - initial implementation
 package org.eclipse.persistence.testing.jaxb.xmldecriptor;
 
 import java.lang.reflect.Field;

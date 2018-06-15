@@ -11,6 +11,8 @@
  * Contributors:
  *  - Martin Vojtek - 2.6.0 - Initial implementation
  ******************************************************************************/
+// Contributors:
+//  - Martin Vojtek - 2.6.0 - Initial implementation
 package org.eclipse.persistence.testing.moxy.unit.jaxb;
 
 import static org.junit.Assert.assertTrue;

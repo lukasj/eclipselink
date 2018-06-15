@@ -10,6 +10,8 @@
  * Contributors:
  *   Denise Smith - April 23/2009 - 2.0
  ******************************************************************************/
+// Contributors:
+//   Denise Smith - April 23/2009 - 2.0
 package org.eclipse.persistence.testing.oxm.xmlconversionmanager;
 
 import java.math.BigDecimal;

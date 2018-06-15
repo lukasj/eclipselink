@@ -10,6 +10,8 @@
  * Contributors:
  *     Oracle - initial API and implementation from Oracle TopLink
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation from Oracle TopLink
 /**
  *  @version $Header: ChangeSummaryLoadSaveTestCases.java 16-may-2007.13:47:16 mfobrien Exp $
  *  @author  mfobrien

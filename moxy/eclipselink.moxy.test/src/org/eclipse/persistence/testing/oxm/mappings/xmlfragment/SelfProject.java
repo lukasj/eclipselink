@@ -10,6 +10,8 @@
 * Contributors:
 *     bdoughan - April 6/2010 - 2.1 - Initial implementation
 ******************************************************************************/
+// Contributors:
+//     bdoughan - April 6/2010 - 2.1 - Initial implementation
 package org.eclipse.persistence.testing.oxm.mappings.xmlfragment;
 
 import org.eclipse.persistence.oxm.NamespaceResolver;

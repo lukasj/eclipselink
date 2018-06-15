@@ -10,6 +10,8 @@
  * Contributors:
  *     Denise Smith - November 2012 - 2.4
  ******************************************************************************/
+// Contributors:
+//     Denise Smith - November 2012 - 2.4
 package org.eclipse.persistence.testing.jaxb.json.namespaces;
 
 import java.util.ArrayList;

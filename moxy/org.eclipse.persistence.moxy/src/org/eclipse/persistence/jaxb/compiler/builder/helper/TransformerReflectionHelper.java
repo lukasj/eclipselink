@@ -10,6 +10,8 @@
  * Contributors:
  *     Martin Vojtek - 2.6 - initial version
  ******************************************************************************/
+// Contributors:
+//     Martin Vojtek - 2.6 - initial version
 package org.eclipse.persistence.jaxb.compiler.builder.helper;
 
 import org.eclipse.persistence.exceptions.JAXBException;

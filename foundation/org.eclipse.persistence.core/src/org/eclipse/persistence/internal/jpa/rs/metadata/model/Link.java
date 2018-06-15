@@ -10,6 +10,8 @@
  * Contributors:
  *     tware - initial implementation
  ******************************************************************************/
+// Contributors:
+//     tware - initial implementation
 package org.eclipse.persistence.internal.jpa.rs.metadata.model;
 
 import org.eclipse.persistence.oxm.annotations.XmlPath;

@@ -18,6 +18,17 @@
  *     11/23/2017: Scott Marlow
  *       - 414974: allow eclipselink.archive.factory to be specified as an integration property of PersistenceProvider.createContainerEntityManagerFactory(PersistenceUnitInfo, Map)
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation from Oracle TopLink
+//     10/09/2012-2.5 Guy Pelletier
+//       - 374688: JPA 2.1 Converter support
+//     07/08/2014-2.5 Jody Grassel (IBM Corporation)
+//       - 439163: JSE Bootstrapping does not handle "wsjar" URLs referencing war-contained resources
+//     08/29/2016 Jody Grassel
+//       - 500441: Eclipselink core has System.getProperty() calls that are not potentially executed under doPriv()
+//     11/23/2017: Scott Marlow
+//       - 414974: allow eclipselink.archive.factory to be specified as an integration property of PersistenceProvider.createContainerEntityManagerFactory(PersistenceUnitInfo, Map)
+// CPR:: Copyright (c) 1998, 2017 Oracle and/or its affiliates, IBM Corporation.
 package org.eclipse.persistence.internal.jpa.deployment;
 
 import static org.eclipse.persistence.internal.jpa.metadata.MetadataConstants.JPA_CONVERTER;

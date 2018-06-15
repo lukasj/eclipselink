@@ -10,6 +10,8 @@
 * Contributors:
 *     bdoughan - July 6/2010 - Initial implementation
 ******************************************************************************/
+// Contributors:
+//     bdoughan - July 6/2010 - Initial implementation
 package org.eclipse.persistence.testing.jaxb.emptystring;
 
 import javax.xml.bind.annotation.XmlAttribute;

@@ -10,6 +10,8 @@
  * Contributors:
  *     Radek Felcman - May 2018
  ******************************************************************************/
+// Contributors:
+//     Radek Felcman - May 2018
 package org.eclipse.persistence.testing.jaxb.xmlvariablenode;
 
 import org.eclipse.persistence.oxm.annotations.XmlMarshalNullRepresentation;

@@ -15,6 +15,13 @@
  *     10/25/2012-2.5 Guy Pelletier
  *       - 374688: JPA 2.1 Converter support
  ******************************************************************************/
+// Contributors:
+//     01/28/2009-2.0 Guy Pelletier
+//       - 248293: JPA 2.0 Element Collections (part 1)
+//     02/06/2009-2.0 Guy Pelletier
+//       - 248293: JPA 2.0 Element Collections (part 2)
+//     10/25/2012-2.5 Guy Pelletier
+//       - 374688: JPA 2.1 Converter support
 package org.eclipse.persistence.mappings;
 
 import org.eclipse.persistence.internal.helper.DatabaseField;

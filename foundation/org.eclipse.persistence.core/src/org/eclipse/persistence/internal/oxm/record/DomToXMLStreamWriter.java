@@ -10,6 +10,8 @@
 * Contributors:
 * mmacivor - June 24/2009 - 1.0 - Initial implementation
 ******************************************************************************/
+// Contributors:
+// mmacivor - June 24/2009 - 1.0 - Initial implementation
 package org.eclipse.persistence.internal.oxm.record;
 
 import java.util.ArrayList;

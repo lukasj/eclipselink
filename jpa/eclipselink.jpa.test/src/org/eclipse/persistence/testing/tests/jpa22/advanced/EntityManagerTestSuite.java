@@ -12,6 +12,10 @@
  *     02/11/2013-2.5 Guy Pelletier
  *       - 365931: @JoinColumn(name="FK_DEPT",insertable = false, updatable = true) causes INSERT statement to include this data value that it is associated with
  ******************************************************************************/
+// Contributors:
+//     tware - initial implementation
+//     02/11/2013-2.5 Guy Pelletier
+//       - 365931: @JoinColumn(name="FK_DEPT",insertable = false, updatable = true) causes INSERT statement to include this data value that it is associated with
 package org.eclipse.persistence.testing.tests.jpa22.advanced;
 
 import javax.persistence.EntityManager;

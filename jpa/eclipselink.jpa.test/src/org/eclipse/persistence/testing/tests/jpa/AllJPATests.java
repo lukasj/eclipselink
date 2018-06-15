@@ -12,6 +12,10 @@
  *     04/22/2015 - Will Dazey
  *       - 465235 : Find Bugs Fix: removed null variable args
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation from Oracle TopLink
+//     04/22/2015 - Will Dazey
+//       - 465235 : Find Bugs Fix: removed null variable args
 package org.eclipse.persistence.testing.tests.jpa;
 
 import junit.framework.Test;

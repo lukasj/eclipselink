@@ -10,6 +10,8 @@
  * Contributors:
  *     Oracle - Dec 2008
  ******************************************************************************/
+// Contributors:
+//     Oracle - Dec 2008
 package org.eclipse.persistence.internal.helper;
 
 import java.util.ListIterator;

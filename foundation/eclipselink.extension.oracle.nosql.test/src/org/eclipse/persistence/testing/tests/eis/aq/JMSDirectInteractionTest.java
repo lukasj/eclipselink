@@ -12,6 +12,10 @@
  *     04/01/2016-2.7 Tomas Kraus
  *       - 490677: Database connection properties made configurable in test.properties
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation from Oracle TopLink
+//     04/01/2016-2.7 Tomas Kraus
+//       - 490677: Database connection properties made configurable in test.properties
 package org.eclipse.persistence.testing.tests.eis.aq;
 
 import javax.jms.Queue;

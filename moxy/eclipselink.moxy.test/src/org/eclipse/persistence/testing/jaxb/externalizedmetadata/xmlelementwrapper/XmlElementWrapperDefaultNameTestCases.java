@@ -11,6 +11,8 @@
  * Contributors:
  *  - rbarkhouse - 21 March 2013 - 2.4.2 - Initial implementation
  ******************************************************************************/
+// Contributors:
+//  - rbarkhouse - 21 March 2013 - 2.4.2 - Initial implementation
 package org.eclipse.persistence.testing.jaxb.externalizedmetadata.xmlelementwrapper;
 
 import java.io.InputStream;

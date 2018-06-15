@@ -10,6 +10,8 @@
  * Contributors:
  *     Mike Norman - Oct 30 2008: some re-work of DBWSPackager hierarchy
  ******************************************************************************/
+// Contributors:
+//     Mike Norman - Oct 30 2008: some re-work of DBWSPackager hierarchy
 package org.eclipse.persistence.tools.dbws;
 
 import static org.eclipse.persistence.internal.xr.Util.DBWS_WSDL;

@@ -10,6 +10,8 @@
  * Contributors:
  *     David McCann - July 2013 - Initial Implementation
  ******************************************************************************/
+// Contributors:
+//     David McCann - July 2013 - Initial Implementation
 package org.eclipse.persistence.tools.metadata.generation.test.plsqlcollectiontype;
 
 

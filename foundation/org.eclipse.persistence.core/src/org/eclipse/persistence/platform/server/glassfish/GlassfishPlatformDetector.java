@@ -11,6 +11,9 @@
  *     11/20/2015 Lukas Jungmann
  *       Bug 482894 - Provide autodetector for Glassfish
  ******************************************************************************/
+// Contributors:
+//     11/20/2015 Lukas Jungmann
+//       Bug 482894 - Provide autodetector for Glassfish
 package org.eclipse.persistence.platform.server.glassfish;
 
 import java.security.AccessController;

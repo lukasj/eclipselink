@@ -14,6 +14,12 @@
  *     04/02/2009-2.0 Guy Pelletier
  *       - 270853: testBeerLifeCycleMethodAnnotationIgnored within xml merge testing need to be relocated
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation from Oracle TopLink
+//     09/23/2008-1.1 Guy Pelletier
+//       - 241651: JPA 2.0 Access Type support
+//     04/02/2009-2.0 Guy Pelletier
+//       - 270853: testBeerLifeCycleMethodAnnotationIgnored within xml merge testing need to be relocated
 package org.eclipse.persistence.testing.tests.jpa.xml.merge.inherited;
 
 import java.sql.Date;

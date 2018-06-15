@@ -11,6 +11,8 @@
  * Contributors:
  *  - rbarkhouse - 27 November 2012 - 2.4 - Initial implementation
  ******************************************************************************/
+// Contributors:
+//  - rbarkhouse - 27 November 2012 - 2.4 - Initial implementation
 package org.eclipse.persistence.testing.jaxb.jaxbcontext;
 
 import junit.framework.Test;

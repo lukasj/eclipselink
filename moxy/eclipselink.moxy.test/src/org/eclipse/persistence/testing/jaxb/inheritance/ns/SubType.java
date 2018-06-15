@@ -10,6 +10,8 @@
  * Contributors:
  *     Oracle - December 2011
  ******************************************************************************/
+// Contributors:
+//     Oracle - December 2011
 package org.eclipse.persistence.testing.jaxb.inheritance.ns;
 
 import javax.xml.bind.annotation.XmlType;

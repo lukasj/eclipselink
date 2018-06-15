@@ -10,6 +10,8 @@
  * Contributors:
  *     Denise Smith - April 21/2009 - 2.0 - Initial implementation
  ******************************************************************************/
+// Contributors:
+//     Denise Smith - April 21/2009 - 2.0 - Initial implementation
 package org.eclipse.persistence.testing.oxm.mappings.compositecollection.identifiedbynamespace.withgroupingelement;
 
 import javax.xml.namespace.QName;

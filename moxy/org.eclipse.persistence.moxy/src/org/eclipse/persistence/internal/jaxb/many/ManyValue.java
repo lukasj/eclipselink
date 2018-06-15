@@ -10,6 +10,8 @@
  * Contributors:
  *     Denise Smith  June 05, 2009 - Initial implementation
  ******************************************************************************/
+// Contributors:
+//     Denise Smith  June 05, 2009 - Initial implementation
 package org.eclipse.persistence.internal.jaxb.many;
 
 import java.util.Collection;

@@ -27,6 +27,26 @@
  *     02/02/2015-2.6.0 Dalia Abo Sheasha
  *       - 458462: generateSchema throws a ClassCastException within a container
  ******************************************************************************/
+// Contributors:
+//     11/22/2012-2.5 Guy Pelletier
+//       - 389090: JPA 2.1 DDL Generation Support (index metadata support)
+//     12/24/2012-2.5 Guy Pelletier
+//       - 389090: JPA 2.1 DDL Generation Support
+//     01/08/2013-2.5 Guy Pelletier
+//       - 389090: JPA 2.1 DDL Generation Support
+//     01/11/2013-2.5 Guy Pelletier
+//       - 389090: JPA 2.1 DDL Generation Support
+//     01/16/2013-2.5 Guy Pelletier
+//       - 389090: JPA 2.1 DDL Generation Support
+//     01/23/2013-2.5 Guy Pelletier
+//       - 350487: JPA 2.1 Specification defined support for Stored Procedure Calls
+//     01/24/2013-2.5 Guy Pelletier
+//       - 389090: JPA 2.1 DDL Generation Support
+//     02/04/2013-2.5 Guy Pelletier
+//       - 389090: JPA 2.1 DDL Generation Support
+//     02/02/2015-2.6.0 Dalia Abo Sheasha
+//       - 458462: generateSchema throws a ClassCastException within a container
+// CPR:: Copyright (c) 2012, 2017 Oracle and/or its affiliates, IBM Corporation. All rights reserved.
 package org.eclipse.persistence.testing.tests.jpa22.advanced;
 
 import java.io.File;

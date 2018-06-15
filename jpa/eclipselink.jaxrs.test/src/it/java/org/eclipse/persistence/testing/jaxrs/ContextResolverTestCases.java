@@ -12,6 +12,10 @@
  *     Praba Vijayaratnam - 2.3 - test automation
  *     Praba Vijayaratnam - 2.4 - added JSON support testing
  ******************************************************************************/
+// Contributors:
+//     Blaise Doughan - 2.3 - initial implementation
+//     Praba Vijayaratnam - 2.3 - test automation
+//     Praba Vijayaratnam - 2.4 - added JSON support testing
 package org.eclipse.persistence.testing.jaxrs;
 
 import org.eclipse.persistence.jaxb.JAXBContextFactory;

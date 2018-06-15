@@ -12,6 +12,10 @@
  *       - 413765: DeleteAll query on subclass with a parent that has secondary
  *          tables causes statements to ignore selection criteria
  ******************************************************************************/
+// Contributors:
+//     08/30/2013-2.5.1 Chris Delahunt
+//       - 413765: DeleteAll query on subclass with a parent that has secondary
+//          tables causes statements to ignore selection criteria
 package org.eclipse.persistence.testing.models.jpa.advanced;
 
 import javax.persistence.DiscriminatorValue;

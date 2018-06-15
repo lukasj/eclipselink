@@ -10,6 +10,8 @@
  * Contributors:
  *      Dmitry Kornilov - Initial implementation, upgrade to Jersey 2.x
  ******************************************************************************/
+// Contributors:
+//      Dmitry Kornilov - Initial implementation, upgrade to Jersey 2.x
 package org.eclipse.persistence.jpars.test.server.v2;
 
 import org.eclipse.persistence.jpars.test.BaseJparsTest;

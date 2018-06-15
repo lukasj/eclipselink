@@ -10,6 +10,8 @@
  * Contributors:
  *     David McCann - August 31, 2011 - 2.4 - Initial implementation
  ******************************************************************************/
+// Contributors:
+//     David McCann - August 31, 2011 - 2.4 - Initial implementation
 package dbws.testing.simplesf;
 
 import static org.eclipse.persistence.internal.xr.QueryOperation.ORACLEOPAQUE_STR;

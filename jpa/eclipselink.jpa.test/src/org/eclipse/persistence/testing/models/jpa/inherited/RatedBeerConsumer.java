@@ -23,6 +23,21 @@
  *     04/09/2012-2.4 Guy Pelletier
  *       - 374377: OrderBy with ElementCollection doesn't work
  ******************************************************************************/
+// Contributors:
+//     06/20/2008-1.0 Guy Pelletier
+//       - 232975: Failure when attribute type is generic
+//     09/23/2008-1.1 Guy Pelletier
+//       - 241651: JPA 2.0 Access Type support
+//     01/28/2009-2.0 Guy Pelletier
+//       - 248293: JPA 2.0 Element Collections (part 1)
+//     02/25/2009-2.0 Guy Pelletier
+//       - 265359: JPA 2.0 Element Collections - Metadata processing portions
+//     06/02/2009-2.0 Guy Pelletier
+//       - 278768: JPA 2.0 Association Override Join Table
+//     06/09/2009-2.0 Guy Pelletier
+//       - 249037: JPA 2.0 persisting list item index
+//     04/09/2012-2.4 Guy Pelletier
+//       - 374377: OrderBy with ElementCollection doesn't work
 package org.eclipse.persistence.testing.models.jpa.inherited;
 
 import java.util.ArrayList;

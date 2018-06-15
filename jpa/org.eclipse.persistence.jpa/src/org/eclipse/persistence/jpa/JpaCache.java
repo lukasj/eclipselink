@@ -10,6 +10,8 @@
  * Contributors:
  *     James Sutherland  = 1.0 - Initial contribution
  ******************************************************************************/
+// Contributors:
+//     James Sutherland  = 1.0 - Initial contribution
 package org.eclipse.persistence.jpa;
 
 import javax.persistence.Cache;

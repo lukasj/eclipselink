@@ -12,6 +12,10 @@
  *      2014-09-01-2.6.0 Dmitry Kornilov
  *        - JPARS v2.0 related changes
  ******************************************************************************/
+// Contributors:
+//      gonural - Initial implementation
+//      2014-09-01-2.6.0 Dmitry Kornilov
+//        - JPARS v2.0 related changes
 package org.eclipse.persistence.jpa.rs.resources.common;
 
 import static org.eclipse.persistence.jpa.rs.util.StreamingOutputMarshaller.mediaType;

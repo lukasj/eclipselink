@@ -10,6 +10,8 @@
  * Contributors:
  *     Denise Smith - 2.4 - January 2013
  ******************************************************************************/
+// Contributors:
+//     Denise Smith - 2.4 - January 2013
 package org.eclipse.persistence.testing.jaxb.xmlelement.nulls;
 
 import java.util.List;

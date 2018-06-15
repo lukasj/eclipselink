@@ -11,6 +11,9 @@
  *     Oracle - initial API and implementation from Oracle TopLink
  *     Dmitry Kornilov - added ApplicationAccessWLSTest
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation from Oracle TopLink
+//     Dmitry Kornilov - added ApplicationAccessWLSTest
 package org.eclipse.persistence.testing.sdo.helper.helpercontext;
 
 import junit.framework.Test;

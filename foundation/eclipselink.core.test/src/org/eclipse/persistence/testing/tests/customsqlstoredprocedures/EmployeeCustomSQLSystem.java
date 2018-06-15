@@ -11,6 +11,9 @@
  *     Oracle - initial API and implementation from Oracle TopLink
  *     Markus KARG - SQL Anywhere now using WATCOM-SQL instead of Transact-SQL.
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation from Oracle TopLink
+//     Markus KARG - SQL Anywhere now using WATCOM-SQL instead of Transact-SQL.
 package org.eclipse.persistence.testing.tests.customsqlstoredprocedures;
 
 import org.eclipse.persistence.exceptions.DatabaseException;

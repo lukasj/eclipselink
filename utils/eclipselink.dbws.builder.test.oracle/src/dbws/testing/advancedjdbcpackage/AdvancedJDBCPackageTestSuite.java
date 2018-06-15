@@ -11,6 +11,9 @@
  *     Mike Norman - Nov.9, 2011 - 2.4: test use of Advanced JDBC types from
  *                                      within a PL/SQL Package
  ******************************************************************************/
+// Contributors:
+//     Mike Norman - Nov.9, 2011 - 2.4: test use of Advanced JDBC types from
+//                                      within a PL/SQL Package
 package dbws.testing.advancedjdbcpackage;
 
 //javase imports

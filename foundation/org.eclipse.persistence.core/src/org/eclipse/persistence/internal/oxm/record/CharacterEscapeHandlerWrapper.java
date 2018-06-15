@@ -11,6 +11,8 @@
  * Contributors:
  *  - rbarkhouse - 08 February 2012 - 2.3.3 - Initial implementation
  ******************************************************************************/
+// Contributors:
+//  - rbarkhouse - 08 February 2012 - 2.3.3 - Initial implementation
 package org.eclipse.persistence.internal.oxm.record;
 
 import java.io.IOException;

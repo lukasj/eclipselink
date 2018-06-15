@@ -11,6 +11,9 @@
  *     Mike Norman - July 13 2010
  *       fix for https://bugs.eclipse.org/bugs/show_bug.cgi?id=318207
  ******************************************************************************/
+// Contributors:
+//     Mike Norman - July 13 2010
+//       fix for https://bugs.eclipse.org/bugs/show_bug.cgi?id=318207
 package org.eclipse.persistence.tools.dbws;
 
 //javase imports

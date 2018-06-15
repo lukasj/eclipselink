@@ -11,6 +11,9 @@
  *     12/01/2010-2.2 Guy Pelletier
  *       - 331234: xml-mapping-metadata-complete overriden by metadata-complete specification
  ******************************************************************************/
+// Contributors:
+//     12/01/2010-2.2 Guy Pelletier
+//       - 331234: xml-mapping-metadata-complete overriden by metadata-complete specification
 package org.eclipse.persistence.testing.models.jpa.xml.metadatacomplete;
 
 import javax.persistence.Basic;

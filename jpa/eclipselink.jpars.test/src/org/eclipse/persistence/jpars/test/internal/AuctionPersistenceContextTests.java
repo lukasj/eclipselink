@@ -10,6 +10,8 @@
  * Contributors:
  *      dclarke - JPA-RS Incubator (Bug 362900)
  ******************************************************************************/
+// Contributors:
+//      dclarke - JPA-RS Incubator (Bug 362900)
 package org.eclipse.persistence.jpars.test.internal;
 
 import java.io.InputStream;

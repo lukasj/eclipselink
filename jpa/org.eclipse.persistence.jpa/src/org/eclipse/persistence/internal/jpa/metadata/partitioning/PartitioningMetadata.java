@@ -12,6 +12,10 @@
  *     03/24/2011-2.3 Guy Pelletier
  *       - 337323: Multi-tenant with shared schema support (part 1)
  ******************************************************************************/
+// Contributors:
+//     James Sutherland - initial API and implementation
+//     03/24/2011-2.3 Guy Pelletier
+//       - 337323: Multi-tenant with shared schema support (part 1)
 package org.eclipse.persistence.internal.jpa.metadata.partitioning;
 
 import org.eclipse.persistence.descriptors.partitioning.CustomPartitioningPolicy;

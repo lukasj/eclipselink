@@ -13,6 +13,12 @@
  *                 The reference column name [y] mapped on the element [field x]
  *                 does not correspond to a valid field on the mapping reference
  ******************************************************************************/
+// Contributors:
+//     07/11/2011-2.4 Xavier Callejas
+//       - 343632: Can't map a compound constraint because of exception:
+//                 The reference column name [y] mapped on the element [field x]
+//                 does not correspond to a valid field on the mapping reference
+// CPR:: Copyright (c) 2011, 2015 Xavier Callejas. All rights reserved.
 package org.eclipse.persistence.testing.models.jpa.ddlgeneration;
 
 import java.io.Serializable;

@@ -10,6 +10,8 @@
 * Contributors:
 * mmacivor - January 09, 2009 - 1.1 - Initial implementation
 ******************************************************************************/
+// Contributors:
+// mmacivor - January 09, 2009 - 1.1 - Initial implementation
 package org.eclipse.persistence.testing.jaxb.annotations.xmlcontainerproperty;
 
 import java.util.Vector;

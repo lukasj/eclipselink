@@ -13,6 +13,11 @@
  *     12/02/2010-2.2 Guy Pelletier
  *       - 251554: ExcludeDefaultMapping annotation needed
  ******************************************************************************/
+// Contributors:
+//     03/26/2008-1.0M6 Guy Pelletier
+//       - 211302: Add variable 1-1 mapping support to the EclipseLink-ORM.XML Schema
+//     12/02/2010-2.2 Guy Pelletier
+//       - 251554: ExcludeDefaultMapping annotation needed
 package org.eclipse.persistence.testing.tests.jpa.relationships;
 
 import java.util.Iterator;

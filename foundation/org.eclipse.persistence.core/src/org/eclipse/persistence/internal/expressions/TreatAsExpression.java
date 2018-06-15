@@ -11,6 +11,9 @@
  *     11/06/2013-2.5.1 Chris Delahunt
  *       - 374771 : TREAT support
  ******************************************************************************/
+// Contributors:
+//     11/06/2013-2.5.1 Chris Delahunt
+//       - 374771 : TREAT support
 package org.eclipse.persistence.internal.expressions;
 
 import java.io.BufferedWriter;

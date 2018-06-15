@@ -11,6 +11,9 @@
  *     06/16/2010-2.2 Guy Pelletier
  *       - 247078: eclipselink-orm.xml schema should allow lob and enumerated on version and id mappings
  ******************************************************************************/
+// Contributors:
+//     06/16/2010-2.2 Guy Pelletier
+//       - 247078: eclipselink-orm.xml schema should allow lob and enumerated on version and id mappings
 package org.eclipse.persistence.testing.models.jpa.xml.advanced;
 
 public class ViolationCode {

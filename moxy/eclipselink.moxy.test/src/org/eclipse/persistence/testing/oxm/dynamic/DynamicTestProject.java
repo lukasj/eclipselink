@@ -10,6 +10,8 @@
  * Contributors:
  *     rbarkhouse - 2009-11-16 14:08:13 - initial implementation
  ******************************************************************************/
+// Contributors:
+//     rbarkhouse - 2009-11-16 14:08:13 - initial implementation
 package org.eclipse.persistence.testing.oxm.dynamic;
 
 import java.util.ArrayList;

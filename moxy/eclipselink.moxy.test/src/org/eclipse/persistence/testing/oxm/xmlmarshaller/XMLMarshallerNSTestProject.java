@@ -10,6 +10,8 @@
  * Contributors:
  *     Denise Smith - October 20, 2009
  ******************************************************************************/
+// Contributors:
+//     Denise Smith - October 20, 2009
 
 package org.eclipse.persistence.testing.oxm.xmlmarshaller;
 

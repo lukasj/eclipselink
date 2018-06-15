@@ -17,6 +17,15 @@
  *     12/07/2012-2.5 Guy Pelletier
  *       - 389090: JPA 2.1 DDL Generation Support (foreign key metadata support)
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation from Oracle TopLink
+//     tware - added handling of database delimiters
+//     11/19/2012-2.5 Guy Pelletier
+//       - 389090: JPA 2.1 DDL Generation Support (foreign key metadata support)
+//     11/22/2012-2.5 Guy Pelletier
+//       - 389090: JPA 2.1 DDL Generation Support (index metadata support)
+//     12/07/2012-2.5 Guy Pelletier
+//       - 389090: JPA 2.1 DDL Generation Support (foreign key metadata support)
 package org.eclipse.persistence.internal.helper;
 
 import java.io.*;

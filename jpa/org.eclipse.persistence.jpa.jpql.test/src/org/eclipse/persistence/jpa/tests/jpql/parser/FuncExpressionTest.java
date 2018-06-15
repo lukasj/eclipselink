@@ -11,6 +11,9 @@
  *     Oracle - initial API and implementation
  *
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation
+//
 package org.eclipse.persistence.jpa.tests.jpql.parser;
 
 import static org.eclipse.persistence.jpa.jpql.parser.Expression.*;

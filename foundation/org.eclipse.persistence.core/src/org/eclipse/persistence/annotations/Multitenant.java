@@ -13,6 +13,11 @@
  *     08/18/2011-2.3.1 Guy Pelletier
  *       - 355093: Add new 'includeCriteria' flag to Multitenant metadata
  ******************************************************************************/
+// Contributors:
+//     03/24/2011-2.3 Guy Pelletier
+//       - 337323: Multi-tenant with shared schema support (part 1)
+//     08/18/2011-2.3.1 Guy Pelletier
+//       - 355093: Add new 'includeCriteria' flag to Multitenant metadata
 package org.eclipse.persistence.annotations;
 
 import static java.lang.annotation.ElementType.TYPE;

@@ -17,6 +17,15 @@
  *       - 260263: SQLServer 2005/2008 requires stored procedure creation select clause variable and column name matching
  *
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation from Oracle TopLink
+//     09/23/2008-1.1 Guy Pelletier
+//       - 241651: JPA 2.0 Access Type support
+//     03/03/2010 - 2.1 Michael O'Brien
+//       - 302316: clear the object cache when testing stored procedure returns on SQLServer
+//         to avoid false positives visible only when debugging in DatabaseCall.buildOutputRow()
+//       - 260263: SQLServer 2005/2008 requires stored procedure creation select clause variable and column name matching
+//
 package org.eclipse.persistence.testing.models.jpa.xml.advanced;
 
 import java.util.*;

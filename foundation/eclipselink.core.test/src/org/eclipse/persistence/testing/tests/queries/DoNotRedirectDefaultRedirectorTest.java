@@ -10,6 +10,8 @@
  * Contributors:
  *     GYORKE - initial API and implementation
  ******************************************************************************/
+// Contributors:
+//     GYORKE - initial API and implementation
 package org.eclipse.persistence.testing.tests.queries;
 
 import org.eclipse.persistence.queries.*;

@@ -13,6 +13,11 @@
  *     09 Jan 2013-2.5 Gordon Yorke
  *       - 397772: JPA 2.1 Entity Graph Support
  ******************************************************************************/
+// Contributors:
+//     ailitchev - Bug 244124 - Added to handle copying using AttributeGroup
+//                              Functionality copied from ObjectCopyPolicy
+//     09 Jan 2013-2.5 Gordon Yorke
+//       - 397772: JPA 2.1 Entity Graph Support
 package org.eclipse.persistence.sessions;
 
 import java.util.*;

@@ -13,6 +13,12 @@
  *     03/06/2015-2.7.0 Dalia Abo Sheasha
  *       - 461607: PropertiesUtils does not process methods with String parameters correclty.
  *****************************************************************************/
+// Contributors:
+//     02/19/2015 - Rick Curtis
+//       - 458877 : Add national character support
+//     03/06/2015-2.7.0 Dalia Abo Sheasha
+//       - 461607: PropertiesUtils does not process methods with String parameters correclty.
+// CPR:: Copyright (c) 2015 IBM Corporation. All rights reserved.
 package org.eclipse.persistence.config;
 
 import org.eclipse.persistence.exceptions.ConversionException;

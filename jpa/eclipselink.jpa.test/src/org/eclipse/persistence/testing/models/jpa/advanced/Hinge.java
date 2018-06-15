@@ -11,6 +11,9 @@
  *     01/15/2015-2.6 Mythily Parthasarathy
  *       - initial implementation for bug#457480
  ******************************************************************************/
+// Contributors:
+//     01/15/2015-2.6 Mythily Parthasarathy
+//       - initial implementation for bug#457480
 package org.eclipse.persistence.testing.models.jpa.advanced;
 
 import static javax.persistence.CascadeType.MERGE;

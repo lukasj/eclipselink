@@ -11,6 +11,9 @@
  *     06/18/2009 Andrei Ilitchev
  *       - JPA 2.0 - OrderedList support.
  ******************************************************************************/
+// Contributors:
+//     06/18/2009 Andrei Ilitchev
+//       - JPA 2.0 - OrderedList support.
 package org.eclipse.persistence.annotations;
 
 import java.lang.annotation.Retention;

@@ -11,6 +11,9 @@
  *     Oracle
  *
  ******************************************************************************/
+// Contributors:
+//     Oracle
+//
 package org.eclipse.persistence.queries;
 
 import org.eclipse.persistence.expressions.Expression;

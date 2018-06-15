@@ -11,6 +11,8 @@
  * Contributors:
  *  - rbarkhouse - 27 January 2012 - 2.3.3 - Initial implementation
  ******************************************************************************/
+// Contributors:
+//  - rbarkhouse - 27 January 2012 - 2.3.3 - Initial implementation
 package org.eclipse.persistence.testing.jaxb.collections;
 
 import java.util.List;

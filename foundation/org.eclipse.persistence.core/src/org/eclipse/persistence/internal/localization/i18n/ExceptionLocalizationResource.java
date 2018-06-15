@@ -32,6 +32,31 @@
  *     03/09/2016-2.6 Dalia Abo Sheasha
  *       - 489298: Wrap EclipseLink's Bean Validation calls in doPrivileged blocks when security is enabled
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation from Oracle TopLink
+//     02/08/2012-2.4 Guy Pelletier
+//       - 350487: JPA 2.1 Specification defined support for Stored Procedure Calls
+//     07/13/2012-2.5 Guy Pelletier
+//       - 350487: JPA 2.1 Specification defined support for Stored Procedure Calls
+//     08/24/2012-2.5 Guy Pelletier
+//       - 350487: JPA 2.1 Specification defined support for Stored Procedure Calls
+//     11/05/2012-2.5 Guy Pelletier
+//       - 350487: JPA 2.1 Specification defined support for Stored Procedure Calls
+//     01/11/2013-2.5 Guy Pelletier
+//       - 389090: JPA 2.1 DDL Generation Support
+//     01/24/2013-2.5 Guy Pelletier
+//       - 389090: JPA 2.1 DDL Generation Support
+//     09 Jan 2013-2.5 Gordon Yorke
+//       - 397772: JPA 2.1 Entity Graph Support
+//     02/19/2013-2.5 Guy Pelletier
+//       - 389090: JPA 2.1 DDL Generation Support
+//     09/24/2014-2.6 Rick Curtis
+//       - 443762 : Misc message cleanup.
+//     12/18/2014-2.6 Rick Curtis
+//       - 454189 : Misc message cleanup.#2
+//     03/09/2016-2.6 Dalia Abo Sheasha
+//       - 489298: Wrap EclipseLink's Bean Validation calls in doPrivileged blocks when security is enabled
+// CPR:: Copyright (c) 1998, 2018 Oracle, IBM Corporation and/or its affiliates. All rights reserved.
 package org.eclipse.persistence.internal.localization.i18n;
 
 import java.util.ListResourceBundle;

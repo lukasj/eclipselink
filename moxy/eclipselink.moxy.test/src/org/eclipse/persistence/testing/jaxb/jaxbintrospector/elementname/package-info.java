@@ -10,6 +10,8 @@
  * Contributors:
  *     Denise Smith - October 2011 - 2.3
  ******************************************************************************/
+// Contributors:
+//     Denise Smith - October 2011 - 2.3
 @javax.xml.bind.annotation.XmlSchema(namespace = "someUri",
                                      elementFormDefault =
                                      javax.xml.bind.annotation.XmlNsForm.QUALIFIED)

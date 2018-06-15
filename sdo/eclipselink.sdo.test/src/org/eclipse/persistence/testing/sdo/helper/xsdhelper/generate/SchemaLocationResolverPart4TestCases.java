@@ -10,6 +10,8 @@
  * Contributors:
  *     Oracle - initial API and implementation from Oracle TopLink
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation from Oracle TopLink
 /*
  * See document XSDHelperGenerateV2.doc for use case descriptions
  * These tests generate a schema with a sequence of addresses shipTo, billTo that are in

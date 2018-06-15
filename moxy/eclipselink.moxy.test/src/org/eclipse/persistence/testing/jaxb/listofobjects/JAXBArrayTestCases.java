@@ -10,6 +10,8 @@
  * Contributors:
  *     Denise Smith  - October 2011
  ******************************************************************************/
+// Contributors:
+//     Denise Smith  - October 2011
 package org.eclipse.persistence.testing.jaxb.listofobjects;
 
 import java.io.InputStream;

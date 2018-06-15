@@ -10,6 +10,8 @@
  * Contributors:
  * Denise Smith - 2.3
  ******************************************************************************/
+// Contributors:
+// Denise Smith - 2.3
 package org.eclipse.persistence.testing.jaxb.annotations.xmltransformation;
 
 import org.eclipse.persistence.mappings.foundation.AbstractTransformationMapping;

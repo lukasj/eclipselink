@@ -10,6 +10,8 @@
  * Contributors:
  *     Denise Smith - 2.4 - April 2012
  ******************************************************************************/
+// Contributors:
+//     Denise Smith - 2.4 - April 2012
 package org.eclipse.persistence.testing.jaxb.json.emptyroot;
 
 public class RootNoXmlRootElement {

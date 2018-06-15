@@ -13,6 +13,11 @@
  *     01/25/2011-2.3 Guy Pelletier
  *       - 333913: @OrderBy and <order-by/> without arguments should order by primary
  ******************************************************************************/
+// Contributors:
+//     05/16/2008-1.0M8 Guy Pelletier
+//       - 218084: Implement metadata merging functionality between mapping files
+//     01/25/2011-2.3 Guy Pelletier
+//       - 333913: @OrderBy and <order-by/> without arguments should order by primary
 package org.eclipse.persistence.internal.jpa.metadata.accessors.objects;
 
 import org.eclipse.persistence.internal.jpa.metadata.xml.XMLEntityMappings;

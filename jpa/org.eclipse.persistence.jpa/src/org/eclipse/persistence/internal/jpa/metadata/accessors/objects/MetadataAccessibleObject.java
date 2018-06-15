@@ -16,6 +16,14 @@
  *     01/25/2011-2.3 Guy Pelletier
  *       - 333913: @OrderBy and <order-by/> without arguments should order by primary
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation from Oracle TopLink
+//     05/16/2008-1.0M8 Guy Pelletier
+//       - 218084: Implement metadata merging functionality between mapping files
+//     03/08/2010-2.1 Guy Pelletier
+//       - 303632: Add attribute-type for mapping attributes to EclipseLink-ORM
+//     01/25/2011-2.3 Guy Pelletier
+//       - 333913: @OrderBy and <order-by/> without arguments should order by primary
 package org.eclipse.persistence.internal.jpa.metadata.accessors.objects;
 
 import org.eclipse.persistence.internal.jpa.metadata.MetadataLogger;

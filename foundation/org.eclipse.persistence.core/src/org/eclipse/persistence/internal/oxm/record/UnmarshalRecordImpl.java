@@ -11,6 +11,9 @@
  *     Oracle - initial API and implementation from Oracle TopLink
  *     Marcel Valovy - 2.6.0 - added case insensitive unmarshalling
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation from Oracle TopLink
+//     Marcel Valovy - 2.6.0 - added case insensitive unmarshalling
 package org.eclipse.persistence.internal.oxm.record;
 
 import java.util.ArrayList;

@@ -11,6 +11,8 @@
  * Contributors:
  *      Oracle
  ******************************************************************************/
+// Contributors:
+//      Oracle
 package org.eclipse.persistence.testing.jaxb.namespaceuri.schemacontext;
 
 import javax.xml.bind.annotation.XmlAccessType;

@@ -10,6 +10,8 @@
  * Contributors:
  *     Denise Smith - EclipseLink 2.3 - Initial Implementation
  ******************************************************************************/
+// Contributors:
+//     Denise Smith - EclipseLink 2.3 - Initial Implementation
 package org.eclipse.persistence.oxm.annotations;
 
 import java.lang.annotation.ElementType;

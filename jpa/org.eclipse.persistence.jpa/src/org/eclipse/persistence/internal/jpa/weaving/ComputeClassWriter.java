@@ -27,6 +27,7 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF
  * THE POSSIBILITY OF SUCH DAMAGE.
  */
+// CPR:: Copyright (c) 2000, 2015 -2011 INRIA, France Telecom
 
 package org.eclipse.persistence.internal.jpa.weaving;
 

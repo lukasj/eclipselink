@@ -10,6 +10,8 @@
  * Contributors:
  *     Oracle - initial API and implementation from Oracle TopLink
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation from Oracle TopLink
 
 /**
  *  @version $Header: SchemaLocationResolverTestCases.java 24-jan-2007.08:28:33 dmahar Exp $

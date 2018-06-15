@@ -10,6 +10,8 @@
  * Contributors:
  *     David Minsky - initial API and implementation
  ******************************************************************************/
+// Contributors:
+//     David Minsky - initial API and implementation
 package org.eclipse.persistence.testing.tests.feature;
 
 import org.eclipse.persistence.sessions.DatabaseSession;

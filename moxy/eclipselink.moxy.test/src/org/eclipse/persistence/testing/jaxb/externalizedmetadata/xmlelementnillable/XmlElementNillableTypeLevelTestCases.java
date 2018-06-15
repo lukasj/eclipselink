@@ -10,6 +10,8 @@
  * Contributors:
  * Martin Vojtek - July 8/2014
  ******************************************************************************/
+// Contributors:
+// Martin Vojtek - July 8/2014
 package org.eclipse.persistence.testing.jaxb.externalizedmetadata.xmlelementnillable;
 
 import java.io.InputStream;

@@ -10,6 +10,8 @@
  * Contributors:
  *     Matt MacIvor - 2.4 - Initial Implementation
  ******************************************************************************/
+// Contributors:
+//     Matt MacIvor - 2.4 - Initial Implementation
 package org.eclipse.persistence.internal.jaxb;
 
 import java.lang.reflect.Method;

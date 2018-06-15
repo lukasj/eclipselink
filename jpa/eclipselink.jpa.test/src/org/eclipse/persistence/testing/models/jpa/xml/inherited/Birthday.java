@@ -11,6 +11,9 @@
  *     04/03/2009-2.0 Guy Pelletier
  *       - 241413: JPA 2.0 Add EclipseLink support for Map type attributes
  ******************************************************************************/
+// Contributors:
+//     04/03/2009-2.0 Guy Pelletier
+//       - 241413: JPA 2.0 Add EclipseLink support for Map type attributes
 package org.eclipse.persistence.testing.models.jpa.xml.inherited;
 
 public class Birthday {

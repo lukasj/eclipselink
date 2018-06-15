@@ -10,6 +10,8 @@
  * Contributors:
  *     James Sutherland - initial API and implementation from Oracle TopLink
  ******************************************************************************/
+// Contributors:
+//     James Sutherland - initial API and implementation from Oracle TopLink
 package org.eclipse.persistence.transaction.jotm;
 
 import java.lang.reflect.InvocationTargetException;

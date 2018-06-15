@@ -10,6 +10,8 @@
  * Contributors:
  * dmccann - July 28/2010 - 2.2 - Initial implementation
  ******************************************************************************/
+// Contributors:
+// dmccann - July 28/2010 - 2.2 - Initial implementation
 package org.eclipse.persistence.testing.jaxb.externalizedmetadata.xmlclassextractor;
 
 import java.io.InputStream;

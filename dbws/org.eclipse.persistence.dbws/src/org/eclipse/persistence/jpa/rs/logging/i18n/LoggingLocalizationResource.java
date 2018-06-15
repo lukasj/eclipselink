@@ -10,6 +10,8 @@
  * Contributors:
  *      tware -
  ******************************************************************************/
+// Contributors:
+//      tware -
 package org.eclipse.persistence.jpa.rs.logging.i18n;
 
 import java.util.ListResourceBundle;

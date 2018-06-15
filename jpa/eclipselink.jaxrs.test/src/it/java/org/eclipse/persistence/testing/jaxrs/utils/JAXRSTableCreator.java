@@ -10,6 +10,8 @@
  * Contributors:
  *     Praba Vijayaratnam - 2.3 - inital implementation
  ******************************************************************************/
+// Contributors:
+//     Praba Vijayaratnam - 2.3 - inital implementation
 package org.eclipse.persistence.testing.jaxrs.utils;
 
 import org.eclipse.persistence.queries.SQLCall;

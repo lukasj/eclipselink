@@ -12,6 +12,10 @@
  *     06/20/2008-1.0 Guy Pelletier
  *       - 232975: Failure when attribute type is generic
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation from Oracle TopLink
+//     06/20/2008-1.0 Guy Pelletier
+//       - 232975: Failure when attribute type is generic
 package org.eclipse.persistence.testing.tests.jpa.inherited;
 
 import java.util.Date;

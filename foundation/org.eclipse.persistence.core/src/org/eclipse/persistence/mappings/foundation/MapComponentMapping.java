@@ -12,6 +12,10 @@
  *     14/05/2012-2.4 Guy Pelletier
  *       - 376603: Provide for table per tenant support for multitenant applications
  ******************************************************************************/
+// Contributors:
+//     tware - initial API check-in for MappedKeyMapContainerPolicy
+//     14/05/2012-2.4 Guy Pelletier
+//       - 376603: Provide for table per tenant support for multitenant applications
 package org.eclipse.persistence.mappings.foundation;
 
 import org.eclipse.persistence.internal.identitymaps.CacheKey;

@@ -10,6 +10,8 @@
 * Contributors:
 *     dmccann - Feb 09/2009 - 2.0 - Initial implementation
 ******************************************************************************/
+// Contributors:
+//     dmccann - Feb 09/2009 - 2.0 - Initial implementation
 package org.eclipse.persistence.testing.sdo.helper.typehelper;
 
 import java.util.List;

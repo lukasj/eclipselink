@@ -10,6 +10,8 @@
  * Contributors:
  *     gonural - Initial implementation
  ******************************************************************************/
+// Contributors:
+//     gonural - Initial implementation
 package org.eclipse.persistence.internal.jpa.rs.metadata.model;
 
 import javax.xml.bind.annotation.XmlAttribute;

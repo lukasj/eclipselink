@@ -12,6 +12,10 @@
  *      09-01-2014-2.6.0 Dmitry Kornilov
  *        - implements SingleResultQuery interface
  ******************************************************************************/
+// Contributors:
+//      gonural - initial
+//      09-01-2014-2.6.0 Dmitry Kornilov
+//        - implements SingleResultQuery interface
 package org.eclipse.persistence.jpa.rs.util.list;
 
 import org.eclipse.persistence.jpa.rs.ReservedWords;

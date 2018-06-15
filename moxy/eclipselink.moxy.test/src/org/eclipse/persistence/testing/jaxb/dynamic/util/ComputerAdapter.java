@@ -10,6 +10,8 @@
  * Contributors:
  *     rbarkhouse - 2.2 - initial implementation
  ******************************************************************************/
+// Contributors:
+//     rbarkhouse - 2.2 - initial implementation
 package org.eclipse.persistence.testing.jaxb.dynamic.util;
 
 import java.util.Calendar;

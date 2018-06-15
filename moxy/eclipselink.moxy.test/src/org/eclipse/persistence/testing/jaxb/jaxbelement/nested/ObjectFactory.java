@@ -10,6 +10,8 @@
  * Contributors:
  *     Denise Smith - July 15, 2009
  ******************************************************************************/
+// Contributors:
+//     Denise Smith - July 15, 2009
 package org.eclipse.persistence.testing.jaxb.jaxbelement.nested;
 
 import javax.xml.bind.JAXBElement;

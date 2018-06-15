@@ -10,6 +10,8 @@
  * Contributors:
  *     rbarkhouse - 2009-06-16 10:40:00 - initial implementation
  ******************************************************************************/
+// Contributors:
+//     rbarkhouse - 2009-06-16 10:40:00 - initial implementation
 package org.eclipse.persistence.testing.jaxb.simpledocument;
 
 

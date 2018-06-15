@@ -25,6 +25,24 @@
  *     02/17/2015-2.6 Rick Curtis
  *       - 460138: Change method visibility.
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation from Oracle TopLink
+//     tware - 1.0RC1 - OSGI refactor
+//     12/23/2008-1.1M5 Michael O'Brien
+//        - 253701: set persistenceInitializationHelper so EntityManagerSetupImpl.undeploy() can clear the JavaSECMPInitializer
+//     12/24/2012-2.5 Guy Pelletier
+//       - 389090: JPA 2.1 DDL Generation Support
+//     01/08/2013-2.5 Guy Pelletier
+//       - 389090: JPA 2.1 DDL Generation Support
+//     01/11/2013-2.5 Guy Pelletier
+//       - 389090: JPA 2.1 DDL Generation Support
+//     02/04/2013-2.5 Guy Pelletier
+//       - 389090: JPA 2.1 DDL Generation Support
+//     02/02/2015-2.6 Dalia Abo Sheasha
+//       - 458462: generateSchema throws a ClassCastException within a container
+//     02/17/2015-2.6 Rick Curtis
+//       - 460138: Change method visibility.
+// CPR:: Copyright (c) 1998, 2015 Oracle and/or its affiliates, IBM Corporation. All rights reserved.
 package org.eclipse.persistence.jpa;
 
 import java.util.HashMap;

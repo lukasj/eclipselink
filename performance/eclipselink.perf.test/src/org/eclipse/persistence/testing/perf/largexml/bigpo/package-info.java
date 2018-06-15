@@ -10,5 +10,7 @@
  * Contributors:
  *     Martin Vojtek - 2.6.0 - initial implementation
  ******************************************************************************/
+// Contributors:
+//     Martin Vojtek - 2.6.0 - initial implementation
 @javax.xml.bind.annotation.XmlSchema(namespace = "http://org.eclipse.persistence.testing.perf/bigPurchaseOrderworkItem", elementFormDefault = javax.xml.bind.annotation.XmlNsForm.QUALIFIED)
 package org.eclipse.persistence.testing.perf.largexml.bigpo;

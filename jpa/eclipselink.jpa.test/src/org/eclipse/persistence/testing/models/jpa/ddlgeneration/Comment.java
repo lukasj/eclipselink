@@ -10,6 +10,8 @@
  * Contributors:
  *     ailitchev - UnidirectionalOneToMany mapping
  ******************************************************************************/
+// Contributors:
+//     ailitchev - UnidirectionalOneToMany mapping
 package org.eclipse.persistence.testing.models.jpa.ddlgeneration;
 
 import static javax.persistence.GenerationType.TABLE;

@@ -10,6 +10,8 @@
  * Contributors:
  * dmccann - August 24/2010 - 2.2 - Initial implementation
  ******************************************************************************/
+// Contributors:
+// dmccann - August 24/2010 - 2.2 - Initial implementation
 package org.eclipse.persistence.testing.jaxb.annotations.xmldiscriminator;
 
 import javax.xml.bind.annotation.XmlElement;

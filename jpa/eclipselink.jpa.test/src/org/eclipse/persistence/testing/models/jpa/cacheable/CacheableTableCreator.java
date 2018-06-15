@@ -15,6 +15,13 @@
  *     06/19/2014-2.6: Tomas Kraus
  *       - 437578: New model to verify @Cacheable inheritance in JPA 2.1
  ******************************************************************************/
+// Contributors:
+//     06/16/2009-2.0 Guy Pelletier
+//       - 277039: JPA 2.0 Cache Usage Settings
+//     07/16/2009-2.0 Guy Pelletier
+//       - 277039: JPA 2.0 Cache Usage Settings
+//     06/19/2014-2.6: Tomas Kraus
+//       - 437578: New model to verify @Cacheable inheritance in JPA 2.1
 package org.eclipse.persistence.testing.models.jpa.cacheable;
 
 import org.eclipse.persistence.testing.framework.TogglingFastTableCreator;

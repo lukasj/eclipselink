@@ -11,6 +11,9 @@
  *     08/10/2009-2.0 Guy Pelletier
  *       - 267391: JPA 2.0 implement/extend/use an APT tooling library for MetaModel API canonical classes
  ******************************************************************************/
+// Contributors:
+//     08/10/2009-2.0 Guy Pelletier
+//       - 267391: JPA 2.0 implement/extend/use an APT tooling library for MetaModel API canonical classes
 package org.eclipse.persistence.internal.jpa.modelgen.objects;
 
 import java.util.ArrayList;

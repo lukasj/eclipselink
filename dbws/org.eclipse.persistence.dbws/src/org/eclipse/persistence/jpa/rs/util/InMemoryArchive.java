@@ -12,6 +12,10 @@
  *     05/26/2016-2.7 Tomas Kraus
  *       - 494610: Session Properties map should be Map<String, Object>
  ******************************************************************************/
+// Contributors:
+//     dclarke/tware - initial API and implementation
+//     05/26/2016-2.7 Tomas Kraus
+//       - 494610: Session Properties map should be Map<String, Object>
 package org.eclipse.persistence.jpa.rs.util;
 
 import java.io.IOException;

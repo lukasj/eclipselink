@@ -10,6 +10,8 @@
  * Contributors:
  * dmccann - November 02/2009 - 2.0 - Initial implementation
  ******************************************************************************/
+// Contributors:
+// dmccann - November 02/2009 - 2.0 - Initial implementation
 package org.eclipse.persistence.testing.jaxb.externalizedmetadata.xmlidref;
 
 public class Employee2 {

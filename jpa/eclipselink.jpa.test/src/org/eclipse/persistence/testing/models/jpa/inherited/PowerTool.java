@@ -11,6 +11,9 @@
  *     06/22/2010-2.2 Guy Pelletier
  *       - 308729: Persistent Unit deployment exception when mappedsuperclass has no annotations but has lifecycle callbacks
  ******************************************************************************/
+// Contributors:
+//     06/22/2010-2.2 Guy Pelletier
+//       - 308729: Persistent Unit deployment exception when mappedsuperclass has no annotations but has lifecycle callbacks
 package org.eclipse.persistence.testing.models.jpa.inherited;
 
 import javax.persistence.MappedSuperclass;

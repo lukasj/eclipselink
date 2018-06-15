@@ -11,6 +11,9 @@
  *     Tomas Kraus - 2018/01/08
  *          Bug 530901 - Prepare Java SE platform detection code for Java 11
  ******************************************************************************/
+// Contributors:
+//     Tomas Kraus - 2018/01/08
+//          Bug 530901 - Prepare Java SE platform detection code for Java 11
 package org.eclipse.persistence.testing.tests.junit.helper;
 
 import static org.junit.Assert.assertEquals;

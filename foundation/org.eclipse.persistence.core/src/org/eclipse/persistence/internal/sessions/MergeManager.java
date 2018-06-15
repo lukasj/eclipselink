@@ -16,6 +16,14 @@
  *     09 Jan 2013-2.5 Gordon Yorke
  *       - 397772: JPA 2.1 Entity Graph Support
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation from Oracle TopLink
+//     02/11/2009-1.1 Michael O'Brien
+//        - 259993: As part 2) During mergeClonesAfterCompletion()
+//        If the the acquire and release threads are different
+//        switch back to the stored acquire thread stored on the mergeManager.
+//     09 Jan 2013-2.5 Gordon Yorke
+//       - 397772: JPA 2.1 Entity Graph Support
 package org.eclipse.persistence.internal.sessions;
 
 import java.util.ArrayList;

@@ -10,6 +10,9 @@
  * Contributors:
  *     Chris Delahunt  = 2.2 - 331921: deadlock with uow commit and query using joins
  ******************************************************************************/
+// Contributors:
+//     Chris Delahunt  = 2.2 - 331921: deadlock with uow commit and query using joins
+// CPR:: Copyright (c) 2010, 2015 <Company/individual>. All rights reserved.
 package org.eclipse.persistence.testing.tests.simultaneous;
 
 import java.math.BigDecimal;

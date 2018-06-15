@@ -12,6 +12,10 @@
  *     12/14/2017-3.0 Tomas Kraus
  *       - 291546: Performance degradation due to usage of Vector in DescriptorEventManager
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation from Oracle TopLink
+//     12/14/2017-3.0 Tomas Kraus
+//       - 291546: Performance degradation due to usage of Vector in DescriptorEventManager
 package org.eclipse.persistence.testing.models.events;
 
 import java.util.List;

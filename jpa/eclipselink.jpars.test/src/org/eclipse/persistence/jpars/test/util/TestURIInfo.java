@@ -11,6 +11,9 @@
  *      tware - Initial implementation
  *      Dmitry Kornilov - upgrade to Jersey 2.x
  ******************************************************************************/
+// Contributors:
+//      tware - Initial implementation
+//      Dmitry Kornilov - upgrade to Jersey 2.x
 package org.eclipse.persistence.jpars.test.util;
 
 import java.net.URI;

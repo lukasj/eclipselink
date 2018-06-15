@@ -12,6 +12,11 @@
  *       - 241308: Primary key is incorrectly assigned to embeddable class
  *                 field with the same name as the primary key field's name
  ******************************************************************************/
+// Contributors:
+//     08/20/2008-1.0.1 Nathan Beyer (Cerner)
+//       - 241308: Primary key is incorrectly assigned to embeddable class
+//                 field with the same name as the primary key field's name
+// CPR:: Copyright (c) 2008, 2015 Nathan Beyer (Cerner). All rights reserved.
 package org.eclipse.persistence.testing.models.jpa.ddlgeneration;
 
 import javax.persistence.Embeddable;

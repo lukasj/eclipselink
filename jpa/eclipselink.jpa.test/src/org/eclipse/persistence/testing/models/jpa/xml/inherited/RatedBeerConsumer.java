@@ -19,6 +19,17 @@
  *     06/09/2009-2.0 Guy Pelletier
  *       - 249037: JPA 2.0 persisting list item index
  ******************************************************************************/
+// Contributors:
+//     06/20/2008-1.0 Guy Pelletier
+//       - 232975: Failure when attribute type is generic
+//     09/23/2008-1.1 Guy Pelletier
+//       - 241651: JPA 2.0 Access Type support
+//     01/28/2009-2.0 Guy Pelletier
+//       - 248293: JPA 2.0 Element Collections (part 1)
+//     06/02/2009-2.0 Guy Pelletier
+//       - 278768: JPA 2.0 Association Override Join Table
+//     06/09/2009-2.0 Guy Pelletier
+//       - 249037: JPA 2.0 persisting list item index
 package org.eclipse.persistence.testing.models.jpa.xml.inherited;
 
 import java.util.ArrayList;

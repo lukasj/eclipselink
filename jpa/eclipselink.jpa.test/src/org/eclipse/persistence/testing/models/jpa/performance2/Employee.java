@@ -11,6 +11,9 @@
  *              dclarke - initial JPA Employee example using XML (bug 217884)
  *              mbraeuer - annotated version, transformation
  ******************************************************************************/
+// Contributors:
+//              dclarke - initial JPA Employee example using XML (bug 217884)
+//              mbraeuer - annotated version, transformation
 package org.eclipse.persistence.testing.models.jpa.performance2;
 
 import java.io.Serializable;

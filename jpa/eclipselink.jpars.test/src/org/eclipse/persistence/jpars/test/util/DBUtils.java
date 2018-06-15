@@ -10,6 +10,8 @@
  * Contributors:
  *      gonural - initial
  ******************************************************************************/
+// Contributors:
+//      gonural - initial
 package org.eclipse.persistence.jpars.test.util;
 
 import javax.persistence.EntityManager;

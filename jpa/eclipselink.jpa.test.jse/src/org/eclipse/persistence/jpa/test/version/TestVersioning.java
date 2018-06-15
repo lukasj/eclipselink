@@ -11,6 +11,10 @@
  *     05/10/2018-master Joe Grassel
  *       - Github#93: Bug with bulk update processing involving version field update parameter
  ******************************************************************************/
+// Contributors:
+//     05/10/2018-master Joe Grassel
+//       - Github#93: Bug with bulk update processing involving version field update parameter
+// CPR:: Copyright (c) 2018 IBM and/or its affiliates. All rights reserved.
 
 package org.eclipse.persistence.jpa.test.version;
 

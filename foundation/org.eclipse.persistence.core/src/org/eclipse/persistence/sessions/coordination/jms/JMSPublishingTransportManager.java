@@ -7,6 +7,8 @@
  * Contributors:
  *     cdelahun - Bug 214534: added JMS Cache Coordination for publishing only
  ******************************************************************************/
+// Contributors:
+//     cdelahun - Bug 214534: added JMS Cache Coordination for publishing only
 package org.eclipse.persistence.sessions.coordination.jms;
 
 import java.util.Map;

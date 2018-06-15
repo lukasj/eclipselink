@@ -10,6 +10,8 @@
 * Contributors:
 * dmccann - June 2/2009 - 2.0 - Initial implementation
 ******************************************************************************/
+// Contributors:
+// dmccann - June 2/2009 - 2.0 - Initial implementation
 package org.eclipse.persistence.testing.jaxb.schemagen.customizedmapping.xmlidref;
 
 import javax.xml.bind.annotation.XmlElement;

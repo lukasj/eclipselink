@@ -10,6 +10,8 @@
  * Contributors:
  *     Matt MacIvor - 2.3.1 - initial implementation
  ******************************************************************************/
+// Contributors:
+//     Matt MacIvor - 2.3.1 - initial implementation
 package org.eclipse.persistence.testing.jaxb.employee;
 
 import java.io.StringReader;

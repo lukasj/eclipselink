@@ -10,6 +10,8 @@
  * Contributors:
  *     2008-10-29 - James Sutherland - initial implementation
  ******************************************************************************/
+// Contributors:
+//     2008-10-29 - James Sutherland - initial implementation
 package org.eclipse.persistence.internal.descriptors;
 
 /**

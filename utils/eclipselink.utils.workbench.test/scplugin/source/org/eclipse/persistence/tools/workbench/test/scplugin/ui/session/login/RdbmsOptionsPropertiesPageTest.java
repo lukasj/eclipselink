@@ -10,6 +10,8 @@
  * Contributors:
  *     Oracle - initial API and implementation from Oracle TopLink
 ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation from Oracle TopLink
 package org.eclipse.persistence.tools.workbench.test.scplugin.ui.session.login;
 
 import javax.swing.JComponent;

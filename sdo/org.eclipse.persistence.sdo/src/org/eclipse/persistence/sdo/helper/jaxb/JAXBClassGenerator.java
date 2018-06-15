@@ -10,6 +10,8 @@
 * Contributors:
 *     bdoughan - Mar 19/2009 - 2.0 - Initial implementation
 ******************************************************************************/
+// Contributors:
+//     bdoughan - Mar 19/2009 - 2.0 - Initial implementation
 package org.eclipse.persistence.sdo.helper.jaxb;
 
 import java.io.FileReader;

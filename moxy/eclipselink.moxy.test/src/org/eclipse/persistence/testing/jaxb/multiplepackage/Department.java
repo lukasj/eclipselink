@@ -10,6 +10,8 @@
  * Contributors:
  *     Denise Smith - September 3, 2009 Initial test
  ******************************************************************************/
+// Contributors:
+//     Denise Smith - September 3, 2009 Initial test
 package org.eclipse.persistence.testing.jaxb.multiplepackage;
 
 import javax.xml.bind.annotation.XmlElement;

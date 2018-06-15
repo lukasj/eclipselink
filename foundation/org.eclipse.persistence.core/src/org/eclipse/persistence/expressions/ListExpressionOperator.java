@@ -10,6 +10,8 @@
  * Contributors:
  *     tware - initial API and implementation from for JPA 2.0 criteria API
  ******************************************************************************/
+// Contributors:
+//     tware - initial API and implementation from for JPA 2.0 criteria API
 package org.eclipse.persistence.expressions;
 
 import org.eclipse.persistence.internal.helper.Helper;

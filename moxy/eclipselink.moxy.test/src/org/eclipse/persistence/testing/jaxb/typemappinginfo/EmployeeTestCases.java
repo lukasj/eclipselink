@@ -10,6 +10,8 @@
  * Contributors:
  *     Denise Smith  January 12, 2009 - 2.0.1
  ******************************************************************************/
+// Contributors:
+//     Denise Smith  January 12, 2009 - 2.0.1
 package org.eclipse.persistence.testing.jaxb.typemappinginfo;
 
 import java.io.ByteArrayInputStream;

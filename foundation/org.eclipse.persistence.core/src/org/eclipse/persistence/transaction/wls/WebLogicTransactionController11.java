@@ -12,6 +12,10 @@
  *     10/24/2017-3.0 Tomas Kraus
  *       - 526419: Modify EclipseLink to reflect changes in JTA 1.1.
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation from Oracle TopLink
+//     10/24/2017-3.0 Tomas Kraus
+//       - 526419: Modify EclipseLink to reflect changes in JTA 1.1.
 package org.eclipse.persistence.transaction.wls;
 
 import javax.transaction.TransactionManager;

@@ -11,6 +11,9 @@
  *     14/05/2012-2.4 Guy Pelletier
  *       - 376603: Provide for table per tenant support for multitenant applications
  ******************************************************************************/
+// Contributors:
+//     14/05/2012-2.4 Guy Pelletier
+//       - 376603: Provide for table per tenant support for multitenant applications
 package org.eclipse.persistence.testing.models.jpa.xml.advanced.multitenant;
 
 import java.util.ArrayList;

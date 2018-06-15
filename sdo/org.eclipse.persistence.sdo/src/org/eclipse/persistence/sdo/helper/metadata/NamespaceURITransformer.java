@@ -10,6 +10,8 @@
  * Contributors:
  *     rick.barkhouse - added as part of fix for SDO 2.1.1 TCK 'sdoPathXSDQNameTest'
  ******************************************************************************/
+// Contributors:
+//     rick.barkhouse - added as part of fix for SDO 2.1.1 TCK 'sdoPathXSDQNameTest'
 package org.eclipse.persistence.sdo.helper.metadata;
 
 import org.eclipse.persistence.mappings.foundation.AbstractTransformationMapping;

@@ -10,6 +10,8 @@
  * Contributors:
  *     ailitchev - Bug 244124 - New support for loading
  ******************************************************************************/
+// Contributors:
+//     ailitchev - Bug 244124 - New support for loading
 package org.eclipse.persistence.queries;
 
 import org.eclipse.persistence.core.queries.CoreAttributeGroup;

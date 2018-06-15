@@ -11,6 +11,9 @@
  *     02/13/2013-2.5 Guy Pelletier
  *       - 397772: JPA 2.1 Entity Graph Support (XML support)
  ******************************************************************************/
+// Contributors:
+//     02/13/2013-2.5 Guy Pelletier
+//       - 397772: JPA 2.1 Entity Graph Support (XML support)
 package org.eclipse.persistence.internal.jpa.metadata.graphs;
 
 import java.util.Map;

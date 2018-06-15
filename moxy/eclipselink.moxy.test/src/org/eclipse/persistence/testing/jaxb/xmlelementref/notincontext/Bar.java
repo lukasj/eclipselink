@@ -10,6 +10,8 @@
  * Contributors:
  *     Denise Smith - 2.4
  ******************************************************************************/
+// Contributors:
+//     Denise Smith - 2.4
 package org.eclipse.persistence.testing.jaxb.xmlelementref.notincontext;
 
 import javax.xml.bind.annotation.XmlRootElement;

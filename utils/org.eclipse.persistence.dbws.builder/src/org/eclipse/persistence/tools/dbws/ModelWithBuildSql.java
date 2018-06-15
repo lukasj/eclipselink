@@ -11,6 +11,9 @@
  *     Mike Norman - Jan 27 2012, refactor hierarchy of OperationModel so
  *     that both ProcedureOperationModel and SQLOperationModel have 'buildSql'
  ******************************************************************************/
+// Contributors:
+//     Mike Norman - Jan 27 2012, refactor hierarchy of OperationModel so
+//     that both ProcedureOperationModel and SQLOperationModel have 'buildSql'
 package org.eclipse.persistence.tools.dbws;
 
 public class ModelWithBuildSql extends OperationModel {

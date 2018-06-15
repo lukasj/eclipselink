@@ -11,6 +11,9 @@
  *     kchen - Feb 22 2008, bug 217745
  *     Dmitry Kornilov - Nov 10, 2014, bug 450818
  ******************************************************************************/
+// Contributors:
+//     kchen - Feb 22 2008, bug 217745
+//     Dmitry Kornilov - Nov 10, 2014, bug 450818
 package org.eclipse.persistence.testing.tests.jpql;
 
 import org.eclipse.persistence.queries.ReadAllQuery;

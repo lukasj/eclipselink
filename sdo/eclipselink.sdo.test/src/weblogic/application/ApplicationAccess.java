@@ -10,6 +10,8 @@
  * Contributors:
  *     Dmitry Kornilov - Initial implementation
  ******************************************************************************/
+// Contributors:
+//     Dmitry Kornilov - Initial implementation
 package weblogic.application;
 
 /**

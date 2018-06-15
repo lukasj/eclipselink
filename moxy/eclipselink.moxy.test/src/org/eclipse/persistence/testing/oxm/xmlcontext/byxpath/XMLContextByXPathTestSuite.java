@@ -10,6 +10,8 @@
  * Contributors:
  *     rbarkhou - 21 Sept 2009 - 1.2 - Initial implementation
  ******************************************************************************/
+// Contributors:
+//     rbarkhou - 21 Sept 2009 - 1.2 - Initial implementation
 package org.eclipse.persistence.testing.oxm.xmlcontext.byxpath;
 
 import junit.framework.Test;

@@ -10,6 +10,8 @@
  * Contributors:
  *     Denise Smith - initial contribution 05-12-2009
  ******************************************************************************/
+// Contributors:
+//     Denise Smith - initial contribution 05-12-2009
 package org.eclipse.persistence.testing.oxm.descriptor.rootelement.multipleroots;
 
 import junit.textui.TestRunner;

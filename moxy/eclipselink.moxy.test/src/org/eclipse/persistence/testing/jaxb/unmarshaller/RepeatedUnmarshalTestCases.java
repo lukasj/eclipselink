@@ -10,6 +10,8 @@
  * Contributors:
  *     Denise Smith - 2.3.1
  ******************************************************************************/
+// Contributors:
+//     Denise Smith - 2.3.1
 package org.eclipse.persistence.testing.jaxb.unmarshaller;
 
 import java.io.InputStream;

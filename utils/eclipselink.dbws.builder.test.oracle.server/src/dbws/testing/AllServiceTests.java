@@ -10,6 +10,8 @@
  * Contributors:
  *     David McCann - Aug.08, 2012 - 2.4.1 - Initial implementation
  ******************************************************************************/
+// Contributors:
+//     David McCann - Aug.08, 2012 - 2.4.1 - Initial implementation
 package dbws.testing;
 
 //JUnit4 imports

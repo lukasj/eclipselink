@@ -13,6 +13,12 @@
  *     08/26/2016 Will Dazey
  *       - 499869: Update WAS server detection
  ******************************************************************************/
+// Contributors:
+//     01/05/2015 Rick Curtis
+//       - 455683: Automatically detect target server
+//     08/26/2016 Will Dazey
+//       - 499869: Update WAS server detection
+// CPR:: Copyright (c) 2016 IBM Corporation. All rights reserved.
 package org.eclipse.persistence.platform.server.was;
 
 import java.security.AccessController;

@@ -10,6 +10,8 @@
  * Contributors:
  *     tware - Bug 241681 fixes for clientSessionBroker
  ******************************************************************************/
+// Contributors:
+//     tware - Bug 241681 fixes for clientSessionBroker
 package org.eclipse.persistence.testing.tests.sessionbroker;
 
 import java.util.Iterator;

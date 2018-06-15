@@ -10,6 +10,8 @@
  * Contributors:
  *     tware
  ******************************************************************************/
+// Contributors:
+//     tware
 package org.eclipse.persistence.testing.models.jpa.xml.advanced;
 
 /**

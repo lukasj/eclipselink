@@ -11,6 +11,9 @@
  *     Gordon Yorke - Initial development
  *
  ******************************************************************************/
+// Contributors:
+//     Gordon Yorke - Initial development
+//
 package org.eclipse.persistence.internal.jpa.querydef;
 
 import java.lang.reflect.Constructor;

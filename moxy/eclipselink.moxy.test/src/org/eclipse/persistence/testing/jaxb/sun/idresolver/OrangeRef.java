@@ -11,6 +11,8 @@
  * Contributors:
  *  - rbarkhouse - 21 October 2011 - 2.4 - Initial implementation
  ******************************************************************************/
+// Contributors:
+//  - rbarkhouse - 21 October 2011 - 2.4 - Initial implementation
 package org.eclipse.persistence.testing.jaxb.sun.idresolver;
 
 import javax.xml.bind.annotation.XmlAttribute;

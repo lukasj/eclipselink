@@ -10,6 +10,8 @@
  * Contributors:
  *     tware - Bug 326104 - in-memory query BigDecimal equality comparation fails
  ******************************************************************************/
+// Contributors:
+//     tware - Bug 326104 - in-memory query BigDecimal equality comparation fails
 package org.eclipse.persistence.testing.tests.jpa.datatypes;
 
 import java.math.BigDecimal;

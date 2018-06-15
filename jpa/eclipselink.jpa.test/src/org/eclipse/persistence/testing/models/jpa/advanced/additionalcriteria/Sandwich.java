@@ -11,6 +11,9 @@
  *     15/08/2011-2.3.1 Guy Pelletier
  *       - 298494: JPQL exists subquery generates unnecessary table join
  ******************************************************************************/
+// Contributors:
+//     15/08/2011-2.3.1 Guy Pelletier
+//       - 298494: JPQL exists subquery generates unnecessary table join
 package org.eclipse.persistence.testing.models.jpa.advanced.additionalcriteria;
 
 import static org.eclipse.persistence.config.CacheIsolationType.PROTECTED;

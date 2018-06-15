@@ -10,6 +10,8 @@
  * Contributors:
  *     dminsky - 2.6.0
  ******************************************************************************/
+// Contributors:
+//     dminsky - 2.6.0
 package org.eclipse.persistence.testing.jaxb.unmapped;
 
 import java.io.IOException;

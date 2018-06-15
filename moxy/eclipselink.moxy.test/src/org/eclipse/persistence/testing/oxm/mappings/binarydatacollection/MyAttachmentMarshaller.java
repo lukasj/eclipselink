@@ -10,6 +10,8 @@
  * Contributors:
  *     Oracle - initial API and implementation from Oracle TopLink
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation from Oracle TopLink
 
 /* $Header: MyAttachmentMarshaller.java 08-feb-2007.15:04:44 mmacivor Exp $ */
 /* Copyright (c) 2006, 2007, Oracle. All rights reserved.  */

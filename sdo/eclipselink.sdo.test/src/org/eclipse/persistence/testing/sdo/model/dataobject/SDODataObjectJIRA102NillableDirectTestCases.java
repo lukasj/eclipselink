@@ -10,6 +10,8 @@
  * Contributors:
  *     Oracle - initial API and implementation from Oracle TopLink
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation from Oracle TopLink
 /* $Header: SDODataObjectJIRA102NillableDirectTestCases.java 23-nov-2006.14:50:37 dmahar Exp $ */
 /*
    DESCRIPTION

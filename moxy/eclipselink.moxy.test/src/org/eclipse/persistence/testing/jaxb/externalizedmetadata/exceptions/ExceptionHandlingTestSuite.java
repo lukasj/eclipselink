@@ -10,6 +10,8 @@
  * Contributors:
  * dmccann - March 25/2010 - 2.1 - Initial implementation
  ******************************************************************************/
+// Contributors:
+// dmccann - March 25/2010 - 2.1 - Initial implementation
 package org.eclipse.persistence.testing.jaxb.externalizedmetadata.exceptions;
 
 import org.eclipse.persistence.testing.jaxb.externalizedmetadata.exceptions.contextfactory.ExceptionHandlingTestCases;

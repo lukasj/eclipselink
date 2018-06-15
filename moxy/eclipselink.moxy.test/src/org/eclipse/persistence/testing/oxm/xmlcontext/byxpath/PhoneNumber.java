@@ -10,6 +10,8 @@
 * Contributors:
 *     bdoughan - August 25/2009 - 1.2 - Initial implementation
 ******************************************************************************/
+// Contributors:
+//     bdoughan - August 25/2009 - 1.2 - Initial implementation
 package org.eclipse.persistence.testing.oxm.xmlcontext.byxpath;
 
 public class PhoneNumber {

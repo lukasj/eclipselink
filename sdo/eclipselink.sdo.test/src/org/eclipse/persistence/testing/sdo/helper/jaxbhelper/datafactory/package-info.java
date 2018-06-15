@@ -10,5 +10,7 @@
 * Contributors:
 *     bdoughan - Jan 27/2009 - 1.1 - Initial implementation
 ******************************************************************************/
+// Contributors:
+//     bdoughan - Jan 27/2009 - 1.1 - Initial implementation
 @javax.xml.bind.annotation.XmlSchema(namespace = "urn:datafactory")
 package org.eclipse.persistence.testing.sdo.helper.jaxbhelper.datafactory;

@@ -22,6 +22,20 @@
  *     05/26/2016-2.7 Tomas Kraus
  *       - 494610: Session Properties map should be Map<String, Object>
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation from Oracle TopLink
+//     05/16/2008-1.0M8 Guy Pelletier
+//       - 218084: Implement metadata merging functionality between mapping files
+//     07/15/2008-1.0.1 Guy Pelletier
+//       - 240679: MappedSuperclass Id not picked when on get() method accessor
+//     06/29/2009-2.0 Michael O'Brien
+//       - 266912: change MappedSuperclass handling in stage2 to pre process accessors
+//          in support of the custom descriptors holding mappings required by the Metamodel
+//          getClassForName is now public and referenced by MappingAccessor.getMapKeyReferenceClass()
+//     11/06/2009-2.0 Guy Pelletier
+//       - 286317: UniqueConstraint xml element is changing (plus couple other fixes, see bug)
+//     05/26/2016-2.7 Tomas Kraus
+//       - 494610: Session Properties map should be Map<String, Object>
 package org.eclipse.persistence.internal.jpa.metadata;
 
 import static org.eclipse.persistence.config.PersistenceUnitProperties.CANONICAL_MODEL_SUB_PACKAGE;

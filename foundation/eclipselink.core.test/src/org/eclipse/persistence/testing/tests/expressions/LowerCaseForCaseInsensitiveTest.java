@@ -10,6 +10,8 @@
  * Contributors:
  *     dminsky - initial API and implementation
  ******************************************************************************/
+// Contributors:
+//     dminsky - initial API and implementation
 package org.eclipse.persistence.testing.tests.expressions;
 
 import java.util.Vector;

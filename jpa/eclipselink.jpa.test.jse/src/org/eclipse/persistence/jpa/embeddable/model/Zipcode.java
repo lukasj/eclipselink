@@ -11,6 +11,10 @@
  *     08/24/2016 - Will Dazey
  *       - 500145 : Nested Embeddables Test
  ******************************************************************************/
+// Contributors:
+//     08/24/2016 - Will Dazey
+//       - 500145 : Nested Embeddables Test
+// CPR:: Copyright (c) 2016 IBM Corporation. All rights reserved.
 package org.eclipse.persistence.jpa.embeddable.model;
 
 import javax.persistence.Embeddable;

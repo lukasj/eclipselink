@@ -15,6 +15,13 @@
  *                      temporary PK field used to process MappedSuperclasses for the Metamodel API
  *                      during MetadataProject.addMetamodelMappedSuperclass()
  ******************************************************************************/
+// Contributors:
+//     03/08/2010-2.1 Michael O'Brien
+//       - 300051: JPA 2.0 Metamodel processing requires EmbeddedId validation moved higher from
+//                      EmbeddedIdAccessor.process() to MetadataDescriptor.addAccessor() so we
+//                      can better determine when to add the MAPPED_SUPERCLASS_RESERVED_PK_NAME
+//                      temporary PK field used to process MappedSuperclasses for the Metamodel API
+//                      during MetadataProject.addMetamodelMappedSuperclass()
 package org.eclipse.persistence.testing.models.jpa.metamodel;
 
 import static javax.persistence.CascadeType.ALL;

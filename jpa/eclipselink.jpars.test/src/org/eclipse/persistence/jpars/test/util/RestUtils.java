@@ -12,6 +12,10 @@
  *      Dmitry Kornilov - Fixes related to JPARS service versions
  *      Dmitry Kornilov - Upgrade to Jersey 2.x
  ******************************************************************************/
+// Contributors:
+//      gonural - Initial implementation
+//      Dmitry Kornilov - Fixes related to JPARS service versions
+//      Dmitry Kornilov - Upgrade to Jersey 2.x
 package org.eclipse.persistence.jpars.test.util;
 
 import javax.ws.rs.client.Client;

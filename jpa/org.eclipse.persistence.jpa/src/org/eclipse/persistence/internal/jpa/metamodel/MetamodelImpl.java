@@ -32,6 +32,30 @@
  *        to avoid IllegalArgumentException when accessing an EntityType|EmbeddableType|ManagedType
  *        "The type [null] is not the expected [EntityType] for the key class" will result in certain managed persistence contexts
  ******************************************************************************/
+// Contributors:
+//     03/19/2009-2.0  dclarke  - initial API start
+//     06/30/2009-2.0  mobrien - finish JPA Metadata API modifications in support
+//       of the Metamodel implementation for EclipseLink 2.0 release involving
+//       Map, ElementCollection and Embeddable types on MappedSuperclass descriptors
+//       - 266912: JPA 2.0 Metamodel API (part of the JSR-317 EJB 3.1 Criteria API)
+//     07/06/2009-2.0  mobrien - Metamodel implementation expansion
+//       - 282518: Metamodel superType requires javaClass set on custom
+//         descriptor on MappedSuperclassAccessor.
+//     07/10/2009-2.0  mobrien - Adjust BasicType processing to handle non-Entity Java types
+//       - 266912: As part of Attribute.getType() and specifically SingularAttribute.getBindableJavaType
+//         set the appropriate elementType based on the mapping type.
+//     09/23/2009-2.0  mobrien - 266912: Implement hasSingleIdAttribute() and
+//       all other 6 remaining methods for Id and Version support.
+//       DI 70 - 77 and 56
+//       http://wiki.eclipse.org/EclipseLink/Development/JPA_2.0/metamodel_api#DI_74:_20090909:_Implement_IdentifiableType.hasSingleIdAttribute.28.29
+//     10/14/2009-2.0  mobrien - 285512: managedType(clazz) now throws IAE again for
+//        any clazz that resolves to a BasicType - use getType(clazz) in implementations instead
+//        when you are expecting a BasicType
+//     08/06/2010-2.2 mobrien 322018 - reduce protected instance variables to private to enforce encapsulation
+//     08/06/2010-2.2 mobrien 303063 - handle null descriptor.javaClass passed from the metadata API
+//     03/06/2011-2.3 mobrien 338837 - Metamodel entity processing requires specified entities in persistence.xml
+//        to avoid IllegalArgumentException when accessing an EntityType|EmbeddableType|ManagedType
+//        "The type [null] is not the expected [EntityType] for the key class" will result in certain managed persistence contexts
 package org.eclipse.persistence.internal.jpa.metamodel;
 
 import java.io.Serializable;

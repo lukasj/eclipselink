@@ -10,6 +10,8 @@
  * Contributors:
  *  - rbarkhouse - 25 October 2012 - 2.4.2 - Initial implementation
  ******************************************************************************/
+// Contributors:
+//  - rbarkhouse - 25 October 2012 - 2.4.2 - Initial implementation
 package org.eclipse.persistence.testing.jaxb.annotations.xmlaccessorfactory;
 
 import java.io.InputStream;

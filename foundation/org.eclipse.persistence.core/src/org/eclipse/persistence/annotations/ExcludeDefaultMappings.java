@@ -11,6 +11,9 @@
  *     12/02/2010-2.2 Guy Pelletier
  *       - 251554: ExcludeDefaultMapping annotation needed
  ******************************************************************************/
+// Contributors:
+//     12/02/2010-2.2 Guy Pelletier
+//       - 251554: ExcludeDefaultMapping annotation needed
 package org.eclipse.persistence.annotations;
 
 import java.lang.annotation.Target;

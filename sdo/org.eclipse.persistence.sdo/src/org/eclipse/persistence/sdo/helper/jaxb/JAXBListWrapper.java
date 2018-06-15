@@ -12,6 +12,10 @@
 *     bdoughan - Mar 31/2009 - 2.0 - Majority of behaviour ported to JAXBList
 *     bdoughan - May 19/2010 - 2.1 - Added support for inverse references
 ******************************************************************************/
+// Contributors:
+//     mmacivor - Jan 27/2009 - 1.1 - Initial implementation
+//     bdoughan - Mar 31/2009 - 2.0 - Majority of behaviour ported to JAXBList
+//     bdoughan - May 19/2010 - 2.1 - Added support for inverse references
 package org.eclipse.persistence.sdo.helper.jaxb;
 
 import java.util.ArrayList;

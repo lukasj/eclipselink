@@ -10,6 +10,8 @@
  * Contributors:
  * mmacivor - 2.3 - Initial implementation
  ******************************************************************************/
+// Contributors:
+// mmacivor - 2.3 - Initial implementation
 package org.eclipse.persistence.testing.jaxb.jaxbelement.enumeration;
 
 import javax.xml.bind.annotation.XmlEnum;

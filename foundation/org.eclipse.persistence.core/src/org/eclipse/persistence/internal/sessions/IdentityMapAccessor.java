@@ -14,6 +14,12 @@
  *         (non-default) will now invalidate the implementing subtree
  *           from [Class] down.  Previously only the single Class inside the tree was invalidated.
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation from Oracle TopLink
+//     31/05/2010-2.1 Michael O'Brien
+//         - 312503: invalidateClass(Class, recurseFlag) - when recurseFlag=false
+//         (non-default) will now invalidate the implementing subtree
+//           from [Class] down.  Previously only the single Class inside the tree was invalidated.
 package org.eclipse.persistence.internal.sessions;
 
 import java.util.*;

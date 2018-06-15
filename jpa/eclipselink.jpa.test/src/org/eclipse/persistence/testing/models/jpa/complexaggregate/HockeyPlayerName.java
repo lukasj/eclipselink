@@ -10,6 +10,8 @@
  * Contributors:
  *     tware - added as part of test for bug 299774
  ******************************************************************************/
+// Contributors:
+//     tware - added as part of test for bug 299774
 package org.eclipse.persistence.testing.models.jpa.complexaggregate;
 
 import javax.persistence.Column;

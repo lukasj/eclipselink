@@ -10,6 +10,8 @@
  * Contributors:
  *     Oracle - initial implementation
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial implementation
 package org.eclipse.persistence.internal.jpa.metadata.nosql;
 
 import org.eclipse.persistence.descriptors.ClassDescriptor;

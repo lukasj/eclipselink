@@ -10,6 +10,8 @@
 * Contributors:
 *     bdoughan - April 22/2010 - 2.1 - Initial implementation
 ******************************************************************************/
+// Contributors:
+//     bdoughan - April 22/2010 - 2.1 - Initial implementation
 package org.eclipse.persistence.testing.jaxb.listofobjects;
 
 import java.io.InputStream;

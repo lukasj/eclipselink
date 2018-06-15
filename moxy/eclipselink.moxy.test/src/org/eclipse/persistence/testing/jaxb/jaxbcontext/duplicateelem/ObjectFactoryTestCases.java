@@ -10,6 +10,8 @@
  * Contributors:
  *     Denise Smith
  ******************************************************************************/
+// Contributors:
+//     Denise Smith
 package org.eclipse.persistence.testing.jaxb.jaxbcontext.duplicateelem;
 
 import javax.xml.bind.JAXBException;

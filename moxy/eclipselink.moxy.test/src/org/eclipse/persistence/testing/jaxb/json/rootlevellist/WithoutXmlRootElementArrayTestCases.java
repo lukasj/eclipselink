@@ -10,6 +10,8 @@
  * Contributors:
  *     Blaise Doughan - 2.4.1 - July 2012
  ******************************************************************************/
+// Contributors:
+//     Blaise Doughan - 2.4.1 - July 2012
 package org.eclipse.persistence.testing.jaxb.json.rootlevellist;
 
 import java.io.InputStream;

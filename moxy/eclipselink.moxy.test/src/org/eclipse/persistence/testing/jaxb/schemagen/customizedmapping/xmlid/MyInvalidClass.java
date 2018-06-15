@@ -10,6 +10,8 @@
 * Contributors:
 * Martin Vojtek - November 14/2014 - 2.6.0 - Initial implementation
 ******************************************************************************/
+// Contributors:
+// Martin Vojtek - November 14/2014 - 2.6.0 - Initial implementation
 package org.eclipse.persistence.testing.jaxb.schemagen.customizedmapping.xmlid;
 
 import javax.xml.bind.annotation.XmlElement;

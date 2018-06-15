@@ -12,6 +12,10 @@
  *     01/25/2011-2.3 Guy Pelletier
  *       - 333913: @OrderBy and <order-by/> without arguments should order by primary
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation from Oracle TopLink
+//     01/25/2011-2.3 Guy Pelletier
+//       - 333913: @OrderBy and <order-by/> without arguments should order by primary
 package org.eclipse.persistence.testing.tests.jpa.xml.advanced.compositepk;
 
 import java.util.List;

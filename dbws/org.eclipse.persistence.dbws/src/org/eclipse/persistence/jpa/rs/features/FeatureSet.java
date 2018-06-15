@@ -12,6 +12,10 @@
  *      2014-09-01-2.6.0 Dmitry Kornilov
  *        - added getMetadataSources, getDynamicMetadataSource and getSessionEventListener methods
  ******************************************************************************/
+// Contributors:
+//      gonural - Initial implementation
+//      2014-09-01-2.6.0 Dmitry Kornilov
+//        - added getMetadataSources, getDynamicMetadataSource and getSessionEventListener methods
 package org.eclipse.persistence.jpa.rs.features;
 
 import org.eclipse.persistence.internal.jaxb.SessionEventListener;

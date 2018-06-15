@@ -10,6 +10,8 @@
  * Contributors:
  * mmacivor - March 2nd/2010 - 2.0 - Initial implementation
  ******************************************************************************/
+// Contributors:
+// mmacivor - March 2nd/2010 - 2.0 - Initial implementation
 package org.eclipse.persistence.testing.oxm.mappings.compositeobject.self;
 
 import java.util.Calendar;

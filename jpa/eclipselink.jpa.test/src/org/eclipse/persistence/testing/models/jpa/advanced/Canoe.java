@@ -10,6 +10,8 @@
  * Contributors:
  *     David Minsky - Oracle
  ******************************************************************************/
+// Contributors:
+//     David Minsky - Oracle
 package org.eclipse.persistence.testing.models.jpa.advanced;
 
 import javax.persistence.CascadeType;

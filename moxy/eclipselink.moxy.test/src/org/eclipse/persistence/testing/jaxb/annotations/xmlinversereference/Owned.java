@@ -11,6 +11,8 @@
  * Contributors:
  *  - Matt MacIvor - 9/20/2012 - 2.4.2 - Initial implementation
  ******************************************************************************/
+// Contributors:
+//  - Matt MacIvor - 9/20/2012 - 2.4.2 - Initial implementation
 package org.eclipse.persistence.testing.jaxb.annotations.xmlinversereference;
 
 public class Owned {

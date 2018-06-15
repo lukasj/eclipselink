@@ -11,6 +11,8 @@
  * Contributors:
  *  - rbarkhouse - 04 May 2012 - 2.4 - Initial implementation
  ******************************************************************************/
+// Contributors:
+//  - rbarkhouse - 04 May 2012 - 2.4 - Initial implementation
 package org.eclipse.persistence.testing.jaxb.annotations.xmlpath.predicate.adapter;
 
 import javax.xml.bind.annotation.XmlAccessType;

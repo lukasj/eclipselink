@@ -11,6 +11,9 @@
  *     09/04/2008-1.1 Guy Pelletier
  *       - 246130: ECLIPSELINK'S ECLIPSELINK_SESSIONS_1.0.XSD DOES NOT HAVE CURRENT WLS PLATFORMS
  ******************************************************************************/
+// Contributors:
+//     09/04/2008-1.1 Guy Pelletier
+//       - 246130: ECLIPSELINK'S ECLIPSELINK_SESSIONS_1.0.XSD DOES NOT HAVE CURRENT WLS PLATFORMS
 package org.eclipse.persistence.testing.tests.sessionsxml;
 
 import org.eclipse.persistence.platform.server.wls.WebLogic_10_Platform;

@@ -10,6 +10,8 @@
  * Contributors:
  *     Vikram Bhatia
  ******************************************************************************/
+// Contributors:
+//     Vikram Bhatia
 package org.eclipse.persistence.testing.jaxb.xmlenum;
 
 import java.util.List;

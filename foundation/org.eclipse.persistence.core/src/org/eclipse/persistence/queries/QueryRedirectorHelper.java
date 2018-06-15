@@ -10,6 +10,8 @@
  * Contributors:
  *     Gordon Yorke - EclipseLink Interceptors work (ER 219683)
  ******************************************************************************/
+// Contributors:
+//     Gordon Yorke - EclipseLink Interceptors work (ER 219683)
 package org.eclipse.persistence.queries;
 
 import org.eclipse.persistence.internal.sessions.AbstractRecord;

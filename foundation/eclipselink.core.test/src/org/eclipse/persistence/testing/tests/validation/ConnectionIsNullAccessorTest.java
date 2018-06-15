@@ -11,6 +11,9 @@
  *     Apr 23, 2009-1.1.1 Chris Delahunt
  *       - Bug#273338: NullPointerException possible in DatabaseAccessor
  ******************************************************************************/
+// Contributors:
+//     Apr 23, 2009-1.1.1 Chris Delahunt
+//       - Bug#273338: NullPointerException possible in DatabaseAccessor
 package org.eclipse.persistence.testing.tests.validation;
 
 import java.sql.SQLException;

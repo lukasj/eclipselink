@@ -10,6 +10,8 @@
  * Contributors:
  *     tware - initial implementation
  ******************************************************************************/
+// Contributors:
+//     tware - initial implementation
 package org.eclipse.persistence.testing.models.collections.map;
 
 public class EntityMapKey {

@@ -11,6 +11,8 @@
  * Contributors:
  *  - rbarkhouse - 19 July 2012 - 2.4 - Initial implementation
  ******************************************************************************/
+// Contributors:
+//  - rbarkhouse - 19 July 2012 - 2.4 - Initial implementation
 package org.eclipse.persistence.testing.jaxb.xmlidref.object;
 
 import javax.xml.bind.annotation.adapters.XmlAdapter;

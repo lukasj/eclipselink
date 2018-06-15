@@ -10,6 +10,8 @@
  * Contributors:
  *     Martin Vojtek - initial version 2.6.0
  ******************************************************************************/
+// Contributors:
+//     Martin Vojtek - initial version 2.6.0
 package org.eclipse.persistence.testing.jaxb.listofobjects.externalizedmetadata;
 
 import java.io.ByteArrayInputStream;

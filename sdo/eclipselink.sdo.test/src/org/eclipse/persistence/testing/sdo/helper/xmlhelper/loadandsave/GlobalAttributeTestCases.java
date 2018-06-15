@@ -10,6 +10,8 @@
 * Contributors:
 *     bdoughan - September 10/2010 - Initial implementation
 ******************************************************************************/
+// Contributors:
+//     bdoughan - September 10/2010 - Initial implementation
 package org.eclipse.persistence.testing.sdo.helper.xmlhelper.loadandsave;
 
 import java.util.ArrayList;

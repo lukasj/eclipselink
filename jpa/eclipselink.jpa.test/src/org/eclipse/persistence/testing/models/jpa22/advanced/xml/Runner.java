@@ -15,6 +15,13 @@
  *     11/28/2012-2.5 Guy Pelletier
  *       - 374688: JPA 2.1 Converter support
  ******************************************************************************/
+// Contributors:
+//     10/25/2012-2.5 Guy Pelletier
+//       - 374688: JPA 2.1 Converter support
+//     11/19/2012-2.5 Guy Pelletier
+//       - 389090: JPA 2.1 DDL Generation Support (foreign key metadata support)
+//     11/28/2012-2.5 Guy Pelletier
+//       - 374688: JPA 2.1 Converter support
 package org.eclipse.persistence.testing.models.jpa22.advanced.xml;
 
 import java.util.ArrayList;

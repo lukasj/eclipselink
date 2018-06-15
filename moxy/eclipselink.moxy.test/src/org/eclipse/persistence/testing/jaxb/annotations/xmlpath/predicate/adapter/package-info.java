@@ -11,6 +11,8 @@
  * Contributors:
  *  - rbarkhouse - 04 May 2012 - 2.4 - Initial implementation
  ******************************************************************************/
+// Contributors:
+//  - rbarkhouse - 04 May 2012 - 2.4 - Initial implementation
 @XmlSchema(
    xmlns = {
       @XmlNs(prefix="atom", namespaceURI="http://www.w3.org/2005/Atom"),

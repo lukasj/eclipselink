@@ -13,6 +13,11 @@
  *     04/21/2011-2.3 Guy Pelletier
  *       - 337323: Multi-tenant with shared schema support (part 5)
  ******************************************************************************/
+// Contributors:
+//     03/23/2011-2.3 Guy Pelletier
+//       - 337323: Multi-tenant with shared schema support (part 1)
+//     04/21/2011-2.3 Guy Pelletier
+//       - 337323: Multi-tenant with shared schema support (part 5)
 package org.eclipse.persistence.testing.models.jpa.xml.advanced.multitenant;
 
 import java.util.Collection;

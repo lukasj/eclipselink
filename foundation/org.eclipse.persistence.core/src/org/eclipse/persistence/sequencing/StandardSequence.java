@@ -12,6 +12,10 @@
  *     09/14/2017-2.6 Will Dazey
  *       - 522312: Add the eclipselink.sequencing.start-sequence-at-nextval property
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation from Oracle TopLink
+//     09/14/2017-2.6 Will Dazey
+//       - 522312: Add the eclipselink.sequencing.start-sequence-at-nextval property
 package org.eclipse.persistence.sequencing;
 
 import java.util.Vector;

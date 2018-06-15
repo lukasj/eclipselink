@@ -10,6 +10,8 @@
  * Contributors:
  *     Praba Vijayaratnam - 2.4 - initial implementation
  ******************************************************************************/
+// Contributors:
+//     Praba Vijayaratnam - 2.4 - initial implementation
 package org.eclipse.persistence.testing.jaxb.javadoc.xmlenumvalue;
 
 import org.eclipse.persistence.testing.jaxb.JAXBWithJSONTestCases;

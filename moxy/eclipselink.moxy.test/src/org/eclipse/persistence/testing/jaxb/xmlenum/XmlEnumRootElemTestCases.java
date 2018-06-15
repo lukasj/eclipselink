@@ -10,6 +10,8 @@
  * Contributors:
  *     Matt MacIvor - 2.3.3 - initial implementation
  ******************************************************************************/
+// Contributors:
+//     Matt MacIvor - 2.3.3 - initial implementation
 package org.eclipse.persistence.testing.jaxb.xmlenum;
 
 import java.util.HashMap;

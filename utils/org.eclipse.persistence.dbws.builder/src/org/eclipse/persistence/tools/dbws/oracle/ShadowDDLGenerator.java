@@ -10,6 +10,8 @@
  * Contributors:
  *     Mike Norman: Jan 2012 - Initial implementation
  ******************************************************************************/
+// Contributors:
+//     Mike Norman: Jan 2012 - Initial implementation
 package org.eclipse.persistence.tools.dbws.oracle;
 
 import static org.eclipse.persistence.internal.helper.Helper.NL;

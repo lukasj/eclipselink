@@ -11,6 +11,9 @@
  *     Oracle - initial API and implementation
  *     Gunnar Wagenknecht - isExternal support
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation
+//     Gunnar Wagenknecht - isExternal support
 package org.eclipse.persistence.internal.nosql.adapters.mongo;
 
 import javax.resource.*;

@@ -10,6 +10,8 @@
  * Contributors:
  * dmccann - November 05/2009 - 2.0 - Initial implementation
  ******************************************************************************/
+// Contributors:
+// dmccann - November 05/2009 - 2.0 - Initial implementation
 package org.eclipse.persistence.testing.jaxb.externalizedmetadata.xmlanyattribute;
 
 import javax.xml.namespace.QName;

@@ -10,6 +10,8 @@
  * Contributors:
  *     Oracle - initial API and implementation from Oracle TopLink
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation from Oracle TopLink
 package org.eclipse.persistence.oxm.mappings.nullpolicy;
 
 import org.eclipse.persistence.internal.oxm.NullCapableValue;

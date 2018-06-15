@@ -10,6 +10,8 @@
  * Contributors:
  *      tware - initial
  ******************************************************************************/
+// Contributors:
+//      tware - initial
 package org.eclipse.persistence.jpa.rs.util;
 
 import java.io.BufferedReader;

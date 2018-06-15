@@ -10,6 +10,8 @@
 * Contributors:
 *     bdoughan - May 25/2010 - 2.1 - Initial implementation
 ******************************************************************************/
+// Contributors:
+//     bdoughan - May 25/2010 - 2.1 - Initial implementation
 package org.eclipse.persistence.testing.sdo.helper.xmlhelper.datatype;
 
 import java.io.ByteArrayOutputStream;

@@ -10,6 +10,8 @@
  * Contributors:
  *     Martin Vojtek - 2.6 - Initial contribution
  ******************************************************************************/
+// Contributors:
+//     Martin Vojtek - 2.6 - Initial contribution
 package org.eclipse.persistence.oxm.annotations;
 
 import static java.lang.annotation.ElementType.FIELD;

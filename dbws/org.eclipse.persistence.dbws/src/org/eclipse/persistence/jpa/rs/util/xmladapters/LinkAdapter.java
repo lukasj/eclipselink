@@ -11,6 +11,9 @@
  *      bdoughan - initial implementation
  *      tware - initial unmarshall method
  ******************************************************************************/
+// Contributors:
+//      bdoughan - initial implementation
+//      tware - initial unmarshall method
 package org.eclipse.persistence.jpa.rs.util.xmladapters;
 
 import java.util.HashMap;

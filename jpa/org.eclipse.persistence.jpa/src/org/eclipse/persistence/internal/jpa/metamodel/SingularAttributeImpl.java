@@ -17,6 +17,15 @@
  *     11/10/2011-2.4 Guy Pelletier
  *       - 357474: Address primaryKey option from tenant discriminator column
  ******************************************************************************/
+// Contributors:
+//     05/26/2009-2.0  mobrien - API update
+//       - 266912: JPA 2.0 Metamodel API (part of the JSR-317 EJB 3.1 Criteria API)
+//     06/30/2009-2.0  mobrien - finish JPA Metadata API modifications in support
+//       of the Metamodel implementation for EclipseLink 2.0 release involving
+//       Map, ElementCollection and Embeddable types on MappedSuperclass descriptors
+//     08/06/2010-2.2 mobrien 322018 - reduce protected instance variables to private to enforce encapsulation
+//     11/10/2011-2.4 Guy Pelletier
+//       - 357474: Address primaryKey option from tenant discriminator column
 package org.eclipse.persistence.internal.jpa.metamodel;
 
 import java.lang.reflect.Field;

@@ -12,6 +12,10 @@
  *       - 413120: Nested Embeddable Null pointer 
  *       - 496836: NullPointerException on ObjectChangeSet.mergeObjectChanges
  ******************************************************************************/
+// Contributors:
+//     03/19/2018-2.7.2 Lukas Jungmann
+//       - 413120: Nested Embeddable Null pointer
+//       - 496836: NullPointerException on ObjectChangeSet.mergeObjectChanges
 package org.eclipse.persistence.testing.models.jpa.advanced.embeddable;
 
 import javax.persistence.Column;

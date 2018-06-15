@@ -10,6 +10,8 @@
 * Contributors:
 *     bdoughan - February 5/2010 - 2.0.1 - Initial implementation
 ******************************************************************************/
+// Contributors:
+//     bdoughan - February 5/2010 - 2.0.1 - Initial implementation
 package org.eclipse.persistence.testing.jaxb.typemappinginfo.classloader;
 
 public class PhoneNumber {

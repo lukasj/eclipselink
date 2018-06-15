@@ -10,6 +10,8 @@
  * Contributors:
  *     rbarkhouse - 2009-11-25 14:23:25 - v2.0 - initial implementation
  ******************************************************************************/
+// Contributors:
+//     rbarkhouse - 2009-11-25 14:23:25 - v2.0 - initial implementation
 package org.eclipse.persistence.oxm.annotations;
 
 import java.lang.annotation.ElementType;

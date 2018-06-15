@@ -10,6 +10,8 @@
  * Contributors:
  * dmccann - February 16/2010 - 2.1 - Initial implementation
  ******************************************************************************/
+// Contributors:
+// dmccann - February 16/2010 - 2.1 - Initial implementation
 package org.eclipse.persistence.testing.jaxb.externalizedmetadata.xmlanyelement;
 
 import org.eclipse.persistence.platform.xml.XMLComparer;

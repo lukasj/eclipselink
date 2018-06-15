@@ -15,6 +15,13 @@
  *       WebLogic: weblogic.jndi.WLInitialContextFactory
  *     cdelahun - Bug 214534: changes for JMSPublishingTransportManager configuration
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation from Oracle TopLink
+//     17/10/2008-1.1  Michael O'Brien
+//       - 251005: The default JNDI InitialContextFactory is modified from
+//       OC4J: oracle.j2ee.rmi.RMIInitialContextFactory to
+//       WebLogic: weblogic.jndi.WLInitialContextFactory
+//     cdelahun - Bug 214534: changes for JMSPublishingTransportManager configuration
 package org.eclipse.persistence.internal.sessions.factories;
 
 // javase imports

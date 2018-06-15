@@ -10,6 +10,8 @@
  * Contributors:
  *     Denise Smith -  February 9, 2010 - Since 2.1
  ******************************************************************************/
+// Contributors:
+//     Denise Smith -  February 9, 2010 - Since 2.1
 package org.eclipse.persistence.testing.jaxb.typemappinginfo.simple;
 
 import javax.xml.bind.JAXBContext;

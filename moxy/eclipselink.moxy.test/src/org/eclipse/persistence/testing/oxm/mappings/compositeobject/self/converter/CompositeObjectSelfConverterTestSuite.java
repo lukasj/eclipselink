@@ -10,6 +10,8 @@
  * Contributors:
  *     rbarkhouse - 2009-10-15 13:10:33  - initial implementation
  ******************************************************************************/
+// Contributors:
+//     rbarkhouse - 2009-10-15 13:10:33  - initial implementation
 package org.eclipse.persistence.testing.oxm.mappings.compositeobject.self.converter;
 
 import junit.framework.Test;

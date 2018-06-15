@@ -11,6 +11,10 @@
  *     11/17/2014-2.6.0 Rick Curtis
  *       - 445546: Test NPE in ConversionManager.
  ******************************************************************************/
+// Contributors:
+//     11/17/2014-2.6.0 Rick Curtis
+//       - 445546: Test NPE in ConversionManager.
+// CPR:: Copyright (c) 2014, 2015 IBM Corporation. All rights reserved.
 package org.eclipse.persistence.jpa.test.basic;
 
 import javax.persistence.EntityManager;

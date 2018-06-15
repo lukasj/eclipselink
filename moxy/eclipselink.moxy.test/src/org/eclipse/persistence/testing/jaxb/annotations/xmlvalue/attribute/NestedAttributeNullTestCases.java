@@ -10,6 +10,8 @@
  * Contributors:
  *     Matt MacIvor - 2.5.1 - initial implementation
  ******************************************************************************/
+// Contributors:
+//     Matt MacIvor - 2.5.1 - initial implementation
 package org.eclipse.persistence.testing.jaxb.annotations.xmlvalue.attribute;
 
 import org.eclipse.persistence.testing.jaxb.JAXBWithJSONTestCases;

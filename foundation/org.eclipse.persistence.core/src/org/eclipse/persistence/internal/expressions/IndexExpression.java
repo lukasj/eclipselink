@@ -11,6 +11,9 @@
  *     06/10/2009 Andrei Ilitchev
  *       - JPA 2.0 - OrderedList support.
  ******************************************************************************/
+// Contributors:
+//     06/10/2009 Andrei Ilitchev
+//       - JPA 2.0 - OrderedList support.
 package org.eclipse.persistence.internal.expressions;
 
 import org.eclipse.persistence.expressions.Expression;

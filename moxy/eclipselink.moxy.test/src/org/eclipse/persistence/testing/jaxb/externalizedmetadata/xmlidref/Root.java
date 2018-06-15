@@ -10,6 +10,8 @@
  * Contributors:
  * dmccann - August 31/2010 - 2.2 - Initial implementation
  ******************************************************************************/
+// Contributors:
+// dmccann - August 31/2010 - 2.2 - Initial implementation
 package org.eclipse.persistence.testing.jaxb.externalizedmetadata.xmlidref;
 
 import java.util.List;

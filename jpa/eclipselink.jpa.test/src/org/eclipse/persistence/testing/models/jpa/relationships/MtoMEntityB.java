@@ -8,6 +8,10 @@
  *     06/25/2014-2.5.2 Rick Curtis
  *       - 438177: Test M2M map
  *******************************************************************************/
+// Contributors:
+//     06/25/2014-2.5.2 Rick Curtis
+//       - 438177: Test M2M map
+// CPR:: Copyright (c) 2014, 2015 IBM Corporation.
 package org.eclipse.persistence.testing.models.jpa.relationships;
 
 import javax.persistence.Cacheable;

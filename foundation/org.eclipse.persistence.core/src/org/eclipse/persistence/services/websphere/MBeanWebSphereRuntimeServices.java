@@ -15,6 +15,13 @@
  *       Move JMX MBean generic registration code up from specific platforms
  *       see <link>http://wiki.eclipse.org/EclipseLink/DesignDocs/316513</link>
  ******************************************************************************/
+// Contributors:
+//     @author  mobrien
+//     @since   EclipseLink 2.1.1 enh# 316510
+//     06/30/2010-2.1.1 Michael O'Brien
+//       - 316513: Enable JMX MBean functionality for JBoss, Glassfish and WebSphere in addition to WebLogic
+//       Move JMX MBean generic registration code up from specific platforms
+//       see <link>http://wiki.eclipse.org/EclipseLink/DesignDocs/316513</link>
 package org.eclipse.persistence.services.websphere;
 
 import org.eclipse.persistence.internal.sessions.AbstractSession;

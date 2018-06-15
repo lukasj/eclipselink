@@ -10,6 +10,8 @@
  * Contributors:
  *     Denise Smith - September 17, 2009
  ******************************************************************************/
+// Contributors:
+//     Denise Smith - September 17, 2009
 package org.eclipse.persistence.testing.sdo.helper.xmlhelper.loadandsave.staticclasses;
 
 import java.io.InputStream;

@@ -10,6 +10,8 @@
 * Contributors:
 * dmccann - April 30/2009 - 2.0 - Initial implementation
 ******************************************************************************/
+// Contributors:
+// dmccann - April 30/2009 - 2.0 - Initial implementation
 package org.eclipse.persistence.testing.oxm.schemamodelgenerator.mappings.pathbased;
 
 import java.util.List;

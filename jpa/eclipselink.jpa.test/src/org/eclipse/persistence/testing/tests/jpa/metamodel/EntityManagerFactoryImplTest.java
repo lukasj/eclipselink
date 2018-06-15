@@ -13,6 +13,11 @@
  *       - 266912: JPA 2.0 Metamodel API (part of the JSR-317 EJB 3.1 Criteria API)
  *
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation from Oracle TopLink
+//     04/30/2009-2.0 Michael O'Brien
+//       - 266912: JPA 2.0 Metamodel API (part of the JSR-317 EJB 3.1 Criteria API)
+//
 package org.eclipse.persistence.testing.tests.jpa.metamodel;
 
 import javax.persistence.EntityManagerFactory;

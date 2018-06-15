@@ -10,6 +10,8 @@
  * Contributors:
  *     James Sutherland - initial API and implementation
  ******************************************************************************/
+// Contributors:
+//     James Sutherland - initial API and implementation
 package org.eclipse.persistence.annotations;
 
 import java.lang.annotation.Retention;

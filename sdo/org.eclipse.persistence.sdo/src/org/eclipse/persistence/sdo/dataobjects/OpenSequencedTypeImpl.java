@@ -10,6 +10,8 @@
 * Contributors:
 * rbarkhouse - 16 Jan 2009 - 1.1 - Initial implementation
 ******************************************************************************/
+// Contributors:
+// rbarkhouse - 16 Jan 2009 - 1.1 - Initial implementation
 package org.eclipse.persistence.sdo.dataobjects;
 
 import org.eclipse.persistence.sdo.SDODataObject;

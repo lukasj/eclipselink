@@ -11,6 +11,9 @@
  *     02/20/2009-1.1 Guy Pelletier
  *       - 259829: TABLE_PER_CLASS with abstract classes does not work
  ******************************************************************************/
+// Contributors:
+//     02/20/2009-1.1 Guy Pelletier
+//       - 259829: TABLE_PER_CLASS with abstract classes does not work
 package org.eclipse.persistence.testing.models.jpa.inheritance;
 
 import javax.persistence.AttributeOverride;

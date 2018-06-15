@@ -11,6 +11,9 @@
  *     05/14/2015-2.7 Tomas Kraus
  *       - Initial API and implementation.
  ******************************************************************************/
+// Contributors:
+//     05/14/2015-2.7 Tomas Kraus
+//       - Initial API and implementation.
 package org.eclipse.persistence.testing.framework;
 
 import java.lang.reflect.Constructor;

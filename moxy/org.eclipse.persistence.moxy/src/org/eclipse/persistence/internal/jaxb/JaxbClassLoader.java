@@ -10,6 +10,8 @@
 * Contributors:
 * mmacivor - April 25/2008 - 1.0M8 - Initial implementation
 ******************************************************************************/
+// Contributors:
+// mmacivor - April 25/2008 - 1.0M8 - Initial implementation
 package org.eclipse.persistence.internal.jaxb;
 
 

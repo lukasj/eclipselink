@@ -10,6 +10,8 @@
 * Contributors:
 * mmacivor - June 09/2008 - 1.0 - Initial implementation
 ******************************************************************************/
+// Contributors:
+// mmacivor - June 09/2008 - 1.0 - Initial implementation
 package org.eclipse.persistence.testing.jaxb.employee;
 
 import java.io.InputStream;

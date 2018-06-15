@@ -11,6 +11,9 @@
  *      tware/gonural - Initial implementation
  *      Dmitry Kornilov - Moved to another package, upgrade to Jersey 2.x
  ******************************************************************************/
+// Contributors:
+//      tware/gonural - Initial implementation
+//      Dmitry Kornilov - Moved to another package, upgrade to Jersey 2.x
 package org.eclipse.persistence.jpars.test.server.noversion;
 
 import org.eclipse.persistence.config.QueryHints;

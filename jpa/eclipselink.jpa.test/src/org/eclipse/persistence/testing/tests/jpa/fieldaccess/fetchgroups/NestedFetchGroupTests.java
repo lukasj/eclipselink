@@ -11,6 +11,9 @@
  *     05/19/2010-2.1 ailitchev - Bug 244124 - Add Nested FetchGroup
  *     09/21/2010-2.2 Frank Schwarz and ailitchev - Bug 325684 - QueryHints.BATCH combined with QueryHints.FETCH_GROUP_LOAD will cause NPE
  ******************************************************************************/
+// Contributors:
+//     05/19/2010-2.1 ailitchev - Bug 244124 - Add Nested FetchGroup
+//     09/21/2010-2.2 Frank Schwarz and ailitchev - Bug 325684 - QueryHints.BATCH combined with QueryHints.FETCH_GROUP_LOAD will cause NPE
 package org.eclipse.persistence.testing.tests.jpa.fieldaccess.fetchgroups;
 
 import java.util.IdentityHashMap;

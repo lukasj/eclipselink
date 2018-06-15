@@ -19,6 +19,17 @@
  *     08/11/2012-2.5 Guy Pelletier
  *       - 393867: Named queries do not work when using EM level Table Per Tenant Multitenancy.
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation from Oracle TopLink
+//     Zoltan NAGY & tware - updated support for MaxRows
+//     11/01/2010-2.2 Guy Pelletier
+//       - 322916: getParameter on Query throws NPE
+//     11/09/2010-2.1 Michael O'Brien
+//       - 329089: PERF: EJBQueryImpl.setParamenterInternal() move indexOf check inside non-native block
+//     02/08/2012-2.4 Guy Pelletier
+//       - 350487: JPA 2.1 Specification defined support for Stored Procedure Calls
+//     08/11/2012-2.5 Guy Pelletier
+//       - 393867: Named queries do not work when using EM level Table Per Tenant Multitenancy.
 package org.eclipse.persistence.internal.jpa;
 
 import java.util.ArrayList;

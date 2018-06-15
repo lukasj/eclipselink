@@ -10,6 +10,9 @@
  * Contributors:
  *     Rick Curtis - Add support for WebSphere Liberty.
  ******************************************************************************/
+// Contributors:
+//     Rick Curtis - Add support for WebSphere Liberty.
+// CPR:: Copyright (c) 2014, 2015 IBM Corporation. All rights reserved.
 package org.eclipse.persistence.internal.sessions.factories.model.platform;
 
 public class WebSphere_Liberty_Platform_Config extends ServerPlatformConfig {

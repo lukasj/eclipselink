@@ -10,6 +10,8 @@
  * Contributors:
  * dmccann - June 17/2009 - 2.0 - Initial implementation
  ******************************************************************************/
+// Contributors:
+// dmccann - June 17/2009 - 2.0 - Initial implementation
 package org.eclipse.persistence.testing.jaxb.externalizedmetadata.xmltype;
 
 import javax.xml.bind.annotation.XmlTransient;

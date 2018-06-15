@@ -10,6 +10,8 @@
  * Contributors:
  *     David McCann - 2.3 - Initial implementation
  ******************************************************************************/
+// Contributors:
+//     David McCann - 2.3 - Initial implementation
 package dbws.testing.sqlascollection;
 
 //javase imports

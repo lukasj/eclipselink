@@ -10,6 +10,8 @@
  * Contributors:
  *     tware - Test for bug 282523
  ******************************************************************************/
+// Contributors:
+//     tware - Test for bug 282523
 package org.eclipse.persistence.testing.models.jpa.inherited;
 
 import javax.persistence.Column;

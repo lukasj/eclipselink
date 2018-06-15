@@ -14,6 +14,12 @@
  *     03/01/2013-2.5 Chris Delahunt
  *       - 402147: JPA query methods need to throw IllegalStateException if EM was closed
  ******************************************************************************/
+// Contributors:
+//     tware - initial implementation
+//     02/06/2013-2.5 Guy Pelletier
+//       - 382503: Use of @ConstructorResult with createNativeQuery(sqlString, resultSetMapping) results in NullPointerException
+//     03/01/2013-2.5 Chris Delahunt
+//       - 402147: JPA query methods need to throw IllegalStateException if EM was closed
 package org.eclipse.persistence.testing.tests.jpa22.advanced;
 
 import java.util.ArrayList;

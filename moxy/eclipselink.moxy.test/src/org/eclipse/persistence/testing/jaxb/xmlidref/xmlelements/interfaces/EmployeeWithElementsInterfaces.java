@@ -10,6 +10,8 @@
  * Contributors:
  *     Denise Smith - February 19, 2013
  ******************************************************************************/
+// Contributors:
+//     Denise Smith - February 19, 2013
 package org.eclipse.persistence.testing.jaxb.xmlidref.xmlelements.interfaces;
 
 import java.util.Iterator;

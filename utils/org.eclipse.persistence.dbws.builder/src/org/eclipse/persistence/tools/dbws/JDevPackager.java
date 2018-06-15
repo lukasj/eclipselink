@@ -10,6 +10,8 @@
  * Contributors:
  *     Mike Norman - Aug 2008, created DBWS JDev(Boxer) packager
  ******************************************************************************/
+// Contributors:
+//     Mike Norman - Aug 2008, created DBWS JDev(Boxer) packager
 
 package org.eclipse.persistence.tools.dbws;
 

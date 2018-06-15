@@ -11,6 +11,9 @@
  *     Andrei Ilitchev (Oracle), March 7, 2008
  *        - New file introduced for bug 211300.
  ******************************************************************************/
+// Contributors:
+//     Andrei Ilitchev (Oracle), March 7, 2008
+//        - New file introduced for bug 211300.
 package org.eclipse.persistence.annotations;
 
 import java.lang.annotation.Retention;

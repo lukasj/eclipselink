@@ -19,6 +19,17 @@
  *     06/02/2009-2.0 Guy Pelletier
  *       - 278768: JPA 2.0 Association Override Join Table
  ******************************************************************************/
+// Contributors:
+//     06/20/2008-1.0 Guy Pelletier
+//       - 232975: Failure when attribute type is generic
+//     01/28/2009-2.0 Guy Pelletier
+//       - 248293: JPA 2.0 Element Collections (part 1)
+//     02/06/2009-2.0 Guy Pelletier
+//       - 248293: JPA 2.0 Element Collections (part 2)
+//     02/25/2009-2.0 Guy Pelletier
+//       - 265359: JPA 2.0 Element Collections - Metadata processing portions
+//     06/02/2009-2.0 Guy Pelletier
+//       - 278768: JPA 2.0 Association Override Join Table
 package org.eclipse.persistence.testing.models.jpa.inherited;
 
 import javax.persistence.AssociationOverride;

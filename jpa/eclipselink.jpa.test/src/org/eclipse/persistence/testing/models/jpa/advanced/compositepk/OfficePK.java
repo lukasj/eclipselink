@@ -10,6 +10,8 @@
  * Contributors:
  *     tware - test for bug 280436
  ******************************************************************************/
+// Contributors:
+//     tware - test for bug 280436
 package org.eclipse.persistence.testing.models.jpa.advanced.compositepk;
 
 public class OfficePK {

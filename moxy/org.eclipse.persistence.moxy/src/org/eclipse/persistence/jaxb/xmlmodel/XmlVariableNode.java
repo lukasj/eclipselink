@@ -10,6 +10,8 @@
  * Contributors:
  * Denise Smith - May 2013 - Initial implementation
  ******************************************************************************/
+// Contributors:
+// Denise Smith - May 2013 - Initial implementation
 package org.eclipse.persistence.jaxb.xmlmodel;
 
 import javax.xml.bind.annotation.XmlAccessType;

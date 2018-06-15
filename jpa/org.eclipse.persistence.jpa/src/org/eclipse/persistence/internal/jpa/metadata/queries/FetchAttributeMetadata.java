@@ -15,6 +15,13 @@
  *     03/24/2011-2.3 Guy Pelletier
  *       - 337323: Multi-tenant with shared schema support (part 1)
  ******************************************************************************/
+// Contributors:
+//     01/19/2010-2.1 Guy Pelletier
+//       - 211322: Add fetch-group(s) support to the EclipseLink-ORM.XML Schema
+//     04/27/2010-2.1 Guy Pelletier
+//       - 309856: MappedSuperclasses from XML are not being initialized properly
+//     03/24/2011-2.3 Guy Pelletier
+//       - 337323: Multi-tenant with shared schema support (part 1)
 package org.eclipse.persistence.internal.jpa.metadata.queries;
 
 import org.eclipse.persistence.internal.jpa.metadata.ORMetadata;

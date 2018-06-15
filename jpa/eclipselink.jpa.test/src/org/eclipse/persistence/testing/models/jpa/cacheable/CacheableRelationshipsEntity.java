@@ -10,6 +10,8 @@
  * Contributors:
  *     Yiping Zhao - initial contribution
  ******************************************************************************/
+// Contributors:
+//     Yiping Zhao - initial contribution
 package org.eclipse.persistence.testing.models.jpa.cacheable;
 
 import static javax.persistence.GenerationType.TABLE;

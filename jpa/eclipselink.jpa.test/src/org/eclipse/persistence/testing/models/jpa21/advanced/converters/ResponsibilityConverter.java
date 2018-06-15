@@ -13,6 +13,11 @@
  *     02/28/2013-2.5 Chris Delahunt
  *       - 402029: Application exceptions need to be wrapped in PersistenceException
  ******************************************************************************/
+// Contributors:
+//     10/28/2012-2.5 Guy Pelletier
+//       - 374688: JPA 2.1 Converter support
+//     02/28/2013-2.5 Chris Delahunt
+//       - 402029: Application exceptions need to be wrapped in PersistenceException
 package org.eclipse.persistence.testing.models.jpa21.advanced.converters;
 
 import javax.persistence.AttributeConverter;

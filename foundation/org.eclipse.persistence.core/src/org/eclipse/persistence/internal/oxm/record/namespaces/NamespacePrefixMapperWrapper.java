@@ -10,6 +10,8 @@
  * Contributors:
  *     Matt MacIvor - initial implementation (2.3.3)
  ******************************************************************************/
+// Contributors:
+//     Matt MacIvor - initial implementation (2.3.3)
 package org.eclipse.persistence.internal.oxm.record.namespaces;
 
 import java.lang.reflect.Method;

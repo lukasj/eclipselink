@@ -10,6 +10,8 @@
  * Contributors:
  * Denise Smith - 2.4
  ******************************************************************************/
+// Contributors:
+// Denise Smith - 2.4
 @XmlSchema(namespace = "myns" , elementFormDefault = XmlNsForm.QUALIFIED) //, attributeFormDefault=XmlNsForm.QUALIFIED)
 package org.eclipse.persistence.testing.jaxb.xmlpath;
 

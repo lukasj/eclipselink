@@ -10,6 +10,8 @@
  * Contributors:
  * Matt MacIvor - July 2011
  ******************************************************************************/
+// Contributors:
+// Matt MacIvor - July 2011
 @XmlSchema(namespace="b", location="http://someuri.com/myschema.xsd")
 package org.eclipse.persistence.testing.jaxb.schemagen.imports.url.b;
 

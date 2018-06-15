@@ -10,6 +10,8 @@
  * Contributors:
  *     Mike Norman - May 2008, created DBWS test package
  ******************************************************************************/
+// Contributors:
+//     Mike Norman - May 2008, created DBWS test package
 package dbws.testing.xrdynamicentity;
 
 /**

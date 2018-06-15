@@ -10,6 +10,8 @@
  * Contributors:
  *     cdelahun - Bug 214534: added for JMSPublishingTransportManager configuration via session.xml
  ******************************************************************************/
+// Contributors:
+//     cdelahun - Bug 214534: added for JMSPublishingTransportManager configuration via session.xml
 package org.eclipse.persistence.internal.sessions.factories.model.transport;
 
 import org.eclipse.persistence.internal.sessions.factories.model.transport.naming.JNDINamingServiceConfig;

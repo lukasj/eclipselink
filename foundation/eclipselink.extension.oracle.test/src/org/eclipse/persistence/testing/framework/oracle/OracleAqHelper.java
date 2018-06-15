@@ -11,6 +11,9 @@
  *     05/09/2016-2.7 Tomas Kraus
  *       - 492077: Use Oracle DB AQ credentials from test properties
  ******************************************************************************/
+// Contributors:
+//     05/09/2016-2.7 Tomas Kraus
+//       - 492077: Use Oracle DB AQ credentials from test properties
 package org.eclipse.persistence.testing.framework.oracle;
 
 import java.util.Map;

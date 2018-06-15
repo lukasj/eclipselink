@@ -10,6 +10,8 @@
 * Contributors:
 * mmacivor - September 09/2009 - 1.0 - Initial implementation
 ******************************************************************************/
+// Contributors:
+// mmacivor - September 09/2009 - 1.0 - Initial implementation
 package org.eclipse.persistence.oxm.record;
 
 import org.eclipse.persistence.internal.oxm.mappings.Field;

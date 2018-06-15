@@ -12,6 +12,10 @@
  *     Marcel Valovy  - 2.6   - added case insensitive unmarshalling property
  *                            - added bean validation properties
  ******************************************************************************/
+// Contributors:
+//     Blaise Doughan - 2.3.3 - initial implementation
+//     Marcel Valovy  - 2.6   - added case insensitive unmarshalling property
+//                            - added bean validation properties
 package org.eclipse.persistence.jaxb;
 
 /**

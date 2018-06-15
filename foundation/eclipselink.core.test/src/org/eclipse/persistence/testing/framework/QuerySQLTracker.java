@@ -13,6 +13,11 @@
  *       - 325605: Do not track SQL logs that are at the FINEST level
  *       these may be SQL warnings or other ORM warnings that happen to use the SQL category
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation from Oracle TopLink
+//     11/17/2010-2.2 Michael O'Brien
+//       - 325605: Do not track SQL logs that are at the FINEST level
+//       these may be SQL warnings or other ORM warnings that happen to use the SQL category
 package org.eclipse.persistence.testing.framework;
 
 import java.util.ArrayList;

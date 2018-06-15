@@ -19,6 +19,17 @@
  *     03/24/2011-2.3 Guy Pelletier
  *       - 337323: Multi-tenant with shared schema support (part 1)
  ******************************************************************************/
+// Contributors:
+//     Guy Pelletier (Oracle), February 28, 2007
+//        - New file introduced for bug 217880.
+//     05/16/2008-1.0M8 Guy Pelletier
+//       - 218084: Implement metadata merging functionality between mapping files
+//     04/27/2010-2.1 Guy Pelletier
+//       - 309856: MappedSuperclasses from XML are not being initialized properly
+//     08/17/2010-2.2 Guy Pelletier
+//       - 252280:  inconsistency in change-tracking xml
+//     03/24/2011-2.3 Guy Pelletier
+//       - 337323: Multi-tenant with shared schema support (part 1)
 package org.eclipse.persistence.internal.jpa.metadata.changetracking;
 
 import org.eclipse.persistence.annotations.ChangeTrackingType;

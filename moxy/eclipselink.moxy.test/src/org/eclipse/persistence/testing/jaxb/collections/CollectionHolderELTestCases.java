@@ -10,6 +10,8 @@
  * Contributors:
  *     Denise Smith - 2.3.3 - initial implementation
  ******************************************************************************/
+// Contributors:
+//     Denise Smith - 2.3.3 - initial implementation
 package org.eclipse.persistence.testing.jaxb.collections;
 
 import java.util.ArrayList;

@@ -12,6 +12,9 @@
  * Marcel Valovy - initial API and implementation
  * ****************************************************************************
  */
+// Contributors:
+// Marcel Valovy - initial API and implementation
+// ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 package org.eclipse.persistence.testing.jaxb.beanvalidation.special;
 
 import javax.validation.ConstraintValidator;

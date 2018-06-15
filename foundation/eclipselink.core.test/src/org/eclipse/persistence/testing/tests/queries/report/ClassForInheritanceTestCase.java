@@ -11,6 +11,9 @@
  *     May 26, 2009-1.0M6 Chris Delahunt
  *       - TODO Bug#: Bug Description
  ******************************************************************************/
+// Contributors:
+//     May 26, 2009-1.0M6 Chris Delahunt
+//       - TODO Bug#: Bug Description
 package org.eclipse.persistence.testing.tests.queries.report;
 
 import java.util.Enumeration;

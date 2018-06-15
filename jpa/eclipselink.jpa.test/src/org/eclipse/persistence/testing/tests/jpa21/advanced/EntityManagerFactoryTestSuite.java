@@ -10,6 +10,8 @@
  * Contributors:
  *     14/12/2012 -2.5 Gordon Yorke
  ******************************************************************************/
+// Contributors:
+//     14/12/2012 -2.5 Gordon Yorke
 package org.eclipse.persistence.testing.tests.jpa21.advanced;
 
 import java.util.List;

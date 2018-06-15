@@ -10,6 +10,8 @@
  * Contributors:
  *    2.3.1
  ******************************************************************************/
+// Contributors:
+//    2.3.1
 @XmlSchema(
      namespace = "someuri",
      xmlns = { @XmlNs( prefix = "testPrefix",

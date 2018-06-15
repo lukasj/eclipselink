@@ -14,6 +14,12 @@
  *      *     30/05/2012-2.4 Guy Pelletier
  *       - 354678: Temp classloader is still being used during metadata processing
  ******************************************************************************/
+// Contributors:
+//     James Sutherland - initial API and implementation
+//     03/24/2011-2.3 Guy Pelletier
+//       - 337323: Multi-tenant with shared schema support (part 1)
+//      //     30/05/2012-2.4 Guy Pelletier
+//       - 354678: Temp classloader is still being used during metadata processing
 package org.eclipse.persistence.internal.jpa.metadata.partitioning;
 
 import org.eclipse.persistence.descriptors.partitioning.FieldPartitioningPolicy;

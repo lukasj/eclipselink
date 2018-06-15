@@ -10,6 +10,8 @@
  * Contributors:
  * Denise Smith - 2.3
  ******************************************************************************/
+// Contributors:
+// Denise Smith - 2.3
 @XmlSchema(namespace="examplenamespace",
     xmlns = {@XmlNs(prefix="x", namespaceURI="examplenamespace")}
 )

@@ -11,6 +11,8 @@
  * Contributors:
  *  - rbarkhouse - 09 October 2012 - 2.4 - Initial implementation
  ******************************************************************************/
+// Contributors:
+//  - rbarkhouse - 09 October 2012 - 2.4 - Initial implementation
 package org.eclipse.persistence.testing.jaxb.externalizedmetadata.xmlidref;
 
 import org.eclipse.persistence.testing.jaxb.externalizedmetadata.xmlidref.subpackage.Super;

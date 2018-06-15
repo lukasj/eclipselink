@@ -10,6 +10,8 @@
  * Contributors:
  *     Dmitry Kornilov - initial implementation
  ******************************************************************************/
+// Contributors:
+//     Dmitry Kornilov - initial implementation
 package org.eclipse.persistence.testing.osgi.beanvalidation;
 
 import org.eclipse.persistence.jaxb.JAXBContextFactory;

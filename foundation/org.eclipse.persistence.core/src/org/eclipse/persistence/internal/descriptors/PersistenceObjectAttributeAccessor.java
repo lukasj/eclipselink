@@ -10,6 +10,8 @@
  * Contributors:
  *     James Sutherland - initial API and implementation
  ******************************************************************************/
+// Contributors:
+//     James Sutherland - initial API and implementation
 package org.eclipse.persistence.internal.descriptors;
 
 import org.eclipse.persistence.exceptions.DescriptorException;

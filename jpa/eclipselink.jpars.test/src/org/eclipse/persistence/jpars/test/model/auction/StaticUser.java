@@ -10,6 +10,8 @@
  * Contributors:
  *      tware - initial
  ******************************************************************************/
+// Contributors:
+//      tware - initial
 package org.eclipse.persistence.jpars.test.model.auction;
 
 import javax.persistence.CascadeType;

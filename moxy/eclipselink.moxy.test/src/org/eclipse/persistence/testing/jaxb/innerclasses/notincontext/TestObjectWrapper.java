@@ -10,6 +10,8 @@
  * Contributors:
  *     Denise Smith - February 2012
  ******************************************************************************/
+// Contributors:
+//     Denise Smith - February 2012
 package org.eclipse.persistence.testing.jaxb.innerclasses.notincontext;
 
 import javax.xml.bind.annotation.XmlRootElement;

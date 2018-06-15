@@ -11,6 +11,9 @@
  *     Blaise Doughan - 2.5 - initial implementation
  *     Marcel Valovy - 2.6.0 - added case insensitive unmarshalling property
  ******************************************************************************/
+// Contributors:
+//     Blaise Doughan - 2.5 - initial implementation
+//     Marcel Valovy - 2.6.0 - added case insensitive unmarshalling property
 package org.eclipse.persistence.internal.oxm;
 
 import javax.xml.validation.Schema;

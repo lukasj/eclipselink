@@ -27,6 +27,26 @@
  *     06/20/2014-2.5.2 Rick Curtis
  *       - 437760: AttributeOverride with no column name defined doesn't work.
  ******************************************************************************/
+// Contributors:
+//     02/08/2012-2.4 Guy Pelletier
+//       - 350487: JPA 2.1 Specification defined support for Stored Procedure Calls
+//     10/09/2012-2.5 Guy Pelletier
+//       - 374688: JPA 2.1 Converter support
+//     10/25/2012-2.5 Guy Pelletier
+//       - 374688: JPA 2.1 Converter support
+//     11/19/2012-2.5 Guy Pelletier
+//       - 389090: JPA 2.1 DDL Generation Support (foreign key metadata support)
+//     11/28/2012-2.5 Guy Pelletier
+//       - 374688: JPA 2.1 Converter support
+//     01/23/2013-2.5 Guy Pelletier
+//       - 350487: JPA 2.1 Specification defined support for Stored Procedure Calls
+//     02/06/2013-2.5 Guy Pelletier
+//       - 382503: Use of @ConstructorResult with createNativeQuery(sqlString, resultSetMapping) results in NullPointerException
+//     07/16/2013-2.5.1 Guy Pelletier
+//       - 412384: Applying Converter for parameterized basic-type for joda-time's DateTime does not work
+//     06/20/2014-2.5.2 Rick Curtis
+//       - 437760: AttributeOverride with no column name defined doesn't work.
+// CPR:: Copyright (c) 2012, 2015 Oracle and/or its affiliates, IBM Corporation. All rights reserved.
 package org.eclipse.persistence.testing.models.jpa22.advanced;
 
 import org.eclipse.persistence.testing.framework.TogglingFastTableCreator;

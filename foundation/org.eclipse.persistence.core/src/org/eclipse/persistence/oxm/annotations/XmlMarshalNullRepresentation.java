@@ -10,6 +10,8 @@
  * Contributors:
  * Oracle = 2.1 - Initial contribution
  ******************************************************************************/
+// Contributors:
+// Oracle = 2.1 - Initial contribution
 package org.eclipse.persistence.oxm.annotations;
 
 /**

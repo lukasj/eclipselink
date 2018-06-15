@@ -10,6 +10,8 @@
  * Contributors:
  *     Oracle - initial API and implementation from Oracle TopLink
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation from Oracle TopLink
 
 /*******************************************************************************
  * Copyright (c) 1998, 2013 Oracle and/or its affiliates. All rights reserved.

@@ -11,6 +11,8 @@
  * Contributors:
  *  - Denise Smith February 12, 2013
  ******************************************************************************/
+// Contributors:
+//  - Denise Smith February 12, 2013
 @XmlSchema(namespace = "http://www.test.org", xmlns={
         @XmlNs(namespaceURI = "http://www.test.org", prefix = "test")}, elementFormDefault = XmlNsForm.QUALIFIED, attributeFormDefault = XmlNsForm.UNQUALIFIED)
 package org.eclipse.persistence.testing.jaxb.xmlelementref.prefix;

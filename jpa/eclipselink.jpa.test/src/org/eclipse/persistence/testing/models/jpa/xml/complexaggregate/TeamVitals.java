@@ -13,6 +13,11 @@
  *     08/28/2008-1.1 Guy Pelletier
  *       - 245120: unidir one-to-many within embeddable fails to deploy for missing primary key field
  ******************************************************************************/
+// Contributors:
+//     04/02/2008-1.0M6 Guy Pelletier
+//       - 224155: embeddable-attributes should be extended in the EclipseLink ORM.XML schema
+//     08/28/2008-1.1 Guy Pelletier
+//       - 245120: unidir one-to-many within embeddable fails to deploy for missing primary key field
 package org.eclipse.persistence.testing.models.jpa.xml.complexaggregate;
 
 import java.io.Serializable;

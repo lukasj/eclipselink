@@ -16,6 +16,14 @@
  *     09/11/2017-2.1 Will Dazey 
  *       - 520387: multiple owning descriptors for an embeddable are not set
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation from Oracle TopLink
+//     11/17/2010-2.2 Guy Pelletier
+//       - 329008: Support dynamic context creation without persistence.xml
+//     01/23/2013-2.5 Guy Pelletier
+//       - 350487: JPA 2.1 Specification defined support for Stored Procedure Calls
+//     09/11/2017-2.1 Will Dazey
+//       - 520387: multiple owning descriptors for an embeddable are not set
 package org.eclipse.persistence.testing.framework.junit;
 
 import java.io.StringWriter;

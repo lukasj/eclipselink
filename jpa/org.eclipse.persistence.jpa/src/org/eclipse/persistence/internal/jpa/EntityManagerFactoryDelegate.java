@@ -24,6 +24,23 @@
  *     03/22/2016-2.6_WAS Nathan Rauh
  *       - 489787: Fixed NullPointerException when specifying non-entity object to PersistenceUnitUtil.isLoaded
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation from Oracle TopLink
+//     03/19/2009-2.0 Michael O'Brien - 266912: JPA 2.0 Metamodel API (part
+//                      of the JSR-317 EJB 3.1 Criteria API)
+//     08/17/2010-2.2 Michael O'Brien
+//        - 322585: Login the session on the first call to getMetamodel() or getCriteriaBuilder()
+//                       after EMF predeploy() completes.  This will do a DB login that calls
+//                       initializeDescriptors() so we have real Classes and not just class names for
+//                       MappedSuperclass metamodel descriptors.  This is provided for
+//                       implementations that use the metamodel before the 1st EntityManager creation.
+//                       Login will continue to only be called in EM deploy for users
+//                       that do not request the Metamodel
+//     11/17/2010-2.2 Guy Pelletier
+//       - 329008: Support dynamic context creation without persistence.xml
+//     03/22/2016-2.6_WAS Nathan Rauh
+//       - 489787: Fixed NullPointerException when specifying non-entity object to PersistenceUnitUtil.isLoaded
+// CPR:: Copyright (c) 1998, 2017 Oracle and/or its affiliates, IBM Corporation. All rights reserved.
 package org.eclipse.persistence.internal.jpa;
 
 import java.util.Collections;

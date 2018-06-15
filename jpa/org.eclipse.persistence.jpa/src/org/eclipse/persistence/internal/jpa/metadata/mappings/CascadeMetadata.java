@@ -20,6 +20,18 @@
  *     07/03/2011-2.3.1 Guy Pelletier
  *       - 348756: m_cascadeOnDelete boolean should be changed to Boolean
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation from Oracle TopLink
+//     05/16/2008-1.0M8 Guy Pelletier
+//       - 218084: Implement metadata merging functionality between mapping files
+//     11/06/2009-2.0 Guy Pelletier
+//       - 286317: UniqueConstraint xml element is changing (plus couple other fixes, see bug)
+//     04/27/2010-2.1 Guy Pelletier
+//       - 309856: MappedSuperclasses from XML are not being initialized properly
+//     03/24/2011-2.3 Guy Pelletier
+//       - 337323: Multi-tenant with shared schema support (part 1)
+//     07/03/2011-2.3.1 Guy Pelletier
+//       - 348756: m_cascadeOnDelete boolean should be changed to Boolean
 package org.eclipse.persistence.internal.jpa.metadata.mappings;
 
 import org.eclipse.persistence.internal.jpa.metadata.ORMetadata;

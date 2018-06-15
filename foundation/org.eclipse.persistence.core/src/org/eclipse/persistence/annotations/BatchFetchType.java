@@ -10,6 +10,8 @@
  * Contributors:
  *     James Sutherland - initial implementation
  ******************************************************************************/
+// Contributors:
+//     James Sutherland - initial implementation
 package org.eclipse.persistence.annotations;
 
 import org.eclipse.persistence.mappings.ForeignReferenceMapping;

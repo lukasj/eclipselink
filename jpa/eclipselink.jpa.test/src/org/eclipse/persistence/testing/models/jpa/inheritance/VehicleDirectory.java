@@ -10,6 +10,8 @@
  * Contributors:
  *     tware - test for bug 312146
  ******************************************************************************/
+// Contributors:
+//     tware - test for bug 312146
 package org.eclipse.persistence.testing.models.jpa.inheritance;
 
 import java.util.HashMap;

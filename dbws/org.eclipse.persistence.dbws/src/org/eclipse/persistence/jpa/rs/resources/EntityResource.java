@@ -11,6 +11,9 @@
  *     gonural - Initial implementation
  *     Dmitry Kornilov - JPARS 2.0 related changes
  ******************************************************************************/
+// Contributors:
+//     gonural - Initial implementation
+//     Dmitry Kornilov - JPARS 2.0 related changes
 package org.eclipse.persistence.jpa.rs.resources;
 
 import org.eclipse.persistence.jpa.rs.resources.common.AbstractEntityResource;

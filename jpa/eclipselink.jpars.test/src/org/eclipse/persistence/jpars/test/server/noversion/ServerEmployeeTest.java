@@ -11,6 +11,9 @@
  *      gonural - initial
  *      Dmitry Kornilov - Moved to another package, upgrade to Jersey 2.x
  ******************************************************************************/
+// Contributors:
+//      gonural - initial
+//      Dmitry Kornilov - Moved to another package, upgrade to Jersey 2.x
 package org.eclipse.persistence.jpars.test.server.noversion;
 
 import org.eclipse.persistence.jpars.test.BaseJparsTest;

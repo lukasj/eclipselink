@@ -13,6 +13,11 @@
  *     06/12/2017-2.7 Lukas Jungmann
  *       - 518155: [jpa22] add support for repeatable annotations
  ******************************************************************************/
+// Contributors:
+//     03/24/2011-2.3 Guy Pelletier
+//       - 337323: Multi-tenant with shared schema support (part 1)
+//     06/12/2017-2.7 Lukas Jungmann
+//       - 518155: [jpa22] add support for repeatable annotations
 package org.eclipse.persistence.annotations;
 
 import java.lang.annotation.Retention;

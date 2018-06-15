@@ -10,6 +10,8 @@
  * Contributors:
  *     Blaise Doughan - 2.5.1 - initial implementation
  ******************************************************************************/
+// Contributors:
+//     Blaise Doughan - 2.5.1 - initial implementation
 package org.eclipse.persistence.testing.jaxb.json.wrapper;
 
 import java.util.HashMap;

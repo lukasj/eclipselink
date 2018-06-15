@@ -16,6 +16,14 @@
  *     02/20/2018-2.7 Will Dazey
  *       - 529602: Added support for CLOBs in DELETE statements for Oracle
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation from Oracle TopLink
+//     09/29/2016-2.7 Tomas Kraus
+//       - 426852: @GeneratedValue(strategy=GenerationType.IDENTITY) support in Oracle 12c
+//     09/14/2017-2.6 Will Dazey
+//       - 522312: Add the eclipselink.sequencing.start-sequence-at-nextval property
+//     02/20/2018-2.7 Will Dazey
+//       - 529602: Added support for CLOBs in DELETE statements for Oracle
 package org.eclipse.persistence.internal.databaseaccess;
 
 import java.io.IOException;

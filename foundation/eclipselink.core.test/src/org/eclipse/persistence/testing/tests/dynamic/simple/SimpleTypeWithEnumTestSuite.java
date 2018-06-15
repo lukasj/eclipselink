@@ -16,6 +16,14 @@
  *     mnorman - testcase for 308367
  *
  ******************************************************************************/
+// Contributors:
+//     dclarke - Dynamic Persistence
+//       http://wiki.eclipse.org/EclipseLink/Development/Dynamic
+//       (https://bugs.eclipse.org/bugs/show_bug.cgi?id=200045)
+//     mnorman - tweaks to work from Ant command-line,
+//               get database properties from System, etc.
+//     mnorman - testcase for 308367
+//
 package org.eclipse.persistence.testing.tests.dynamic.simple;
 
 //javase imports

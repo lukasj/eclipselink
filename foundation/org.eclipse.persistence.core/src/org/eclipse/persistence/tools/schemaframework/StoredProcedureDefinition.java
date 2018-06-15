@@ -11,6 +11,9 @@
  *     Oracle - initial API and implementation from Oracle TopLink
  *     Markus KARG - Added methods allowing to support stored procedure creation on SQLAnywherePlatform.
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation from Oracle TopLink
+//     Markus KARG - Added methods allowing to support stored procedure creation on SQLAnywherePlatform.
 package org.eclipse.persistence.tools.schemaframework;
 
 import java.io.IOException;

@@ -10,6 +10,8 @@
  * Contributors:
  *     Denise Smith - November 2, 2009
  ******************************************************************************/
+// Contributors:
+//     Denise Smith - November 2, 2009
 package org.eclipse.persistence.oxm.record;
 
 import java.io.CharArrayWriter;

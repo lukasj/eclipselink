@@ -10,6 +10,8 @@
 * Contributors:
 * bdoughan - June 11/2008 - 1.0 - Initial implementation
 ******************************************************************************/
+// Contributors:
+// bdoughan - June 11/2008 - 1.0 - Initial implementation
 package org.eclipse.persistence.testing.oxm.mappings.sequenced;
 
 import org.eclipse.persistence.mappings.DatabaseMapping;

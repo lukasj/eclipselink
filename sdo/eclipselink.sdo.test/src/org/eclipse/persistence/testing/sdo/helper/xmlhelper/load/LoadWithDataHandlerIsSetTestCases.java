@@ -10,6 +10,8 @@
 * Contributors:
 *     bdoughan - March 24/2010 - 2.1 - Initial implementation
 ******************************************************************************/
+// Contributors:
+//     bdoughan - March 24/2010 - 2.1 - Initial implementation
 package org.eclipse.persistence.testing.sdo.helper.xmlhelper.load;
 
 import commonj.sdo.DataObject;

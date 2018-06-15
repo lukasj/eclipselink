@@ -10,6 +10,8 @@
  * Contributors:
  *     10/28/2008-1.1 James Sutherland - initial implementation
  ******************************************************************************/
+// Contributors:
+//     10/28/2008-1.1 James Sutherland - initial implementation
 package org.eclipse.persistence.internal.queries;
 
 import java.util.Collection;

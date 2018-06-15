@@ -11,6 +11,9 @@
  *     Blaise Doughan - 2.6 - initial implementation
  *     Marcel Valovy - 2.6.0 - added case insensitive unmarshalling
  ******************************************************************************/
+// Contributors:
+//     Blaise Doughan - 2.6 - initial implementation
+//     Marcel Valovy - 2.6.0 - added case insensitive unmarshalling
 package org.eclipse.persistence.internal.oxm;
 
 import java.io.File;

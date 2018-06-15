@@ -16,6 +16,14 @@
  *                       Note: SDO overrides this class so an override of getMethodReturnType
  *                       will also need an override in SDO.
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation from Oracle TopLink
+//     08/23/2010-2.2 Michael O'Brien
+//        - 323043: application.xml module ordering may cause weaving not to occur causing an NPE.
+//                       warn if expected "_persistence_//_vh" method not found
+//                       instead of throwing NPE during deploy validation.
+//                       Note: SDO overrides this class so an override of getMethodReturnType
+//                       will also need an override in SDO.
 package org.eclipse.persistence.internal.descriptors;
 
 import java.lang.reflect.InvocationTargetException;

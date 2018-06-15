@@ -10,6 +10,8 @@
 * Contributors:
 * mmacivor - October 16th 2009 - 2.0 - Initial implementation
 ******************************************************************************/
+// Contributors:
+// mmacivor - October 16th 2009 - 2.0 - Initial implementation
 package org.eclipse.persistence.testing.jaxb.xmlidref.array;
 
 import javax.xml.bind.annotation.XmlID;

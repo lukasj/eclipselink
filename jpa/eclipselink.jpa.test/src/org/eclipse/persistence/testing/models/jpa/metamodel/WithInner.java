@@ -11,6 +11,9 @@
  *     02/26/2018-2.7.2 Lukas Jungmann
  *       - 531528: IdentifiableType.hasSingleIdAttribute() returns true when IdClass references an inner class
  ******************************************************************************/
+// Contributors:
+//     02/26/2018-2.7.2 Lukas Jungmann
+//       - 531528: IdentifiableType.hasSingleIdAttribute() returns true when IdClass references an inner class
 package org.eclipse.persistence.testing.models.jpa.metamodel;
 
 import java.io.Serializable;

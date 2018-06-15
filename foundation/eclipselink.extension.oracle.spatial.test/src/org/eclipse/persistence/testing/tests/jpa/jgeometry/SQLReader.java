@@ -11,6 +11,9 @@
  *     03/08/2010 Andrei Ilitchev
  *       Bug 300512 - Add FUNCTION support to extended JPQL
  ******************************************************************************/
+// Contributors:
+//     03/08/2010 Andrei Ilitchev
+//       Bug 300512 - Add FUNCTION support to extended JPQL
 package org.eclipse.persistence.testing.tests.jpa.jgeometry;
 
 import java.util.List;

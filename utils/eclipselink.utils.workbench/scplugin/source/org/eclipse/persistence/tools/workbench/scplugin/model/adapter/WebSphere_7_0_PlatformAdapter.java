@@ -22,6 +22,20 @@ import org.eclipse.persistence.internal.sessions.factories.model.platform.WebSph
  *
  * @author Les Davis
  */
+// Contributors:
+//     Oracle - initial API and implementation from Oracle TopLink
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////package org.eclipse.persistence.tools.workbench.scplugin.model.adapter;
+
+import org.eclipse.persistence.internal.sessions.factories.model.platform.ServerPlatformConfig;
+import org.eclipse.persistence.internal.sessions.factories.model.platform.WebSphere_7_0_PlatformConfig;
+
+/////
+// Session Configuration model adapter class for the
+// TopLink Foudation Library class WebSphere_7_0_PlatformConfig
+//
+// @see WebSphere_7_0_PlatformConfig
+//
+// @author Les Davis
 public class WebSphere_7_0_PlatformAdapter extends ServerPlatformAdapter {
 
     /**

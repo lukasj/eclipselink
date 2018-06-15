@@ -16,6 +16,14 @@
  *     04/01/2015 Will Dazey
  *       - 463726: Added DatabaseSession null check
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation from Oracle TopLink
+//     06/30/2010-2.1.1 Michael O'Brien
+//       - 316513: Enable JMX MBean functionality for JBoss, Glassfish and WebSphere in addition to WebLogic
+//       Move JMX MBean generic registration code up from specific platforms
+//       see <link>http://wiki.eclipse.org/EclipseLink/DesignDocs/316513</link>
+//     04/01/2015 Will Dazey
+//       - 463726: Added DatabaseSession null check
 package org.eclipse.persistence.platform.server.jboss;
 
 import javax.persistence.spi.PersistenceUnitInfo;

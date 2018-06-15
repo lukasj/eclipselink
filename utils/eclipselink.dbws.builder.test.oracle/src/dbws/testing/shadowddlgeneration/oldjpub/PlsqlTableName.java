@@ -11,6 +11,9 @@
  *     Mike Norman - from Proof-of-concept, become production code
  *     quwang - Aug 9, 2006
  ******************************************************************************/
+// Contributors:
+//     Mike Norman - from Proof-of-concept, become production code
+//     quwang - Aug 9, 2006
 package dbws.testing.shadowddlgeneration.oldjpub;
 
 //javase imports

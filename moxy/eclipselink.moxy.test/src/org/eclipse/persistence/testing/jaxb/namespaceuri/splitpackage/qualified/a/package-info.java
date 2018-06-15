@@ -10,6 +10,8 @@
  * Contributors:
  *     Blaise Doughan - 2.3 - initial implementation
  ******************************************************************************/
+// Contributors:
+//     Blaise Doughan - 2.3 - initial implementation
 @XmlSchema(
     namespace = "http://www.example.org",
     elementFormDefault = XmlNsForm.QUALIFIED)

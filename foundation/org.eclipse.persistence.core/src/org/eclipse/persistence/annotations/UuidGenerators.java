@@ -10,6 +10,8 @@
  * Contributors:
  *     Lukas Jungmann - initial API and implementation (bug 518155)
  ******************************************************************************/
+// Contributors:
+//     Lukas Jungmann - initial API and implementation (bug 518155)
 package org.eclipse.persistence.annotations;
 
 import static java.lang.annotation.ElementType.FIELD;

@@ -12,6 +12,10 @@
  *     bdoughan - Mar 18/2009 - 2.0 - Dynamically generated impl classes now
  *                                    implement correct interface.
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation from Oracle TopLink
+//     bdoughan - Mar 18/2009 - 2.0 - Dynamically generated impl classes now
+//                                    implement correct interface.
 package org.eclipse.persistence.sdo.helper;
 
 import java.io.ObjectStreamException;

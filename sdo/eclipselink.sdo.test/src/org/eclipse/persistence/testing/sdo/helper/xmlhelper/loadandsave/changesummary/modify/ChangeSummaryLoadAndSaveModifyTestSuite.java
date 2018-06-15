@@ -10,6 +10,8 @@
  * Contributors:
  *     Oracle - initial API and implementation from Oracle TopLink
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation from Oracle TopLink
 /* $Header: ChangeSummaryLoadAndSaveModifyTestSuite.java 19-jun-2007.13:35:09 dmahar Exp $ */
 /*
    DESCRIPTION

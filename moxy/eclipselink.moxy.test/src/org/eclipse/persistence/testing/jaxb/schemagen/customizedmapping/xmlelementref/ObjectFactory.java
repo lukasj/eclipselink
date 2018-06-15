@@ -10,6 +10,8 @@
 * Contributors:
 * mmacivor - June 09/2009 - 1.0 - Initial implementation
 ******************************************************************************/
+// Contributors:
+// mmacivor - June 09/2009 - 1.0 - Initial implementation
 package org.eclipse.persistence.testing.jaxb.schemagen.customizedmapping.xmlelementref;
 
 import javax.xml.bind.JAXBElement;

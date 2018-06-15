@@ -10,6 +10,8 @@
  * Contributors:
  *     dminsky - initial API and implementation
  ******************************************************************************/
+// Contributors:
+//     dminsky - initial API and implementation
 package org.eclipse.persistence.testing.models.aggregate;
 
 import java.util.Iterator;

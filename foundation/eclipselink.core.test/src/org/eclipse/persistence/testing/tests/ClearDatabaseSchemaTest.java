@@ -10,6 +10,8 @@
  * Contributors:
  *     21/08/2013-2.6 Chris Delahunt
  ******************************************************************************/
+// Contributors:
+//     21/08/2013-2.6 Chris Delahunt
 package org.eclipse.persistence.testing.tests;
 
 import java.sql.Connection;

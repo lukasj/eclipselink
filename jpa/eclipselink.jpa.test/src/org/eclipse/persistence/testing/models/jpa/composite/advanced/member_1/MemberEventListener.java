@@ -10,6 +10,8 @@
  * Contributors:
  *     05/16/11 Andrei Ilitchev (Oracle) - initial API and implementation from Oracle TopLink
  ******************************************************************************/
+// Contributors:
+//     05/16/11 Andrei Ilitchev (Oracle) - initial API and implementation from Oracle TopLink
 package org.eclipse.persistence.testing.models.jpa.composite.advanced.member_1;
 
 import org.eclipse.persistence.testing.framework.SessionEventTracker;

@@ -10,6 +10,8 @@
  * Contributors:
  *     Blaise Doughan - 2.3.2 - initial implementation
  ******************************************************************************/
+// Contributors:
+//     Blaise Doughan - 2.3.2 - initial implementation
 package org.eclipse.persistence.testing.jaxb.xmladapter.direct;
 
 

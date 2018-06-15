@@ -10,6 +10,8 @@
  * Contributors:
  *     Martin Vojtek - 2.6.0 - initial version
  ******************************************************************************/
+// Contributors:
+//     Martin Vojtek - 2.6.0 - initial version
 package org.eclipse.persistence.testing.jaxb.namespaceuri.inheritance;
 
 import java.util.ArrayList;

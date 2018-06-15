@@ -26,6 +26,25 @@
  *     07/28/2017-2.7 Dalia Abo Sheasha
  *       - 520316: Multiple MBeanServers discovered by EclipseLink result in warnings
  ******************************************************************************/
+// Contributors:
+//     06/30/2010-2.1.1 Michael O'Brien
+//       - 316513: Enable JMX MBean functionality for JBoss, Glassfish and WebSphere in addition to WebLogic
+//       Move JMX MBean generic registration code up from specific platforms
+//       see <link>http://wiki.eclipse.org/EclipseLink/DesignDocs/316513</link>
+//     07/15/2010-2.1.1 Michael O'Brien
+//       - 316513: registration/deregistration mismatch for MBean Object name reg=- and dereg=_ - no more instance already exists on redeploy
+//     10/18/2010-2.1.2 Michael O'Brien
+//       - 328006: Refactor WebLogic MBeanServer registration to use active
+//         WLS com.bea server when multiple instances returned
+//       see <link>http://wiki.eclipse.org/EclipseLink/DesignDocs/316513#DI_4:_20100624:_Verify_correct_MBeanServer_available_when_running_multiple_MBeanServer_Instances</link>
+//     01/01/2011-2.2 Michael O'Brien
+//       - 333160: ModuleName string extraction code does not handle -1 not found index in 3 of 5 cases
+//     11/01/2011-2.2 Michael O'Brien
+//       - 333336: findMBeanServer() requires security API AccessController.doPrivileged()
+//         private run method security block.
+//     07/28/2017-2.7 Dalia Abo Sheasha
+//       - 520316: Multiple MBeanServers discovered by EclipseLink result in warnings
+// CPR:: Copyright (c) 2010, 2018 Oracle and/or its affiliates, IBM Corporation. All rights reserved.
 package org.eclipse.persistence.platform.server;
 
 import java.lang.management.ManagementFactory;

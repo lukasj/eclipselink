@@ -11,6 +11,8 @@
  * Contributors:
  *  - rbarkhouse - 29 January 2013 - 2.4 - Initial implementation
  ******************************************************************************/
+// Contributors:
+//  - rbarkhouse - 29 January 2013 - 2.4 - Initial implementation
 package org.eclipse.persistence.testing.jaxb.idresolver.collection;
 
 import java.util.ArrayList;

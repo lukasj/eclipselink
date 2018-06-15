@@ -10,6 +10,8 @@
  * Contributors:
  *     tware - test for bug 331692
  ******************************************************************************/
+// Contributors:
+//     tware - test for bug 331692
 
 package org.eclipse.persistence.testing.models.jpa.advanced;
 

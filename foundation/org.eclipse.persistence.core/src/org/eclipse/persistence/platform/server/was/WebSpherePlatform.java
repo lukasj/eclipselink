@@ -16,6 +16,14 @@
  *     12/18/2014-2.6 Rick Curtis
  *       455690: Move JNDIConnector lookup type to ServerPlatform.
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation from Oracle TopLink
+//     06/30/2010-2.1.1 Michael O'Brien
+//       - 316513: Enable JMX MBean functionality for JBoss, Glassfish and WebSphere in addition to WebLogic
+//       Move JMX MBean generic registration code up from specific platforms
+//       see <link>http://wiki.eclipse.org/EclipseLink/DesignDocs/316513</link>
+//     12/18/2014-2.6 Rick Curtis
+//       455690: Move JNDIConnector lookup type to ServerPlatform.
 package org.eclipse.persistence.platform.server.was;
 
 import java.lang.reflect.InvocationTargetException;

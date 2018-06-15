@@ -10,6 +10,8 @@
 * Contributors:
 * mmacivor - July 18 05/2008 - 1.0 - Initial implementation
 ******************************************************************************/
+// Contributors:
+// mmacivor - July 18 05/2008 - 1.0 - Initial implementation
 package org.eclipse.persistence.internal.oxm.record.deferred;
 
 import org.xml.sax.SAXException;

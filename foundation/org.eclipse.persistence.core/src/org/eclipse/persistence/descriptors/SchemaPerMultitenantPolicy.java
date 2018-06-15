@@ -10,6 +10,9 @@
  *      19/12/2014 - 2.6.0 - Lukas Jungmann
  *        - 455905: initial implementation
  ******************************************************************************/
+// Contributors:
+//      19/12/2014 - 2.6.0 - Lukas Jungmann
+//        - 455905: initial implementation
 package org.eclipse.persistence.descriptors;
 
 import org.eclipse.persistence.annotations.TenantTableDiscriminatorType;

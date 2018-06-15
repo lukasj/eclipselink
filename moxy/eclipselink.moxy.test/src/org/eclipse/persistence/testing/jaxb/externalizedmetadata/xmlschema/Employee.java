@@ -10,6 +10,8 @@
  * Contributors:
  * dmccann - June 17/2009 - 2.0 - Initial implementation
  ******************************************************************************/
+// Contributors:
+// dmccann - June 17/2009 - 2.0 - Initial implementation
 package org.eclipse.persistence.testing.jaxb.externalizedmetadata.xmlschema;
 
 import javax.xml.bind.annotation.XmlRootElement;

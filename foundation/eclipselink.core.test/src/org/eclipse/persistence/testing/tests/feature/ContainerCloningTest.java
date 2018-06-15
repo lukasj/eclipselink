@@ -10,6 +10,8 @@
  * Contributors:
  *     Chris Delahunt - initial API and implementation
  ******************************************************************************/
+// Contributors:
+//     Chris Delahunt - initial API and implementation
 package org.eclipse.persistence.testing.tests.feature;
 
 import java.util.Collection;

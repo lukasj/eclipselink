@@ -10,6 +10,8 @@
 * Contributors:
 *     bdoughan - July 21/2010 - Initial implementation
 ******************************************************************************/
+// Contributors:
+//     bdoughan - July 21/2010 - Initial implementation
 package org.eclipse.persistence.testing.jaxb.interfaces;
 
 import java.util.List;

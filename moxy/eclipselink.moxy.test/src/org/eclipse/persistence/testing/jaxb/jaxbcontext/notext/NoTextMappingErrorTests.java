@@ -10,6 +10,8 @@
  * Contributors:
  *      rbarkhouse - 2013 June 24 - 2.5.1 - Initial implementation
  ******************************************************************************/
+// Contributors:
+//      rbarkhouse - 2013 June 24 - 2.5.1 - Initial implementation
 package org.eclipse.persistence.testing.jaxb.jaxbcontext.notext;
 
 import java.io.InputStream;

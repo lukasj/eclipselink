@@ -12,6 +12,11 @@
  *     07/01/2014-2.5.3 Rick Curtis
  *       - 375101: Date and Calendar should not require @Temporal.
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation from Oracle TopLink
+//     07/01/2014-2.5.3 Rick Curtis
+//       - 375101: Date and Calendar should not require @Temporal.
+// CPR:: Copyright (c) 1998, 2015 Oracle and/or its affiliates, IBM Corporation. All rights reserved.
 package org.eclipse.persistence.testing.models.jpa.datetime;
 
 import static javax.persistence.GenerationType.TABLE;

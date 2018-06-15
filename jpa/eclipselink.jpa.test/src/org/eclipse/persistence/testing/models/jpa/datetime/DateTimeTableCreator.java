@@ -12,6 +12,10 @@
  *     07/07/2014-2.5.3 Rick Curtis
  *       - 375101: Date and Calendar should not require @Temporal.
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation from Oracle TopLink
+//     07/07/2014-2.5.3 Rick Curtis
+//       - 375101: Date and Calendar should not require @Temporal.
 package org.eclipse.persistence.testing.models.jpa.datetime;
 
 import org.eclipse.persistence.testing.framework.TogglingFastTableCreator;

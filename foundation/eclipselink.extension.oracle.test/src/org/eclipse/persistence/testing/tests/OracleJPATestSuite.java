@@ -11,6 +11,9 @@
  *     05/29/2008-1.0M8 Andrei Ilitchev.
  *       - New file introduced to consolidate Oracle-specific JPA tests.
  ******************************************************************************/
+// Contributors:
+//     05/29/2008-1.0M8 Andrei Ilitchev.
+//       - New file introduced to consolidate Oracle-specific JPA tests.
 package org.eclipse.persistence.testing.tests;
 
 import junit.framework.TestSuite;

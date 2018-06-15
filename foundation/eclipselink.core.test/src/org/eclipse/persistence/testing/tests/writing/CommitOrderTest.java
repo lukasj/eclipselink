@@ -11,6 +11,9 @@
  *     Vikram Bhatia - initial API and implementation.
  *     David Minsky - tweaks and comments
  ******************************************************************************/
+// Contributors:
+//     Vikram Bhatia - initial API and implementation.
+//     David Minsky - tweaks and comments
 package org.eclipse.persistence.testing.tests.writing;
 
 import java.util.HashMap;

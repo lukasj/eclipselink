@@ -10,6 +10,8 @@
  * Contributors:
  *      Dmitry Kornilov - Initial implementation
  ******************************************************************************/
+// Contributors:
+//      Dmitry Kornilov - Initial implementation
 package org.eclipse.persistence.jpars.test.model.basket;
 
 import org.eclipse.persistence.jpa.rs.annotations.RestPageable;

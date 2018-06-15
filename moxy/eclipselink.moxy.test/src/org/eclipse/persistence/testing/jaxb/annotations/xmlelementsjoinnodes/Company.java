@@ -10,6 +10,8 @@
  * Contributors:
  *  rbarkhouse - 2.3.3 - Initial implementation
  ******************************************************************************/
+// Contributors:
+//  rbarkhouse - 2.3.3 - Initial implementation
 package org.eclipse.persistence.testing.jaxb.annotations.xmlelementsjoinnodes;
 
 import javax.xml.bind.annotation.XmlAttribute;

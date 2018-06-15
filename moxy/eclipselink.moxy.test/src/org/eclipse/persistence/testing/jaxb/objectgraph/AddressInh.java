@@ -10,6 +10,8 @@
  * Contributors:
  *     Matt MacIvor - 2.5 - initial implementation
  ******************************************************************************/
+// Contributors:
+//     Matt MacIvor - 2.5 - initial implementation
 package org.eclipse.persistence.testing.jaxb.objectgraph;
 
 public class AddressInh extends ContactInfo {

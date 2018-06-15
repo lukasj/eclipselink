@@ -10,6 +10,8 @@
  * Contributors:
  *     Blaise Doughan - 2.4.2 - initial implementation
  ******************************************************************************/
+// Contributors:
+//     Blaise Doughan - 2.4.2 - initial implementation
 @XmlSchema(namespace="urn:FOO", elementFormDefault=XmlNsForm.QUALIFIED)
 package org.eclipse.persistence.testing.jaxb.json.wrapper;
 

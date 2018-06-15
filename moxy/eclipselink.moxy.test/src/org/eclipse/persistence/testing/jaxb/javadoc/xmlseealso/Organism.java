@@ -10,6 +10,8 @@
  * Contributors:
  *     Matt MacIvor - 2.5.2 - initial implementation
  ******************************************************************************/
+// Contributors:
+//     Matt MacIvor - 2.5.2 - initial implementation
 package org.eclipse.persistence.testing.jaxb.javadoc.xmlseealso;
 
 import javax.xml.bind.annotation.XmlSeeAlso;

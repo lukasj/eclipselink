@@ -12,6 +12,10 @@
  *     04/07/2012-2.5 Guy Pelletier
  *       - 384275: Customizer from a mapped superclass is not overridden by an entity customizer
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation from Oracle TopLink
+//     04/07/2012-2.5 Guy Pelletier
+//       - 384275: Customizer from a mapped superclass is not overridden by an entity customizer
 package org.eclipse.persistence.testing.tests.jpa.inheritance;
 
 import java.util.ArrayList;

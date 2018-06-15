@@ -12,6 +12,10 @@
  *     01/05/2010-2.1 Guy Pelletier
  *       - 211324: Add additional event(s) support to the EclipseLink-ORM.XML Schema
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation from Oracle TopLink
+//     01/05/2010-2.1 Guy Pelletier
+//       - 211324: Add additional event(s) support to the EclipseLink-ORM.XML Schema
 package org.eclipse.persistence.testing.models.jpa.inheritance;
 
 import javax.persistence.*;

@@ -10,6 +10,8 @@
  * Contributors:
  * Denise Smith - October 2012
  ******************************************************************************/
+// Contributors:
+// Denise Smith - October 2012
 package org.eclipse.persistence.testing.jaxb.binder.xmlanyelement;
 
 import javax.xml.bind.annotation.XmlAnyElement;

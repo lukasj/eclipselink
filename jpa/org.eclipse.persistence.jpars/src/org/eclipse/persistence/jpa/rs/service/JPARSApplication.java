@@ -10,6 +10,8 @@
  * Contributors:
  *      tware - initial
  ******************************************************************************/
+// Contributors:
+//      tware - initial
 package org.eclipse.persistence.jpa.rs.service;
 
 import java.util.Collections;

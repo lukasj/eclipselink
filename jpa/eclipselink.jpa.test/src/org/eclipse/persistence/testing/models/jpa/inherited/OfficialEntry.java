@@ -11,6 +11,9 @@
  *     02/18/2010-2.0.2 Guy Pelletier
  *       - 294803: @Column(updatable=false) has no effect on @Basic mappings
  ******************************************************************************/
+// Contributors:
+//     02/18/2010-2.0.2 Guy Pelletier
+//       - 294803: @Column(updatable=false) has no effect on @Basic mappings
 package org.eclipse.persistence.testing.models.jpa.inherited;
 
 import static javax.persistence.GenerationType.TABLE;

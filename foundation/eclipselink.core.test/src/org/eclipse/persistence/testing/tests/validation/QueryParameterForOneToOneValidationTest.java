@@ -12,6 +12,10 @@
  *     dminsky - added changes to support conforming and dynamically finding an id
  *
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation from Oracle TopLink
+//     dminsky - added changes to support conforming and dynamically finding an id
+//
 package org.eclipse.persistence.testing.tests.validation;
 
 import java.util.*;

@@ -17,6 +17,16 @@
  *     08/29/2016 Jody Grassel
  *       - 500441: Eclipselink core has System.getProperty() calls that are not potentially executed under doPriv()
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation from Oracle TopLink
+//     dminsky - added countOccurrencesOf(Object, List) API
+//     08/23/2010-2.2 Michael O'Brien
+//        - 323043: application.xml module ordering may cause weaving not to occur causing an NPE.
+//                       warn if expected "_persistence_//_vh" method not found
+//                       instead of throwing NPE during deploy validation.
+//     08/29/2016 Jody Grassel
+//       - 500441: Eclipselink core has System.getProperty() calls that are not potentially executed under doPriv()
+// CPR:: Copyright (c) 1998, 2016 Oracle and/or its affiliates, IBM Corporation. All rights reserved.
 package org.eclipse.persistence.internal.helper;
 
 import java.io.Closeable;

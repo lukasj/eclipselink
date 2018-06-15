@@ -11,6 +11,9 @@
  *     dminsky - initial API and implementation
  *        * added for EL bug 375463
  ******************************************************************************/
+// Contributors:
+//     dminsky - initial API and implementation
+//        // added for EL bug 375463
 package org.eclipse.persistence.testing.models.mapping;
 
 import org.eclipse.persistence.descriptors.ClassDescriptor;

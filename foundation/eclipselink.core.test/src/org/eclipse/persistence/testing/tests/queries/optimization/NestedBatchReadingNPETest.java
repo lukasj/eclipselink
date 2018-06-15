@@ -10,6 +10,8 @@
  * Contributors:
  *     vikram.jeet.bhatia@oracle.com
  ******************************************************************************/
+// Contributors:
+//     vikram.jeet.bhatia@oracle.com
 package org.eclipse.persistence.testing.tests.queries.optimization;
 
 import java.util.*;

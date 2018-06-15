@@ -11,6 +11,9 @@
  *     Oracle - initial API and implementation from Oracle TopLink
  *     05/19/2010-2.1 ailitchev - Bug 244124 - Add Nested FetchGroup
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation from Oracle TopLink
+//     05/19/2010-2.1 ailitchev - Bug 244124 - Add Nested FetchGroup
 package org.eclipse.persistence.descriptors;
 
 import java.util.HashMap;

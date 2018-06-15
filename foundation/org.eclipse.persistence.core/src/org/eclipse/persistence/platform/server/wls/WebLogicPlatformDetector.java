@@ -11,6 +11,10 @@
  *     01/05/2015 Rick Curtis, Andrei Ilitchev
  *       - 455683: Automatically detect target server
  ******************************************************************************/
+// Contributors:
+//     01/05/2015 Rick Curtis, Andrei Ilitchev
+//       - 455683: Automatically detect target server
+// CPR:: Copyright (c) 2015 IBM Corporation, Oracle. All rights reserved.
 package org.eclipse.persistence.platform.server.wls;
 
 import java.lang.reflect.Method;

@@ -12,6 +12,10 @@
  *     24 April 2013-2.5.1 ailitche
  *       SerializedObjectPolicy initial API and implementation
  ******************************************************************************/
+// Contributors:
+// Contributors:
+//     24 April 2013-2.5.1 ailitche
+//       SerializedObjectPolicy initial API and implementation
 package org.eclipse.persistence.internal.jpa.metadata.sop;
 
 import org.eclipse.persistence.internal.descriptors.SerializedObjectPolicyWrapper;

@@ -10,6 +10,8 @@
  * Contributors:
  * dmccann - August 4/2009 - 2.0 - Initial implementation
  ******************************************************************************/
+// Contributors:
+// dmccann - August 4/2009 - 2.0 - Initial implementation
 package org.eclipse.persistence.testing.jaxb.externalizedmetadata.jaxbcontextfactory.stringarray.a;
 
 public class BeanA {

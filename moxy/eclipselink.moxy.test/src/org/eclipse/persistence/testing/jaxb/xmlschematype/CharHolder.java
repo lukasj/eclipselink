@@ -10,6 +10,8 @@
  * Contributors:
  *    Denise Smith - March 2013
  ******************************************************************************/
+// Contributors:
+//    Denise Smith - March 2013
 package org.eclipse.persistence.testing.jaxb.xmlschematype;
 
 import javax.xml.bind.annotation.XmlRootElement;

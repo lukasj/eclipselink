@@ -17,6 +17,16 @@
  *     11/07/2017 - Dalia Abo Sheasha
  *       - 526957 : Split the logging and trace messages
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation from Oracle TopLink
+//     02/11/2009-1.1 Michael O'Brien
+//        - 259993: As part 2) During mergeClonesAfterCompletion()
+//           If the the acquire and release threads are different
+//           switch back to the stored acquire thread stored on the mergeManager.
+//      tware, David Mulligan - fix performance issue with releasing locks
+//     11/07/2017 - Dalia Abo Sheasha
+//       - 526957 : Split the logging and trace messages
+// CPR:: Copyright (c) 1998, 2018 Oracle and/or its affiliates, IBM Corporation. All rights reserved.
 package org.eclipse.persistence.internal.helper;
 
 import java.util.IdentityHashMap;

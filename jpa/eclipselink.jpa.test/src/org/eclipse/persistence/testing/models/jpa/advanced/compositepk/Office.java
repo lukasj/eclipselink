@@ -12,6 +12,10 @@
  *     02/02/2011-2.3 Chris Delahunt
  *       - 336122: ValidationException thrown for JoinColumns on OneToMany with composite primary key
  ******************************************************************************/
+// Contributors:
+//     tware - test for bug 280436
+//     02/02/2011-2.3 Chris Delahunt
+//       - 336122: ValidationException thrown for JoinColumns on OneToMany with composite primary key
 package org.eclipse.persistence.testing.models.jpa.advanced.compositepk;
 
 import java.util.Collection;

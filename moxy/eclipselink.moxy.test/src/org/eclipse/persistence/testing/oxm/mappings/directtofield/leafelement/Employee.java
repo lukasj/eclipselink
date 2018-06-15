@@ -11,6 +11,9 @@
 * dsmith  - Dec 17/2008 - 1.1 - Initial implementation
 * dmccann - Dec 31/2008 - 1.1 - Initial implementation
 * ******************************************************************************/
+// Contributors:
+// dsmith  - Dec 17/2008 - 1.1 - Initial implementation
+// dmccann - Dec 31/2008 - 1.1 - Initial implementation
 package org.eclipse.persistence.testing.oxm.mappings.directtofield.leafelement;
 
 import java.util.Calendar;

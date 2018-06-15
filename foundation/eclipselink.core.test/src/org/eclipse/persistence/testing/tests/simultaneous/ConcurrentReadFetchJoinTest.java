@@ -10,6 +10,8 @@
  * Contributors:
  *     tware - test for bug 324459
  ******************************************************************************/
+// Contributors:
+//     tware - test for bug 324459
 package org.eclipse.persistence.testing.tests.simultaneous;
 
 import java.math.BigDecimal;

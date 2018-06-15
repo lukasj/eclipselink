@@ -10,6 +10,8 @@
  * Contributors:
  *     mnorman - convert DBWS to use new EclipseLink public Dynamic Persistence APIs
  ******************************************************************************/
+// Contributors:
+//     mnorman - convert DBWS to use new EclipseLink public Dynamic Persistence APIs
 package org.eclipse.persistence.internal.xr;
 
 //javase imports

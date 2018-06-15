@@ -19,6 +19,17 @@
  *     03/24/2011-2.3 Guy Pelletier
  *       - 337323: Multi-tenant with shared schema support (part 1)
  ******************************************************************************/
+// Contributors:
+//     Guy Pelletier (Oracle), February 28, 2007
+//        - New file introduced for bug 217880.
+//     05/16/2008-1.0M8 Guy Pelletier
+//       - 218084: Implement metadata merging functionality between mapping files
+//     12/12/2008-1.1 Guy Pelletier
+//       - 249860: Implement table per class inheritance support.
+//     12/18/2009-2.1 Guy Pelletier
+//       - 211323: Add class extractor support to the EclipseLink-ORM.XML Schema
+//     03/24/2011-2.3 Guy Pelletier
+//       - 337323: Multi-tenant with shared schema support (part 1)
 package org.eclipse.persistence.internal.jpa.metadata.inheritance;
 
 import static org.eclipse.persistence.internal.jpa.metadata.MetadataConstants.JPA_INHERITANCE_JOINED;

@@ -14,6 +14,13 @@
  *     11/07/2017 - Dalia Abo Sheasha
  *       - 526957 : Split the logging and trace messages
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation from Oracle TopLink
+//     09/13/2013-2.5 Guy Pelletier
+//       - 350487: JPA 2.1 Specification defined support for Stored Procedure Calls
+//     11/07/2017 - Dalia Abo Sheasha
+//       - 526957 : Split the logging and trace messages
+// CPR:: Copyright (c) 1998, 2018 Oracle and/or its affiliates, IBM Corporation. All rights reserved.
 package org.eclipse.persistence.internal.localization.i18n;
 
 import java.util.ListResourceBundle;

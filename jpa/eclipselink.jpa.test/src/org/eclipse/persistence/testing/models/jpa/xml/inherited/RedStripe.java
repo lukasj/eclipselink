@@ -11,6 +11,9 @@
  *     06/03/2011-2.3.1 Guy Pelletier
  *       - 347563: transient field/property in embeddable entity
  ******************************************************************************/
+// Contributors:
+//     06/03/2011-2.3.1 Guy Pelletier
+//       - 347563: transient field/property in embeddable entity
 package org.eclipse.persistence.testing.models.jpa.xml.inherited;
 
 import javax.persistence.Embeddable;

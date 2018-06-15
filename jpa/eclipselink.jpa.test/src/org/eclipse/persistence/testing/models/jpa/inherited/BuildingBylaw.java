@@ -11,6 +11,9 @@
  *     07/16/2010-2.2 Guy Pelletier
  *       - 260296: mixed access with no Transient annotation does not result in error
  ******************************************************************************/
+// Contributors:
+//     07/16/2010-2.2 Guy Pelletier
+//       - 260296: mixed access with no Transient annotation does not result in error
 package org.eclipse.persistence.testing.models.jpa.inherited;
 
 import javax.persistence.Access;

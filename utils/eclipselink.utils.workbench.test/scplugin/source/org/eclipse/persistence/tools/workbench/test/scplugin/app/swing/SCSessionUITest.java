@@ -10,6 +10,8 @@
  * Contributors:
  *     Oracle - initial API and implementation from Oracle TopLink
 ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation from Oracle TopLink
 package org.eclipse.persistence.tools.workbench.test.scplugin.app.swing;
 
 import org.eclipse.persistence.tools.workbench.scplugin.model.adapter.SessionAdapter;

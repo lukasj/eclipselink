@@ -10,6 +10,8 @@
  * Contributors:
  *     rbarkhouse - 2009-04-14 - 2.0 - Initial implementation
  ******************************************************************************/
+// Contributors:
+//     rbarkhouse - 2009-04-14 - 2.0 - Initial implementation
 
 package org.eclipse.persistence.testing.oxm.mappings.compositecollection.keepaselement;
 

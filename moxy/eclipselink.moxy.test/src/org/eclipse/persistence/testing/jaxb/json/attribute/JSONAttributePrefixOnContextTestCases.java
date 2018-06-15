@@ -10,6 +10,8 @@
  * Contributors:
  *     Denise Smith - 2011-08-25
  ******************************************************************************/
+// Contributors:
+//     Denise Smith - 2011-08-25
 package org.eclipse.persistence.testing.jaxb.json.attribute;
 
 import java.io.IOException;

@@ -10,6 +10,8 @@
  * Contributors:
  *     tware - added to allow pluggage archive factory
  ******************************************************************************/
+// Contributors:
+//     tware - added to allow pluggage archive factory
 package org.eclipse.persistence.config;
 
 /**

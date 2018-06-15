@@ -10,6 +10,8 @@
  * Contributors:
  *     cdelahun - Bug 214534: added as a public helper for JMS RCM message processing
  ******************************************************************************/
+// Contributors:
+//     cdelahun - Bug 214534: added as a public helper for JMS RCM message processing
 package org.eclipse.persistence.sessions.coordination.jms;
 
 import org.eclipse.persistence.exceptions.RemoteCommandManagerException;

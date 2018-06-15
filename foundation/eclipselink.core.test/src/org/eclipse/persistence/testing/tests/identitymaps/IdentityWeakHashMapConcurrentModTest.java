@@ -10,6 +10,8 @@
  * Contributors:
  *     Oracle - added with fix for bug 300236
  ******************************************************************************/
+// Contributors:
+//     Oracle - added with fix for bug 300236
 package org.eclipse.persistence.testing.tests.identitymaps;
 
 import java.util.ConcurrentModificationException;

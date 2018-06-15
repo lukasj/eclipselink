@@ -11,6 +11,9 @@
  *     11/15/2011-2.3.2 Guy Pelletier
  *       - 363820: Issue with clone method from VPDMultitenantPolicy
  ******************************************************************************/
+// Contributors:
+//     11/15/2011-2.3.2 Guy Pelletier
+//       - 363820: Issue with clone method from VPDMultitenantPolicy
 package org.eclipse.persistence.testing.models.jpa.advanced.multitenant;
 
 import javax.persistence.DiscriminatorValue;

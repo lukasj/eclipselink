@@ -11,6 +11,10 @@
  * Markus Karg - initial contribution (bug 284657)
  * SAP AG      - finalized implementation (bug 327778)
  ******************************************************************************/
+// Contributors:
+// Markus Karg - initial contribution (bug 284657)
+// SAP AG      - finalized implementation (bug 327778)
+// CPR:: Copyright (c) 2009, 2015 Markus Karg, SAP, Oracle and/or its affiliates. All rights reserved.
 package org.eclipse.persistence.platform.database;
 
 import java.io.IOException;

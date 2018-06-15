@@ -10,6 +10,8 @@
  * Contributors:
  *     ailitchev - jpa 2.0 element collections support
  ******************************************************************************/
+// Contributors:
+//     ailitchev - jpa 2.0 element collections support
 package org.eclipse.persistence.testing.tests.aggregate;
 
 import java.util.List;

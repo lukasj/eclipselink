@@ -11,6 +11,9 @@
  *     rbarkhouse - 2.2 - initial implementation
  *     rfelcman - 2.7.2 - withExtension parameter
  ******************************************************************************/
+// Contributors:
+//     rbarkhouse - 2.2 - initial implementation
+//     rfelcman - 2.7.2 - withExtension parameter
 package org.eclipse.persistence.testing.jaxb.dynamic.util;
 
 import java.io.File;

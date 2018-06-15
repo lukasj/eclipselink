@@ -10,6 +10,8 @@
  * Contributors:
  *     Oracle - initial API and implementation from Oracle TopLink
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation from Oracle TopLink
 
 /* $Header: Employee.java 19-oct-2006.17:22:32 mfobrien Exp $ */
 /*

@@ -11,6 +11,9 @@
  * dmccann - September 14/2010 - 2.2 - Initial implementation
  * Martin Vojtek - November 14/2014 - 2.6 - Added XmlIDExtension
  ******************************************************************************/
+// Contributors:
+// dmccann - September 14/2010 - 2.2 - Initial implementation
+// Martin Vojtek - November 14/2014 - 2.6 - Added XmlIDExtension
 package org.eclipse.persistence.testing.jaxb.annotations.xmljoinnode;
 
 import javax.xml.bind.annotation.XmlAttribute;

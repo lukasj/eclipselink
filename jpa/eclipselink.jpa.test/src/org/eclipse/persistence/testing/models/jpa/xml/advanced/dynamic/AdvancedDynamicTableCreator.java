@@ -13,6 +13,11 @@
  *     08/20/2012-2.4 Guy Pelletier
  *       - 381079: EclipseLink dynamic entity does not support embedded-id
  ******************************************************************************/
+// Contributors:
+//     07/05/2010-2.1.1 Guy Pelletier
+//       - 317708: Exception thrown when using LAZY fetch on VIRTUAL mapping
+//     08/20/2012-2.4 Guy Pelletier
+//       - 381079: EclipseLink dynamic entity does not support embedded-id
 package org.eclipse.persistence.testing.models.jpa.xml.advanced.dynamic;
 
 import org.eclipse.persistence.testing.framework.TogglingFastTableCreator;

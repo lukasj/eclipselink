@@ -16,6 +16,14 @@
  *     03/24/2011-2.3 Guy Pelletier
  *       - 337323: Multi-tenant with shared schema support (part 1)
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation from Oracle TopLink
+//     05/16/2008-1.0M8 Guy Pelletier
+//       - 218084: Implement metadata merging functionality between mapping files
+//     07/23/2010-2.2 Guy Pelletier
+//       - 237902: DDL GEN doesn't qualify SEQUENCE table with persistence unit schema
+//     03/24/2011-2.3 Guy Pelletier
+//       - 337323: Multi-tenant with shared schema support (part 1)
 package org.eclipse.persistence.internal.jpa.metadata.sequencing;
 
 import org.eclipse.persistence.internal.jpa.metadata.MetadataLogger;

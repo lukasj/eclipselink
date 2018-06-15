@@ -10,6 +10,8 @@
  * Contributors:
  *     Denise Smith  February 9, 2009 - 2.1
  ******************************************************************************/
+// Contributors:
+//     Denise Smith  February 9, 2009 - 2.1
 package org.eclipse.persistence.testing.jaxb.typemappinginfo.simple;
 
 public class Person {

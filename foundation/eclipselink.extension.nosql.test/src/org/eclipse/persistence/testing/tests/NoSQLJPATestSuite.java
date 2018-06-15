@@ -10,6 +10,8 @@
  * Contributors:
  *     Oracle - initial implementation
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial implementation
 package org.eclipse.persistence.testing.tests;
 
 import org.eclipse.persistence.testing.tests.jpa.mongo.MongoDatabaseTestSuite;

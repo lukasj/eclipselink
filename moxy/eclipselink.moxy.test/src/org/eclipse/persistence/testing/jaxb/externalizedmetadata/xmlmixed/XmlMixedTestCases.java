@@ -10,6 +10,8 @@
  * Contributors:
  * dmccann - November 04/2009 - 2.0 - Initial implementation
  ******************************************************************************/
+// Contributors:
+// dmccann - November 04/2009 - 2.0 - Initial implementation
 package org.eclipse.persistence.testing.jaxb.externalizedmetadata.xmlmixed;
 
 import java.io.InputStream;

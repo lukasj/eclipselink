@@ -10,6 +10,8 @@
  * Contributors: Martin Grebac - 2.6
  * ****************************************************************************
  */
+// Contributors: Martin Grebac - 2.6
+// ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 package org.eclipse.persistence.testing.jaxb.json.multiline;
 
 import org.eclipse.persistence.testing.jaxb.json.JSONMarshalUnmarshalTestCases;

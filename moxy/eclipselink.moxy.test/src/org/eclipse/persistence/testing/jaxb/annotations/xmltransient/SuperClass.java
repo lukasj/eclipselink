@@ -11,6 +11,8 @@
  * Contributors:
  *  -Matt MacIvor - Initial Implementation - 2.4.1
  ******************************************************************************/
+// Contributors:
+//  -Matt MacIvor - Initial Implementation - 2.4.1
 package org.eclipse.persistence.testing.jaxb.annotations.xmltransient;
 
 import javax.xml.bind.annotation.XmlTransient;

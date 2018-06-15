@@ -11,6 +11,9 @@
  *     10/28/2010-2.2 Guy Pelletier
  *       - 3223850: Primary key metadata issues
  ******************************************************************************/
+// Contributors:
+//     10/28/2010-2.2 Guy Pelletier
+//       - 3223850: Primary key metadata issues
 package org.eclipse.persistence.testing.models.jpa.fieldaccess.advanced;
 
 import java.io.Serializable;

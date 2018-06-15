@@ -10,6 +10,8 @@
  * Contributors:
  *      ailitchev ported the original test written by dminsky
  ******************************************************************************/
+// Contributors:
+//      ailitchev ported the original test written by dminsky
 package org.eclipse.persistence.testing.tests.types;
 
 import java.text.*;

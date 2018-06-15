@@ -10,6 +10,8 @@
  * Contributors:
  *     Matt MacIvor - 2.3 - Initial implementation
  ******************************************************************************/
+// Contributors:
+//     Matt MacIvor - 2.3 - Initial implementation
 package org.eclipse.persistence.testing.jaxb.xmlaccessortype.none;
 
 public class UnmappedTwo {

@@ -10,6 +10,8 @@
  * Contributors:
  *     James Sutherland - initial impl
  ******************************************************************************/
+// Contributors:
+//     James Sutherland - initial impl
  package org.eclipse.persistence.testing.models.jpa.performance;
 
 import java.util.List;

@@ -11,6 +11,9 @@
  * dmccann - June 17/2009 - 2.0 - Initial implementation
  * Martin Vojtek - July 8/2014 - 2.6 - XmlNullPolicy and XmlElementNillable
  ******************************************************************************/
+// Contributors:
+// dmccann - June 17/2009 - 2.0 - Initial implementation
+// Martin Vojtek - July 8/2014 - 2.6 - XmlNullPolicy and XmlElementNillable
 package org.eclipse.persistence.jaxb.compiler;
 
 import static org.eclipse.persistence.jaxb.javamodel.Helper.getQualifiedJavaTypeName;

@@ -10,6 +10,8 @@
  * Contributors:
  * Lukas Jungmann - Feb 2018
  ******************************************************************************/
+// Contributors:
+// Lukas Jungmann - Feb 2018
 @XmlSchema(namespace="c", location="http://someuri.com/myschema.xsd")
 package org.eclipse.persistence.testing.jaxb.schemagen.imports.url.c;
 

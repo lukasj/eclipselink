@@ -10,6 +10,8 @@
  * Contributors:
  *     Blaise Doughan - 2.4 - initial implementation
  ******************************************************************************/
+// Contributors:
+//     Blaise Doughan - 2.4 - initial implementation
 @XmlSchema(namespace = "http://www.example.com", elementFormDefault = XmlNsForm.QUALIFIED)
 package org.eclipse.persistence.testing.jaxb.annotations.xmldiscriminator.ns;
 

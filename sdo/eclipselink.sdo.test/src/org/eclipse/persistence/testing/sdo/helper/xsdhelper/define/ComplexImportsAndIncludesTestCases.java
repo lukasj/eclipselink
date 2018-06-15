@@ -10,6 +10,8 @@
  * Contributors:
  *     Denise Smith - Feb 20 2008 Initial test case creation
  ******************************************************************************/
+// Contributors:
+//     Denise Smith - Feb 20 2008 Initial test case creation
 
 package org.eclipse.persistence.testing.sdo.helper.xsdhelper.define;
 

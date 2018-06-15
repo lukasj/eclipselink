@@ -11,6 +11,9 @@
  *     11/17/2010-2.2 Guy Pelletier
  *       - 329008: Support dynamic context creation without persistence.xml
  ******************************************************************************/
+// Contributors:
+//     11/17/2010-2.2 Guy Pelletier
+//       - 329008: Support dynamic context creation without persistence.xml
 package org.eclipse.persistence.testing.models.jpa.xml.advanced.dynamic;
 
 import org.eclipse.persistence.testing.framework.TogglingFastTableCreator;

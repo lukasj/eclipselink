@@ -10,6 +10,8 @@
  * Contributors:
  * Oracle = 2.2 - Initial implementation
  ******************************************************************************/
+// Contributors:
+// Oracle = 2.2 - Initial implementation
 package org.eclipse.persistence.testing.jaxb.annotations.xmlaccessmethods;
 
 import org.eclipse.persistence.testing.jaxb.JAXBWithJSONTestCases;

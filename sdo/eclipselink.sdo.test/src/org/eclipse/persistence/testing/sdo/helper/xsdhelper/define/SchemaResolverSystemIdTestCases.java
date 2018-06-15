@@ -10,6 +10,8 @@
  * Contributors:
  * mmacivor - April 23/2010 - 2.1 - Initial implementation
  ******************************************************************************/
+// Contributors:
+// mmacivor - April 23/2010 - 2.1 - Initial implementation
 package org.eclipse.persistence.testing.sdo.helper.xsdhelper.define;
 
 import java.io.ByteArrayInputStream;

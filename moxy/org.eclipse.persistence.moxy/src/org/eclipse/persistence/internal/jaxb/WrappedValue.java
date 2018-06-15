@@ -11,6 +11,9 @@
 * mmacivor - April 25/2008 - 1.0M8 - Initial implementation
 * bdoughan - July 17/2009 - 2.0 - Refactored to extend JAXBElement
 ******************************************************************************/
+// Contributors:
+// mmacivor - April 25/2008 - 1.0M8 - Initial implementation
+// bdoughan - July 17/2009 - 2.0 - Refactored to extend JAXBElement
 package org.eclipse.persistence.internal.jaxb;
 
 import javax.xml.bind.JAXBElement;

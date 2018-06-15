@@ -13,6 +13,11 @@
  *     07/15/2010-2.2 Guy Pelletier
  *       -311395 : Multiple lifecycle callback methods for the same lifecycle event
  ******************************************************************************/
+// Contributors:
+//     05/16/2008-1.0M8 Guy Pelletier
+//       - 218084: Implement metadata merging functionality between mapping files
+//     07/15/2010-2.2 Guy Pelletier
+//       -311395 : Multiple lifecycle callback methods for the same lifecycle event
 package org.eclipse.persistence.internal.jpa.metadata.listeners;
 
 import java.lang.reflect.Method;

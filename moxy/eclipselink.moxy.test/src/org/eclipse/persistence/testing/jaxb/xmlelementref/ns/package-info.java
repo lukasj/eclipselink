@@ -11,5 +11,7 @@
  * Contributors:
  *  - rbarkhouse - 17 November 2011 - 2.3.2 - Initial implementation
  ******************************************************************************/
+// Contributors:
+//  - rbarkhouse - 17 November 2011 - 2.3.2 - Initial implementation
 @javax.xml.bind.annotation.XmlSchema(namespace = "http://root.org/", elementFormDefault = javax.xml.bind.annotation.XmlNsForm.QUALIFIED)
 package org.eclipse.persistence.testing.jaxb.xmlelementref.ns;

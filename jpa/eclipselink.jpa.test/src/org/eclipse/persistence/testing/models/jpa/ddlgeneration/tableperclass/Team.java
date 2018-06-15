@@ -11,6 +11,9 @@
  *     11/25/2009-2.0 Guy Pelletier
  *       - 288955: EclipseLink 2.0.0.v20090821-r4934 (M7) throws EclipseLink-80/41 exceptions if InheritanceType.TABLE_PER_CLASS is used
  ******************************************************************************/
+// Contributors:
+//     11/25/2009-2.0 Guy Pelletier
+//       - 288955: EclipseLink 2.0.0.v20090821-r4934 (M7) throws EclipseLink-80/41 exceptions if InheritanceType.TABLE_PER_CLASS is used
 package org.eclipse.persistence.testing.models.jpa.ddlgeneration.tableperclass;
 
 import java.util.ArrayList;

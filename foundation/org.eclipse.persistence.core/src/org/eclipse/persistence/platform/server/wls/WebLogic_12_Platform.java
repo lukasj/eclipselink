@@ -10,6 +10,8 @@
  * Contributors:
  *     Oracle - initial API and implementation
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation
 package org.eclipse.persistence.platform.server.wls;
 
 import java.lang.reflect.InvocationTargetException;

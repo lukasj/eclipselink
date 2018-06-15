@@ -11,6 +11,9 @@
  *     02/08/2013-2.5 Chris Delahunt
  *       - 374771 - JPA 2.1 TREAT support
  ******************************************************************************/
+// Contributors:
+//     02/08/2013-2.5 Chris Delahunt
+//       - 374771 - JPA 2.1 TREAT support
 package org.eclipse.persistence.testing.models.jpa.inheritance;
 
 import javax.persistence.DiscriminatorValue;

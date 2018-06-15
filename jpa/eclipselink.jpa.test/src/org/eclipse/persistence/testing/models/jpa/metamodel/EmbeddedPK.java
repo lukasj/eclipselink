@@ -11,6 +11,9 @@
  *     07/16/2009-2.0  mobrien - JPA 2.0 Metadata API test model
  *       - 266912: JPA 2.0 Metamodel API (part of the JSR-317 EJB 3.1 Criteria API)
  ******************************************************************************/
+// Contributors:
+//     07/16/2009-2.0  mobrien - JPA 2.0 Metadata API test model
+//       - 266912: JPA 2.0 Metamodel API (part of the JSR-317 EJB 3.1 Criteria API)
 package org.eclipse.persistence.testing.models.jpa.metamodel;
 
 import static javax.persistence.GenerationType.TABLE;

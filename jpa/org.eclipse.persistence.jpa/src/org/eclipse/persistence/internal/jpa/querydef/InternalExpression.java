@@ -27,6 +27,25 @@
  * @author gyorke
  * @since EclipseLink 1.2
  */
+// Contributors:
+//     Gordon Yorke - Initial development
+//
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////package org.eclipse.persistence.internal.jpa.querydef;
+
+
+/////
+// <p>
+// <b>Purpose</b>: Represents an Expression in the Criteria API implementation heirarchy.
+// <p>
+// <b>Description</b>: Expressions are expression nodes that can not be joined from
+// and may or not be the result of a Path expression.  The SubQuery is a special type of expression that
+// requires certain methods but can not extend ExpressionImpl.  This interface provide a common API.
+// <p>
+//
+// @see javax.persistence.criteria Expression
+//
+// @author gyorke
+// @since EclipseLink 1.2
 public interface InternalExpression{
 
     public boolean isPredicate();

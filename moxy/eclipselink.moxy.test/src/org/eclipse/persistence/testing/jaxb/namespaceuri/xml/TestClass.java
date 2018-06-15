@@ -10,6 +10,8 @@
  * Contributors:
  * Matt MacIvor - 2.3.3
  ******************************************************************************/
+// Contributors:
+// Matt MacIvor - 2.3.3
 package org.eclipse.persistence.testing.jaxb.namespaceuri.xml;
 
 import javax.xml.bind.annotation.XmlRootElement;

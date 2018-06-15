@@ -12,6 +12,10 @@
  *     05/24/2011-2.3 Guy Pelletier
  *       - 345962: Join fetch query when using tenant discriminator column fails.
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation from Oracle TopLink
+//     05/24/2011-2.3 Guy Pelletier
+//       - 345962: Join fetch query when using tenant discriminator column fails.
 package org.eclipse.persistence.expressions;
 
 import java.util.*;

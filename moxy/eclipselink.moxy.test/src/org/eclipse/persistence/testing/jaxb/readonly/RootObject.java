@@ -10,6 +10,8 @@
  * Contributors:
  * Matt MacIvor - 2.3
  ******************************************************************************/
+// Contributors:
+// Matt MacIvor - 2.3
 package org.eclipse.persistence.testing.jaxb.readonly;
 
 import javax.xml.bind.annotation.XmlElement;

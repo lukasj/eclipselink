@@ -25,6 +25,23 @@
  *     07/15/2010-2.2 Guy Pelletier
  *       -311395 : Multiple lifecycle callback methods for the same lifecycle event
  ******************************************************************************/
+// Contributors:
+//     06/20/2008-1.0 Guy Pelletier
+//       - 232975: Failure when attribute type is generic
+//     01/28/2009-2.0 Guy Pelletier
+//       - 248293: JPA 2.0 Element Collections (part 1)
+//     02/06/2009-2.0 Guy Pelletier
+//       - 248293: JPA 2.0 Element Collections (part 2)
+//     03/27/2009-2.0 Guy Pelletier
+//       - 241413: JPA 2.0 Add EclipseLink support for Map type attributes
+//     04/03/2009-2.0 Guy Pelletier
+//       - 241413: JPA 2.0 Add EclipseLink support for Map type attributes
+//     06/02/2009-2.0 Guy Pelletier
+//       - 278768: JPA 2.0 Association Override Join Table
+//     01/26/2010-2.0.1 Guy Pelletier
+//       - 299893: @MapKeyClass does not work with ElementCollection
+//     07/15/2010-2.2 Guy Pelletier
+//       -311395 : Multiple lifecycle callback methods for the same lifecycle event
 package org.eclipse.persistence.testing.models.jpa.inherited;
 
 import java.util.Date;

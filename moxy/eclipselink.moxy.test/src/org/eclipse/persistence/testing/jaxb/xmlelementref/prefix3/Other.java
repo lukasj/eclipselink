@@ -11,6 +11,8 @@
  * Contributors:
  *  - Denise Smith February 12, 2013
  ******************************************************************************/
+// Contributors:
+//  - Denise Smith February 12, 2013
 package org.eclipse.persistence.testing.jaxb.xmlelementref.prefix3;
 
 public class Other {

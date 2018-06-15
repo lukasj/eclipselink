@@ -20,6 +20,18 @@
  *     12/17/2010-2.2 Guy Pelletier
  *       - 330755: Nested embeddables can't be used as embedded ids
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation from Oracle TopLink
+//     08/27/2008-1.1 Guy Pelletier
+//       - 211329: Add sequencing on non-id attribute(s) support to the EclipseLink-ORM.XML Schema
+//     08/28/2008-1.1 Guy Pelletier
+//       - 245120: unidir one-to-many within embeddable fails to deploy for missing primary key field
+//     02/06/2009-2.0 Guy Pelletier
+//       - 248293: JPA 2.0 Element Collections (part 2)
+//     02/25/2009-2.0 Guy Pelletier
+//       - 265359: JPA 2.0 Element Collections - Metadata processing portions
+//     12/17/2010-2.2 Guy Pelletier
+//       - 330755: Nested embeddables can't be used as embedded ids
 package org.eclipse.persistence.testing.models.jpa.complexaggregate;
 
 import java.util.Iterator;

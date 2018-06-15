@@ -11,6 +11,9 @@
  *     dclarke - Metadata driven Dynamic Persistence
  *
  ******************************************************************************/
+// Contributors:
+//     dclarke - Metadata driven Dynamic Persistence
+//
 package org.eclipse.persistence.internal.jpa.metadata;
 
 import static org.eclipse.persistence.internal.libraries.asm.Opcodes.ACC_PUBLIC;

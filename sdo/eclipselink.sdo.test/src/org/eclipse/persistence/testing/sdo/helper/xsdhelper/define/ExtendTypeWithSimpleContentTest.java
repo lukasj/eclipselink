@@ -10,6 +10,8 @@
 * Contributors:
 * dmccann - July 24/2008 - 1.0.1 - Initial implementation
 ******************************************************************************/
+// Contributors:
+// dmccann - July 24/2008 - 1.0.1 - Initial implementation
 package org.eclipse.persistence.testing.sdo.helper.xsdhelper.define;
 
 import java.io.FileInputStream;

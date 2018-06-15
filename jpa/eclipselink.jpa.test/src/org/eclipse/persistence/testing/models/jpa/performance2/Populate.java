@@ -10,6 +10,8 @@
  * Contributors:
  *              dclarke - initial JPA Employee example using XML (bug 217884)
  ******************************************************************************/
+// Contributors:
+//              dclarke - initial JPA Employee example using XML (bug 217884)
 package org.eclipse.persistence.testing.models.jpa.performance2;
 
 import javax.persistence.EntityManager;

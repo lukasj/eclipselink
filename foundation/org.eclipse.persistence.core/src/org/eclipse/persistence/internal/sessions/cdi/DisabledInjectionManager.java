@@ -10,6 +10,8 @@
  * Contributors:
  *     tware - initial implementation
  */
+// Contributors:
+//     tware - initial implementation
 package org.eclipse.persistence.internal.sessions.cdi;
 
 import javax.naming.NamingException;

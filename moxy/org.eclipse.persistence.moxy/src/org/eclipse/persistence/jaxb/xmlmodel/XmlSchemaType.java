@@ -10,6 +10,8 @@
  * Contributors:
  * dmccann - June 29/2009 - 2.0 - Initial implementation
  ******************************************************************************/
+// Contributors:
+// dmccann - June 29/2009 - 2.0 - Initial implementation
 package org.eclipse.persistence.jaxb.xmlmodel;
 
 import javax.xml.bind.annotation.XmlAccessType;

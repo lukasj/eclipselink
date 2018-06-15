@@ -11,6 +11,9 @@
  *     07/16/2013-2.5.1 Guy Pelletier
  *       - 412384: Applying Converter for parameterized basic-type for joda-time's DateTime does not work
  ******************************************************************************/
+// Contributors:
+//     07/16/2013-2.5.1 Guy Pelletier
+//       - 412384: Applying Converter for parameterized basic-type for joda-time's DateTime does not work
 package org.eclipse.persistence.testing.models.jpa21.advanced.converters;
 
 import java.util.ArrayList;

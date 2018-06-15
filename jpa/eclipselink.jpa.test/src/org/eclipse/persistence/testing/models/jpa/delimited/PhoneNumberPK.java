@@ -10,6 +10,8 @@
  * Contributors:
  *     tware - add for testing JPA 2.0 delimited identifiers
  ******************************************************************************/
+// Contributors:
+//     tware - add for testing JPA 2.0 delimited identifiers
 
 
 package org.eclipse.persistence.testing.models.jpa.delimited;

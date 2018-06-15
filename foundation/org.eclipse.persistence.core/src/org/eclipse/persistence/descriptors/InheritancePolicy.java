@@ -18,6 +18,16 @@
  *     08/01/2012-2.5 Chris Delahunt
  *       - 371950: Metadata caching
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation from Oracle TopLink
+//     04/01/2011-2.3 Guy Pelletier
+//       - 337323: Multi-tenant with shared schema support (part 2)
+//     08/18/2011-2.3.1 Guy Pelletier
+//       - 355093: Add new 'includeCriteria' flag to Multitenant metadata
+//     09/09/2011-2.3.1 Guy Pelletier
+//       - 356197: Add new VPD type to MultitenantType
+//     08/01/2012-2.5 Chris Delahunt
+//       - 371950: Metadata caching
 package org.eclipse.persistence.descriptors;
 
 import java.io.*;

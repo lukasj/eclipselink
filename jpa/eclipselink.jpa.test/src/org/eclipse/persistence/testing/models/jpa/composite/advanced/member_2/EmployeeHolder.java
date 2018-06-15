@@ -10,6 +10,8 @@
  * Contributors:
  *     tware - added for  Bug 324406 - Wrong Index in ReportItem when @Embeddable Objects are used in ReportQuery
  ******************************************************************************/
+// Contributors:
+//     tware - added for  Bug 324406 - Wrong Index in ReportItem when @Embeddable Objects are used in ReportQuery
 package org.eclipse.persistence.testing.models.jpa.composite.advanced.member_2;
 
 /**

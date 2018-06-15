@@ -10,6 +10,8 @@
  * Contributors:
  * Martin Vojtek - July 8/2014
  ******************************************************************************/
+// Contributors:
+// Martin Vojtek - July 8/2014
 @XmlNullPolicy(nullRepresentationForXml = org.eclipse.persistence.oxm.annotations.XmlMarshalNullRepresentation.XSI_NIL)
 package org.eclipse.persistence.testing.jaxb.externalizedmetadata.xmlnullpolicy.packageleveloverride;
 

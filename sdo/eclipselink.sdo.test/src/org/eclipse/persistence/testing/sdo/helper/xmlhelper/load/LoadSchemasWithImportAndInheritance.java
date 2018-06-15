@@ -10,6 +10,8 @@
  * Contributors:
  * dmccann - Jan 28/2009 - 1.1 - Initial implementation
  ******************************************************************************/
+// Contributors:
+// dmccann - Jan 28/2009 - 1.1 - Initial implementation
 package org.eclipse.persistence.testing.sdo.helper.xmlhelper.load;
 
 import java.io.FileInputStream;

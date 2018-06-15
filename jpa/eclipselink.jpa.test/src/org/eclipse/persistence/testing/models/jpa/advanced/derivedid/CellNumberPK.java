@@ -11,6 +11,9 @@
  *     11/16/2009-2.0 Guy Pelletier
  *       - 288392: With Identity sequencing entity with dependant ID can be sent to DB multiple times
  ******************************************************************************/
+// Contributors:
+//     11/16/2009-2.0 Guy Pelletier
+//       - 288392: With Identity sequencing entity with dependant ID can be sent to DB multiple times
 package org.eclipse.persistence.testing.models.jpa.advanced.derivedid;
 
 public class CellNumberPK {

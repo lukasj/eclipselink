@@ -10,6 +10,8 @@
  * Contributors:
  *     Marcel Valovy - 2.6 - initial implementation
  ******************************************************************************/
+// Contributors:
+//     Marcel Valovy - 2.6 - initial implementation
 package org.eclipse.persistence.testing.perf.moxy.referenceresolver;
 
 import javax.xml.bind.annotation.XmlAccessType;

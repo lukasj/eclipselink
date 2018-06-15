@@ -10,6 +10,8 @@
  * Contributors:
  *      gonural - Initial implementation
  ******************************************************************************/
+// Contributors:
+//      gonural - Initial implementation
 package org.eclipse.persistence.jpars.test.service.noversion;
 
 import org.eclipse.persistence.jpars.test.BaseJparsTest;

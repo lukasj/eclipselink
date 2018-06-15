@@ -15,6 +15,13 @@
  *     11/23/2010-2.2 Guy Pelletier
  *       - 330660: Canonical model generator throws ClassCastException when using package-info.java
  ******************************************************************************/
+// Contributors:
+//     08/10/2009-2.0 Guy Pelletier
+//       - 267391: JPA 2.0 implement/extend/use an APT tooling library for MetaModel API canonical classes
+//     08/25/2010-2.2 Guy Pelletier
+//       - 309445: CannonicalModelProcessor process all files
+//     11/23/2010-2.2 Guy Pelletier
+//       - 330660: Canonical model generator throws ClassCastException when using package-info.java
 package org.eclipse.persistence.internal.jpa.modelgen.visitors;
 
 import static org.eclipse.persistence.internal.jpa.metadata.MetadataConstants.ECLIPSELINK_PERSISTENCE_PACKAGE_PREFIX;

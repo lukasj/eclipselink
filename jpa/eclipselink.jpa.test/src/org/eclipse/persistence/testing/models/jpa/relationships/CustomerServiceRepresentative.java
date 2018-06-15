@@ -10,6 +10,8 @@
  * Contributors:
  *     tware - bug 282571 testing of ManyToMany Map with Entity key and Entity value
  ******************************************************************************/
+// Contributors:
+//     tware - bug 282571 testing of ManyToMany Map with Entity key and Entity value
 package org.eclipse.persistence.testing.models.jpa.relationships;
 
 import static javax.persistence.CascadeType.ALL;

@@ -11,6 +11,9 @@
  *     09/16/2010-2.2 Guy Pelletier
  *       - 283028: Add support for letting an @Embeddable extend a @MappedSuperclass
  ******************************************************************************/
+// Contributors:
+//     09/16/2010-2.2 Guy Pelletier
+//       - 283028: Add support for letting an @Embeddable extend a @MappedSuperclass
 package org.eclipse.persistence.testing.models.jpa.inherited;
 
 import javax.persistence.AttributeOverride;

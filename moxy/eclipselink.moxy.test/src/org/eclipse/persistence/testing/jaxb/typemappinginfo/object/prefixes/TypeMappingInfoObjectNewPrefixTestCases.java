@@ -10,6 +10,8 @@
  * Contributors:
  *    2.3.1
  ******************************************************************************/
+// Contributors:
+//    2.3.1
 package org.eclipse.persistence.testing.jaxb.typemappinginfo.object.prefixes;
 
 import java.io.InputStream;

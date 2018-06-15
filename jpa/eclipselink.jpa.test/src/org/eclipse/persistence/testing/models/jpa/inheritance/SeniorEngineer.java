@@ -10,6 +10,8 @@
  * Contributors:
  *     Oracle - added as part of fix for bug 303514
  ******************************************************************************/
+// Contributors:
+//     Oracle - added as part of fix for bug 303514
 package org.eclipse.persistence.testing.models.jpa.inheritance;
 
 import javax.persistence.DiscriminatorValue;

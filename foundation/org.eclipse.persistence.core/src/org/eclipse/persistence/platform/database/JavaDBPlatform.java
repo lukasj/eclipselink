@@ -11,6 +11,9 @@
 *     Oracle - initial API and implementation from Oracle TopLink
 *     Sun Microsystems
 ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation from Oracle TopLink
+//     Sun Microsystems
 
 package org.eclipse.persistence.platform.database;
 

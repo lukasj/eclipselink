@@ -10,6 +10,8 @@
  * Contributors:
  * dmccann - November 18/2009 - 2.0 - Initial implementation
  ******************************************************************************/
+// Contributors:
+// dmccann - November 18/2009 - 2.0 - Initial implementation
 package org.eclipse.persistence.testing.jaxb.externalizedmetadata.xmlattachmentref;
 
 import java.util.HashMap;

@@ -10,6 +10,8 @@
  * Contributors:
  *     Denise Smith - December 15, 2009
  ******************************************************************************/
+// Contributors:
+//     Denise Smith - December 15, 2009
 package org.eclipse.persistence.testing.oxm.mappings.binarydata.identifiedbyname;
 
 import org.eclipse.persistence.oxm.NamespaceResolver;

@@ -17,6 +17,15 @@
  *     11/28/2012-2.5 Guy Pelletier
  *       - 374688: JPA 2.1 Converter support
  ******************************************************************************/
+// Contributors:
+//     10/09/2012-2.5 Guy Pelletier
+//       - 374688: JPA 2.1 Converter support
+//     10/25/2012-2.5 Guy Pelletier
+//       - 374688: JPA 2.1 Converter support
+//     10/30/2012-2.5 Guy Pelletier
+//       - 374688: JPA 2.1 Converter support
+//     11/28/2012-2.5 Guy Pelletier
+//       - 374688: JPA 2.1 Converter support
 package org.eclipse.persistence.internal.jpa.metadata.converters;
 
 import org.eclipse.persistence.exceptions.ValidationException;

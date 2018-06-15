@@ -10,6 +10,8 @@
  * Contributors:
  *     Oracle - initial API and implementation
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation
 package org.eclipse.persistence.internal.helper;
 
 import javax.xml.XMLConstants;

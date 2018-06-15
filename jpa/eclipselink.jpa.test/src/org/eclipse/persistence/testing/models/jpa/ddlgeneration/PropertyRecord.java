@@ -11,6 +11,9 @@
  *     01/22/2010-2.0.1 Karen Moore
  *       - 294361: incorrect generated table for element collection attribute overrides
  ******************************************************************************/
+// Contributors:
+//     01/22/2010-2.0.1 Karen Moore
+//       - 294361: incorrect generated table for element collection attribute overrides
 package org.eclipse.persistence.testing.models.jpa.ddlgeneration;
 
 import java.util.HashMap;

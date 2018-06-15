@@ -10,6 +10,8 @@
  * Contributors:
  * David McCann - 2.4 - Initial implementation
  ******************************************************************************/
+// Contributors:
+// David McCann - 2.4 - Initial implementation
 package org.eclipse.persistence.tools.dbws;
 
 import static org.eclipse.persistence.internal.oxm.Constants.SCHEMA_PREFIX;

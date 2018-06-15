@@ -23,6 +23,21 @@
  *     11/23/2010-2.2 Guy Pelletier
  *       - 330660: Canonical model generator throws ClassCastException when using package-info.java
  ******************************************************************************/
+// Contributors:
+//     08/10/2009-2.0 Guy Pelletier
+//       - 267391: JPA 2.0 implement/extend/use an APT tooling library for MetaModel API canonical classes
+//     04/27/2010-2.1 Guy Pelletier
+//       - 309856: MappedSuperclasses from XML are not being initialized properly
+//     06/14/2010-2.2 Guy Pelletier
+//       - 264417: Table generation is incorrect for JoinTables in AssociationOverrides
+//     08/12/2010-2.2 Guy Pelletier
+//       - 298118: canonical metamodel generation with untyped Map throws NPE
+//     08/25/2010-2.2 Guy Pelletier
+//       - 309445: CannonicalModelProcessor process all files
+//     10/18/2010-2.2 Guy Pelletier
+//       - 322921: OutOfMemory in annotation processor
+//     11/23/2010-2.2 Guy Pelletier
+//       - 330660: Canonical model generator throws ClassCastException when using package-info.java
 package org.eclipse.persistence.internal.jpa.modelgen;
 
 import static org.eclipse.persistence.config.PersistenceUnitProperties.ECLIPSELINK_PERSISTENCE_XML;

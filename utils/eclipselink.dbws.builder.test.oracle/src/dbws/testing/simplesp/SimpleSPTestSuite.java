@@ -11,6 +11,9 @@
  *     Mike Norman - June 10 2011, created DDL parser package
  *     David McCann - July 2011, visit tests
  ******************************************************************************/
+// Contributors:
+//     Mike Norman - June 10 2011, created DDL parser package
+//     David McCann - July 2011, visit tests
 package dbws.testing.simplesp;
 
 import static org.eclipse.persistence.internal.xr.QueryOperation.ORACLEOPAQUE_STR;

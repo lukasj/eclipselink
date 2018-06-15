@@ -11,6 +11,9 @@
  *     07/23/2010-2.1.1 Chris Delahunt
  *       - 316045 : eclipselink.jpa.uppercase-column-names is causing field names to be uppercase in generated SQL
  ******************************************************************************/
+// Contributors:
+//     07/23/2010-2.1.1 Chris Delahunt
+//       - 316045 : eclipselink.jpa.uppercase-column-names is causing field names to be uppercase in generated SQL
 package org.eclipse.persistence.testing.models.jpa.advanced;
 
 import org.eclipse.persistence.tools.schemaframework.FieldDefinition;

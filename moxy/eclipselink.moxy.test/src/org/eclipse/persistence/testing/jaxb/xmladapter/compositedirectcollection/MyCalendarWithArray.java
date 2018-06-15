@@ -10,6 +10,8 @@
  * Contributors:
  * Matt MacIvor - August 2011
  ******************************************************************************/
+// Contributors:
+// Matt MacIvor - August 2011
 package org.eclipse.persistence.testing.jaxb.xmladapter.compositedirectcollection;
 
 import java.util.ArrayList;

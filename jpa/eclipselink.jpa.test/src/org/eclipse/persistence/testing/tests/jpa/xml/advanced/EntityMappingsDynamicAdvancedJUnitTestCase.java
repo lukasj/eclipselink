@@ -24,6 +24,22 @@
  *     08/20/2012-2.4 Guy Pelletier
  *       - 381079: EclipseLink dynamic entity does not support embedded-id
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation from Oracle TopLink
+//     09/23/2008-1.1 Guy Pelletier
+//       - 241651: JPA 2.0 Access Type support
+//     03/08/2010-2.1 Guy Pelletier
+//       - 303632: Add attribute-type for mapping attributes to EclipseLink-ORM
+//     03/29/2010-2.1 Guy Pelletier
+//       - 267217: Add Named Access Type to EclipseLink-ORM
+//     04/09/2010-2.1 Guy Pelletier
+//       - 307050: Add defaults for access methods of a VIRTUAL access type
+//     07/05/2010-2.1.1 Guy Pelletier
+//       - 317708: Exception thrown when using LAZY fetch on VIRTUAL mapping
+//     11/17/2010-2.2 Guy Pelletier
+//       - 329008: Support dynamic context creation without persistence.xml
+//     08/20/2012-2.4 Guy Pelletier
+//       - 381079: EclipseLink dynamic entity does not support embedded-id
 package org.eclipse.persistence.testing.tests.jpa.xml.advanced;
 
 import java.lang.reflect.Method;

@@ -16,6 +16,14 @@
  *     07/15/2011-2.2.1 Guy Pelletier
  *       - 349424: persists during an preCalculateUnitOfWorkChangeSet event are lost
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation from Oracle TopLink
+//     01/05/2010-2.1 Guy Pelletier
+//       - 211324: Add additional event(s) support to the EclipseLink-ORM.XML Schema
+//     01/26/2011-2.3 Guy Pelletier
+//       - 307664: Lifecycle callbacks not called for object from IndirectSet
+//     07/15/2011-2.2.1 Guy Pelletier
+//       - 349424: persists during an preCalculateUnitOfWorkChangeSet event are lost
 package org.eclipse.persistence.testing.tests.jpa.inheritance;
 
 import java.util.List;

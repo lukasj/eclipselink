@@ -10,6 +10,8 @@
  * Contributors:
  *     Vikram Bhatia - initial
  ******************************************************************************/
+// Contributors:
+//     Vikram Bhatia - initial
 package org.eclipse.persistence.testing.tests.queries;
 
 import org.eclipse.persistence.testing.models.employee.domain.*;

@@ -15,6 +15,14 @@
  * may never be included in the product. Please provide feedback through mailing
  * lists or the bug database.
  ******************************************************************************/
+// Contributors:
+// SAP AG - Initial implementation, enhancement bug 380226
+//
+// This code is being developed under INCUBATION and is not currently included
+// in the automated EclipseLink build. The API in this code may change, or
+// may never be included in the product. Please provide feedback through mailing
+// lists or the bug database.
+// CPR:: Copyright (c) 2012, 2015 SAP, Oracle and/or its affiliates. All rights reserved.
 package org.eclipse.persistence.platform.database;
 
 import java.io.IOException;

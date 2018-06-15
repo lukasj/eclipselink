@@ -10,6 +10,8 @@
  * Contributors:
  *     David McCann - June 28, 2012 - 2.4.1 - Initial implementation
  ******************************************************************************/
+// Contributors:
+//     David McCann - June 28, 2012 - 2.4.1 - Initial implementation
 package dbws.testing.simplenestedtable;
 
 //javase imports

@@ -10,6 +10,8 @@
  * Contributors:
  *     05/05/2011-2.3 Chris Delahunt
  ******************************************************************************/
+// Contributors:
+//     05/05/2011-2.3 Chris Delahunt
 package org.eclipse.persistence.jpa.metadata;
 
 import java.util.Map;

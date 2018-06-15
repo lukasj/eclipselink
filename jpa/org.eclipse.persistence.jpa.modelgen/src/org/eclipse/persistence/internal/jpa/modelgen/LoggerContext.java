@@ -11,6 +11,9 @@
  *     02/22/2018-3.0 Tomas Kraus
  *       - 433205: Canonical Model Generator is too verbose, no way to disable output
  ******************************************************************************/
+// Contributors:
+//     02/22/2018-3.0 Tomas Kraus
+//       - 433205: Canonical Model Generator is too verbose, no way to disable output
 package org.eclipse.persistence.internal.jpa.modelgen;
 
 import static org.eclipse.persistence.internal.jpa.modelgen.CanonicalModelProperties.CANONICAL_MODEL_GLOBAL_LOG_LEVEL;

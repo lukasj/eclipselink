@@ -11,6 +11,9 @@
  *     03/27/2009-2.0 Guy Pelletier
  *       - 241413: JPA 2.0 Add EclipseLink support for Map type attributes
  ******************************************************************************/
+// Contributors:
+//     03/27/2009-2.0 Guy Pelletier
+//       - 241413: JPA 2.0 Add EclipseLink support for Map type attributes
 package org.eclipse.persistence.testing.models.jpa.xml.inherited;
 
 public class Heineken extends Beer implements Cloneable {

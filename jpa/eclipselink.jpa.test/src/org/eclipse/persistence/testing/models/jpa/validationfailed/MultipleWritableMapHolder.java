@@ -10,6 +10,8 @@
  * Contributors:
  *     tware - test for bug 293827
  ******************************************************************************/
+// Contributors:
+//     tware - test for bug 293827
 package org.eclipse.persistence.testing.models.jpa.validationfailed;
 
 import static javax.persistence.CascadeType.ALL;

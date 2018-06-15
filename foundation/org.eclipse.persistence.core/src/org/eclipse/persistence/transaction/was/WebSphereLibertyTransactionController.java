@@ -12,6 +12,11 @@
  *     03/15/2016 Jody Grassel
  *       - 489794: Add support for WebSphere EJBEmbeddable platform.
  ******************************************************************************/
+// Contributors:
+//     Rick Curtis - Initial implementation.
+//     03/15/2016 Jody Grassel
+//       - 489794: Add support for WebSphere EJBEmbeddable platform.
+// CPR:: Copyright (c) 2014, 2018 IBM Corporation. All rights reserved.
 package org.eclipse.persistence.transaction.was;
 
 public class WebSphereLibertyTransactionController extends WebSphereTransactionController {

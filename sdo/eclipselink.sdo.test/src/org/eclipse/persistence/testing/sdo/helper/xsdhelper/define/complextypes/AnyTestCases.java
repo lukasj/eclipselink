@@ -10,6 +10,8 @@
 * Contributors:
 *     bdoughan - February 3/2010 - 2.0.1 - Initial implementation
 ******************************************************************************/
+// Contributors:
+//     bdoughan - February 3/2010 - 2.0.1 - Initial implementation
 package org.eclipse.persistence.testing.sdo.helper.xsdhelper.define.complextypes;
 
 import commonj.sdo.Type;

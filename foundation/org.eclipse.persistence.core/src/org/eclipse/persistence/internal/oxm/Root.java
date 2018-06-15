@@ -10,6 +10,8 @@
  * Contributors:
  *    Denise Smith - 2.5
  ******************************************************************************/
+// Contributors:
+//    Denise Smith - 2.5
 package org.eclipse.persistence.internal.oxm;
 
 import javax.xml.namespace.QName;

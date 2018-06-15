@@ -19,6 +19,17 @@
  *     14/05/2012-2.4 Guy Pelletier
  *       - 376603: Provide for table per tenant support for multitenant applications
  ******************************************************************************/
+// Contributors:
+//     03/23/2011-2.3 Guy Pelletier
+//       - 337323: Multi-tenant with shared schema support (part 1)
+//     04/01/2011-2.3 Guy Pelletier
+//       - 337323: Multi-tenant with shared schema support (part 2)
+//     04/21/2011-2.3 Guy Pelletier
+//       - 337323: Multi-tenant with shared schema support (part 5)
+//     06/30/2011-2.3.1 Guy Pelletier
+//       - 341940: Add disable/enable allowing native queries
+//     14/05/2012-2.4 Guy Pelletier
+//       - 376603: Provide for table per tenant support for multitenant applications
 package org.eclipse.persistence.testing.tests.jpa.xml.advanced;
 
 import static org.eclipse.persistence.testing.models.jpa.xml.advanced.multitenant.Mafioso.Gender.Female;

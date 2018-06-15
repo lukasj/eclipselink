@@ -10,6 +10,8 @@
  * Contributors:
  *     tware - added WebSphere_7_Platform for EclipseLink 2.0
  ******************************************************************************/
+// Contributors:
+//     tware - added WebSphere_7_Platform for EclipseLink 2.0
 package org.eclipse.persistence.internal.sessions.factories.model.platform;
 
 /**

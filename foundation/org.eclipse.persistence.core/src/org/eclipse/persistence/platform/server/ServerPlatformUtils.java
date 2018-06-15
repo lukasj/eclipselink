@@ -13,6 +13,12 @@
  *     04/24/2015 Rick Curtis
  *       - 465452: Throw ServerPlatformException rather than NPE on create null platformClass
  ******************************************************************************/
+// Contributors:
+//     01/05/2015 Rick Curtis
+//       - 455683: Automatically detect target server
+//     04/24/2015 Rick Curtis
+//       - 465452: Throw ServerPlatformException rather than NPE on create null platformClass
+// CPR:: Copyright (c) 2015 IBM Corporation, Oracle. All rights reserved.
 package org.eclipse.persistence.platform.server;
 
 import java.lang.reflect.Constructor;

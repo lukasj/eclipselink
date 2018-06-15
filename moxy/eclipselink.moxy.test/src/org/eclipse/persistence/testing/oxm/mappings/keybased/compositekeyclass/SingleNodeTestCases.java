@@ -10,6 +10,8 @@
 * Contributors:
 *     bdoughan - Nov 2/2009 - 2.0 - Initial implementation
 ******************************************************************************/
+// Contributors:
+//     bdoughan - Nov 2/2009 - 2.0 - Initial implementation
 package org.eclipse.persistence.testing.oxm.mappings.keybased.compositekeyclass;
 
 public class SingleNodeTestCases extends CompositeKeyClassTestCases {

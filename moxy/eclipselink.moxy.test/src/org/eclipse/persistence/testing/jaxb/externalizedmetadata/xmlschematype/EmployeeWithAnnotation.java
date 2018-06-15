@@ -11,6 +11,9 @@
  * dmccann - December 08/2009 - 2.0 - Initial implementation
  * Martin Vojtek - November 14/2014 - 2.6 - Added XmlIDExtension
  ******************************************************************************/
+// Contributors:
+// dmccann - December 08/2009 - 2.0 - Initial implementation
+// Martin Vojtek - November 14/2014 - 2.6 - Added XmlIDExtension
 package org.eclipse.persistence.testing.jaxb.externalizedmetadata.xmlschematype;
 
 import org.eclipse.persistence.oxm.annotations.XmlIDExtension;

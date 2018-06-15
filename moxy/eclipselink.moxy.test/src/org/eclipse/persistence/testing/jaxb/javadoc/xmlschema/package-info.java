@@ -10,6 +10,8 @@
  * Contributors:
  *     Praba Vijayaratnam - 2.3 - initial implementation
  ******************************************************************************/
+// Contributors:
+//     Praba Vijayaratnam - 2.3 - initial implementation
 @XmlSchema(
         elementFormDefault = XmlNsForm.UNQUALIFIED,
           namespace = "http://www.example.com/MYPO1"

@@ -12,6 +12,10 @@
  *     @author  mobrien
  *     @since   EclipseLink 1.0 enh# 235168
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation from Oracle TopLink
+//     @author  mobrien
+//     @since   EclipseLink 1.0 enh# 235168
 package org.eclipse.persistence.services.mbean;
 
 import org.eclipse.persistence.services.RuntimeServices;

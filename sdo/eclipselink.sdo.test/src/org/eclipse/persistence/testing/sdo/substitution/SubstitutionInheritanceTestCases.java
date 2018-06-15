@@ -10,6 +10,8 @@
  * Contributors:
  *      rbarkhouse - 2013 July 05 - 2.5.1 - Initial implementation
  ******************************************************************************/
+// Contributors:
+//      rbarkhouse - 2013 July 05 - 2.5.1 - Initial implementation
 package org.eclipse.persistence.testing.sdo.substitution;
 
 import java.util.List;

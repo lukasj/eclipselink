@@ -10,6 +10,8 @@
  * Contributors:
  *     Oracle - initial API and implementation from Oracle TopLink
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation from Oracle TopLink
 
 // $ANTLR 3.5.2 org/eclipse/persistence/internal/jpa/parsing/jpql/antlr/JPQL.g 2016-05-10 11:03:30
 

@@ -11,6 +11,9 @@
  *     03/29/2010-2.1 Guy Pelletier
  *       - 267217: Add Named Access Type to EclipseLink-ORM
  ******************************************************************************/
+// Contributors:
+//     03/29/2010-2.1 Guy Pelletier
+//       - 267217: Add Named Access Type to EclipseLink-ORM
 package org.eclipse.persistence.testing.models.jpa.xml.advanced;
 
 import static org.eclipse.persistence.annotations.ChangeTrackingType.DEFERRED;

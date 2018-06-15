@@ -10,6 +10,8 @@
  * Contributors:
  *      tware - Initial implementation
  ******************************************************************************/
+// Contributors:
+//      tware - Initial implementation
 package org.eclipse.persistence.jpars.test.service.noversion;
 
 import org.eclipse.persistence.config.PersistenceUnitProperties;

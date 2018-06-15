@@ -10,6 +10,8 @@
  * Contributors:
  *     Marcel Valovy - 2.6 - initial implementation
  ******************************************************************************/
+// Contributors:
+//     Marcel Valovy - 2.6 - initial implementation
 package org.eclipse.persistence.testing.osgi;
 
 import java.util.logging.Level;

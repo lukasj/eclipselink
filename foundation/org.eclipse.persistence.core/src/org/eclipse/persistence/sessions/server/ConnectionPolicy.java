@@ -11,6 +11,9 @@
  *     Oracle - initial API and implementation from Oracle TopLink
  *     ailitchev - bug  235433: Can't customize ConnectionPolicy through JPA + some comments.
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation from Oracle TopLink
+//     ailitchev - bug  235433: Can't customize ConnectionPolicy through JPA + some comments.
 package org.eclipse.persistence.sessions.server;
 
 import java.util.*;

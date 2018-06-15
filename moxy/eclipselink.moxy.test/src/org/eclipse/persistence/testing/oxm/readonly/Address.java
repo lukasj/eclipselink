@@ -10,6 +10,8 @@
  * Contributors:
  *     Oracle - initial API and implementation from Oracle TopLink
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation from Oracle TopLink
 package org.eclipse.persistence.testing.oxm.readonly;
 /**
  *  @version $Header: Address.java 27-nov-2003.16:46:41 mmacivor Exp $

@@ -10,6 +10,8 @@
  * Contributors:
  *     Matt MacIvor - 2.3 - Initial implementation
  ******************************************************************************/
+// Contributors:
+//     Matt MacIvor - 2.3 - Initial implementation
 package org.eclipse.persistence.testing.jaxb.schemagen.inheritance;
 
 import javax.xml.bind.annotation.XmlType;

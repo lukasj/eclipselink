@@ -11,6 +11,9 @@
  *     12/17/2010-2.2 Guy Pelletier
  *       - 330755: Nested embeddables can't be used as embedded ids
  ******************************************************************************/
+// Contributors:
+//     12/17/2010-2.2 Guy Pelletier
+//       - 330755: Nested embeddables can't be used as embedded ids
 package org.eclipse.persistence.testing.models.jpa.complexaggregate;
 
 import javax.persistence.EmbeddedId;

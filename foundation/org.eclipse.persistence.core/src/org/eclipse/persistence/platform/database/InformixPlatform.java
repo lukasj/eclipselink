@@ -14,6 +14,13 @@
  *     02/19/2015 - Rick Curtis
  *       - 458877 : Add national character support
  *****************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation from Oracle TopLink
+//     12/11/2014 - Dalia Abo Sheasha
+//       - 454917 : Wrong SQL statement generated for Informix when GenerationType.IDENTITY strategy is used
+//     02/19/2015 - Rick Curtis
+//       - 458877 : Add national character support
+// CPR:: Copyright (c) 1998, 2015 Oracle, IBM Corporation and/or its affiliates. All rights reserved.
 package org.eclipse.persistence.platform.database;
 
 import java.io.IOException;

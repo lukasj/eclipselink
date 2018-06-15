@@ -10,6 +10,8 @@
  * Contributors:
  *     matt.macivor - added as part of fix for SDO 2.1.1 TCK typeHelper test cases
  ******************************************************************************/
+// Contributors:
+//     matt.macivor - added as part of fix for SDO 2.1.1 TCK typeHelper test cases
 package org.eclipse.persistence.sdo.helper.metadata;
 
 import org.eclipse.persistence.mappings.DatabaseMapping;

@@ -10,6 +10,8 @@
  * Contributors:
  *     Gordon Yorke - initial development
  ******************************************************************************/
+// Contributors:
+//     Gordon Yorke - initial development
 package org.eclipse.persistence.testing.models.jpa.cacheable;
 
 import static javax.persistence.GenerationType.TABLE;

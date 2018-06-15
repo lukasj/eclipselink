@@ -10,6 +10,8 @@
  * Contributors:
  *      tware - initial
  ******************************************************************************/
+// Contributors:
+//      tware - initial
 package org.eclipse.persistence.jpars.test.crud;
 
 import static org.junit.Assert.assertNotNull;

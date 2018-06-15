@@ -10,6 +10,8 @@
  * Contributors:
  *     Gordon Yorke - initial implementation
  ******************************************************************************/
+// Contributors:
+//     Gordon Yorke - initial implementation
 package org.eclipse.persistence.internal.indirection;
 
 import org.eclipse.persistence.indirection.ValueHolderInterface;

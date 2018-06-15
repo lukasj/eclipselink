@@ -10,6 +10,8 @@
  * Contributors:
  *     Radek Felcman - April 2018 - 2.7.2
  ******************************************************************************/
+// Contributors:
+//     Radek Felcman - April 2018 - 2.7.2
 package org.eclipse.persistence.testing.jaxb.json.nil;
 
 import org.eclipse.persistence.testing.jaxb.json.JSONMarshalUnmarshalTestCases;

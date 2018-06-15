@@ -11,6 +11,8 @@
  * Contributors:
  *  - rbarkhouse - 24 April 2013 - 2.4 - Initial implementation
  ******************************************************************************/
+// Contributors:
+//  - rbarkhouse - 24 April 2013 - 2.4 - Initial implementation
 package org.eclipse.persistence.testing.jaxb.externalizedmetadata.xmlaccessortype.inheritance;
 
 public class TestClass extends TestSuperclass {

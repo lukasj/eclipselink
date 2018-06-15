@@ -11,6 +11,9 @@
  *     May 28, 2012 - ailitchev
  *        - Bug 341709 - Delete fails with DB constraint violation due to an internal update
  ******************************************************************************/
+// Contributors:
+//     May 28, 2012 - ailitchev
+//        - Bug 341709 - Delete fails with DB constraint violation due to an internal update
 package org.eclipse.persistence.testing.models.jpa.fieldaccess.advanced;
 
 import java.io.Serializable;

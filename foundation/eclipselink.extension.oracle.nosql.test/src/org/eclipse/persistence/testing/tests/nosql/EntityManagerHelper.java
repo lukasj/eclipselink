@@ -11,6 +11,9 @@
  *     04/11/2016-2.7 Tomas Kraus
  *       - 490677: Initial API and implementation.
  ******************************************************************************/
+// Contributors:
+//     04/11/2016-2.7 Tomas Kraus
+//       - 490677: Initial API and implementation.
 package org.eclipse.persistence.testing.tests.nosql;
 
 import static org.junit.Assert.assertTrue;

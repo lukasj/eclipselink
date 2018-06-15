@@ -10,6 +10,8 @@
  * Contributors:
  *      dclarke/tware - initial
  ******************************************************************************/
+// Contributors:
+//      dclarke/tware - initial
 package org.eclipse.persistence.jpars.test.model.weaving;
 
 import javax.ejb.Singleton;

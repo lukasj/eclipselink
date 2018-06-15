@@ -10,6 +10,8 @@
 * Contributors:
 *    Denise Smith - June 2013
 ******************************************************************************/
+// Contributors:
+//    Denise Smith - June 2013
 package org.eclipse.persistence.testing.jaxb.xmlelementref;
 
 import java.util.List;

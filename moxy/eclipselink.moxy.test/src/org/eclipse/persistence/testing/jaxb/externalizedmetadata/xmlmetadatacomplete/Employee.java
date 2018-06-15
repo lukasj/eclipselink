@@ -10,6 +10,8 @@
  * Contributors:
  * dmccann - November 09/2010 - 2.2 - Initial implementation
  ******************************************************************************/
+// Contributors:
+// dmccann - November 09/2010 - 2.2 - Initial implementation
 package org.eclipse.persistence.testing.jaxb.externalizedmetadata.xmlmetadatacomplete;
 
 import java.util.List;

@@ -15,6 +15,13 @@
  *     02/06/2013-2.5 Guy Pelletier
  *       - 382503: Use of @ConstructorResult with createNativeQuery(sqlString, resultSetMapping) results in NullPointerException
  ******************************************************************************/
+// Contributors:
+//     02/08/2012-2.4 Guy Pelletier
+//       - 350487: JPA 2.1 Specification defined support for Stored Procedure Calls
+//     08/24/2012-2.5 Guy Pelletier
+//       - 350487: JPA 2.1 Specification defined support for Stored Procedure Calls
+//     02/06/2013-2.5 Guy Pelletier
+//       - 382503: Use of @ConstructorResult with createNativeQuery(sqlString, resultSetMapping) results in NullPointerException
 package org.eclipse.persistence.queries;
 
 import java.lang.reflect.Constructor;

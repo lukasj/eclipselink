@@ -13,6 +13,12 @@
  *     09/03/2015 - Will Dazey
  *       - 456067 : Added tests to check query timeout units
  ******************************************************************************/
+// Contributors:
+//     06/30/2015-2.6.0 Will Dazey
+//       - 471487: Added test for QueryHints.JDBC_TIMEOUT that checks the executed sql statement
+//     09/03/2015 - Will Dazey
+//       - 456067 : Added tests to check query timeout units
+// CPR:: Copyright (c) 2015 IBM Corporation. All rights reserved.
 package org.eclipse.persistence.jpa.test.query;
 
 import java.lang.reflect.InvocationHandler;

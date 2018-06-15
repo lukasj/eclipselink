@@ -11,6 +11,8 @@
  * Contributors:
  *  - rbarkhouse - 04 October 2011 - 2.4 - Initial implementation
  ******************************************************************************/
+// Contributors:
+//  - rbarkhouse - 04 October 2011 - 2.4 - Initial implementation
 package org.eclipse.persistence.testing.jaxb.sun.xmllocation;
 
 import javax.xml.bind.JAXBContext;

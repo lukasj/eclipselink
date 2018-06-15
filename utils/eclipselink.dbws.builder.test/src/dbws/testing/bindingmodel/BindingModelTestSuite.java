@@ -11,6 +11,9 @@
  *     Mike Norman - April 21, 2010
  *        fix for bug 309002
  ******************************************************************************/
+// Contributors:
+//     Mike Norman - April 21, 2010
+//        fix for bug 309002
 package dbws.testing.bindingmodel;
 
 //javase imports

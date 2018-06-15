@@ -10,6 +10,8 @@
  * Contributors:
  *     Guy Pelletier - initial API and implementation
  ******************************************************************************/
+// Contributors:
+//     Guy Pelletier - initial API and implementation
 package org.eclipse.persistence.internal.jpa.config.columns;
 
 import org.eclipse.persistence.internal.jpa.metadata.columns.PrimaryKeyJoinColumnMetadata;

@@ -10,6 +10,8 @@
  * Contributors:
  *     Tomas Kraus - Initial API and implementation
  ******************************************************************************/
+// Contributors:
+//     Tomas Kraus - Initial API and implementation
 package org.eclipse.persistence.testing.models.jpa.cacheable;
 
 import javax.persistence.Cacheable;

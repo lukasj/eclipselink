@@ -10,6 +10,9 @@
  *      05/01/2015 - 2.6.0 - Lukas Jungmann
  *        - 455905: initial implementation
  ******************************************************************************/
+// Contributors:
+//      05/01/2015 - 2.6.0 - Lukas Jungmann
+//        - 455905: initial implementation
 package org.eclipse.persistence.testing.tests.jpa.advanced.multitenant;
 
 import java.io.PrintWriter;

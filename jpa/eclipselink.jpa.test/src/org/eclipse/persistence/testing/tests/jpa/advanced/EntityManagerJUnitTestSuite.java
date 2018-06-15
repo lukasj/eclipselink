@@ -19,6 +19,18 @@
  *     01/15/2015-2.6 Mythily Parthasarathy
  *       - 457480: NPE in  MethodAttributeAccessor.getAttributeValueFromObject
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation from Oracle TopLink
+//     27/07/2010 - 2.1.1 Sabine Heider
+//          304650: fix left over entity data interfering with testSetRollbackOnly
+//     11/17/2010-2.2 Michael O'Brien
+//       - 325605: Do not track SQL category logs in QuerySQLTracker logged at FINEST
+//         testDeleteEmployee//() will fail on DB2 9.7 Universal because cascade deletes
+//         of an uninstantiated collection of enums must inherently be deleted even if
+//         the actual collection is empty.  DB2 warns of nothing deleted - we convert it to a FINEST log
+//     01/15/2015-2.6 Mythily Parthasarathy
+//       - 457480: NPE in  MethodAttributeAccessor.getAttributeValueFromObject
+// CPR:: Copyright (c) 1998, 2018 Oracle and/or its affiliates, IBM Corporation. All rights reserved.
 package org.eclipse.persistence.testing.tests.jpa.advanced;
 
 import java.io.ByteArrayInputStream;

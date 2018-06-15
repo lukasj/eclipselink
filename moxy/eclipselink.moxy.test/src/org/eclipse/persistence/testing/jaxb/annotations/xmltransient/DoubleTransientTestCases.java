@@ -10,6 +10,8 @@
  * Contributors:
  *     Rick Barkhouse - 2.3.3 - initial implementation
  ******************************************************************************/
+// Contributors:
+//     Rick Barkhouse - 2.3.3 - initial implementation
 package org.eclipse.persistence.testing.jaxb.annotations.xmltransient;
 
 import java.io.InputStream;

@@ -10,6 +10,8 @@
  * Contributors:
  *     Oracle - Dec 2008 proof-of-concept
  ******************************************************************************/
+// Contributors:
+//     Oracle - Dec 2008 proof-of-concept
 package org.eclipse.persistence.platform.database.oracle.plsql;
 
 //javase imports

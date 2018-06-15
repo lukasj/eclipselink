@@ -11,6 +11,9 @@
  *     01/19/2010-2.1 Guy Pelletier
  *       - 211322: Add fetch-group(s) support to the EclipseLink-ORM.XML Schema
  ******************************************************************************/
+// Contributors:
+//     01/19/2010-2.1 Guy Pelletier
+//       - 211322: Add fetch-group(s) support to the EclipseLink-ORM.XML Schema
 package org.eclipse.persistence.testing.models.jpa.advanced.fetchgroup;
 
 import javax.persistence.Column;

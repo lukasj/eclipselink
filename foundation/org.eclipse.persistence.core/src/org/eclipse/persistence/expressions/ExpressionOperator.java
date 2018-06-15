@@ -15,6 +15,13 @@
  *     01/23/2018-2.7 Will Dazey
  *       - 530214: trim operation should not bind parameters
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation from Oracle TopLink
+//     Markus Karg - allow arguments to be specified multiple times in argumentIndices
+//     05/07/2009-1.1.1 Dave Brosius
+//       - 263904: [PATCH] ExpressionOperator doesn't compare arrays correctly
+//     01/23/2018-2.7 Will Dazey
+//       - 530214: trim operation should not bind parameters
 package org.eclipse.persistence.expressions;
 
 import java.io.IOException;

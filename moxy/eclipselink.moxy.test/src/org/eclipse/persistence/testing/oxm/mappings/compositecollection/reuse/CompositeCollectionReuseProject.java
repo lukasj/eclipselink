@@ -10,6 +10,8 @@
  * Contributors:
  *     rbarkhouse - 2009-10-09 14:17:31 - initial implementation
  ******************************************************************************/
+// Contributors:
+//     rbarkhouse - 2009-10-09 14:17:31 - initial implementation
 package org.eclipse.persistence.testing.oxm.mappings.compositecollection.reuse;
 
 import org.eclipse.persistence.oxm.mappings.XMLCompositeCollectionMapping;

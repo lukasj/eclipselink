@@ -10,6 +10,8 @@
 * Contributors:
 *     bdoughan - March 11/2010 - 2.0.2 - Initial implementation
 ******************************************************************************/
+// Contributors:
+//     bdoughan - March 11/2010 - 2.0.2 - Initial implementation
 package org.eclipse.persistence.testing.oxm.mappings.compositecollection.norefclass;
 
 import java.util.ArrayList;

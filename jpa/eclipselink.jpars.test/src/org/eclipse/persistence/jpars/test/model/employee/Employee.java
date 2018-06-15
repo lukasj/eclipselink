@@ -10,6 +10,8 @@
  * Contributors:
  *         gonural - Initial implementation
  ******************************************************************************/
+// Contributors:
+//         gonural - Initial implementation
 package org.eclipse.persistence.jpars.test.model.employee;
 
 import org.eclipse.persistence.annotations.ConversionValue;

@@ -11,6 +11,9 @@
  *     08/13/2010-2.2 Guy Pelletier
  *       - 296078: JPA 2.0 with @MapsId, em.persist generates Internal Exception IllegalArgumentException
  ******************************************************************************/
+// Contributors:
+//     08/13/2010-2.2 Guy Pelletier
+//       - 296078: JPA 2.0 with @MapsId, em.persist generates Internal Exception IllegalArgumentException
 package org.eclipse.persistence.testing.models.jpa.advanced.derivedid.nested;
 
 import javax.persistence.EmbeddedId;

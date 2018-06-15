@@ -10,6 +10,8 @@
  * Contributors:
  *     David McCann - May 15, 2012 - 2.4 - Initial implementation
  ******************************************************************************/
+// Contributors:
+//     David McCann - May 15, 2012 - 2.4 - Initial implementation
 package org.eclipse.persistence.platform.database.oracle.plsql;
 
 import java.util.ListIterator;

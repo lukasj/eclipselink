@@ -10,6 +10,8 @@
  * Contributors:
  *     Dmitry Kornilov - Initial implementation
  ******************************************************************************/
+// Contributors:
+//     Dmitry Kornilov - Initial implementation
 package org.eclipse.persistence.jpa.rs.util.xmladapters;
 
 import javax.xml.bind.annotation.adapters.XmlAdapter;

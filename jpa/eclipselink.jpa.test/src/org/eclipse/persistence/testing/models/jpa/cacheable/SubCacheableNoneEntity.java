@@ -11,6 +11,9 @@
  *     06/16/2009-2.0 Guy Pelletier
  *       - 277039: JPA 2.0 Cache Usage Settings
  ******************************************************************************/
+// Contributors:
+//     06/16/2009-2.0 Guy Pelletier
+//       - 277039: JPA 2.0 Cache Usage Settings
 package org.eclipse.persistence.testing.models.jpa.cacheable;
 
 import javax.persistence.Entity;

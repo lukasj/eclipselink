@@ -10,6 +10,8 @@
  * Contributors:
  *     David McCann - Aug.14, 2012 - 2.4.1 - Initial implementation
  ******************************************************************************/
+// Contributors:
+//     David McCann - Aug.14, 2012 - 2.4.1 - Initial implementation
 package dbws.testing.inlinebinary;
 
 import org.junit.AfterClass;

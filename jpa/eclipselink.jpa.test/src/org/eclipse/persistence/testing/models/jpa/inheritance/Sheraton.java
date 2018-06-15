@@ -12,6 +12,10 @@
  *       - 326973: TABLE_PER_CLASS with EmbeddedId results in DescriptorException EclipseLink-74
  *                 "The primary key fields are not set for this descriptor"
  ******************************************************************************/
+// Contributors:
+//     10/18/2010-2.2 Guy Pelletier
+//       - 326973: TABLE_PER_CLASS with EmbeddedId results in DescriptorException EclipseLink-74
+//                 "The primary key fields are not set for this descriptor"
 package org.eclipse.persistence.testing.models.jpa.inheritance;
 
 import javax.persistence.Entity;

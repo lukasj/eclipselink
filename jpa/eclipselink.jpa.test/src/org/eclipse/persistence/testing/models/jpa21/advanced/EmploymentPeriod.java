@@ -13,6 +13,12 @@
  *     06/20/2014-2.5.2 Rick Curtis
  *       - 437760: AttributeOverride with no column name defined doesn't work.
  ******************************************************************************/
+// Contributors:
+//     02/08/2012-2.4 Guy Pelletier
+//       - 350487: JPA 2.1 Specification defined support for Stored Procedure Calls
+//     06/20/2014-2.5.2 Rick Curtis
+//       - 437760: AttributeOverride with no column name defined doesn't work.
+// CPR:: Copyright (c) 2012, 2015 Oracle and/or its affiliates IBM Corporation. All rights reserved.
 package org.eclipse.persistence.testing.models.jpa21.advanced;
 
 import java.io.Serializable;

@@ -11,6 +11,9 @@
  *     Oracle - initial API and implementation from Oracle TopLink
  *     dminsky - added writeFields API overriding behavior from Expression
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation from Oracle TopLink
+//     dminsky - added writeFields API overriding behavior from Expression
 package org.eclipse.persistence.internal.expressions;
 
 import java.io.BufferedWriter;

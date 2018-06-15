@@ -10,6 +10,8 @@
  * Contributors:
  *     David McCann - 2.5.0 - Sept.18, 2012 - Initial Implementation
  ******************************************************************************/
+// Contributors:
+//     David McCann - 2.5.0 - Sept.18, 2012 - Initial Implementation
 package org.eclipse.persistence.tools.dbws;
 
 import static org.eclipse.persistence.internal.databaseaccess.DatasourceCall.IN;

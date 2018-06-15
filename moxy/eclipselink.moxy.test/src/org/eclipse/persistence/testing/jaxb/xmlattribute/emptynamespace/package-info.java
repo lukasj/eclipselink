@@ -10,6 +10,8 @@
  * Contributors:
  *     Denise Smith - 2.3
  ******************************************************************************/
+// Contributors:
+//     Denise Smith - 2.3
 @XmlSchema(namespace="theNamespace", attributeFormDefault=javax.xml.bind.annotation.XmlNsForm.QUALIFIED, elementFormDefault=javax.xml.bind.annotation.XmlNsForm.QUALIFIED)
 package org.eclipse.persistence.testing.jaxb.xmlattribute.emptynamespace;
 

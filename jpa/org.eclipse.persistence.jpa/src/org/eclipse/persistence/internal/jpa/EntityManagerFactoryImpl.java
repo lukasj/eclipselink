@@ -18,6 +18,16 @@
  *     05/26/2016-2.7 Tomas Kraus
  *       - 494610: Session Properties map should be Map<String, Object>
  ******************************************************************************/
+// Contributors:
+//     tware - initial implementation as part of extensibility feature
+//     01/11/2013-2.5 Guy Pelletier
+//       - 389090: JPA 2.1 DDL Generation Support
+//     01/16/2013-2.5 Guy Pelletier
+//       - 389090: JPA 2.1 DDL Generation Support
+//     02/04/2013-2.5 Guy Pelletier
+//       - 389090: JPA 2.1 DDL Generation Support
+//     05/26/2016-2.7 Tomas Kraus
+//       - 494610: Session Properties map should be Map<String, Object>
 package org.eclipse.persistence.internal.jpa;
 
 import java.util.HashMap;

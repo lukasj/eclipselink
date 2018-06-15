@@ -11,6 +11,9 @@
  *     Chris Delahunt
  *       - Bug 318187 - NegativeArraySizeException on JCEEncryptor.decryptPassword()
  ******************************************************************************/
+// Contributors:
+//     Chris Delahunt
+//       - Bug 318187 - NegativeArraySizeException on JCEEncryptor.decryptPassword()
 package org.eclipse.persistence.testing.tests.simultaneous;
 
 import org.eclipse.persistence.testing.framework.AutoVerifyTestCase;

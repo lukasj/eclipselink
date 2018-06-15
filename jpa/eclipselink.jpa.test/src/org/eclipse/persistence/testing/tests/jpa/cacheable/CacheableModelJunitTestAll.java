@@ -15,6 +15,13 @@
  *     06/09/2010-2.0.3 Guy Pelletier
  *       - 313401: shared-cache-mode defaults to NONE when the element value is unrecognized
  ******************************************************************************/
+// Contributors:
+//     06/16/2009-2.0 Guy Pelletier
+//       - 277039: JPA 2.0 Cache Usage Settings
+//     07/16/2009-2.0 Guy Pelletier
+//       - 277039: JPA 2.0 Cache Usage Settings
+//     06/09/2010-2.0.3 Guy Pelletier
+//       - 313401: shared-cache-mode defaults to NONE when the element value is unrecognized
 package org.eclipse.persistence.testing.tests.jpa.cacheable;
 
 import junit.framework.*;

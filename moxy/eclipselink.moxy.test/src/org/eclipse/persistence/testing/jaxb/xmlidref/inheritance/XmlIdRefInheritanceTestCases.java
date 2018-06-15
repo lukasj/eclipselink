@@ -10,6 +10,8 @@
  * Contributors:
  *     Denise Smith - EclipseLink 2.4
  ******************************************************************************/
+// Contributors:
+//     Denise Smith - EclipseLink 2.4
 package org.eclipse.persistence.testing.jaxb.xmlidref.inheritance;
 
 import java.io.InputStream;

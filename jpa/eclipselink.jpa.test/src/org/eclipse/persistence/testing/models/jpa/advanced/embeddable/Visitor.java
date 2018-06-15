@@ -12,6 +12,10 @@
  *     07/07/2014-2.6 Tomas Kraus
  *       - 439127: Modified to use this class in jUnit test model.
  ******************************************************************************/
+// Contributors:
+//     Oracle - Initial API and implementation.
+//     07/07/2014-2.6 Tomas Kraus
+//       - 439127: Modified to use this class in jUnit test model.
 package org.eclipse.persistence.testing.models.jpa.advanced.embeddable;
 
 import javax.persistence.*;

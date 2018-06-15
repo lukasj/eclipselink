@@ -11,6 +11,9 @@
  *     Guy Pelletier (Oracle), February 28, 2007
  *        - New test file introduced for bug 217880.
  ******************************************************************************/
+// Contributors:
+//     Guy Pelletier (Oracle), February 28, 2007
+//        - New test file introduced for bug 217880.
 package org.eclipse.persistence.testing.models.jpa.xml.advanced;
 
 // This class is mapped as a read-only descriptor and used for testing.

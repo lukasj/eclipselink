@@ -10,6 +10,8 @@
  * Contributors:
  *     James Sutherland (Oracle) - initial API and implementation
  ******************************************************************************/
+// Contributors:
+//     James Sutherland (Oracle) - initial API and implementation
 package org.eclipse.persistence.testing.models.jpa.xml.composite.advanced.member_3;
 
 import org.eclipse.persistence.config.DescriptorCustomizer;

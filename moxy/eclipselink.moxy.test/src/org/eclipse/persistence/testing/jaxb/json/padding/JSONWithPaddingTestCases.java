@@ -10,6 +10,8 @@
  * Contributors:
  *     Denise Smith - November 2012
  ******************************************************************************/
+// Contributors:
+//     Denise Smith - November 2012
 package org.eclipse.persistence.testing.jaxb.json.padding;
 
 import junit.framework.Test;

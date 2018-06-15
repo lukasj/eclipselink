@@ -10,6 +10,8 @@
  * Contributors:
  *      Oracle - initial impl
  ******************************************************************************/
+// Contributors:
+//      Oracle - initial impl
 package org.eclipse.persistence.sessions.serializers;
 
 import java.io.Serializable;

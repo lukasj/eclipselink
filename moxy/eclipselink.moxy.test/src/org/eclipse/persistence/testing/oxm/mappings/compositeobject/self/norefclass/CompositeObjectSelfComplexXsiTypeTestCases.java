@@ -10,6 +10,8 @@
  * Contributors:
  * Denise Smith - September 21 /2009
  ******************************************************************************/
+// Contributors:
+// Denise Smith - September 21 /2009
 package org.eclipse.persistence.testing.oxm.mappings.compositeobject.self.norefclass;
 
 import org.eclipse.persistence.oxm.mappings.UnmarshalKeepAsElementPolicy;

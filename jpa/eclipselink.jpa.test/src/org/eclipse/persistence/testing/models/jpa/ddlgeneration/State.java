@@ -11,6 +11,10 @@
  *     01/04/2011-2.3 Guy Pelletier for Karsten Wutzke
  *       - 330628: @PrimaryKeyJoinColumn(...) is not working equivalently to @JoinColumn(..., insertable = false, updatable = false)
  ******************************************************************************/
+// Contributors:
+//     01/04/2011-2.3 Guy Pelletier for Karsten Wutzke
+//       - 330628: @PrimaryKeyJoinColumn(...) is not working equivalently to @JoinColumn(..., insertable = false, updatable = false)
+// CPR:: Copyright (c) 2011, 2015 Karsten Wutzke. All rights reserved.
 package org.eclipse.persistence.testing.models.jpa.ddlgeneration;
 
 import java.io.Serializable;

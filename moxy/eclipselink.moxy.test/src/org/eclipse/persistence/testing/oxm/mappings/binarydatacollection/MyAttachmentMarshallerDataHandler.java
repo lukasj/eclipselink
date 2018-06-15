@@ -10,6 +10,8 @@
  * Contributors:
  *     Denise Smith - January 6th, 2010 - 2.0.1
  ******************************************************************************/
+// Contributors:
+//     Denise Smith - January 6th, 2010 - 2.0.1
 package org.eclipse.persistence.testing.oxm.mappings.binarydatacollection;
 
 public class MyAttachmentMarshallerDataHandler extends MyAttachmentMarshaller{

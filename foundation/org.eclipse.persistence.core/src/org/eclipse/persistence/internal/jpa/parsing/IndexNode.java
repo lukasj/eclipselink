@@ -10,6 +10,8 @@
  * Contributors:
  *     tware - initial implemenation as part of JPA 2.0 RI
  ******************************************************************************/
+// Contributors:
+//     tware - initial implemenation as part of JPA 2.0 RI
 package org.eclipse.persistence.internal.jpa.parsing;
 
 import org.eclipse.persistence.exceptions.JPQLException;

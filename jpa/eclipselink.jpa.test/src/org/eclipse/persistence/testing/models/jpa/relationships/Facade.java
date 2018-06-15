@@ -11,6 +11,9 @@
  *     12/02/2010-2.2 Guy Pelletier
  *       - 324471: Do not default to VariableOneToOneMapping for interfaces unless a managed class implementing it is found
  ******************************************************************************/
+// Contributors:
+//     12/02/2010-2.2 Guy Pelletier
+//       - 324471: Do not default to VariableOneToOneMapping for interfaces unless a managed class implementing it is found
 package org.eclipse.persistence.testing.models.jpa.relationships;
 
 public interface Facade {

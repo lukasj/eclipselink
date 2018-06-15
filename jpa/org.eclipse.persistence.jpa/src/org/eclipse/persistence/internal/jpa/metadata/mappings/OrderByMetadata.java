@@ -15,6 +15,13 @@
  *     04/09/2012-2.4 Guy Pelletier
  *       - 374377: OrderBy with ElementCollection doesn't work
  ******************************************************************************/
+// Contributors:
+//     01/25/2011-2.3 Guy Pelletier
+//       - 333913: @OrderBy and <order-by/> without arguments should order by primary
+//     03/24/2011-2.3 Guy Pelletier
+//       - 337323: Multi-tenant with shared schema support (part 1)
+//     04/09/2012-2.4 Guy Pelletier
+//       - 374377: OrderBy with ElementCollection doesn't work
 package org.eclipse.persistence.internal.jpa.metadata.mappings;
 
 import java.util.List;

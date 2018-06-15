@@ -10,6 +10,8 @@
  * Contributors:
  *     05/09/2011  Andrei Ilitchev (Oracle) - initial API and implementation
  ******************************************************************************/
+// Contributors:
+//     05/09/2011  Andrei Ilitchev (Oracle) - initial API and implementation
 /**
  * A helper class used by EntityManagerSetupImpl class for static weaving.
  *

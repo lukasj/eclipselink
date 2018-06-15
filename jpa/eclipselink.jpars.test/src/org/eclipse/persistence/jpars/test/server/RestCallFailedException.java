@@ -10,6 +10,8 @@
  * Contributors:
  *      Dmitry Kornilov - Upgrade to Jersey 2.x
  ******************************************************************************/
+// Contributors:
+//      Dmitry Kornilov - Upgrade to Jersey 2.x
 package org.eclipse.persistence.jpars.test.server;
 
 import org.eclipse.persistence.jpa.rs.exceptions.ErrorResponse;

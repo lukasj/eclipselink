@@ -10,6 +10,8 @@
  * Contributors:
  * dmccann - August 26/2010 - 2.2 - Initial implementation
  ******************************************************************************/
+// Contributors:
+// dmccann - August 26/2010 - 2.2 - Initial implementation
 package org.eclipse.persistence.testing.jaxb.externalizedmetadata.xmljoinnode;
 
 import org.eclipse.persistence.oxm.annotations.XmlJoinNode;

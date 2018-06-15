@@ -13,6 +13,11 @@
  *     02/13/2013-2.5 Guy Pelletier
  *       - 397772: JPA 2.1 Entity Graph Support (XML support)
  ******************************************************************************/
+// Contributors:
+//     01/28/2013-2.5 Gordon Yorke
+//       - 397772: JPA 2.1 Entity Graph Support
+//     02/13/2013-2.5 Guy Pelletier
+//       - 397772: JPA 2.1 Entity Graph Support (XML support)
 package org.eclipse.persistence.testing.tests.jpa22.advanced;
 
 import java.util.HashMap;

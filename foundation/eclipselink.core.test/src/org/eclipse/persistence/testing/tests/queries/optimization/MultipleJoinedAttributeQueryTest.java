@@ -10,6 +10,8 @@
  * Contributors:
  *     Vikram Bhatia - initial API and implementation
  ******************************************************************************/
+// Contributors:
+//     Vikram Bhatia - initial API and implementation
 package org.eclipse.persistence.testing.tests.queries.optimization;
 
 import org.eclipse.persistence.expressions.Expression;

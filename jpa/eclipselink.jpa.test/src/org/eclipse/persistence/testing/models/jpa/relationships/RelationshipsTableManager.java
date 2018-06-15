@@ -16,6 +16,15 @@
  *     06/25/2014-2.5.2 Rick Curtis
  *       - 438177: Test M2M map
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation from Oracle TopLink
+//     12/02/2010-2.2 Guy Pelletier
+//       - 324471: Do not default to VariableOneToOneMapping for interfaces unless a managed class implementing it is found
+//     01/25/2011-2.3 Guy Pelletier
+//       - 333488: Serializable attribute being defaulted to a variable one to one mapping and causing exception
+//     06/25/2014-2.5.2 Rick Curtis
+//       - 438177: Test M2M map
+// CPR:: Copyright (c) 1998, 2015 Oracle and/or its affiliates, IBM Corporation. All rights reserved.
 package org.eclipse.persistence.testing.models.jpa.relationships;
 
 import org.eclipse.persistence.testing.framework.TogglingFastTableCreator;

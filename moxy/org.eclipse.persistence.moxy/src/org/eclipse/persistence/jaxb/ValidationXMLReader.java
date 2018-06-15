@@ -12,6 +12,10 @@
  *      Dmitry Kornilov - BeanValidationHelper refactoring
  *      Miroslav Kos - BeanValidationHelper refactoring
  ******************************************************************************/
+// Contributors:
+//      Marcel Valovy - initial API and implementation
+//      Dmitry Kornilov - BeanValidationHelper refactoring
+//      Miroslav Kos - BeanValidationHelper refactoring
 package org.eclipse.persistence.jaxb;
 
 import java.io.IOException;

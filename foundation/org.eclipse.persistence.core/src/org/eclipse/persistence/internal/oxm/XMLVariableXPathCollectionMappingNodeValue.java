@@ -10,6 +10,8 @@
  * Contributors:
  *     Denise Smith - 2.5.1 - Initial Implementation
  ******************************************************************************/
+// Contributors:
+//     Denise Smith - 2.5.1 - Initial Implementation
 package org.eclipse.persistence.internal.oxm;
 
 import java.util.ArrayList;

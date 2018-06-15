@@ -14,6 +14,12 @@
  *     04/30/2014-2.6 Lukas Jungmann
  *       - 380101: Invalid MySQL SQL syntax in query with LIMIT and FOR UPDATE
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation from Oracle TopLink
+//     20/11/2012-2.5 Guy Pelletier
+//       - 394524: Invalid query key [...] in expression
+//     04/30/2014-2.6 Lukas Jungmann
+//       - 380101: Invalid MySQL SQL syntax in query with LIMIT and FOR UPDATE
 package org.eclipse.persistence.internal.expressions;
 
 import static org.eclipse.persistence.queries.ReadAllQuery.Direction.CHILD_TO_PARENT;

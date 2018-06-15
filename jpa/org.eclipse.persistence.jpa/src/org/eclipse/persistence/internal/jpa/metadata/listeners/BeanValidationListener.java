@@ -16,6 +16,15 @@
  *     03/09/2016-2.6 Dalia Abo Sheasha
  *       - 489298: Wrap EclipseLink's Bean Validation calls in doPrivileged blocks when security is enabled
  ******************************************************************************/
+// Contributors:
+//     08/20/2014-2.5 Rick Curtis
+//       - 441890: Cache Validator instances.
+//     Marcel Valovy - 2.6 - skip validation of objects that are not constrained.
+//     02/23/2016-2.6 Dalia Abo Sheasha
+//       - 487889: Fix EclipseLink Bean Validation optimization
+//     03/09/2016-2.6 Dalia Abo Sheasha
+//       - 489298: Wrap EclipseLink's Bean Validation calls in doPrivileged blocks when security is enabled
+// CPR:: Copyright (c) 2009, 2018 Sun Microsystems, Inc, IBM Corporation. All rights reserved.
 
 package org.eclipse.persistence.internal.jpa.metadata.listeners;
 

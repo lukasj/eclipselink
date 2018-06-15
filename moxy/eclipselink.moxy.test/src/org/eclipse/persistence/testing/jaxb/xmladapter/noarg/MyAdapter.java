@@ -11,6 +11,8 @@
  * Contributors:
  *  - Denise Smith - September 2013
  ******************************************************************************/
+// Contributors:
+//  - Denise Smith - September 2013
 package org.eclipse.persistence.testing.jaxb.xmladapter.noarg;
 
 import javax.xml.bind.annotation.adapters.XmlAdapter;

@@ -10,6 +10,8 @@
  * Contributors:
  *     Oracle - initial API and implementation from Oracle TopLink
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation from Oracle TopLink
 /* $Header: DataObjectInputStream.java 22-nov-2006.16:27:02 mfobrien Exp $ */
 /*
    DESCRIPTION

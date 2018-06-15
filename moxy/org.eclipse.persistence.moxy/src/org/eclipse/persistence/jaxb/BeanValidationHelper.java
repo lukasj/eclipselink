@@ -11,6 +11,9 @@
  *     Marcel Valovy - 2.6 - initial API and implementation
  *     Dmitry Kornilov - 2.6.1 - removed static maps
  ******************************************************************************/
+// Contributors:
+//     Marcel Valovy - 2.6 - initial API and implementation
+//     Dmitry Kornilov - 2.6.1 - removed static maps
 package org.eclipse.persistence.jaxb;
 
 import java.lang.annotation.Annotation;

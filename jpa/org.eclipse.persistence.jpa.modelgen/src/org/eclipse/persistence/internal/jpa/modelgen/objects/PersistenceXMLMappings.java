@@ -13,6 +13,11 @@
  *     03/06/2013-2.5 Guy Pelletier
  *       - 267391: JPA 2.1 Functionality for Java EE 7 (JSR-338)
  ******************************************************************************/
+// Contributors:
+//     08/10/2009-2.0 Guy Pelletier
+//       - 267391: JPA 2.0 implement/extend/use an APT tooling library for MetaModel API canonical classes
+//     03/06/2013-2.5 Guy Pelletier
+//       - 267391: JPA 2.1 Functionality for Java EE 7 (JSR-338)
 package org.eclipse.persistence.internal.jpa.modelgen.objects;
 
 import org.eclipse.persistence.internal.jpa.deployment.SEPersistenceUnitInfo;

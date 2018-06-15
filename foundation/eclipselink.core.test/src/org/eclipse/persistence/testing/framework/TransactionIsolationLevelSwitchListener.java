@@ -11,6 +11,10 @@
  *     Created Jan 10, 2010 - Dies Koper (Fujitsu), patterned after SybaseTransactionIsolationListener
  *        bug 288715: Tests: Several Core LRG tests hang on Symfoware.
  ******************************************************************************/
+// Contributors:
+//     Created Jan 10, 2010 - Dies Koper (Fujitsu), patterned after SybaseTransactionIsolationListener
+//        bug 288715: Tests: Several Core LRG tests hang on Symfoware.
+// CPR:: Copyright (c) 2010, 2015 Dies Koper (Fujitsu) All rights reserved.
 package org.eclipse.persistence.testing.framework;
 
 import java.sql.Connection;

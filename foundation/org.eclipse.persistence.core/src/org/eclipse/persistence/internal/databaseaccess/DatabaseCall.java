@@ -22,6 +22,20 @@
  *     09/03/2015 - Will Dazey
  *       - 456067 : Added support for defining query timeout units
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation from Oracle TopLink
+//     05/24/2011-2.3 Guy Pelletier
+//       - 345962: Join fetch query when using tenant discriminator column fails.
+//     02/08/2012-2.4 Guy Pelletier
+//       - 350487: JPA 2.1 Specification defined support for Stored Procedure Calls
+//     07/13/2012-2.5 Guy Pelletier
+//       - 350487: JPA 2.1 Specification defined support for Stored Procedure Calls
+//     08/24/2012-2.5 Guy Pelletier
+//       - 350487: JPA 2.1 Specification defined support for Stored Procedure Calls
+//     09/27/2012-2.5 Guy Pelletier
+//       - 350487: JPA 2.1 Specification defined support for Stored Procedure Calls
+//     09/03/2015 - Will Dazey
+//       - 456067 : Added support for defining query timeout units
 package org.eclipse.persistence.internal.databaseaccess;
 
 import java.io.CharArrayWriter;

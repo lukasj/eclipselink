@@ -11,6 +11,9 @@
  *     05/31/2010-2.1 Guy Pelletier
  *       - 314941: multiple joinColumns without referenced column names defined, no error
  ******************************************************************************/
+// Contributors:
+//     05/31/2010-2.1 Guy Pelletier
+//       - 314941: multiple joinColumns without referenced column names defined, no error
 package org.eclipse.persistence.testing.models.jpa.advanced.compositepk;
 
 import javax.persistence.Access;

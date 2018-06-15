@@ -11,6 +11,9 @@
  *     09/23/2009-2.0  mobrien
  *       - 266912: JPA 2.0 Metamodel API (part of the JSR-317 EJB 3.1 Criteria API)
  ******************************************************************************/
+// Contributors:
+//     09/23/2009-2.0  mobrien
+//       - 266912: JPA 2.0 Metamodel API (part of the JSR-317 EJB 3.1 Criteria API)
 package org.eclipse.persistence.testing.models.jpa.metamodel;
 
 import static javax.persistence.FetchType.EAGER;

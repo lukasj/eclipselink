@@ -11,6 +11,9 @@
  *     04/24/2009-2.0 Guy Pelletier
  *       - 270011: JPA 2.0 MappedById support
  ******************************************************************************/
+// Contributors:
+//     04/24/2009-2.0 Guy Pelletier
+//       - 270011: JPA 2.0 MappedById support
 package org.eclipse.persistence.testing.models.jpa.advanced.derivedid;
 
 import javax.persistence.EmbeddedId;

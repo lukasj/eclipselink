@@ -17,6 +17,15 @@
  *     04/12/2013-2.5 Guy Pelletier
  *       - 405640: JPA 2.1 schema generation drop operation fails to include dropping defaulted fk constraints.
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation from Oracle TopLink
+//     Dies Koper - add support for creating indices on tables
+//     01/11/2013-2.5 Guy Pelletier
+//       - 389090: JPA 2.1 DDL Generation Support
+//     02/04/2013-2.5 Guy Pelletier
+//       - 389090: JPA 2.1 DDL Generation Support
+//     04/12/2013-2.5 Guy Pelletier
+//       - 405640: JPA 2.1 schema generation drop operation fails to include dropping defaulted fk constraints.
 package org.eclipse.persistence.tools.schemaframework;
 
 import java.io.Writer;

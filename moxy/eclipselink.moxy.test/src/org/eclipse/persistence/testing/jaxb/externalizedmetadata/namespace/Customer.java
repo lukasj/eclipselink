@@ -10,6 +10,8 @@
  * Contributors:
  *     Rick Barkhouse - 2.3.1 - initial implementation
  ******************************************************************************/
+// Contributors:
+//     Rick Barkhouse - 2.3.1 - initial implementation
 package org.eclipse.persistence.testing.jaxb.externalizedmetadata.namespace;
 
 public class Customer {

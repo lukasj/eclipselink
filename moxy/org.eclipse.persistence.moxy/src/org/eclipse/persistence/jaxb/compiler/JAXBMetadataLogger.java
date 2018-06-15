@@ -10,6 +10,8 @@
  * Contributors:
  *     dmccann - September 17/2009 - 1.2 - Initial implementation
  ******************************************************************************/
+// Contributors:
+//     dmccann - September 17/2009 - 1.2 - Initial implementation
 package org.eclipse.persistence.jaxb.compiler;
 
 import org.eclipse.persistence.logging.AbstractSessionLog;

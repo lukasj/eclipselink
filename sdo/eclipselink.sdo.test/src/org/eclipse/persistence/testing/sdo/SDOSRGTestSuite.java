@@ -10,6 +10,8 @@
  * Contributors:
  *     dtwelves - Sept 2008 Create SDO SRG test suite
  ******************************************************************************/
+// Contributors:
+//     dtwelves - Sept 2008 Create SDO SRG test suite
 package org.eclipse.persistence.testing.sdo;
 
 import junit.framework.Test;

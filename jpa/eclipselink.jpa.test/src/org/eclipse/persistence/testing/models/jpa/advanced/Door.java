@@ -10,6 +10,8 @@
  * Contributors:
  *     Vikram Bhatia - initial implementation
  ******************************************************************************/
+// Contributors:
+//     Vikram Bhatia - initial implementation
 package org.eclipse.persistence.testing.models.jpa.advanced;
 
 import java.io.Serializable;

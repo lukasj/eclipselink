@@ -10,6 +10,8 @@
  * Contributors:
  *     Matt MacIvor - January 18/2010 - 2.0 - Initial implementation
  ******************************************************************************/
+// Contributors:
+//     Matt MacIvor - January 18/2010 - 2.0 - Initial implementation
 package org.eclipse.persistence.testing.oxm.mappings.binarydata;
 
 

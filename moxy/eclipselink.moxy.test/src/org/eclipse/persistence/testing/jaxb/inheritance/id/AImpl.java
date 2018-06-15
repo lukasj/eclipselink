@@ -10,6 +10,8 @@
  * Contributors:
  *     Denise Smith - August 2013
  ******************************************************************************/
+// Contributors:
+//     Denise Smith - August 2013
 package org.eclipse.persistence.testing.jaxb.inheritance.id;
 
 import javax.xml.bind.annotation.XmlAccessType;

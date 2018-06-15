@@ -12,6 +12,10 @@
  *     09/23/2008-1.1 Guy Pelletier
  *       - 241651: JPA 2.0 Access Type support
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation from Oracle TopLink
+//     09/23/2008-1.1 Guy Pelletier
+//       - 241651: JPA 2.0 Access Type support
 
 
 package org.eclipse.persistence.testing.models.jpa.xml.composite.advanced;

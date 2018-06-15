@@ -14,6 +14,12 @@
  *        - 224964: Provide support for Proxy Authentication through JPA.
  *        Now properties' names that could be used both in createEM and createEMF are the same.
  ******************************************************************************/
+// Contributors:
+//    Gyorke
+//
+//     05/28/2008-1.0M8 Andrei Ilitchev
+//        - 224964: Provide support for Proxy Authentication through JPA.
+//        Now properties' names that could be used both in createEM and createEMF are the same.
 package org.eclipse.persistence.config;
 
 import java.util.HashSet;

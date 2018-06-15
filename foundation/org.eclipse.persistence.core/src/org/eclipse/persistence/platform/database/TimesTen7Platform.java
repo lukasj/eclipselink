@@ -13,6 +13,11 @@
  * @author Kyle Chen
  *
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation from Oracle TopLink
+//
+// @author Kyle Chen
+//
 package org.eclipse.persistence.platform.database;
 
 import java.util.Hashtable;

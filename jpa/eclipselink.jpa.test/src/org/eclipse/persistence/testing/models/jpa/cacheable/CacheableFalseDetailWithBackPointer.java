@@ -10,6 +10,8 @@
  * Contributors:
  *     tware - test for 345478
  ******************************************************************************/
+// Contributors:
+//     tware - test for 345478
 package org.eclipse.persistence.testing.models.jpa.cacheable;
 
 import static javax.persistence.GenerationType.TABLE;

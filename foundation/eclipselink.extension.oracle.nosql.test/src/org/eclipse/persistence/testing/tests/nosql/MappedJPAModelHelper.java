@@ -11,6 +11,9 @@
  *     12/30/2016-2.7 Tomas Kraus
  *       - 490677: Initial API and implementation.
  ******************************************************************************/
+// Contributors:
+//     12/30/2016-2.7 Tomas Kraus
+//       - 490677: Initial API and implementation.
 package org.eclipse.persistence.testing.tests.nosql;
 
 import java.math.BigDecimal;

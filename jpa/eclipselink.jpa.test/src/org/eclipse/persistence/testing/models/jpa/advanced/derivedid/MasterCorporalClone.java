@@ -11,6 +11,9 @@
  *     11/23/2009-2.0 Guy Pelletier
  *       - 295790: JPA 2.0 adding @MapsId to one entity causes initialization errors in other entities
  ******************************************************************************/
+// Contributors:
+//     11/23/2009-2.0 Guy Pelletier
+//       - 295790: JPA 2.0 adding @MapsId to one entity causes initialization errors in other entities
 package org.eclipse.persistence.testing.models.jpa.advanced.derivedid;
 
 import javax.persistence.EmbeddedId;

@@ -10,6 +10,8 @@
  * Contributors:
  *     Marcel Valovy - initial implementation
  ******************************************************************************/
+// Contributors:
+//     Marcel Valovy - initial implementation
 package org.eclipse.persistence.testing.jaxb.beanvalidation;
 
 import org.eclipse.persistence.exceptions.BeanValidationException;

@@ -10,6 +10,8 @@
  * Contributors:
  *     bdoughan - 2010/06/29 - initial implementation
  ******************************************************************************/
+// Contributors:
+//     bdoughan - 2010/06/29 - initial implementation
 package org.eclipse.persistence.testing.jaxb.externalizedmetadata.xmladapter.negative;
 
 import java.io.InputStream;

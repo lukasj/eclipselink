@@ -10,6 +10,8 @@
  * Contributors:
  *     gpelletie - Feb 19 2008, Testing Spatial Config in ORM xml.
  ******************************************************************************/
+// Contributors:
+//     gpelletie - Feb 19 2008, Testing Spatial Config in ORM xml.
 package org.eclipse.persistence.testing.models.jpa.structconverter;
 
 import oracle.spatial.geometry.JGeometry;

@@ -10,6 +10,8 @@
  * Contributors:
  *     Vikram Bhatia - initial API and implementation
  ******************************************************************************/
+// Contributors:
+//     Vikram Bhatia - initial API and implementation
 package org.eclipse.persistence.testing.models.vehicle;
 
 import org.eclipse.persistence.tools.schemaframework.PopulationManager;

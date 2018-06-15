@@ -14,6 +14,12 @@
  *     Tomas Kraus - 2017/10/11
  *          Bug 525854 - Fix Java SE platform detection and clean up platform code
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation from Oracle TopLink
+//     ailitchev - 2010/08/19
+//          Bug 322960 - TWO TESTS IN CUSTOMFEATURESJUNITTESTSUITE FAILED WITH 11.2.0.2 DRIVER
+//     Tomas Kraus - 2017/10/11
+//          Bug 525854 - Fix Java SE platform detection and clean up platform code
 package org.eclipse.persistence.internal.helper;
 
 import java.sql.SQLException;

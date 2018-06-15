@@ -10,6 +10,8 @@
  * Contributors:
  *     Denise Smith - 2.6 - initial implementation
  ******************************************************************************/
+// Contributors:
+//     Denise Smith - 2.6 - initial implementation
 package org.eclipse.persistence.oxm.record;
 
 import java.math.BigDecimal;

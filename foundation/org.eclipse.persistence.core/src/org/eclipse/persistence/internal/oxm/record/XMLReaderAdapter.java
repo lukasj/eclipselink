@@ -10,6 +10,8 @@
 * Contributors:
 *     Blaise Doughan = 2.1 - Initial implementation
 ******************************************************************************/
+// Contributors:
+//     Blaise Doughan = 2.1 - Initial implementation
 package org.eclipse.persistence.internal.oxm.record;
 
 import javax.xml.validation.Schema;

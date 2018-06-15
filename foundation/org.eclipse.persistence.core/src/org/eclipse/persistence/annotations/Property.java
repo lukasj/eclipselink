@@ -13,6 +13,11 @@
  *     06/12/2017-2.7 Lukas Jungmann
  *       - 518155: [jpa22] add support for repeatable annotations
  ******************************************************************************/
+// Contributors:
+//     Andrei Ilitchev (Oracle), April 8, 2008
+//        - New file introduced for bug 217168.
+//     06/12/2017-2.7 Lukas Jungmann
+//       - 518155: [jpa22] add support for repeatable annotations
 package org.eclipse.persistence.annotations;
 
 import java.lang.annotation.Retention;

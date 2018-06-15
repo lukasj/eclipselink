@@ -11,6 +11,9 @@
  *     Oracle - initial API and implementation from Oracle TopLink
  *     dminsky - changed id to use a String UUID instead of String hashcode()
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation from Oracle TopLink
+//     dminsky - changed id to use a String UUID instead of String hashcode()
 package org.eclipse.persistence.sessions.coordination;
 
 import java.io.Serializable;

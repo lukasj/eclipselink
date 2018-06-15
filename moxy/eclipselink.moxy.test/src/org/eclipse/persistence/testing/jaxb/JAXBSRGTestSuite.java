@@ -10,6 +10,8 @@
  * Contributors:
  *     dtwelves - Sept 2008 Creation of JAXB SRG Test Suite
  ******************************************************************************/
+// Contributors:
+//     dtwelves - Sept 2008 Creation of JAXB SRG Test Suite
 package org.eclipse.persistence.testing.jaxb;
 
 import junit.framework.Test;

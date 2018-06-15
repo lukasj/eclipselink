@@ -10,6 +10,8 @@
  * Contributors:
  *     Guy Pelletier, dclarke - initial API and implementation
  ******************************************************************************/
+// Contributors:
+//     Guy Pelletier, dclarke - initial API and implementation
 package org.eclipse.persistence.testing.tests.jpa.config;
 
 import static org.eclipse.persistence.config.PersistenceUnitProperties.DDL_DATABASE_GENERATION;

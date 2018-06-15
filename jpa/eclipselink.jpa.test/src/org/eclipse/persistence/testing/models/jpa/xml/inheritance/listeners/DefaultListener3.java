@@ -10,6 +10,8 @@
  * Contributors:
  *     mmeswani (Sun Microsystems, Inc.) - Adding the class to test default listners (Bug 227046)
  ******************************************************************************/
+// Contributors:
+//     mmeswani (Sun Microsystems, Inc.) - Adding the class to test default listners (Bug 227046)
 package org.eclipse.persistence.testing.models.jpa.xml.inheritance.listeners;
 
 import javax.persistence.PrePersist;

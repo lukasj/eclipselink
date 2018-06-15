@@ -10,6 +10,8 @@
  * Contributors:
  *     Blaise Doughan - 2.6 - initial implementation
  ******************************************************************************/
+// Contributors:
+//     Blaise Doughan - 2.6 - initial implementation
 package org.eclipse.persistence.internal.core.helper;
 
 public interface CoreTable {

@@ -10,6 +10,8 @@
  * Contributors:
  *     Denise Smith - January 2012 - 2.3
  ******************************************************************************/
+// Contributors:
+//     Denise Smith - January 2012 - 2.3
 package org.eclipse.persistence.testing.jaxb.jaxbelement.subclass;
 
 import javax.xml.namespace.QName;

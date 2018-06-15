@@ -11,6 +11,9 @@
  *     09/14/2010-2.2 Chris Delahunt
  *       - bug 325002: ConcurrencyException if deferred constraints cause an exception and commit is called after writeChanges
  ******************************************************************************/
+// Contributors:
+//     09/14/2010-2.2 Chris Delahunt
+//       - bug 325002: ConcurrencyException if deferred constraints cause an exception and commit is called after writeChanges
 package org.eclipse.persistence.testing.tests.unitofwork.writechanges;
 
 

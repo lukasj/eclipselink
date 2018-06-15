@@ -11,6 +11,8 @@
  * Contributors:
  *  - Denise Smith February 12, 2013
  ******************************************************************************/
+// Contributors:
+//  - Denise Smith February 12, 2013
 package org.eclipse.persistence.testing.jaxb.xmlelementref.prefix;
 
 import java.io.InputStream;

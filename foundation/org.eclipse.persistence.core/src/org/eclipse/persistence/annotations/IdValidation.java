@@ -10,6 +10,8 @@
  * Contributors:
  *     James Sutherland - allow for zero ids
  ******************************************************************************/
+// Contributors:
+//     James Sutherland - allow for zero ids
 package org.eclipse.persistence.annotations;
 
 

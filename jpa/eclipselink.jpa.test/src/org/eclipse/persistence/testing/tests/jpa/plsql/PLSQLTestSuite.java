@@ -10,6 +10,8 @@
  * Contributors:
  *     James Sutherland (Oracle) - initial impl
  ******************************************************************************/
+// Contributors:
+//     James Sutherland (Oracle) - initial impl
 package org.eclipse.persistence.testing.tests.jpa.plsql;
 
 import java.math.BigDecimal;

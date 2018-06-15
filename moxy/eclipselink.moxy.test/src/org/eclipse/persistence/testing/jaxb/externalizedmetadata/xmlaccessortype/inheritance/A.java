@@ -11,6 +11,8 @@
  * Contributors:
  *  - mmacivor - 2.4 - Initial implementation
  ******************************************************************************/
+// Contributors:
+//  - mmacivor - 2.4 - Initial implementation
 package org.eclipse.persistence.testing.jaxb.externalizedmetadata.xmlaccessortype.inheritance;
 
 public abstract class A {

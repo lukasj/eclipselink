@@ -10,6 +10,8 @@
  * Contributors:
  *     tware - initial API and implementation as part of Query Downcast feature
  ******************************************************************************/
+// Contributors:
+//     tware - initial API and implementation as part of Query Downcast feature
 package org.eclipse.persistence.testing.tests.jpa.advanced;
 
 import java.math.BigInteger;

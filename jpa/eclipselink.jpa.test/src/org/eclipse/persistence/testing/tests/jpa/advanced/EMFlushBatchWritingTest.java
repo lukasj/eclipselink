@@ -11,6 +11,9 @@
  *     10/18/2010-2.2 Chris Delahunt
  *       - bug:323370 - flush() doesn't flush native queries if batch writing is enabled
  ******************************************************************************/
+// Contributors:
+//     10/18/2010-2.2 Chris Delahunt
+//       - bug:323370 - flush() doesn't flush native queries if batch writing is enabled
 package org.eclipse.persistence.testing.tests.jpa.advanced;
 
 import javax.persistence.EntityManager;

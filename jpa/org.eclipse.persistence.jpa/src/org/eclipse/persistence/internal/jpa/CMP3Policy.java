@@ -24,6 +24,22 @@
  *     08/20/2012-2.4 Guy Pelletier
  *       - 381079: EclipseLink dynamic entity does not support embedded-id
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation from Oracle TopLink
+//     02/02/2009-2.0 Chris delahunt
+//       - 241765: JPA 2.0 Derived identities
+//     04/24/2009-2.0 Guy Pelletier
+//       - 270011: JPA 2.0 MappedById support
+//     10/21/2009-2.0 Guy Pelletier
+//       - 290567: mappedbyid support incomplete
+//     12/17/2010-2.2 Guy Pelletier
+//       - 330755: Nested embeddables can't be used as embedded ids
+//     11/10/2011-2.4 Guy Pelletier
+//       - 357474: Address primaryKey option from tenant discriminator column
+//     14/05/2012-2.4 Guy Pelletier
+//       - 376603: Provide for table per tenant support for multitenant applications
+//     08/20/2012-2.4 Guy Pelletier
+//       - 381079: EclipseLink dynamic entity does not support embedded-id
 package org.eclipse.persistence.internal.jpa;
 
 import java.lang.reflect.Field;

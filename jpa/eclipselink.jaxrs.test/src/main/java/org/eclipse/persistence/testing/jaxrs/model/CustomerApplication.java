@@ -10,6 +10,8 @@
  * Contributors:
  *     Praba Vijayaratnam - 2.4 - inital implementation
  ******************************************************************************/
+// Contributors:
+//     Praba Vijayaratnam - 2.4 - inital implementation
 package org.eclipse.persistence.testing.jaxrs.model;
 
 import org.eclipse.persistence.jaxb.rs.MOXyJsonProvider;

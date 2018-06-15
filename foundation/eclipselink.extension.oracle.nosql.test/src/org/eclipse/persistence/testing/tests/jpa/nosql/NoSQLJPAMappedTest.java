@@ -12,6 +12,10 @@
  *     04/12/2016-2.7 Tomas Kraus
  *       - 490677: Allow Oracle NoSQL connection to be specified in build properties bundle
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation.
+//     04/12/2016-2.7 Tomas Kraus
+//       - 490677: Allow Oracle NoSQL connection to be specified in build properties bundle
 package org.eclipse.persistence.testing.tests.jpa.nosql;
 
 import static org.junit.Assert.assertEquals;

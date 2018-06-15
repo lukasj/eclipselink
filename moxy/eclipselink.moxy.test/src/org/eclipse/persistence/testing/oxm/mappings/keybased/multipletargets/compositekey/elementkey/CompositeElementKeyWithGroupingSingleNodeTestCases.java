@@ -10,6 +10,8 @@
 * Contributors:
 *     bdoughan - Oct 27/2009 - 2.0 - Initial implementation
 ******************************************************************************/
+// Contributors:
+//     bdoughan - Oct 27/2009 - 2.0 - Initial implementation
 package org.eclipse.persistence.testing.oxm.mappings.keybased.multipletargets.compositekey.elementkey;
 
 import java.util.ArrayList;

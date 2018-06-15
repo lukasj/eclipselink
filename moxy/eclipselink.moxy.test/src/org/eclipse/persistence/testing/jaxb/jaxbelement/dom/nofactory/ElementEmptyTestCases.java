@@ -10,6 +10,8 @@
  * Contributors:
  *     Denise Smith - October 2012
  ******************************************************************************/
+// Contributors:
+//     Denise Smith - October 2012
 package org.eclipse.persistence.testing.jaxb.jaxbelement.dom.nofactory;
 
 import javax.xml.bind.JAXBContext;

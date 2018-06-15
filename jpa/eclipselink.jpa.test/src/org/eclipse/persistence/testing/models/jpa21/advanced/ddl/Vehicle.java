@@ -11,6 +11,9 @@
  *     07/07/2017-2.7 Vikram Bhatia
  *       - 441546: Foreign Key attribute when used in JoinColumn generates wrong DDL statement
  ******************************************************************************/
+// Contributors:
+//     07/07/2017-2.7 Vikram Bhatia
+//       - 441546: Foreign Key attribute when used in JoinColumn generates wrong DDL statement
 package org.eclipse.persistence.testing.models.jpa21.advanced.ddl;
 
 import javax.persistence.Entity;

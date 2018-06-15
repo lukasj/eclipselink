@@ -11,6 +11,9 @@
  *     tware - contribution direct from Oracle TopLink
  *     tware - updates for new SessionProfiling API
  ******************************************************************************/
+// Contributors:
+//     tware - contribution direct from Oracle TopLink
+//     tware - updates for new SessionProfiling API
 package org.eclipse.persistence.tools.profiler.oracle;
 
 import java.util.*;

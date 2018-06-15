@@ -10,6 +10,8 @@
  * Contributors:
  * dmccann - June 17/2009 - 2.0 - Initial implementation
  ******************************************************************************/
+// Contributors:
+// dmccann - June 17/2009 - 2.0 - Initial implementation
 @javax.xml.bind.annotation.XmlAccessorType(XmlAccessType.NONE)
 package org.eclipse.persistence.testing.jaxb.externalizedmetadata.xmlaccessortype.packagelevel.nooverride;
 import javax.xml.bind.annotation.XmlAccessType;

@@ -10,6 +10,8 @@
  * Contributors:
  * dmccann - April 13/2010 - 2.1 - Initial implementation
  ******************************************************************************/
+// Contributors:
+// dmccann - April 13/2010 - 2.1 - Initial implementation
 package org.eclipse.persistence.testing.jaxb.externalizedmetadata.xmltype;
 
 public class EmployeeFactory {

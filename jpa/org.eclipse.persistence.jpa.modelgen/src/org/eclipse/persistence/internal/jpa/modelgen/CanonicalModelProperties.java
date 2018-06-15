@@ -15,6 +15,13 @@
  *     10/18/2010-2.2 Guy Pelletier
  *       - 322921: OutOfMemory in annotation processor
  ******************************************************************************/
+// Contributors:
+//     08/10/2009-2.0 Guy Pelletier
+//       - 267391: JPA 2.0 implement/extend/use an APT tooling library for MetaModel API canonical classes
+//     06/01/2010-2.1 Guy Pelletier
+//       - 315195: Add new property to avoid reading XML during the canonical model generation
+//     10/18/2010-2.2 Guy Pelletier
+//       - 322921: OutOfMemory in annotation processor
 package org.eclipse.persistence.internal.jpa.modelgen;
 
 import java.util.Map;

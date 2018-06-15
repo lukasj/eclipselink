@@ -10,6 +10,8 @@
  * Contributors:
  *     Praba Vijayaratnam - 2.3 - initial implementation
  ******************************************************************************/
+// Contributors:
+//     Praba Vijayaratnam - 2.3 - initial implementation
 package org.eclipse.persistence.testing.jaxb.javadoc.xmlschematype;
 
 //Example 1: Customize mapping of XMLGregorianCalendar at field level

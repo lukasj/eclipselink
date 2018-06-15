@@ -10,6 +10,8 @@
  * Contributors:
  *     tware - add aliasing to AggregateNodes
  ******************************************************************************/
+// Contributors:
+//     tware - add aliasing to AggregateNodes
 package org.eclipse.persistence.internal.jpa.parsing;
 
 /**

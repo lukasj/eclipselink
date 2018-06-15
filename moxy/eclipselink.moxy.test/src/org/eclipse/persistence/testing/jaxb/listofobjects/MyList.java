@@ -10,6 +10,8 @@
  * Contributors:
  *     Denise Smith  November 16, 2009 - Initial implementation
  ******************************************************************************/
+// Contributors:
+//     Denise Smith  November 16, 2009 - Initial implementation
 package org.eclipse.persistence.testing.jaxb.listofobjects;
 
 import java.util.Collection;

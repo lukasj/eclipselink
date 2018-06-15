@@ -11,6 +11,9 @@
  *     Mike Norman - May 05 2010
  *       fix for https://bugs.eclipse.org/bugs/show_bug.cgi?id=307897
  ******************************************************************************/
+// Contributors:
+//     Mike Norman - May 05 2010
+//       fix for https://bugs.eclipse.org/bugs/show_bug.cgi?id=307897
 
 package org.eclipse.persistence.tools.dbws;
 

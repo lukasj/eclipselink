@@ -11,6 +11,9 @@
  *     Oracle - initial API and implementation from Oracle TopLink
  *     arnaud nauwynck, tware - Bug 274975 - ensure custom sql calls are only translated once
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation from Oracle TopLink
+//     arnaud nauwynck, tware - Bug 274975 - ensure custom sql calls are only translated once
 package org.eclipse.persistence.queries;
 
 import java.util.List;

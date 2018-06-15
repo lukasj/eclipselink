@@ -12,6 +12,10 @@
  *     03/19/2018-2.7.2 Lukas Jungmann
  *       - 496836: NullPointerException on ObjectChangeSet.mergeObjectChanges
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation from Oracle TopLink
+//     03/19/2018-2.7.2 Lukas Jungmann
+//       - 496836: NullPointerException on ObjectChangeSet.mergeObjectChanges
 package org.eclipse.persistence.internal.sessions;
 
 /**

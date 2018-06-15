@@ -12,6 +12,10 @@
  *      09-01-2014-2.6.0 Dmitry Kornilov
  *        - Fields filtering (projection), application/schema+json media type handling
  ******************************************************************************/
+// Contributors:
+//         dclarke/tware - Initial implementation
+//      09-01-2014-2.6.0 Dmitry Kornilov
+//        - Fields filtering (projection), application/schema+json media type handling
 package org.eclipse.persistence.jpa.rs.util;
 
 import java.beans.PropertyChangeListener;

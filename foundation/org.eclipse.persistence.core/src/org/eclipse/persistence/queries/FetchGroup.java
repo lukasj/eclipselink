@@ -11,6 +11,9 @@
  *     Oracle - initial API and implementation from Oracle TopLink
  *     ailitchev - Bug 244124 in 2.1 - Add AttributeGroup for nesting and LoadGroup support
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation from Oracle TopLink
+//     ailitchev - Bug 244124 in 2.1 - Add AttributeGroup for nesting and LoadGroup support
 package org.eclipse.persistence.queries;
 
 import java.util.Collection;

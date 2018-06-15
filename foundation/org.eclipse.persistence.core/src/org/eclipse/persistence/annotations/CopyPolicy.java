@@ -10,6 +10,8 @@
  * Contributors:
  *     tware - March 25/2008 - 1.0M6 - Initial implementation
  ******************************************************************************/
+// Contributors:
+//     tware - March 25/2008 - 1.0M6 - Initial implementation
 
 package org.eclipse.persistence.annotations;
 

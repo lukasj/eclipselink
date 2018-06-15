@@ -10,6 +10,8 @@
  * Contributors:
  *     David McCann - December 17, 2013 - 2.6 - Initial implementation
  ******************************************************************************/
+// Contributors:
+//     David McCann - December 17, 2013 - 2.6 - Initial implementation
 package dbws.testing.plsqlrecord2;
 
 import static org.junit.Assert.assertNotNull;

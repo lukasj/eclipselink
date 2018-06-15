@@ -10,6 +10,8 @@
  * Contributors:
  *     Martin Vojtek - 2.6 - Initial contribution
  ******************************************************************************/
+// Contributors:
+//     Martin Vojtek - 2.6 - Initial contribution
 package org.eclipse.persistence.testing.jaxb.externalizedmetadata.xmlid;
 
 import javax.xml.bind.annotation.XmlID;

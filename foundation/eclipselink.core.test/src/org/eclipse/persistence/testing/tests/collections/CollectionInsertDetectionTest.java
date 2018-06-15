@@ -11,6 +11,9 @@
  *     09/10/2008-1.1 Chris Delahunt
  *       - 244206: discoverUnregisteredNewObjects doesn't populate knownNewObjects but unregisteredExstingObjects
  ******************************************************************************/
+// Contributors:
+//     09/10/2008-1.1 Chris Delahunt
+//       - 244206: discoverUnregisteredNewObjects doesn't populate knownNewObjects but unregisteredExstingObjects
 package org.eclipse.persistence.testing.tests.collections;
 
 import java.math.BigDecimal;

@@ -10,6 +10,8 @@
  * Contributors:
  *     tware - initial implementation as part of JPA 2.0 RI
  ******************************************************************************/
+// Contributors:
+//     tware - initial implementation as part of JPA 2.0 RI
 package org.eclipse.persistence.internal.jpa.parsing;
 
 import java.util.ArrayList;

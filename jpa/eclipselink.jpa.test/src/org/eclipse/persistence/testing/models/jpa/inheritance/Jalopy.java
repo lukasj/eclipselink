@@ -10,6 +10,8 @@
  * Contributors:
  *     tware - testing for query downcasting
  ******************************************************************************/
+// Contributors:
+//     tware - testing for query downcasting
 package org.eclipse.persistence.testing.models.jpa.inheritance;
 
 import javax.persistence.DiscriminatorValue;

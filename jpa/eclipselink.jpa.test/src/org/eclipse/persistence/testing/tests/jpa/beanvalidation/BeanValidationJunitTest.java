@@ -10,6 +10,8 @@
  * Contributors:
  *      Marcel Valovy
  ******************************************************************************/
+// Contributors:
+//      Marcel Valovy
 package org.eclipse.persistence.testing.tests.jpa.beanvalidation;
 
 import java.util.*;

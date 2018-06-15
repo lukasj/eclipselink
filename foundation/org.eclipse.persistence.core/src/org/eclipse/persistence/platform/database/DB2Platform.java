@@ -22,6 +22,21 @@
  *     08/22/2017 - Will Dazey
  *       - 521037: DB2 default schema is doubled for sequence queries
  *****************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation from Oracle TopLink
+//     09/14/2011-2.3.1 Guy Pelletier
+//       - 357533: Allow DDL queries to execute even when Multitenant entities are part of the PU
+//     02/19/2015 - Rick Curtis
+//       - 458877 : Add national character support
+//     02/24/2016-2.6.0 Rick Curtis
+//       - 460740: Fix pessimistic locking with setFirst/Max results on DB2
+//     03/13/2015 - Jody Grassel
+//       - 462103 : SQL for Stored Procedure named parameter with DB2 generated with incorrect marker
+//     04/15/2016 - Dalia Abo Sheasha
+//       - 491824: Setting lock timeout to 0 issues a NOWAIT causing an error in DB2
+//     08/22/2017 - Will Dazey
+//       - 521037: DB2 default schema is doubled for sequence queries
+// CPR:: Copyright (c) 1998, 2018 Oracle and/or its affiliates, IBM Corporation. All rights reserved.
 package org.eclipse.persistence.platform.database;
 
 import java.io.*;

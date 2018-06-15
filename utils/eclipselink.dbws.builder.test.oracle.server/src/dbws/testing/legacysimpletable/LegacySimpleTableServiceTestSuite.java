@@ -10,6 +10,8 @@
  * Contributors:
  *     David McCann - Jan.09, 2013 - 2.5.0 - Initial implementation
  ******************************************************************************/
+// Contributors:
+//     David McCann - Jan.09, 2013 - 2.5.0 - Initial implementation
 package dbws.testing.legacysimpletable;
 
 import java.io.StringReader;

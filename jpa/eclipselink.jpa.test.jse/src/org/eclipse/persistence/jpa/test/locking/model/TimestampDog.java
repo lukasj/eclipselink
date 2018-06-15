@@ -11,6 +11,10 @@
  *     09/28/2015 - Will Dazey
  *       - 478331 : Added support for defining local or server as the default locale for obtaining timestamps
  ******************************************************************************/
+// Contributors:
+//     09/28/2015 - Will Dazey
+//       - 478331 : Added support for defining local or server as the default locale for obtaining timestamps
+// CPR:: Copyright (c) 2015 IBM Corporation. All rights reserved.
 package org.eclipse.persistence.jpa.test.locking.model;
 
 import java.sql.Timestamp;

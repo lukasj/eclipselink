@@ -12,6 +12,10 @@
  *     09/29/2016-2.7 Tomas Kraus
  *       - 426852: @GeneratedValue(strategy=GenerationType.IDENTITY) support in Oracle 12c
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation from Oracle TopLink
+//     09/29/2016-2.7 Tomas Kraus
+//       - 426852: @GeneratedValue(strategy=GenerationType.IDENTITY) support in Oracle 12c
 package org.eclipse.persistence.platform.database.oracle;
 
 import java.io.IOException;

@@ -11,6 +11,9 @@
  *     04/04/2012-2.3.3 Guy Pelletier
  *       - 362180: ConcurrentModificationException on predeploy for AttributeOverride
  ******************************************************************************/
+// Contributors:
+//     04/04/2012-2.3.3 Guy Pelletier
+//       - 362180: ConcurrentModificationException on predeploy for AttributeOverride
 package org.eclipse.persistence.testing.models.jpa.inherited;
 
 import javax.persistence.Embeddable;

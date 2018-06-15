@@ -11,6 +11,9 @@
  *     Oracle - initial API and implementation from Oracle TopLink
  *     cdelahun - Bug 214534: changes for JMSPublishingTransportManager configuration via session.xml
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation from Oracle TopLink
+//     cdelahun - Bug 214534: changes for JMSPublishingTransportManager configuration via session.xml
 package org.eclipse.persistence.internal.sessions.factories;
 
 import java.lang.reflect.Constructor;

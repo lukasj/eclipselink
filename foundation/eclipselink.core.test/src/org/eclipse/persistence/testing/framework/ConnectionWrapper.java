@@ -11,6 +11,9 @@
  *     ailitchev - Bug 256296: Reconnect fails when session loses connectivity;
  *                 Bug 256284: Closing an EMF where the database is unavailable results in deployment exception on redeploy.
  ******************************************************************************/
+// Contributors:
+//     ailitchev - Bug 256296: Reconnect fails when session loses connectivity;
+//                 Bug 256284: Closing an EMF where the database is unavailable results in deployment exception on redeploy.
 package org.eclipse.persistence.testing.framework;
 
 import java.sql.Array;

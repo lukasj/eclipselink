@@ -10,6 +10,8 @@
 * Contributors:
 * mmacivor - October 16th 2009 - 2.0 - Initial implementation
 ******************************************************************************/
+// Contributors:
+// mmacivor - October 16th 2009 - 2.0 - Initial implementation
 package org.eclipse.persistence.oxm.mappings;
 
 import org.eclipse.persistence.internal.descriptors.InstanceVariableAttributeAccessor;

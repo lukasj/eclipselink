@@ -26,6 +26,25 @@
  *     09/11/2017-2.1 Will Dazey 
  *       - 520387: multiple owning descriptors for an embeddable are not set
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation from Oracle TopLink
+//     04/24/2009-2.0 Guy Pelletier
+//       - 270011: JPA 2.0 MappedById support
+//     10/21/2009-2.0 Guy Pelletier
+//       - 290567: mappedbyid support incomplete
+//     11/23/2009-2.0 Guy Pelletier
+//       - 295790: JPA 2.0 adding @MapsId to one entity causes initialization errors in other entities
+//     05/31/2010-2.1 Guy Pelletier
+//       - 314941: multiple joinColumns without referenced column names defined, no error
+//     08/13/2010-2.2 Guy Pelletier
+//       - 296078: JPA 2.0 with @MapsId, em.persist generates Internal Exception IllegalArgumentException
+//     02/02/2011-2.3 Chris Delahunt
+//       - 336122: ValidationException thrown for JoinColumns on OneToMany with composite primary key
+//     01/06/2015-2.6 Dalia Abo Sheasha
+//       - 454917: Informix tables need to use INT fields when referencing SERIAL types.
+//     09/11/2017-2.1 Will Dazey
+//       - 520387: multiple owning descriptors for an embeddable are not set
+// CPR:: Copyright (c) 1998, 2017 Oracle and/or its affiliates, IBM Corporation. All rights reserved.
 
 package org.eclipse.persistence.testing.models.jpa.advanced.compositepk;
 

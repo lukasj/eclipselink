@@ -10,6 +10,8 @@
  * Contributors:
  *     James Sutherland - Adding wrapped ResultSet
  ******************************************************************************/
+// Contributors:
+//     James Sutherland - Adding wrapped ResultSet
 package org.eclipse.persistence.testing.tests.unwrappedconnection;
 
 import java.io.InputStream;

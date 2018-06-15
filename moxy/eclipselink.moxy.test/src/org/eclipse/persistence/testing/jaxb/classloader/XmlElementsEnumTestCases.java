@@ -10,6 +10,8 @@
  * Contributors:
  *   Matt MacIvor - 2.4.2 - Inital Implementation
  ******************************************************************************/
+// Contributors:
+//   Matt MacIvor - 2.4.2 - Inital Implementation
 package org.eclipse.persistence.testing.jaxb.classloader;
 
 import java.io.File;

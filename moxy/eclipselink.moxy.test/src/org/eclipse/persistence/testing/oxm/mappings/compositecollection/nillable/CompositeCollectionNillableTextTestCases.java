@@ -10,6 +10,8 @@
  * Contributors:
  *     Denise Smith - Sepetember 2012
  ******************************************************************************/
+// Contributors:
+//     Denise Smith - Sepetember 2012
 package org.eclipse.persistence.testing.oxm.mappings.compositecollection.nillable;
 
 /**

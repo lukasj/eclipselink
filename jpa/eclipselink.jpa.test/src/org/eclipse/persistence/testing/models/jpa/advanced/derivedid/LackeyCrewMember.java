@@ -11,6 +11,9 @@
  *     Jun 17, 2009-2.0 Chris Delahunt
  *       - Bug#280350: NoSuchFieldException on deploy when using parent's compound PK class as derived ID
  ******************************************************************************/
+// Contributors:
+//     Jun 17, 2009-2.0 Chris Delahunt
+//       - Bug#280350: NoSuchFieldException on deploy when using parent's compound PK class as derived ID
 package org.eclipse.persistence.testing.models.jpa.advanced.derivedid;
 
 import javax.persistence.Entity;

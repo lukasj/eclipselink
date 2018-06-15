@@ -10,6 +10,8 @@
  * Contributors:
  *     Gordon Yorke - initial creation of this test
  ******************************************************************************/
+// Contributors:
+//     Gordon Yorke - initial creation of this test
 package org.eclipse.persistence.testing.tests.unitofwork;
 
 import org.eclipse.persistence.config.CacheIsolationType;

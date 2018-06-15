@@ -12,6 +12,10 @@
  *     19/04/2014-2.6 Lukas Jungmann
  *       - 429992: JavaSE 8/ASM 5.0.1 support (EclipseLink silently ignores Entity classes with lambda expressions)
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation from Oracle TopLink
+//     19/04/2014-2.6 Lukas Jungmann
+//       - 429992: JavaSE 8/ASM 5.0.1 support (EclipseLink silently ignores Entity classes with lambda expressions)
 package org.eclipse.persistence.internal.jpa.weaving;
 
 // J2SE imports

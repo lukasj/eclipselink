@@ -18,6 +18,16 @@
  *     06/16/2015-2.7 Tomas Kraus
  *       - 254437: Added getSystemProperty methods and fixed line separator property.
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation from Oracle TopLink
+//     08/23/2010-2.2 Michael O'Brien
+//        - 323043: application.xml module ordering may cause weaving not to occur causing an NPE.
+//                       warn if expected "_persistence_//_vh" method not found
+//                       instead of throwing NPE during deploy validation.
+//     30/05/2012-2.4 Guy Pelletier
+//       - 354678: Temp classloader is still being used during metadata processing
+//     06/16/2015-2.7 Tomas Kraus
+//       - 254437: Added getSystemProperty methods and fixed line separator property.
 package org.eclipse.persistence.internal.security;
 
 import java.lang.reflect.Constructor;

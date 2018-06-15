@@ -10,6 +10,8 @@
  * Contributors:
  *     Oracle - initial API and implementation from Oracle TopLink
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation from Oracle TopLink
 
 /* $Header: DefineAndGenerateMimeTypeOnPropertyManyTestCases.java 23-nov-2006.14:26:31 dmahar Exp $ */
 /*

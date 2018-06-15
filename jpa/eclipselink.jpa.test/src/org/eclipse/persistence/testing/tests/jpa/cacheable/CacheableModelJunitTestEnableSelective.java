@@ -18,6 +18,16 @@
  *       - Fixed PU name and registered this suite in FullRegressionTestSuite
  *       - 437578: Tests to verify @Cacheable inheritance in JPA 2.1
  ******************************************************************************/
+// Contributors:
+//     06/16/2009-2.0 Guy Pelletier
+//       - 277039: JPA 2.0 Cache Usage Settings
+//     07/16/2009-2.0 Guy Pelletier
+//       - 277039: JPA 2.0 Cache Usage Settings
+//     06/09/2010-2.0.3 Guy Pelletier
+//       - 313401: shared-cache-mode defaults to NONE when the element value is unrecognized
+//     06/19/2014-2.6: - Tomas Kraus (Oracle)
+//       - Fixed PU name and registered this suite in FullRegressionTestSuite
+//       - 437578: Tests to verify @Cacheable inheritance in JPA 2.1
 package org.eclipse.persistence.testing.tests.jpa.cacheable;
 
 import junit.framework.*;

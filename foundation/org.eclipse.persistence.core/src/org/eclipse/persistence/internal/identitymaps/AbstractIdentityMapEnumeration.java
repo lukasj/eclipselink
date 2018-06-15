@@ -12,6 +12,10 @@
  *     12/14/2017-3.0 Tomas Kraus
  *       - 522635: ConcurrentModificationException when triggering lazy load from conforming query
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation from Oracle TopLink
+//     12/14/2017-3.0 Tomas Kraus
+//       - 522635: ConcurrentModificationException when triggering lazy load from conforming query
 package org.eclipse.persistence.internal.identitymaps;
 
 import java.util.Collection;

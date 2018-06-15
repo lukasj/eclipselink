@@ -12,6 +12,10 @@
  *     27/07/2010 - 2.1.1 Sabine Heider
  *          304650: fix left over entity data interfering with testSetRollbackOnly
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation from Oracle TopLink
+//     27/07/2010 - 2.1.1 Sabine Heider
+//          304650: fix left over entity data interfering with testSetRollbackOnly
 package org.eclipse.persistence.testing.tests.jpa.remote;
 
 import java.util.ArrayList;

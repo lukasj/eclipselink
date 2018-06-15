@@ -11,6 +11,8 @@
  * Contributors:
  *  - rbarkhouse - 27 February - 2.3.3 - Initial implementation
  ******************************************************************************/
+// Contributors:
+//  - rbarkhouse - 27 February - 2.3.3 - Initial implementation
 package org.eclipse.persistence.testing.jaxb.sun.idresolver;
 
 import java.io.InputStream;

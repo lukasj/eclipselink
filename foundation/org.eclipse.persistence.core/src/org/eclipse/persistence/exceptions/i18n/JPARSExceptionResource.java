@@ -10,6 +10,8 @@
  * Contributors:
  *      gonural - initial implementation
  ******************************************************************************/
+// Contributors:
+//      gonural - initial implementation
 package org.eclipse.persistence.exceptions.i18n;
 
 import org.eclipse.persistence.exceptions.JPARSErrorCodes;

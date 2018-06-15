@@ -10,6 +10,8 @@
  * Contributors:
  *     Denise Smith  July 05, 2009 - Initial implementation
  ******************************************************************************/
+// Contributors:
+//     Denise Smith  July 05, 2009 - Initial implementation
 package org.eclipse.persistence.testing.jaxb.annotations;
 
 import java.io.InputStream;

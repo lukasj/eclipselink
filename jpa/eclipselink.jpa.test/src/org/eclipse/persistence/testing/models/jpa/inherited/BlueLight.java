@@ -11,6 +11,9 @@
  *     05/30/2008-1.0M8 Guy Pelletier
  *       - 230213: ValidationException when mapping to attribute in MappedSuperClass
  ******************************************************************************/
+// Contributors:
+//     05/30/2008-1.0M8 Guy Pelletier
+//       - 230213: ValidationException when mapping to attribute in MappedSuperClass
 package org.eclipse.persistence.testing.models.jpa.inherited;
 
 import javax.persistence.Entity;

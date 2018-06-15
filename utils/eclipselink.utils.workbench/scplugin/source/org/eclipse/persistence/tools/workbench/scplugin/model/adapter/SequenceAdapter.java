@@ -10,6 +10,8 @@
  * Contributors:
  *     Oracle - initial API and implementation from Oracle TopLink
 ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation from Oracle TopLink
 package org.eclipse.persistence.tools.workbench.scplugin.model.adapter;
 
 import org.eclipse.persistence.internal.sessions.factories.model.sequencing.SequenceConfig;

@@ -10,6 +10,8 @@
  * Contributors:
  * rbarkhouse - 2011 May 09 - 2.3 - Initial implementation
  ******************************************************************************/
+// Contributors:
+// rbarkhouse - 2011 May 09 - 2.3 - Initial implementation
 package org.eclipse.persistence.jaxb.xmlmodel;
 
 import javax.xml.bind.annotation.XmlEnum;

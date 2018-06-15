@@ -12,6 +12,10 @@
  *     342922: Unwanted insert statement generated when using ElementCollection
  *     with lazy loading.
  ******************************************************************************/
+// Contributors:
+//     17/04/2011 - 2.3 Vikram Bhatia
+//     342922: Unwanted insert statement generated when using ElementCollection
+//     with lazy loading.
 package org.eclipse.persistence.testing.models.jpa.advanced.entities;
 
 import java.util.ArrayList;

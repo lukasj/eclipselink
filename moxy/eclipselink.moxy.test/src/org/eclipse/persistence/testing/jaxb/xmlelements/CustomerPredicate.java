@@ -10,6 +10,8 @@
  * Contributors:
  *     Matt MacIvor - 2.4.2 - Initial Implementation
  ******************************************************************************/
+// Contributors:
+//     Matt MacIvor - 2.4.2 - Initial Implementation
 package org.eclipse.persistence.testing.jaxb.xmlelements;
 
 import javax.xml.bind.annotation.XmlElement;

@@ -10,6 +10,8 @@
  * Contributors:
  * rbarkhouse - 2011 March 21 - 2.3 - Initial implementation
  ******************************************************************************/
+// Contributors:
+// rbarkhouse - 2011 March 21 - 2.3 - Initial implementation
 package org.eclipse.persistence.testing.jaxb.xmlvirtualaccessmethods;
 
 import java.util.HashMap;

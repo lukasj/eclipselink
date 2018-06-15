@@ -19,6 +19,18 @@
  *     11/05/2015 Dalia Abo Sheasha
  *       - 480787: Wrap several privileged method calls with a doPrivileged block
  ******************************************************************************/
+// Contributors:
+//     tware - added for EclipseLink 2.0 release
+//     06/30/2010-2.1.1 Michael O'Brien
+//       - 316513: Enable JMX MBean functionality for JBoss, Glassfish and WebSphere in addition to WebLogic
+//       Move JMX MBean generic registration code up from specific platforms
+//       see <link>http://wiki.eclipse.org/EclipseLink/DesignDocs/316513</link>
+//     05/10/2014 - 428675 - 2.5.2 - Rick Curtis - Add support for WebSphere logger.
+//     04/01/2015 Will Dazey
+//       - 463726: Added DatabaseSession null check
+//     11/05/2015 Dalia Abo Sheasha
+//       - 480787: Wrap several privileged method calls with a doPrivileged block
+// CPR:: Copyright (c) 1998, 2018 Oracle and/or its affiliates, IBM Corporation. All rights reserved.
 package org.eclipse.persistence.platform.server.was;
 
 import java.lang.reflect.Constructor;

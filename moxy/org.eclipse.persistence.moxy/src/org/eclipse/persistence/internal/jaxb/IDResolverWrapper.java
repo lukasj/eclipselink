@@ -11,6 +11,8 @@
  * Contributors:
  *  - rbarkhouse - 24 February 2012 - 2.3.3 - Initial implementation
  ******************************************************************************/
+// Contributors:
+//  - rbarkhouse - 24 February 2012 - 2.3.3 - Initial implementation
 package org.eclipse.persistence.internal.jaxb;
 
 import java.lang.reflect.Method;

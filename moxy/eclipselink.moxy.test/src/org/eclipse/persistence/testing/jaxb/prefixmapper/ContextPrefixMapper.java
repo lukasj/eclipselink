@@ -10,6 +10,8 @@
  * Contributors:
  * Matt MacIvor - 2.4.1
  ******************************************************************************/
+// Contributors:
+// Matt MacIvor - 2.4.1
 
 package org.eclipse.persistence.testing.jaxb.prefixmapper;
 

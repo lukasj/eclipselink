@@ -10,6 +10,8 @@
 * Contributors:
 *     bdoughan - May 19/2010 - 2.1 - Initial implementation
 ******************************************************************************/
+// Contributors:
+//     bdoughan - May 19/2010 - 2.1 - Initial implementation
 package org.eclipse.persistence.testing.sdo.helper.jaxbhelper.jaxb.inverse;
 
 import org.eclipse.persistence.oxm.annotations.XmlInverseReference;

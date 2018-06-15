@@ -11,6 +11,9 @@
  *     10/26/2012-2.5 Chris Delahunt
  *       - 350469: JPA 2.1 Criteria Query framework Bulk Update/Delete support
  ******************************************************************************/
+// Contributors:
+//     10/26/2012-2.5 Chris Delahunt
+//       - 350469: JPA 2.1 Criteria Query framework Bulk Update/Delete support
 package org.eclipse.persistence.internal.jpa.querydef;
 
 import javax.persistence.criteria.CriteriaDelete;

@@ -14,6 +14,13 @@
  *       - 357533: Allow DDL queries to execute even when Multitenant entities are part of the PU
  *
  ******************************************************************************/
+// Contributors:
+// Fujitsu Ltd. (Dies Koper) - based on TLE-based implementation in Fujitsu's
+//                             Interstage Application Server V9.2 (JPA 1.0)
+//     09/14/2011-2.3.1 Guy Pelletier
+//       - 357533: Allow DDL queries to execute even when Multitenant entities are part of the PU
+//
+// CPR:: Copyright (c) 2009, 2018 Fujitsu Limited, Oracle and/or its affiliates. All rights reserved.
 package org.eclipse.persistence.platform.database;
 
 import java.io.IOException;

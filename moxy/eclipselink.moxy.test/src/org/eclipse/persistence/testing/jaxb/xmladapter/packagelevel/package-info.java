@@ -10,6 +10,8 @@
  * Contributors:
  * Denise Smith - September 10 /2009
  ******************************************************************************/
+// Contributors:
+// Denise Smith - September 10 /2009
 @XmlJavaTypeAdapter(value=ClassAtoClassBAdapter.class, type=ClassB.class)
 package org.eclipse.persistence.testing.jaxb.xmladapter.packagelevel;
 

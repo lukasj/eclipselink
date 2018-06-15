@@ -10,6 +10,9 @@
  * Contributors:
  *     Rick Curtis - Add support for WebSphere Liberty.
  ******************************************************************************/
+// Contributors:
+//     Rick Curtis - Add support for WebSphere Liberty.
+// CPR:: Copyright (c) 2014, 2018 IBM Corporation. All rights reserved.
 package org.eclipse.persistence.platform.server.was;
 
 import java.sql.Connection;

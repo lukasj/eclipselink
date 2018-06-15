@@ -10,6 +10,8 @@
 * Contributors:
 * mmacivor - June 05/2008 - 1.0 - Initial implementation
 ******************************************************************************/
+// Contributors:
+// mmacivor - June 05/2008 - 1.0 - Initial implementation
 package org.eclipse.persistence.oxm.mappings.converters;
 
 import org.eclipse.persistence.mappings.DatabaseMapping;

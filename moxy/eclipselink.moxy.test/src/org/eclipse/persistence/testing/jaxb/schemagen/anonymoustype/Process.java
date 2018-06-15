@@ -10,6 +10,8 @@
  * Contributors:
  * dmccann - Sept.22/2010 - 2.2 - Initial implementation
  ******************************************************************************/
+// Contributors:
+// dmccann - Sept.22/2010 - 2.2 - Initial implementation
 package org.eclipse.persistence.testing.jaxb.schemagen.anonymoustype;
 
 import javax.xml.bind.annotation.XmlElement;

@@ -12,6 +12,10 @@
  *       Bug 380580 - DatabaseField mapped with Temporal in EmbeddedId has no type
  *             caused an NPE in ddl generation code for this class
  ******************************************************************************/
+// Contributors:
+//     05/24/2012 ailitchev
+//       Bug 380580 - DatabaseField mapped with Temporal in EmbeddedId has no type
+//             caused an NPE in ddl generation code for this class
 package org.eclipse.persistence.testing.models.jpa.ddlgeneration;
 
 import java.util.*;

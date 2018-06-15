@@ -15,6 +15,13 @@
  *     20/11/2012-2.5 Guy Pelletier
  *       - 394524: Invalid query key [...] in expression
  ******************************************************************************/
+// Contributors:
+//     14/05/2012-2.4 Guy Pelletier
+//       - 376603: Provide for table per tenant support for multitenant applications
+//     08/11/2012-2.5 Guy Pelletier
+//       - 393867: Named queries do not work when using EM level Table Per Tenant Multitenancy.
+//     20/11/2012-2.5 Guy Pelletier
+//       - 394524: Invalid query key [...] in expression
 package org.eclipse.persistence.testing.models.jpa.advanced.multitenant;
 
 import static javax.persistence.CascadeType.PERSIST;

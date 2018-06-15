@@ -10,6 +10,8 @@
  * Contributors:
  * dmccann - December 21/2010 - 2.3 - Initial implementation
  ******************************************************************************/
+// Contributors:
+// dmccann - December 21/2010 - 2.3 - Initial implementation
 package org.eclipse.persistence.testing.jaxb.externalizedmetadata.xmladapter.hexbinary;
 
 import javax.xml.bind.annotation.XmlElement;

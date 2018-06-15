@@ -16,6 +16,14 @@
  *     05/03/2009-1.2.1 Guy Pelletier
  *       - 307547:  Exception in order by clause after migrating to eclipselink 1.2 release
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation from Oracle TopLink
+//     03/03/2010 - 2.1 Michael O'Brien
+//       - 302316: clear the object cache when testing stored procedure returns on SQLServer
+//         to avoid false positives visible only when debugging in DatabaseCall.buildOutputRow()
+//       - 260263: SQLServer 2005/2008 requires stored procedure creation select clause variable and column name matching
+//     05/03/2009-1.2.1 Guy Pelletier
+//       - 307547:  Exception in order by clause after migrating to eclipselink 1.2 release
 package org.eclipse.persistence.testing.tests.jpa.fieldaccess.advanced;
 
 import java.util.Collection;

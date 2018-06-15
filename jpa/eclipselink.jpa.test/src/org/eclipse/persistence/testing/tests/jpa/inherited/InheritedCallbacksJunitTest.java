@@ -12,6 +12,10 @@
  *     07/15/2010-2.2 Guy Pelletier
  *       -311395 : Multiple lifecycle callback methods for the same lifecycle event
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation from Oracle TopLink
+//     07/15/2010-2.2 Guy Pelletier
+//       -311395 : Multiple lifecycle callback methods for the same lifecycle event
 package org.eclipse.persistence.testing.tests.jpa.inherited;
 
 import javax.persistence.EntityManager;

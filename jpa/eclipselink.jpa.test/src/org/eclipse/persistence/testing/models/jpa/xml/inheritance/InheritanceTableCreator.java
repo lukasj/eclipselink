@@ -12,6 +12,10 @@
  *     12/18/2009-2.1 Guy Pelletier
  *       - 211323: Add class extractor support to the EclipseLink-ORM.XML Schema
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation from Oracle TopLink
+//     12/18/2009-2.1 Guy Pelletier
+//       - 211323: Add class extractor support to the EclipseLink-ORM.XML Schema
 
 
 package org.eclipse.persistence.testing.models.jpa.xml.inheritance;

@@ -10,6 +10,8 @@
  * Contributors:
  *     Praba Vijayaratnam - 2.3 - initial implementation
  ******************************************************************************/
+// Contributors:
+//     Praba Vijayaratnam - 2.3 - initial implementation
 @XmlSchema(
         xmlns = {@XmlNs(prefix="ns3", namespaceURI="namespace3"),
                  @XmlNs(prefix="ns1", namespaceURI="namespace1"),

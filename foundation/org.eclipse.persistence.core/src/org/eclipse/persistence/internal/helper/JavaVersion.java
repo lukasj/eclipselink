@@ -10,6 +10,8 @@
  * Contributors:
  *     Tomas Kraus, Peter Benedikovic - initial API and implementation
  ******************************************************************************/
+// Contributors:
+//     Tomas Kraus, Peter Benedikovic - initial API and implementation
 package org.eclipse.persistence.internal.helper;
 
 import java.lang.reflect.Method;

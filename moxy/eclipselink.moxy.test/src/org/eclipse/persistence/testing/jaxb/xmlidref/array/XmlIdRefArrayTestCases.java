@@ -10,6 +10,8 @@
  * Contributors:
  *    Denise Smith - February 5, 2013
  ******************************************************************************/
+// Contributors:
+//    Denise Smith - February 5, 2013
 package org.eclipse.persistence.testing.jaxb.xmlidref.array;
 
 import java.io.InputStream;

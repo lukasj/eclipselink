@@ -10,6 +10,8 @@
  * Contributors:
  * dmccann - October 20/2009 - 2.0 - Initial implementation
  ******************************************************************************/
+// Contributors:
+// dmccann - October 20/2009 - 2.0 - Initial implementation
 package org.eclipse.persistence.testing.jaxb.externalizedmetadata.xmladapter;
 
 import javax.xml.bind.annotation.adapters.XmlAdapter;

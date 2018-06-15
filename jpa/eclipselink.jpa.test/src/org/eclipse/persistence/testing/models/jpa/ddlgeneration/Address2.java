@@ -11,6 +11,10 @@
  *     05/17/2012-2.3.3 Arron Ferguson
  *       - 379829: NPE Thrown with OneToOne Relationship
  ******************************************************************************/
+// Contributors:
+//     05/17/2012-2.3.3 Arron Ferguson
+//       - 379829: NPE Thrown with OneToOne Relationship
+// CPR:: Copyright (c) 2012, 2015 Arron Ferguson. All rights reserved.
 package org.eclipse.persistence.testing.models.jpa.ddlgeneration;
 
 import java.io.Serializable;

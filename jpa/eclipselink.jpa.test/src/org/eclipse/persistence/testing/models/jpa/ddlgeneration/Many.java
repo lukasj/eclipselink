@@ -15,6 +15,14 @@
  *     04/04/2013-2.4.3 Guy Pelletier
  *       - 388564: Generated DDL does not match annotation
  ******************************************************************************/
+// Contributors:
+//     01/07/2010-2.0.1 Laird Nelson
+//       - 282075: DDL generation is unpredictable
+//     11/17/2010-2.2.0 Chris Delahunt
+//       - 214519: Allow appending strings to CREATE TABLE statements
+//     04/04/2013-2.4.3 Guy Pelletier
+//       - 388564: Generated DDL does not match annotation
+// CPR:: Copyright (c) 2010, 2015 Oracle and/or its affiliates, Laird Nelson. All rights reserved.
 package org.eclipse.persistence.testing.models.jpa.ddlgeneration;
 
 import java.io.Serializable;

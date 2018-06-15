@@ -10,6 +10,8 @@
  * Contributors:
  *     Matt MacIvor -  January, 2010
  ******************************************************************************/
+// Contributors:
+//     Matt MacIvor -  January, 2010
 package org.eclipse.persistence.testing.jaxb.typemappinginfo;
 
 import java.io.InputStream;

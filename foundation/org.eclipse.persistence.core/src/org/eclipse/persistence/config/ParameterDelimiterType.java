@@ -12,6 +12,10 @@
  *     10/29/2010-2.2 Michael O'Brien
  *       - 325167: Make reserved # bind parameter char generic to enable native SQL pass through
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation from Oracle TopLink
+//     10/29/2010-2.2 Michael O'Brien
+//       - 325167: Make reserved # bind parameter char generic to enable native SQL pass through
 package org.eclipse.persistence.config;
 
 /**

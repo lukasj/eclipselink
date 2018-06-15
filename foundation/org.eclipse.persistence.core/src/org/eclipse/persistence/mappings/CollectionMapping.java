@@ -24,6 +24,23 @@
  *     08/29/2016 Jody Grassel
  *       - 500441: Eclipselink core has System.getProperty() calls that are not potentially executed under doPriv()
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation from Oracle TopLink
+//     02/26/2009-2.0 Guy Pelletier
+//       - 264001: dot notation for mapped-by and order-by
+//     08/23/2010-2.2 Michael O'Brien
+//        - 323043: application.xml module ordering may cause weaving not to occur causing an NPE.
+//                       warn if expected "_persistence_//_vh" method not found
+//                       instead of throwing NPE during deploy validation.
+//     07/19/2011-2.2.1 Guy Pelletier
+//       - 338812: ManyToMany mapping in aggregate object violate integrity constraint on deletion
+//     04/09/2012-2.4 Guy Pelletier
+//       - 374377: OrderBy with ElementCollection doesn't work
+//     14/05/2012-2.4 Guy Pelletier
+//       - 376603: Provide for table per tenant support for multitenant applications
+//     08/29/2016 Jody Grassel
+//       - 500441: Eclipselink core has System.getProperty() calls that are not potentially executed under doPriv()
+// CPR:: Copyright (c) 1998, 2018 Oracle and/or its affiliates, IBM Corporation. All rights reserved.
 package org.eclipse.persistence.mappings;
 
 import java.beans.PropertyChangeListener;

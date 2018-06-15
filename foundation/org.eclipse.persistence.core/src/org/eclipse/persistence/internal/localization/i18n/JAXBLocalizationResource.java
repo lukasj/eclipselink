@@ -12,6 +12,11 @@
  *     09/24/2014-2.6 Rick Curtis
  *       - 443762 : Misc message cleanup.
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation from Oracle TopLink
+//     09/24/2014-2.6 Rick Curtis
+//       - 443762 : Misc message cleanup.
+// CPR:: Copyright (c) 1998, 2018 Oracle, IBM Corporation and/or its affiliates. All rights reserved.
 package org.eclipse.persistence.internal.localization.i18n;
 
 import java.util.ListResourceBundle;

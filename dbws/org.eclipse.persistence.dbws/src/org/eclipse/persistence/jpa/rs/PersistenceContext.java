@@ -12,6 +12,10 @@
  *     2014-09-01-2.6.0 Dmitry Kornilov
  *       - JPARS 2.0 related changes
  ******************************************************************************/
+// Contributors:
+//        dclarke/tware - initial
+//     2014-09-01-2.6.0 Dmitry Kornilov
+//       - JPARS 2.0 related changes
 package org.eclipse.persistence.jpa.rs;
 
 import java.beans.BeanInfo;

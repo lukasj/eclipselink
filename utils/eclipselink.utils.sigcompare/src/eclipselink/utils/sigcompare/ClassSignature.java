@@ -10,6 +10,8 @@
  * Contributors:
  *  dclarke - initial sig compare utility (Bug 352151)
  ******************************************************************************/
+// Contributors:
+//  dclarke - initial sig compare utility (Bug 352151)
 package eclipselink.utils.sigcompare;
 
 import java.io.IOException;

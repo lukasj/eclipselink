@@ -10,6 +10,8 @@
 * Contributors:
 *     mmacivor - March 10/2009 - Initial implementation
 ******************************************************************************/
+// Contributors:
+//     mmacivor - March 10/2009 - Initial implementation
 package org.eclipse.persistence.internal.jaxb;
 
 import java.lang.reflect.InvocationTargetException;

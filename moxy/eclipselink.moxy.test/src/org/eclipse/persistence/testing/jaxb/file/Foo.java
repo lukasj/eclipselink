@@ -10,6 +10,8 @@
  * Contributors:
  *     mkos - December 20/2013 - 1.0 - Initial implementation
  ******************************************************************************/
+// Contributors:
+//     mkos - December 20/2013 - 1.0 - Initial implementation
 package org.eclipse.persistence.testing.jaxb.file;
 
 import javax.xml.bind.annotation.XmlRootElement;

@@ -10,6 +10,8 @@
  * Contributors:
  *      dclarke/tware - initial implementation
  ******************************************************************************/
+// Contributors:
+//      dclarke/tware - initial implementation
 package org.eclipse.persistence.jpa.rs.service;
 
 import java.util.Map;

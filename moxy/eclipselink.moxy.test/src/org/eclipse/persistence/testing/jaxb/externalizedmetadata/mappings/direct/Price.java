@@ -10,6 +10,8 @@
  * Contributors:
  * dmccann - February 17/2010 - 2.1 - Initial implementation
  ******************************************************************************/
+// Contributors:
+// dmccann - February 17/2010 - 2.1 - Initial implementation
 package org.eclipse.persistence.testing.jaxb.externalizedmetadata.mappings.direct;
 
 public class Price {

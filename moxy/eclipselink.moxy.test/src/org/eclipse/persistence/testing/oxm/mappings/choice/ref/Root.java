@@ -10,6 +10,8 @@
  * Contributors:
  * dmccann - December 01/2010 - 2.3 - Initial implementation
  ******************************************************************************/
+// Contributors:
+// dmccann - December 01/2010 - 2.3 - Initial implementation
 package org.eclipse.persistence.testing.oxm.mappings.choice.ref;
 
 import java.util.Iterator;

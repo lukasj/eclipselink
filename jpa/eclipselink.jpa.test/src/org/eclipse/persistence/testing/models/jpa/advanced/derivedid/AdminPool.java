@@ -10,6 +10,8 @@
  * Contributors:
  *     tware - testing for bug 294811 - https://bugs.eclipse.org/bugs/show_bug.cgi?id=294811
  ******************************************************************************/
+// Contributors:
+//     tware - testing for bug 294811 - https://bugs.eclipse.org/bugs/show_bug.cgi?id=294811
 package org.eclipse.persistence.testing.models.jpa.advanced.derivedid;
 
 import static javax.persistence.CascadeType.ALL;

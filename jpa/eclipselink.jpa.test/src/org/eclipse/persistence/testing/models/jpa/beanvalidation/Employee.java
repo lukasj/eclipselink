@@ -9,6 +9,7 @@
  *
  * Contributors:
  ******************************************************************************/
+// Contributors:
 
 package org.eclipse.persistence.testing.models.jpa.beanvalidation;
 

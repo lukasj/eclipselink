@@ -12,6 +12,10 @@
  *     GYorke - non-bug update to set accessor in case of connection failure.  Thi
  *              will allow the retry code to function.
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation from Oracle TopLink
+//     GYorke - non-bug update to set accessor in case of connection failure.  Thi
+//              will allow the retry code to function.
 package org.eclipse.persistence.internal.databaseaccess;
 
 import java.util.*;

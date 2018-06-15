@@ -10,6 +10,8 @@
  * Contributors:
  *     rbarkhouse - 2009-08-13 13:49:00 - initial implementation
  ******************************************************************************/
+// Contributors:
+//     rbarkhouse - 2009-08-13 13:49:00 - initial implementation
 package org.eclipse.persistence.testing.oxm.schemamodelgenerator.required;
 
 import org.eclipse.persistence.oxm.XMLDescriptor;

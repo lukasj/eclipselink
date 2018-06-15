@@ -13,6 +13,11 @@
  *     8/12/2015-2.6 Mythily Parthasarathy
  *       - 474752: Added TireDetails
  ******************************************************************************/
+// Contributors:
+//     05/1/2009-2.0 Guy Pelletier/David Minsky
+//       - 249033: JPA 2.0 Orphan removal
+//     8/12/2015-2.6 Mythily Parthasarathy
+//       - 474752: Added TireDetails
 package org.eclipse.persistence.testing.models.jpa.orphanremoval;
 
 import java.util.Set;

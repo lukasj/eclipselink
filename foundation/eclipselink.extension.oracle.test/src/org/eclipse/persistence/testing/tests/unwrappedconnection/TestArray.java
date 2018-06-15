@@ -10,6 +10,8 @@
  * Contributors:
  *     James Sutherland - Adding wrapping
  ******************************************************************************/
+// Contributors:
+//     James Sutherland - Adding wrapping
 package org.eclipse.persistence.testing.tests.unwrappedconnection;
 
 import java.sql.Array;

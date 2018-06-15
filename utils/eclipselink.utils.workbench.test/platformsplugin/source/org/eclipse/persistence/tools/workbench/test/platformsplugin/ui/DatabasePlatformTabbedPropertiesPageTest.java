@@ -10,6 +10,8 @@
  * Contributors:
  *     Oracle - initial API and implementation from Oracle TopLink
 ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation from Oracle TopLink
 package org.eclipse.persistence.tools.workbench.test.platformsplugin.ui;
 
 import org.eclipse.persistence.tools.workbench.uitools.app.ListValueModel;

@@ -11,6 +11,9 @@
  *     Blaise Doughan - 2.3 - initial implementation
  *     Praba Vijayaratnam - 2.3 - test automation
  ******************************************************************************/
+// Contributors:
+//     Blaise Doughan - 2.3 - initial implementation
+//     Praba Vijayaratnam - 2.3 - test automation
 package org.eclipse.persistence.testing.jaxrs;
 
 import org.eclipse.persistence.jaxb.JAXBContextFactory;

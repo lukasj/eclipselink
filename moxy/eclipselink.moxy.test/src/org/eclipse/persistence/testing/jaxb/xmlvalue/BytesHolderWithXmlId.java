@@ -10,6 +10,8 @@
  * Contributors:
  *     Denise Smith - initial API and implementation
  ******************************************************************************/
+// Contributors:
+//     Denise Smith - initial API and implementation
 package org.eclipse.persistence.testing.jaxb.xmlvalue;
 
 import javax.xml.bind.annotation.XmlAttribute;

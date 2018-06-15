@@ -16,6 +16,14 @@
  * may never be included in the product. Please provide feedback through mailing
  * lists or the bug database.
  ******************************************************************************/
+// Contributors:
+//     dclarke - Dynamic Persistence INCUBATION - Enhancement 200045
+//                  http://wiki.eclipse.org/EclipseLink/Development/Dynamic
+//
+// This code is being developed under INCUBATION and is not currently included
+// in the automated EclipseLink build. The API in this code may change, or
+// may never be included in the product. Please provide feedback through mailing
+// lists or the bug database.
 package org.eclipse.persistence.exceptions;
 
 //EclipseLink imports

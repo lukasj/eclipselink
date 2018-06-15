@@ -14,6 +14,12 @@
  *     06/20/2008-1.0 Guy Pelletier
  *       - 232975: Failure when attribute type is generic
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation from Oracle TopLink
+//     05/30/2008-1.0M8 Guy Pelletier
+//       - 230213: ValidationException when mapping to attribute in MappedSuperClass
+//     06/20/2008-1.0 Guy Pelletier
+//       - 232975: Failure when attribute type is generic
 package org.eclipse.persistence.testing.models.jpa.inherited;
 
 public interface Bluish<X, Y>   {

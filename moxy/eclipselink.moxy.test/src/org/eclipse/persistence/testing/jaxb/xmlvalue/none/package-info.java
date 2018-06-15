@@ -10,6 +10,8 @@
  * Contributors:
  *     Blaise Doughan - 2.3 - initial implementation
  ******************************************************************************/
+// Contributors:
+//     Blaise Doughan - 2.3 - initial implementation
 @XmlAccessorType(XmlAccessType.NONE)
 package org.eclipse.persistence.testing.jaxb.xmlvalue.none;
 

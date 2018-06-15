@@ -11,6 +11,9 @@
  *     05/28/2008-1.0M8 Andrei Ilitchev.
  *       - New file introduced for bug 224964: Provide support for Proxy Authentication through JPA.
  ******************************************************************************/
+// Contributors:
+//     05/28/2008-1.0M8 Andrei Ilitchev.
+//       - New file introduced for bug 224964: Provide support for Proxy Authentication through JPA.
 package org.eclipse.persistence.testing.tests.jpa.proxyauthentication;
 
 import java.sql.Connection;

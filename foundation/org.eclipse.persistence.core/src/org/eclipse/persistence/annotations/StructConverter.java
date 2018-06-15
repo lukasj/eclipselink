@@ -12,6 +12,10 @@
  *     06/12/2017-2.7 Lukas Jungmann
  *       - 518155: [jpa22] add support for repeatable annotations
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation from Oracle TopLink
+//     06/12/2017-2.7 Lukas Jungmann
+//       - 518155: [jpa22] add support for repeatable annotations
 package org.eclipse.persistence.annotations;
 
 import static java.lang.annotation.ElementType.FIELD;

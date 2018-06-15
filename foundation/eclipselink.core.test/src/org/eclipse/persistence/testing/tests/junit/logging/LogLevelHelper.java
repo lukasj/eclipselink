@@ -10,6 +10,8 @@
  * Contributors:
  *      Tomas Kraus - Initial implementation
  ******************************************************************************/
+// Contributors:
+//      Tomas Kraus - Initial implementation
 package org.eclipse.persistence.testing.tests.junit.logging;
 
 import static org.junit.Assert.assertEquals;

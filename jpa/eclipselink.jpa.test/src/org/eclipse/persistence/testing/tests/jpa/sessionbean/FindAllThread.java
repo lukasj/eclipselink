@@ -10,6 +10,8 @@
  * Contributors:
  *     etang - initial API and implementation from Oracle TopLink
  ******************************************************************************/
+// Contributors:
+//     etang - initial API and implementation from Oracle TopLink
  package org.eclipse.persistence.testing.tests.jpa.sessionbean;
 
 import java.util.Iterator;

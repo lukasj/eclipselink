@@ -12,6 +12,9 @@
  * Iaroslav Savytskyi - initial implementation
  * ****************************************************************************
  */
+// Contributors:
+// Iaroslav Savytskyi - initial implementation
+// ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 package org.eclipse.persistence.testing.sdo.helper;
 
 import commonj.sdo.helper.HelperContext;

@@ -10,6 +10,8 @@
  * Contributors:
  *  - rbarkhouse - 18 December 2012 - 2.4 - Initial implementation
  ******************************************************************************/
+// Contributors:
+//  - rbarkhouse - 18 December 2012 - 2.4 - Initial implementation
 package org.eclipse.persistence.testing.jaxb.typemappinginfo;
 import java.io.ByteArrayInputStream;
 import java.io.InputStream;

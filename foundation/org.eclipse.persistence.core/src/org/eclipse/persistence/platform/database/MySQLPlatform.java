@@ -21,6 +21,20 @@
  *     02/19/2015 - Rick Curtis
  *       - 458877 : Add national character support
  *****************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation from Oracle TopLink
+//     Zoltan NAGY & tware - added implementation of updateMaxRowsForQuery
+//     09/14/2011-2.3.1 Guy Pelletier
+//       - 357533: Allow DDL queries to execute even when Multitenant entities are part of the PU
+//     02/04/2013-2.5 Guy Pelletier
+//       - 389090: JPA 2.1 DDL Generation Support
+//     04/30/2014-2.6 Lukas Jungmann
+//       - 380101: Invalid MySQL SQL syntax in query with LIMIT and FOR UPDATE
+//     07/23/2014-2.6 Lukas Jungmann
+//       - 440278: Support fractional seconds in time values
+//     02/19/2015 - Rick Curtis
+//       - 458877 : Add national character support
+// CPR:: Copyright (c) 1998, 2017 Oracle and/or its affiliates, IBM Corporation. All rights reserved.
 package org.eclipse.persistence.platform.database;
 
 import java.io.IOException;

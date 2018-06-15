@@ -15,6 +15,13 @@
  *       - 248748: Add WebLogic 10.3 specific JMX MBean attributes and functions
  *       see <link>http://wiki.eclipse.org/EclipseLink/DesignDocs/248748</link>
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation from Oracle TopLink
+//     @author  mobrien
+//     @since   EclipseLink 1.1 enh# 248748
+//     10/20/2008-1.1M4 Michael O'Brien
+//       - 248748: Add WebLogic 10.3 specific JMX MBean attributes and functions
+//       see <link>http://wiki.eclipse.org/EclipseLink/DesignDocs/248748</link>
 package org.eclipse.persistence.services.weblogic;
 
 import org.eclipse.persistence.internal.sessions.AbstractSession;

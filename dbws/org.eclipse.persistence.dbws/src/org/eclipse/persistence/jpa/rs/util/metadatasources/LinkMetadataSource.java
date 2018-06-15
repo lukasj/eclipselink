@@ -10,6 +10,8 @@
  * Contributors:
  *     tware -  Initial implementation
  ******************************************************************************/
+// Contributors:
+//     tware -  Initial implementation
 
 package org.eclipse.persistence.jpa.rs.util.metadatasources;
 

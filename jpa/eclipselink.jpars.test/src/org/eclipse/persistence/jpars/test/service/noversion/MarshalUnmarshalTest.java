@@ -12,6 +12,10 @@
  *         2014-09-01-2.6.0 Dmitry Kornilov
  *           - Moved to separate package together with other 'no version' tests.
  ******************************************************************************/
+// Contributors:
+//         gonural - Initial implementation
+//         2014-09-01-2.6.0 Dmitry Kornilov
+//           - Moved to separate package together with other 'no version' tests.
 package org.eclipse.persistence.jpars.test.service.noversion;
 
 import org.eclipse.persistence.exceptions.JPARSErrorCodes;

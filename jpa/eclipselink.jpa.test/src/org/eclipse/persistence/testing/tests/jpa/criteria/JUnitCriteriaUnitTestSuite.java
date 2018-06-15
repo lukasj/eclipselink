@@ -11,6 +11,9 @@
  *     July 22, 2009-2.0 Chris Delahunt
  *       - TODO Bug#: Bug Description
  ******************************************************************************/
+// Contributors:
+//     July 22, 2009-2.0 Chris Delahunt
+//       - TODO Bug#: Bug Description
 package org.eclipse.persistence.testing.tests.jpa.criteria;
 
 import java.util.ArrayList;

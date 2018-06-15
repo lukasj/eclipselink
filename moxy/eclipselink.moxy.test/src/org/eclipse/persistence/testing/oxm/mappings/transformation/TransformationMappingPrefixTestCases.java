@@ -10,6 +10,8 @@
 * Contributors:
 *     mmacivor - Initial implementation
 ******************************************************************************/
+// Contributors:
+//     mmacivor - Initial implementation
 package org.eclipse.persistence.testing.oxm.mappings.transformation;
 
 import org.eclipse.persistence.testing.oxm.mappings.XMLMappingTestCases;

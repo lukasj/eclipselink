@@ -10,6 +10,8 @@
  * Contributors:
  *      tware - Initial implementation
  ******************************************************************************/
+// Contributors:
+//      tware - Initial implementation
 package org.eclipse.persistence.jpars.test.util;
 
 import java.util.ArrayList;

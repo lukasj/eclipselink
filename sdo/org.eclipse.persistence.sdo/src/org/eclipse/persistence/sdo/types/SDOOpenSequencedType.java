@@ -10,6 +10,8 @@
 * Contributors:
 * bdoughan - May 6/2008 - 1.0M7 - Initial implementation
 ******************************************************************************/
+// Contributors:
+// bdoughan - May 6/2008 - 1.0M7 - Initial implementation
 package org.eclipse.persistence.sdo.types;
 
 import java.util.Collections;

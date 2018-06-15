@@ -10,6 +10,8 @@
  * Contributors:
  *     tware - contribution direct from Oracle TopLink
  ******************************************************************************/
+// Contributors:
+//     tware - contribution direct from Oracle TopLink
 package org.eclipse.persistence.internal.localization;
 
 /**

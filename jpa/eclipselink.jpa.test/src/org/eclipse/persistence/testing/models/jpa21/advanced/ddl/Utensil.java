@@ -11,6 +11,9 @@
  *     11/22/2012-2.5 Guy Pelletier
  *       - 389090: JPA 2.1 DDL Generation Support (index metadata support)
  ******************************************************************************/
+// Contributors:
+//     11/22/2012-2.5 Guy Pelletier
+//       - 389090: JPA 2.1 DDL Generation Support (index metadata support)
 package org.eclipse.persistence.testing.models.jpa21.advanced.ddl;
 
 import static javax.persistence.GenerationType.TABLE;

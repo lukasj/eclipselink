@@ -14,6 +14,12 @@
  *       OC4J: oracle.j2ee.rmi.RMIInitialContextFactory to
  *       WebLogic: weblogic.jndi.WLInitialContextFactory
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation from Oracle TopLink
+//     17/10/2008-1.1  Michael O'Brien
+//       - 251005: The default JNDI InitialContextFactory is modified from
+//       OC4J: oracle.j2ee.rmi.RMIInitialContextFactory to
+//       WebLogic: weblogic.jndi.WLInitialContextFactory
 package org.eclipse.persistence.sessions.coordination;
 
 import java.util.Enumeration;

@@ -10,6 +10,8 @@
  * Contributors:
  * Denise Smith - October 2013
  ******************************************************************************/
+// Contributors:
+// Denise Smith - October 2013
 package org.eclipse.persistence.testing.sdo.helper.xmlhelper.load;
 
 import java.io.BufferedInputStream;

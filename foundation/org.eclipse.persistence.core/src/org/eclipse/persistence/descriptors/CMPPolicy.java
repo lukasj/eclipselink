@@ -18,6 +18,17 @@
  *     03/23/2016-2.6_WAS Will Dazey  
  *       - 490114: Add support for PersistenceUnitUtil.getIdentifier with nested embeddables in EmbeddedId class
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation from Oracle TopLink
+//     12/17/2010-2.2 Guy Pelletier
+//       - 330755: Nested embeddables can't be used as embedded ids
+//     11/10/2011-2.4 Guy Pelletier
+//       - 357474: Address primaryKey option from tenant discriminator column
+//     14/05/2012-2.4 Guy Pelletier
+//       - 376603: Provide for table per tenant support for multitenant applications
+//     03/23/2016-2.6_WAS Will Dazey
+//       - 490114: Add support for PersistenceUnitUtil.getIdentifier with nested embeddables in EmbeddedId class
+// CPR:: Copyright (c) 1998, 2018 Oracle and/or its affiliates, IBM Corporation. All rights reserved.
 package org.eclipse.persistence.descriptors;
 
 import java.io.Serializable;

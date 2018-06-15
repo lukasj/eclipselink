@@ -14,6 +14,12 @@
  *     14/05/2012-2.4 Guy Pelletier
  *       - 376603: Provide for table per tenant support for multitenant applications
  ******************************************************************************/
+// Contributors:
+//     dclarke, mnorman - Dynamic Persistence
+//       http://wiki.eclipse.org/EclipseLink/Development/Dynamic
+//       (https://bugs.eclipse.org/bugs/show_bug.cgi?id=200045)
+//     14/05/2012-2.4 Guy Pelletier
+//       - 376603: Provide for table per tenant support for multitenant applications
 package org.eclipse.persistence.dynamic;
 
 //javase imports

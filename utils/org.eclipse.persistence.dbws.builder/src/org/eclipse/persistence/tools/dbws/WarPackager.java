@@ -11,6 +11,9 @@
  *     Mike Norman - May 12 2010:
  *         refactor WAR packaging: generic and for WLS 10.3
  ******************************************************************************/
+// Contributors:
+//     Mike Norman - May 12 2010:
+//         refactor WAR packaging: generic and for WLS 10.3
 
 package org.eclipse.persistence.tools.dbws;
 

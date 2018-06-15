@@ -11,6 +11,9 @@
  *  04/15/2008-1.0M7 Guy Pelletier
  *     - 226517: Add existence support to the EclipseLink-ORM.XML Schema
  ******************************************************************************/
+// Contributors:
+//  04/15/2008-1.0M7 Guy Pelletier
+//     - 226517: Add existence support to the EclipseLink-ORM.XML Schema
 package org.eclipse.persistence.annotations;
 
 import java.lang.annotation.Target;

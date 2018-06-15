@@ -10,6 +10,8 @@
  * Contributors:
  *     tware - added cascaded locking testing
  ******************************************************************************/
+// Contributors:
+//     tware - added cascaded locking testing
 package org.eclipse.persistence.testing.models.optimisticlocking;
 
 public class AnimalTableCreator extends org.eclipse.persistence.tools.schemaframework.TableCreator {

@@ -17,6 +17,15 @@
  *     12/14/2017-3.0 Tomas Kraus
  *       - 291546: Performance degradation due to usage of Vector in DescriptorEventManager
  ******************************************************************************/
+// Contributors:
+//     05/16/2008-1.0M8 Guy Pelletier
+//       - 218084: Implement metadata merging functionality between mapping files
+//     01/05/2010-2.1 Guy Pelletier
+//       - 211324: Add additional event(s) support to the EclipseLink-ORM.XML Schema
+//     07/15/2010-2.2 Guy Pelletier
+//       -311395 : Multiple lifecycle callback methods for the same lifecycle event
+//     12/14/2017-3.0 Tomas Kraus
+//       - 291546: Performance degradation due to usage of Vector in DescriptorEventManager
 package org.eclipse.persistence.internal.jpa.metadata.listeners;
 
 import java.lang.reflect.InvocationTargetException;

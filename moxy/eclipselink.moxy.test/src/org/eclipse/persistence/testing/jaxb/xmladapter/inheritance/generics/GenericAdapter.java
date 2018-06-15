@@ -11,6 +11,8 @@
  * Contributors:
  *  - rbarkhouse - 30 August 2012 - 2.4 - Initial implementation
  ******************************************************************************/
+// Contributors:
+//  - rbarkhouse - 30 August 2012 - 2.4 - Initial implementation
 package org.eclipse.persistence.testing.jaxb.xmladapter.inheritance.generics;
 
 import java.util.HashMap;

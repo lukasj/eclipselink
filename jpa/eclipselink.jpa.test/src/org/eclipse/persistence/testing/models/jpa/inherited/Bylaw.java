@@ -11,6 +11,9 @@
  *     06/18/2010-2.2 Guy Pelletier
  *       - 300458: EclispeLink should throw a more specific exception than NPE
  ******************************************************************************/
+// Contributors:
+//     06/18/2010-2.2 Guy Pelletier
+//       - 300458: EclispeLink should throw a more specific exception than NPE
 package org.eclipse.persistence.testing.models.jpa.inherited;
 
 import javax.persistence.Column;

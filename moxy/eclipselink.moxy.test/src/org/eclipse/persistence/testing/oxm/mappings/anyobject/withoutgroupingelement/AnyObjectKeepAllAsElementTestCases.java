@@ -10,6 +10,8 @@
  * Contributors:
  * dmccann - 2.2 - Initial implementation
  ******************************************************************************/
+// Contributors:
+// dmccann - 2.2 - Initial implementation
 package org.eclipse.persistence.testing.oxm.mappings.anyobject.withoutgroupingelement;
 
 import javax.xml.parsers.DocumentBuilder;

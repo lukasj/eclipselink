@@ -24,6 +24,22 @@
  *     09/03/2015 - Will Dazey
  *       - 456067 : Added support for defining query timeout units
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation from Oracle TopLink
+//     10/15/2010-2.2 Guy Pelletier
+//       - 322008: Improve usability of additional criteria applied to queries at the session/EM
+//     04/01/2011-2.3 Guy Pelletier
+//       - 337323: Multi-tenant with shared schema support (part 2)
+//     05/24/2011-2.3 Guy Pelletier
+//       - 345962: Join fetch query when using tenant discriminator column fails.
+//     08/18/2011-2.3.1 Guy Pelletier
+//       - 355093: Add new 'includeCriteria' flag to Multitenant metadata
+//     09/09/2011-2.3.1 Guy Pelletier
+//       - 356197: Add new VPD type to MultitenantType
+//     08/01/2012-2.5 Chris Delahunt
+//       - 371950: JPA Metadata caching
+//     09/03/2015 - Will Dazey
+//       - 456067 : Added support for defining query timeout units
 package org.eclipse.persistence.descriptors;
 
 import java.io.Serializable;

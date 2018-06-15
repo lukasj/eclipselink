@@ -10,6 +10,8 @@
  * Contributors:
  * October 30, 2012
  ******************************************************************************/
+// Contributors:
+// October 30, 2012
 package org.eclipse.persistence.testing.jaxb.annotations.xmltransformation;
 
 import javax.xml.bind.annotation.XmlElement;

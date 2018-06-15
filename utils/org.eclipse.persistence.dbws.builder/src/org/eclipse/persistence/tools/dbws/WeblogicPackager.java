@@ -10,6 +10,8 @@
  * Contributors:
  *     Mike Norman - July 17 2008, creating packager for WLS 10.3 version of JAX-WS RI
  ******************************************************************************/
+// Contributors:
+//     Mike Norman - July 17 2008, creating packager for WLS 10.3 version of JAX-WS RI
 
  package org.eclipse.persistence.tools.dbws;
 

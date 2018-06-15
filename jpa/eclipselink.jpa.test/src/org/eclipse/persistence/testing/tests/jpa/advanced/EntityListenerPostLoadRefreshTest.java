@@ -11,6 +11,9 @@
  *     Jan 9, 2009-1.1 Chris Delahunt
  *       - Bug 244802: PostLoad callback getting invoked twice
  ******************************************************************************/
+// Contributors:
+//     Jan 9, 2009-1.1 Chris Delahunt
+//       - Bug 244802: PostLoad callback getting invoked twice
 package org.eclipse.persistence.testing.tests.jpa.advanced;
 
 import org.eclipse.persistence.testing.framework.TestErrorException;

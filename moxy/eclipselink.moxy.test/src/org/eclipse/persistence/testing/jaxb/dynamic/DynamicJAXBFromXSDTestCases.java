@@ -10,6 +10,8 @@
  * Contributors:
  *     rbarkhouse - 2.1 - initial implementation
  ******************************************************************************/
+// Contributors:
+//     rbarkhouse - 2.1 - initial implementation
 package org.eclipse.persistence.testing.jaxb.dynamic;
 
 import java.io.*;

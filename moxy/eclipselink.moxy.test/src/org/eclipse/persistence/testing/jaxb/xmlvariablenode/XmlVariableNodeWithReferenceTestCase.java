@@ -10,6 +10,8 @@
  * Contributors:
  *     Peter Benedikovic - 2.6 - initial implementation
  ******************************************************************************/
+// Contributors:
+//     Peter Benedikovic - 2.6 - initial implementation
 package org.eclipse.persistence.testing.jaxb.xmlvariablenode;
 
 import java.util.ArrayList;

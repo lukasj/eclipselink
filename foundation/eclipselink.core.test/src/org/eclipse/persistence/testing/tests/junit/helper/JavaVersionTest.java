@@ -11,6 +11,9 @@
  *     Tomas Kraus - 2017/10/11
  *          Bug 525854 - Fix Java SE platform detection and clean up platform code
  ******************************************************************************/
+// Contributors:
+//     Tomas Kraus - 2017/10/11
+//          Bug 525854 - Fix Java SE platform detection and clean up platform code
 package org.eclipse.persistence.testing.tests.junit.helper;
 
 import static org.junit.Assert.assertNotNull;

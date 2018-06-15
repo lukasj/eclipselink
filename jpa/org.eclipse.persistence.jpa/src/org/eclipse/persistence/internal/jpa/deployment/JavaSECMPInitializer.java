@@ -12,6 +12,11 @@
  *     tware - 1.0RC1 - refactor for OSGi
  *     zhao jianyong - Bug 324627 - JarList stream is not explicitly closed after use in JavaSECMPInitializer
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation from Oracle TopLink
+//     tware - 1.0RC1 - refactor for OSGi
+//     zhao jianyong - Bug 324627 - JarList stream is not explicitly closed after use in JavaSECMPInitializer
+// CPR:: Copyright (c) 1998, 2015 Oracle and/or its affiliates, IBM Corporation. All rights reserved.
 package org.eclipse.persistence.internal.jpa.deployment;
 
 import java.lang.instrument.ClassFileTransformer;

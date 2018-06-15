@@ -11,6 +11,9 @@
  *     02/17/2018-2.7.2 Lukas Jungmann
  *       - 531305: Canonical model generator fails to run on JDK9
  ******************************************************************************/
+// Contributors:
+//     02/17/2018-2.7.2 Lukas Jungmann
+//       - 531305: Canonical model generator fails to run on JDK9
 package org.eclipse.persistence.jpa.test.modelgen;
 
 import java.io.BufferedWriter;

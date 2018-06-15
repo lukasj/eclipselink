@@ -11,6 +11,9 @@
  *     04/27/2010-2.1 Guy Pelletier
  *       - 309856: MappedSuperclasses from XML are not being initialized properly
  ******************************************************************************/
+// Contributors:
+//     04/27/2010-2.1 Guy Pelletier
+//       - 309856: MappedSuperclasses from XML are not being initialized properly
 package org.eclipse.persistence.testing.models.jpa.xml.composite.advanced.member_1;
 
 public class Person {

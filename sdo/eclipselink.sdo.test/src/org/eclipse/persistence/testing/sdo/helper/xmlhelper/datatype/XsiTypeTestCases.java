@@ -10,6 +10,8 @@
 * Contributors:
 *     bdoughan - August 7/2009 - 2.0 - Initial implementation
 ******************************************************************************/
+// Contributors:
+//     bdoughan - August 7/2009 - 2.0 - Initial implementation
 package org.eclipse.persistence.testing.sdo.helper.xmlhelper.datatype;
 
 import java.io.FileInputStream;

@@ -10,6 +10,8 @@
  * Contributors:
  *     02/26/09 dminsky - initial API and implementation
  ******************************************************************************/
+// Contributors:
+//     02/26/09 dminsky - initial API and implementation
 package org.eclipse.persistence.testing.models.jpa.privateowned;
 
 import org.eclipse.persistence.sessions.DatabaseSession;

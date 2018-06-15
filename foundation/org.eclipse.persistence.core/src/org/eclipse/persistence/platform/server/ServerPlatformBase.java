@@ -19,6 +19,18 @@
  *     08/29/2016 Jody Grassel
  *       - 500441: Eclipselink core has System.getProperty() calls that are not potentially executed under doPriv()
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation from Oracle TopLink
+//     06/30/2010-2.1.1 Michael O'Brien
+//       - 316513: Enable JMX MBean functionality for JBoss, Glassfish and WebSphere in addition to WebLogic
+//       Move JMX MBean generic registration code up from specific platforms
+//       add new isRuntimeServicesEnabledDefault()
+//       see <link>http://wiki.eclipse.org/EclipseLink/DesignDocs/316513</link>
+//     12/18/2014-2.6 Rick Curtis
+//       - 455690: Move JNDIConnector lookup type to ServerPlatform.
+//     08/29/2016 Jody Grassel
+//       - 500441: Eclipselink core has System.getProperty() calls that are not potentially executed under doPriv()
+// CPR:: Copyright (c) 1998, 2017 Oracle and/or its affiliates, IBM Corporation. All rights reserved.
 package org.eclipse.persistence.platform.server;
 
 import java.security.AccessController;

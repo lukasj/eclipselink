@@ -36,6 +36,35 @@
  *     02/16/2017-2.6 Jody Grassel
  *       - 512255: Eclipselink JPA/Auditing capablity in EE Environment fails with JNDI name parameter type
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation from Oracle TopLink
+//
+//     05/28/2008-1.0M8 Andrei Ilitchev
+//        - 224964: Provide support for Proxy Authentication through JPA.
+//        Added setProperties method to be used in case properties couldn't be passed to createEM method.
+//        The properties now set to the uow's parent - not to the uow itself.
+//        In case there's no active transaction, close method now releases uow.
+//        UowImpl was amended to allow value holders instantiation even after it has been released,
+//        the parent ClientSession is released, too.
+//     03/19/2009-2.0 Michael O'Brien
+//       - 266912: JPA 2.0 Metamodel API (part of the JSR-317 EJB 3.1 Criteria API)
+//     07/13/2009-2.0 Guy Pelletier
+//       - 277039: JPA 2.0 Cache Usage Settings
+//     02/08/2012-2.4 Guy Pelletier
+//       - 350487: JPA 2.1 Specification defined support for Stored Procedure Calls
+//     14/05/2012-2.4 Guy Pelletier
+//       - 376603: Provide for table per tenant support for multitenant applications
+//     06/20/2012-2.5 Guy Pelletier
+//       - 350487: JPA 2.1 Specification defined support for Stored Procedure Calls
+//     08/24/2012-2.5 Guy Pelletier
+//       - 350487: JPA 2.1 Specification defined support for Stored Procedure Calls
+//     09/13/2012-2.5 Guy Pelletier
+//       - 350487: JPA 2.1 Specification defined support for Stored Procedure Calls
+//     08/11/2012-2.5 Guy Pelletier
+//       - 393867: Named queries do not work when using EM level Table Per Tenant Multitenancy.
+//     02/16/2017-2.6 Jody Grassel
+//       - 512255: Eclipselink JPA/Auditing capablity in EE Environment fails with JNDI name parameter type
+// CPR:: Copyright (c) 1998, 2017 IBM Corporation, Oracle and/or its affiliates. All rights reserved.
 package org.eclipse.persistence.internal.jpa;
 
 import java.util.ArrayList;

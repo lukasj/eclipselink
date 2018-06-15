@@ -10,6 +10,8 @@
  * Contributors:
  *     tware - April 1 2008 - 1.0M6 - initial implementation
  ******************************************************************************/
+// Contributors:
+//     tware - April 1 2008 - 1.0M6 - initial implementation
 
 package org.eclipse.persistence.testing.models.jpa.relationships;
 

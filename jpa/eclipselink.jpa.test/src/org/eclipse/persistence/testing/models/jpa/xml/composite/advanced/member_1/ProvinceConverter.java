@@ -10,6 +10,8 @@
  * Contributors:
  *     gpelletie Feb 19th 2008
  ******************************************************************************/
+// Contributors:
+//     gpelletie Feb 19th 2008
 package org.eclipse.persistence.testing.models.jpa.xml.composite.advanced.member_1;
 
 import org.eclipse.persistence.mappings.DatabaseMapping;

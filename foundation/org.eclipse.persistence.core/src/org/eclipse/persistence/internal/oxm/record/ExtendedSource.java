@@ -10,6 +10,8 @@
  * Contributors:
  *     Denise Smith - 2.6 - initial implementation
  ******************************************************************************/
+// Contributors:
+//     Denise Smith - 2.6 - initial implementation
 package org.eclipse.persistence.internal.oxm.record;
 
 import javax.xml.transform.Source;

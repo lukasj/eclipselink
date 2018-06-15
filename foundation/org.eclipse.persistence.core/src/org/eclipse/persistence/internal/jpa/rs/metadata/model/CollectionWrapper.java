@@ -10,6 +10,8 @@
  * Contributors:
  *     Dmitry Kornilov - Initial implementation
  ******************************************************************************/
+// Contributors:
+//     Dmitry Kornilov - Initial implementation
 package org.eclipse.persistence.internal.jpa.rs.metadata.model;
 
 import java.util.Collection;

@@ -10,6 +10,8 @@
  * Contributors:
  * Martin Vojtek - July 7/2014
  ******************************************************************************/
+// Contributors:
+// Martin Vojtek - July 7/2014
 package org.eclipse.persistence.testing.jaxb.annotations.xmlnullpolicy.packagetype;
 
 import javax.xml.bind.annotation.XmlElement;

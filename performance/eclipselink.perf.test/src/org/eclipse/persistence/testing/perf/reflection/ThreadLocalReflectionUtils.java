@@ -10,6 +10,8 @@
  * Contributors:
  *     Marcel Valovy - 2.6 - initial API and implementation
  ******************************************************************************/
+// Contributors:
+//     Marcel Valovy - 2.6 - initial API and implementation
 package org.eclipse.persistence.testing.perf.reflection;
 
 import java.lang.management.ManagementFactory;

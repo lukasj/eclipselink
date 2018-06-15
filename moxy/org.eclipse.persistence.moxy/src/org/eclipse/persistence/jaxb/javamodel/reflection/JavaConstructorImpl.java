@@ -10,6 +10,8 @@
 * Contributors:
 *     mmacivor - March 12/2009 - Initial implementation
 ******************************************************************************/
+// Contributors:
+//     mmacivor - March 12/2009 - Initial implementation
 
 package org.eclipse.persistence.jaxb.javamodel.reflection;
 

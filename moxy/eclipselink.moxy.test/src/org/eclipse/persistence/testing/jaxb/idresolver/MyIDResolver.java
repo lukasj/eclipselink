@@ -11,6 +11,8 @@
  * Contributors:
  *  - rbarkhouse - 26 October 2011 - 2.4 - Initial implementation
  ******************************************************************************/
+// Contributors:
+//  - rbarkhouse - 26 October 2011 - 2.4 - Initial implementation
 package org.eclipse.persistence.testing.jaxb.idresolver;
 
 import java.util.HashMap;

@@ -13,6 +13,11 @@
  *     09/26/2012-2.5 Chris Delahunt
  *       - 350469: JPA 2.1 Criteria Query framework Bulk Update/Delete support
  */
+// Contributors:
+//     09/21/2012-2.5 Chris Delahunt
+//       - 367452: JPA 2.1 Specification support for joins with ON clause
+//     09/26/2012-2.5 Chris Delahunt
+//       - 350469: JPA 2.1 Criteria Query framework Bulk Update/Delete support
 package org.eclipse.persistence.testing.tests.jpa21.advanced;
 
 import java.util.Arrays;

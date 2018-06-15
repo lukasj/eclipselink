@@ -11,6 +11,9 @@
  *    04/20/2015-2.7 Tomas Kraus - Concurrency test to trigger NPE in
  *                                 checkForCustomQuery(AbstractSession, AbstractRecord).
  ******************************************************************************/
+// Contributors:
+//    04/20/2015-2.7 Tomas Kraus - Concurrency test to trigger NPE in
+//                                 checkForCustomQuery(AbstractSession, AbstractRecord).
 package org.eclipse.persistence.testing.tests.queries;
 
 import static org.eclipse.persistence.logging.SessionLog.INFO;

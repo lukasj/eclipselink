@@ -10,6 +10,8 @@
  * Contributors:
  *     Denise Smith - April 10, 2013
  ******************************************************************************/
+// Contributors:
+//     Denise Smith - April 10, 2013
 package org.eclipse.persistence.testing.jaxb.xmlvalue;
 
 import java.io.InputStream;

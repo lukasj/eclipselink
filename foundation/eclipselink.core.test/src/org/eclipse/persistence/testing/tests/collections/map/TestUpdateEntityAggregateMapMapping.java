@@ -10,6 +10,8 @@
  * Contributors:
  *     tware - initial implementation
  ******************************************************************************/
+// Contributors:
+//     tware - initial implementation
 package org.eclipse.persistence.testing.tests.collections.map;
 
 import org.eclipse.persistence.expressions.Expression;

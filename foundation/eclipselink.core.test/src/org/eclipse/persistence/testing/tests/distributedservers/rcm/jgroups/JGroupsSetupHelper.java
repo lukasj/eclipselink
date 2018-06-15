@@ -10,6 +10,8 @@
  * Contributors:
  *     Oracle - initial API and implementation
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation
 package org.eclipse.persistence.testing.tests.distributedservers.rcm.jgroups;
 
 import org.eclipse.persistence.exceptions.RemoteCommandManagerException;

@@ -10,6 +10,8 @@
  * Contributors:
  *      gonural - initial implementation
  ******************************************************************************/
+// Contributors:
+//      gonural - initial implementation
 package org.eclipse.persistence.jpa.rs.util;
 
 import java.util.Arrays;

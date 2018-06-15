@@ -10,6 +10,8 @@
  * Contributors:
  *     Martin Vojtek - initial implementation
  ******************************************************************************/
+// Contributors:
+//     Martin Vojtek - initial implementation
 package org.eclipse.persistence.testing.jaxb.rs.model;
 
 import java.util.ArrayList;

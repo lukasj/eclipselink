@@ -11,6 +11,9 @@
  *     12/12/2008-1.1 Guy Pelletier
  *       - 249860: Implement table per class inheritance support.
  ******************************************************************************/
+// Contributors:
+//     12/12/2008-1.1 Guy Pelletier
+//       - 249860: Implement table per class inheritance support.
 package org.eclipse.persistence.testing.models.jpa.inheritance;
 
 import javax.persistence.Column;

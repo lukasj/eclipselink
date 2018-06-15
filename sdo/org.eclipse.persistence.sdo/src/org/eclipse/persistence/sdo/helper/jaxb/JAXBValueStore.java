@@ -11,6 +11,9 @@
 *     bdoughan - Jan 27/2009 - 1.1 - Initial implementation
 *     bdoughan - Mar 31/2009 - 2.0 - Added ChangeSummary Support
 ******************************************************************************/
+// Contributors:
+//     bdoughan - Jan 27/2009 - 1.1 - Initial implementation
+//     bdoughan - Mar 31/2009 - 2.0 - Added ChangeSummary Support
 package org.eclipse.persistence.sdo.helper.jaxb;
 
 import java.util.Collection;

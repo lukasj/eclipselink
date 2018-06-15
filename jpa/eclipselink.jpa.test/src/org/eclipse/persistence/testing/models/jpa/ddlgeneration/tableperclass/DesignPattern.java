@@ -11,6 +11,10 @@
  *     11/23/2010-2.2 Frank Schwarz
  *       - 328774: TABLE_PER_CLASS-mapped key of a java.util.Map does not work for querying
  ******************************************************************************/
+// Contributors:
+//     11/23/2010-2.2 Frank Schwarz
+//       - 328774: TABLE_PER_CLASS-mapped key of a java.util.Map does not work for querying
+// CPR:: Copyright (c) 2010, 2015 Frank Schwarz. All rights reserved.
 package org.eclipse.persistence.testing.models.jpa.ddlgeneration.tableperclass;
 
 import java.util.HashMap;

@@ -10,6 +10,8 @@
  * Contributors:
  *     tware - initial implementation as part of extensibility feature
  ******************************************************************************/
+// Contributors:
+//     tware - initial implementation as part of extensibility feature
 package org.eclipse.persistence.annotations;
 
 import static java.lang.annotation.ElementType.TYPE;

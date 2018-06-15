@@ -10,6 +10,8 @@
  * Contributors:
  *     Denise Smith - November 11, 2009
  ******************************************************************************/
+// Contributors:
+//     Denise Smith - November 11, 2009
 package org.eclipse.persistence.testing.jaxb.multiplepackage;
 
 import org.eclipse.persistence.jaxb.JAXBContextFactory;

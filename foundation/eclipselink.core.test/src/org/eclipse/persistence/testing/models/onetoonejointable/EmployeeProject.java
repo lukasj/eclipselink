@@ -11,6 +11,9 @@
  *     07/16/2009 Andrei Ilitchev
  *       - Bug 282553: JPA 2.0 JoinTable support for OneToOne and ManyToOne
  ******************************************************************************/
+// Contributors:
+//     07/16/2009 Andrei Ilitchev
+//       - Bug 282553: JPA 2.0 JoinTable support for OneToOne and ManyToOne
 package org.eclipse.persistence.testing.models.onetoonejointable;
 
 import org.eclipse.persistence.sessions.*;

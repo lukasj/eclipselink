@@ -10,6 +10,8 @@
  * Contributors:
  *     Marcel Valovy - 2.6.0 - initial implementation
  ******************************************************************************/
+// Contributors:
+//     Marcel Valovy - 2.6.0 - initial implementation
 package org.eclipse.persistence.testing.jaxb.casesensitivity.otherCase;
 
 import javax.xml.bind.annotation.XmlAttribute;

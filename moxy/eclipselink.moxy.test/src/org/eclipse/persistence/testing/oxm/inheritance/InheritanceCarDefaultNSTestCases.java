@@ -10,6 +10,8 @@
  * Contributors:
  *     Denise Smith - 2.4 - November 2011
  ******************************************************************************/
+// Contributors:
+//     Denise Smith - 2.4 - November 2011
 package org.eclipse.persistence.testing.oxm.inheritance;
 
 import org.eclipse.persistence.sessions.Project;

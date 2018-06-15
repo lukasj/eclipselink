@@ -10,6 +10,8 @@
  * Contributors:
  *     rbarkhouse - 2010-05-07 16:53:48 - EclipseLink 2.1 - initial implementation
  ******************************************************************************/
+// Contributors:
+//     rbarkhouse - 2010-05-07 16:53:48 - EclipseLink 2.1 - initial implementation
 
 package org.eclipse.persistence.testing.jaxb.substitution;
 

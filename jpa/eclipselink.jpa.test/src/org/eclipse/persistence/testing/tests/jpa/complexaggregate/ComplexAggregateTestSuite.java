@@ -12,6 +12,10 @@
  *     03/29/2016-2.6_WAS Will Dazey  
  *       - 490114: Add testing for PersistenceUnitUtil.getIdentifier with nested embeddables in EmbeddedId class
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation
+//     03/29/2016-2.6_WAS Will Dazey
+//       - 490114: Add testing for PersistenceUnitUtil.getIdentifier with nested embeddables in EmbeddedId class
 package org.eclipse.persistence.testing.tests.jpa.complexaggregate;
 
 import java.beans.PropertyChangeListener;

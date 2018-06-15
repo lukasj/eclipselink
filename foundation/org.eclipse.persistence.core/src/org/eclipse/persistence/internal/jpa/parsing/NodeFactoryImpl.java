@@ -11,6 +11,9 @@
  *     Oracle - initial API and implementation from Oracle TopLink
  *     tware - updates for JPA 2.0 specification
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation from Oracle TopLink
+//     tware - updates for JPA 2.0 specification
 package org.eclipse.persistence.internal.jpa.parsing;
 
 import java.util.List;

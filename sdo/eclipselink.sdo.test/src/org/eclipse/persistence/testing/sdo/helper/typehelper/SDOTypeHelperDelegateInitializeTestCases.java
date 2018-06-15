@@ -10,6 +10,8 @@
  * Contributors:
  *     Denise Smith July 14, 2009
  ******************************************************************************/
+// Contributors:
+//     Denise Smith July 14, 2009
 package org.eclipse.persistence.testing.sdo.helper.typehelper;
 
 import java.util.Collection;

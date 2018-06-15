@@ -12,6 +12,10 @@
  *     Marcel Valovy - 2.6.0 - added case insensitive unmarshalling property,
  *                             added Bean Validation support.
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation from Oracle TopLink
+//     Marcel Valovy - 2.6.0 - added case insensitive unmarshalling property,
+//                             added Bean Validation support.
 package org.eclipse.persistence.jaxb;
 
 import java.io.File;

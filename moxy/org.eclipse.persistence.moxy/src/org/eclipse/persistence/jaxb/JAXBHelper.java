@@ -10,6 +10,8 @@
  * Contributors:
  *     dmccann - September 15/2009 - 1.2 - Initial implementation
  ******************************************************************************/
+// Contributors:
+//     dmccann - September 15/2009 - 1.2 - Initial implementation
 package org.eclipse.persistence.jaxb;
 
 import org.eclipse.persistence.oxm.XMLBinder;

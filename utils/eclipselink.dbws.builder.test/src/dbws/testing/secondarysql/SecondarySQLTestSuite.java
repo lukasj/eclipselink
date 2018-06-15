@@ -10,6 +10,8 @@
  * Contributors:
  *     Mike Norman - Sept 2010: added new capabilities based on https://bugs.eclipse.org/bugs/show_bug.cgi?id=322949
  ******************************************************************************/
+// Contributors:
+//     Mike Norman - Sept 2010: added new capabilities based on https://bugs.eclipse.org/bugs/show_bug.cgi?id=322949
 package dbws.testing.secondarysql;
 
 //javase imports

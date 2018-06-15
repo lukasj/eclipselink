@@ -14,6 +14,12 @@
  *     02/06/2009-2.0 Guy Pelletier
  *       - 248293: JPA 2.0 Element Collections (part 2)
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation from Oracle TopLink
+//     08/28/2008-1.1 Guy Pelletier
+//       - 245120: unidir one-to-many within embeddable fails to deploy for missing primary key field
+//     02/06/2009-2.0 Guy Pelletier
+//       - 248293: JPA 2.0 Element Collections (part 2)
 package org.eclipse.persistence.testing.models.jpa.complexaggregate;
 
 import javax.persistence.*;

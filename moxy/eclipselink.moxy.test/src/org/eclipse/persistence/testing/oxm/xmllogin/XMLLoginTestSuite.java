@@ -10,6 +10,8 @@
  * Contributors:
  *     rbarkhou - new test cases for XMLLogin
  ******************************************************************************/
+// Contributors:
+//     rbarkhou - new test cases for XMLLogin
 package org.eclipse.persistence.testing.oxm.xmllogin;
 
 import junit.framework.Test;

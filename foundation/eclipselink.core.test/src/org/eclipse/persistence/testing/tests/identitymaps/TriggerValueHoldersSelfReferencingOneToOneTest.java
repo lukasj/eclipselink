@@ -11,6 +11,9 @@
  *     08/17/2010-2.2 Tom Ware
  *       - 321041 ConcurrentModificationException on getFromIdentityMap() fix
  ******************************************************************************/
+// Contributors:
+//     08/17/2010-2.2 Tom Ware
+//       - 321041 ConcurrentModificationException on getFromIdentityMap() fix
 package org.eclipse.persistence.testing.tests.identitymaps;
 
 import org.eclipse.persistence.expressions.Expression;

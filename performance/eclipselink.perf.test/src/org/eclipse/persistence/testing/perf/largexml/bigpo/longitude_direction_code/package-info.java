@@ -10,5 +10,7 @@
  * Contributors:
  *     Martin Vojtek - 2.6.0 - initial implementation
  ******************************************************************************/
+// Contributors:
+//     Martin Vojtek - 2.6.0 - initial implementation
 @javax.xml.bind.annotation.XmlSchema(namespace = "urn:oasis:names:specification:ubl:schema:xsd:LongitudeDirectionCode-1.0")
 package org.eclipse.persistence.testing.perf.largexml.bigpo.longitude_direction_code;

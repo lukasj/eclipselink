@@ -10,6 +10,8 @@
  * Contributors:
  *     Marcel Valovy
  ******************************************************************************/
+// Contributors:
+//     Marcel Valovy
 package org.eclipse.persistence.testing.jaxb.beanvalidation.special;
 
 import javax.xml.bind.annotation.XmlRootElement;

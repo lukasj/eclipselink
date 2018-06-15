@@ -10,6 +10,8 @@
  * Contributors:
  * Denise Smith - September 10 /2009
  ******************************************************************************/
+// Contributors:
+// Denise Smith - September 10 /2009
  package org.eclipse.persistence.testing.jaxb.classloader;
 
 import org.eclipse.persistence.testing.jaxb.employee.Employee;

@@ -16,6 +16,14 @@
  *     01/26/2011-2.3 Guy Pelletier
  *       - 307664:  Lifecycle callbacks not called for object from IndirectSet
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation from Oracle TopLink
+//     02/20/2009-1.1 Guy Pelletier
+//       - 259829: TABLE_PER_CLASS with abstract classes does not work
+//     12/18/2009-2.1 Guy Pelletier
+//       - 211323: Add class extractor support to the EclipseLink-ORM.XML Schema
+//     01/26/2011-2.3 Guy Pelletier
+//       - 307664:  Lifecycle callbacks not called for object from IndirectSet
 package org.eclipse.persistence.testing.models.jpa.inheritance;
 
 import org.eclipse.persistence.sessions.DatabaseSession;

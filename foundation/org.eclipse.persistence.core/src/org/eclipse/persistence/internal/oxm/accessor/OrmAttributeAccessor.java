@@ -10,6 +10,8 @@
 * Contributors:
 * mmacivor - Feb 06/2009 - Initial implementation
 ******************************************************************************/
+// Contributors:
+// mmacivor - Feb 06/2009 - Initial implementation
 package org.eclipse.persistence.internal.oxm.accessor;
 
 import java.beans.PropertyChangeEvent;

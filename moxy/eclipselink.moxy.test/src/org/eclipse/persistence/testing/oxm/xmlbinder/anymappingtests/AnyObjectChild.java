@@ -10,6 +10,8 @@
  * Contributors:
  *     Oracle - initial API and implementation from Oracle TopLink
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation from Oracle TopLink
 package org.eclipse.persistence.testing.oxm.xmlbinder.anymappingtests;
 /**
  *  @version $Header: Child.java 07-apr-2005.15:35:48 mmacivor Exp $

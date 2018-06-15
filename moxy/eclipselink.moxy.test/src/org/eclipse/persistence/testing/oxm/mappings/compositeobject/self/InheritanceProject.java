@@ -10,6 +10,8 @@
 * Contributors:
 *     bdoughan - March 12/2010 - 2.1 - Initial implementation
 ******************************************************************************/
+// Contributors:
+//     bdoughan - March 12/2010 - 2.1 - Initial implementation
 package org.eclipse.persistence.testing.oxm.mappings.compositeobject.self;
 
 import org.eclipse.persistence.oxm.NamespaceResolver;

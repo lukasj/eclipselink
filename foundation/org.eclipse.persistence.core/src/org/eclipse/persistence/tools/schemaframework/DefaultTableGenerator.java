@@ -27,6 +27,26 @@
  *     04/04/2013-2.4.3 Guy Pelletier
  *       - 388564: Generated DDL does not match annotation
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation from Oracle TopLink
+//     Sei Syvalta  - Bug 330237 - Tables are created in unspecified order (DDL creation)
+//     01/06/2011-2.3 Guy Pelletier
+//       - 312244: can't map optional one-to-one relationship using @PrimaryKeyJoinColumn
+//     04/05/2011-2.3 Guy Pelletier
+//       - 337323: Multi-tenant with shared schema support (part 3)
+//     09/09/2011-2.3.1 Guy Pelletier
+//       - 356197: Add new VPD type to MultitenantType
+//     11/10/2011-2.4 Guy Pelletier
+//       - 357474: Address primaryKey option from tenant discriminator column
+//     14/05/2012-2.4 Guy Pelletier
+//       - 376603: Provide for table per tenant support for multitenant applications
+//     31/05/2012-2.4 Guy Pelletier
+//       - 381196: Multitenant persistence units with a dedicated emf should allow for DDL generation.
+//     12/07/2012-2.5 Guy Pelletier
+//       - 389090: JPA 2.1 DDL Generation Support (foreign key metadata support)
+//     04/04/2013-2.4.3 Guy Pelletier
+//       - 388564: Generated DDL does not match annotation
+// CPR:: Copyright (c) 1998, 2015 Oracle, Sei Syvalta. All rights reserved.
 package org.eclipse.persistence.tools.schemaframework;
 
 import java.sql.DatabaseMetaData;

@@ -10,6 +10,8 @@
  * Contributors:
  *     Oracle - initial API and implementation from Oracle TopLink
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation from Oracle TopLink
 
 /* $Header: MyAttachmentUnmarshaller.java 19-oct-2006.17:18:25 mfobrien Exp $ */
 /* Copyright (c) 2006, Oracle. All rights reserved. */

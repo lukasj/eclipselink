@@ -10,6 +10,8 @@
  * Contributors:
  *     Tom Ware - Oracle
  ******************************************************************************/
+// Contributors:
+//     Tom Ware - Oracle
 package org.eclipse.persistence.testing.models.jpa.composite.advanced.member_1;
 
 public class Bungalow extends AddressType {

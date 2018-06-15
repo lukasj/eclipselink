@@ -11,6 +11,8 @@
  * Contributors:
  *  - rbarkhouse - 17 November 2011 - 2.3.2 - Initial implementation
  ******************************************************************************/
+// Contributors:
+//  - rbarkhouse - 17 November 2011 - 2.3.2 - Initial implementation
 package org.eclipse.persistence.testing.jaxb.xmlelementref.ns;
 
 import java.util.Arrays;

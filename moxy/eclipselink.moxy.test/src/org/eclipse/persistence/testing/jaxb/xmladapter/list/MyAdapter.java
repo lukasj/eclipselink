@@ -10,6 +10,8 @@
  * Contributors:
  * dmccann - December 30/2010 - 2.3 - Initial implementation
  ******************************************************************************/
+// Contributors:
+// dmccann - December 30/2010 - 2.3 - Initial implementation
 package org.eclipse.persistence.testing.jaxb.xmladapter.list;
 
 import javax.xml.bind.annotation.adapters.XmlAdapter;

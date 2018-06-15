@@ -10,5 +10,7 @@
  * Contributors:
  * Denise Smith - 2.3
  ******************************************************************************/
+// Contributors:
+// Denise Smith - 2.3
 @javax.xml.bind.annotation.XmlSchema(namespace = "http://www.w3.org/2001/XMLSchema", elementFormDefault = javax.xml.bind.annotation.XmlNsForm.QUALIFIED)
 package org.eclipse.persistence.testing.jaxb.xmlschema.model;

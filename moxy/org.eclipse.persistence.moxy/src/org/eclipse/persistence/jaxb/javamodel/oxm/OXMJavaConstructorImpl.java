@@ -10,6 +10,8 @@
  * Contributors:
  *     Rick Barkhouse - 2.2 - Initial implementation
  ******************************************************************************/
+// Contributors:
+//     Rick Barkhouse - 2.2 - Initial implementation
 package org.eclipse.persistence.jaxb.javamodel.oxm;
 
 import java.lang.reflect.Modifier;

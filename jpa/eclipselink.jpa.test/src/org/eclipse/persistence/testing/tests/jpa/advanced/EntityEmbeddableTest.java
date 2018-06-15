@@ -15,6 +15,13 @@
  *       - 413120: Nested Embeddable Null pointer
  *       - 496836: NullPointerException on ObjectChangeSet.mergeObjectChanges
  ******************************************************************************/
+// Contributors:
+//     Oracle - Initial API and implementation.
+//     07/07/2014-2.6 Tomas Kraus
+//       - 439127: Modified as jUnit test.
+//     03/19/2018-2.7.2 Lukas Jungmann
+//       - 413120: Nested Embeddable Null pointer
+//       - 496836: NullPointerException on ObjectChangeSet.mergeObjectChanges
 package org.eclipse.persistence.testing.tests.jpa.advanced;
 
 import java.util.Collection;

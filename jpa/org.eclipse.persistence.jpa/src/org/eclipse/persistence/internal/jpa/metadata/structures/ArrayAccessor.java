@@ -10,6 +10,8 @@
  * Contributors:
  *     Oracle - initial implementation
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial implementation
 package org.eclipse.persistence.internal.jpa.metadata.structures;
 
 import org.eclipse.persistence.exceptions.ValidationException;

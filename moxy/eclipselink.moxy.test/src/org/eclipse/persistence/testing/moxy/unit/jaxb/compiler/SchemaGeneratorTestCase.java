@@ -11,6 +11,8 @@
  * Contributors:
  *  - Martin Vojtek - 2.6 - Initial implementation
  ******************************************************************************/
+// Contributors:
+//  - Martin Vojtek - 2.6 - Initial implementation
 package org.eclipse.persistence.testing.moxy.unit.jaxb.compiler;
 
 import static org.junit.Assert.assertNotNull;

@@ -13,6 +13,11 @@
  *     03/27/2009-2.0 Guy Pelletier
  *       - 241413: JPA 2.0 Add EclipseLink support for Map type attributes
  ******************************************************************************/
+// Contributors:
+//     03/26/2008-1.0M6 Guy Pelletier
+//       - 211302: Add variable 1-1 mapping support to the EclipseLink-ORM.XML Schema
+//     03/27/2009-2.0 Guy Pelletier
+//       - 241413: JPA 2.0 Add EclipseLink support for Map type attributes
 package org.eclipse.persistence.annotations;
 
 import java.lang.annotation.Retention;

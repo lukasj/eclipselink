@@ -11,6 +11,9 @@
  *     Oracle - initial API and implementation
  *
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation
+//
 package org.eclipse.persistence.jpa.jpql.tools;
 
 import static org.eclipse.persistence.jpa.jpql.JPQLQueryProblemMessages.AbsExpression_InvalidNumericExpression;

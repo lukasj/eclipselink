@@ -15,6 +15,13 @@
  *     10/21/2009-2.0 Guy Pelletier
  *       - 290567: mappedbyid support incomplete
  ******************************************************************************/
+// Contributors:
+//     06/16/2009-2.0 Guy Pelletier
+//       - 277039: JPA 2.0 Cache Usage Settings
+//     07/16/2009-2.0 Guy Pelletier
+//       - 277039: JPA 2.0 Cache Usage Settings
+//     10/21/2009-2.0 Guy Pelletier
+//       - 290567: mappedbyid support incomplete
 package org.eclipse.persistence.testing.models.jpa.cacheable;
 
 import static javax.persistence.GenerationType.TABLE;

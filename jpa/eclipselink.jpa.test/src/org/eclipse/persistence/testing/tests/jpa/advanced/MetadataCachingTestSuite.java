@@ -11,6 +11,9 @@
  *     08/01/2012-2.5 Chris Delahunt
  *       - 371950: Metadata caching
  ******************************************************************************/
+// Contributors:
+//     08/01/2012-2.5 Chris Delahunt
+//       - 371950: Metadata caching
 package org.eclipse.persistence.testing.tests.jpa.advanced;
 
 import java.io.File;

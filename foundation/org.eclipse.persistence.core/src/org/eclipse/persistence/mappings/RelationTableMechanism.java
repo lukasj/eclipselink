@@ -13,6 +13,11 @@
  *     14/05/2012-2.4 Guy Pelletier
  *       - 376603: Provide for table per tenant support for multitenant applications
  ******************************************************************************/
+// Contributors:
+//     07/16/2009 Andrei Ilitchev
+//       - Bug 282553: JPA 2.0 JoinTable support for OneToOne and ManyToOne
+//     14/05/2012-2.4 Guy Pelletier
+//       - 376603: Provide for table per tenant support for multitenant applications
 package org.eclipse.persistence.mappings;
 
 import java.util.ArrayList;

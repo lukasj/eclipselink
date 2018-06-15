@@ -10,6 +10,8 @@
  * Contributors:
  * mmacivor - August 4th/2010 - 2.2 - Initial implementation
  ******************************************************************************/
+// Contributors:
+// mmacivor - August 4th/2010 - 2.2 - Initial implementation
 
 package org.eclipse.persistence.jaxb.xmlmodel;
 

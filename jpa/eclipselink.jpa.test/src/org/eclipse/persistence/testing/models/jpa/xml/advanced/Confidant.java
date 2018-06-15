@@ -11,6 +11,9 @@
  *     03/08/2010-2.1 Guy Pelletier
  *       - 303632: Add attribute-type for mapping attributes to EclipseLink-ORM
  ******************************************************************************/
+// Contributors:
+//     03/08/2010-2.1 Guy Pelletier
+//       - 303632: Add attribute-type for mapping attributes to EclipseLink-ORM
 package org.eclipse.persistence.testing.models.jpa.xml.advanced;
 
 /**

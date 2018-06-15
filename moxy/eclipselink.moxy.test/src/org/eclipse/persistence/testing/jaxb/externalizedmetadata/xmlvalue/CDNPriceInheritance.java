@@ -10,6 +10,8 @@
  * Contributors:
  * Martin Vojtek - November 14/2014 - 2.6 - Initial implementation
  ******************************************************************************/
+// Contributors:
+// Martin Vojtek - November 14/2014 - 2.6 - Initial implementation
 package org.eclipse.persistence.testing.jaxb.externalizedmetadata.xmlvalue;
 
 import javax.xml.bind.annotation.XmlValue;

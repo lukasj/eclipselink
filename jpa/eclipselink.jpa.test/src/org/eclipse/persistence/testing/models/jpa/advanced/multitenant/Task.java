@@ -13,6 +13,11 @@
  *     11/15/2011-2.3.2 Guy Pelletier
  *       - 363820: Issue with clone method from VPDMultitenantPolicy
  ******************************************************************************/
+// Contributors:
+//     09/09/2011-2.3.1 Peter Krogh
+//       - 356197: Add new VPD type to MultitenantType
+//     11/15/2011-2.3.2 Guy Pelletier
+//       - 363820: Issue with clone method from VPDMultitenantPolicy
 package org.eclipse.persistence.testing.models.jpa.advanced.multitenant;
 
 import java.io.Serializable;

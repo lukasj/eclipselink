@@ -10,6 +10,8 @@
  * Contributors:
  *     tware - part of fix for bug 351186
  ******************************************************************************/
+// Contributors:
+//     tware - part of fix for bug 351186
 package org.eclipse.persistence.annotations;
 
 

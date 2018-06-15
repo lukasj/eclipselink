@@ -12,6 +12,10 @@
  *     03/07/2011-2.3 Chris Delahunt
  *       - bug 338585: Issue while inserting blobs with delimited identifiers on Oracle Database
  ******************************************************************************/
+// Contributors:
+//     tware - testing for delimited identifiers in JPA 2.0
+//     03/07/2011-2.3 Chris Delahunt
+//       - bug 338585: Issue while inserting blobs with delimited identifiers on Oracle Database
 
 package org.eclipse.persistence.testing.tests.jpa.delimited;
 

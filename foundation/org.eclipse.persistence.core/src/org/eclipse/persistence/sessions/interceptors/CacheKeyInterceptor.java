@@ -10,6 +10,8 @@
  * Contributors:
  *     Gordon Yorke - Interceptor feature https://bugs.eclipse.org/bugs/show_bug.cgi?id=219683
  ******************************************************************************/
+// Contributors:
+//     Gordon Yorke - Interceptor feature https://bugs.eclipse.org/bugs/show_bug.cgi?id=219683
 package org.eclipse.persistence.sessions.interceptors;
 
 import org.eclipse.persistence.internal.identitymaps.AbstractIdentityMap;

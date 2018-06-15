@@ -10,6 +10,8 @@
  * Contributors:
  * rbarkhouse - 2011 May 09 - 2.3 - Initial implementation
  ******************************************************************************/
+// Contributors:
+// rbarkhouse - 2011 May 09 - 2.3 - Initial implementation
 package org.eclipse.persistence.oxm.annotations;
 
 public enum XmlVirtualAccessMethodsSchema {

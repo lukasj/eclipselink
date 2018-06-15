@@ -11,6 +11,9 @@
  *     08/21/2009-2.0 Guy Pelletier
  *       - 267391: JPA 2.0 Cache Usage Settings
  ******************************************************************************/
+// Contributors:
+//     08/21/2009-2.0 Guy Pelletier
+//       - 267391: JPA 2.0 Cache Usage Settings
 package org.eclipse.persistence.internal.jpa.deployment;
 
 /**

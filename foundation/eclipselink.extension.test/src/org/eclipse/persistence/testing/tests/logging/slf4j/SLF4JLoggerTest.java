@@ -11,6 +11,9 @@
  *      Jaro Kuruc  - Initial API and implementation
  *      Tomas Kraus - EclipseLink 2.7 integration
  ******************************************************************************/
+// Contributors:
+//      Jaro Kuruc  - Initial API and implementation
+//      Tomas Kraus - EclipseLink 2.7 integration
 package org.eclipse.persistence.testing.tests.logging.slf4j;
 
 import static org.junit.Assert.assertEquals;

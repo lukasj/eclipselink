@@ -11,6 +11,9 @@
  *     06/08/2008-1.0M9 Andrei Ilitchev
  *        - New file introduced for bug 235433: Can't customize ConnectionPolicy through JPA.
  ******************************************************************************/
+// Contributors:
+//     06/08/2008-1.0M9 Andrei Ilitchev
+//        - New file introduced for bug 235433: Can't customize ConnectionPolicy through JPA.
 package org.eclipse.persistence.config;
 
 /**

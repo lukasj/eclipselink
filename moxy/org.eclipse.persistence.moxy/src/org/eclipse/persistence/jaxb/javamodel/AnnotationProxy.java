@@ -10,6 +10,8 @@
  * Contributors:
  * dmccann - December 10/2009 - 2.0.1 - Initial implementation
  ******************************************************************************/
+// Contributors:
+// dmccann - December 10/2009 - 2.0.1 - Initial implementation
 package org.eclipse.persistence.jaxb.javamodel;
 
 import java.lang.annotation.Annotation;

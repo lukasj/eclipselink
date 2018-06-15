@@ -11,6 +11,9 @@
  * dmccann - 2.3 - Initial implementation
  * Martin Vojtek - 2.6 - Added XmlIDExtension
  ******************************************************************************/
+// Contributors:
+// dmccann - 2.3 - Initial implementation
+// Martin Vojtek - 2.6 - Added XmlIDExtension
 package org.eclipse.persistence.testing.jaxb.externalizedmetadata.xmlschematype;
 
 import javax.xml.bind.annotation.XmlAccessType;

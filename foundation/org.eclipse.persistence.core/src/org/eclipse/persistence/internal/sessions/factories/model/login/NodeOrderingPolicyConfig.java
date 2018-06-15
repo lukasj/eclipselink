@@ -10,6 +10,8 @@
  * Contributors:
  *     rbarkhou - new Policy Config classes for XMLLogin XML Support
  ******************************************************************************/
+// Contributors:
+//     rbarkhou - new Policy Config classes for XMLLogin XML Support
 package org.eclipse.persistence.internal.sessions.factories.model.login;
 
 public abstract class NodeOrderingPolicyConfig {

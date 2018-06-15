@@ -12,6 +12,10 @@
  *     05/19/2014-2.6 Tomas Kraus
  *       - 437578: Added cacheable field and updated setting isolation from parent.
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation
+//     05/19/2014-2.6 Tomas Kraus
+//       - 437578: Added cacheable field and updated setting isolation from parent.
 package org.eclipse.persistence.descriptors;
 
 import java.security.AccessController;

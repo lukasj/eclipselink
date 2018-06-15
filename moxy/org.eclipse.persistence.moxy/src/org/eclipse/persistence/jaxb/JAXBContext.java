@@ -12,6 +12,10 @@
  *     Marcel Valovy - 2.6 - added ci unmarshalling & BV in JAXB
  *     Dmitry Kornilov - 2.6.1 - BeanValidationHelper refactoring
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation from Oracle TopLink
+//     Marcel Valovy - 2.6 - added ci unmarshalling & BV in JAXB
+//     Dmitry Kornilov - 2.6.1 - BeanValidationHelper refactoring
 package org.eclipse.persistence.jaxb;
 
 import org.eclipse.persistence.core.queries.CoreAttributeGroup;

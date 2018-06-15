@@ -10,6 +10,8 @@
  * Contributors:
  *     Rick Barkhouse - 2.1 - Initial implementation
  ******************************************************************************/
+// Contributors:
+//     Rick Barkhouse - 2.1 - Initial implementation
 package org.eclipse.persistence.jaxb.javamodel.xjc;
 
 import java.lang.reflect.Modifier;

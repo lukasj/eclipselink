@@ -11,6 +11,9 @@
  *     Oracle - initial API and implementation from Oracle TopLink
  *     tware - March 13, 2008 - 1.0M6 - JavaDoc rewrite
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation from Oracle TopLink
+//     tware - March 13, 2008 - 1.0M6 - JavaDoc rewrite
 package org.eclipse.persistence.annotations;
 
 import java.lang.annotation.Retention;

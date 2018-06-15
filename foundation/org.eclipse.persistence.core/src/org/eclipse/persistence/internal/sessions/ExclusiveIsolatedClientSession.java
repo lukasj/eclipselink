@@ -21,6 +21,19 @@
  *          acquiring of the connection on the closed session.
  *
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation from Oracle TopLink
+//
+//      05/28/2008-1.0M8 Andrei Ilitchev.
+//      - 224964: Provide support for Proxy Authentication through JPA.
+//          No longer throws exception in case value holder for isolated class instantiated on the closed session.
+//          Instead after the session is closed it switches to a mode when it acquires write connection only for the duration of the query execution.
+//          The idea is all the necessary customization will be applied to the resurrected connection again, and cleared afterwards -
+//          may be expensive, but works and costs nothing unless actually used.
+//          Moved setting of the accessor from getExecutionSession to executeCall because getExecutionSession is called sometimes
+//          without the need for connection (like createing a row), and that used to cause an unnecessary
+//          acquiring of the connection on the closed session.
+//
 package org.eclipse.persistence.internal.sessions;
 
 import java.util.Collection;

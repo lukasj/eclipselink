@@ -11,6 +11,9 @@
  *     Oracle - initial API and implementation from Oracle TopLink
  *     cdelahun - Bug 214534: added message for JMSPublishingHelper error checking
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation from Oracle TopLink
+//     cdelahun - Bug 214534: added message for JMSPublishingHelper error checking
 package org.eclipse.persistence.exceptions;
 
 import org.eclipse.persistence.exceptions.i18n.ExceptionMessageGenerator;

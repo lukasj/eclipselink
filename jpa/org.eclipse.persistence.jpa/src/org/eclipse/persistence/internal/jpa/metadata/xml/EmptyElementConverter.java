@@ -10,6 +10,8 @@
  * Contributors:
  *      Gordon Yorke - Inititial implementation
  */
+// Contributors:
+//      Gordon Yorke - Inititial implementation
 package org.eclipse.persistence.internal.jpa.metadata.xml;
 
 import org.eclipse.persistence.mappings.DatabaseMapping;

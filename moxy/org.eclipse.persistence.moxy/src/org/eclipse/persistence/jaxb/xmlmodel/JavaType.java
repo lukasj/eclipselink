@@ -11,6 +11,9 @@
  * dmccann - June 29/2009 - 2.0 - Initial implementation
  * Martin Vojtek - July 8/2014 - 2.6 - Added XmlNullPolicy and XmlElementNillable
  ******************************************************************************/
+// Contributors:
+// dmccann - June 29/2009 - 2.0 - Initial implementation
+// Martin Vojtek - July 8/2014 - 2.6 - Added XmlNullPolicy and XmlElementNillable
 package org.eclipse.persistence.jaxb.xmlmodel;
 
 import java.util.ArrayList;

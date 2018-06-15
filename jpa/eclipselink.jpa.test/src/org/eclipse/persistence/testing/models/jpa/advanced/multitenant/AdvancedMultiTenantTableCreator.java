@@ -21,6 +21,19 @@
  *     20/11/2012-2.5 Guy Pelletier
  *       - 394524: Invalid query key [...] in expression
  ******************************************************************************/
+// Contributors:
+//     03/24/2011-2.3 Guy Pelletier
+//       - 337323: Multi-tenant with shared schema support (part 1)
+//     06/1/2011-2.3 Guy Pelletier
+//       - 337323: Multi-tenant with shared schema support (part 9)
+//     11/10/2011-2.4 Guy Pelletier
+//       - 357474: Address primaryKey option from tenant discriminator column
+//     14/05/2012-2.4 Guy Pelletier
+//       - 376603: Provide for table per tenant support for multitenant applications
+//     01/06/2011-2.3 Guy Pelletier
+//       - 371453: JPA Multi-Tenancy in Bidirectional OneToOne Relation throws ArrayIndexOutOfBoundsException
+//     20/11/2012-2.5 Guy Pelletier
+//       - 394524: Invalid query key [...] in expression
 package org.eclipse.persistence.testing.models.jpa.advanced.multitenant;
 
 import org.eclipse.persistence.testing.framework.TogglingFastTableCreator;

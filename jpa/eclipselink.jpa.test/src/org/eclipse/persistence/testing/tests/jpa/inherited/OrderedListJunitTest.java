@@ -14,6 +14,12 @@
  *     08/15/2008-1.0.1 Chris Delahunt
  *       - 237545: List attribute types on OneToMany using @OrderBy does not work with attribute change tracking
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation from Oracle TopLink
+//     06/20/2008-1.0 Guy Pelletier
+//       - 232975: Failure when attribute type is generic
+//     08/15/2008-1.0.1 Chris Delahunt
+//       - 237545: List attribute types on OneToMany using @OrderBy does not work with attribute change tracking
 package org.eclipse.persistence.testing.tests.jpa.inherited;
 
 import java.util.Date;

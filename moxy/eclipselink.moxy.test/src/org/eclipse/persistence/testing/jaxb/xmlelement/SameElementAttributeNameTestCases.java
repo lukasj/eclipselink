@@ -10,6 +10,8 @@
  * Contributors:
  *     Radek Felcman - 2.7.2 - initial implementation
  ******************************************************************************/
+// Contributors:
+//     Radek Felcman - 2.7.2 - initial implementation
 package org.eclipse.persistence.testing.jaxb.xmlelement;
 
 import org.eclipse.persistence.jaxb.MarshallerProperties;

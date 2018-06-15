@@ -10,6 +10,8 @@
  * Contributors:
  *     Mike Norman - May 26 2008, creating packager for JAX-WS RI
  ******************************************************************************/
+// Contributors:
+//     Mike Norman - May 26 2008, creating packager for JAX-WS RI
  package org.eclipse.persistence.tools.dbws;
 
 // javase imports

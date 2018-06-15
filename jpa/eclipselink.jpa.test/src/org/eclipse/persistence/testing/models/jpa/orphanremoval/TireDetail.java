@@ -11,6 +11,9 @@
  *     8/12/2015-2.6 Mythily Parthasarathy
  *       - 474752: Creation of TireDetail
  ******************************************************************************/
+// Contributors:
+//     8/12/2015-2.6 Mythily Parthasarathy
+//       - 474752: Creation of TireDetail
 package org.eclipse.persistence.testing.models.jpa.orphanremoval;
 
 import javax.persistence.Column;

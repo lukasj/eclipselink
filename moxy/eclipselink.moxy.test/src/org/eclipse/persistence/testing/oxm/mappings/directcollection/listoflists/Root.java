@@ -10,6 +10,8 @@
  * Contributors:
  *     rbarkhouse - 2009-05-05 14:32:00 - initial implementation
  ******************************************************************************/
+// Contributors:
+//     rbarkhouse - 2009-05-05 14:32:00 - initial implementation
 package org.eclipse.persistence.testing.oxm.mappings.directcollection.listoflists;
 
 import java.util.ArrayList;

@@ -11,6 +11,9 @@
  *     12/30/2010-2.3 Guy Pelletier submitted for Paul Fullbright
  *       - 312253: Descriptor exception with Embeddable on DDL gen
  ******************************************************************************/
+// Contributors:
+//     12/30/2010-2.3 Guy Pelletier submitted for Paul Fullbright
+//       - 312253: Descriptor exception with Embeddable on DDL gen
 package org.eclipse.persistence.testing.models.jpa.ddlgeneration;
 
 import static javax.persistence.AccessType.PROPERTY;

@@ -12,6 +12,10 @@
  *     10/28/2010-2.2 Guy Pelletier
  *       - 3223850: Primary key metadata issues
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation from Oracle TopLink
+//     10/28/2010-2.2 Guy Pelletier
+//       - 3223850: Primary key metadata issues
 package org.eclipse.persistence.testing.models.jpa.fieldaccess.advanced;
 
 import java.io.*;

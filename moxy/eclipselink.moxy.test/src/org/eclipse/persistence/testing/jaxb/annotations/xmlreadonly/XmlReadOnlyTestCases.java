@@ -10,6 +10,8 @@
 * Contributors:
 *     mmacivor - Initial implementation
 ******************************************************************************/
+// Contributors:
+//     mmacivor - Initial implementation
 package org.eclipse.persistence.testing.jaxb.annotations.xmlreadonly;
 
 import org.eclipse.persistence.testing.jaxb.JAXBTestCases;

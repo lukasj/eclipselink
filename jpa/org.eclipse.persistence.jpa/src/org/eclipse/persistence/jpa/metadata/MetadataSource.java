@@ -11,6 +11,9 @@
  *     05/05/2011-2.3 Chris Delahunt - Bug 344837: Extensibility - Metadata Repository
  *     02/27/2012-2.4 dclarke - Bug 373120:  Add persistence unit property overrides to Metadata Repository
  ******************************************************************************/
+// Contributors:
+//     05/05/2011-2.3 Chris Delahunt - Bug 344837: Extensibility - Metadata Repository
+//     02/27/2012-2.4 dclarke - Bug 373120:  Add persistence unit property overrides to Metadata Repository
 package org.eclipse.persistence.jpa.metadata;
 
 import java.util.Map;

@@ -12,6 +12,10 @@
  *     05/07/2009-1.1.1 Guy Pelletier
  *       - 263904: [PATCH] ExpressionOperator doesn't compare arrays correctly
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation from Oracle TopLink
+//     05/07/2009-1.1.1 Guy Pelletier
+//       - 263904: [PATCH] ExpressionOperator doesn't compare arrays correctly
 package org.eclipse.persistence.testing.tests.expressions;
 
 import java.util.*;

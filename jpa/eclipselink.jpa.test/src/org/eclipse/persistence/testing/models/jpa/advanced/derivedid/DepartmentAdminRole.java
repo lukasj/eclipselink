@@ -11,6 +11,9 @@
  *     02/02/2009-2.0 Chris delahunt
  *       - 241765: JPA 2.0 Derived identities
  ******************************************************************************/
+// Contributors:
+//     02/02/2009-2.0 Chris delahunt
+//       - 241765: JPA 2.0 Derived identities
 package org.eclipse.persistence.testing.models.jpa.advanced.derivedid;
 
 import javax.persistence.Entity;

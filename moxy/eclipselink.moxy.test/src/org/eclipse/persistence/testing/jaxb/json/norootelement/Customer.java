@@ -10,6 +10,8 @@
  * Contributors:
  *     Denise Smith - 2.4.2
  ******************************************************************************/
+// Contributors:
+//     Denise Smith - 2.4.2
 package org.eclipse.persistence.testing.jaxb.json.norootelement;
 
 import javax.xml.bind.annotation.XmlRootElement;

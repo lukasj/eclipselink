@@ -12,6 +12,10 @@
  *     12/14/2017-3.0 Tomas Kraus
  *       - 522635: ConcurrentModificationException when triggering lazy load from conforming query
  ******************************************************************************/
+// Contributors:
+//     Gordon Yorke - Initial Feature development
+//     12/14/2017-3.0 Tomas Kraus
+//       - 522635: ConcurrentModificationException when triggering lazy load from conforming query
 package org.eclipse.persistence.sessions.interceptors;
 
 import java.util.Collection;

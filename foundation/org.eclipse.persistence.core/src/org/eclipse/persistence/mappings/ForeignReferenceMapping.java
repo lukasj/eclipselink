@@ -20,6 +20,18 @@
  *     08/12/2015-2.6 Mythily Parthasarathy
  *       - 474752: Address NPE for Embeddable with 1-M association
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation from Oracle TopLink
+//     08/23/2010-2.2 Michael O'Brien
+//        - 323043: application.xml module ordering may cause weaving not to occur causing an NPE.
+//                       warn if expected "_persistence_//_vh" method not found
+//                       instead of throwing NPE during deploy validation.
+//     11/19/2012-2.5 Guy Pelletier
+//       - 389090: JPA 2.1 DDL Generation Support (foreign key metadata support)
+//     12/07/2012-2.5 Guy Pelletier
+//       - 389090: JPA 2.1 DDL Generation Support (foreign key metadata support)
+//     08/12/2015-2.6 Mythily Parthasarathy
+//       - 474752: Address NPE for Embeddable with 1-M association
 package org.eclipse.persistence.mappings;
 
 import java.security.AccessController;

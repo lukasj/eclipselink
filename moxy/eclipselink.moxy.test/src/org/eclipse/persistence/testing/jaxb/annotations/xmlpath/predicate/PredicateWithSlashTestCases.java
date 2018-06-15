@@ -10,6 +10,8 @@
  * Contributors:
  *     Matt MacIvor - 2.4.1 - initial implementation
  ******************************************************************************/
+// Contributors:
+//     Matt MacIvor - 2.4.1 - initial implementation
 package org.eclipse.persistence.testing.jaxb.annotations.xmlpath.predicate;
 
 import org.eclipse.persistence.testing.jaxb.JAXBTestCases;

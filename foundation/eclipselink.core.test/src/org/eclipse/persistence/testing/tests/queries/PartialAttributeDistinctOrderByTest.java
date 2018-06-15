@@ -10,6 +10,8 @@
  * Contributors:
  *     tware - test for https://bugs.eclipse.org/bugs/show_bug.cgi?id=260986
  ******************************************************************************/
+// Contributors:
+//     tware - test for https://bugs.eclipse.org/bugs/show_bug.cgi?id=260986
 package org.eclipse.persistence.testing.tests.queries;
 
 import java.util.Iterator;

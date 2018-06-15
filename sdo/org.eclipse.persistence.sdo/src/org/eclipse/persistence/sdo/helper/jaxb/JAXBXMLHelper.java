@@ -10,6 +10,8 @@
 * Contributors:
 *     bdoughan - Jan 27/2009 - 1.1 - Initial implementation
 ******************************************************************************/
+// Contributors:
+//     bdoughan - Jan 27/2009 - 1.1 - Initial implementation
 package org.eclipse.persistence.sdo.helper.jaxb;
 
 import commonj.sdo.helper.HelperContext;

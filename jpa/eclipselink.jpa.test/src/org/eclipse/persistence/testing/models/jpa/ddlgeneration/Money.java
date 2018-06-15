@@ -10,6 +10,8 @@
  * Contributors:
  *     07/17/2009 - tware - added tests for DDL generation of maps
  ******************************************************************************/
+// Contributors:
+//     07/17/2009 - tware - added tests for DDL generation of maps
 package org.eclipse.persistence.testing.models.jpa.ddlgeneration;
 
 import java.math.BigDecimal;

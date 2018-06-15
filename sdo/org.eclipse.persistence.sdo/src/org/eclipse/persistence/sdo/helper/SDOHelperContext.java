@@ -12,6 +12,10 @@
  *     dmccann - Nov. 7/2008 - Added delegate key logic from AbstractHelperDelegator
  *     Dmitry Kornilov - 2014/11/25 - ApplicationAccessWLS fixed to reflect changes in WLS
  ******************************************************************************/
+// Contributors:
+//     Oracle  - initial API and implementation from Oracle TopLink
+//     dmccann - Nov. 7/2008 - Added delegate key logic from AbstractHelperDelegator
+//     Dmitry Kornilov - 2014/11/25 - ApplicationAccessWLS fixed to reflect changes in WLS
 package org.eclipse.persistence.sdo.helper;
 
 import commonj.sdo.Type;

@@ -10,6 +10,8 @@
 * Contributors:
 *     mmacivor - Initial implementation
 ******************************************************************************/
+// Contributors:
+//     mmacivor - Initial implementation
 package org.eclipse.persistence.testing.jaxb.json.xmlvalue;
 
 import javax.xml.bind.annotation.XmlAttribute;

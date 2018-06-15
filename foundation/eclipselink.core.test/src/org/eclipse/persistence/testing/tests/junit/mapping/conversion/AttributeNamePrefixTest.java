@@ -11,6 +11,9 @@
  *     11/06/2014-2.6 Tomas Kraus
  *       - 449818: Initial API and implementation.
  ******************************************************************************/
+// Contributors:
+//     11/06/2014-2.6 Tomas Kraus
+//       - 449818: Initial API and implementation.
 package org.eclipse.persistence.testing.tests.junit.mapping.conversion;
 
 import org.eclipse.persistence.internal.mappings.converters.AttributeNamePrefix;

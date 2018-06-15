@@ -10,6 +10,8 @@
  * Contributors:
  *     Denise Smith - September 2011 - 2.4
  ******************************************************************************/
+// Contributors:
+//     Denise Smith - September 2011 - 2.4
 package org.eclipse.persistence.testing.jaxb.json.norootelement;
 
 import javax.xml.bind.JAXBElement;

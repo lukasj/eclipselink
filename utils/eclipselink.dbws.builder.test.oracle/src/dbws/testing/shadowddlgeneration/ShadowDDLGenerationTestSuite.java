@@ -10,6 +10,8 @@
  * Contributors:
  *     Mike Norman: Jan 2012 - Initial implementation
  ******************************************************************************/
+// Contributors:
+//     Mike Norman: Jan 2012 - Initial implementation
 package dbws.testing.shadowddlgeneration;
 
 import static dbws.testing.DBWSTestSuite.DATABASE_DDL_CREATE_KEY;

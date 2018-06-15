@@ -10,6 +10,8 @@
  * Contributors:
  *     Blaise Doughan - 2.3.3 - initial implementation
  ******************************************************************************/
+// Contributors:
+//     Blaise Doughan - 2.3.3 - initial implementation
 package org.eclipse.persistence.testing.jaxb.annotations.xmlvalue;
 
 import javax.xml.bind.annotation.XmlValue;

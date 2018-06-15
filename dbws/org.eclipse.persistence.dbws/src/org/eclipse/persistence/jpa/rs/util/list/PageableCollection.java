@@ -12,6 +12,10 @@
  *     2014-09-01-2.6.0 Dmitry Kornilov
  *       - JPARS 2.0 related changes
  ******************************************************************************/
+// Contributors:
+//     gonural - initial
+//     2014-09-01-2.6.0 Dmitry Kornilov
+//       - JPARS 2.0 related changes
 package org.eclipse.persistence.jpa.rs.util.list;
 
 import org.eclipse.persistence.internal.jpa.rs.metadata.model.LinkV2;

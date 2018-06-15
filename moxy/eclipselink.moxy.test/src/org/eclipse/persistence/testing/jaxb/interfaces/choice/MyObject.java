@@ -10,6 +10,8 @@
 * Contributors:
 *     Denise Smith - February 25, 2013
 ******************************************************************************/
+// Contributors:
+//     Denise Smith - February 25, 2013
 package org.eclipse.persistence.testing.jaxb.interfaces.choice;
 
 import java.util.Properties;

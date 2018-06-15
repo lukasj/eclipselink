@@ -10,6 +10,8 @@
 * Contributors:
 * dmccann - May 21/2009 - 2.0 - Initial implementation
 ******************************************************************************/
+// Contributors:
+// dmccann - May 21/2009 - 2.0 - Initial implementation
 package org.eclipse.persistence.testing.jaxb.schemagen.customizedmapping.xmlelementwrapper;
 
 import javax.xml.bind.annotation.XmlRootElement;

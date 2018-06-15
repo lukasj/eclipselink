@@ -10,6 +10,8 @@
  * Contributors:
  *     Oracle - August 26, 2009 initial test case
  ******************************************************************************/
+// Contributors:
+//     Oracle - August 26, 2009 initial test case
 package org.eclipse.persistence.testing.jaxb.xmlenum;
 
 import org.eclipse.persistence.testing.jaxb.JAXBWithJSONTestCases;

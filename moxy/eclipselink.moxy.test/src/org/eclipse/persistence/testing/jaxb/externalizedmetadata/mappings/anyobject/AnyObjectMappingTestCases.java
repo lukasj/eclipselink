@@ -10,6 +10,8 @@
  * Contributors:
  * dmccann - March 24/2010 - 2.1 - Initial implementation
  ******************************************************************************/
+// Contributors:
+// dmccann - March 24/2010 - 2.1 - Initial implementation
 package org.eclipse.persistence.testing.jaxb.externalizedmetadata.mappings.anyobject;
 
 import java.io.InputStream;

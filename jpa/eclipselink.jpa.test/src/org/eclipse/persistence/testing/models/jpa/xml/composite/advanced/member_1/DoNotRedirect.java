@@ -11,6 +11,9 @@
  *     11/19/2009-2.0 Gordon Yorke
  *       - 239825: XML configuration for Interceptors and Default redirectors
  ******************************************************************************/
+// Contributors:
+//     11/19/2009-2.0 Gordon Yorke
+//       - 239825: XML configuration for Interceptors and Default redirectors
 package org.eclipse.persistence.testing.models.jpa.xml.composite.advanced.member_1;
 
 import org.eclipse.persistence.internal.sessions.AbstractRecord;

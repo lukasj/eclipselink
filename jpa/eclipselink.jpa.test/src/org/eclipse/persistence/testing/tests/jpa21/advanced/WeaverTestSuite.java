@@ -10,6 +10,8 @@
  * Contributors:
  *     Lukas - Initial implementation
  ******************************************************************************/
+// Contributors:
+//     Lukas - Initial implementation
 package org.eclipse.persistence.testing.tests.jpa21.advanced;
 
 import java.util.Arrays;

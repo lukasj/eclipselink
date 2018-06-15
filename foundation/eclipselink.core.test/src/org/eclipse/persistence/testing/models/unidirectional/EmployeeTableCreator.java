@@ -10,6 +10,8 @@
  * Contributors:
  *     ailitchev - Uni-directional OneToMany
  ******************************************************************************/
+// Contributors:
+//     ailitchev - Uni-directional OneToMany
 package org.eclipse.persistence.testing.models.unidirectional;
 
 

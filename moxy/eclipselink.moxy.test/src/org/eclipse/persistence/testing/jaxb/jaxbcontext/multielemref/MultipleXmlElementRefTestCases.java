@@ -11,6 +11,8 @@
  * Contributors:
  *  - rbarkhouse - 08 March 2013 - 2.4.2 - Initial implementation
  ******************************************************************************/
+// Contributors:
+//  - rbarkhouse - 08 March 2013 - 2.4.2 - Initial implementation
 package org.eclipse.persistence.testing.jaxb.jaxbcontext.multielemref;
 
 import java.io.ByteArrayOutputStream;

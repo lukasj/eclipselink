@@ -11,6 +11,9 @@
  *     Oracle - initial API and implementation from Oracle TopLink
  *     dminsky - removed Timestamp & TimeZone retrieval code from constructor
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation from Oracle TopLink
+//     dminsky - removed Timestamp & TimeZone retrieval code from constructor
 package org.eclipse.persistence.internal.platform.database.oracle;
 
 import java.io.Serializable;

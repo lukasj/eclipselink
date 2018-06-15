@@ -12,6 +12,11 @@
  *     02/19/2015 - Rick Curtis
  *       - 458877 : Add national character support
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation from Oracle TopLink
+//     02/19/2015 - Rick Curtis
+//       - 458877 : Add national character support
+// CPR:: Copyright (c) 1998, 2015 Oracle and/or its affiliates, IBM Corporation. All rights reserved.
 package org.eclipse.persistence.exceptions;
 
 import java.util.*;

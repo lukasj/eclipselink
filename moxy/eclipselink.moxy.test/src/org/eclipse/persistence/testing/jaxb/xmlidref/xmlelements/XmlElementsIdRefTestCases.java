@@ -10,6 +10,8 @@
  * Contributors:
  * Oracle = 2.2 - Initial implementation
  ******************************************************************************/
+// Contributors:
+// Oracle = 2.2 - Initial implementation
 package org.eclipse.persistence.testing.jaxb.xmlidref.xmlelements;
 
 import java.io.IOException;

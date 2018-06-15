@@ -10,6 +10,9 @@
  * Contributors:
  *     SAP - initial API and implementation
  ******************************************************************************/
+// Contributors:
+//     SAP - initial API and implementation
+// CPR:: Copyright (c) 2005, 2015 SAP. All rights reserved.
 package org.eclipse.persistence.testing.framework.wdf.server;
 
 import java.util.ArrayList;

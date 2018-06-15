@@ -10,6 +10,8 @@
  * Contributors:
  * David McCann - 2.3.3 - Initial implementation
  ******************************************************************************/
+// Contributors:
+// David McCann - 2.3.3 - Initial implementation
 package org.eclipse.persistence.testing.oxm.mappings.choicecollection.ref;
 
 import java.util.ArrayList;

@@ -18,6 +18,16 @@
  *     09/03/2015 - Will Dazey
  *       - 456067 : Added support for defining query timeout units
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation from Oracle TopLink
+//     07/16/2009-2.0 Guy Pelletier
+//       - 277039: JPA 2.0 Cache Usage Settings
+//     10/29/2010-2.2 Michael O'Brien
+//       - 325167: Make reserved # bind parameter char generic to enable native SQL pass through
+//     06/30/2011-2.3.1 Guy Pelletier
+//       - 341940: Add disable/enable allowing native queries
+//     09/03/2015 - Will Dazey
+//       - 456067 : Added support for defining query timeout units
 package org.eclipse.persistence.config;
 
 import org.eclipse.persistence.annotations.BatchFetch;

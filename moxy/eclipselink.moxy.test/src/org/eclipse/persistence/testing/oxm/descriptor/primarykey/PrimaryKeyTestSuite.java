@@ -10,6 +10,8 @@
  * Contributors:
  *     rbarkhouse - 2009-09-28 14:07:00 - initial implementation
  ******************************************************************************/
+// Contributors:
+//     rbarkhouse - 2009-09-28 14:07:00 - initial implementation
 package org.eclipse.persistence.testing.oxm.descriptor.primarykey;
 
 import junit.framework.Test;

@@ -10,6 +10,8 @@
  * Contributors:
  * dmccann - October 22/2010 - 2.1.2 - Initial implementation
  ******************************************************************************/
+// Contributors:
+// dmccann - October 22/2010 - 2.1.2 - Initial implementation
 package org.eclipse.persistence.sdo.helper;
 
 /**

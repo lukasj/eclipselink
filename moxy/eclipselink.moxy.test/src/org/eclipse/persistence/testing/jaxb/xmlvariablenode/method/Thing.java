@@ -10,6 +10,8 @@
  * Contributors:
  *     Denise Smith - May 2013
  ******************************************************************************/
+// Contributors:
+//     Denise Smith - May 2013
 package org.eclipse.persistence.testing.jaxb.xmlvariablenode.method;
 
 import javax.xml.bind.annotation.XmlAccessType;

@@ -10,6 +10,8 @@
 * Contributors:
 * bdoughan - July 8/2008 - 1.1
 ******************************************************************************/
+// Contributors:
+// bdoughan - July 8/2008 - 1.1
 package org.eclipse.persistence.testing.sdo.model.dataobject;
 
 import junit.framework.Test;

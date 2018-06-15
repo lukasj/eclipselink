@@ -10,6 +10,8 @@
  * Contributors:
  *     Iaroslav Savytskyi - August 13/2014 - 2.6.0 - Initial implementation
  ******************************************************************************/
+// Contributors:
+//     Iaroslav Savytskyi - August 13/2014 - 2.6.0 - Initial implementation
 package org.eclipse.persistence.testing.sdo.server;
 
 import org.eclipse.persistence.sdo.helper.SDOHelperContext;

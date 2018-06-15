@@ -10,6 +10,8 @@
  * Contributors:
  *      Dmitry Kornilov - Initial implementation
  ******************************************************************************/
+// Contributors:
+//      Dmitry Kornilov - Initial implementation
 package org.eclipse.persistence.jpars.test.server.latest;
 
 import org.eclipse.persistence.jpars.test.server.v2.ServerEmployeeV2Test;

@@ -10,6 +10,8 @@
  * Contributors:
  *     rbarkhouse - 2009-10-14 11:21:57 - initial implementation
  ******************************************************************************/
+// Contributors:
+//     rbarkhouse - 2009-10-14 11:21:57 - initial implementation
 package org.eclipse.persistence.testing.oxm.mappings.compositeobject.self.converter;
 
 import org.eclipse.persistence.testing.oxm.mappings.XMLMappingTestCases;

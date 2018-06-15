@@ -10,6 +10,8 @@
  * Contributors:
  *     tware - initial implementation as part of extensibility feature
  ******************************************************************************/
+// Contributors:
+//     tware - initial implementation as part of extensibility feature
 package org.eclipse.persistence.testing.models.jpa.extensibility;
 
 import org.eclipse.persistence.testing.framework.TogglingFastTableCreator;

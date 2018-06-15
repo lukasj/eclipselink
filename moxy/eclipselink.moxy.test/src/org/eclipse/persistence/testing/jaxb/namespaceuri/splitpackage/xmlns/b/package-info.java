@@ -10,6 +10,8 @@
  * Contributors:
  *     Matt MacIvor - 2.3 - initial implementation
  ******************************************************************************/
+// Contributors:
+//     Matt MacIvor - 2.3 - initial implementation
 @XmlSchema(
     namespace = "http://myns",
     elementFormDefault = XmlNsForm.QUALIFIED,

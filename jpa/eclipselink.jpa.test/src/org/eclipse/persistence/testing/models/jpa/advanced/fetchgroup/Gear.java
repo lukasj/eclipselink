@@ -21,6 +21,19 @@
  * See p.55 section 2.11.3 "Non-Entity Classes in the Entity Inheritance Hierarchy
  * of the JPA 2.0 JSR-317 specification
  */
+// Contributors:
+//     05/12/2009-2.1  mobrien - 2
+//       of the Metamodel implementation for EclipseLink 2.0 release involving
+//       Map, ElementCollection and Embeddable types on MappedSuperclass descriptors
+//       - 266912: JPA 2.0 Metamodel API (part of the JSR-317 EJB 3.1 Criteria API)
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////  package org.eclipse.persistence.testing.models.jpa.advanced.fetchgroup;
+
+/////
+// A non-Entity Superclass.
+// The state here is non-persistent
+// This class should NOT be annotated with @MappedSuperclass or @Entity
+// See p.55 section 2.11.3 "Non-Entity Classes in the Entity Inheritance Hierarchy
+// of the JPA 2.0 JSR-317 specification
 public class Gear {
 
     private Long nonPersistentObject;

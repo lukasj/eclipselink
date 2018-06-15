@@ -10,6 +10,8 @@
  * Contributors:
  *     tware - test for bug 324459
  ******************************************************************************/
+// Contributors:
+//     tware - test for bug 324459
 package org.eclipse.persistence.testing.tests.unitofwork;
 
 import org.eclipse.persistence.descriptors.RelationalDescriptor;

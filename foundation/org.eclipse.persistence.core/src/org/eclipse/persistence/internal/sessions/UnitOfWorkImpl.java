@@ -33,6 +33,31 @@
  *     09/03/2015 - Will Dazey
  *       - 456067 : Added support for defining query timeout units
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation from Oracle TopLink
+//     05/28/2008-1.0M8 Andrei Ilitchev
+//        - 224964: Provide support for Proxy Authentication through JPA.
+//        The class was amended to allow it to instantiate ValueHolders after release method has been called
+//        (internalExecuteQuery method no longer throws exception if the uow is dead).
+//        Note that release method clears change sets but keeps the cache.
+//     02/11/2009-1.1 Michael O'Brien
+//        - 259993: 1) Defer a full clear(true) call from entityManager.clear() to release()
+//          only if uow lifecycle is 1,2 or 4 (//Pending) and perform a clear of the cache only in this case.
+//          2) During mergeClonesAfterCompletion() If the the acquire and release threads are different
+//          switch back to the stored acquire thread stored on the mergeManager.
+//     17/04/2009-1.1 Michael O'Brien
+//         - 272022: For rollback scenarios - If the current thread and the active thread
+//            on the mutex do not match for read locks (not yet transitioned to deferred locks) - switch them
+//     07/16/2009-2.0 Guy Pelletier
+//       - 277039: JPA 2.0 Cache Usage Settings
+//     07/15/2011-2.2.1 Guy Pelletier
+//       - 349424: persists during an preCalculateUnitOfWorkChangeSet event are lost
+//     14/05/2012-2.4 Guy Pelletier
+//       - 376603: Provide for table per tenant support for multitenant applications
+//     08/11/2012-2.5 Guy Pelletier
+//       - 393867: Named queries do not work when using EM level Table Per Tenant Multitenancy.
+//     09/03/2015 - Will Dazey
+//       - 456067 : Added support for defining query timeout units
 package org.eclipse.persistence.internal.sessions;
 
 import java.io.StringWriter;

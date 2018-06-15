@@ -11,6 +11,10 @@
  *     08/11/2014-2.5 Rick Curtis
  *       - 440594: Tolerate invalid NamedQuery at EntityManager creation.
  ******************************************************************************/
+// Contributors:
+//     08/11/2014-2.5 Rick Curtis
+//       - 440594: Tolerate invalid NamedQuery at EntityManager creation.
+// CPR:: Copyright (c) 2014, 2018 IBM Corporation. All rights reserved.
 package org.eclipse.persistence.testing.tests.jpa.advanced;
 
 import javax.persistence.EntityManager;

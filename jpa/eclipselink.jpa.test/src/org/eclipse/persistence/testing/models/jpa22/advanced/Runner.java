@@ -21,6 +21,19 @@
  *     11/06/2014-2.6 Tomas Kraus
  *       - 449818: Added mapping for Convert annotation test on ElementCollection of Embeddable class.
  ******************************************************************************/
+// Contributors:
+//     10/25/2012-2.5 Guy Pelletier
+//       - 374688: JPA 2.1 Converter support
+//     11/19/2012-2.5 Guy Pelletier
+//       - 389090: JPA 2.1 DDL Generation Support (foreign key metadata support)
+//     11/28/2012-2.5 Guy Pelletier
+//       - 374688: JPA 2.1 Converter support
+//     12/07/2012-2.5 Guy Pelletier
+//       - 389090: JPA 2.1 DDL Generation Support (foreign key metadata support)
+//     07/16/2013-2.5.1 Guy Pelletier
+//       - 412384: Applying Converter for parameterized basic-type for joda-time's DateTime does not work
+//     11/06/2014-2.6 Tomas Kraus
+//       - 449818: Added mapping for Convert annotation test on ElementCollection of Embeddable class.
 package org.eclipse.persistence.testing.models.jpa22.advanced;
 
 import static javax.persistence.InheritanceType.JOINED;

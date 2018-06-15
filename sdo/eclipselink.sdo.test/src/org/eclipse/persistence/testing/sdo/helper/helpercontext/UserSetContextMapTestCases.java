@@ -10,6 +10,8 @@
  * Contributors:
  * dmccann - Jan 30/2009 - 1.1 - Initial implementation
  ******************************************************************************/
+// Contributors:
+// dmccann - Jan 30/2009 - 1.1 - Initial implementation
 package org.eclipse.persistence.testing.sdo.helper.helpercontext;
 
 import java.io.FileInputStream;

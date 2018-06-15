@@ -10,6 +10,8 @@
  * Contributors:
  *     Denise Smith - November 5, 2009
  ******************************************************************************/
+// Contributors:
+//     Denise Smith - November 5, 2009
 package org.eclipse.persistence.testing.jaxb.xmlelementref;
 
 import java.math.BigDecimal;

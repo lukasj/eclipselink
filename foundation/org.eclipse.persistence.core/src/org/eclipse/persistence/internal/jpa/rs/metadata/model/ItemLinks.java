@@ -12,6 +12,10 @@
  *      2014-09-01-2.6.0 Dmitry Kornilov
  *        - Added convenient methods to retrieve links by rel.
  ******************************************************************************/
+// Contributors:
+//      gonural - initial
+//      2014-09-01-2.6.0 Dmitry Kornilov
+//        - Added convenient methods to retrieve links by rel.
 package org.eclipse.persistence.internal.jpa.rs.metadata.model;
 
 import java.util.ArrayList;

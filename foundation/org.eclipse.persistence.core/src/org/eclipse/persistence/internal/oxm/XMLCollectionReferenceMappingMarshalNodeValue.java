@@ -10,6 +10,8 @@
 * Contributors:
 *     bdoughan - October 21/2009 - 2.0 - Initial implementation
 ******************************************************************************/
+// Contributors:
+//     bdoughan - October 21/2009 - 2.0 - Initial implementation
 package org.eclipse.persistence.internal.oxm;
 
 import java.util.List;

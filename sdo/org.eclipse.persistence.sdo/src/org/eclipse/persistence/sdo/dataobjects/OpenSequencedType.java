@@ -10,6 +10,8 @@
 * Contributors:
 * rbarkhouse - 19 Jan 2009 - 1.1 - Initial implementation
 ******************************************************************************/
+// Contributors:
+// rbarkhouse - 19 Jan 2009 - 1.1 - Initial implementation
 package org.eclipse.persistence.sdo.dataobjects;
 
 public interface OpenSequencedType {

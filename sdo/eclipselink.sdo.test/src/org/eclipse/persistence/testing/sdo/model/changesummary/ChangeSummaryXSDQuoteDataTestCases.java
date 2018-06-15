@@ -10,6 +10,8 @@
 * Contributors:
 * dmccann - 1.0M8 - Initial implementation
 ******************************************************************************/
+// Contributors:
+// dmccann - 1.0M8 - Initial implementation
 package org.eclipse.persistence.testing.sdo.model.changesummary;
 
 import java.io.ByteArrayInputStream;

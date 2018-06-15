@@ -12,6 +12,10 @@
  *     01/15/2016:2.7 Mythily Parthasarathy
  *         - 485984-Added reference to Shelf entity
  ******************************************************************************/
+// Contributors:
+//     David Minsky - initial API and implementation
+//     01/15/2016:2.7 Mythily Parthasarathy
+//         - 485984-Added reference to Shelf entity
 package org.eclipse.persistence.testing.models.jpa.advanced.fetchgroup;
 
 import java.util.HashMap;

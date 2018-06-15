@@ -20,6 +20,18 @@
  *       - 402380: 3 jpa21/advanced tests failed on server with
  *         "java.lang.NoClassDefFoundError: org/eclipse/persistence/testing/models/jpa21/advanced/enums/Gender"
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation from Oracle TopLink
+//     11/13/2009-2.0  mobrien - 294765: MapKey keyType DirectToField processing
+//       should return attributeClassification class in getMapKeyTargetType when
+//       accessor.attributeField is null in the absence of a MapKey annotation
+//     11/10/2011-2.4 Guy Pelletier
+//       - 357474: Address primaryKey option from tenant discriminator column
+//     30/05/2012-2.4 Guy Pelletier
+//       - 354678: Temp classloader is still being used during metadata processing
+//     06/03/2013-2.5.1 Guy Pelletier
+//       - 402380: 3 jpa21/advanced tests failed on server with
+//         "java.lang.NoClassDefFoundError: org/eclipse/persistence/testing/models/jpa21/advanced/enums/Gender"
 package org.eclipse.persistence.mappings.foundation;
 
 import java.security.AccessController;

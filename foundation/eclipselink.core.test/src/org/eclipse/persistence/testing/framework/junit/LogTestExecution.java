@@ -10,6 +10,8 @@
  * Contributors:
  *      Tomas Kraus - Initial implementation
  ******************************************************************************/
+// Contributors:
+//      Tomas Kraus - Initial implementation
 package org.eclipse.persistence.testing.framework.junit;
 
 import org.eclipse.persistence.logging.AbstractSessionLog;

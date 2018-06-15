@@ -10,6 +10,8 @@
  * Contributors:
  *     David McCann - December 29, 2011 - 2.4 - Initial implementation
  ******************************************************************************/
+// Contributors:
+//     David McCann - December 29, 2011 - 2.4 - Initial implementation
 package dbws.testing.nonassociativeplsql;
 
 //javase imports

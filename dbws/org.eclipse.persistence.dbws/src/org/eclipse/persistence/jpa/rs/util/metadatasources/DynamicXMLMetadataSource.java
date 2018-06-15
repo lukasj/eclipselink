@@ -11,6 +11,9 @@
  *      dclarke/tware - initial
  *      tware
  ******************************************************************************/
+// Contributors:
+//      dclarke/tware - initial
+//      tware
 package org.eclipse.persistence.jpa.rs.util.metadatasources;
 
 import java.util.Map;

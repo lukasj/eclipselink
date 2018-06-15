@@ -10,6 +10,8 @@
  * Contributors:
  *     Blaise Doughan - 2.2 - initial implementation
  ******************************************************************************/
+// Contributors:
+//     Blaise Doughan - 2.2 - initial implementation
 package org.eclipse.persistence.internal.oxm.record.deferred;
 
 import org.eclipse.persistence.internal.oxm.XMLCompositeCollectionMappingNodeValue;

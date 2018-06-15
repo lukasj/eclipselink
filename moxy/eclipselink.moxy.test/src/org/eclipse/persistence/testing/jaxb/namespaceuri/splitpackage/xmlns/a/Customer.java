@@ -10,6 +10,8 @@
  * Contributors:
  *     Matt MacIvor - 2.3 - initial implementation
  ******************************************************************************/
+// Contributors:
+//     Matt MacIvor - 2.3 - initial implementation
 package org.eclipse.persistence.testing.jaxb.namespaceuri.splitpackage.xmlns.a;
 
 import javax.xml.bind.annotation.XmlRootElement;

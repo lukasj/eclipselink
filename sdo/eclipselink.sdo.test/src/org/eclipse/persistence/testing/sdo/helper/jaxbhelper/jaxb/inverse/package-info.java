@@ -10,6 +10,8 @@
 * Contributors:
 *     bdoughan - May 19/2010 - 2.1 - Initial implementation
 ******************************************************************************/
+// Contributors:
+//     bdoughan - May 19/2010 - 2.1 - Initial implementation
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlSchema(namespace="http://www.example.org/customer")
 package org.eclipse.persistence.testing.sdo.helper.jaxbhelper.jaxb.inverse;

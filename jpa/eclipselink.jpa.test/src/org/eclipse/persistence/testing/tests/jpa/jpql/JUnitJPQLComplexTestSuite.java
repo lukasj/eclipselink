@@ -15,6 +15,13 @@
  *     01/23/2018-2.7 Will Dazey
  *       - 530214: trim operation should not bind parameters
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation from Oracle TopLink
+//
+//     04/11/2017-2.6 Will Dazey
+//       - 512386: Add constructor initialization with CONCAT test
+//     01/23/2018-2.7 Will Dazey
+//       - 530214: trim operation should not bind parameters
 package org.eclipse.persistence.testing.tests.jpa.jpql;
 
 import java.math.BigInteger;

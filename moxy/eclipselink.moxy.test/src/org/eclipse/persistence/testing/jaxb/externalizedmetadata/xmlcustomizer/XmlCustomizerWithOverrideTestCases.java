@@ -10,6 +10,8 @@
  * Contributors:
  * dmccann - August 6/2009 - 2.0 - Initial implementation
  ******************************************************************************/
+// Contributors:
+// dmccann - August 6/2009 - 2.0 - Initial implementation
 package org.eclipse.persistence.testing.jaxb.externalizedmetadata.xmlcustomizer;
 
 import java.io.InputStream;

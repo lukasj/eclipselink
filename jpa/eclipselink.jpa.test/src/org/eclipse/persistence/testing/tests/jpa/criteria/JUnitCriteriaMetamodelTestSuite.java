@@ -17,6 +17,15 @@
  *       org.eclipse.persistence.testing.tests.jpa.criteria.metamodel.JUnitCriteriaMetamodelTestSuite.simpleModTest():1766
  *       - 321902: this copied code should be renamed, merged or subclassed off the original
  ******************************************************************************/
+// Contributors:
+//     07/05/2010-2.1.1 Michael O'Brien
+//       - 321716: modelgen and jpa versions of duplicate code in both copies of
+//       JUnitCriteriaMetamodelTestSuite must be kept in sync (to avoid only failing on WebSphere under Derby)
+//       (ideally there should be only one copy of the code - the other suite should reference or subclass for changes)
+//       see
+//       org.eclipse.persistence.testing.tests.jpa.criteria.JUnitCriteriaMetamodelTestSuite.simpleModTest():1796
+//       org.eclipse.persistence.testing.tests.jpa.criteria.metamodel.JUnitCriteriaMetamodelTestSuite.simpleModTest():1766
+//       - 321902: this copied code should be renamed, merged or subclassed off the original
 package org.eclipse.persistence.testing.tests.jpa.criteria;
 
 import junit.framework.Test;

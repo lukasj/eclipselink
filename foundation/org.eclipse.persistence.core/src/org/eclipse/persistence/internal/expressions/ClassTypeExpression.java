@@ -11,6 +11,9 @@
  *     May 21, 2009-2.0 Chris Delahunt
  *       - TODO Bug#: Bug Description
  ******************************************************************************/
+// Contributors:
+//     May 21, 2009-2.0 Chris Delahunt
+//       - TODO Bug#: Bug Description
 package org.eclipse.persistence.internal.expressions;
 
 import java.io.BufferedWriter;

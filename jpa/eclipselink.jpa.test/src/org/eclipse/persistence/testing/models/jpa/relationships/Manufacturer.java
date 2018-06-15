@@ -11,6 +11,9 @@
  *     03/26/2008-1.0M6 Guy Pelletier
  *       - 211302: Add variable 1-1 mapping support to the EclipseLink-ORM.XML Schema
  ******************************************************************************/
+// Contributors:
+//     03/26/2008-1.0M6 Guy Pelletier
+//       - 211302: Add variable 1-1 mapping support to the EclipseLink-ORM.XML Schema
 package org.eclipse.persistence.testing.models.jpa.relationships;
 
 public interface Manufacturer {

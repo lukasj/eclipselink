@@ -10,6 +10,8 @@
  * Contributors:
  * dmccann - May 31/2010 - 2.1 - Initial implementation
  ******************************************************************************/
+// Contributors:
+// dmccann - May 31/2010 - 2.1 - Initial implementation
 package org.eclipse.persistence.testing.jaxb.externalizedmetadata.mappings.composite.multiplenamespaces;
 
 public class Employee {

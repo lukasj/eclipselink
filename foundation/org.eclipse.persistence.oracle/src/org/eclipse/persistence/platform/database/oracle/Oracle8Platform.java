@@ -11,6 +11,9 @@
  *     Oracle - initial API and implementation from Oracle TopLink
  *     Vikram Bhatia - added method for releasing temporary LOBs after conversion
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation from Oracle TopLink
+//     Vikram Bhatia - added method for releasing temporary LOBs after conversion
 package org.eclipse.persistence.platform.database.oracle;
 
 import java.sql.Array;

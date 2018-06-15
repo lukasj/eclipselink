@@ -30,6 +30,28 @@
  *     11/06/2014-2.6 Tomas Kraus
  *       - 449818: Test to verify Convert annotation on ElementCollection of Embeddable class.
  ******************************************************************************/
+// Contributors:
+//     10/09/2012-2.5 Guy Pelletier
+//       - 374688: JPA 2.1 Converter support
+//     10/25/2012-2.5 Guy Pelletier
+//       - 374688: JPA 2.1 Converter support
+//     11/22/2012-2.5 Guy Pelletier
+//       - 389090: JPA 2.1 DDL Generation Support (index metadata support)
+//     11/28/2012-2.5 Guy Pelletier
+//       - 374688: JPA 2.1 Converter support
+//     12/07/2012-2.5 Guy Pelletier
+//       - 389090: JPA 2.1 DDL Generation Support (foreign key metadata support)
+//     01/23/2013-2.5 Guy Pelletier
+//       - 350487: JPA 2.1 Specification defined support for Stored Procedure Calls
+//     02/28/2013-2.5 Chris Delahunt
+//       - 402029: Application exceptions need to be wrapped in PersistenceException
+//     06/03/2013-2.5.1 Guy Pelletier
+//       - 402380: 3 jpa21/advanced tests failed on server with
+//         "java.lang.NoClassDefFoundError: org/eclipse/persistence/testing/models/jpa21/advanced/enums/Gender"
+//     07/16/2013-2.5.1 Guy Pelletier
+//       - 412384: Applying Converter for parameterized basic-type for joda-time's DateTime does not work
+//     11/06/2014-2.6 Tomas Kraus
+//       - 449818: Test to verify Convert annotation on ElementCollection of Embeddable class.
 package org.eclipse.persistence.testing.tests.jpa22.advanced;
 
 import java.util.Date;

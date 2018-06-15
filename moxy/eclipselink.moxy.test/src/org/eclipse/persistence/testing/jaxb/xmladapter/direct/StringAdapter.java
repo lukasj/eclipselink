@@ -10,6 +10,8 @@
  * Contributors:
  *     Denise Smith - January 2014
  ******************************************************************************/
+// Contributors:
+//     Denise Smith - January 2014
 package org.eclipse.persistence.testing.jaxb.xmladapter.direct;
 
 import java.util.ArrayList;

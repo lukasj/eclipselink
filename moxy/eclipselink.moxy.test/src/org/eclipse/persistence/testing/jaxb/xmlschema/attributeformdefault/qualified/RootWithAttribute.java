@@ -10,6 +10,8 @@
  * Contributors:
  * Denise Smith - February 8, 2013
  ******************************************************************************/
+// Contributors:
+// Denise Smith - February 8, 2013
 package org.eclipse.persistence.testing.jaxb.xmlschema.attributeformdefault.qualified;
 
 import javax.xml.bind.annotation.XmlAttribute;

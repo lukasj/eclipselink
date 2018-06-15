@@ -10,6 +10,8 @@
  * Contributors:
  *     dminsky - initial implementation
  ******************************************************************************/
+// Contributors:
+//     dminsky - initial implementation
 package org.eclipse.persistence.jpa.test.sequence.model;
 
 import java.io.Serializable;

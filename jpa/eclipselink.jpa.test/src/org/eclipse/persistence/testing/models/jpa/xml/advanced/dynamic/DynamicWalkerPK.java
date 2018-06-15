@@ -11,6 +11,9 @@
  *     08/20/2012-2.4 Guy Pelletier
  *       - 381079: EclipseLink dynamic entity does not support embedded-id
  ******************************************************************************/
+// Contributors:
+//     08/20/2012-2.4 Guy Pelletier
+//       - 381079: EclipseLink dynamic entity does not support embedded-id
 package org.eclipse.persistence.testing.models.jpa.xml.advanced.dynamic;
 
 public class DynamicWalkerPK {

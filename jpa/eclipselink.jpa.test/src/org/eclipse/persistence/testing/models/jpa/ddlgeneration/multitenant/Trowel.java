@@ -11,6 +11,9 @@
  *     31/05/2012-2.4 Guy Pelletier
  *       - 381196: Multitenant persistence units with a dedicated emf should allow for DDL generation.
  ******************************************************************************/
+// Contributors:
+//     31/05/2012-2.4 Guy Pelletier
+//       - 381196: Multitenant persistence units with a dedicated emf should allow for DDL generation.
 package org.eclipse.persistence.testing.models.jpa.ddlgeneration.multitenant;
 
 import java.util.Date;

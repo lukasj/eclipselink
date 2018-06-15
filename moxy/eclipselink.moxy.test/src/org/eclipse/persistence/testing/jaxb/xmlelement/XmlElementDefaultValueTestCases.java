@@ -10,6 +10,8 @@
  * Contributors:
  *     rbarkhouse - 2.4 - initial implementation
  ******************************************************************************/
+// Contributors:
+//     rbarkhouse - 2.4 - initial implementation
 package org.eclipse.persistence.testing.jaxb.xmlelement;
 
 import java.util.ArrayList;

@@ -10,6 +10,8 @@
  * Contributors:
  *     dminsky,lukas - initial implementation
  ******************************************************************************/
+// Contributors:
+//     dminsky,lukas - initial implementation
 package org.eclipse.persistence.jpa.test.sequence;
 
 import javax.persistence.EntityManagerFactory;

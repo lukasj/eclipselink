@@ -10,6 +10,8 @@
 * Contributors:
 *     bdoughan - August 18/2009 - 1.2 - Initial implementation
 ******************************************************************************/
+// Contributors:
+//     bdoughan - August 18/2009 - 1.2 - Initial implementation
 package org.eclipse.persistence.testing.sdo.instanceclass;
 
 import java.util.List;

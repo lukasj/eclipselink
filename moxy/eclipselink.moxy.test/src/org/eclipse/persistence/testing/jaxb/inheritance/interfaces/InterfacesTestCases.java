@@ -11,6 +11,8 @@
  * Contributors:
  *  -Matt MacIvor - Initial Implementation - 2.4.1
  ******************************************************************************/
+// Contributors:
+//  -Matt MacIvor - Initial Implementation - 2.4.1
 package org.eclipse.persistence.testing.jaxb.inheritance.interfaces;
 
 import java.io.StringReader;

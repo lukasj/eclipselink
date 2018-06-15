@@ -10,6 +10,8 @@
  * Contributors:
  * dmccann - January 13/2010 - 2.0 - Initial implementation
  ******************************************************************************/
+// Contributors:
+// dmccann - January 13/2010 - 2.0 - Initial implementation
 package org.eclipse.persistence.testing.jaxb.externalizedmetadata.xmlinlinebinarydata;
 
 import java.util.Arrays;

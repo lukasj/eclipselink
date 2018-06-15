@@ -10,6 +10,8 @@
  * Contributors:
  *     Oracle
  ******************************************************************************/
+// Contributors:
+//     Oracle
 package org.eclipse.persistence.testing.sdo.helper.typehelper.define;
 
 import commonj.sdo.DataObject;

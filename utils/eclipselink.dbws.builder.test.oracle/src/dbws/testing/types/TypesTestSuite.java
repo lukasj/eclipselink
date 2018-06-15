@@ -10,6 +10,8 @@
  * Contributors:
  *     David McCann - Novebmer 10, 2011 - 2.4 - Initial implementation
  ******************************************************************************/
+// Contributors:
+//     David McCann - Novebmer 10, 2011 - 2.4 - Initial implementation
 package dbws.testing.types;
 
 //javase imports

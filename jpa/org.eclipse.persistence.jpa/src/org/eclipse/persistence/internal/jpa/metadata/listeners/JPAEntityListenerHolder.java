@@ -14,6 +14,12 @@
  *     12/14/2017-3.0 Tomas Kraus
  *       - 291546: Performance degradation due to usage of Vector in DescriptorEventManager
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation
+//     08/01/2012-2.5 Chris Delahunt
+//       - 371950: Metadata caching
+//     12/14/2017-3.0 Tomas Kraus
+//       - 291546: Performance degradation due to usage of Vector in DescriptorEventManager
 package org.eclipse.persistence.internal.jpa.metadata.listeners;
 
 import java.lang.reflect.Method;

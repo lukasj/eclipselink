@@ -11,6 +11,9 @@
  *     Oracle  - initial API and implementation from Oracle TopLink
  *     dmccann - Nov 4/2008 - 1.1 - changed class to interface
  ******************************************************************************/
+// Contributors:
+//     Oracle  - initial API and implementation from Oracle TopLink
+//     dmccann - Nov 4/2008 - 1.1 - changed class to interface
 package org.eclipse.persistence.sdo.helper;
 
 import commonj.sdo.helper.DataFactory;

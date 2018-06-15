@@ -10,6 +10,8 @@
  * Contributors:
  * Martin Vojtek - July 15/2014
  ******************************************************************************/
+// Contributors:
+// Martin Vojtek - July 15/2014
 package org.eclipse.persistence.testing.jaxb.annotations.xmlelementnillable.fieldoverride;
 
 import javax.xml.bind.annotation.XmlElement;

@@ -10,6 +10,8 @@
  * Contributors:
  *     Blaise Doughan - 2.5 - initial implementation
  ******************************************************************************/
+// Contributors:
+//     Blaise Doughan - 2.5 - initial implementation
 package org.eclipse.persistence.internal.core.databaseaccess;
 
 import org.eclipse.persistence.internal.core.helper.CoreConversionManager;

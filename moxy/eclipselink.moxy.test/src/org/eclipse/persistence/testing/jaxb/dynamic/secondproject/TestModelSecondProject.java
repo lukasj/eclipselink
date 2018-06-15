@@ -10,6 +10,8 @@
  * Contributors:
  *     rbarkhouse - 2010-03-04 12:22:11 - initial implementation
  ******************************************************************************/
+// Contributors:
+//     rbarkhouse - 2010-03-04 12:22:11 - initial implementation
 package org.eclipse.persistence.testing.jaxb.dynamic.secondproject;
 
 import org.eclipse.persistence.oxm.NamespaceResolver;

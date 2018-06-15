@@ -13,6 +13,11 @@
  *              buildType, getBuildDate(), getBuildRevision(), getBuildType(),
  *              getVersionString(), printVersionString(), and main()
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation from Oracle TopLink
+//     egwin  - Changed buildNumber to buildDate. Added buildRevision,
+//              buildType, getBuildDate(), getBuildRevision(), getBuildType(),
+//              getVersionString(), printVersionString(), and main()
 package org.eclipse.persistence;
 
 /**

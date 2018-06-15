@@ -10,6 +10,8 @@
  * Contributors:
  *     gonural - Initial implementation
  ******************************************************************************/
+// Contributors:
+//     gonural - Initial implementation
 package org.eclipse.persistence.jpa.rs.resources.common;
 
 import java.io.StringWriter;

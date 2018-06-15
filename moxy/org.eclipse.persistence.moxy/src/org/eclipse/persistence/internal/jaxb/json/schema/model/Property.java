@@ -10,6 +10,8 @@
  * Contributors:
  *     Matt MacIvor - 2.5.1 - Initial Implementation
  ******************************************************************************/
+// Contributors:
+//     Matt MacIvor - 2.5.1 - Initial Implementation
 package org.eclipse.persistence.internal.jaxb.json.schema.model;
 
 import java.util.ArrayList;

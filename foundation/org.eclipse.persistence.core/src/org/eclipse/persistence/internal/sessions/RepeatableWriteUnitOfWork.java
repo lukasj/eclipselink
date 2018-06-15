@@ -9,12 +9,19 @@
  *
  * Contributors:
  *     Oracle - initial API and implementation from Oracle TopLink
-        Gordon Yorke - VM managed entity detachment
+ *      Gordon Yorke - VM managed entity detachment
  *     07/16/2009-2.0 Guy Pelletier
  *       - 277039: JPA 2.0 Cache Usage Settings
  *     07/15/2011-2.2.1 Guy Pelletier
  *       - 349424: persists during an preCalculateUnitOfWorkChangeSet event are lost
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation from Oracle TopLink
+//        Gordon Yorke - VM managed entity detachment
+//     07/16/2009-2.0 Guy Pelletier
+//       - 277039: JPA 2.0 Cache Usage Settings
+//     07/15/2011-2.2.1 Guy Pelletier
+//       - 349424: persists during an preCalculateUnitOfWorkChangeSet event are lost
 package org.eclipse.persistence.internal.sessions;
 
 import java.util.*;

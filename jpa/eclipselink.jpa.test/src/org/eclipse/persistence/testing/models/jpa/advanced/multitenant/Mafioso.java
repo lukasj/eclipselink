@@ -15,6 +15,13 @@
  *     11/10/2011-2.4 Guy Pelletier
  *       - 357474: Address primaryKey option from tenant discriminator column
  ******************************************************************************/
+// Contributors:
+//     03/24/2011-2.3 Guy Pelletier
+//       - 337323: Multi-tenant with shared schema support (part 1)
+//     06/1/2011-2.3 Guy Pelletier
+//       - 337323: Multi-tenant with shared schema support (part 9)
+//     11/10/2011-2.4 Guy Pelletier
+//       - 357474: Address primaryKey option from tenant discriminator column
 package org.eclipse.persistence.testing.models.jpa.advanced.multitenant;
 
 import java.io.Serializable;

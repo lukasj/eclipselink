@@ -10,6 +10,8 @@
  * Contributors:
  *     David McCann - Jan.10, 2013 - 2.5.0 - initial API and implementation
  ******************************************************************************/
+// Contributors:
+//     David McCann - Jan.10, 2013 - 2.5.0 - initial API and implementation
 package org.eclipse.persistence.internal.jpa.metadata.queries;
 
 import org.eclipse.persistence.internal.jpa.metadata.accessors.MetadataAccessor;

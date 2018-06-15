@@ -11,6 +11,9 @@
  *     07/06/2011-2.3.1 Guy Pelletier
  *       - 349906: NPE while using eclipselink in the application
  ******************************************************************************/
+// Contributors:
+//     07/06/2011-2.3.1 Guy Pelletier
+//       - 349906: NPE while using eclipselink in the application
 package org.eclipse.persistence.testing.models.jpa.xml.merge.inherited;
 
 import javax.persistence.Embeddable;

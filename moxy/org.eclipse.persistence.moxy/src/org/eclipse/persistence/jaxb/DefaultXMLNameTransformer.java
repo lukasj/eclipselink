@@ -10,6 +10,8 @@
  * Contributors:
  *     Denise Smith - April 7, 2011
  ******************************************************************************/
+// Contributors:
+//     Denise Smith - April 7, 2011
 package org.eclipse.persistence.jaxb;
 
 import org.eclipse.persistence.oxm.XMLNameTransformer;

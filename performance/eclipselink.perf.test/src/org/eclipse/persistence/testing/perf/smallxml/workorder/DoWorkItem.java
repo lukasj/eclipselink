@@ -10,6 +10,8 @@
  * Contributors:
  *     Martin Vojtek - 2.6.0 - initial implementation
  ******************************************************************************/
+// Contributors:
+//     Martin Vojtek - 2.6.0 - initial implementation
 package org.eclipse.persistence.testing.perf.smallxml.workorder;
 
 import javax.xml.bind.annotation.XmlAccessType;

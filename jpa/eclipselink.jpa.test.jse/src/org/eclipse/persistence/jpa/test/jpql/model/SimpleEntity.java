@@ -11,6 +11,10 @@
  *     05/11/2018-2.7 Will Dazey
  *       - 534515: Incorrect return type set for CASE functions
  ******************************************************************************/
+// Contributors:
+//     05/11/2018-2.7 Will Dazey
+//       - 534515: Incorrect return type set for CASE functions
+// CPR:: Copyright (c) 2018 Oracle and/or its affiliates, IBM Corporation. All rights reserved.
 package org.eclipse.persistence.jpa.test.jpql.model;
 
 import javax.persistence.Column;

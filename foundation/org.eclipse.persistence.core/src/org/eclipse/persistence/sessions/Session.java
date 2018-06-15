@@ -14,6 +14,12 @@
  *     05/26/2016-2.7 Tomas Kraus
  *       - 494610: Session Properties map should be Map<String, Object>
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation from Oracle TopLink
+//     09/03/2015 - Will Dazey
+//       - 456067 : Added support for defining query timeout units
+//     05/26/2016-2.7 Tomas Kraus
+//       - 494610: Session Properties map should be Map<String, Object>
 package org.eclipse.persistence.sessions;
 
 import java.util.*;

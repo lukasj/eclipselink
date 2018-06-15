@@ -11,6 +11,9 @@
  * dmccann - June 17/2009 - 2.0 - Initial implementation
  * Martin Vojtek - November 14/2014 - Added test suites for XmlIDExtension and XmlValueExtension
  ******************************************************************************/
+// Contributors:
+// dmccann - June 17/2009 - 2.0 - Initial implementation
+// Martin Vojtek - November 14/2014 - Added test suites for XmlIDExtension and XmlValueExtension
 package org.eclipse.persistence.testing.jaxb.externalizedmetadata;
 
 import junit.framework.JUnit4TestAdapter;

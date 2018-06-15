@@ -10,6 +10,8 @@
 * Contributors:
 *     bdoughan - Mar 17/2009 - 2.0 - Initial implementation
 ******************************************************************************/
+// Contributors:
+//     bdoughan - Mar 17/2009 - 2.0 - Initial implementation
 package org.eclipse.persistence.testing.sdo.helper.classgen.dynamicimpl;
 
 import java.io.InputStream;

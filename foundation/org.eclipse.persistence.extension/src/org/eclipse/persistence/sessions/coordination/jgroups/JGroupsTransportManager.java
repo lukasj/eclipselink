@@ -7,6 +7,8 @@
  * Contributors:
  *     Oracle - initial design and implementation
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial design and implementation
 package org.eclipse.persistence.sessions.coordination.jgroups;
 
 import java.util.Map;

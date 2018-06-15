@@ -12,6 +12,10 @@
  *     06/16/2015-2.7 Tomas Kraus
  *       - 254437: Added default value support.
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation.
+//     06/16/2015-2.7 Tomas Kraus
+//       - 254437: Added default value support.
 package org.eclipse.persistence.internal.security;
 
 import java.security.AccessController;

@@ -10,6 +10,8 @@
  * Contributors:
  *  rbarkhouse - 2.3.3 - Initial implementation
  ******************************************************************************/
+// Contributors:
+//  rbarkhouse - 2.3.3 - Initial implementation
 package org.eclipse.persistence.testing.jaxb.annotations.xmlelementsjoinnodes;
 
 public class PublicCompany extends Company {

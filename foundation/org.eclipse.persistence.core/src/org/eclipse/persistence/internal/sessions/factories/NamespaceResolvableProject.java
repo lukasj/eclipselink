@@ -10,6 +10,8 @@
  * Contributors:
  *     minorman - May 2008: helpful superclass that handles Namespaces for project-Project's
  ******************************************************************************/
+// Contributors:
+//     minorman - May 2008: helpful superclass that handles Namespaces for project-Project's
 
 package org.eclipse.persistence.internal.sessions.factories;
 

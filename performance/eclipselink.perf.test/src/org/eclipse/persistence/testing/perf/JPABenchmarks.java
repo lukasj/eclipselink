@@ -10,6 +10,8 @@
  * Contributors:
  *              ljungmann - initial implementation
  ******************************************************************************/
+// Contributors:
+//              ljungmann - initial implementation
 package org.eclipse.persistence.testing.perf;
 
 import org.eclipse.persistence.testing.perf.jpa.tests.basic.JPAMetadataProcessingTests;

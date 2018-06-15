@@ -10,6 +10,8 @@
  * Contributors:
  *              James Sutherland - initial example
  ******************************************************************************/
+// Contributors:
+//              James Sutherland - initial example
 package org.eclipse.persistence.testing.perf.jpa.model.basic;
 
 import java.io.Serializable;

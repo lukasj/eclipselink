@@ -11,6 +11,9 @@
  *     05/05/2009 Andrei Ilitchev
  *       - JPA 2.0 - OrderedList support.
  ******************************************************************************/
+// Contributors:
+//     05/05/2009 Andrei Ilitchev
+//       - JPA 2.0 - OrderedList support.
 package org.eclipse.persistence.testing.models.orderedlist;
 
 import java.io.*;

@@ -10,6 +10,8 @@
  * Contributors:
  *     tware - initial API check-in for MappedKeyMapContainerPolicy
  ******************************************************************************/
+// Contributors:
+//     tware - initial API check-in for MappedKeyMapContainerPolicy
 package org.eclipse.persistence.mappings.foundation;
 
 import java.util.List;

@@ -15,6 +15,13 @@
  *     30/05/2012-2.4 Guy Pelletier
  *       - 354678: Temp classloader is still being used during metadata processing
  ******************************************************************************/
+// Contributors:
+//     06/14/2010-2.2 Karen Moore
+//       - 264417: Table generation is incorrect for JoinTables in AssociationOverrides
+//     07/19/2011-2.2.1 Guy Pelletier
+//       - 338812: ManyToMany mapping in aggregate object violate integrity constraint on deletion
+//     30/05/2012-2.4 Guy Pelletier
+//       - 354678: Temp classloader is still being used during metadata processing
 package org.eclipse.persistence.testing.models.jpa.ddlgeneration;
 
 import java.util.Collection;

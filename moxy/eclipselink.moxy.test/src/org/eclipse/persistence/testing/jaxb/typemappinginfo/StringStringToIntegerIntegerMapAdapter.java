@@ -10,6 +10,8 @@
  * Contributors:
  * desmith - January 9th/2010- 2.0.1
  * ******************************************************************************/
+// Contributors:
+// desmith - January 9th/2010- 2.0.1
 package org.eclipse.persistence.testing.jaxb.typemappinginfo;
 
 import java.util.HashMap;

@@ -10,6 +10,8 @@
 * Contributors:
 * mmacivor - June 11/2008 - 1.0 - Initial implementation
 ******************************************************************************/
+// Contributors:
+// mmacivor - June 11/2008 - 1.0 - Initial implementation
 package org.eclipse.persistence.exceptions;
 
 import javax.xml.namespace.QName;

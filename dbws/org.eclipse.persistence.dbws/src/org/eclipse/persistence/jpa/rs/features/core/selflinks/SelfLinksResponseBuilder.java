@@ -12,6 +12,10 @@
  *      2014-09-01-2.6.0 Dmitry Kornilov
  *        - JPARS 2.0 fixes
  ******************************************************************************/
+// Contributors:
+//      gonural - initial implementation
+//      2014-09-01-2.6.0 Dmitry Kornilov
+//        - JPARS 2.0 fixes
 package org.eclipse.persistence.jpa.rs.features.core.selflinks;
 
 import org.eclipse.persistence.descriptors.ClassDescriptor;

@@ -19,6 +19,18 @@
  *     12/03/2015-2.6 Dalia Abo Sheasha
  *       - 483582: Add the javax.persistence.sharedCache.mode property
  ******************************************************************************/
+// Contributors:
+//     06/16/2009-2.0 Guy Pelletier
+//       - 277039: JPA 2.0 Cache Usage Settings
+//     07/16/2009-2.0 Guy Pelletier
+//       - 277039: JPA 2.0 Cache Usage Settings
+//     06/09/2010-2.0.3 Guy Pelletier
+//       - 313401: shared-cache-mode defaults to NONE when the element value is unrecognized
+//     06/19/2014-2.6: - Tomas Kraus (Oracle)
+//       - 437578: Tests to verify @Cacheable inheritance in JPA 2.1
+//     12/03/2015-2.6 Dalia Abo Sheasha
+//       - 483582: Add the javax.persistence.sharedCache.mode property
+// CPR:: Copyright (c) 1998, 2018 Oracle and/or its affiliates, IBM Corporation. All rights reserved.
 package org.eclipse.persistence.testing.tests.jpa.cacheable;
 
 import java.util.ArrayList;

@@ -12,6 +12,10 @@
  *      2014-09-01-2.6.0 Dmitry Kornilov
  *        - Added buildSingleResultQueryResponse method.
  ******************************************************************************/
+// Contributors:
+//      gonural - initial implementation
+//      2014-09-01-2.6.0 Dmitry Kornilov
+//        - Added buildSingleResultQueryResponse method.
 package org.eclipse.persistence.jpa.rs.features;
 
 import org.eclipse.persistence.internal.queries.ReportItem;

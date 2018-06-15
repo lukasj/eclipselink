@@ -10,6 +10,8 @@
  * Contributors:
  *     rbarkhouse - 2009-10-06 10:01:09 - initial implementation
  ******************************************************************************/
+// Contributors:
+//     rbarkhouse - 2009-10-06 10:01:09 - initial implementation
 package org.eclipse.persistence.testing.oxm.mappings.anyattribute.reuse;
 
 import org.eclipse.persistence.descriptors.ClassDescriptor;

@@ -12,6 +12,10 @@
  *     01/15/2015-2.6 Mythily Parthasarathy
  *       - 457480: NPE in  MethodAttributeAccessor.getAttributeValueFromObject
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation from Oracle TopLink
+//     01/15/2015-2.6 Mythily Parthasarathy
+//       - 457480: NPE in  MethodAttributeAccessor.getAttributeValueFromObject
 package org.eclipse.persistence.mappings;
 
 import java.util.Collection;

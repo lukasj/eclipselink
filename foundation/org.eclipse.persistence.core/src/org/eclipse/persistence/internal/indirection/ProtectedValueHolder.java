@@ -10,6 +10,8 @@
  * Contributors:
  *     Gordon Yorke - initial API and implementation
  ******************************************************************************/
+// Contributors:
+//     Gordon Yorke - initial API and implementation
 package org.eclipse.persistence.internal.indirection;
 
 import org.eclipse.persistence.exceptions.DatabaseException;

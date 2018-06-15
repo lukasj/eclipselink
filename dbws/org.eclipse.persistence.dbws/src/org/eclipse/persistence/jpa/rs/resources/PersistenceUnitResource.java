@@ -11,6 +11,9 @@
  *     gonural - Initial implementation
  *     Dmitry Kornilov - 'latest' keyword in version support
  ******************************************************************************/
+// Contributors:
+//     gonural - Initial implementation
+//     Dmitry Kornilov - 'latest' keyword in version support
 package org.eclipse.persistence.jpa.rs.resources;
 
 import org.eclipse.persistence.jpa.rs.resources.common.AbstractPersistenceUnitResource;

@@ -10,6 +10,8 @@
  * Contributors:
  *     Matt MacIvor - 2.3 - initial implementation
  ******************************************************************************/
+// Contributors:
+//     Matt MacIvor - 2.3 - initial implementation
 package org.eclipse.persistence.testing.jaxb.schemagen.anonymoustype.inheritance;
 
 import javax.xml.bind.annotation.XmlAccessType;

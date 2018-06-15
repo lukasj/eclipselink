@@ -11,6 +11,9 @@
  *     01/12/2009-1.1 Daniel Lo
  *       - 247041: Null element inserted in the ArrayList
  ******************************************************************************/
+// Contributors:
+//     01/12/2009-1.1 Daniel Lo
+//       - 247041: Null element inserted in the ArrayList
 package org.eclipse.persistence.testing.models.jpa.ddlgeneration.weaving;
 
 public interface Port {

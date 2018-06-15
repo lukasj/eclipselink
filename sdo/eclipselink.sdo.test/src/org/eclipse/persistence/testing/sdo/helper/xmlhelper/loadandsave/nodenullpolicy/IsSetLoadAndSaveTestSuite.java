@@ -10,6 +10,8 @@
 * Contributors:
 * bdoughan - July 8/2008 - 1.1
 ******************************************************************************/
+// Contributors:
+// bdoughan - July 8/2008 - 1.1
 package org.eclipse.persistence.testing.sdo.helper.xmlhelper.loadandsave.nodenullpolicy;
 
 import junit.framework.Test;

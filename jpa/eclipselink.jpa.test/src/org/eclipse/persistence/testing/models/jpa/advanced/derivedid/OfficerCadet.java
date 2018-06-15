@@ -11,6 +11,9 @@
  *     10/21/2009-2.0 Guy Pelletier
  *       - 290567: mappedbyid support incomplete
  ******************************************************************************/
+// Contributors:
+//     10/21/2009-2.0 Guy Pelletier
+//       - 290567: mappedbyid support incomplete
 package org.eclipse.persistence.testing.models.jpa.advanced.derivedid;
 
 import javax.persistence.EmbeddedId;

@@ -12,6 +12,10 @@
  *     05/26/2016-2.7 Tomas Kraus
  *       - 494610: Session Properties map should be Map<String, Object>
  ******************************************************************************/
+// Contributors:
+//     tware - initial implementation as part of extensibility feature
+//     05/26/2016-2.7 Tomas Kraus
+//       - 494610: Session Properties map should be Map<String, Object>
 package org.eclipse.persistence.jpa;
 
 import java.util.Map;

@@ -11,6 +11,9 @@
  *     11/05/2014-2.6 Tomas Kraus
  *       - 449818: Initial API and implementation.
  ******************************************************************************/
+// Contributors:
+//     11/05/2014-2.6 Tomas Kraus
+//       - 449818: Initial API and implementation.
 package org.eclipse.persistence.testing.models.jpa22.advanced.converters;
 
 import javax.persistence.AttributeConverter;

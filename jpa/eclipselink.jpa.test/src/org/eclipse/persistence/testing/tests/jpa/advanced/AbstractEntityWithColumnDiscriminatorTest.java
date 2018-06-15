@@ -11,6 +11,9 @@
  *     jlamande    - Initial API and implementation
  *     Tomas Kraus - EclipseLink jUnit tests integration
  ******************************************************************************/
+// Contributors:
+//     jlamande    - Initial API and implementation
+//     Tomas Kraus - EclipseLink jUnit tests integration
 package org.eclipse.persistence.testing.tests.jpa.advanced;
 
 import java.util.List;

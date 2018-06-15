@@ -11,6 +11,8 @@
  * Contributors:
  *     Oracle - initial API and implementation from Oracle TopLink
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation from Oracle TopLink
 package org.eclipse.persistence.transaction.sunas;
 
 import org.eclipse.persistence.transaction.glassfish.GlassfishTransactionController;

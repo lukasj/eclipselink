@@ -11,6 +11,10 @@
  *       Peter Lohman - initial implementation
  *
  ******************************************************************************/
+// Contributors:
+//       Peter Lohman - initial implementation
+//
+// CPR:: Copyright (c) 2012, 2015 Pervasive Software Inc, Oracle and/or its affiliates. All Rights Reserved
 
  /*
 

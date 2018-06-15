@@ -19,6 +19,17 @@
  *     03/24/2011-2.3 Guy Pelletier
  *       - 337323: Multi-tenant with shared schema support (part 1)
  ******************************************************************************/
+// Contributors:
+//     03/26/2008-1.0M6 Guy Pelletier
+//       - 211302: Add variable 1-1 mapping support to the EclipseLink-ORM.XML Schema
+//     05/16/2008-1.0M8 Guy Pelletier
+//       - 218084: Implement metadata merging functionality between mapping files
+//     03/27/2009-2.0 Guy Pelletier
+//       - 241413: JPA 2.0 Add EclipseLink support for Map type attributes
+//     05/04/2010-2.1 Guy Pelletier
+//       - 309373: Add parent class attribute to EclipseLink-ORM
+//     03/24/2011-2.3 Guy Pelletier
+//       - 337323: Multi-tenant with shared schema support (part 1)
 package org.eclipse.persistence.internal.jpa.metadata.accessors.classes;
 
 import java.util.HashSet;

@@ -24,6 +24,23 @@
  *     09/06/2017-2.7 Jody Grassel
  *       - 521954: Eclipselink is not able to parse ORM XML files using the 2.2 schema 
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation from Oracle TopLink
+//     05/16/2008-1.0M8 Guy Pelletier
+//       - 218084: Implement metadata merging functionality between mapping file
+//     09/23/2008-1.1 Guy Pelletier
+//       - 241651: JPA 2.0 Access Type support
+//     12/10/2008-1.1 Michael O'Brien
+//       - 257606: Add orm.xml schema validation true/(false) flag support in persistence.xml
+//     03/27/2009-2.0 Guy Pelletier
+//       - 241413: JPA 2.0 Add EclipseLink support for Map type attributes
+//     10/09/2012-2.5 Guy Pelletier
+//       - 374688: JPA 2.1 Converter support
+//     02/14/2013-2.5 Guy Pelletier
+//       - 338610: JPA 2.1 Functionality for Java EE 7 (JSR-338)
+//     09/06/2017-2.7 Jody Grassel
+//       - 521954: Eclipselink is not able to parse ORM XML files using the 2.2 schema
+// CPR:: Copyright (c) 1998, 2018 Oracle, IBM and/or its affiliates. All rights reserved.
 package org.eclipse.persistence.internal.jpa.metadata.xml;
 
 import java.io.IOException;

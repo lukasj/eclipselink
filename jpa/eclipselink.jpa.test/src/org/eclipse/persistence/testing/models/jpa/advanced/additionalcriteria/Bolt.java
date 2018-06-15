@@ -11,6 +11,9 @@
  *     10/15/2010-2.2 Guy Pelletier
  *       - 322008: Improve usability of additional criteria applied to queries at the session/EM
  ******************************************************************************/
+// Contributors:
+//     10/15/2010-2.2 Guy Pelletier
+//       - 322008: Improve usability of additional criteria applied to queries at the session/EM
 package org.eclipse.persistence.testing.models.jpa.advanced.additionalcriteria;
 
 import javax.persistence.Entity;

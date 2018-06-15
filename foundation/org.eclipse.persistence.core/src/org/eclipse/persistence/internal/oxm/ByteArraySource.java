@@ -10,6 +10,8 @@
 * Contributors:
 * mmacivor - 2.4.2 Initial Implementation
 ******************************************************************************/
+// Contributors:
+// mmacivor - 2.4.2 Initial Implementation
 package org.eclipse.persistence.internal.oxm;
 
 import java.io.InputStream;

@@ -10,6 +10,8 @@
  * Contributors:
  *      gonural - initial
  ******************************************************************************/
+// Contributors:
+//      gonural - initial
 package org.eclipse.persistence.jpa.rs.util.list;
 
 import org.eclipse.persistence.internal.jpa.rs.metadata.model.LinkV2;

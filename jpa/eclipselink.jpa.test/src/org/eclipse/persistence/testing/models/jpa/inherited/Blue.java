@@ -16,6 +16,14 @@
  *     08/11/2010-2.2 Guy Pelletier
  *       - 312123: JPA: Validation error during Id processing on parameterized generic OneToOne Entity relationship from MappedSuperclass
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation from Oracle TopLink
+//     05/30/2008-1.0M8 Guy Pelletier
+//       - 230213: ValidationException when mapping to attribute in MappedSuperClass
+//     06/20/2008-1.0 Guy Pelletier
+//       - 232975: Failure when attribute type is generic
+//     08/11/2010-2.2 Guy Pelletier
+//       - 312123: JPA: Validation error during Id processing on parameterized generic OneToOne Entity relationship from MappedSuperclass
 package org.eclipse.persistence.testing.models.jpa.inherited;
 
 import java.math.BigDecimal;

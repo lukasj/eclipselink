@@ -11,6 +11,9 @@
  *     03/16/2018-2.7.2 Radek Felcman
  *       - 531349 - @XmlSchema Prefix is not honoured if root element is nil
  ******************************************************************************/
+// Contributors:
+//     03/16/2018-2.7.2 Radek Felcman
+//       - 531349 - @XmlSchema Prefix is not honoured if root element is nil
 
 @XmlSchema(
         namespace = "NS", elementFormDefault = XmlNsForm.QUALIFIED,

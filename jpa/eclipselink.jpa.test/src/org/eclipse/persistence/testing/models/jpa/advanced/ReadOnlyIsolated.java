@@ -10,6 +10,8 @@
  * Contributors:
  *     ailitchev - 2010.01.08 Bug 299147 - em.find isolated read-only entity throws exception
  ******************************************************************************/
+// Contributors:
+//     ailitchev - 2010.01.08 Bug 299147 - em.find isolated read-only entity throws exception
 package org.eclipse.persistence.testing.models.jpa.advanced;
 
 import javax.persistence.Entity;

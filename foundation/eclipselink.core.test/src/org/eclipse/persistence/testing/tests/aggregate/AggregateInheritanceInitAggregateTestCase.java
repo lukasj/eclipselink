@@ -10,6 +10,8 @@
  * Contributors:
  *     Gyorke - bug 284305 aggregate type change not merged
  ******************************************************************************/
+// Contributors:
+//     Gyorke - bug 284305 aggregate type change not merged
 package org.eclipse.persistence.testing.tests.aggregate;
 
 import org.eclipse.persistence.sessions.*;

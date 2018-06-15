@@ -16,6 +16,14 @@
  *     09/14/2011-2.3.1 Guy Pelletier
  *       - 357533: Allow DDL queries to execute even when Multitenant entities are part of the PU
  ******************************************************************************/
+// Contributors:
+//     Mike Keith
+//
+// Patterned after:
+//   org.eclipse.persistence.platform.database.DB2MainframePlatform
+//
+//     09/14/2011-2.3.1 Guy Pelletier
+//       - 357533: Allow DDL queries to execute even when Multitenant entities are part of the PU
 package org.eclipse.persistence.platform.database;
 
 import java.io.*;

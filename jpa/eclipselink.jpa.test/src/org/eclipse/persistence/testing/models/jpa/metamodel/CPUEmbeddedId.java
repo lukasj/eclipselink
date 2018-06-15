@@ -19,6 +19,17 @@
  *       http://wiki.eclipse.org/EclipseLink/Development/JPA_2.0/metamodel_api#DI_95:_20091017:_Attribute.getJavaMember.28.29_returns_null_for_a_BasicType_on_a_MappedSuperclass_because_of_an_uninitialized_accessor
  *
  ******************************************************************************/
+// Contributors:
+//     03/08/2010-2.1 Michael O'Brien
+//       - 300051: JPA 2.0 Metamodel processing requires EmbeddedId validation moved higher from
+//                      EmbeddedIdAccessor.process() to MetadataDescriptor.addAccessor() so we
+//                      can better determine when to add the MAPPED_SUPERCLASS_RESERVED_PK_NAME
+//                      temporary PK field used to process MappedSuperclasses for the Metamodel API
+//                      during MetadataProject.addMetamodelMappedSuperclass()
+//     16/06/2010-2.2  mobrien - 316991: Attribute.getJavaMember() requires reflective getMethod call
+//       when only getMethodName is available on accessor for attributes of Embeddable types.
+//       http://wiki.eclipse.org/EclipseLink/Development/JPA_2.0/metamodel_api#DI_95:_20091017:_Attribute.getJavaMember.28.29_returns_null_for_a_BasicType_on_a_MappedSuperclass_because_of_an_uninitialized_accessor
+//
 package org.eclipse.persistence.testing.models.jpa.metamodel;
 
 import static javax.persistence.GenerationType.TABLE;

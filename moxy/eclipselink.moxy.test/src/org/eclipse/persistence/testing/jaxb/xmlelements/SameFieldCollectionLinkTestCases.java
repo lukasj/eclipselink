@@ -10,6 +10,8 @@
  * Contributors:
  *     Matt MacIvor - 2.4.1 - Initial Implementation
  ******************************************************************************/
+// Contributors:
+//     Matt MacIvor - 2.4.1 - Initial Implementation
 package org.eclipse.persistence.testing.jaxb.xmlelements;
 
 import java.util.ArrayList;

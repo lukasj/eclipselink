@@ -11,6 +11,9 @@
  *     01/15/2016-Mythily Parthasarathy
  *       - 485984: initial API and implementation
  ******************************************************************************/
+// Contributors:
+//     01/15/2016-Mythily Parthasarathy
+//       - 485984: initial API and implementation
 package org.eclipse.persistence.testing.models.jpa.advanced.fetchgroup;
 
 import javax.persistence.Entity;

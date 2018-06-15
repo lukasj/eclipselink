@@ -10,6 +10,8 @@
  * Contributors:
  *     10/22/2009 - Guy Pelletier/Prakash Selvaraj - added tests for DDL generation of table per class
  ******************************************************************************/
+// Contributors:
+//     10/22/2009 - Guy Pelletier/Prakash Selvaraj - added tests for DDL generation of table per class
 package org.eclipse.persistence.testing.models.jpa.ddlgeneration.tableperclass;
 
 import java.io.Serializable;

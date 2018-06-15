@@ -22,6 +22,20 @@
  *       Because of this we switch to using getBindableJavaType() in getIdType()
  *     08/06/2010-2.2 mobrien 322018 - reduce protected instance variables to private to enforce encapsulation
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation from Oracle TopLink
+//     05/26/2009-2.0  mobrien - 266912: Add implementation of IdentifiableType
+//       as EntityType inherits here instead of ManagedType as of rev# 4265
+//     09/23/2009-2.0  mobrien - 266912: Implement hasSingleIdAttribute() and
+//       all other 6 remaining methods for Id and Version support.
+//       DI 71 - 77 and 56
+//       http://wiki.eclipse.org/EclipseLink/Development/JPA_2.0/metamodel_api#DI_74:_20090909:_Implement_IdentifiableType.hasSingleIdAttribute.28.29
+//     10/21/2009-2.0 Guy Pelletier
+//       - 290567: mappedbyid support incomplete
+//     06/14/2010-2.1  mobrien - 314906: getJavaType should return the
+//       collection javaType C in <X,C,V) of <X, List<V>, V> instead off the elementType V.
+//       Because of this we switch to using getBindableJavaType() in getIdType()
+//     08/06/2010-2.2 mobrien 322018 - reduce protected instance variables to private to enforce encapsulation
 package org.eclipse.persistence.internal.jpa.metamodel;
 
 import java.util.HashSet;

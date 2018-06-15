@@ -10,6 +10,8 @@
  * Contributors:
  *     Iaroslav Savytskyi - 2.6 - initial implementation
  ******************************************************************************/
+// Contributors:
+//     Iaroslav Savytskyi - 2.6 - initial implementation
 package org.eclipse.persistence.internal.oxm.record.json;
 
 import org.eclipse.persistence.exceptions.XMLMarshalException;

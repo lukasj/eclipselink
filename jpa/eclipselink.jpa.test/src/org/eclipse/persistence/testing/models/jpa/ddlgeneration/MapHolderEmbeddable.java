@@ -10,6 +10,8 @@
  * Contributors:
  *     04/24/2012 - ailitchev - Bug 373295
  ******************************************************************************/
+// Contributors:
+//     04/24/2012 - ailitchev - Bug 373295
 package org.eclipse.persistence.testing.models.jpa.ddlgeneration;
 
 import java.util.HashMap;

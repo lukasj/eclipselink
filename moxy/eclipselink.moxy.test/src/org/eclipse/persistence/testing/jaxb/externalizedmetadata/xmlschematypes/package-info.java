@@ -10,6 +10,8 @@
  * Contributors:
  * dmccann - December 10/2010 - 2.0 - Initial implementation
  ******************************************************************************/
+// Contributors:
+// dmccann - December 10/2010 - 2.0 - Initial implementation
 @javax.xml.bind.annotation.XmlSchemaTypes({
     @javax.xml.bind.annotation.XmlSchemaType(name="year", type=java.util.GregorianCalendar.class),
     @javax.xml.bind.annotation.XmlSchemaType(name="double", type=java.math.BigDecimal.class)

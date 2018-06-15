@@ -10,6 +10,8 @@
  * Contributors:
  * Matt MacIvor - July 4th 2011
  ******************************************************************************/
+// Contributors:
+// Matt MacIvor - July 4th 2011
 package org.eclipse.persistence.testing.jaxb.xmlmixed;
 
 import java.util.ArrayList;

@@ -23,6 +23,21 @@
  *     02/17/2018-2.7.2 Lukas Jungmann
  *       - 531305: Canonical model generator fails to run on JDK9
  ******************************************************************************/
+// Contributors:
+//     08/10/2009-2.0 Guy Pelletier
+//       - 267391: JPA 2.0 implement/extend/use an APT tooling library for MetaModel API canonical classes
+//     06/01/2010-2.1 Guy Pelletier
+//       - 315195: Add new property to avoid reading XML during the canonical model generation
+//     08/25/2010-2.2 Guy Pelletier
+//       - 309445: CannonicalModelProcessor process all files
+//     11/23/2010-2.2 Guy Pelletier
+//       - 330660: Canonical model generator throws ClassCastException when using package-info.java
+//     04/01/2011-2.3 Guy Pelletier
+//       - 337323: Multi-tenant with shared schema support (part 2)
+//     09/20/2011-2.3.1 Guy Pelletier
+//       - 357476: Change caching default to ISOLATED for multitenant's using a shared EMF.
+//     02/17/2018-2.7.2 Lukas Jungmann
+//       - 531305: Canonical model generator fails to run on JDK9
 package org.eclipse.persistence.internal.jpa.modelgen;
 
 import java.util.Collection;

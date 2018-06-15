@@ -10,6 +10,8 @@
  * Contributors:
  *     James Sutherland (Oracle) - initial API and implementation
  ******************************************************************************/
+// Contributors:
+//     James Sutherland (Oracle) - initial API and implementation
 package org.eclipse.persistence.descriptors.partitioning;
 
 import java.util.ArrayList;

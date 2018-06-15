@@ -10,6 +10,8 @@
  * Contributors:
  *     David McCann - 2.5.0 - Sept.14, 2012 - Initial Implementation
  ******************************************************************************/
+// Contributors:
+//     David McCann - 2.5.0 - Sept.14, 2012 - Initial Implementation
 package org.eclipse.persistence.internal.xr;
 
 import java.util.List;

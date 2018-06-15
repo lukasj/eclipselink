@@ -11,6 +11,9 @@
  *      Dmitry Kornilov - Initial implementation
  *      Dmitry Kornilov - Upgrade to Jersey 2.x
  ******************************************************************************/
+// Contributors:
+//      Dmitry Kornilov - Initial implementation
+//      Dmitry Kornilov - Upgrade to Jersey 2.x
 package org.eclipse.persistence.jpars.test.server.latest;
 
 import org.eclipse.persistence.jpars.test.server.v2.ServerCrudV2Test;

@@ -11,6 +11,9 @@
  *     Oracle - initial API and implementation from Oracle TopLink
  *     stardif - ClientSession broker ServerSession and change propagation additions
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation from Oracle TopLink
+//     stardif - ClientSession broker ServerSession and change propagation additions
 package org.eclipse.persistence.sessions.broker;
 
 import java.util.*;

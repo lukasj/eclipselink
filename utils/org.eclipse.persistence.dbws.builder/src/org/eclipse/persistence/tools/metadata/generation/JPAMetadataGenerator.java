@@ -10,6 +10,8 @@
  * Contributors:
  *     David McCann - 2.6.0 - July 09, 2013 - Initial Implementation
  ******************************************************************************/
+// Contributors:
+//     David McCann - 2.6.0 - July 09, 2013 - Initial Implementation
 package org.eclipse.persistence.tools.metadata.generation;
 
 import static org.eclipse.persistence.internal.jpa.metadata.MetadataConstants.EL_ACCESS_VIRTUAL;

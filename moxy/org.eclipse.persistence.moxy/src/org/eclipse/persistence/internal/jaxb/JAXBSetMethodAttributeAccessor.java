@@ -10,6 +10,8 @@
  * Contributors:
  * dmccann - May 29/2009 - 2.0 - Initial implementation
  ******************************************************************************/
+// Contributors:
+// dmccann - May 29/2009 - 2.0 - Initial implementation
 package org.eclipse.persistence.internal.jaxb;
 
 import org.eclipse.persistence.exceptions.DescriptorException;

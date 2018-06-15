@@ -10,6 +10,8 @@
  * Contributors:
  *     Denise Smith - January 4th, 2010 - 2.0.1
  ******************************************************************************/
+// Contributors:
+//     Denise Smith - January 4th, 2010 - 2.0.1
 package org.eclipse.persistence.testing.oxm.inheritance;
 
 import org.eclipse.persistence.oxm.XMLDescriptor;

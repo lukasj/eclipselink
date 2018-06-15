@@ -10,6 +10,8 @@
  * Contributors:
  *     Gordon Yorke
  ******************************************************************************/
+// Contributors:
+//     Gordon Yorke
 package org.eclipse.persistence.internal.helper;
 
 

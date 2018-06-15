@@ -10,6 +10,8 @@
  * Contributors:
  * dmccann - September 14/2009 - 2.2 - Initial implementation
  ******************************************************************************/
+// Contributors:
+// dmccann - September 14/2009 - 2.2 - Initial implementation
 package org.eclipse.persistence.testing.jaxb.annotations.xmljoinnode;
 
 import java.util.ArrayList;

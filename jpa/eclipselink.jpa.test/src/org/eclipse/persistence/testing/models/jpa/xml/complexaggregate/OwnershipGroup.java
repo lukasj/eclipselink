@@ -11,6 +11,9 @@
  *     04/02/2008-1.0M6 Guy Pelletier
  *       - 224155: embeddable-attributes should be extended in the EclipseLink ORM.XML schema
  ******************************************************************************/
+// Contributors:
+//     04/02/2008-1.0M6 Guy Pelletier
+//       - 224155: embeddable-attributes should be extended in the EclipseLink ORM.XML schema
 package org.eclipse.persistence.testing.models.jpa.xml.complexaggregate;
 
 public class OwnershipGroup {

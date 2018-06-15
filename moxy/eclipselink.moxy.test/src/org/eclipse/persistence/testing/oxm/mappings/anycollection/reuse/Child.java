@@ -10,6 +10,8 @@
  * Contributors:
  *     rbarkhouse - 2009-10-06 10:56:35 - initial implementation
  ******************************************************************************/
+// Contributors:
+//     rbarkhouse - 2009-10-06 10:56:35 - initial implementation
 package org.eclipse.persistence.testing.oxm.mappings.anycollection.reuse;
 
 public class Child {

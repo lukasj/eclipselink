@@ -14,6 +14,12 @@
  *     11/29/2012-2.5 Guy Pelletier
  *       - 395406: Fix nightly static weave test errors
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation from Oracle TopLink
+//     11/10/2011-2.4 Guy Pelletier
+//       - 357474: Address primaryKey option from tenant discriminator column
+//     11/29/2012-2.5 Guy Pelletier
+//       - 395406: Fix nightly static weave test errors
 package org.eclipse.persistence.internal.jpa.weaving;
 
 import java.util.ArrayList;

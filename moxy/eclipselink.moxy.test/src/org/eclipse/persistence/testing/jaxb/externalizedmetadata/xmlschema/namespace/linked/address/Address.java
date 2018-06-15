@@ -10,6 +10,8 @@
  * Contributors:
  * Ondrej Cerny
  ******************************************************************************/
+// Contributors:
+// Ondrej Cerny
 package org.eclipse.persistence.testing.jaxb.externalizedmetadata.xmlschema.namespace.linked.address;
 
 public class Address {

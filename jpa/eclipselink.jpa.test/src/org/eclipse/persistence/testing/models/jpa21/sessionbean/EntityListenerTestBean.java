@@ -10,6 +10,8 @@
  * Contributors:
  *     tware - initial contribution for Bug 366748 - JPA 2.1 Injectable Entity Listeners
  ******************************************************************************/
+// Contributors:
+//     tware - initial contribution for Bug 366748 - JPA 2.1 Injectable Entity Listeners
 package org.eclipse.persistence.testing.models.jpa21.sessionbean;
 
 import javax.ejb.Stateless;

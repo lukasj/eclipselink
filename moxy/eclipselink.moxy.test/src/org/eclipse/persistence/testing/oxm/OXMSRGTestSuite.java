@@ -10,6 +10,8 @@
  * Contributors:
  *     dtwelves - Sept 2008 creation of MOXy OXM SRG
  ******************************************************************************/
+// Contributors:
+//     dtwelves - Sept 2008 creation of MOXy OXM SRG
 package org.eclipse.persistence.testing.oxm;
 
 import junit.framework.Test;

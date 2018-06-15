@@ -10,6 +10,8 @@
  * Contributors:
  *              James Sutherland - initial example
  ******************************************************************************/
+// Contributors:
+//              James Sutherland - initial example
 package org.eclipse.persistence.testing.models.jpa.performance2;
 
 import javax.persistence.Column;

@@ -10,6 +10,8 @@
  * Contributors:
  *     Mike Norman - Oct 29th 2008, create packager for Javase 6 'Containerless' Endpoint deployment
  ******************************************************************************/
+// Contributors:
+//     Mike Norman - Oct 29th 2008, create packager for Javase 6 'Containerless' Endpoint deployment
 package org.eclipse.persistence.tools.dbws;
 
 import static org.eclipse.persistence.internal.xr.Util.DBWS_SCHEMA_XML;

@@ -12,6 +12,9 @@
 * rbarkhouse - May 26 2008 - 1.0M8 - Initial implementation
 * rbarkhouse - July 14 2008 - 1.1 - Modified to enable wrappers to have multiple associated QNames
 ******************************************************************************/
+// Contributors:
+// rbarkhouse - May 26 2008 - 1.0M8 - Initial implementation
+// rbarkhouse - July 14 2008 - 1.1 - Modified to enable wrappers to have multiple associated QNames
 
 package org.eclipse.persistence.sdo.types;
 

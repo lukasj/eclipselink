@@ -16,6 +16,14 @@
  *     06/14/2010-2.1  mobrien - 314906: getJavaType should return the
  *       collection javaType C in <X,C,V) of <X, Set<V>, V> instead off the elementType V
  ******************************************************************************/
+// Contributors:
+//     03/19/2009-2.0  dclarke  - initial API start
+//     06/30/2009-2.0  mobrien - finish JPA Metadata API modifications in support
+//       of the Metamodel implementation for EclipseLink 2.0 release involving
+//       Map, ElementCollection and Embeddable types on MappedSuperclass descriptors
+//       - 266912: JPA 2.0 Metamodel API (part of the JSR-317 EJB 3.1 Criteria API)
+//     06/14/2010-2.1  mobrien - 314906: getJavaType should return the
+//       collection javaType C in <X,C,V) of <X, Set<V>, V> instead off the elementType V
 package org.eclipse.persistence.internal.jpa.metamodel;
 
 import java.util.Set;

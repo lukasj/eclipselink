@@ -10,6 +10,8 @@
  * Contributors:
  *     Oracle - initial API and implementation from Oracle TopLink
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation from Oracle TopLink
 package org.eclipse.persistence.testing.oxm.mappings.serializedobject;
 import java.io.FileOutputStream;
 import org.eclipse.persistence.testing.oxm.mappings.XMLMappingTestCases;

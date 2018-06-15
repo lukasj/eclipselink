@@ -10,6 +10,8 @@
  * Contributors:
  *     Gordon Yorke - initial contribution
  ******************************************************************************/
+// Contributors:
+//     Gordon Yorke - initial contribution
 package org.eclipse.persistence.testing.models.jpa.cacheable;
 
 //This class is only used for metadata processing testing

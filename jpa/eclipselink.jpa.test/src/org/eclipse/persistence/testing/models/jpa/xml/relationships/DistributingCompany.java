@@ -11,6 +11,9 @@
  *     12/2/2009-2.1 Guy Pelletier
  *       - 296289: Add current annotation metadata support on mapped superclasses to EclipseLink-ORM.XML Schema
  ******************************************************************************/
+// Contributors:
+//     12/2/2009-2.1 Guy Pelletier
+//       - 296289: Add current annotation metadata support on mapped superclasses to EclipseLink-ORM.XML Schema
 package org.eclipse.persistence.testing.models.jpa.xml.relationships;
 
 public class DistributingCompany extends Company {

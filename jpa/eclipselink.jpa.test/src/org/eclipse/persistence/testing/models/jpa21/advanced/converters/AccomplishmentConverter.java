@@ -11,6 +11,9 @@
  *     10/28/2012-2.5 Guy Pelletier
  *       - 374688: JPA 2.1 Converter support
  ******************************************************************************/
+// Contributors:
+//     10/28/2012-2.5 Guy Pelletier
+//       - 374688: JPA 2.1 Converter support
 package org.eclipse.persistence.testing.models.jpa21.advanced.converters;
 
 import javax.persistence.AttributeConverter;

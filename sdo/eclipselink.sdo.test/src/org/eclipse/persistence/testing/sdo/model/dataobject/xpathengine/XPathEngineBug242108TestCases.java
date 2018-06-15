@@ -10,6 +10,8 @@
  * Contributors:
  *     rick.barkhouse@oracle.com - initial implementation
  ******************************************************************************/
+// Contributors:
+//     rick.barkhouse@oracle.com - initial implementation
 
 package org.eclipse.persistence.testing.sdo.model.dataobject.xpathengine;
 

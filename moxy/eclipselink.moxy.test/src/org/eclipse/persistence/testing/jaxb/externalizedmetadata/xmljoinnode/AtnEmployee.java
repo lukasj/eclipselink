@@ -11,6 +11,8 @@
  * Contributors:
  *  - rbarkhouse - 11 October 2012 - 2.4 - Initial implementation
  ******************************************************************************/
+// Contributors:
+//  - rbarkhouse - 11 October 2012 - 2.4 - Initial implementation
 package org.eclipse.persistence.testing.jaxb.externalizedmetadata.xmljoinnode;
 
 import java.util.List;

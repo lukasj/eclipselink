@@ -13,6 +13,11 @@
  *       https://bugs.eclipse.org/bugs/show_bug.cgi?id=316996
  *
  ******************************************************************************/
+// Contributors:
+//     mnorman - sparse merge for DynamicEntity's
+//       https://bugs.eclipse.org/bugs/show_bug.cgi?id=280667
+//       https://bugs.eclipse.org/bugs/show_bug.cgi?id=316996
+//
 package org.eclipse.persistence.testing.tests.jpa.dynamic.employee;
 
 import static org.eclipse.persistence.logging.SessionLog.FINE;

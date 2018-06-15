@@ -10,6 +10,8 @@
  * Contributors:
  *     Denise Smith -  February, 2010 - 2.1
  ******************************************************************************/
+// Contributors:
+//     Denise Smith -  February, 2010 - 2.1
 package org.eclipse.persistence.testing.jaxb.typemappinginfo.xsitype;
 
 public abstract class Person {

@@ -10,6 +10,8 @@
 * Contributors:
 *     bdoughan - December 4/2009 - 2.1 - Initial implementation
 ******************************************************************************/
+// Contributors:
+//     bdoughan - December 4/2009 - 2.1 - Initial implementation
 package org.eclipse.persistence.testing.oxm.mappings.lexicalhandler;
 
 public class Address {

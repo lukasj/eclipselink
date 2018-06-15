@@ -11,6 +11,10 @@
  *     03/13/2015 - Jody Grassel
  *       - 462103 : SQL for Stored Procedure named parameter with DB2 generated with incorrect marker
  ******************************************************************************/
+// Contributors:
+//     03/13/2015 - Jody Grassel
+//       - 462103 : SQL for Stored Procedure named parameter with DB2 generated with incorrect marker
+// CPR:: Copyright (c) 2015 IBM Corporation. All rights reserved.
 package org.eclipse.persistence.jpa.test.basic;
 
 import static org.junit.Assert.assertEquals;

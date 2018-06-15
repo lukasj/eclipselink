@@ -11,6 +11,9 @@
  *     06/02/2009-2.0 Guy Pelletier
  *       - 278768: JPA 2.0 Association Override Join Table
  ******************************************************************************/
+// Contributors:
+//     06/02/2009-2.0 Guy Pelletier
+//       - 278768: JPA 2.0 Association Override Join Table
 package org.eclipse.persistence.testing.models.jpa.xml.inherited;
 
 public class Witness {

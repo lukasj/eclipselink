@@ -10,6 +10,8 @@
  * Contributors:
  *     Peter Benedikovic, February 2014
  ******************************************************************************/
+// Contributors:
+//     Peter Benedikovic, February 2014
 package org.eclipse.persistence.testing.jaxb.xmlinverseref.list;
 
 import java.util.ArrayList;

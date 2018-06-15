@@ -10,6 +10,8 @@
 * Contributors:
 *     dmccann - Nov 4/2008 - 1.1 - Initial implementation
 ******************************************************************************/
+// Contributors:
+//     dmccann - Nov 4/2008 - 1.1 - Initial implementation
 package org.eclipse.persistence.sdo.helper.delegates;
 
 import java.util.ArrayList;

@@ -24,6 +24,22 @@
  *     06/03/2011-2.3.1 Guy Pelletier
  *       - 347563: transient field/property in embeddable entity
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation from Oracle TopLink
+//     01/28/2009-2.0 Guy Pelletier
+//       - 248293: JPA 2.0 Element Collections (part 1)
+//     03/27/2009-2.0 Guy Pelletier
+//       - 241413: JPA 2.0 Add EclipseLink support for Map type attributes
+//     04/03/2009-2.0 Guy Pelletier
+//       - 241413: JPA 2.0 Add EclipseLink support for Map type attributes
+//     06/02/2009-2.0 Guy Pelletier
+//       - 278768: JPA 2.0 Association Override Join Table
+//     06/09/2009-2.0 Guy Pelletier
+//       - 249037: JPA 2.0 persisting list item index
+//     02/18/2010-2.0.2 Guy Pelletier
+//       - 294803: @Column(updatable=false) has no effect on @Basic mappings
+//     06/03/2011-2.3.1 Guy Pelletier
+//       - 347563: transient field/property in embeddable entity
 package org.eclipse.persistence.testing.models.jpa.xml.inherited;
 
 import org.eclipse.persistence.sessions.Session;

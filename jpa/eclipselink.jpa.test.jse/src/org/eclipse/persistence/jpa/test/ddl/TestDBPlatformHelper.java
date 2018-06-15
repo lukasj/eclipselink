@@ -13,6 +13,12 @@
  *     04/30/2015 - Will Dazey
  *       - 465063 : Changed VendorNameToPlatformMapping file. Updating tests.
  *****************************************************************************/
+// Contributors:
+//     03/19/2015 - Rick Curtis
+//       - 462586 : Add national character support for z/OS.
+//     04/30/2015 - Will Dazey
+//       - 465063 : Changed VendorNameToPlatformMapping file. Updating tests.
+// CPR:: Copyright (c) 2015 IBM Corporation. All rights reserved.
 package org.eclipse.persistence.jpa.test.ddl;
 
 import javax.persistence.EntityManagerFactory;

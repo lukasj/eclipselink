@@ -18,6 +18,16 @@
  *     12/01/2010-2.2 Guy Pelletier
  *       - 331234: xml-mapping-metadata-complete overriden by metadata-complete specification
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation from Oracle TopLink
+//     05/16/2008-1.0M8 Guy Pelletier
+//       - 218084: Implement metadata merging functionality between mapping files
+//     09/23/2008-1.1 Guy Pelletier
+//       - 241651: JPA 2.0 Access Type support
+//     10/01/2008-1.1 Guy Pelletier
+//       - 249329: To remain JPA 1.0 compliant, any new JPA 2.0 annotations should be referenced by name
+//     12/01/2010-2.2 Guy Pelletier
+//       - 331234: xml-mapping-metadata-complete overriden by metadata-complete specification
 package org.eclipse.persistence.internal.jpa.metadata.accessors.objects;
 
 import org.eclipse.persistence.internal.jpa.metadata.MetadataLogger;

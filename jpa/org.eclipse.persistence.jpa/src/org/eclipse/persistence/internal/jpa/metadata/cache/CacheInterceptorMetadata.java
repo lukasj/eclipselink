@@ -18,6 +18,16 @@
  *     03/28/2011-2.3 Guy Pelletier
  *       - 341152: From XML cache interceptor and query redirector metadata don't support package specification
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation from Oracle TopLink
+//     05/16/2008-1.0M8 Guy Pelletier
+//       - 218084: Implement metadata merging functionality between mapping files
+//     04/27/2010-2.1 Guy Pelletier
+//       - 309856: MappedSuperclasses from XML are not being initialized properly
+//     03/24/2011-2.3 Guy Pelletier
+//       - 337323: Multi-tenant with shared schema support (part 1)
+//     03/28/2011-2.3 Guy Pelletier
+//       - 341152: From XML cache interceptor and query redirector metadata don't support package specification
 package org.eclipse.persistence.internal.jpa.metadata.cache;
 
 import org.eclipse.persistence.internal.jpa.metadata.MetadataDescriptor;

@@ -10,6 +10,8 @@
  * Contributors:
  * dmccann - August 25/2009 - 2.2 - Initial implementation
  ******************************************************************************/
+// Contributors:
+// dmccann - August 25/2009 - 2.2 - Initial implementation
 package org.eclipse.persistence.oxm.annotations;
 
 import java.lang.annotation.Retention;

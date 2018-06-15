@@ -10,6 +10,8 @@
  * Contributors:
  * Denise Smith - March 4/2010 - 2.0.2
  ******************************************************************************/
+// Contributors:
+// Denise Smith - March 4/2010 - 2.0.2
 package org.eclipse.persistence.testing.jaxb.externalizedmetadata.xmlschema.namespace;
 
 import java.io.ByteArrayInputStream;

@@ -10,6 +10,8 @@
  * Contributors:
  * dmccann - November 17/2009 - 2.0 - Initial implementation
  ******************************************************************************/
+// Contributors:
+// dmccann - November 17/2009 - 2.0 - Initial implementation
 package org.eclipse.persistence.testing.jaxb.typemappinginfo;
 
 import java.io.IOException;

@@ -10,6 +10,8 @@
  * Contributors:
  *     Gordon Yorke - ER 214661 - VM Managed Entity Detachment
  ******************************************************************************/
+// Contributors:
+//     Gordon Yorke - ER 214661 - VM Managed Entity Detachment
 package org.eclipse.persistence.config;
 
 /**

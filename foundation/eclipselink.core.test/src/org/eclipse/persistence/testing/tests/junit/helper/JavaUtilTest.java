@@ -10,6 +10,8 @@
  * Contributors:
  *     Tomas Kraus, Peter Benedikovic - initial API and implementation
  ******************************************************************************/
+// Contributors:
+//     Tomas Kraus, Peter Benedikovic - initial API and implementation
 package org.eclipse.persistence.testing.tests.junit.helper;
 
 import static org.junit.Assert.assertEquals;

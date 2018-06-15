@@ -10,6 +10,8 @@
 * Contributors:
 * mmacivor - August 22/2008 - 1.0 - Initial implementation
 ******************************************************************************/
+// Contributors:
+// mmacivor - August 22/2008 - 1.0 - Initial implementation
 package org.eclipse.persistence.platform.xml;
 
 import org.xml.sax.ErrorHandler;

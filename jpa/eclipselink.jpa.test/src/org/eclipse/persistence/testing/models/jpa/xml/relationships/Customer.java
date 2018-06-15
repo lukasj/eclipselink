@@ -12,6 +12,10 @@
  *     11/13/2009-2.0 Guy Pelletier
  *       - 293629: An attribute referenced from orm.xml is not recognized correctly
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation from Oracle TopLink
+//     11/13/2009-2.0 Guy Pelletier
+//       - 293629: An attribute referenced from orm.xml is not recognized correctly
 package org.eclipse.persistence.testing.models.jpa.xml.relationships;
 
 import java.util.Collection;

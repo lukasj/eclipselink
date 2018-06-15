@@ -10,6 +10,8 @@
  * Contributors:
  *     Denise Smith - August 14/2009
  ******************************************************************************/
+// Contributors:
+//     Denise Smith - August 14/2009
 package org.eclipse.persistence.testing.jaxb.jaxbelement.simple;
 
 import java.io.InputStream;

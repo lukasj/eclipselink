@@ -10,6 +10,8 @@
  * Contributors:
  *     tware - added in fix for bug 277550
  ******************************************************************************/
+// Contributors:
+//     tware - added in fix for bug 277550
 package org.eclipse.persistence.annotations;
 
 import java.util.ArrayList;

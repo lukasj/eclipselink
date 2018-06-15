@@ -11,6 +11,9 @@
  *     Oracle - initial API and implementation from Oracle TopLink
  *     Dies Koper - use the default sequence name from the platform
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation from Oracle TopLink
+//     Dies Koper - use the default sequence name from the platform
 package org.eclipse.persistence.testing.models.interfaces;
 
 import org.eclipse.persistence.sessions.*;

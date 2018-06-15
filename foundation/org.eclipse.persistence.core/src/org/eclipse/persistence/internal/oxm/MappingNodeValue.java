@@ -10,6 +10,8 @@
 * Contributors:
 * bdoughan - January 7/2009 - 1.1 - Initial implementation
 ******************************************************************************/
+// Contributors:
+// bdoughan - January 7/2009 - 1.1 - Initial implementation
 package org.eclipse.persistence.internal.oxm;
 
 import javax.xml.namespace.QName;

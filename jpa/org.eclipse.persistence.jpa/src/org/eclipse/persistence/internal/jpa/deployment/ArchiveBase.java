@@ -10,6 +10,8 @@
  * Contributors:
  *     tware - refactor of Archive to allow to work with Gemini
  ******************************************************************************/
+// Contributors:
+//     tware - refactor of Archive to allow to work with Gemini
 package org.eclipse.persistence.internal.jpa.deployment;
 
 import java.io.IOException;

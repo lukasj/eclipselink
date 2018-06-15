@@ -10,6 +10,8 @@
  * Contributors:
  *     04/24/2012 ailitchev - Bug 362318 - Custom ValueHolder POJO cannot be Serialized
  ******************************************************************************/
+// Contributors:
+//     04/24/2012 ailitchev - Bug 362318 - Custom ValueHolder POJO cannot be Serialized
 package org.eclipse.persistence.testing.tests.feature;
 
 import java.io.IOException;

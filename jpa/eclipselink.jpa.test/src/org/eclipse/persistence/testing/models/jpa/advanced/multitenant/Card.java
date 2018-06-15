@@ -11,6 +11,9 @@
  *     01/06/2011-2.3 Guy Pelletier
  *       - 371453: JPA Multi-Tenancy in Bidirectional OneToOne Relation throws ArrayIndexOutOfBoundsException
  ******************************************************************************/
+// Contributors:
+//     01/06/2011-2.3 Guy Pelletier
+//       - 371453: JPA Multi-Tenancy in Bidirectional OneToOne Relation throws ArrayIndexOutOfBoundsException
 package org.eclipse.persistence.testing.models.jpa.advanced.multitenant;
 
 import javax.persistence.CascadeType;

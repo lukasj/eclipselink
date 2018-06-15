@@ -10,6 +10,8 @@
  * Contributors:
  * Vikram Bhatia - December 24/2013 - 1.0 - Initial implementation
  ******************************************************************************/
+// Contributors:
+// Vikram Bhatia - December 24/2013 - 1.0 - Initial implementation
 package org.eclipse.persistence.testing.jaxb.xmlelementwrapper;
 
 import java.io.InputStream;

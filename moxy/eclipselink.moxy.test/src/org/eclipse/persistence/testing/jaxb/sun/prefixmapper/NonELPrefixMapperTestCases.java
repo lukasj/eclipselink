@@ -10,6 +10,8 @@
  * Contributors:
  * Matt MacIvor - 2.4
  ******************************************************************************/
+// Contributors:
+// Matt MacIvor - 2.4
 package org.eclipse.persistence.testing.jaxb.sun.prefixmapper;
 
 import org.eclipse.persistence.internal.oxm.record.namespaces.NamespacePrefixMapperWrapper;

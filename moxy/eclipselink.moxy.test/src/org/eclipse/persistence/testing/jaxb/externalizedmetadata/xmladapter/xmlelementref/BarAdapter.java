@@ -10,6 +10,8 @@
  * Contributors:
  * dmccann - 2.3 - Initial implementation
  ******************************************************************************/
+// Contributors:
+// dmccann - 2.3 - Initial implementation
 package org.eclipse.persistence.testing.jaxb.externalizedmetadata.xmladapter.xmlelementref;
 
 import javax.xml.bind.annotation.adapters.XmlAdapter;

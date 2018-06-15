@@ -10,6 +10,8 @@
  * Contributors:
  *     James Sutherland - initial design and implementation
  ******************************************************************************/
+// Contributors:
+//     James Sutherland - initial design and implementation
 package org.eclipse.persistence.annotations;
 
 

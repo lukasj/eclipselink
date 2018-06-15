@@ -11,6 +11,8 @@
  * Contributors:
  *  - Denise Smith February 12, 2013
  ******************************************************************************/
+// Contributors:
+//  - Denise Smith February 12, 2013
 package org.eclipse.persistence.testing.jaxb.xmlelementref.prefix2;
 
 import javax.xml.bind.annotation.XmlAttribute;

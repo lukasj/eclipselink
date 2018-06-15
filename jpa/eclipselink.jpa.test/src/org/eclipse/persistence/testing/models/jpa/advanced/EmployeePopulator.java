@@ -12,6 +12,10 @@
  *     03/03/2010 - 2.1 Michael O'Brien
  *       - 260263: SQLServer 2005/2008 requires stored procedure creation select clause variable and column name matching
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation from Oracle TopLink
+//     03/03/2010 - 2.1 Michael O'Brien
+//       - 260263: SQLServer 2005/2008 requires stored procedure creation select clause variable and column name matching
 package org.eclipse.persistence.testing.models.jpa.advanced;
 
 import java.util.*;

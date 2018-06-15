@@ -10,6 +10,8 @@
  * Contributors:
  *      Dmitry Kornilov - initial implementation
  ******************************************************************************/
+// Contributors:
+//      Dmitry Kornilov - initial implementation
 package org.eclipse.persistence.jpa.rs.features;
 
 import org.eclipse.persistence.internal.jpa.rs.metadata.model.ItemLinks;

@@ -10,6 +10,8 @@
  * Contributors:
  *     Dave McCann - May 2008, created DBWS test package
  ******************************************************************************/
+// Contributors:
+//     Dave McCann - May 2008, created DBWS test package
 
 package dbws.testing.plsqlcollection;
 

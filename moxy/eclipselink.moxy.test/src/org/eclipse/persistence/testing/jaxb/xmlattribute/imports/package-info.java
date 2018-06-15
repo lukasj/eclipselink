@@ -10,6 +10,8 @@
  * Contributors:
  *     Denise Smith - 2.4 - February 11, 2013
  ******************************************************************************/
+// Contributors:
+//     Denise Smith - 2.4 - February 11, 2013
 @XmlSchema(
 namespace = "testNamespace",
 elementFormDefault = javax.xml.bind.annotation.XmlNsForm.QUALIFIED,

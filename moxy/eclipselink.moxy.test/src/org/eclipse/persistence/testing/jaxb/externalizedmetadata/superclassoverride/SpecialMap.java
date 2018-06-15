@@ -10,6 +10,8 @@
  * Contributors:
  *     Matt MacIvor - 2.4 - initial implementation
  ******************************************************************************/
+// Contributors:
+//     Matt MacIvor - 2.4 - initial implementation
 package org.eclipse.persistence.testing.jaxb.externalizedmetadata.superclassoverride;
 
 import java.util.Collection;

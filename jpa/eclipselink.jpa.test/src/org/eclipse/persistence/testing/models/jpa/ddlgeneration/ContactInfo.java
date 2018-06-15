@@ -13,6 +13,11 @@
  *     07/19/2011-2.2.1 Guy Pelletier
  *       - 338812: ManyToMany mapping in aggregate object violate integrity constraint on deletion
  ******************************************************************************/
+// Contributors:
+//     06/14/2010-2.2 Karen Moore
+//       - 264417: Table generation is incorrect for JoinTables in AssociationOverrides
+//     07/19/2011-2.2.1 Guy Pelletier
+//       - 338812: ManyToMany mapping in aggregate object violate integrity constraint on deletion
 package org.eclipse.persistence.testing.models.jpa.ddlgeneration;
 
 import static javax.persistence.CascadeType.PERSIST;

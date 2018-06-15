@@ -12,6 +12,10 @@
  *     12/14/2017-3.0 Tomas Kraus
  *       - 291546: Performance degradation due to usage of Vector in DescriptorEventManager
  ******************************************************************************/
+// Contributors:
+//     John Vandale - initial API and implementation
+//     12/14/2017-3.0 Tomas Kraus
+//       - 291546: Performance degradation due to usage of Vector in DescriptorEventManager
 package org.eclipse.persistence.testing.tests.workbenchintegration;
 
 import java.io.File;

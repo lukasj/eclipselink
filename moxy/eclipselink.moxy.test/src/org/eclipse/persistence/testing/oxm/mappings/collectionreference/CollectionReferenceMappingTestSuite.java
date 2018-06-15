@@ -10,6 +10,8 @@
  * Contributors:
  *     rbarkhouse - 2009-10-06 14:57:58 - initial implementation
  ******************************************************************************/
+// Contributors:
+//     rbarkhouse - 2009-10-06 14:57:58 - initial implementation
 package org.eclipse.persistence.testing.oxm.mappings.collectionreference;
 
 import junit.framework.Test;

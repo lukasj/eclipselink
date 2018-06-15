@@ -12,6 +12,10 @@
  *     05/03/2009-1.2.1 Guy Pelletier
  *       - 307547:  Exception in order by clause after migrating to eclipselink 1.2 release
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation from Oracle TopLink
+//     05/03/2009-1.2.1 Guy Pelletier
+//       - 307547:  Exception in order by clause after migrating to eclipselink 1.2 release
 package org.eclipse.persistence.testing.models.jpa.fieldaccess.advanced;
 
 import org.eclipse.persistence.testing.framework.TogglingFastTableCreator;

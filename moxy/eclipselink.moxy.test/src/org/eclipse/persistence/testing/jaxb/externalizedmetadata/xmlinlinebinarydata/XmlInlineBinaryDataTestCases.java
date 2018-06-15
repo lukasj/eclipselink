@@ -10,6 +10,8 @@
  * Contributors:
  * dmccann - January 12/2010 - 2.0 - Initial implementation
  ******************************************************************************/
+// Contributors:
+// dmccann - January 12/2010 - 2.0 - Initial implementation
 package org.eclipse.persistence.testing.jaxb.externalizedmetadata.xmlinlinebinarydata;
 
 import java.io.File;

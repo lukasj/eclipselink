@@ -10,6 +10,8 @@
  * Contributors:
  *      tware - initial implementation
  ******************************************************************************/
+// Contributors:
+//      tware - initial implementation
 package org.eclipse.persistence.jpa.rs.eventlistener;
 
 import org.eclipse.persistence.platform.database.events.DatabaseEventListener;

@@ -15,6 +15,14 @@
  *     01/31/2017 - Will Dazey
  *       - 511426: Adding test to check QueryHints.SCROLLABLE_CURSOR
  ******************************************************************************/
+// Contributors:
+//     06/30/2015-2.6.0 Will Dazey
+//       - 471487: Added test for QueryHints.JDBC_TIMEOUT that checks the executed sql statement
+//     09/03/2015 - Will Dazey
+//       - 456067 : Added tests to check query timeout units
+//     01/31/2017 - Will Dazey
+//       - 511426: Adding test to check QueryHints.SCROLLABLE_CURSOR
+// CPR:: Copyright (c) 2017 IBM Corporation. All rights reserved.
 package org.eclipse.persistence.jpa.test.query;
 
 import java.lang.reflect.InvocationHandler;

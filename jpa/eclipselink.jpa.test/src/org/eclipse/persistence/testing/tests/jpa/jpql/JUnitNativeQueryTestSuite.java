@@ -11,6 +11,9 @@
  *     Chris Delahunt - testing for native queries
  *       - Bug299926: Case insensitive table / column matching with native SQL queries
  ******************************************************************************/
+// Contributors:
+//     Chris Delahunt - testing for native queries
+//       - Bug299926: Case insensitive table / column matching with native SQL queries
 package org.eclipse.persistence.testing.tests.jpa.jpql;
 
 import java.util.List;

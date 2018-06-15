@@ -10,6 +10,8 @@
 * Contributors:
 *     bdoughan - Feb 27/2009 - 1.1 - Initial implementation
 ******************************************************************************/
+// Contributors:
+//     bdoughan - Feb 27/2009 - 1.1 - Initial implementation
 package org.eclipse.persistence.testing.oxm.mappings.anycollection.defaultnamespace;
 
 import java.util.Iterator;

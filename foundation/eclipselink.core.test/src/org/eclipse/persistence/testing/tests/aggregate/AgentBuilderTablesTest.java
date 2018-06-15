@@ -10,6 +10,8 @@
  * Contributors:
  *     ailitchev - fixed bug 266555: Nested AggregateCollectionMapping may set wrong tables into reference descriptor.
  ******************************************************************************/
+// Contributors:
+//     ailitchev - fixed bug 266555: Nested AggregateCollectionMapping may set wrong tables into reference descriptor.
 package org.eclipse.persistence.testing.tests.aggregate;
 
 import java.util.Iterator;

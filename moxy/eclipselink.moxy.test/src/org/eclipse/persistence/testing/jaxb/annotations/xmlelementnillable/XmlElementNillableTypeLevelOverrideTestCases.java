@@ -10,6 +10,8 @@
  * Contributors:
  * Martin Vojtek - July 7/2014
  ******************************************************************************/
+// Contributors:
+// Martin Vojtek - July 7/2014
 package org.eclipse.persistence.testing.jaxb.annotations.xmlelementnillable;
 
 import org.eclipse.persistence.testing.jaxb.JAXBTestCases;

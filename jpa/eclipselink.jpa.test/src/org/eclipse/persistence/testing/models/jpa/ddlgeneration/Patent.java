@@ -10,6 +10,8 @@
  * Contributors:
  *     tware - testing for DDL issue with embedded and MTM
  ******************************************************************************/
+// Contributors:
+//     tware - testing for DDL issue with embedded and MTM
 package org.eclipse.persistence.testing.models.jpa.ddlgeneration;
 
 import javax.persistence.Entity;

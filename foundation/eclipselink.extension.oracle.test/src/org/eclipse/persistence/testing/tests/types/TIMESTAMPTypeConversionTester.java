@@ -13,6 +13,11 @@
  *     14/05/2009 ailitchev - Bug 267929: Oracle 11.1.0.7: TIMESTAMP test '100 Years from now -> 2109-03-10 13:22:28.5 EST5EDT EDT' began to fail after Daylight Saving Time started
  *     Changed the test "100 Years from now" to "Last DST year", see comment in TIMESTAMPTester.
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation from Oracle TopLink
+//
+//     14/05/2009 ailitchev - Bug 267929: Oracle 11.1.0.7: TIMESTAMP test '100 Years from now -> 2109-03-10 13:22:28.5 EST5EDT EDT' began to fail after Daylight Saving Time started
+//     Changed the test "100 Years from now" to "Last DST year", see comment in TIMESTAMPTester.
 package org.eclipse.persistence.testing.tests.types;
 
 import java.util.*;

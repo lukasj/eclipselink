@@ -13,6 +13,11 @@
  *       (https://bugs.eclipse.org/bugs/show_bug.cgi?id=200045)
  *
  ******************************************************************************/
+// Contributors:
+//     dclarke, mnorman - Dynamic Persistence
+//       http://wiki.eclipse.org/EclipseLink/Development/Dynamic
+//       (https://bugs.eclipse.org/bugs/show_bug.cgi?id=200045)
+//
 package org.eclipse.persistence.dynamic;
 
 //javase imports

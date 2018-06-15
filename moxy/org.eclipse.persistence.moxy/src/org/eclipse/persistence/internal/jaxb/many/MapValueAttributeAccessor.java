@@ -10,6 +10,8 @@
  * Contributors:
  *     Denise Smith - Initial implementation June 12, 2009
  ******************************************************************************/
+// Contributors:
+//     Denise Smith - Initial implementation June 12, 2009
 package org.eclipse.persistence.internal.jaxb.many;
 
 import java.util.Map;

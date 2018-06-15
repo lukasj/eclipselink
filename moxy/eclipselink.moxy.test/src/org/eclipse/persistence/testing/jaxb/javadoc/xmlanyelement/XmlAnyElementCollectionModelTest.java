@@ -10,6 +10,8 @@
  * Contributors:
  *     Praba Vijayaratnam - 2.3 - initial implementation
  ******************************************************************************/
+// Contributors:
+//     Praba Vijayaratnam - 2.3 - initial implementation
 package org.eclipse.persistence.testing.jaxb.javadoc.xmlanyelement;
 // Example1
 import java.util.ArrayList;

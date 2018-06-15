@@ -10,6 +10,8 @@
  * Contributors:
  *     Blaise Doughan - 2.2.1 - initial implementation
  ******************************************************************************/
+// Contributors:
+//     Blaise Doughan - 2.2.1 - initial implementation
 package org.eclipse.persistence.testing.jaxb.xmlattribute;
 
 import javax.xml.bind.annotation.XmlAttribute;

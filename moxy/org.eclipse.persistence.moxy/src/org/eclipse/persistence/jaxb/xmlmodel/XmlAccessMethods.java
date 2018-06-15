@@ -10,6 +10,8 @@
  * Contributors:
  * David McCann = 2.1 - Initial contribution
  ******************************************************************************/
+// Contributors:
+// David McCann = 2.1 - Initial contribution
 package org.eclipse.persistence.jaxb.xmlmodel;
 
 import javax.xml.bind.annotation.XmlAccessType;

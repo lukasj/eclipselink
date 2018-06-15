@@ -10,6 +10,8 @@
 * Contributors:
 * dmccann - May 6/2008 - 1.0M7 - Initial implementation
 ******************************************************************************/
+// Contributors:
+// dmccann - May 6/2008 - 1.0M7 - Initial implementation
 package org.eclipse.persistence.testing.sdo.model.dataobject;
 
 import java.math.BigDecimal;

@@ -11,6 +11,9 @@
 *     dmccann - June 4/2008 - 1.0M8 - Initial implementation
 *     dmccann - Nov. 7/2008 - Moved delegate key logic to SDOHelperContext
 ******************************************************************************/
+// Contributors:
+//     dmccann - June 4/2008 - 1.0M8 - Initial implementation
+//     dmccann - Nov. 7/2008 - Moved delegate key logic to SDOHelperContext
 package org.eclipse.persistence.sdo.helper.delegates;
 
 import commonj.sdo.helper.HelperContext;

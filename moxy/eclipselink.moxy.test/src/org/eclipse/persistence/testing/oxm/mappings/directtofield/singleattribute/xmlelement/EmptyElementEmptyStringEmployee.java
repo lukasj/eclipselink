@@ -10,6 +10,8 @@
  * Contributors:
  *     rbarkhouse - 2009-06-19 14:33:00 - initial implementation
  ******************************************************************************/
+// Contributors:
+//     rbarkhouse - 2009-06-19 14:33:00 - initial implementation
 package org.eclipse.persistence.testing.oxm.mappings.directtofield.singleattribute.xmlelement;
 
 public class EmptyElementEmptyStringEmployee {

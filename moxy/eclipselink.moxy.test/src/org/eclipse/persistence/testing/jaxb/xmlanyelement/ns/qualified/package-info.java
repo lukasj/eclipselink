@@ -10,6 +10,8 @@
  * Contributors:
  * Matt MacIvor - 2.3.1
  ******************************************************************************/
+// Contributors:
+// Matt MacIvor - 2.3.1
 @XmlSchema(namespace="namespace", elementFormDefault=XmlNsForm.QUALIFIED)
 package org.eclipse.persistence.testing.jaxb.xmlanyelement.ns.qualified;
 

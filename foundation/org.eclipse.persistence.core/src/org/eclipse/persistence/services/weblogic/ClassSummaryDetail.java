@@ -19,6 +19,17 @@
  *       Move JMX MBean generic registration code up from specific platforms
  *       see <link>http://wiki.eclipse.org/EclipseLink/DesignDocs/316513</link>
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation from Oracle TopLink
+//     @author  mobrien
+//     @since   EclipseLink 1.1 enh# 248748
+//     10/20/2008-1.1M4 Michael O'Brien
+//       - 248748: Add WebLogic 10.3 specific JMX MBean attributes and functions
+//       see <link>http://wiki.eclipse.org/EclipseLink/DesignDocs/248748</link>
+//     06/30/2010-2.1.1 Michael O'Brien
+//       - 316513: Enable JMX MBean functionality for JBoss, Glassfish and WebSphere in addition to WebLogic
+//       Move JMX MBean generic registration code up from specific platforms
+//       see <link>http://wiki.eclipse.org/EclipseLink/DesignDocs/316513</link>
 package org.eclipse.persistence.services.weblogic;
 
 import org.eclipse.persistence.services.ClassSummaryDetailBase;

@@ -11,6 +11,9 @@
  *     03/12/2018-3.0 Tomas Kraus
  *       - 531726 - COUNT with TREAT generates incorrect joins for Joined Inheritance
  ******************************************************************************/
+// Contributors:
+//     03/12/2018-3.0 Tomas Kraus
+//       - 531726 - COUNT with TREAT generates incorrect joins for Joined Inheritance
 package org.eclipse.persistence.testing.models.jpa21.advanced.animals;
 
 import javax.persistence.Entity;

@@ -10,6 +10,8 @@
  * Contributors:
  *     Denise Smith - November 2012
  ******************************************************************************/
+// Contributors:
+//     Denise Smith - November 2012
 package org.eclipse.persistence.oxm;
 
 /**

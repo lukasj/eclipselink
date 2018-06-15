@@ -10,6 +10,8 @@
  * Contributors:
  *     Denise Smith - 2.4
  ******************************************************************************/
+// Contributors:
+//     Denise Smith - 2.4
 package org.eclipse.persistence.testing.jaxb.json.namespaces;
 
 import java.io.IOException;

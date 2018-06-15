@@ -10,6 +10,8 @@
  * Contributors:
  *     Denise Smith - 2009-07-23 - 2.0
  ******************************************************************************/
+// Contributors:
+//     Denise Smith - 2009-07-23 - 2.0
 package org.eclipse.persistence.testing.oxm.mappings.binarydata;
 
 import org.eclipse.persistence.oxm.XMLConstants;

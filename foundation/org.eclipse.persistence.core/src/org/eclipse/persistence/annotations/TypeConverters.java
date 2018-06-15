@@ -11,6 +11,9 @@
  *     08/19/2010-2.2 Guy Pelletier
  *       - 282773: Add plural converter annotations
  ******************************************************************************/
+// Contributors:
+//     08/19/2010-2.2 Guy Pelletier
+//       - 282773: Add plural converter annotations
 package org.eclipse.persistence.annotations;
 
 import java.lang.annotation.Retention;

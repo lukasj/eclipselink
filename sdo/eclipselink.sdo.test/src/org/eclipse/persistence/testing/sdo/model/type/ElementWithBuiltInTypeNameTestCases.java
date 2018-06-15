@@ -10,6 +10,8 @@
 * Contributors:
 * dmccann - 1.0M9 - Initial implementation
 ******************************************************************************/
+// Contributors:
+// dmccann - 1.0M9 - Initial implementation
 package org.eclipse.persistence.testing.sdo.model.type;
 
 import java.io.FileInputStream;

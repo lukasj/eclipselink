@@ -10,6 +10,8 @@
  * Contributors:
  *     dclarke - Example MOXy XJC implementation
  ******************************************************************************/
+// Contributors:
+//     dclarke - Example MOXy XJC implementation
 package org.eclipse.persistence.jaxb.xjc;
 
 import java.io.File;

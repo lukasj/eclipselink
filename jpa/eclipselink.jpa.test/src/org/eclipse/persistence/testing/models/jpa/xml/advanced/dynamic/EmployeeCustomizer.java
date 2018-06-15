@@ -11,6 +11,9 @@
  *     07/05/2010-2.1.1 Guy Pelletier
  *       - 317708: Exception thrown when using LAZY fetch on VIRTUAL mapping
  ******************************************************************************/
+// Contributors:
+//     07/05/2010-2.1.1 Guy Pelletier
+//       - 317708: Exception thrown when using LAZY fetch on VIRTUAL mapping
 package org.eclipse.persistence.testing.models.jpa.xml.advanced.dynamic;
 
 import org.eclipse.persistence.config.DescriptorCustomizer;

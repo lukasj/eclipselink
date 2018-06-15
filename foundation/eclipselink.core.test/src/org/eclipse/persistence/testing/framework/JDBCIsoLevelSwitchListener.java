@@ -11,6 +11,10 @@
  *     Created Oct 1st, 2010 - Adrian G&ouml;rler, patterned after SybaseTransactionIsolationListener
  *        bug 326777:  Some Core LRG tests hang on MaxDB.
  ******************************************************************************/
+// Contributors:
+//     Created Oct 1st, 2010 - Adrian G&ouml;rler, patterned after SybaseTransactionIsolationListener
+//        bug 326777:  Some Core LRG tests hang on MaxDB.
+// CPR:: Copyright (c) 2010, 2015 SAP All rights reserved.
 package org.eclipse.persistence.testing.framework;
 
 import java.sql.Connection;

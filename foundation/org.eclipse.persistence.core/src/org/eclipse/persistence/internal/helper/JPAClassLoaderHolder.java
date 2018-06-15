@@ -10,6 +10,8 @@
  * Contributors:
  *     mobrien - initial API and implementation
  ******************************************************************************/
+// Contributors:
+//     mobrien - initial API and implementation
 package org.eclipse.persistence.internal.helper;
 
 /**

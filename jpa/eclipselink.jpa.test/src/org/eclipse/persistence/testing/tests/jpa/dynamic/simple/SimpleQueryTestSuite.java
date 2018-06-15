@@ -12,6 +12,10 @@
  *       - 429760: Tests whether dynamic entity descriptor is available in session during
  *                 query execution after it was created within the same transaction.
  */
+// Contributors:
+//     07/16/2015-2.7 Lukas Jungmann, Tomas Kraus
+//       - 429760: Tests whether dynamic entity descriptor is available in session during
+//                 query execution after it was created within the same transaction.
 package org.eclipse.persistence.testing.tests.jpa.dynamic.simple;
 
 import static org.eclipse.persistence.logging.SessionLog.WARNING;

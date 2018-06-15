@@ -10,6 +10,8 @@
  * Contributors:
 *     pvijayaratnam - cache coordination test implementation
  ******************************************************************************/
+// Contributors:
+//     pvijayaratnam - cache coordination test implementation
  package org.eclipse.persistence.testing.tests.jpa.sessionbean;
 
 import java.net.URL;

@@ -10,6 +10,8 @@
  * Contributors:
  *     Oracle - initial API and implementation from Oracle TopLink
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation from Oracle TopLink
 
 /* $Header: XMLBinaryDataCollectionMappingTestSuite.java 11-may-2007.15:17:46 dmccann Exp $ */
 

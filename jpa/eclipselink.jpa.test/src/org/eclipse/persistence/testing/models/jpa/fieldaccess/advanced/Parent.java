@@ -11,6 +11,9 @@
  *     07/31/2008-1.1 Guy Pelletier
  *       - 241388: JPA cache is not valid after a series of EntityManager operations
  ******************************************************************************/
+// Contributors:
+//     07/31/2008-1.1 Guy Pelletier
+//       - 241388: JPA cache is not valid after a series of EntityManager operations
 package org.eclipse.persistence.testing.models.jpa.fieldaccess.advanced;
 
 import java.io.Serializable;

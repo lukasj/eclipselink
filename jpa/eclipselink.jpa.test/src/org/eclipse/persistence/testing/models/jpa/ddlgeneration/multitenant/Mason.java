@@ -13,6 +13,12 @@
  *     07/07/2014-2.5.3 Rick Curtis
  *       - 375101: Date and Calendar should not require @Temporal.
  ******************************************************************************/
+// Contributors:
+//     31/05/2012-2.4 Guy Pelletier
+//       - 381196: Multitenant persistence units with a dedicated emf should allow for DDL generation.
+//     07/07/2014-2.5.3 Rick Curtis
+//       - 375101: Date and Calendar should not require @Temporal.
+// CPR:: Copyright (c) 2012, 2015 Oracle and/or its affiliates, IBM Corporation. All rights reserved.
 package org.eclipse.persistence.testing.models.jpa.ddlgeneration.multitenant;
 
 import java.util.Date;

@@ -15,6 +15,13 @@
  *     04/12/2013-2.5 Guy Pelletier
  *       - 405640: JPA 2.1 schema generation drop operation fails to include dropping defaulted fk constraints.
  ******************************************************************************/
+// Contributors:
+//     12/07/2012-2.5 Guy Pelletier
+//       - 389090: JPA 2.1 DDL Generation Support (foreign key metadata support))
+//     02/20/2013-2.5 Guy Pelletier
+//       - 389090: JPA 2.1 DDL Generation Support (foreign key metadata support)
+//     04/12/2013-2.5 Guy Pelletier
+//       - 405640: JPA 2.1 schema generation drop operation fails to include dropping defaulted fk constraints.
 package org.eclipse.persistence.testing.models.jpa22.advanced.ddl;
 
 import java.util.ArrayList;

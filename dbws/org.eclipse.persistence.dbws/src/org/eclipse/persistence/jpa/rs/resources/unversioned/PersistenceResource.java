@@ -10,6 +10,8 @@
  * Contributors:
  *      dclarke/tware - initial
  ******************************************************************************/
+// Contributors:
+//      dclarke/tware - initial
 package org.eclipse.persistence.jpa.rs.resources.unversioned;
 
 import java.io.InputStream;

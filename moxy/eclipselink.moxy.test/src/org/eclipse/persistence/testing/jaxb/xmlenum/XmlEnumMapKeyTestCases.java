@@ -10,6 +10,8 @@
  * Contributors:
  *     mmacivor - 2.1 Initial Implementation
  ******************************************************************************/
+// Contributors:
+//     mmacivor - 2.1 Initial Implementation
 package org.eclipse.persistence.testing.jaxb.xmlenum;
 
 import java.util.ArrayList;

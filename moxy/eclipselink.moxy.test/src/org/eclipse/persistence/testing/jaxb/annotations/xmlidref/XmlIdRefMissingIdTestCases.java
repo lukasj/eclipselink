@@ -10,6 +10,8 @@
  * Contributors:
  *     Denise Smith - 2.4 - October 2012
  ******************************************************************************/
+// Contributors:
+//     Denise Smith - 2.4 - October 2012
 package org.eclipse.persistence.testing.jaxb.annotations.xmlidref;
 
 import javax.xml.bind.ValidationEvent;

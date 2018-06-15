@@ -11,6 +11,8 @@
  * Contributors:
  *  - rbarkhouse - 28 September 2012 - 2.4 - Initial implementation
  ******************************************************************************/
+// Contributors:
+//  - rbarkhouse - 28 September 2012 - 2.4 - Initial implementation
 package org.eclipse.persistence.testing.jaxb.xmlelements;
 
 import java.io.InputStream;

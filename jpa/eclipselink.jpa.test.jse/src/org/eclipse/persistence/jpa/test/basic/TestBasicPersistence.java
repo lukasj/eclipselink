@@ -17,6 +17,16 @@
  *     04/24/2017-2.6 Jody Grassel
  *       - 515712: ServerSession numberOfNonPooledConnectionsUsed can become invalid when Exception is thrown connecting accessor
  ******************************************************************************/
+// Contributors:
+//     11/04/2014 - Rick Curtis
+//       - 450010 : Add java se test bucket
+//     12/19/2014 - Dalia Abo Sheasha
+//       - 454917 : Added a test to use the IDENTITY strategy to generate values
+//     02/16/2017 - Jody Grassel
+//       - 512255 : Eclipselink JPA/Auditing capablity in EE Environment fails with JNDI name parameter type
+//     04/24/2017-2.6 Jody Grassel
+//       - 515712: ServerSession numberOfNonPooledConnectionsUsed can become invalid when Exception is thrown connecting accessor
+// CPR:: Copyright (c) 2014, 2017 IBM Corporation. All rights reserved.
 package org.eclipse.persistence.jpa.test.basic;
 
 import java.io.Serializable;

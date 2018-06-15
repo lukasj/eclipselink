@@ -11,6 +11,9 @@
  *     Oracle - initial API and implementation from Oracle TopLink
  *     cdelahun - Bug 214534: moved all api to JMSPublishingTransportManagerConfig
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation from Oracle TopLink
+//     cdelahun - Bug 214534: moved all api to JMSPublishingTransportManagerConfig
 package org.eclipse.persistence.internal.sessions.factories.model.transport;
 
 

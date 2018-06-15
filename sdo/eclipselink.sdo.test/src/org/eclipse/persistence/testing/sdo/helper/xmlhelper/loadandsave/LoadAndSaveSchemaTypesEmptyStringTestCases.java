@@ -10,6 +10,8 @@
  * Contributors:
  *     Denise Smith - 2.3 - initial implementation
  ******************************************************************************/
+// Contributors:
+//     Denise Smith - 2.3 - initial implementation
 package org.eclipse.persistence.testing.sdo.helper.xmlhelper.loadandsave;
 
 import java.math.BigDecimal;

@@ -11,6 +11,9 @@
  *     11/27/2010-2.2  mobrien - JPA 2.0 Metadata API test model
  *       - 300626: Nested embeddable test case coverage
  ******************************************************************************/
+// Contributors:
+//     11/27/2010-2.2  mobrien - JPA 2.0 Metadata API test model
+//       - 300626: Nested embeddable test case coverage
 package org.eclipse.persistence.testing.models.jpa.metamodel;
 
 import javax.persistence.Embeddable;

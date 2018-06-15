@@ -10,6 +10,8 @@
  * Contributors:
  *      Tomas Kraus - Initial implementation
  ******************************************************************************/
+// Contributors:
+//      Tomas Kraus - Initial implementation
 package org.eclipse.persistence.logging;
 
 import java.util.HashMap;

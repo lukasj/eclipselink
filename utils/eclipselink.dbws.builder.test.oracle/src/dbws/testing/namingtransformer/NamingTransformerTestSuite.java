@@ -10,6 +10,8 @@
  * Contributors:
   *     David McCann - June 2013 - Initial Implementation
  ******************************************************************************/
+// Contributors:
+//     David McCann - June 2013 - Initial Implementation
 package dbws.testing.namingtransformer;
 
 //javase imports

@@ -10,6 +10,8 @@
  * Contributors:
  *     tware - fix for bug 352533
  ******************************************************************************/
+// Contributors:
+//     tware - fix for bug 352533
 package org.eclipse.persistence.testing.models.jpa.cacheable;
 
 import javax.persistence.Cacheable;

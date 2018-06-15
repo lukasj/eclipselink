@@ -10,6 +10,8 @@
  * Contributors:
  *     David McCann - April 12, 2012 - 2.4 - Initial implementation
  ******************************************************************************/
+// Contributors:
+//     David McCann - April 12, 2012 - 2.4 - Initial implementation
 package dbws.testing.invalidpackage;
 
 //javase imports

@@ -18,6 +18,16 @@
  *                      to verify semi-recursive functionality surrounding the equals() to isAssignableFrom() change
  *
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation from Oracle TopLink
+//     05/13/2010-2.1 Michael O'Brien
+//       - 312503: JPA 2.0 CacheImpl behaviour change when recurse flag=false
+//                      We only invalidate the subtree from the class parameter down when the recurse flag=false
+//                      Previously only the class itself was invalidated
+//                      The behaviour when the recurse flag is true is unaffected - the entire rooted (above) tree is invalidated
+//                      Model must be extended to have subclasses of Small/LargeProject
+//                      to verify semi-recursive functionality surrounding the equals() to isAssignableFrom() change
+//
 package org.eclipse.persistence.testing.tests.identitymaps.cacheinvalidation;
 
 import java.util.Vector;

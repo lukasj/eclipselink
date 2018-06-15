@@ -10,6 +10,8 @@
 * Contributors:
 *     bdoughan - March 16/2010 - 2.0.2 - Initial implementation
 ******************************************************************************/
+// Contributors:
+//     bdoughan - March 16/2010 - 2.0.2 - Initial implementation
 package org.eclipse.persistence.testing.jaxb.schemagen.date;
 
 import java.io.File;

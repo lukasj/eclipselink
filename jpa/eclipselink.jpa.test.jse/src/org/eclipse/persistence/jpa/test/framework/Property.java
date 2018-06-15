@@ -11,6 +11,10 @@
  *     11/04/2014 - Rick Curtis
  *       - 450010 : Add java se test bucket
  ******************************************************************************/
+// Contributors:
+//     11/04/2014 - Rick Curtis
+//       - 450010 : Add java se test bucket
+// CPR:: Copyright (c) 2014, 2015 IBM Corporation. All rights reserved.
 package org.eclipse.persistence.jpa.test.framework;
 
 import java.lang.annotation.ElementType;

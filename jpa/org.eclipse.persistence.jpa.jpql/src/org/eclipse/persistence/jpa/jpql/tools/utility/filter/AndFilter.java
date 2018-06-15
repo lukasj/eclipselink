@@ -11,6 +11,9 @@
  *     Oracle - initial API and implementation
  *
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation
+//
 package org.eclipse.persistence.jpa.jpql.tools.utility.filter;
 
 import org.eclipse.persistence.jpa.jpql.utility.filter.Filter;

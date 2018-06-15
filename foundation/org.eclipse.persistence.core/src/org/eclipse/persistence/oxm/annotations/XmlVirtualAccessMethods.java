@@ -10,6 +10,8 @@
  * Contributors:
  * rbarkhouse - 2011 April 11 - 2.3 - Initial implementation
  ******************************************************************************/
+// Contributors:
+// rbarkhouse - 2011 April 11 - 2.3 - Initial implementation
 package org.eclipse.persistence.oxm.annotations;
 
 import java.lang.annotation.Retention;

@@ -10,6 +10,8 @@
  * Contributors:
  * mmacivor - May 31, 2010 - 2.1 - Initial implementation
  ******************************************************************************/
+// Contributors:
+// mmacivor - May 31, 2010 - 2.1 - Initial implementation
 package org.eclipse.persistence.testing.jaxb.xmlelementref.mixed;
 
 import java.util.ArrayList;

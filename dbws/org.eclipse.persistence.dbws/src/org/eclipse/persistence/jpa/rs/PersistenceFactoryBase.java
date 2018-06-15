@@ -12,6 +12,10 @@
  *      gonural - version based persistence context
  *      Dmitry Kornilov - JPARS 2.0 related changes
  ******************************************************************************/
+// Contributors:
+//         dclarke/tware - initial implementation
+//      gonural - version based persistence context
+//      Dmitry Kornilov - JPARS 2.0 related changes
 package org.eclipse.persistence.jpa.rs;
 
 import java.net.URI;

@@ -11,6 +11,9 @@
  *     04/30/2009-2.0 Michael O'Brien
  *       - 266912: JPA 2.0 Metamodel API (part of Criteria API)
  ******************************************************************************/
+// Contributors:
+//     04/30/2009-2.0 Michael O'Brien
+//       - 266912: JPA 2.0 Metamodel API (part of Criteria API)
 package org.eclipse.persistence.testing.tests.jpa.metamodel;
 
 

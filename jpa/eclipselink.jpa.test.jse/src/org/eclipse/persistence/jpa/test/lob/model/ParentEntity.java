@@ -11,6 +11,10 @@
  *     02/14/2018-2.7 Will Dazey
  *       - 529602: Added support for CLOBs in DELETE statements for Oracle
  ******************************************************************************/
+// Contributors:
+//     02/14/2018-2.7 Will Dazey
+//       - 529602: Added support for CLOBs in DELETE statements for Oracle
+// CPR:: Copyright (c) 2018 IBM Corporation. All rights reserved.
 package org.eclipse.persistence.jpa.test.lob.model;
 
 import java.util.Collections;

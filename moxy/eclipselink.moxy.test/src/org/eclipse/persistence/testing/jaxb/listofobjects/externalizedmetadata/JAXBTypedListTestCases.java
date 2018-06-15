@@ -10,6 +10,8 @@
  * Contributors:
  *     Denise Smith, Nov. 19, 2009
  ******************************************************************************/
+// Contributors:
+//     Denise Smith, Nov. 19, 2009
 package org.eclipse.persistence.testing.jaxb.listofobjects.externalizedmetadata;
 
 import java.io.ByteArrayInputStream;

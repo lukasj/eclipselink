@@ -14,6 +14,12 @@
  *     04/30/2015 - Will Dazey
  *       - 465063 : Added National Character support for DB2 on I
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation from Oracle TopLink
+//     Nov 5, 2013-2.5 Chris Delahunt
+//       - 421109: DB2 AS400 doesn't support "USE AND KEEP UPDATE LOCKS" used for pessimistic locking
+//     04/30/2015 - Will Dazey
+//       - 465063 : Added National Character support for DB2 on I
 package org.eclipse.persistence.platform.database;
 
 import java.util.Hashtable;

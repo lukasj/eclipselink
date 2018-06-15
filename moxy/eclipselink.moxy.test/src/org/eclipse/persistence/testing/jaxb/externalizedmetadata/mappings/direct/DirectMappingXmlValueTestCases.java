@@ -10,6 +10,8 @@
  * Contributors:
  * dmccann - January 28/2010 - 2.1 - Initial implementation
  ******************************************************************************/
+// Contributors:
+// dmccann - January 28/2010 - 2.1 - Initial implementation
 package org.eclipse.persistence.testing.jaxb.externalizedmetadata.mappings.direct;
 
 import java.io.InputStream;

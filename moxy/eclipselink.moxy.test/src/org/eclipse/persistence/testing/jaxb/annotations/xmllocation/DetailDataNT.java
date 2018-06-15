@@ -11,6 +11,8 @@
  * Contributors:
  *  - rbarkhouse - 19 October 2011 - 2.4 - Initial implementation
  ******************************************************************************/
+// Contributors:
+//  - rbarkhouse - 19 October 2011 - 2.4 - Initial implementation
 package org.eclipse.persistence.testing.jaxb.annotations.xmllocation;
 
 import javax.xml.bind.annotation.XmlElement;

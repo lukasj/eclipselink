@@ -10,6 +10,8 @@
  * Contributors:
  * Oracle = 2.2 - Initial implementation
  ******************************************************************************/
+// Contributors:
+// Oracle = 2.2 - Initial implementation
 package org.eclipse.persistence.testing.sdo.helper.xmlhelper.loadandsave;
 
 import junit.framework.Test;

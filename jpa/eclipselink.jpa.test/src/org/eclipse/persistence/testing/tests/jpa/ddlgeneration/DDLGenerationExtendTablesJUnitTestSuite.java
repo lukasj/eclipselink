@@ -11,6 +11,9 @@
  *     02/01/2012-2.4 Chris Delahunt
  *       - 368365: add DDL support to alter existing tables to add missing fields
  ******************************************************************************/
+// Contributors:
+//     02/01/2012-2.4 Chris Delahunt
+//       - 368365: add DDL support to alter existing tables to add missing fields
 package org.eclipse.persistence.testing.tests.jpa.ddlgeneration;
 
 import java.util.ArrayList;

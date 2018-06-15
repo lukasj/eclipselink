@@ -10,6 +10,8 @@
  * Contributors:
  *     Guy Pelletier, Doug Clarke - initial API and implementation
  ******************************************************************************/
+// Contributors:
+//     Guy Pelletier, Doug Clarke - initial API and implementation
 package org.eclipse.persistence.jpa.config;
 
 /**

@@ -10,6 +10,8 @@
 * Contributors:
 *     bdoughan - June 24/2009 - 2.0 - Initial implementation
 ******************************************************************************/
+// Contributors:
+//     bdoughan - June 24/2009 - 2.0 - Initial implementation
 package org.eclipse.persistence.internal.oxm.record;
 
 import javax.xml.stream.XMLStreamReader;

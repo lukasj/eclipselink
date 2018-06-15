@@ -10,6 +10,8 @@
  * Contributors:
  * rbarkhouse - 2011 March 21 - 2.3 - Initial implementation
  ******************************************************************************/
+// Contributors:
+// rbarkhouse - 2011 March 21 - 2.3 - Initial implementation
 package org.eclipse.persistence.testing.jaxb.jaxbcontext;
 
 import java.util.HashMap;

@@ -11,6 +11,9 @@
      *     08/15/2008-1.0.1 Chris Delahunt
      *       - 237545: List attribute types on OneToMany using @OrderBy does not work with attribute change tracking
      ******************************************************************************/
+// Contributors:
+//     08/15/2008-1.0.1 Chris Delahunt
+//       - 237545: List attribute types on OneToMany using @OrderBy does not work with attribute change tracking
 
 package org.eclipse.persistence.testing.models.employee.domain;
 

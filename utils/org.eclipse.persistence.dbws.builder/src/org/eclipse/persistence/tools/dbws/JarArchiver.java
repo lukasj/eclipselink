@@ -10,6 +10,8 @@
  * Contributors:
  *     Mike Norman - May 06 2008, created DBWS tools package
  ******************************************************************************/
+// Contributors:
+//     Mike Norman - May 06 2008, created DBWS tools package
 
 package org.eclipse.persistence.tools.dbws;
 

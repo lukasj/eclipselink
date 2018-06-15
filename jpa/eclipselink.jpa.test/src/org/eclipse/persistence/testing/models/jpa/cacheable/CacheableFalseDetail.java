@@ -11,6 +11,9 @@
  *     10/15/2010-2.1.2 ailitchev
  *            - 327940: @OrderColumn does not work when list read in through uow
  ******************************************************************************/
+// Contributors:
+//     10/15/2010-2.1.2 ailitchev
+//            - 327940: @OrderColumn does not work when list read in through uow
 package org.eclipse.persistence.testing.models.jpa.cacheable;
 
 import static javax.persistence.GenerationType.TABLE;

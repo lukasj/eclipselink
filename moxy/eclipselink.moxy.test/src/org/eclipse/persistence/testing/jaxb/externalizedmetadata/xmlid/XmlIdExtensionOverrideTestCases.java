@@ -10,6 +10,8 @@
  * Contributors:
  * Martin Vojtek - October 11/2014 - 2.6 - Initial implementation
  ******************************************************************************/
+// Contributors:
+// Martin Vojtek - October 11/2014 - 2.6 - Initial implementation
 package org.eclipse.persistence.testing.jaxb.externalizedmetadata.xmlid;
 
 import java.io.InputStream;

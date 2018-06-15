@@ -10,6 +10,8 @@
  * Contributors:
  *     rbarkhouse - 2.3.3 - initial implementation
  ******************************************************************************/
+// Contributors:
+//     rbarkhouse - 2.3.3 - initial implementation
 @XmlSchema(
     elementFormDefault=XmlNsForm.QUALIFIED,
     namespace="http://www.example.com/FOO",

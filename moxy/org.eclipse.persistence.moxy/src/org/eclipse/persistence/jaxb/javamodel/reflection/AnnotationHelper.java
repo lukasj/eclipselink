@@ -10,6 +10,8 @@
  * Contributors:
  * Matt MacIvor = 2.1 - Initial contribution
  ******************************************************************************/
+// Contributors:
+// Matt MacIvor = 2.1 - Initial contribution
 package org.eclipse.persistence.jaxb.javamodel.reflection;
 
 import java.lang.annotation.Annotation;

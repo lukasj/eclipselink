@@ -11,6 +11,9 @@
  *     20/11/2012-2.5 Guy Pelletier
  *       - 394524: Invalid query key [...] in expression
  ******************************************************************************/
+// Contributors:
+//     20/11/2012-2.5 Guy Pelletier
+//       - 394524: Invalid query key [...] in expression
 package org.eclipse.persistence.testing.models.jpa.advanced.multitenant;
 
 import static org.eclipse.persistence.annotations.MultitenantType.TABLE_PER_TENANT;

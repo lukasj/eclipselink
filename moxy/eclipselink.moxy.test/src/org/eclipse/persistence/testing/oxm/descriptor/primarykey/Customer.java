@@ -10,6 +10,8 @@
  * Contributors:
  *     rbarkhouse - 2009-09-28 11:27:00 - initial implementation
  ******************************************************************************/
+// Contributors:
+//     rbarkhouse - 2009-09-28 11:27:00 - initial implementation
 package org.eclipse.persistence.testing.oxm.descriptor.primarykey;
 
 public class Customer  {

@@ -10,6 +10,8 @@
  * Contributors:
  *      Dmitry Kornilov - initial implementation
  ******************************************************************************/
+// Contributors:
+//      Dmitry Kornilov - initial implementation
 package org.eclipse.persistence.jpars.test.util;
 
 import org.eclipse.persistence.jpa.rs.PersistenceContext;

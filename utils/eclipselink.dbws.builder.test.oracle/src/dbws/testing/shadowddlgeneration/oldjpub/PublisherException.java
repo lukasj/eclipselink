@@ -10,6 +10,8 @@
  * Contributors:
  *     Mike Norman - from Proof-of-concept, become production code
  ******************************************************************************/
+// Contributors:
+//     Mike Norman - from Proof-of-concept, become production code
 package dbws.testing.shadowddlgeneration.oldjpub;
 
 @SuppressWarnings("serial")

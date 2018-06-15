@@ -10,6 +10,8 @@
  * Contributors:
  *     mmacivor November 17/2009 - 2.0 - Initial implementation
  ******************************************************************************/
+// Contributors:
+//     mmacivor November 17/2009 - 2.0 - Initial implementation
 package org.eclipse.persistence.jaxb;
 
 import java.lang.annotation.Annotation;

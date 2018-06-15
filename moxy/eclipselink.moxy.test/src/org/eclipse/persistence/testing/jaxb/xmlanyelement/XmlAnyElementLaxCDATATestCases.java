@@ -11,6 +11,9 @@
  *     05/24/2018-2.7.2 Radek Felcman
  *       - 534812 - HIERARCHY_REQUEST_ERR marshalling a CDATA-containing XmlAnyElement to a Node result
  *******************************************************************************/
+// Contributors:
+//     05/24/2018-2.7.2 Radek Felcman
+//       - 534812 - HIERARCHY_REQUEST_ERR marshalling a CDATA-containing XmlAnyElement to a Node result
 package org.eclipse.persistence.testing.jaxb.xmlanyelement;
 
 import org.eclipse.persistence.testing.jaxb.JAXBTestCases;

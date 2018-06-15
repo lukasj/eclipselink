@@ -14,6 +14,12 @@
  *       - 413120: Nested Embeddable Null pointer
  *       - 496836: NullPointerException on ObjectChangeSet.mergeObjectChanges
  ******************************************************************************/
+// Contributors:
+//     07/07/2014-2.6 Tomas Kraus
+//       - 439127: Create sample instances for EntityEmbeddableTest jUnit test.
+//     03/19/2018-2.7.2 Lukas Jungmann
+//       - 413120: Nested Embeddable Null pointer
+//       - 496836: NullPointerException on ObjectChangeSet.mergeObjectChanges
 package org.eclipse.persistence.testing.models.jpa.advanced.embeddable;
 
 /**

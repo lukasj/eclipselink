@@ -10,6 +10,8 @@
  * Contributors:
  *     David McCann - February 09, 2012 - 2.4 - Initial implementation
  ******************************************************************************/
+// Contributors:
+//     David McCann - February 09, 2012 - 2.4 - Initial implementation
 package dbws.testing.optionalarguments;
 
 import static org.junit.Assert.assertNotNull;

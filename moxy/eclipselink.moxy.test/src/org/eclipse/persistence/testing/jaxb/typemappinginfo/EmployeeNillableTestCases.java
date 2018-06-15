@@ -10,6 +10,8 @@
  * Contributors:
  *     Denise Smith  November 2011 - 2.3
  ******************************************************************************/
+// Contributors:
+//     Denise Smith  November 2011 - 2.3
 package org.eclipse.persistence.testing.jaxb.typemappinginfo;
 
 import javax.xml.bind.JAXBElement;

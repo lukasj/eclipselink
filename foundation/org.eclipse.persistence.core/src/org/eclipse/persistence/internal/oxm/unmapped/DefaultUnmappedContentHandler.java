@@ -10,6 +10,8 @@
  * Contributors:
  *     Denise Smith - 2.5 - initial implementation
  ******************************************************************************/
+// Contributors:
+//     Denise Smith - 2.5 - initial implementation
 package org.eclipse.persistence.internal.oxm.unmapped;
 
 import org.eclipse.persistence.internal.oxm.record.UnmarshalRecord;

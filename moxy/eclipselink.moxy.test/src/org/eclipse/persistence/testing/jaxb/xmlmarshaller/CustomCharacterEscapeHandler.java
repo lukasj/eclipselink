@@ -11,6 +11,8 @@
  * Contributors:
  *  - rbarkhouse - 07 February 2012 - 2.3.3 - Initial implementation
  ******************************************************************************/
+// Contributors:
+//  - rbarkhouse - 07 February 2012 - 2.3.3 - Initial implementation
 package org.eclipse.persistence.testing.jaxb.xmlmarshaller;
 
 import java.io.IOException;

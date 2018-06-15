@@ -10,6 +10,8 @@
  * Contributors:
  *     David McCann - June 25, 2012 - 2.4.1 - Initial implementation
  ******************************************************************************/
+// Contributors:
+//     David McCann - June 25, 2012 - 2.4.1 - Initial implementation
 package dbws.testing.blobtype;
 
 import static org.junit.Assert.assertEquals;

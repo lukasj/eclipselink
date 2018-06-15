@@ -10,6 +10,8 @@
  * Contributors:
  *     mmacivor - 2010-03-09 - initial implementation
  ******************************************************************************/
+// Contributors:
+//     mmacivor - 2010-03-09 - initial implementation
 package org.eclipse.persistence.testing.jaxb.xmlelementref.duplicatename;
 
 import javax.xml.bind.JAXBElement;

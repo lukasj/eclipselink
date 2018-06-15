@@ -10,6 +10,8 @@
  * Contributors:
  *     Blaise Doughan - 2.4 - initial implementation
  ******************************************************************************/
+// Contributors:
+//     Blaise Doughan - 2.4 - initial implementation
 package org.eclipse.persistence.oxm.record;
 
 import java.io.IOException;

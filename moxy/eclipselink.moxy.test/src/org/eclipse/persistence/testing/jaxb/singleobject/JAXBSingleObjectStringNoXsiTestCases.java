@@ -10,6 +10,8 @@
  * Contributors:
  *     Denise Smith -  July 9, 2009 Initial test
  ******************************************************************************/
+// Contributors:
+//     Denise Smith -  July 9, 2009 Initial test
 package org.eclipse.persistence.testing.jaxb.singleobject;
 
 import java.io.InputStream;

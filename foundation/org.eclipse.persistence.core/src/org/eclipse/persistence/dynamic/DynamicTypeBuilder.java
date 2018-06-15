@@ -15,6 +15,13 @@
  *     11/10/2011-2.4 Guy Pelletier
  *       - 357474: Address primaryKey option from tenant discriminator column
  ******************************************************************************/
+// Contributors:
+//     dclarke, mnorman - Dynamic Persistence
+//       http://wiki.eclipse.org/EclipseLink/Development/Dynamic
+//       (https://bugs.eclipse.org/bugs/show_bug.cgi?id=200045)
+//
+//     11/10/2011-2.4 Guy Pelletier
+//       - 357474: Address primaryKey option from tenant discriminator column
 package org.eclipse.persistence.dynamic;
 
 //javase imports

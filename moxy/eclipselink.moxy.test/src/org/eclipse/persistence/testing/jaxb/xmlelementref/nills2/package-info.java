@@ -10,6 +10,8 @@
  * Contributors:
  *     Oracle - initial API and implementation from Oracle TopLink
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation from Oracle TopLink
 
 @XmlSchema(
   namespace = "NS", elementFormDefault = XmlNsForm.QUALIFIED,

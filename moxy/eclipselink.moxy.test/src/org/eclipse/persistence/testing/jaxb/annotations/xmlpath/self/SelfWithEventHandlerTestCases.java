@@ -10,6 +10,8 @@
  * Contributors:
  *    Denise Smith - May 2012
  ******************************************************************************/
+// Contributors:
+//    Denise Smith - May 2012
 package org.eclipse.persistence.testing.jaxb.annotations.xmlpath.self;
 
 public class SelfWithEventHandlerTestCases extends SelfTestCases {

@@ -10,6 +10,8 @@
 * Contributors:
 *     bdoughan - August 11/2009 - 2.0 - Initial implementation
 ******************************************************************************/
+// Contributors:
+//     bdoughan - August 11/2009 - 2.0 - Initial implementation
 package org.eclipse.persistence.testing.oxm.xmlmarshaller.stax;
 
 public class Address {

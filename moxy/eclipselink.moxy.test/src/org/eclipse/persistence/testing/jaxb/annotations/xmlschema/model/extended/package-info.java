@@ -10,6 +10,8 @@
 * Contributors:
 *     Ondrej Cerny
 ******************************************************************************/
+// Contributors:
+//     Ondrej Cerny
 @javax.xml.bind.annotation.XmlSchema(namespace = "http://www.example.org/extended",
                                      elementFormDefault = javax.xml.bind.annotation.XmlNsForm.QUALIFIED)
 package org.eclipse.persistence.testing.jaxb.annotations.xmlschema.model.extended;

@@ -11,6 +11,9 @@
  *     Oracle - initial API and implementation from Oracle TopLink
  *     Marcel Valovy - major speed up, major refurbishing.
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation from Oracle TopLink
+//     Marcel Valovy - major speed up, major refurbishing.
 package org.eclipse.persistence.internal.oxm;
 
 import java.util.ArrayList;

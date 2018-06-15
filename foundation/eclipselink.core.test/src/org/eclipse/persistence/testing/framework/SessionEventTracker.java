@@ -10,6 +10,8 @@
  * Contributors:
  *     July 13, 2011 - Andrei Ilitchev (Oracle) - initial API and implementation
  ******************************************************************************/
+// Contributors:
+//     July 13, 2011 - Andrei Ilitchev (Oracle) - initial API and implementation
 package org.eclipse.persistence.testing.framework;
 
 import java.util.ArrayList;

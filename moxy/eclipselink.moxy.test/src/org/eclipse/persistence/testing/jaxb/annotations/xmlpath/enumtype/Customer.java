@@ -10,6 +10,8 @@
  * Contributors:
  *     Blaise Doughan - 2.3 - Initial implementation
  ******************************************************************************/
+// Contributors:
+//     Blaise Doughan - 2.3 - Initial implementation
 package org.eclipse.persistence.testing.jaxb.annotations.xmlpath.enumtype;
 
 import javax.xml.bind.annotation.XmlAccessorType;

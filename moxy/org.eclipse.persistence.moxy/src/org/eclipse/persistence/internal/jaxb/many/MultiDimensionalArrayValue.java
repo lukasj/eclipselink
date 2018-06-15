@@ -10,6 +10,8 @@
 * Contributors:
 *     Blaise Doughan = 2.1 - Initial contribution
 ******************************************************************************/
+// Contributors:
+//     Blaise Doughan = 2.1 - Initial contribution
 package org.eclipse.persistence.internal.jaxb.many;
 
 import java.lang.reflect.Array;

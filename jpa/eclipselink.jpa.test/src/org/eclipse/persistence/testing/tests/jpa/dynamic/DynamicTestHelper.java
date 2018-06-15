@@ -17,6 +17,15 @@
  *     01/08/2012-2.5 Guy Pelletier
  *       - 389090: JPA 2.1 DDL Generation Support
  ******************************************************************************/
+// Contributors:
+//     dclarke - Dynamic Persistence
+//       http://wiki.eclipse.org/EclipseLink/Development/Dynamic
+//       (https://bugs.eclipse.org/bugs/show_bug.cgi?id=200045)
+//     mnorman - tweaks to work from Ant command-line,
+//               get database properties from System, etc.
+//
+//     01/08/2012-2.5 Guy Pelletier
+//       - 389090: JPA 2.1 DDL Generation Support
 package org.eclipse.persistence.testing.tests.jpa.dynamic;
 
 //javase imports

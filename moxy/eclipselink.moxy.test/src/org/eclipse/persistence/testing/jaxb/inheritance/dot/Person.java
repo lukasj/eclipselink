@@ -10,6 +10,8 @@
  * Contributors:
  *     Denise Smith - September 2013
  ******************************************************************************/
+// Contributors:
+//     Denise Smith - September 2013
 package org.eclipse.persistence.testing.jaxb.inheritance.dot;
 
 import javax.xml.bind.annotation.XmlRootElement;

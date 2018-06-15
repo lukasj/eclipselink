@@ -10,6 +10,8 @@
 * Contributors:
 * dmccann - Mar 2/2009 - 2.0 - Initial implementation
 ******************************************************************************/
+// Contributors:
+// dmccann - Mar 2/2009 - 2.0 - Initial implementation
 package org.eclipse.persistence.testing.oxm.schemamodelgenerator;
 
 import java.io.BufferedReader;

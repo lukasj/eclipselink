@@ -14,6 +14,12 @@
  *     dclarke - Bug 387240: added field and method calls to allow extensibility
  *
  ******************************************************************************/
+// Contributors:
+//     dclarke, mnorman - Dynamic Persistence
+//       http://wiki.eclipse.org/EclipseLink/Development/Dynamic
+//       (https://bugs.eclipse.org/bugs/show_bug.cgi?id=200045)
+//     dclarke - Bug 387240: added field and method calls to allow extensibility
+//
 package org.eclipse.persistence.dynamic;
 
 //javase imports

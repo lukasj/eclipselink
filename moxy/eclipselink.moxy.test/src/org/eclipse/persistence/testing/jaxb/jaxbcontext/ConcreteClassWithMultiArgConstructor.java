@@ -10,6 +10,8 @@
  * Contributors:
  *     Blaise Doughan - 2.2 - Initial implementation
  ******************************************************************************/
+// Contributors:
+//     Blaise Doughan - 2.2 - Initial implementation
 package org.eclipse.persistence.testing.jaxb.jaxbcontext;
 
 public class ConcreteClassWithMultiArgConstructor {

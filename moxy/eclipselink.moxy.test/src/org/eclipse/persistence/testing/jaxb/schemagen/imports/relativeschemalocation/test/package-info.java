@@ -10,6 +10,8 @@
  * Contributors:
  * dmccann - 2.3 - Initial implementation
  ******************************************************************************/
+// Contributors:
+// dmccann - 2.3 - Initial implementation
 @XmlSchema(namespace="http://test.org",
     xmlns={
         @XmlNs(namespaceURI="http://test.org", prefix="t"),

@@ -10,6 +10,8 @@
  * Contributors:
  *     tware - extension to allow ArchiveFactories to be pluggable
  ******************************************************************************/
+// Contributors:
+//     tware - extension to allow ArchiveFactories to be pluggable
 package org.eclipse.persistence.jpa;
 
 import java.io.IOException;

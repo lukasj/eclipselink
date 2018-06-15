@@ -10,6 +10,8 @@
  * Contributors:
  *     Denise Smith - 2.3.3
  ******************************************************************************/
+// Contributors:
+//     Denise Smith - 2.3.3
 package org.eclipse.persistence.internal.oxm.record.namespaces;
 
 import java.util.Map;

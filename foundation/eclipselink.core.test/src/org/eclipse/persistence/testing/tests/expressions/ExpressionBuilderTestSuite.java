@@ -10,6 +10,8 @@
  * Contributors:
  *     Tomas Kraus - Initial API and implementation.
  ******************************************************************************/
+// Contributors:
+//     Tomas Kraus - Initial API and implementation.
 package org.eclipse.persistence.testing.tests.expressions;
 
 import org.eclipse.persistence.expressions.ExpressionBuilder;

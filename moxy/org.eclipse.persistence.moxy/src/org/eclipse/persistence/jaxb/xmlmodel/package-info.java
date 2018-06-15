@@ -10,5 +10,7 @@
  * Contributors:
  * dmccann - June 29/2009 - 2.0 - Initial implementation
  ******************************************************************************/
+// Contributors:
+// dmccann - June 29/2009 - 2.0 - Initial implementation
 @javax.xml.bind.annotation.XmlSchema(namespace = "http://www.eclipse.org/eclipselink/xsds/persistence/oxm", elementFormDefault = javax.xml.bind.annotation.XmlNsForm.QUALIFIED)
 package org.eclipse.persistence.jaxb.xmlmodel;

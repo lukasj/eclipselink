@@ -11,6 +11,9 @@
  *     05/1/2009-2.0 Guy Pelletier/David Minsky
  *       - 249033: JPA 2.0 Orphan removal
  ******************************************************************************/
+// Contributors:
+//     05/1/2009-2.0 Guy Pelletier/David Minsky
+//       - 249033: JPA 2.0 Orphan removal
 package org.eclipse.persistence.testing.models.jpa.orphanremoval;
 
 import java.util.ArrayList;

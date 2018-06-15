@@ -14,6 +14,13 @@
  *     09/24/2014-2.6 Rick Curtis
  *       - 443762 : Misc message cleanup.
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation from Oracle TopLink
+//     10/15/2010-2.2 Guy Pelletier
+//       - 322008: Improve usability of additional criteria applied to queries at the session/EM
+//     09/24/2014-2.6 Rick Curtis
+//       - 443762 : Misc message cleanup.
+// CPR:: Copyright (c) 1998, 2018 Oracle, IBM Corporation and/or its affiliates. All rights reserved.
 package org.eclipse.persistence.exceptions.i18n;
 
 import java.util.ListResourceBundle;

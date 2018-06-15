@@ -10,6 +10,8 @@
  * Contributors:
  * Denise Smith - September 22 /2009
  ******************************************************************************/
+// Contributors:
+// Denise Smith - September 22 /2009
 package org.eclipse.persistence.testing.oxm.mappings.directtofield.converter;
 
 public class Employee

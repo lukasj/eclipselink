@@ -10,6 +10,8 @@
  * Contributors:
  *   mnorman - May 15/2008 - 1.x - Initial implementation
  ******************************************************************************/
+// Contributors:
+//   mnorman - May 15/2008 - 1.x - Initial implementation
 package org.eclipse.persistence.internal.xr;
 
 // javase imports

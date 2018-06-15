@@ -10,6 +10,8 @@
  * Contributors:
  *     03/04/09 dminsky - initial API and implementation
  ******************************************************************************/
+// Contributors:
+//     03/04/09 dminsky - initial API and implementation
 package org.eclipse.persistence.testing.tests.jpa.privateowned;
 
 import java.util.Iterator;

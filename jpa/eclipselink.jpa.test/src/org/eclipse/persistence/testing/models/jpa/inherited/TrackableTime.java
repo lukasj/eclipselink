@@ -13,6 +13,11 @@
  *     04/04/2012-2.3.3 Guy Pelletier
  *       - 362180: ConcurrentModificationException on predeploy for AttributeOverride
  ******************************************************************************/
+// Contributors:
+//     09/16/2010-2.2 Guy Pelletier
+//       - 283028: Add support for letting an @Embeddable extend a @MappedSuperclass
+//     04/04/2012-2.3.3 Guy Pelletier
+//       - 362180: ConcurrentModificationException on predeploy for AttributeOverride
 package org.eclipse.persistence.testing.models.jpa.inherited;
 
 import javax.persistence.Column;

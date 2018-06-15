@@ -10,6 +10,8 @@
  * Contributors:
  *     tware - added as part of JPQL extensions for JPA 2.0
  ******************************************************************************/
+// Contributors:
+//     tware - added as part of JPQL extensions for JPA 2.0
 package org.eclipse.persistence.internal.expressions;
 
 import org.eclipse.persistence.expressions.Expression;

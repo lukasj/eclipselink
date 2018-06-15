@@ -10,6 +10,8 @@
  * Contributors:
  * Matt MacIvor - July 2011
  ******************************************************************************/
+// Contributors:
+// Matt MacIvor - July 2011
 package org.eclipse.persistence.testing.jaxb.schemagen.imports.url;
 
 import java.io.IOException;

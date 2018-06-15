@@ -10,6 +10,8 @@
  * Contributors:
  *      tware - initial implementation
  ******************************************************************************/
+// Contributors:
+//      tware - initial implementation
 package org.eclipse.persistence.jpa.rs.eventlistener;
 
 import java.util.Map;

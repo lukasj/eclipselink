@@ -10,6 +10,8 @@
  * Contributors:
  *     Oracle = 2.2 - Initial contribution
  ******************************************************************************/
+// Contributors:
+//     Oracle = 2.2 - Initial contribution
 package org.eclipse.persistence.oxm.annotations;
 
 import static java.lang.annotation.ElementType.FIELD;

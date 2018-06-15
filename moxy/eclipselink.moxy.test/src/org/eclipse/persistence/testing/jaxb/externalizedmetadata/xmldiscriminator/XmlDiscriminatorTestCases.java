@@ -10,6 +10,8 @@
  * Contributors:
  * dmccann - August 24/2009 - 2.2 - Initial implementation
  ******************************************************************************/
+// Contributors:
+// dmccann - August 24/2009 - 2.2 - Initial implementation
 package org.eclipse.persistence.testing.jaxb.externalizedmetadata.xmldiscriminator;
 
 import java.io.InputStream;

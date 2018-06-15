@@ -10,6 +10,8 @@
  * Contributors:
  * dmccann - Novemner 11/2010 - 2.2 - Initial implementation
  ******************************************************************************/
+// Contributors:
+// dmccann - Novemner 11/2010 - 2.2 - Initial implementation
 package org.eclipse.persistence.testing.jaxb.externalizedmetadata.jaxbcontextfactory.bindingformat.file;
 
 public class Foo {

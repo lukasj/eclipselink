@@ -10,5 +10,7 @@
  * Contributors:
  * Martin Vojtek - July 7/2014
  ******************************************************************************/
+// Contributors:
+// Martin Vojtek - July 7/2014
 @org.eclipse.persistence.oxm.annotations.XmlNullPolicy(nullRepresentationForXml = org.eclipse.persistence.oxm.annotations.XmlMarshalNullRepresentation.EMPTY_NODE)
 package org.eclipse.persistence.testing.jaxb.annotations.xmlnullpolicy.typeleveloverride;

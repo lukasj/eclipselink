@@ -10,6 +10,8 @@
  * Contributors:
  *     Oracle - initial API and implementation from Oracle TopLink
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation from Oracle TopLink
 
 /* $Header: BinaryDataIdentifiedByNameNullNSRTestCases.java 20-oct-2006.16:41:18 mfobrien Exp $ */
 /*

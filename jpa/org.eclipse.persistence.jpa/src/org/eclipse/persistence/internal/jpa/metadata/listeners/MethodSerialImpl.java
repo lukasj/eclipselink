@@ -12,6 +12,10 @@
  *     08/01/2012-2.5 Chris Delahunt
  *       - 371950: Metadata caching
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation
+//     08/01/2012-2.5 Chris Delahunt
+//       - 371950: Metadata caching
 package org.eclipse.persistence.internal.jpa.metadata.listeners;
 
 import java.io.Serializable;

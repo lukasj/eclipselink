@@ -10,6 +10,8 @@
  * Contributors:
  *     dminsky - initial implementation
  ******************************************************************************/
+// Contributors:
+//     dminsky - initial implementation
 package org.eclipse.persistence.testing.sdo.helper.xsdhelper.define;
 
 import java.io.FileInputStream;

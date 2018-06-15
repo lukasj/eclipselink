@@ -10,6 +10,8 @@
  * Contributors:
  *    Denise Smith - February 20, 2013
  ******************************************************************************/
+// Contributors:
+//    Denise Smith - February 20, 2013
 package org.eclipse.persistence.testing.jaxb.xmlschematype;
 
 import java.math.BigInteger;

@@ -10,6 +10,8 @@
  * Contributors:
  *     Oracle - initial API and implementation.
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation.
 package org.eclipse.persistence.testing.models.jpa.advanced.cascadepersist;
 
 import org.eclipse.persistence.tools.schemaframework.*;

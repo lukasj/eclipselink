@@ -13,6 +13,11 @@
  *     09/16/2010-2.2 Guy Pelletier
  *       - 283028: Add support for letting an @Embeddable extend a @MappedSuperclass
  ******************************************************************************/
+// Contributors:
+//     06/02/2009-2.0 Guy Pelletier
+//       - 278768: JPA 2.0 Association Override Join Table
+//     09/16/2010-2.2 Guy Pelletier
+//       - 283028: Add support for letting an @Embeddable extend a @MappedSuperclass
 package org.eclipse.persistence.testing.models.jpa.inherited;
 
 import static javax.persistence.GenerationType.TABLE;

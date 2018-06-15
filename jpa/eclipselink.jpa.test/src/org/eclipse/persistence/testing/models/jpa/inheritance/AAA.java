@@ -12,6 +12,10 @@
  *     01/26/2011-2.3 Guy Pelletier
  *       - 307664:  Lifecycle callbacks not called for object from IndirectSet
  ******************************************************************************/
+// Contributors:
+//     Oracle - initial API and implementation from Oracle TopLink
+//     01/26/2011-2.3 Guy Pelletier
+//       - 307664:  Lifecycle callbacks not called for object from IndirectSet
 package org.eclipse.persistence.testing.models.jpa.inheritance;
 
 import java.util.HashSet;
