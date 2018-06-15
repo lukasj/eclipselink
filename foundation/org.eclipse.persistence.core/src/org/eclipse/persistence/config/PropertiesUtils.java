@@ -1,4 +1,6 @@
 /*
+ * Copyright (c) 2015, 2018 Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 2015 IBM Corporation. All rights reserved.
  *
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Public License 2.0 which is available at
@@ -14,7 +16,6 @@
 //       - 461607: PropertiesUtils does not process methods with String parameters correctly.
 //     05/06/2015-2.7.0 Rick Curtis
 //       - 466626: Fix bug in getMethods() when Java 2 security is enabled.
-// CPR:: Copyright (c)2015 IBM Corporation. All rights reserved.
 package org.eclipse.persistence.config;
 
 import java.lang.reflect.Method;

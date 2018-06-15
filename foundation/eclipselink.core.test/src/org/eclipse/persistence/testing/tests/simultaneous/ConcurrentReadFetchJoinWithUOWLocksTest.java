@@ -1,4 +1,5 @@
 /*
+ * Copyright (c) 2010, 2018 Oracle and/or its affiliates. All rights reserved.
  *
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Public License 2.0 which is available at
@@ -9,7 +10,6 @@
 
 // Contributors:
 //     Chris Delahunt  = 2.2 - 331921: deadlock with uow commit and query using joins
-// CPR:: Copyright (c) 2010, 2015 <Company/individual>. All rights reserved.
 package org.eclipse.persistence.testing.tests.simultaneous;
 
 import java.math.BigDecimal;
