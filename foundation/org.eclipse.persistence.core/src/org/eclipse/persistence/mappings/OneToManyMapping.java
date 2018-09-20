@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 1998, 2014 Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 1998, 2018 Oracle and/or its affiliates. All rights reserved.
  * This program and the accompanying materials are made available under the 
  * terms of the Eclipse Public License v1.0 and Eclipse Distribution License v. 1.0 
  * which accompanies this distribution. 
@@ -11,7 +11,9 @@
  *     Oracle - initial API and implementation from Oracle TopLink
  *     07/19/2011-2.2.1 Guy Pelletier 
  *       - 338812: ManyToMany mapping in aggregate object violate integrity constraint on deletion
- ******************************************************************************/  
+ *     09/12/2018 - Will Dazey
+ *       - 391279: Add support for Unidirectional OneToMany mappings with non-nullable values
+ ******************************************************************************/
 package org.eclipse.persistence.mappings;
 
 import java.util.*;
@@ -931,7 +933,7 @@ public class OneToManyMapping extends CollectionMapping implements RelationalMap
     public void performDataModificationEvent(Object[] event, AbstractSession session) throws DatabaseException, DescriptorException {
         // Hey I might actually want to use an inner class here... ok array for now.
         if (event[0] == PostInsert) {
-            updateTargetRowPostInsertSource((WriteObjectQuery)event[1]);
+            updateTargetRowPostInsertSource((WriteObjectQuery)event[1], event[2]);
         } else if (event[0] == ObjectRemoved) {
             updateTargetForeignKeyPostUpdateSource_ObjectRemoved((WriteObjectQuery)event[1], event[2]);
         } else if (event[0] == ObjectAdded) {
@@ -984,15 +986,28 @@ public class OneToManyMapping extends CollectionMapping implements RelationalMap
             // only cascade dependents in UOW
             if (query.shouldCascadeOnlyDependentParts()) {
                 if (!isReadOnly() && (requiresDataModificationEvents() || containerPolicy.shouldUpdateForeignKeysPostInsert())) {
-                    // Hey I might actually want to use an inner class here... ok array for now.
-                    Object[] event = new Object[2];
-                    event[0] = PostInsert;
-                    event[1] = query;
-                    query.getSession().getCommitManager().addDataModificationEvent(this, event);
+                    ContainerPolicy cp = getContainerPolicy();
+                    Object objects = getRealCollectionAttributeValueFromObject(query.getObject(), query.getSession());
+                    for (Object iter = cp.iteratorFor(objects); cp.hasNext(iter);) {
+                        Object wrappedObject = cp.nextEntry(iter, query.getSession());
+                        Object object = cp.unwrapIteratorResult(wrappedObject);
+                        // Hey I might actually want to use an inner class here... ok array for now.
+                        Object[] event = new Object[3];
+                        event[0] = PostInsert;
+                        event[1] = query;
+                        event[2] = object;
+                        query.getSession().getCommitManager().addDataModificationEvent(this, event);
+                    }
                 }
             } else {
                 if (!isReadOnly() && (requiresDataModificationEvents() || containerPolicy.shouldUpdateForeignKeysPostInsert())){
-                    updateTargetRowPostInsertSource(query);
+                    ContainerPolicy cp = getContainerPolicy();
+                    Object objects = getRealCollectionAttributeValueFromObject(query.getObject(), query.getSession());
+                    for (Object iter = cp.iteratorFor(objects); cp.hasNext(iter);) {
+                        Object wrappedObject = cp.nextEntry(iter, query.getSession());
+                        Object object = cp.unwrapIteratorResult(wrappedObject);
+                        updateTargetRowPostInsertSource(query, object);
+                    }
                 }
             }
         }
@@ -1392,40 +1407,32 @@ public class OneToManyMapping extends CollectionMapping implements RelationalMap
      * INTERNAL:
      * Update target foreign keys after a new source was inserted. This follows following steps.
      */
-    public void updateTargetRowPostInsertSource(WriteObjectQuery query) throws DatabaseException {
+    public void updateTargetRowPostInsertSource(WriteObjectQuery query, Object objectAdded) throws DatabaseException {
         if (isReadOnly() || addTargetQuery == null) {
-            return;
-        }
-
-        ContainerPolicy cp = getContainerPolicy();
-        Object objects = getRealCollectionAttributeValueFromObject(query.getObject(), query.getSession());
-        if (cp.isEmpty(objects)) {
             return;
         }
 
         prepareTranslationRow(query.getTranslationRow(), query.getObject(), query.getDescriptor(), query.getSession());
 
         AbstractRecord keyRow = buildKeyRowForTargetUpdate(query);
-        
-        // Extract target field and its value. Construct insert statement and execute it
+
+        AbstractRecord databaseRow = new DatabaseRecord();
+        databaseRow.mergeFrom(keyRow);
+
         int size = targetPrimaryKeyFields.size();
         int objectIndex = 0;
-        for (Object iter = cp.iteratorFor(objects); cp.hasNext(iter);) {
-            AbstractRecord databaseRow = new DatabaseRecord();
-            databaseRow.mergeFrom(keyRow);
-            Object wrappedObject = cp.nextEntry(iter, query.getSession());
-            Object object = cp.unwrapIteratorResult(wrappedObject);
-            for(int index = 0; index < size; index++) {
-                DatabaseField targetPrimaryKey = targetPrimaryKeyFields.get(index);
-                Object targetKeyValue = getReferenceDescriptor().getObjectBuilder().extractValueFromObjectForField(object, targetPrimaryKey, query.getSession());
-                databaseRow.put(targetPrimaryKey, targetKeyValue);
-            }
-            ContainerPolicy.copyMapDataToRow(cp.getKeyMappingDataForWriteQuery(wrappedObject, query.getSession()), databaseRow);
-            if(listOrderField != null) {
-                databaseRow.put(listOrderField, objectIndex++);
-            }
-            query.getSession().executeQuery(addTargetQuery, databaseRow);
+        for(int index = 0; index < size; index++) {
+            DatabaseField targetPrimaryKey = targetPrimaryKeyFields.get(index);
+            Object targetKeyValue = getReferenceDescriptor().getObjectBuilder().extractValueFromObjectForField(objectAdded, targetPrimaryKey, query.getSession());
+            databaseRow.put(targetPrimaryKey, targetKeyValue);
         }
+
+        ContainerPolicy cp = getContainerPolicy();
+        ContainerPolicy.copyMapDataToRow(cp.getKeyMappingDataForWriteQuery(objectAdded, query.getSession()), databaseRow);
+        if(listOrderField != null) {
+            databaseRow.put(listOrderField, 0);
+        }
+        query.getSession().executeQuery(addTargetQuery, databaseRow);
     }
 
     protected AbstractRecord buildKeyRowForTargetUpdate(ObjectLevelModifyQuery query){
