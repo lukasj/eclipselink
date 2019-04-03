@@ -2613,7 +2613,7 @@ public class DatabasePlatform extends DatasourcePlatform {
      * Write LOB value - only on Oracle8 and up
      */
     public void writeLOB(DatabaseField field, Object value, ResultSet resultSet, AbstractSession session) throws SQLException {
-        // used by Oracle8Platform
+        // used by OraclePlatform
     }
 
     /**

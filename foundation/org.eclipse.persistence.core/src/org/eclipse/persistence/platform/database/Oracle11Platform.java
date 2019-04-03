@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 1998, 2018 Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 1998, 2019 Oracle and/or its affiliates. All rights reserved.
  * Copyright (c) 2018 IBM Corporation. All rights reserved.
  *
  * This program and the accompanying materials are made available under the
@@ -21,7 +21,7 @@ package org.eclipse.persistence.platform.database;
  * Provides Oracle version specific behavior when 
  * org.eclipse.persistence.oracle bundle is not available.
  */
-public class Oracle11Platform extends Oracle10Platform {
+public class Oracle11Platform extends OraclePlatform {
     public Oracle11Platform() {
         super();
     }
