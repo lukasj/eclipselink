@@ -11,7 +11,6 @@
 #
 
 language: java
-sudo: required
 dist: xenial
 
 branches:
@@ -81,7 +80,7 @@ before_script:
 
 script:
   - cat $HOME/build.properties
-  - $ANT_HOME/bin/ant -f antbuild.xml build
+  - $ANT_HOME/bin/ant -f antbuild.xml build > /dev/null
   - echo 'RUNNING TESTS, BE PATIENT...'
   - set -o pipefail
   - $ANT_HOME/bin/ant -f antbuild.xml -Dtest.fail.fast=true -Dfail.on.error=true $TEST_TARGET | grep -E "\] Running |\] Tests run:"
