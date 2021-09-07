@@ -21,12 +21,14 @@ on:
   workflow_dispatch:
 jobs:
   build:
-    name: Test on JDK ${{ matrix.java_version }}
+    name: Build on JDK ${{ matrix.java_version }}
     runs-on: ubuntu-latest
-
+    outputs:
+      jdk: ${{ steps.build.outputs.jdk }}
     strategy:
       matrix:
         java_version: [ 17-ea ]
+
 
     steps:
       - name: Cancel previous runs of this workflow
@@ -34,25 +36,93 @@ jobs:
         with:
           all_but_latest: true
           access_token: ${{ github.token }}
-      - name: Start MySQL Database
-        run: |
-          sudo systemctl start mysql.service
-          mysql -e 'SET GLOBAL log_bin_trust_function_creators = 1;' -uroot -proot
-          mysql -e 'CREATE DATABASE ecltests;' -uroot -proot
-          mysql -e 'SHOW DATABASES;' -uroot -proot
-      - name: Cache local Maven repository
-        uses: actions/cache@v2
-        with:
-          path: ~/.m2/repository
-          key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
-          restore-keys: |
-            ${{ runner.os }}-maven-
       - name: Checkout for build
         uses: actions/checkout@v2.3.4
+        with:
+          path: sources
       - name: Set up JDK
         uses: actions/setup-java@v2
         with:
           distribution: 'zulu'
           java-version: ${{ matrix.java_version }}
+      - name: Build
+        id: build
+        run: |
+          cd sources
+          mvn -B -V -C -Pstaging,oss-release install -Dgpg.skip=true -Dwarn.limit=15 -Dcomp.xlint=-Xlint:none -DskipTests=true -Dmaven.repo.local=~/repo
+          echo "::set-output name=jdk::${{ matrix.java_version }}"
+      - name: Prepare upload
+        run: zip -qr eclipselink-sources.zip sources repo
+      - uses: actions/upload-artifact@v2
+        if: success()
+        with:
+          name: binary
+          path: eclipselink-sources.zip
+  test:
+    needs: build
+    strategy:
+      fail-fast: false
+      matrix:
+        test_suite:
+          - corba
+          - dbws
+          - distribution.tests
+          - extension
+          - jpa.jpql
+          - jpa.jse.test
+          - jpa.modelgen.processor
+          - jpars
+          - nosql
+          - sdo
+    name: Unit Tests ${{ needs.build.outputs.jdk }} /  ${{ matrix.test_suite }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set up JDK
+        uses: actions/setup-java@v2
+        with:
+          distribution: 'zulu'
+          java-version: ${{ needs.build.outputs.jdk }}
+      - name: Download binaries
+        uses: actions/download-artifact@v2
+        with:
+          name: binary
       - name: Verify
-        run: mvn -B -V -U -C -Pstaging,oss-release,test-lrg,mysql clean verify -Dgpg.skip=true -Dwarn.limit=15 -Dcomp.xlint=-Xlint:none
+        run: |
+          unzip -q eclipselink-sources.zip
+          cd sources
+          mvn -B -V -C -Dmaven.repo.local=~/repo -Pstaging verify -Ptest-lrg -pl :org.eclipse.persistence.${{ matrix.test_suite }}
+  test-on-db:
+    needs: build
+    strategy:
+      fail-fast: false
+      matrix:
+        db: [derby, mysql]
+        test_suite:
+          - core.test
+          - jpa.test
+          - jpa.wdf.test
+          - dbws.builder
+    name: Tests ${{ needs.build.outputs.jdk }} / ${{ matrix.db }} / ${{ matrix.test_suite }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Start MySQL Database
+        if: ${{ contains(matrix.db, 'mysql') }}
+        run: |
+          sudo systemctl start mysql.service
+          mysql -e 'SET GLOBAL log_bin_trust_function_creators = 1;' -uroot -proot
+          mysql -e 'CREATE DATABASE ecltests;' -uroot -proot
+          mysql -e 'SHOW DATABASES;' -uroot -proot
+      - name: Set up JDK
+        uses: actions/setup-java@v2
+        with:
+          distribution: 'zulu'
+          java-version: ${{ needs.build.outputs.jdk }}
+      - name: Download TCK
+        uses: actions/download-artifact@v2
+        with:
+          name: binary
+      - name: Verify
+        run: |
+          unzip -q eclipselink-sources.zip
+          cd sources
+          mvn -B -V -C -Dmaven.repo.local=~/repo -Pstaging verify -Ptest-lrg,${{ matrix.db}} -pl :org.eclipse.persistence.${{ matrix.test_suite }}
