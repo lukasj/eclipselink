@@ -96,8 +96,8 @@
 
     <properties>
         <!-- Minimum required JDK version -->
-        <maven.compiler.release>11</maven.compiler.release>
-        <maven.compiler.testRelease>11</maven.compiler.testRelease>
+        <maven.compiler.release>17</maven.compiler.release>
+        <maven.compiler.testRelease>17</maven.compiler.testRelease>
 
         <!-- TOOL Properties -->
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -105,8 +105,8 @@
         <!-- exclude big groups from the Xlint -->
         <comp.xlint>-Xlint:all,-serial</comp.xlint>
         <comp.xdoclint>-Xdoclint:all,-missing</comp.xdoclint>
-        <comp.test.xlint>-Xlint:all,-rawtypes,-unchecked,-serial</comp.test.xlint>
-        <warn.limit>250</warn.limit>
+        <comp.test.xlint>-Xlint:all,-serial</comp.test.xlint>
+        <warn.limit>250000</warn.limit>
 
         <spotbugs.common>${project.build.directory}/spotbugs-exclude-common.xml</spotbugs.common>
         <spotbugs.exclude/>
