@@ -44,6 +44,7 @@ public class DirectColumnMetadata extends MetadataColumn {
     private Boolean m_nullable;
     private Boolean m_updatable;
     private Boolean m_insertable;
+    private String m_options;
 
     /**
      * INTERNAL:
@@ -56,6 +57,7 @@ public class DirectColumnMetadata extends MetadataColumn {
             m_nullable = directColumn.getAttributeBooleanDefaultTrue("nullable");
             m_updatable = directColumn.getAttributeBooleanDefaultTrue("updatable");
             m_insertable = directColumn.getAttributeBooleanDefaultTrue("insertable");
+            m_options = directColumn.getAttributeString("options");
         }
     }
 
@@ -82,7 +84,11 @@ public class DirectColumnMetadata extends MetadataColumn {
                 return false;
             }
 
-            return valuesMatch(m_insertable, directColumn.getInsertable());
+            if (! valuesMatch(m_insertable, directColumn.getInsertable())) {
+                return false;
+            }
+
+            return valuesMatch(m_options, directColumn.getOptions());
         }
 
         return false;
@@ -94,6 +100,7 @@ public class DirectColumnMetadata extends MetadataColumn {
         result = 31 * result + (m_nullable != null ? m_nullable.hashCode() : 0);
         result = 31 * result + (m_updatable != null ? m_updatable.hashCode() : 0);
         result = 31 * result + (m_insertable != null ? m_insertable.hashCode() : 0);
+        result = 31 * result + (m_options != null ? m_options.hashCode() : 0);
         return result;
     }
 
@@ -131,6 +138,14 @@ public class DirectColumnMetadata extends MetadataColumn {
      * INTERNAL:
      * Used for OX mapping.
      */
+    public String getOptions() {
+        return m_options;
+    }
+
+    /**
+     * INTERNAL:
+     * Used for OX mapping.
+     */
     public Boolean getUpdatable() {
         return m_updatable;
     }
@@ -149,6 +164,14 @@ public class DirectColumnMetadata extends MetadataColumn {
      */
     public void setNullable(Boolean nullable) {
         m_nullable = nullable;
+    }
+
+    /**
+     * INTERNAL:
+     * Used for OX mapping.
+     */
+    public void setOptions(String options) {
+        m_options = options;
     }
 
     /**
